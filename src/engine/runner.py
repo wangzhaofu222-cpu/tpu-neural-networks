@@ -18,7 +18,7 @@ class ExperimentRunner:
     def __init__(self,config):
         self.config = config
 
-    def run(self,resume=None,stop_after_epoch=None):
+    def run(self,resume=None,stop_after_epoch=None,weights_only_epoch=None):
         cfg = self.config
         device = torch.device(cfg['runtime']['device'])
         if device.type == 'cuda' and not torch.cuda.is_available():
@@ -50,7 +50,21 @@ class ExperimentRunner:
         parent = None
         state = None
         if resume:
-            state = load_checkpoint(resume,model,optimizer,scheduler,scaler,g)
+            if weights_only_epoch is not None:
+                if cfg['experiment'].get('resume_ablation') != 'weights_only':
+                    raise ValueError('Weights-only ablation must be registered in resolved config')
+                if not 0 < weights_only_epoch < total_epochs:
+                    raise ValueError('Invalid ablation continuation epoch')
+                truncated=torch.load(resume,map_location='cpu',weights_only=False)
+                if set(truncated) != {'model'}:
+                    raise ValueError('Controlled ablation must load a genuinely model-only checkpoint')
+                model.load_state_dict(truncated['model'])
+                start_epoch=weights_only_epoch
+                global_step=weights_only_epoch*math.ceil(len(dl['train'])/cfg['train']['accumulation_steps'])
+                parent=Path(resume).parent.parent.name
+            else:
+                state = load_checkpoint(resume,model,optimizer,scheduler,scaler,g)
+        if state is not None:
             if state['config_hash'] != digest(cfg) or state['data_fingerprint'] != data_info['data_fingerprint'] or state['split_fingerprint'] != data_info['split_fingerprint']:
                 raise ValueError('Resume config/data/split mismatch')
             if state['source_hash'] != code['source_hash']:

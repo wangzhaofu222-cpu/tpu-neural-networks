@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "loss_halved": false,
+    "val_accuracy_30_percent": true,
+    "all_epochs_logged": true,
+    "independent_evaluation": true
+  },
+  "status": "FAIL"
+}

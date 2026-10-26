@@ -8,7 +8,7 @@
 | 全依赖精确锁与无冲突 | PASS | requirements.lock.txt、conda-explicit-win64.txt、pip check |
 | Lab0 §25十一项基础自动测试 | PASS | 最新21/21 tests；docs/environment/test_traceability.md |
 | 新进程完整epoch边界resume | PASS（fixture范围） | test_resume_in_new_process_exact_trajectory |
-| 真实CIFAR单epoch预算 | NOT RUN | 等待官方数据下载/计时 |
+| 真实CIFAR单epoch预算 | PASS（测量完成） | docs/environment/lab0_budget.json |
 | 至少13次CPU/worker完整训练+CUDA附加 | NOT RUN | 没有正式结果；测试不能替代 |
 | E0阈值/5seed统计/真实E3/E4验收 | NOT RUN | 待全部正式日志 |
 | Lab0八个CF实测答案与六节报告 | NOT RUN | 不生成虚构数字或RUN_ID |

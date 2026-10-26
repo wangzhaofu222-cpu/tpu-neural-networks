@@ -5,6 +5,7 @@ experiment:
   seed: 0
   deterministic: true
   purpose: development
+  resume_ablation: none
 data:
   name: cifar10
   root: data
@@ -29,7 +30,7 @@ scheduler:
   step_size: 3
   gamma: 0.5
 train:
-  epochs: 10
+  epochs: 12
   batch_size: 128
   amp: false
   accumulation_steps: 1
