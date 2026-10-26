@@ -1,0 +1,45 @@
+{
+  "groups": {
+    "6a750eb4531ac754cde7": [
+      {
+        "RUN_ID": "6a750eb4531ac754cde7-b798991a1a7b457cbb0de2144b2a4742",
+        "seed": 987693601,
+        "status": "COMPLETED",
+        "validation_accuracy": 0.6232,
+        "validation_loss": 1.0519220554351807,
+        "seconds": 281.61810630000036,
+        "parameters": 252778
+      },
+      {
+        "RUN_ID": "6a750eb4531ac754cde7-6f509e890fd64b608afb1088db8a2887",
+        "seed": 987693601,
+        "status": "COMPLETED",
+        "validation_accuracy": 0.6232,
+        "validation_loss": 1.0519220554351807,
+        "seconds": 293.561952,
+        "parameters": 252778
+      }
+    ],
+    "18ba7b9da1c4f164b795": [
+      {
+        "RUN_ID": "18ba7b9da1c4f164b795-b171839347714fbeac64c77f997c5e85",
+        "seed": 987693601,
+        "status": "COMPLETED",
+        "validation_accuracy": 0.6232,
+        "validation_loss": 1.0519220554351807,
+        "seconds": 388.3740364999994,
+        "parameters": 252778
+      }
+    ]
+  },
+  "config_differences_from_first": [
+    {},
+    {},
+    {
+      "data.num_workers": [
+        0,
+        2
+      ]
+    }
+  ]
+}

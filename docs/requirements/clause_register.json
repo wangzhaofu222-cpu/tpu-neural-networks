@@ -466,8 +466,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "7   Обязательный интерфейс запуска",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "src/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R048",
@@ -476,8 +480,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "Минимальнодолжныподдерживатьсяследующиеоперации: python  -m  src.profile_gen --student-id  <ID>",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "src/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R049",
@@ -486,8 +494,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "python  -m  src.train  --config  configs/lab0.yaml",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "src/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R050",
@@ -496,8 +508,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "python  -m  src.evaluate  --run  <RUN_ID>",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "src/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R051",
@@ -506,8 +522,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "python  -m  src.compare  --runs  <RUN_ID_1> <RUN_ID_2>  ...",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "src/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R052",
@@ -516,8 +536,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "python  -m  src.profile  --config  configs/lab0.yaml",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "src/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R053",
@@ -526,8 +550,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "ДопускаетсяиспользованиеHydra,Lightning,MLflow,Weights&Biasesилидругих библиотек.Также,всеобязательныеартефактыдолжныбытьдоступнылокально.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "src/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R054",
@@ -536,8 +564,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "8   Конфигурация эксперимента",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R055",
@@ -546,8 +581,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "Всепараметры,влияющиенаэксперимент,должнызадаватьсячерезконфигурационный файлилиявнорегистрируемыеcommand-lineoverrides. Примерминимальногоконфигурационногофайла: experiment: name:  lab0_cifar10 seed:  1729 deterministic: true",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R056",
@@ -556,8 +598,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "data: name:  cifar10 root:  ./data train_fraction: 0.25 num_workers:  0",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R057",
@@ -566,8 +615,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "model: name:  small_cnn width:  64 depth:  4",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R058",
@@ -576,8 +632,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "optimizer: name:  adamw lr:  0.001 weight_decay: 0.0001",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R059",
@@ -586,8 +649,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "scheduler: name:  cosine warmup_epochs: 1",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R060",
@@ -596,8 +666,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "train: epochs:  10 batch_size:  128 amp:  false",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R061",
@@ -606,8 +683,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "logging: backend:  local save_every:  1",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R062",
@@ -616,8 +700,15 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "Послеприменениявсехoverridesдолжнасохранятьсяразрешеннаяконфи- гурация(                resolved  config),тоестьконфигурация,фактическииспользованнаяпри запуске. Обратитевниманиеназначенияampиnum_workers.Смешаннаяточностьипа- раллельнаязагрузкаданных—дватипичныхисточникарасхождениямеждузапусками, поэтомувбазовойконфигурациионивыключены.Сочетаниеdeterministic:  trueс amp:  trueнезапрещено,ноявляетсяотдельнымпредметомисследования,анезначени- емпоумолчанию.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/train.py",
+      "src/evaluate.py",
+      "src/compare.py",
+      "src/profile.py",
+      "src/profile_gen.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R063",
@@ -626,8 +717,12 @@
     "section": "9",
     "scope": "SOURCE_CLAUSE",
     "text": "9   Детерминизм и его границы",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R064",
@@ -636,8 +731,12 @@
     "section": "9",
     "scope": "SOURCE_CLAUSE",
     "text": "Работапосвященавоспроизводимости,поэтомусредства,которымионадостигается технически,должныбытьназваны.Нижеперечислено,чтонеобходимоизучитьпо документациииспользуемойверсииPyTorch[3];конкретныезначенияипорядоквызовов подбираютсясамостоятельно.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R065",
@@ -646,8 +745,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "9.1  Управлениеисточникамислучайности",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R066",
@@ -656,8 +759,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Какминимумтребуетсяразобратьсясоследующимимеханизмами:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R067",
@@ -666,8 +773,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "• инициализациягенераторовrandom, numpyиtorch,включаяотдельнуюинициали- зациюдляCUDA;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R068",
@@ -676,8 +787,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•объектtorch.GeneratorиегопередачавDataLoaderчерезаргументgenerator;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R069",
@@ -686,8 +801,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "• аргументworker_init_fnивопросотом,какоесостояниеслучайностиполучает каждыйworker;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R070",
@@ -696,8 +815,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "• режимtorch.use_deterministic_algorithmsиегоповедениеприотсутствииде- терминированнойреализацииоперации;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R071",
@@ -706,8 +829,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•флагиdeterministicиbenchmarkвпространствеимёнtorch.backends.cudnn;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R072",
@@ -716,8 +843,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "• переменнаяокруженияCUBLAS_WORKSPACE_CONFIGиусловия,прикоторыхона требуется;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R073",
@@ -726,8 +857,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•настройкииспользованияTF32наподдерживающихегоустройствах.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R074",
@@ -736,8 +871,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "9.2  Трирежимавоспроизводимости",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R075",
@@ -746,8 +885,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Вработеиспользуютсятрирежима.Далеенанихссылаютсякритерииприёмкиэкспе- риментов.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R076",
@@ -756,8 +899,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Режим   Условия                     Ожидание A        CPU,deterministic:  true,Побитоваяповторяемостьдостижима amp:  false,num_workers:  0 B        CUDA,deterministic:Повторяемостьсточностьюдо true,amp:  false    накопленияошибококругления C        Любойрежимсamp:  true,Побитоваяповторяемостьне deterministic:  falseилигарантируется num_workers>0",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R077",
@@ -766,8 +913,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "РежимAобязателен:всеобязательныеэкспериментывыполняютсявнём.Ре- жимBвыполняетсяприналичииCUDA.РежимCисследуетсяотдельно—именноон показывает,гдезаканчиваютсягарантии.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R078",
@@ -776,8 +927,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "9.3  Границыгарантий",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R079",
@@ -786,8 +941,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Фиксацияseedнеустраняетследующиеисточникирасхождения,иэтоследуетпонимать доначалаэкспериментов:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R080",
@@ -796,8 +955,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "• недетерминированныереализацииотдельныхоперацийнаGPU,вчастностиис- пользующиеатомарныеоперации;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R081",
@@ -806,8 +969,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•автоматическийподборалгоритмовсвёрткипривключённомbenchmark;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R082",
@@ -816,8 +983,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "• неассоциативностьсложениячиселсплавающейточкойприизменениипорядка редукции;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R083",
@@ -826,8 +997,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•динамическоемасштабированиеградиентаприсмешаннойточности;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R084",
@@ -836,8 +1011,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•сменаверсииPyTorch,CUDA,cuDNNилидрайвера;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R085",
@@ -846,8 +1025,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•сменамоделиGPUиличислаустройств.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R086",
@@ -856,8 +1039,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Отсюдаосновнойтезисработы:воспроизводимостьестьсвойствонепрограммы, апары«программаиокружение»,изаявлятьеёможнотольковместесуказанием режима.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/reproducibility.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R087",
@@ -866,8 +1053,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "10   Фиксация программного окружения",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "requirements.lock.txt",
+      "docs/environment/current.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R088",
@@ -876,8 +1067,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "ManifestобязансодержатьверсииPython,PyTorchиCUDA,поэтомуэтиверсиидолжны бытьзаданы,аненаблюдаемыпостфактум. Минимальныетребования:Pythonнениже3.11,PyTorchверсии2.x.Зависимости описываютсявpyproject.tomlилиrequirements.txtсуказаниемдопустимыхдиапа- зоновверсий.Дополнительноформируетсяфайлблокировкисточнымиверсиямивсего разрешённогодеревазависимостей;егоhashсохраняетсявmanifest. Файлenvironment.txtвнутридиректориизапускадолженпозволятьвосстано- витьокружениеисодержатькакминимум:версииPython,PyTorch,CUDAиcuDNN, списокустановленныхпакетовсверсиями,названиеичислоустройств,операционную систему. Различиемеждудиапазономверсийифайломблокировкисущественно.Первый описывает,счемпроектсовместим;второй—счемонфактически был запущен.Для provenanceнеобходимименновторой.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "requirements.lock.txt",
+      "docs/environment/current.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R089",
@@ -886,8 +1081,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "11   Персонализируемые экспериментальные условия",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R090",
@@ -896,8 +1095,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "ExperimentHarnessдолженпозволятьзапускатьоднуитужелабораторнуюработус различнымииндивидуальнымипрофилямибезизмененияисходногокода.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R091",
@@ -906,8 +1109,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "11.1  Какполучитьсвойпрофиль",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R092",
@@ -916,8 +1123,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Профильневыдаётсяиневыбираетсяпроизвольно,авычисляетсяизидентификатора студента,поэтомувоспроизводим,проверяемиодинаковприкаждомвычислении. Пустьstudent_id—номерзачётнойкнижкибезпробелов.Определим",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R093",
@@ -926,8 +1137,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "h= SHA256(student_id),                       (0.5)",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R094",
@@ -936,8 +1151,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "ибудемобозначатьчерезh[a:b  ]срезегошестнадцатеричногопредставления(символыс a-гопо(b−1)-й,нумерацияснуля). Поляпрофилявычисляютсятак:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R095",
@@ -946,8 +1165,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Поле                Правило                Множествозначений profile.id                    \"P\"∥h[0:6]          — base_seed    int(h[0:8]) mod 2                             31        — train_fraction       int(h[8:10]) mod 4          {0.20,0.25,0.30,0.35} model.widthint(h[10:12]) mod 4         {48,64,96,128} model.depthint(h[12:14]) mod 3         {3,4,5} train.batch_sizeint(h[14:16]) mod 3         {64,128,256} optimizer.name       int(h[16:18]) mod 2         {adamw,sgd} scheduler.name       int(h[18:20]) mod 2         {cosine,step} profile_              int(h[20:22]) mod 3         {1,8,32,64}, batch_sizes                                    {1,8,32,128}, {1,16,64,256}",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R096",
@@ -956,8 +1179,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Индексывомножествахотсчитываютсяснуля,множестваупорядоченытак,как записаны.Всецелыеполучаютсяинтерпретациейсрезакакшестнадцатеричногочисла. SeedдляэкспериментаE2порождаютсяизбазовогодетерминированно,например какbase_seed+kдляk= 0,...,4;выбранноеправилофиксируетсявотчёте. Вычислениепрофилядолжнобытьреализовановпроектеотдельнойкомандой, чтобырезультатнезависелотручногосчёта: python  -m  src.profile_gen --student-id  <ID>  --out  configs/profiles/<ID>.yaml",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R097",
@@ -966,8 +1193,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Результатдляstudent_id=\"20250137\"должениметьвид: profile: id:  P4f2a1c student_id_hash: 4f2a1c... base_seed:  1327645489",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R098",
@@ -976,8 +1207,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "data: train_fraction: 0.30 num_workers:  0",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R099",
@@ -986,8 +1221,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "model: width:  96 depth:  4",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R100",
@@ -996,8 +1235,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "train: batch_size:  128",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R101",
@@ -1006,8 +1249,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "optimizer: name:  sgd",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R102",
@@ -1016,8 +1263,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "scheduler: name:  cosine",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R103",
@@ -1026,8 +1277,12 @@
     "section": "11.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Значениявпримереприведеныдляиллюстрацииформата;собственныезначения необходимовычислить.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R104",
@@ -1036,8 +1291,12 @@
     "section": "11.2",
     "scope": "SOURCE_CLAUSE",
     "text": "11.2  Проверяемость",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R105",
@@ -1046,8 +1305,12 @@
     "section": "11.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Manifestкаждогозапускаобязансодержатьprofile.idиstudent_id_hash.Этоделает подменупрофиляобнаружимой:преподавательвычисляетожидаемыйпрофильпо спискугруппыисверяетсманифестами. Запуск,укоторогополяпрофилявresolvedconfigнесоответствуютвычисленным изstudent_id_hash,считаетсяневыполненным.Полныйидентификаторстудентав репозиторийнепопадает—сохраняетсятолькоhash.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R106",
@@ -1056,8 +1319,12 @@
     "section": "11.3",
     "scope": "SOURCE_CLAUSE",
     "text": "11.3  Чтопрофильизменятьнеможет",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R107",
@@ -1066,8 +1333,12 @@
     "section": "11.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Профильзадаёттолькоперечисленныевышеполя.Оннеизменяет:датасет,архитектуру baselineкактаковую,составобязательныхэкспериментов,порогиприёмкиирежимыA, B,C. Ключевоетребование:индивидуальныйпрофильменяеттолькоконфигу- рациюэксперимента,нонетребуетизмененияtrainingcode. Проверкаэтоготребованиявходитвобязательныетесты:запусксдвумяразлич- нымипрофиляминедолжентребоватьниодногоизменениявисходномкоде.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/profiles/current.json",
+      "tests/test_profiles.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R108",
@@ -1076,8 +1347,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "12   Бюджет работы и требования к оборудованию",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R109",
@@ -1086,8 +1361,12 @@
     "section": "12.1",
     "scope": "SOURCE_CLAUSE",
     "text": "12.1  Числопрогонов",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R110",
@@ -1096,8 +1375,12 @@
     "section": "12.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Обязательнаяпрограмматребуетнеменее13полныхпрогоновобученияврежимеA:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R111",
@@ -1106,8 +1389,12 @@
     "section": "12.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Источник                             Прогонов    Примечание E0.Sanitycheck                        1 E1.Повторяемость                     2одинаковыйEXP_ID E2.Разбросмеждуseeds                5 одинможетсовпастьс E0 E3.Checkpoint/resume                  2            непрерывныйи прерванный Counterfactual,вопрос2                2                     num_workers= 2 Counterfactual,вопрос3                1            усечённыйcheckpoint Итого                                 13",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R112",
@@ -1116,8 +1403,12 @@
     "section": "12.1",
     "scope": "SOURCE_CLAUSE",
     "text": "ПриналичииCUDAкэтомудобавляютсяповторыE1иE3врежимахBиC— ещёдовосьмипрогонов.ЭкспериментE4полногообучениянетребует.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R113",
@@ -1126,8 +1417,12 @@
     "section": "12.2",
     "scope": "SOURCE_CLAUSE",
     "text": "12.2  Машинноевремя",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R114",
@@ -1136,8 +1431,12 @@
     "section": "12.2",
     "scope": "SOURCE_CLAUSE",
     "text": "ИзмерьтевE0времяоднойэпохиэпиоценитеполныйбюджеткакT",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R115",
@@ -1146,8 +1445,12 @@
     "section": "12.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Tполн≈13·K·T              эп,                          (0.6)",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R116",
@@ -1156,8 +1459,12 @@
     "section": "12.2",
     "scope": "SOURCE_CLAUSE",
     "text": "гдеK —числоэпохввашейконфигурации,13—числообязательныхпрогоновиз таблицывыше.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R117",
@@ -1166,8 +1473,12 @@
     "section": "12.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Подберитеtrain_fractionиepochsтак,чтобывыполнялосьTэп≤ 60с.При K = 10этодаётоколодвухсполовинойчасовмашинноговременинаобязательнуюпро- грамму.Еслинавашемоборудованииусловиеневыполняется,уменьшайтеepochsдо5; порогaccuracyвE0приэтомдолженоставатьсядостижимым.Значениеtrain_fraction задаётсяпрофилем,поэтомуегоснижениедопустимотолькокаккрайняямераиобя- зательнофиксируетсявотчётекакотклонениеотпрофиля.Выбранныезначенияи обоснованиеприводятсявотчёте. Отсюдапрактическоеследствие,важноедлявсегокурса:параметрыbaseline подбираютсяподдоступныйбюджетдоначалаэкспериментов,анепослетого,как выяснилось,чтосериянеукладываетсявсрок.Затраченныйбюджет(числопрогонов, машинноевремя)—частьотчётаорезультате,анеслужебнаяинформация[4].",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R118",
@@ -1176,8 +1487,12 @@
     "section": "12.3",
     "scope": "SOURCE_CLAUSE",
     "text": "12.3  ВыполнениебезGPU",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R119",
@@ -1186,8 +1501,12 @@
     "section": "12.3",
     "scope": "SOURCE_CLAUSE",
     "text": "ПриотсутствииCUDA:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R120",
@@ -1196,8 +1515,12 @@
     "section": "12.3",
     "scope": "SOURCE_CLAUSE",
     "text": "• режимыBиCневыполняются,соответствующиестолбцытаблицприёмкине применяются;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R121",
@@ -1206,8 +1529,12 @@
     "section": "12.3",
     "scope": "SOURCE_CLAUSE",
     "text": "• вE4исключаетсячасть,связаннаяспамятьюGPU;измеренияlatencyиthroughput выполняютсянаCPUитребованиякнимсохраняются;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R122",
@@ -1216,8 +1543,12 @@
     "section": "12.3",
     "scope": "SOURCE_CLAUSE",
     "text": "• вопрос5counterfactualпереформулируетсянасменуверсииPyTorchвместоверсии cuDNN.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R123",
@@ -1226,8 +1557,12 @@
     "section": "12.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Существенно,чтоосновноесодержаниеработыприэтомнетеряется:режимA самодостаточен,аневозможностьпроверитьграницыгарантийнаGPUфиксируетсяв отчётекакограничениеисследования.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/lab0_budget.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R124",
@@ -1236,8 +1571,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "13   Требования к данным",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R125",
@@ -1246,8 +1585,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "ВкачествебазовойзадачирекомендуетсяиспользоватьCIFAR-10икомпактнуюCNN. Допускаетсяиспользованиедругогонебольшогооткрытогодатасетаприсогласовании, еслионпозволяетбыстровыполнятьповторныеэксперименты. ВЛР0качествомоделинеявляетсяцентральнымобъектомисследования.Главное требованиекbaseline:модельдолжнаобучатьсядостаточнобыстро,чтобыможнобыло выполнитьсериюповторныхзапусков. Разбиениеданныхдолжнобытьвоспроизводимымизадаётсяsplitmanifest— файломсоспискоминдексовобъектовдлякаждойроли.Вкурсеиспользуютсячетыре роли:train(обучение),val(выбормоделиигиперпараметров,earlystopping;вЛР8 —подбортемпературы),cal(калибровочнаячасть:нечитаетсяниводнойработедо ЛР8,гдеиспользуетсядляconformalprediction)иtest(толькоитоговыеизмерения; подборчегобытонибылонаtestзапрещён).ДляCIFAR-10разбиениесоздаётсяв ЛР0одинразинаследуетсяЛР2,ЛР4иЛР8:изофициальногоtrainвыделяютсяval (5000изображений)иcal(2000изображений),остальное—train;официальныйtest— рольtest.Полныйпротоколданныхкурса(включаянаборыкадровлиц)—вотдельном документе«Протоколданныхкурса». Длякаждогоэкспериментанеобходимосохранять:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R126",
@@ -1256,8 +1599,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•идентификаториверсиюдатасета;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R127",
@@ -1266,8 +1613,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•размерычастейпоролямtrain/val/cal/test;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R128",
@@ -1276,8 +1627,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•способформированияsplit(стратификация,единицаразбиения);",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R129",
@@ -1286,8 +1641,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•seedразбиения;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R130",
@@ -1296,8 +1655,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•fingerprintsplitmanifest(hashсписковиндексов).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R131",
@@ -1306,8 +1669,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "Splitmanifestхранитсяотдельноотrundirectoryипереиспользуетсявсемизапус- ками;егоfingerprintвходитвDiи,следовательно,вEXP_ID(0.3).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/data/vision.py",
+      "splits/cifar10.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R132",
@@ -1316,8 +1683,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "14   Задание 1. Реализовать Experiment Runner",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R133",
@@ -1326,8 +1697,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "Необходимореализоватькомпонент,которыйпоконфигурациивыполняетполный жизненныйциклэксперимента:config→dataset→model→training→evaluation→ artifacts. Runnerдолжен:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R134",
@@ -1336,8 +1711,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "1.загрузитьипроверитьконфигурацию;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R135",
@@ -1346,8 +1725,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "2.инициализироватьrandomseeds;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R136",
@@ -1356,8 +1739,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "3.сформироватьdatasetиdataloaders;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R137",
@@ -1366,8 +1753,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "4.создатьмодель;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R138",
@@ -1376,8 +1767,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "5.создатьoptimizerиscheduler;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R139",
@@ -1386,8 +1781,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "6.запуститьобучение;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R140",
@@ -1396,8 +1795,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "7.выполнятьvalidation;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R141",
@@ -1406,8 +1809,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "8.сохранятьметрики;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R142",
@@ -1416,8 +1823,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "9.сохранятьcheckpoints;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R143",
@@ -1426,8 +1837,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "10.зарегистрироватьокружениеэксперимента;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R144",
@@ -1436,8 +1851,12 @@
     "section": "14",
     "scope": "SOURCE_CLAUSE",
     "text": "11.завершитьэкспериментсфинальнымsummary.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "src/config.py",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R145",
@@ -1446,8 +1865,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "15   Задание 2. Реализовать Experiment Manifest",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R146",
@@ -1456,8 +1879,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "Длякаждогозапускадолженавтоматическисоздаватьсяфайлmanifest.jsonили эквивалентныйемуструктурированныйфайл. Минимальноондолженсодержать:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R147",
@@ -1466,8 +1893,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•EXP_IDиRUN_ID;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R148",
@@ -1476,8 +1907,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "• идентификаторпрофиляиhashидентификаторастудента(см.раздел«Персонали- зируемыеэкспериментальныеусловия»);",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R149",
@@ -1486,8 +1921,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•датуивремязапуска;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R150",
@@ -1496,8 +1935,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•Gitcommithash;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R151",
@@ -1506,8 +1949,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•признакналичиянезакоммиченныхизменений;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R152",
@@ -1516,8 +1963,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•hashконфигурации;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R153",
@@ -1526,8 +1977,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•fingerprintданныхиsplitmanifest(ролиtrain/val/cal/test);",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R154",
@@ -1536,8 +1991,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•randomseed;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R155",
@@ -1546,8 +2005,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•режимдетерминизма:значенияdeterministic,amp,num_workers;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R156",
@@ -1556,8 +2019,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•Pythonversion;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R157",
@@ -1566,8 +2033,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•PyTorchversion;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R158",
@@ -1576,8 +2047,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•CUDAversionиcuDNNversion;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R159",
@@ -1586,8 +2061,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•hashфайлаблокировкизависимостей;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R160",
@@ -1596,8 +2075,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•типустройства;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R161",
@@ -1606,8 +2089,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•названиеGPU/CPU;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R162",
@@ -1616,8 +2103,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•числопараметровмодели;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R163",
@@ -1626,8 +2117,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "•путькresolvedconfig.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R164",
@@ -1636,8 +2131,12 @@
     "section": "15",
     "scope": "SOURCE_CLAUSE",
     "text": "ЕслирабочеедеревоGitсодержитнезакоммиченныеизменения,рекомендуется автоматическисохранятьсоответствующийgit  diffвнутриrundirectory. Githistoryвданнойработерассматриваетсякакчастьпроисхождения(provenance) вычислительногоэксперимента.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/utils/provenance.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R165",
@@ -1646,8 +2145,12 @@
     "section": "16",
     "scope": "SOURCE_CLAUSE",
     "text": "16   Задание 3. Организовать структуру артефактов",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      ".gitignore",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R166",
@@ -1656,8 +2159,12 @@
     "section": "16",
     "scope": "SOURCE_CLAUSE",
     "text": "Каждыйзапускдолжениметьсобственнуюдиректорию: runs/<RUN_ID>/ |--  manifest.json            #  contains  both  EXP_ID  and  RUN_ID |--  config.resolved.yaml |--  metrics.jsonl |--  summary.json |--  environment.txt |--  checkpoints/ |      |--  last.pt |      ‘--  best.pt |--  plots/ ‘--  git.diff                    #  only if  the  working  tree  is  dirty",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      ".gitignore",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R167",
@@ -1666,8 +2173,12 @@
     "section": "16",
     "scope": "SOURCE_CLAUSE",
     "text": "Недопустимоперезаписыватьсуществующуюдиректориюзапускабезявного указанияпользователя.ПовторныйзапускстемжеEXP_ID   обязансоздатьновую директориюсновымRUN_ID   ,анезавершитьсяошибкой:именнонаэтомпостроен экспериментE1.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      ".gitignore",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R168",
@@ -1676,8 +2187,12 @@
     "section": "16.1",
     "scope": "SOURCE_CLAUSE",
     "text": "16.1  ЧтоверсионируетсявGit",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      ".gitignore",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R169",
@@ -1686,8 +2201,12 @@
     "section": "16.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Артефактызапусковимеютпринципиальноразныйстатус,иполитикунеобходимо задатьявно,иначерепозиторийстановитсянепригоднымдляработыужепоследесятка запусков. Версионируютсятекстовыеартефактынебольшогоразмера,которыеиобразу- ютprovenance:manifest.json, config.resolved.yaml, metrics.jsonl, summary.json, environment.txt,git.diffиsplitmanifest. Неверсионируются:checkpoints/, plots/,загруженныедатасеты,кэши.Чек- поинтыодногозапускасопоставимыпоразмерусовсемостальнымрепозиторием,а восстановитьихможноповторнымзапуском. Минимальный.gitignore: data/ runs/*/checkpoints/ runs/*/plots/ __pycache__/ *.pt *.pth",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      ".gitignore",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R170",
@@ -1696,8 +2215,12 @@
     "section": "16.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Существенно,чтопритакомразделенииврепозиторииостаётсяполнаяистория экспериментовиотсутствуютвеса.Отсюдавопрос,накоторыйнужноответитьвотчёте: достаточнолисохранённогодлявосстановлениярезультатаичтоименнотеряетсявместе счекпоинтом.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      ".gitignore",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R171",
@@ -1706,8 +2229,12 @@
     "section": "17",
     "scope": "SOURCE_CLAUSE",
     "text": "17   Задание 4. Реализовать корректный checkpoint/resume",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/checkpoint.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R172",
@@ -1716,8 +2243,12 @@
     "section": "17",
     "scope": "SOURCE_CLAUSE",
     "text": "Checkpointдолженсодержатьнетольковесамодели. Минимальныйполныйcheckpoint: { \"model\":  model.state_dict(), \"optimizer\": optimizer.state_dict(), \"scheduler\": scheduler.state_dict(), \"epoch\":  epoch, \"global_step\": global_step, \"python_rng\": ..., \"numpy_rng\": ..., \"torch_rng\": ..., \"cuda_rng\":  ... }",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/checkpoint.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R173",
@@ -1726,8 +2257,12 @@
     "section": "17",
     "scope": "SOURCE_CLAUSE",
     "text": "ПрииспользованииAMPтакжеследуетсохранятьсостояниеGradScaler,если оноприсутствует. Послеresumeобучениедолжнопродолжатьсястойжелогическойпозиции,ане начинатьсязановосзагруженнымивесами.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/checkpoint.py",
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R174",
@@ -1736,8 +2271,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "18   Задание 5. Реализовать систему логирования",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R175",
@@ -1746,8 +2285,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "Входеобучениядолжнырегистрироватьсякакминимум:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R176",
@@ -1756,8 +2299,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•trainloss;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R177",
@@ -1766,8 +2313,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•validationloss;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R178",
@@ -1776,8 +2327,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•основнаяtrainmetric;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R179",
@@ -1786,8 +2341,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•основнаяvalidationmetric;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R180",
@@ -1796,8 +2355,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•learningrate;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R181",
@@ -1806,8 +2369,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•epoch;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R182",
@@ -1816,8 +2383,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•globalstep;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R183",
@@ -1826,8 +2397,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•времяэпохи.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R184",
@@ -1836,8 +2411,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "Логидолжныхранитьсявмашиночитаемомформате. Допускаются:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R185",
@@ -1846,8 +2425,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•JSONL;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R186",
@@ -1856,8 +2439,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•CSV;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R187",
@@ -1866,8 +2453,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•TensorBoard;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R188",
@@ -1876,8 +2467,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•MLflow;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R189",
@@ -1886,8 +2481,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•Weights&Biases;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R190",
@@ -1896,8 +2495,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "•комбинацияперечисленныхвариантов.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R191",
@@ -1906,8 +2509,12 @@
     "section": "18",
     "scope": "SOURCE_CLAUSE",
     "text": "Дажеприиспользованиивнешнегосервисалокальныйминимальныйlogдолжен сохранятьсяобязательно.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/engine/runner.py",
+      "runs/",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R192",
@@ -1916,8 +2523,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "19   Задание 6. Реализовать профилирование модели",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R193",
@@ -1926,8 +2537,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "Длямоделинеобходимоизмерять:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R194",
@@ -1936,8 +2551,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "•числоtrainableparameters;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R195",
@@ -1946,8 +2565,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "•среднеевремяforwardpass;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R196",
@@ -1956,8 +2579,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "•latencyодногоbatch;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R197",
@@ -1966,8 +2593,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "•throughputвsamples/second;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R198",
@@ -1976,8 +2607,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "•длительностьоднойtrainingepoch;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R199",
@@ -1986,8 +2621,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "•peakGPUmemoryприиспользованииCUDA.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R200",
@@ -1996,8 +2635,12 @@
     "section": "19",
     "scope": "SOURCE_CLAUSE",
     "text": "Latencyнеобходимоизмерятьпослеwarm-up. ДляCUDAпередначаломиокончаниемвременногоинтерваладолжнавыпол- нятьсясинхронизацияустройства. Рекомендуетсясообщатьнетолькосреднеезначение,ноимедиануиодиниз верхнихквантилей,например95.p",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/profile.py",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R201",
@@ -2006,8 +2649,12 @@
     "section": "20",
     "scope": "SOURCE_CLAUSE",
     "text": "20   Задание 7. Реализовать сравнение запусков",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/compare.py",
+      "reports/lab0/comparison.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R202",
@@ -2016,8 +2663,12 @@
     "section": "20",
     "scope": "SOURCE_CLAUSE",
     "text": "Необходимореализоватьинструмент,принимающийнесколькоRUN_ID   истроящий своднуютаблицу. Пример:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/compare.py",
+      "reports/lab0/comparison.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R203",
@@ -2026,8 +2677,12 @@
     "section": "20",
     "scope": "SOURCE_CLAUSE",
     "text": "RUN_ID   EXP_IDSeed  ValAcc.  ValLoss  Time  Params A         X           17       —       —    —      — B         X           17       —       —    —      — C         Y           42       —       —    —      —",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/compare.py",
+      "reports/lab0/comparison.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R204",
@@ -2036,8 +2691,12 @@
     "section": "20",
     "scope": "SOURCE_CLAUSE",
     "text": "ЗапускиAиBимеютодинаковыйEXP_ID   ипотомуподлежатсравнению насовпадение;запускCотноситсякдругомуэксперименту,исовпаденияотнегоне требуется. Инструментдолженуметьопределятьразличияконфигурациймеждусравнивае- мымиэкспериментами,атакжегруппироватьзапускипоEXP_ID. Желательнореализоватьфункциювида: diff_runs(run_a, run_b)",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/compare.py",
+      "reports/lab0/comparison.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R205",
@@ -2046,8 +2705,12 @@
     "section": "20",
     "scope": "SOURCE_CLAUSE",
     "text": "котораявыводиттолькоразличающиесяпараметры.Длязапусковсодинаковым EXP_ID   еёвыводобязанбытьпустым;непустойвыводозначаетошибкуканонизации.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "src/compare.py",
+      "reports/lab0/comparison.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R206",
@@ -2056,8 +2719,11 @@
     "section": "21",
     "scope": "SOURCE_CLAUSE",
     "text": "21   Обязательные эксперименты",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R207",
@@ -2066,8 +2732,11 @@
     "section": "21.1",
     "scope": "SOURCE_CLAUSE",
     "text": "21.1  ЭкспериментE0.Sanitycheck",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R208",
@@ -2076,8 +2745,11 @@
     "section": "21.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Обучитьbaseline-модельиубедиться,что:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R209",
@@ -2086,8 +2758,11 @@
     "section": "21.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•lossуменьшается;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R210",
@@ -2096,8 +2771,11 @@
     "section": "21.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•качествопревышаетслучайныйbaseline;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R211",
@@ -2106,8 +2784,11 @@
     "section": "21.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•метрикикорректнозаписываются;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R212",
@@ -2116,8 +2797,11 @@
     "section": "21.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•checkpointзагружается;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R213",
@@ -2126,8 +2810,11 @@
     "section": "21.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•evaluationвыполняетсянезависимоотtrainingscript.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R214",
@@ -2136,8 +2823,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "21.2  ЭкспериментE1.Повторныйзапусксодинаковымseed",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R215",
@@ -2146,8 +2836,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "ВыполнитьдванезависимыхзапускаRA = (C,Θ,D,S,V)и RB  = (C,Θ,D,S,V)с одинаковымикомпонентами(0.1). ОбазапускаимеютодинитотжеEXP_ID   иразличныеRUN_ID   .Совпадение EXP_ID   являетсяпервойпроверкой:еслиононедостигнуто,канонизацияописания экспериментареализовананеверно. Сравнить:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R216",
@@ -2156,8 +2849,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "•составsplitпоролям(train/val/cal/test);",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R217",
@@ -2166,8 +2862,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "•checksumпервогоbatch;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R218",
@@ -2176,8 +2875,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "•learningcurves;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R219",
@@ -2186,8 +2888,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "•финальныеметрики;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R220",
@@ -2196,8 +2901,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "•привозможности—параметрымодели.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R221",
@@ -2206,8 +2914,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Необходимоопределить,достигаетсяли:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R222",
@@ -2216,8 +2927,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "1.идентичностьданных;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R223",
@@ -2226,8 +2940,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "2.идентичностьтраекторииобучения;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R224",
@@ -2236,8 +2953,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "3.идентичностьфинальногорезультата.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R225",
@@ -2246,8 +2966,11 @@
     "section": "21.2",
     "scope": "SOURCE_CLAUSE",
     "text": "ЭкспериментвыполняетсяврежимеAобязательноиврежимахBиCпри наличиисоответствующегооборудования.Еслиполнаяидентичностьнедостигается, требуетсялокализоватьисточникрасхождения.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R226",
@@ -2256,8 +2979,11 @@
     "section": "21.3",
     "scope": "SOURCE_CLAUSE",
     "text": "21.3  ЭкспериментE2.Varianceacrossseeds",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R227",
@@ -2266,8 +2992,11 @@
     "section": "21.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Принеизменныхгиперпараметрахвыполнитьнеменеепятизапусковсразличными seedS∈{s              1,...,sN},N≥5. Дляосновнойметрикиmвычислитьсреднееивыборочноестандартноеотклоне- ниепозапускам: N∑︂ ¯m=       1Nmi,                            (0.7) i=1 ⌜⃓⃓⎷ 1  N∑︂ sm = N−1    (m i−¯m)          2,                      (0.8) i=1",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R228",
@@ -2276,8 +3005,11 @@
     "section": "21.3",
     "scope": "SOURCE_CLAUSE",
     "text": "гдеmi—значениеметрикивзапускесseedsi,N—числозапусков.Результатнеобходимо представитькакминимумвформате¯m±s          mсуказаниемN;впоследующихработахта жепаравеличиниспользуетсядлявсехсравненийпоseeds. Следуетсопоставитьвеличинуvariationмеждуseedsсвеличинойтипичныхулуч- шений,которыемоглибыбытьошибочноинтерпретированыкакэффектновойархитек- туры:разброспоseedsрегулярнооказываетсясравнимсзаявляемымивпубликациях приростами[5,6].",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R229",
@@ -2286,8 +3018,11 @@
     "section": "21.4",
     "scope": "SOURCE_CLAUSE",
     "text": "21.4  ЭкспериментE3.Checkpoint/resumeequivalence",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R230",
@@ -2296,8 +3031,11 @@
     "section": "21.4",
     "scope": "SOURCE_CLAUSE",
     "text": "Сравнитьдварежима.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R231",
@@ -2306,8 +3044,11 @@
     "section": "21.4",
     "scope": "SOURCE_CLAUSE",
     "text": "RunA.НепрерывноеобучениевтечениеKэпох.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R232",
@@ -2316,8 +3057,11 @@
     "section": "21.4",
     "scope": "SOURCE_CLAUSE",
     "text": "RunB.ОбучениевтечениеK/2эпох,сохранениеполногоcheckpoint,перезапуск процессаипродолжениедоKэпох. Сравнитьотносительноерасхождениепараметров",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R233",
@@ -2326,8 +3070,11 @@
     "section": "21.4",
     "scope": "SOURCE_CLAUSE",
     "text": "∆θ = ∥θ  A−θ   B∥2∥θ  A∥2+ε    ,                           (0.9)",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R234",
@@ -2336,8 +3083,11 @@
     "section": "21.4",
     "scope": "SOURCE_CLAUSE",
     "text": "гдеθA, θB—векторывсехпараметровмоделейпослеKэпохврежимахAиB,ε> 0— малаяконстанта(например,−12 ),исключающаяделениенануль;атакжефинальные10 метрикииlearningcurves. Еслитраекториирасходятся,необходимоопределить,какиесостоянияэкспери- ментамоглибытьвосстановленынекорректно.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R235",
@@ -2346,8 +3096,11 @@
     "section": "21.5",
     "scope": "SOURCE_CLAUSE",
     "text": "21.5  ЭкспериментE4.Производительность",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R236",
@@ -2356,8 +3109,11 @@
     "section": "21.5",
     "scope": "SOURCE_CLAUSE",
     "text": "ИзмеритьlatencyиthroughputдлянесколькихbatchsizeB∈ {  1,8,32,128}илидля индивидуальноназначенногонаборазначений. ПостроитьзависимостиlatencyиthroughputотB;прииспользованииGPU дополнительно—зависимостьпиковогообъёмапамятиGPUотB. Необходимообъяснить,почемуbatchsize,минимизирующийlatencyодногоbatch, необязательномаксимизируетthroughput.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R237",
@@ -2366,8 +3122,12 @@
     "section": "22",
     "scope": "SOURCE_CLAUSE",
     "text": "22   Критерии приёмки экспериментов",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R238",
@@ -2376,8 +3136,12 @@
     "section": "22",
     "scope": "SOURCE_CLAUSE",
     "text": "Эксперимент,длякоторогонезаданпорог,неявляетсяэкспериментом:егорезультат нельзяпризнатьниподтверждающим,ниопровергающим.Нижепорогизаданыявно. Обозначения:εrel(x,y) =|x−y|/max          (1,|x|    )—относительноерасхождение;п.п.— процентныепункты.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R239",
@@ -2386,8 +3150,12 @@
     "section": "22.1",
     "scope": "SOURCE_CLAUSE",
     "text": "22.1  E0.Sanitycheck",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R240",
@@ -2396,8 +3164,12 @@
     "section": "22.1",
     "scope": "SOURCE_CLAUSE",
     "text": "• trainlossвконцеобучениянепревышаетполовинызначенияпослепервойэпохи;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R241",
@@ -2406,8 +3178,12 @@
     "section": "22.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•validationaccuracyнениже30%наCIFAR-10,тоестьминимумвтроевышеслу- чайногоугадывания;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R242",
@@ -2416,8 +3192,12 @@
     "section": "22.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•metrics.jsonl содержитзаписьдлякаждойэпохи,summary.jsonиmanifest.json присутствуют;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R243",
@@ -2426,8 +3206,12 @@
     "section": "22.1",
     "scope": "SOURCE_CLAUSE",
     "text": "•evaluate  по сохранённому checkpoint воспроизводит финальную метрику из summary.jsonсрасхождениемнеболее10      −6 изапускаетсяотдельноотtrain.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R244",
@@ -2436,8 +3220,12 @@
     "section": "22.2",
     "scope": "SOURCE_CLAUSE",
     "text": "22.2  E1.Повторяемость",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R245",
@@ -2446,8 +3234,12 @@
     "section": "22.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Проверяемаявеличина   РежимA         РежимB         РежимC СовпадениеEXP_ID  точное           точное           точное Индексыtrain/valsplit   точное           точное           точное Checksumпервогоbatch  точное           точное           ненормируется εreltrainlossнакаждом0                      ≤10    −5             ненормируется шаге Расхождениефинальной0                      ≤0.1п.п.         ненормируется метрики",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R246",
@@ -2456,8 +3248,12 @@
     "section": "22.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Точноесовпадениеsplitиchecksumобязательнововсехрежимах:порядокданных определяетсятолькоseedинезависитотарифметикиустройства.Невыполнениеэтого условияозначаетошибкуреализации,аненедетерминизмоборудования. ДлярежимаCпорогнезадаётсянамеренно.Требуетсяизмеритьфактическое расхождениеиобъяснитьегоисточник;отсутствиерасхожденияврежимеCтакже требуетобъяснения.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R247",
@@ -2466,8 +3262,12 @@
     "section": "22.3",
     "scope": "SOURCE_CLAUSE",
     "text": "22.3  E2.Разбросмеждуseeds",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R248",
@@ -2476,8 +3276,12 @@
     "section": "22.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•неменеепятизапусковсразличнымиseedприпрочихравных;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R249",
@@ -2486,8 +3290,12 @@
     "section": "22.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•приведены¯m,s                                mи95%доверительныйинтервалсреднего;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R250",
@@ -2496,8 +3304,12 @@
     "section": "22.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•всезапускиимеютразличныеEXP_ID,различающиесятолькокомпонентойS;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R251",
@@ -2506,8 +3318,12 @@
     "section": "22.3",
     "scope": "SOURCE_CLAUSE",
     "text": "•указанаминимальнаявеличинаэффекта,которуюданнаясерияспособнаотличить отшума.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R252",
@@ -2516,8 +3332,12 @@
     "section": "22.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Ориентирдляпоследнегопункта:улучшениеменьшеsmнеможетсчитаться2 установленнымбездополнительныхзапусков.Еслиполученноеsmпревышает1                 .5п.п., требуетсяуказать,чемвызванстольбольшойразброс.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R253",
@@ -2526,8 +3346,12 @@
     "section": "22.4",
     "scope": "SOURCE_CLAUSE",
     "text": "22.4  E3.Эквивалентностьcheckpoint/resume",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R254",
@@ -2536,8 +3360,12 @@
     "section": "22.4",
     "scope": "SOURCE_CLAUSE",
     "text": "Проверяемаявеличина        РежимA       РежимB        РежимC ∆θ                                    ≤10  −7               ≤10  −5           ненормируется Расхождениефинальной0                   ≤0.1п.п.       ненормируется метрики Совпадениечислашаговточное          точное          точное оптимизатора",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R255",
@@ -2546,8 +3374,12 @@
     "section": "22.4",
     "scope": "SOURCE_CLAUSE",
     "text": "Допуск10−7 врежимеAотражаетпогрешностьсериализации,аненедетерминизм вычислений.Совпадениечислашаговобязательновсегда:расхождениеозначает,что послеresumeобучениеначалосьнестойлогическойпозиции.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R256",
@@ -2556,8 +3388,12 @@
     "section": "22.5",
     "scope": "SOURCE_CLAUSE",
     "text": "22.5  E4.Производительность",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R257",
@@ -2566,8 +3402,12 @@
     "section": "22.5",
     "scope": "SOURCE_CLAUSE",
     "text": "•передизмерениемвыполненонеменее10прогревочныхитераций;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R258",
@@ -2576,8 +3416,12 @@
     "section": "22.5",
     "scope": "SOURCE_CLAUSE",
     "text": "•прииспользованииCUDAвыполненасинхронизацияустройствадоипослеизме- ряемогоинтервала;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R259",
@@ -2586,8 +3430,12 @@
     "section": "22.5",
     "scope": "SOURCE_CLAUSE",
     "text": "•накаждоезначениеbatchsizeприходитсянеменее30измерений;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R260",
@@ -2596,8 +3444,12 @@
     "section": "22.5",
     "scope": "SOURCE_CLAUSE",
     "text": "•приведенысреднее,медианаиp95;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R261",
@@ -2606,8 +3458,12 @@
     "section": "22.5",
     "scope": "SOURCE_CLAUSE",
     "text": "• коэффициентвариацииизмеренийlatencyнепревышает10%;прибольшемзначе- ниичислоповторовувеличиваетсялибообъясняетсяисточникнестабильности;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R262",
@@ -2616,8 +3472,12 @@
     "section": "22.5",
     "scope": "SOURCE_CLAUSE",
     "text": "• throughputвычисленкакотношениеразмераbatchквременишага,анеполучен пересчётомизсреднегоlatencyдругогоразмераbatch.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R263",
@@ -2626,8 +3486,12 @@
     "section": "22.6",
     "scope": "SOURCE_CLAUSE",
     "text": "22.6  Отрицательныйрезультат",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R264",
@@ -2636,8 +3500,12 @@
     "section": "22.6",
     "scope": "SOURCE_CLAUSE",
     "text": "Отрицательныйрезультатпринимается,еслиисточникрасхождениялокализовани подтверждёнотдельнымизмерением.Например,недостижениепорогарежимаBсука- заниемконкретнойнедетерминированнойоперацииявляетсяполноценнымвыполнением эксперимента. Непринимается:недостижениепорогабездиагностики,атакжеподгонкаусловий экспериментаподпорог,напримерпереходврежимAтам,гдепоусловиютребовался режимB.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/acceptance.json",
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R265",
@@ -2646,8 +3514,11 @@
     "section": "23",
     "scope": "SOURCE_CLAUSE",
     "text": "23   Уровни воспроизводимости",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R266",
@@ -2656,8 +3527,11 @@
     "section": "23",
     "scope": "SOURCE_CLAUSE",
     "text": "Врамкахработыпредлагаетсяразличатьнесколькоуровней;различение«воспроизво- димостиартефакта»и«воспроизводимостивывода»следует[7].",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R267",
@@ -2666,8 +3540,11 @@
     "section": "23",
     "scope": "SOURCE_CLAUSE",
     "text": "Уровень    Требование R0         Можноустановитьпроисхождениерезультата:код,config,data fingerprint,environment. R1         Повторноформируетсятотжеsplitитотжевходнойпоток данных. R2         Повторныйзапускпрификсированномокружении воспроизводиттраекториюиитоговыеметрикивпределах пороговE1. R3         Прерванныйэкспериментпослеcheckpoint/resume воспроизводитнепрерывнуютраекториювпределахпорогов E3.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R268",
@@ -2676,8 +3553,11 @@
     "section": "23",
     "scope": "SOURCE_CLAUSE",
     "text": "Уровнипроверяютсяконкретнымиэкспериментами:R0—составомmanifest,R1— разделамиE1оsplitиchecksum,R2—остальнымистрокамиE1,R3—экспериментом E3. Заявлениеобуровнебезуказаниярежиманедопустимо.Корректнаяформули- ровкаимеетвид«R2достигнутврежимеAинедостигнутврежимеC»;формулировка «реализациявоспроизводима»смысланеимеет. Студентдолженопределить,какоймаксимальныйуровеньдостигаетсяегореали- зациейиприкакихусловиях.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R269",
@@ -2686,8 +3566,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "24   Counterfactual questions",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R270",
@@ -2696,8 +3580,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "Ответнакаждыйвопросдолженопиратьсяначисла,полученныевсобственныхзапусках, исодержатьссылкинаконкретныеRUN_ID   .Ответвобщемвиде,безобращенияк собственнымрезультатам,незасчитывается:такиеформулировкивынесенывраздел контрольныхвопросов. Частьвопросовтребуетдополнительногоизмерения.Этопредусмотрено:подоб- ныеизмерениядолжныбытьдешёвыми,еслиharnessпостроенправильно.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R271",
@@ -2706,8 +3594,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "1. ВозьмитеизE2полученныевами¯m иsm.Какоеминимальноеулучшениеметрики выспособныобнаружитьсвоейсериейзапусков?Сколькозапусковпотребовалось бы,чтобынадёжнообнаружитьулучшениевдвоеменьшее,иукладываетсялиэто числовбюджетработы?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R272",
@@ -2716,8 +3608,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "2.ВE1высравнивалидвазапуска.Повторитесравнение,изменивтолькозначение num_workersс0на2.Какиеизпроверяемыхвеличинпересталисовпадатьикакие сохранились?Объясните,почемуграницапрошлаименнотам.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R273",
@@ -2726,8 +3622,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "3. ВозьмитеcheckpointизE3иудалитеизнеговсё,кромеmodel.state_dict(). Повторитеresume.Приведитеновоезначениеθиобъясните,какаяименночасть∆ состоянияотвечаетзанаблюдаемоерасхождение.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R274",
@@ -2736,8 +3636,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "4. ВвашихзапускахE2найдитедва,укоторыхфинальнаяvalidationaccuracyраз- личаетсяменеечемна.1п.п.Совпадаютлиихтраектории?Чтоэтотслучай0 говоритодостаточностифинальнойметрикикаксвидетельствавоспроизведения эксперимента?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R275",
@@ -2746,8 +3650,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "5. ВозьмитевашEXP_ID   изE1иукажите,какоеполеmanifestизменитсяпри переходенадругуюверсиюcuDNN,акакое—нет.КакойуровеньизR0–R3вы сможетегарантироватьпослетакогопереходаипочемуименноэтот?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R276",
@@ -2756,8 +3664,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "6. Изменитеодинбайтвфайледанных,неменяяимениипути.Чтоизменитсяв вашемmanifest,ачтоостанетсяпрежним?Обнаружитливашdatafingerprintэто изменение,иеслинет—какегоследуетизменить?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R277",
@@ -2766,8 +3678,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "7. ВозьмитевашиизмеренияизE4принаименьшемbatchsize.Сравнитеlatency первойитерациисозначениеммедианыпослепрогрева.Восколькоразониразли- чаютсяикакиепроцессыпроисходятвэтоминтервале?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R278",
@@ -2776,8 +3692,12 @@
     "section": "24",
     "scope": "SOURCE_CLAUSE",
     "text": "8.ИзE4возьмитеbatchsize,минимизирующийlatency,иbatchsize,максимизирую- щийthroughput.Совпалилиони?Приведитевашичислаиобъяснитемеханизм расхождениялибосовпадения.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.ru.md",
+      "reports/lab0/report_evidence.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R279",
@@ -2786,8 +3706,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "25   Обязательные тесты",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R280",
@@ -2796,8 +3720,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "Впроектедолжныприсутствоватьавтоматическиетестыкакминимумдляследующих свойств:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R281",
@@ -2806,8 +3734,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "1.Конфигурациязагружаетсяипослеresolveсодержитвсеобязательныеполя.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R282",
@@ -2816,8 +3748,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "2.Одинитотжеseedформируетодинитотжеsplitповсемролям.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R283",
@@ -2826,8 +3762,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "3. Checkpointможетбытьсохраненизагруженбезизмененияoutputмоделидо продолженияобучения.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R284",
@@ -2836,8 +3776,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "4.Метрикинафиксированномнаборевходоввычисляютсядетерминированно.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R285",
@@ -2846,8 +3790,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "5.EXP_IDменяетсяприизменениисущественногопараметраконфигурации.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R286",
@@ -2856,8 +3804,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "6.EXP_ID     неменяетсяприповторномзапускетехжеусловий,тогдакакRUN_ID меняетсяобязательно.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R287",
@@ -2866,8 +3818,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "7. ПовторныйзапускссуществующимEXP_ID   создаётновуюдиректориюине изменяетсодержимоеранеесозданных.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R288",
@@ -2876,8 +3832,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "8.EXP_IDилиmanifestотражаетизменениесостояниякода.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R289",
@@ -2886,8 +3846,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "9. Вычислениепрофиляпоодномуитомужеstudent_idдаётодинитотжерезультат, апоразличным—различный.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R290",
@@ -2896,8 +3860,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "10. Запусксдвумяразличнымипрофилямивыполняетсябезизмененийвисходном коде.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R291",
@@ -2906,8 +3874,12 @@
     "section": "25",
     "scope": "SOURCE_CLAUSE",
     "text": "11.TrainingscriptкорректноработаетхотябынаCPU;приналичииCUDAустройство выбираетсяконфигурационно.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "docs/environment/tests-lab0-release.xml",
+      "docs/environment/test_traceability.md",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R292",
@@ -2916,8 +3888,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "26   Что запрещено зашивать в исходный код",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R293",
@@ -2926,8 +3902,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "Неявныезависимостивкоде—одинизисточниковтехническогодолгаML-систем[8]. Следующиепараметрынедолжныбытьнеявнозахардкоженывнутриtrainingpipeline:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R294",
@@ -2936,8 +3916,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•абсолютныепутикданным;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R295",
@@ -2946,8 +3930,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•deviceID;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R296",
@@ -2956,8 +3944,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•learningrate;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R297",
@@ -2966,8 +3958,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•batchsize;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R298",
@@ -2976,8 +3972,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•числоэпох;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R299",
@@ -2986,8 +3986,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•seed;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R300",
@@ -2996,8 +4000,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•optimizer;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R301",
@@ -3006,8 +4014,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•scheduler;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R302",
@@ -3016,8 +4028,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•размермодели;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R303",
@@ -3026,8 +4042,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•частотаcheckpoint;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R304",
@@ -3036,8 +4056,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•splitпоролямtrain/val/cal/test;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R305",
@@ -3046,8 +4070,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "•имядиректориидляконкретногозапуска.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R306",
@@ -3056,8 +4084,12 @@
     "section": "26",
     "scope": "SOURCE_CLAUSE",
     "text": "Коддолженбытьпереносиммеждумашинамиприизмененииконфигурациии переменныхокружения.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "configs/lab0.yaml",
+      "docs/environment/release-compatibility.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R307",
@@ -3066,8 +4098,12 @@
     "section": "27",
     "scope": "SOURCE_CLAUSE",
     "text": "27   Минимальный набор артефактов",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "reports/lab0/report.pdf",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R308",
@@ -3076,8 +4112,12 @@
     "section": "27",
     "scope": "SOURCE_CLAUSE",
     "text": "ПозавершенииЛР0проектдолженсодержать:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "reports/lab0/report.pdf",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R309",
@@ -3086,8 +4126,12 @@
     "section": "27",
     "scope": "SOURCE_CLAUSE",
     "text": "Артефакт               Назначение ExperimentRunner       Единаяточказапускаобучения. ResolvedConfig          Фактическииспользованнаяконфигурация. Manifest                Происхождениезапуска:код,данные,seed, environment. CheckpointManager      Сохранениеивосстановлениеполногосостояния обучения. MetricLogger            Машиночитаемоелогированиеметрик.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "reports/lab0/report.pdf",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R310",
@@ -3096,8 +4140,12 @@
     "section": "27",
     "scope": "SOURCE_CLAUSE",
     "text": "Артефакт               Назначение RunComparator         Сравнениерезультатовиконфигурацийнескольких запусков. Profiler                 Latency,throughput,параметрыиmemory. TestSuite               Проверкаключевыхинвариантовharness. ProfileGenerator         Вычислениеиндивидуальногопрофиляиз идентификаторастудента. DependencyLock        Точныеверсиивсегодеревазависимостей. Report                  РезультатыE0–E4ивыводыповоспроизводимости.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "README.md",
+      "reports/lab0/report.pdf",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R311",
@@ -3106,8 +4154,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "28   Структура отчёта",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R312",
@@ -3116,8 +4168,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "Отчёт—отдельныйдокументврепозитории.Каждоеутверждениеорезультатесопро- вождаетсяссылкойнаконкретныйRUN_ID   ;утверждениебезтакойссылкипроверить невозможноиононерассматривается.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R313",
@@ -3126,8 +4182,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "1.Профильиконфигурация.Идентификаторпрофиля,полученныезначения полей,выбранныеepochs,измеренноеTэпиобоснованиебюджета.Всеотклонения отпрофиля,еслионибыли.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R314",
@@ -3136,8 +4196,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "2.Устройство harness.Схема из семи компонентов, состав manifest, состав checkpoint,правилоформированияEXP_ID   иRUN_ID   .Принятыепроектные решенияиихальтернативы.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R315",
@@ -3146,8 +4210,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "3.РезультатыE0–E4.Длякаждогоэксперимента:переченьRUN_ID   ,таблица измеренныхвеличин,сопоставлениеспорогамиприёмки,выводовыполнении. ДляE2—¯m , smидоверительныйинтервал.ДляE4—таблицапоbatchsizeс медианойиp95.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R316",
@@ -3156,8 +4224,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "4.Уровнивоспроизводимости.МаксимальныйдостигнутыйуровеньизR0–R3с обязательнымуказаниемрежима.Длякаждогонедостигнутогоуровня—локали- зованнаяпричина.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R317",
@@ -3166,8 +4238,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "5.Ответынаcounterfactualquestions.ВосемьответовсоссылкаминаRUN_ID ичисламидополнительныхизмерений.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R318",
@@ -3176,8 +4252,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "6.Ограничения.Чтонепровереноипочему:отсутствиеGPU,нехваткабюджета, невозможностьвоспроизвестиусловие.Известныедефектысобственнойреализа- ции.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R319",
@@ -3186,8 +4266,12 @@
     "section": "28",
     "scope": "SOURCE_CLAUSE",
     "text": "Объёмненормируется.Нормируетсяполнота:отсутствиелюбогоизшестиразде- ловделаетотчётнепринятым.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab0/report.pdf",
+      "reports/lab0/build_status.json",
+      "docs/requirements/lab0_acceptance.md"
+    ]
   },
   {
     "id": "L0-R320",

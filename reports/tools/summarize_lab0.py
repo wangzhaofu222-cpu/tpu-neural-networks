@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import yaml
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -35,6 +36,7 @@ def main():
     p.add_argument('--suite',type=Path,required=True)
     p.add_argument('--out',type=Path,default=Path('reports/lab0_analysis'))
     args=p.parse_args()
+    plt.rcParams.update({'font.size':12,'axes.labelsize':13,'xtick.labelsize':11,'ytick.labelsize':11,'legend.fontsize':10})
     ledger=read(args.suite/'ledger.json')
     if not ledger['status'].startswith('TRAINING_PROGRAM_COMPLETED'):
         raise SystemExit('Wait for the complete measured program before writing results')
@@ -63,9 +65,9 @@ def main():
         axes[0].plot(epochs,[r['train_loss'] for r in rows],label=f'{aliases[key]}: {key}')
         axes[1].plot(epochs,[r['validation_metric'] for r in rows],label=f'{aliases[key]}: {key}')
     axes[0].set_ylabel('Training cross entropy'); axes[1].set_ylabel('Validation accuracy')
-    for ax in axes: ax.set_xlabel('Epoch'); ax.grid(alpha=.2); ax.legend(fontsize=8)
+    for ax in axes: ax.set_xlabel('Epoch'); ax.grid(alpha=.2); ax.legend(fontsize=11)
     fig.savefig(figures/'learning_curves.png',dpi=180); plt.close(fig)
-    fig,axes=plt.subplots(1,3,figsize=(12,3.4),layout='constrained')
+    fig,axes=plt.subplots(1,3,figsize=(10,3.4),layout='constrained')
     for ax,mode in zip(axes,['A','B','C']):
         a=steps(all_runs[f'E1-{mode}-1']); b=steps(all_runs[f'E1-{mode}-2'])
         loss_a=np.array([r['train_loss'] for r in a]); loss_b=np.array([r['train_loss'] for r in b])
@@ -73,33 +75,36 @@ def main():
         ax.set_title(f'Mode {mode}: {aliases[f"E1-{mode}-1"]}/{aliases[f"E1-{mode}-2"]}')
         ax.set_xlabel('Mini-batch'); ax.set_ylabel('Relative loss difference'); ax.grid(alpha=.2)
     fig.savefig(figures/'repeatability.png',dpi=180); plt.close(fig)
-    fig,axes=plt.subplots(1,4,figsize=(13,3.2),layout='constrained')
+    fig,axes=plt.subplots(1,4,figsize=(10,3.2),layout='constrained')
     for ax,mode in zip(axes[:3],['A','B','C']):
         for suffix,style in [('continuous','-'),('resumed','--')]:
             key=f'E3-{mode}-{suffix}'; rows=metrics(all_runs[key])
             ax.plot([r['epoch'] for r in rows],[r['train_loss'] for r in rows],style,label=aliases[key])
-        ax.set_title(f'Resume mode {mode}'); ax.set_xlabel('Epoch'); ax.set_ylabel('Train loss'); ax.legend(fontsize=8); ax.grid(alpha=.2)
+        ax.set_title(f'Resume mode {mode}'); ax.set_xlabel('Epoch'); ax.set_ylabel('Train loss'); ax.set_xticks([1,6,12]); ax.legend(fontsize=10); ax.grid(alpha=.2)
     for key in ['E3-A-continuous','CF03-weights-only']:
         rows=metrics(all_runs[key]); axes[3].plot([r['epoch'] for r in rows],[r['train_loss'] for r in rows],label=aliases[key])
-    axes[3].set_title('Model-only ablation'); axes[3].set_xlabel('Epoch'); axes[3].legend(fontsize=8); axes[3].grid(alpha=.2)
+    axes[3].set_title('Model-only ablation'); axes[3].set_xlabel('Epoch'); axes[3].set_xticks([1,6,12]); axes[3].legend(fontsize=10); axes[3].grid(alpha=.2)
     fig.savefig(figures/'resume_and_ablation.png',dpi=180); plt.close(fig)
-    fig,ax=plt.subplots(figsize=(11,3),layout='constrained'); ax.axis('off')
+    fig,ax=plt.subplots(figsize=(8,1.5),layout='constrained'); ax.axis('off')
     labels=['1. Resolve config','2. Data + split','3. Build model','4. Optimizer + schedule',
             '5. ExperimentRunner','6. Validation / evaluate','7. Save artifacts']
     for i,label in enumerate(labels):
         x=.10+(i%4)*.26; y=.78 if i<4 else .25
-        ax.text(x,y,label,ha='center',va='center',fontsize=9,bbox=dict(boxstyle='round,pad=.7',fc='#e7eff8',ec='#345879'),transform=ax.transAxes)
+        ax.text(x,y,label,ha='center',va='center',fontsize=10,bbox=dict(boxstyle='round,pad=.7',fc='#e7eff8',ec='#345879'),transform=ax.transAxes)
         if i<6:
             nx=.10+((i+1)%4)*.26; ny=.78 if i+1<4 else .25
-            ax.annotate('',xy=(nx,ny+.13) if i==3 else (nx-.10,ny),xytext=(x,y-.13) if i==3 else (x+.10,y),
-                        xycoords='axes fraction',arrowprops=dict(arrowstyle='->',color='#345879',connectionstyle='arc3,rad=-.12' if i==3 else 'arc3'))
+            if i==3:
+                ax.plot([x,x,nx],[.62,.50,.50],color='#345879',lw=1,transform=ax.transAxes)
+                ax.annotate('',xy=(nx,.39),xytext=(nx,.50),xycoords='axes fraction',arrowprops=dict(arrowstyle='->',color='#345879'))
+            else:
+                ax.annotate('',xy=(nx-.10,ny),xytext=(x+.10,y),xycoords='axes fraction',arrowprops=dict(arrowstyle='->',color='#345879'))
     fig.savefig(figures/'harness.png',dpi=180); plt.close(fig)
     fig,ax=plt.subplots(figsize=(10,1.6),layout='constrained'); ax.axis('off')
     ax.text(.02,.80,r'$\bar m=\frac{1}{N}\sum_{i=1}^{N}m_i,\quad s_m=\sqrt{\frac{\sum_i(m_i-\bar m)^2}{N-1}},\quad CI_{95\%}=\bar m\pm t_{0.975,N-1}\frac{s_m}{\sqrt{N}}$',fontsize=14)
     ax.text(.02,.22,r'$\Delta_\theta=\frac{\|\theta_A-\theta_B\|_2}{\|\theta_A\|_2+10^{-12}},\quad \varepsilon_{rel}(x,y)=\frac{|x-y|}{\max(1,|x|)}$',fontsize=14)
     fig.savefig(figures/'metric_definitions.png',dpi=220); plt.close(fig)
     seed_rows=[next(r for r in registry if r['condition']==f'E2-{i}') for i in range(5)]
-    fig,ax=plt.subplots(figsize=(7,3.5),layout='constrained')
+    fig,ax=plt.subplots(figsize=(8,2.6),layout='constrained')
     ax.scatter(range(5),[r['accuracy'] for r in seed_rows],label='Measured independent runs')
     s=checks['E2']; ax.axhline(s['mean'],color='black',label='Mean')
     ax.axhspan(*s['ci95'],alpha=.15,label='95% Student t CI of mean')
@@ -110,7 +115,7 @@ def main():
         registered=args.suite/f'E4-{device}-registered.json'
         path=registered if registered.exists() else args.suite/f'E4-{device}.json'
         if path.exists(): performance[device]=read(path)
-    fig,axes=plt.subplots(1,3,figsize=(12,3.5),layout='constrained')
+    fig,axes=plt.subplots(1,3,figsize=(10,3.5),layout='constrained')
     for device,data in performance.items():
         rows=data['measurements']; batches=[r['batch_size'] for r in rows]
         axes[0].plot(batches,[r['median_seconds']*1000 for r in rows],marker='o',label=device)
@@ -119,7 +124,8 @@ def main():
     for ax,label in zip(axes,['Median batch latency (ms)','Samples / second','Peak allocated GPU memory (MiB)']):
         ax.set_xscale('log',base=2); ax.set_xlabel('Batch size'); ax.set_ylabel(label); ax.grid(alpha=.2); ax.legend()
     fig.savefig(figures/'performance.png',dpi=180); plt.close(fig)
-    first=read(all_runs['E0']/'manifest.json'); config=read(ROOT/'configs/profiles/current.json')
+    first=read(all_runs['E0']/'manifest.json')
+    config=yaml.safe_load((all_runs['E0']/'config.resolved.yaml').read_text(encoding='utf-8'))
     runtime=first['environment']; erows=metrics(all_runs['E0'])
     registry_md='\n'.join(f"| {r['alias']} | {r['condition']} | `{r['RUN_ID']}` | {r['seed']} | {r['accuracy']:.4f} | {r['status']} |" for r in registry)
     sections=[]
@@ -132,6 +138,8 @@ def main():
 ## 1. Профиль и конфигурация
 
 Профиль `{config['profile']['id']}`, хеш идентификатора `{config['profile']['student_id_hash']}`. Исходный идентификатор не публикуется. Использованы CIFAR-10, доля train {config['data']['train_fraction']}, ширина CNN {config['model']['width']}, глубина {config['model']['depth']}, batch size {config['train']['batch_size']}, AdamW, начальная скорость 0.001, weight decay 0.0001, cosine schedule с одной эпохой прогрева. В окончательной программе K=12, CPU threads=2. Число параметров {first['parameters']} ({aliases['E0']}).
+
+Модель: {config['model']['depth']} слоёв Conv2d 3×3 со stride=1, padding=1 и bias, после каждого ReLU; после первых {min(3,config['model']['depth'])} свёрток MaxPool2d 2×2. Все скрытые каналы равны {config['model']['width']}. Затем global average pooling, flatten и Linear {config['model']['width']}→{config['model']['classes']}. BatchNorm, dropout и аугментации отсутствуют.
 
 Из официальных 50000 обучающих изображений выделены train=43000, val=5000, cal=2000; test=10000 сохраняется отдельно. Для ЛР0 используется {first['actual_train_size']} изображений train. Разбиение стратифицировано, seed=1729; доля применяется только к train. Нормализация рассчитана только по train; cal и test не использовались для обучения или подбора. Учебный файл протокола отсутствует, поэтому нельзя утверждать совпадение индексов с файлом преподавателя. Хеш разбиения `{first['split_fingerprint']}` ({aliases['E0']}).
 
@@ -203,6 +211,25 @@ E4: источник обученных весов — {aliases['E1-A-1']}; raw 
         peak=max((r['peak_gpu_memory_bytes'] or 0) for r in rows)
         epoch_table.append(f"| {mode} / {aliases[key]} | {np.mean(times):.3f} | {np.percentile(times,95):.3f} | {peak/2**20:.2f} |")
     sections.append('\n'.join(epoch_table))
+    extended=args.suite/'E4-cuda-warmed.json'
+    if extended.exists():
+        probe=read(extended)
+        initial=read(args.suite/'E4-cuda.json')['measurements']
+        registered=read(args.suite/'E4-cuda-registered.json')['measurements']
+        table=[f"Дополнительная проверка устойчивости GPU timing: RUN_ID `{probe['RUN_ID']}`, "
+               "измеренный прогрев не менее секунды на каждом B, затем 50 дополнительных warmup и 300 измерений. "
+               "Она не заменяет предписанную серию выше; все три серии сохранены.",
+               '\n| B | initial mean ms / N100 | registered mean ms / N100 | extra mean ms / N300 | extra CV | SM MHz before→after |',
+               '|---:|---:|---:|---:|---:|---|']
+        for x,y,z in zip(initial,registered,probe['measurements']):
+            clocks=[z[k].split(',')[0] if z[k] else 'n/a' for k in ['clocks_before','clocks_after']]
+            table.append(f"| {z['batch_size']} | {x['mean_seconds']*1000:.4f} | {y['mean_seconds']*1000:.4f} | {z['mean_seconds']*1000:.4f} | {z['cv']:.4f} | {clocks[0]}→{clocks[1]} |")
+        bad=[r['batch_size'] for r in probe['measurements'] if not r['cv_acceptable']]
+        table.append(f"\nВ дополнительной серии порог CV не достигнут при B={bad}. Увеличение N до 300 и дополнительный прогрев "
+            "не устранили вариативность. Для B16 наблюдалось изменение частоты SM, но по этим данным нельзя приписать все выбросы "
+            "частоте или полностью разделить GPU clock variation и задержки запуска на host. Поэтому устойчивость latency вне "
+            "конкретной серии не установлена; цифры для малых B имеют это ограничение. Сырые выбросы не исключались.")
+        sections.append('\n'.join(table))
     sections.append('![Ресурсные характеристики](images/performance.png)\n\n## 4. Уровни воспроизводимости\n')
     for mode in ['A','B','C']:
         passed=checks[f'E1-{mode}']['status']=='PASS' and checks[f'E3-{mode}']['status']=='PASS'
@@ -317,6 +344,22 @@ E4: источник обученных весов — {aliases['E1-A-1']}; raw 
     text=text.replace('### Реестр обучающих запусков',
         'PDF экспортирован из общего текста через ReportLab 4.4.9 с встроенными кириллическими шрифтами. Полный LaTeX-источник сохранён; его компиляция не проверена: процесс встроенного компилятора не запускается, ошибка 1060.\n\n'
         'После основной серии неизменные численности val/cal вынесены в YAML, добавлен табличный вывод compare. Исторические manifest не переписаны. Проверка выпуска отдельно сравнивает данные и первый реальный epoch; полная серия относится к указанному выше исходному commit.\n\n### Реестр обучающих запусков')
+    compatibility=ROOT/'docs/environment/release-compatibility.json'
+    if compatibility.exists():
+        cp=read(compatibility)
+        paragraph=(f"Проверка выпуска: RUN_ID `{cp['release_RUN_ID']}`, commit `{cp['release_commit']}`, статус {cp['status']}. "
+            f"Data/split/subset fingerprints, нормализация и checksum совпали; loss первого реального epoch={cp['train_loss']:.10f}, "
+            f"val accuracy={cp['validation_accuracy']:.4f}, обе величины точно совпали с первым epoch исходной серии. "
+            "Это проверка данных и одного epoch, не повтор всей программы E0–E4.\n\n")
+        text=text.replace('### Реестр обучающих запусков',paragraph+'### Реестр обучающих запусков')
+    import xml.etree.ElementTree as ET
+    test_path=ROOT/'docs/environment/tests-lab0-release.xml'
+    if test_path.exists():
+        test=ET.parse(test_path).getroot().find('testsuite').attrib
+        text=text.replace('## 3. Результаты E0–E4',
+            f"Проверка выпуска: {test['tests']} автоматических тестов; failures={test['failures']}, errors={test['errors']}, "
+            f"skipped={test['skipped']}, {float(test['time']):.3f} s (tests-lab0-release.xml). "
+            "Тесты обучения используют маркированные synthetic fixtures и не заменяют реальные эксперименты ниже.\n\n## 3. Результаты E0–E4")
     (args.out/'report.ru.md').write_text(text,encoding='utf-8')
     write_json=args.out/'report_evidence.json'
     write_json.write_text(json.dumps({'suite':str(args.suite),'checks':checks,'run_registry':registry,

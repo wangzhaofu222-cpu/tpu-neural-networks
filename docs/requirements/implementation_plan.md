@@ -2,7 +2,7 @@
 
 ## 当前阶段
 
-Phase A：全文与关键图像审计、逐条原文登记、依赖和阻塞记录。Phase B：创建项目独立 Python≥3.11、PyTorch 2.x 环境，检查 CUDA、锁定实际完整依赖；基础 harness 开发。未完成 Phase C 正式实验，不能进入 Lab 1 正式训练。
+Phase A/B/C已完成需求审计、隔离环境、精确锁、公共harness、25项自动测试、真实CIFAR E0–E4、8CF和八页俄语PDF报告。主系列固定原提交，发布配置改动另有真实首epoch兼容证据。附加GPU N300 CV失败与LaTeX编译器启动阻塞单独披露。下一阶段按依赖次序进入Lab1；Lab1–9尚未开始正式训练。
 
 ## 顺序
 

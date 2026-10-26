@@ -28,7 +28,8 @@ def main():
         pdfmetrics.registerFont(TTFont(name,str(Path('C:/Windows/Fonts')/file)))
     pdfmetrics.registerFontFamily('Body',normal='Body',bold='BodyBold',italic='Body',boldItalic='BodyBold')
     styles=getSampleStyleSheet()
-    styles.add(ParagraphStyle('ReportBody',fontName='Body',fontSize=10.3,leading=13.8,spaceAfter=6,alignment=TA_JUSTIFY,splitLongWords=True))
+    styles.add(ParagraphStyle('ReportBody',fontName='Body',fontSize=10.3,leading=13.8,spaceAfter=5,alignment=TA_JUSTIFY,splitLongWords=True))
+    styles.add(ParagraphStyle('ReportLead',parent=styles['ReportBody'],keepWithNext=True))
     styles.add(ParagraphStyle('ReportTitle',fontName='BodyBold',fontSize=17,leading=21,spaceAfter=14))
     styles.add(ParagraphStyle('ReportH2',fontName='BodyBold',fontSize=13,leading=16,spaceBefore=12,spaceAfter=8,keepWithNext=True))
     styles.add(ParagraphStyle('ReportH3',fontName='BodyBold',fontSize=11,leading=14,spaceBefore=8,spaceAfter=5,keepWithNext=True))
@@ -42,6 +43,8 @@ def main():
         if line.startswith('# '): elements.append(Paragraph(markup(line[2:]),styles['ReportTitle']))
         elif line.startswith('## '): elements.append(Paragraph(markup(line[3:]),styles['ReportH2']))
         elif line.startswith('### '): elements.append(Paragraph(markup(line[4:]),styles['RegistryH3'] if 'Реестр' in line else styles['ReportH3']))
+        elif line=='E1 и E3:': elements.append(Paragraph(markup(line),styles['ReportH3']))
+        elif line.startswith('Время полной эпохи'): elements.append(Paragraph(markup(line),styles['ReportLead']))
         elif line.startswith('|'):
             rows=[]
             while i<len(lines) and lines[i].strip().startswith('|'):
@@ -53,7 +56,7 @@ def main():
             if 'RUN_ID' in header and count==6: weights=[.07,.16,.34,.12,.11,.20]
             if count==8: weights=[.06,.16,.12,.10,.07,.17,.13,.09]
             rows=[[Paragraph(markup(c),styles['Cell']) for c in row] for row in rows]
-            table=LongTable(rows,colWidths=[width*w/sum(weights) for w in weights],repeatRows=1,hAlign='LEFT')
+            table=LongTable(rows,colWidths=[width*w/sum(weights) for w in weights],repeatRows=1,hAlign='LEFT',splitByRow=int(len(rows)>10))
             table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e7ecf1')),
                 ('GRID',(0,0),(-1,-1),.35,colors.HexColor('#aab5bf')),('LEFTPADDING',(0,0),(-1,-1),3),
                 ('RIGHTPADDING',(0,0),(-1,-1),3),('TOPPADDING',(0,0),(-1,-1),4),('BOTTOMPADDING',(0,0),(-1,-1),4)]))

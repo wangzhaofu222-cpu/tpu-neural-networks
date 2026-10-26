@@ -1,0 +1,16 @@
+{
+  "mode": "A",
+  "checks": {
+    "same_EXP_ID": true,
+    "different_RUN_ID": true,
+    "same_config": true,
+    "same_split": true,
+    "same_first_batch": true,
+    "loss_trajectory": true,
+    "final_accuracy": true
+  },
+  "max_relative_step_loss": 0.0,
+  "accuracy_difference": 0.0,
+  "status": "PASS",
+  "mode_C_explanation_required": false
+}

@@ -1,0 +1,26 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "packages": [
+    {
+      "name": "pypdfium2",
+      "version": "5.14.0"
+    },
+    {
+      "name": "pypdf",
+      "version": "6.10.0"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "name": "reportlab",
+      "version": "4.4.9"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2"
+    }
+  ],
+  "role": "PDF export and inspection, not model training"
+}

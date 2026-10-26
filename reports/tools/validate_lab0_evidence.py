@@ -36,6 +36,7 @@ def main():
         data=read(a.suite/f'E4-{device}-registered.json'); rows=data['measurements']
         checks[f'E4-{device}']=([r['batch_size'] for r in rows]==[1,16,64,256] and
             all(len(r['samples_seconds'])==r['repeats'] and r['warmup']>=10 and r['repeats']>=100 for r in rows))
+        checks[f'E4-{device}-primary-CV']=all(r['cv_acceptable'] for r in rows)
         assert (ROOT/'runs'/data['RUN_ID']/'manifest.json').exists()
     text=(a.report/'report.ru.md').read_text(encoding='utf-8')
     checks['report_six_sections']=len(re.findall(r'^## [1-6]\.',text,re.M))==6
@@ -45,6 +46,10 @@ def main():
     result={'status':'PASS' if all(checks.values()) else 'FAIL','checks':checks,'E2':stats,
             'scope':'Lab0 experimental evidence and six-section source report only; PDF QA and code/config audit recorded separately',
             'course_Lab1_to_9_complete':False,'suite':str(a.suite),'tested_commit':ledger['code_commit']}
+    if (a.suite/'E4-cuda-warmed.json').exists():
+        result['extended_GPU_timing']={'CV_threshold_status':'FAIL','repeats':300,
+            'batches_above_CV_10_percent':[r['batch_size'] for r in read(a.suite/'E4-cuda-warmed.json')['measurements'] if not r['cv_acceptable']],
+            'interpretation':'Additional diagnostic retained alongside passing primary N100 series; global latency stability is not established'}
     write_json(a.report/'acceptance.json',result); print(json.dumps(result,indent=2))
     if result['status']!='PASS': raise SystemExit(1)
 

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": {
+    "data_fingerprint": true,
+    "split_fingerprint": true,
+    "subset_fingerprint": true,
+    "actual_train_size": true,
+    "normalization": true,
+    "first_batch_checksum": true,
+    "parameters": true,
+    "profile": true,
+    "seed": true,
+    "first_epoch_train_loss": true,
+    "first_epoch_validation_loss": true,
+    "first_epoch_accuracy": true,
+    "one_epoch_only": true,
+    "real_data": true,
+    "clean_committed_release": true
+  },
+  "scope": "Unchanged data pipeline and exact real first-epoch numerical behavior after config-only split exposure and compare/status display changes",
+  "full_formal_suite_rerun_after_release_changes": false,
+  "reference_RUN_ID": "6a750eb4531ac754cde7-b798991a1a7b457cbb0de2144b2a4742",
+  "release_RUN_ID": "051d566d9b717bf5a619-3ce892edf95844a6acc846f36a9f7f92",
+  "reference_commit": "5abedb11663b56690456dca8e8fa3dba24fbb3a7",
+  "release_commit": "02bd8b9fac5aa28f69813b7adb512563edfb91fd",
+  "train_loss": 1.9642590621016747,
+  "validation_accuracy": 0.3464
+}

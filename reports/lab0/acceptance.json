@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "checks": {
+    "E0": true,
+    "suite_finished": true,
+    "E1-A": true,
+    "E3-A": true,
+    "E3-A-exact-step-losses": true,
+    "E1-B": true,
+    "E3-B": true,
+    "E3-B-exact-step-losses": true,
+    "E1-C": true,
+    "E3-C": true,
+    "E3-C-exact-step-losses": true,
+    "E2": true,
+    "CF02": true,
+    "CF03_nonzero_ablation": true,
+    "CF04": true,
+    "CF06": true,
+    "E4-cpu": true,
+    "E4-cpu-primary-CV": true,
+    "E4-cuda": true,
+    "E4-cuda-primary-CV": true,
+    "report_six_sections": true,
+    "report_eight_CF": true,
+    "report_images": true
+  },
+  "E2": {
+    "n": 5,
+    "mean": 0.63344,
+    "sample_std": 0.008707927422756816,
+    "ci95": [
+      0.6226276800201915,
+      0.6442523199798085
+    ],
+    "ci_method": "Student t, df=n-1; independent runs",
+    "minimum_effect_heuristic": 0.017415854845513633,
+    "RUN_IDs": [
+      "6a750eb4531ac754cde7-1d3687b74ea341a4a1e606a63170cf75",
+      "ffcacb74be86c9753a8d-0dbcbab3f9b2449da8f22b799f36cd6d",
+      "c9425d8eded07ded9b07-9a72d90391944975ad604e0ab77440c9",
+      "39881f615bd21f39c28d-eb622515499c4ca9af7b5541ec08f28d",
+      "cb0f969da6cfc1ee7759-fe0f39acfd234932801e11365501a14a"
+    ],
+    "large_variance_explanation_required": false
+  },
+  "scope": "Lab0 experimental evidence and six-section source report only; PDF QA and code/config audit recorded separately",
+  "course_Lab1_to_9_complete": false,
+  "suite": "experiments\\lab0\\6116b9614f294c4c918500d92471fc4e",
+  "tested_commit": "5abedb11663b56690456dca8e8fa3dba24fbb3a7",
+  "extended_GPU_timing": {
+    "CV_threshold_status": "FAIL",
+    "repeats": 300,
+    "batches_above_CV_10_percent": [
+      1,
+      16
+    ],
+    "interpretation": "Additional diagnostic retained alongside passing primary N100 series; global latency stability is not established"
+  }
+}

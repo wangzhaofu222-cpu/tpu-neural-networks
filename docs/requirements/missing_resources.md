@@ -5,7 +5,7 @@
 | ID | 项目 | 影响 | 状态/处理 |
 |---|---|---|---|
 | RES-01 | 完整课程数据协议 | Lab 4 CF2 颜色控制集 §4.6；Lab 5 masks；Lab 8 近 OOD；Lab 9 actor/clip 协议 | BLOCKED；请向教师取得；不宣称公共替代等价 |
-| RES-02 | CIFAR-10 / FashionMNIST 原始数据 | Lab 0/1/2/4/8 | 待核验官方来源与许可后下载；Lab 0 按 PDF 明确 43k/5k/2k/10k 可继续，split 方法显式记录 |
+| RES-02 | CIFAR-10 / FashionMNIST 原始数据 | Lab 0/1/2/4/8 | CIFAR已从官方来源取得并通过官方MD5与本地SHA256校验；FashionMNIST尚未下载。Lab 0 按 PDF 明确 43k/5k/2k/10k 继续，split 方法显式记录；许可表述见docs/data_sources.md |
 | RES-03 | 课程 Planetoid split 文件 | Lab 5 §6/8.1 | BLOCKED；可开发单元测试，正式验收须比对课程 masks |
 | RES-04 | 课程 RAVDESS 224×224/10fps 人脸帧、16kHz mono、clip_id、face_found、actor roles、av_offset_ms | Lab 9；Lab 2/4/5 人脸附加项 | BLOCKED；公共原始视频不是教师预处理包 |
 | RES-05 | Lab 2/4 真实已训练 checkpoint | Lab 8/9 | NOT RUN；必须先完成上游实验，不下载无关权重替代 |

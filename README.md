@@ -30,9 +30,9 @@ python -m conda create --prefix .\.conda-env python=3.11 -y --solver classic
 # 只测一个完整CPU epoch，不自动启动长训练。
 & .\.conda-env\python.exe scripts/budget_lab0.py
 # 预算门通过后手动安排完整实验；purpose=formal要求源码/配置已提交且干净。
-& .\.conda-env\python.exe -m src.train --config configs/lab0.yaml
+& .\.conda-env\python.exe -X utf8 -m src.train --config configs/lab0.yaml --set experiment.purpose=formal --set runtime.max_seconds=600
 & .\.conda-env\python.exe -m src.evaluate --run '<RUN_ID>'
-& .\.conda-env\python.exe -m src.compare --runs '<RUN_ID_1>' '<RUN_ID_2>'
+& .\.conda-env\python.exe -X utf8 -m src.compare --runs '<RUN_ID_1>' '<RUN_ID_2>' --format markdown
 & .\.conda-env\python.exe -m src.profile --config configs/lab0.yaml
 ```
 
@@ -41,11 +41,11 @@ python -m conda create --prefix .\.conda-env python=3.11 -y --solver classic
 epoch 边界恢复：
 
 ```powershell
-& .\.conda-env\python.exe -m src.train --config configs/lab0.yaml --stop-after-epoch 5
-& .\.conda-env\python.exe -m src.train --config configs/lab0.yaml --resume 'runs/<RUN_ID>/checkpoints/last.pt'
+& .\.conda-env\python.exe -X utf8 -m src.train --config configs/lab0.yaml --set experiment.purpose=formal --set runtime.max_seconds=600 --stop-after-epoch 6
+& .\.conda-env\python.exe -X utf8 -m src.train --config 'runs/<RUN_ID>/config.resolved.yaml' --resume 'runs/<RUN_ID>/checkpoints/last.pt'
 ```
 
-保持原配置的总 epochs，`--stop-after-epoch` 只控制进程停止位置，不能把训练计划 epochs 从5改10，否则调度轨迹不同。恢复创建新RUN_ID并记录父RUN_ID，保存父日志前缀；不会覆盖原结果。当前仅保证**完整epoch边界**恢复，不宣称支持任意batch中断恢复。
+保持原配置的总epochs=12，`--stop-after-epoch`只控制进程停止位置，不能把训练计划epochs从6改12，否则调度轨迹不同。恢复创建新RUN_ID并记录父RUN_ID，保存父日志前缀；不会覆盖原结果。仅保证**完整epoch边界**恢复。历史checkpoint须使用其manifest记录的源码；源码改变时明确拒绝继续，不能修改旧manifest规避检查。
 
 ## 数据、隐私与 provenance
 
@@ -57,4 +57,4 @@ split在`splits/`，按CIFAR官方train/test命名空间防止“相同数字索
 
 ## 当前范围
 
-已开始公共基础设施与Lab0；Lab1–9只有需求审计和profile规则，**尚未实现/训练/完成报告**。Lab0通过完整验收前不启动后续正式实验。最终提交文件当前为阶段状态记录，绝非已完成课程的声明。
+Lab0已有完整真实训练、反事实测量与六节俄语报告，最终状态以`FINAL_CHECKLIST.md`及`reports/lab0/acceptance.json`为准。Lab1–9只有需求审计和profile规则，**尚未实现/训练/完成报告**；课程协议缺失导致的具体阻塞逐项列出。报告见`reports/lab0/report.pdf`，可编辑LaTeX源见`reports/lab0/main.tex`；本机LaTeX进程启动失败，PDF采用独立导出，不能声称LaTeX编译已通过。

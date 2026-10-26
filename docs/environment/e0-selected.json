@@ -1,0 +1,13 @@
+{
+  "RUN_ID": "2e863c4124c6c4321515-f73d8ccc23754fcfa4192ba00946809e",
+  "evaluation_path": "runs\\2e863c4124c6c4321515-f73d8ccc23754fcfa4192ba00946809e\\evaluation-91100258138a4ee68ae6b4a2905aefcb.json",
+  "acceptance": {
+    "checks": {
+      "loss_halved": true,
+      "val_accuracy_30_percent": true,
+      "all_epochs_logged": true,
+      "independent_evaluation": true
+    },
+    "status": "PASS"
+  }
+}

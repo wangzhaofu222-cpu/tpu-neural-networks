@@ -1,0 +1,22 @@
+{
+  "latex_project_created": true,
+  "latex_compile_status": "UNVERIFIED_COMPILER_START_FAILED",
+  "latex_compile_diagnostic": "windows sandbox: CreateProcessWithLogonW failed: 1060",
+  "pdf_export_status": "PASS",
+  "visual_QA_status": "PASS",
+  "export_backend": "ReportLab, separate locked report environment",
+  "pages": 8,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "cyrillic_fonts_embedded": true,
+  "pdf_sha256": "771f971c22af6698a422b830bb7d4e922ce80493eac63cd18051008bfb4624cd",
+  "visual_findings": "All eight rendered pages inspected; no clipped text, overlaps or missing Cyrillic glyphs; repeated table headers and figure labels checked"
+}

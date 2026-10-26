@@ -1,0 +1,211 @@
+{
+  "started_unix": 1792996332.6044967,
+  "budget": {
+    "RUN_ID": "e592bd6f1f2da6e9f959-f1f208b3b6844b71a89d774e5e291a44",
+    "epoch_seconds": 24.09012260000054,
+    "epochs_planned": 12,
+    "mandatory_13_runs_estimated_seconds": 3758.0591256000844,
+    "cuda_additional_runs": "NOT MEASURED; up to 8 runs",
+    "teacher_epoch_target_met": true,
+    "status": "BUDGET_ONLY_NOT_E0",
+    "cpu_threads": 2,
+    "cpu_temperature": "not_measured; user requested not to wait for temperature monitoring",
+    "automatic_full_series_started": false
+  },
+  "E0": "runs\\2e863c4124c6c4321515-f73d8ccc23754fcfa4192ba00946809e",
+  "code_commit": "5abedb11663b56690456dca8e8fa3dba24fbb3a7",
+  "runs": {
+    "E1-A-1": "D:\\神经网络\\runs\\6a750eb4531ac754cde7-b798991a1a7b457cbb0de2144b2a4742",
+    "E1-A-2": "D:\\神经网络\\runs\\6a750eb4531ac754cde7-6f509e890fd64b608afb1088db8a2887",
+    "E3-A-continuous": "D:\\神经网络\\runs\\6a750eb4531ac754cde7-121bb015882b4809bac8725db13d3585",
+    "E3-A-interrupted": "D:\\神经网络\\runs\\6a750eb4531ac754cde7-780d211ff99d477cabc89ecdd1cd58de",
+    "E3-A-resumed": "D:\\神经网络\\runs\\6a750eb4531ac754cde7-c5ba381370ce489991574e85997b1a8f",
+    "E1-B-1": "D:\\神经网络\\runs\\24fb5beae9305a2c10aa-de06a13cc7eb402f995f5668a778dfe6",
+    "E1-B-2": "D:\\神经网络\\runs\\24fb5beae9305a2c10aa-832c4282c2bb4bd6a076707c0f7b83a2",
+    "E3-B-continuous": "D:\\神经网络\\runs\\24fb5beae9305a2c10aa-625428fa57f94801a094c63c66e1ffe6",
+    "E3-B-interrupted": "D:\\神经网络\\runs\\24fb5beae9305a2c10aa-ea45996d25e745f48acfd8b7801c48a0",
+    "E3-B-resumed": "D:\\神经网络\\runs\\24fb5beae9305a2c10aa-c71cd08cb5ce48548549d1375248531b",
+    "E1-C-1": "D:\\神经网络\\runs\\1e2acbdbd42e2d6577a1-fa3b237cd8c84cea899ea6716c2bf01f",
+    "E1-C-2": "D:\\神经网络\\runs\\1e2acbdbd42e2d6577a1-5a0fe15af76a434abe485f83138ea1eb",
+    "E3-C-continuous": "D:\\神经网络\\runs\\1e2acbdbd42e2d6577a1-6ca15418d29047f28c044e2c3bc72b60",
+    "E3-C-interrupted": "D:\\神经网络\\runs\\1e2acbdbd42e2d6577a1-0b76c9aae5b743bfb74f968c0a92ace6",
+    "E3-C-resumed": "D:\\神经网络\\runs\\1e2acbdbd42e2d6577a1-bb15ad788cda4f19b0e25eebf5201b6f",
+    "E2-0": "D:\\神经网络\\runs\\6a750eb4531ac754cde7-1d3687b74ea341a4a1e606a63170cf75",
+    "E2-1": "D:\\神经网络\\runs\\ffcacb74be86c9753a8d-0dbcbab3f9b2449da8f22b799f36cd6d",
+    "E2-2": "D:\\神经网络\\runs\\c9425d8eded07ded9b07-9a72d90391944975ad604e0ab77440c9",
+    "E2-3": "D:\\神经网络\\runs\\39881f615bd21f39c28d-eb622515499c4ca9af7b5541ec08f28d",
+    "E2-4": "D:\\神经网络\\runs\\cb0f969da6cfc1ee7759-fe0f39acfd234932801e11365501a14a",
+    "CF02-workers-1": "D:\\神经网络\\runs\\18ba7b9da1c4f164b795-b171839347714fbeac64c77f997c5e85",
+    "CF02-workers-2": "D:\\神经网络\\runs\\18ba7b9da1c4f164b795-b085a9d3aed8425891c5541ea8a0ac25",
+    "CF03-weights-only": "D:\\神经网络\\runs\\c5efc232293daa65ca54-44bb5d7a874643259168a727c3bb948d"
+  },
+  "checks": {
+    "E0": {
+      "checks": {
+        "loss_halved": true,
+        "val_accuracy_30_percent": true,
+        "all_epochs_logged": true,
+        "independent_evaluation": true
+      },
+      "status": "PASS"
+    },
+    "E1-A": {
+      "mode": "A",
+      "checks": {
+        "same_EXP_ID": true,
+        "different_RUN_ID": true,
+        "same_config": true,
+        "same_split": true,
+        "same_first_batch": true,
+        "loss_trajectory": true,
+        "final_accuracy": true
+      },
+      "max_relative_step_loss": 0.0,
+      "accuracy_difference": 0.0,
+      "status": "PASS",
+      "mode_C_explanation_required": false
+    },
+    "E3-A": {
+      "delta_theta": 0.0,
+      "accuracy_difference": 0.0,
+      "checks": {
+        "optimizer_steps": true,
+        "parameter_difference": true,
+        "accuracy": true
+      },
+      "status": "PASS"
+    },
+    "E1-B": {
+      "mode": "B",
+      "checks": {
+        "same_EXP_ID": true,
+        "different_RUN_ID": true,
+        "same_config": true,
+        "same_split": true,
+        "same_first_batch": true,
+        "loss_trajectory": true,
+        "final_accuracy": true
+      },
+      "max_relative_step_loss": 0.0,
+      "accuracy_difference": 0.0,
+      "status": "PASS",
+      "mode_C_explanation_required": false
+    },
+    "E3-B": {
+      "delta_theta": 0.0,
+      "accuracy_difference": 0.0,
+      "checks": {
+        "optimizer_steps": true,
+        "parameter_difference": true,
+        "accuracy": true
+      },
+      "status": "PASS"
+    },
+    "E1-C": {
+      "mode": "C",
+      "checks": {
+        "same_EXP_ID": true,
+        "different_RUN_ID": true,
+        "same_config": true,
+        "same_split": true,
+        "same_first_batch": true
+      },
+      "max_relative_step_loss": 0.0,
+      "accuracy_difference": 0.0,
+      "status": "PASS",
+      "mode_C_explanation_required": true
+    },
+    "E3-C": {
+      "delta_theta": 0.0,
+      "accuracy_difference": 0.0,
+      "checks": {
+        "optimizer_steps": true
+      },
+      "status": "PASS"
+    },
+    "E2": {
+      "n": 5,
+      "mean": 0.63344,
+      "sample_std": 0.008707927422756816,
+      "ci95": [
+        0.6226276800201915,
+        0.6442523199798085
+      ],
+      "ci_method": "Student t, df=n-1; independent runs",
+      "minimum_effect_heuristic": 0.017415854845513633,
+      "RUN_IDs": [
+        "6a750eb4531ac754cde7-1d3687b74ea341a4a1e606a63170cf75",
+        "ffcacb74be86c9753a8d-0dbcbab3f9b2449da8f22b799f36cd6d",
+        "c9425d8eded07ded9b07-9a72d90391944975ad604e0ab77440c9",
+        "39881f615bd21f39c28d-eb622515499c4ca9af7b5541ec08f28d",
+        "cb0f969da6cfc1ee7759-fe0f39acfd234932801e11365501a14a"
+      ],
+      "large_variance_explanation_required": false
+    },
+    "CF02": {
+      "mode": "C",
+      "checks": {
+        "same_EXP_ID": true,
+        "different_RUN_ID": true,
+        "same_config": true,
+        "same_split": true,
+        "same_first_batch": true
+      },
+      "max_relative_step_loss": 0.0,
+      "accuracy_difference": 0.0,
+      "status": "PASS",
+      "mode_C_explanation_required": true,
+      "against_workers0": {
+        "split_equal": true,
+        "first_batch_equal": true,
+        "step_losses_equal": true,
+        "final_accuracy_difference": 0.0
+      }
+    },
+    "CF03": {
+      "delta_theta": 0.3710280114273825,
+      "discarded_fields": [
+        "optimizer",
+        "scheduler",
+        "scaler",
+        "epoch",
+        "global_step",
+        "python_rng",
+        "numpy_rng",
+        "torch_rng",
+        "cuda_rng",
+        "loader_rng",
+        "best_accuracy",
+        "best_epoch",
+        "run_id",
+        "config_hash",
+        "data_fingerprint",
+        "split_fingerprint",
+        "source_hash",
+        "first_batch_checksum"
+      ],
+      "RUN_ID": "c5efc232293daa65ca54-44bb5d7a874643259168a727c3bb948d"
+    },
+    "CF04": {
+      "pairs": [],
+      "status": "NO_QUALIFYING_PAIR; further seeds required"
+    },
+    "CF06": {
+      "reference_run": "6a750eb4531ac754cde7-b798991a1a7b457cbb0de2144b2a4742",
+      "original_hash": "54636561a3ce25bd3e19253c6b0d8538147b0ae398331ac4a2d86c6d987368cd",
+      "changed_copy_hash": "8b0686ccaea34977c1f2443df1f75e662d8dd988fc1137c8050051f687b987e7",
+      "detected": true,
+      "original_data_untouched": true,
+      "note": "Official torchvision MD5 would also reject this corrupted copy before training."
+    },
+    "CF05": {
+      "reference_run": "6a750eb4531ac754cde7-b798991a1a7b457cbb0de2144b2a4742",
+      "cudnn_recorded": 90701,
+      "environment_in_EXP_ID": false,
+      "actual_library_upgrade_performed": false
+    }
+  },
+  "status": "TRAINING_PROGRAM_COMPLETED; REPORT_AND_CF_COMPLETENESS_PENDING",
+  "serial_training": true,
+  "wall_seconds": 3903.088362455368
+}

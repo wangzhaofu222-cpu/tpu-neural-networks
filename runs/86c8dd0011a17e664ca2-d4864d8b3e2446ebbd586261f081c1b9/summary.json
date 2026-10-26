@@ -1,0 +1,24 @@
+{
+  "RUN_IDs": [
+    "86c8dd0011a17e664ca2-d4864d8b3e2446ebbd586261f081c1b9",
+    "26fbdb25ae58f6ba17cc-acc3b6459ddd475885825852351b1aa8"
+  ],
+  "same_path_before_after": "D:\\神经网络\\tmp\\CF06\\data_batch_1",
+  "same_filename": true,
+  "size_unchanged": true,
+  "before_hash": "54636561a3ce25bd3e19253c6b0d8538147b0ae398331ac4a2d86c6d987368cd",
+  "after_hash": "8b0686ccaea34977c1f2443df1f75e662d8dd988fc1137c8050051f687b987e7",
+  "field_equality": {
+    "EXP_ID": false,
+    "RUN_ID": false,
+    "config_hash": true,
+    "data_fingerprint": false,
+    "split_fingerprint": true,
+    "seed": true,
+    "git_commit": true,
+    "source_hash": true,
+    "profile": true
+  },
+  "official_data_untouched": true,
+  "status": "MEASURED_FINGERPRINT_INTERVENTION_NO_TRAINING"
+}

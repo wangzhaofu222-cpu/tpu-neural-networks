@@ -4,21 +4,21 @@
 
 | ID | PDF 章节 / 页 | 必做内容与验收 | 当前状态 |
 |---|---|---|---|
-| L0-PRO | §7–11 p4–9 | 五 CLI；SHA256 profile；Python≥3.11/PyTorch2；精确全依赖 lock/hash | NOT RUN |
-| L0-RUN | §14–16 p11–13 | Runner全生命周期；manifest所有字段；独立RUN_ID；小文本Git版本化、权重忽略 | NOT RUN |
-| L0-DAT | §13 p10–11 | CIFAR43000/5000/2000/10000；复用split；内容与split fingerprints | NOT RUN |
-| L0-CKP | §17 p13 | model/optimizer/scheduler/epoch/step/Python/NumPy/Torch/CUDA RNG/AMP；另存loader generator，真正进程重启 | NOT RUN |
-| L0-LOG | §18 p13–14 | train/val loss/metric、lr、epoch/step/time；E1逐step loss与first batch checksum | NOT RUN |
-| L0-PRF | §19/22.5 p14/18 | 参数、forward/batch latency、throughput、epoch time、GPU peak；10warmup/30测量/均值中位p95/CV≤10%或解释 | NOT RUN |
-| L0-CMP | §20 p14 | 汇总所有run、按EXP_ID分组、config diff；相同条件diff为空 | NOT RUN |
-| L0-E0 | §21.1/22.1 p15–17 | final train loss≤first/2；CIFAR val acc≥.30；完整日志；独立evaluate差≤1e-6 | NOT RUN |
-| L0-E1 | §21.2/22.2 p15/17 | A exact轨迹/结果；B step rel loss≤1e-5、acc≤.001；C实测解释；split/checksum记录冲突见missing_resources | NOT RUN |
-| L0-E2 | §21.3/22.3 p15–17 | ≥5seed；mean/样本std/95%CI；最小效应参考2std；std>.015须解释 | NOT RUN |
-| L0-E3 | §21.4/22.4 p16–17 | delta_theta A≤1e-7/B≤1e-5；A acc差0/B≤.001；optimizer steps完全相同 | NOT RUN |
-| L0-E4 | §21.5/22.5 p16/18 | profile指定全部B、latency/throughput/memory曲线，保留cold首步供CF7 | NOT RUN |
-| L0-CF01..08 | §24 p19 | 最小效应/样本数；workers2两运行；只权重resume；近同acc轨迹；cuDNN变化；改数据1字节；cold/warm；最优B差异 | NOT RUN |
-| L0-T01..11 | §25 p19–20 | config；split；checkpoint outputs；metric；EXP变化；EXP稳定/RUN变化；不覆盖；代码变化；profile确定/区分；双profile无需改代码；CPU/CUDA配置 | NOT RUN |
-| L0-REP | §27–28 p20–21 | 6节：profile预算、harness、E0–4、R0–3带模式、8CF、限制 | NOT RUN |
+| L0-PRO | §7–11 p4–9 | 五 CLI；SHA256 profile；Python≥3.11/PyTorch2；精确全依赖 lock/hash | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-RUN | §14–16 p11–13 | Runner全生命周期；manifest所有字段；独立RUN_ID；小文本Git版本化、权重忽略 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-DAT | §13 p10–11 | CIFAR43000/5000/2000/10000；复用split；内容与split fingerprints | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-CKP | §17 p13 | model/optimizer/scheduler/epoch/step/Python/NumPy/Torch/CUDA RNG/AMP；另存loader generator，真正进程重启 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-LOG | §18 p13–14 | train/val loss/metric、lr、epoch/step/time；E1逐step loss与first batch checksum | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-PRF | §19/22.5 p14/18 | 参数、forward/batch latency、throughput、epoch time、GPU peak；10warmup/30测量/均值中位p95/CV≤10%或解释 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-CMP | §20 p14 | 汇总所有run、按EXP_ID分组、config diff；相同条件diff为空 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-E0 | §21.1/22.1 p15–17 | final train loss≤first/2；CIFAR val acc≥.30；完整日志；独立evaluate差≤1e-6 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-E1 | §21.2/22.2 p15/17 | A exact轨迹/结果；B step rel loss≤1e-5、acc≤.001；C实测解释；split/checksum记录冲突见missing_resources | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-E2 | §21.3/22.3 p15–17 | ≥5seed；mean/样本std/95%CI；最小效应参考2std；std>.015须解释 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-E3 | §21.4/22.4 p16–17 | delta_theta A≤1e-7/B≤1e-5；A acc差0/B≤.001；optimizer steps完全相同 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-E4 | §21.5/22.5 p16/18 | profile指定全部B、latency/throughput/memory曲线，保留cold首步供CF7 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-CF01..08 | §24 p19 | 最小效应/样本数；workers2两运行；只权重resume；近同acc轨迹；cuDNN变化；改数据1字节；cold/warm；最优B差异 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-T01..11 | §25 p19–20 | config；split；checkpoint outputs；metric；EXP变化；EXP稳定/RUN变化；不覆盖；代码变化；profile确定/区分；双profile无需改代码；CPU/CUDA配置 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
+| L0-REP | §27–28 p20–21 | 6节：profile预算、harness、E0–4、R0–3带模式、8CF、限制 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
 | L1-IMP | §5–8 p2–8 | 显式He/Xavier/Gaussian；ReLU/tanh、BN/LN、残差；float64 hook统计q/v/zero/saturation/delta/gl/GI/AVD/rho_T/NaN；probe真实B≥64、单位u | NOT RUN |
 | L1-E1 | §9.1 p8–9 | 3init×profile深度、宽256/noNorm/ReLU；最大深度chi前/反误差≤20%；排除q<1e-30；Gaussian训练1epoch后复查理论 | NOT RUN |
 | L1-E2 | §9.2 p9 | plain/res alpha1/alpha1√L，3epoch；只为最浅plain选LR固定网格；signal增长误差≤20%；scaled q ratio≤1.2e^c；首个rho≥.9/NaN深度 | NOT RUN |

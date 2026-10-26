@@ -1,0 +1,16 @@
+{
+  "RUN_ID": "699083a5d60b457b7a27-4565dcc8697040c498b47d8fedaae4d4",
+  "parent_RUN_ID": "6a750eb4531ac754cde7-780d211ff99d477cabc89ecdd1cd58de",
+  "checkpoint_sha256": "d45d757de18778265ff78173c502dd4a00bbbd42556a0f88cd1c6cd4c55df537",
+  "fixed_gradient_loss": 1.237444281578064,
+  "same_gradient_for_all_updates": true,
+  "resumed_lr": 0.0005711574191366427,
+  "initial_lr": 0.001,
+  "delta_theta_reset_optimizer_moments_only": 0.009823489968373907,
+  "delta_theta_reset_learning_rate_only": 0.0015197029202138927,
+  "saved_loader_next_batch_hash": "f079a78db2e21550908eddffeaacbf29d4d8df72ae4ca793aeccad0084135da8",
+  "fresh_loader_next_batch_hash": "e5acd61376b364a491f2532490ad96727ac570b418e48773b5097b370107f536",
+  "data_order_changes_without_loader_rng": true,
+  "python_numpy_global_rng_not_used_by_this_deterministic_CNN_pipeline": true,
+  "status": "ONE_STEP_DIAGNOSTIC_NOT_A_FULL_TRAINING_RUN"
+}

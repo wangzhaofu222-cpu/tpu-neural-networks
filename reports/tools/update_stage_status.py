@@ -40,6 +40,7 @@ Phase A/B已完成；Lab0阶段验收：**{status}**。整个Lab0–Lab9课程�
 - E2预定5seed：mean={e2['mean']:.6f}，样本std={e2['sample_std']:.6f}，95% Student t CI=[{e2['ci95'][0]:.6f},{e2['ci95'][1]:.6f}]；2std参考效应={e2['minimum_effect_heuristic']:.6f}。
 - workers2配对与workers0基准的全部2016个step losses完全相同。只恢复权重的最终参数相对差={ledger['checks']['CF03']['delta_theta']:.6f}，不能当成正确恢复。
 - CF4额外{len(extra['runs'])}个seed单独登记，不重算预定5seed统计；数据1字节干预和optimizer/lr/RNG诊断均有真实记录。
+- E4主CPU/GPU系列各50预热/100测量，全部B的CV≤10%；附加GPU N300诊断在B1/B16得到CV约20.8%/13.6%，阈值状态FAIL，已保留并在报告披露，不能把主系列通过扩展为普遍延迟稳定保证。
 - 俄语六节报告：`reports/lab0/report.pdf`、`main.tex`、`report.ru.md`；图表、RUN_ID注册表、实验验收及构建状态同目录。
 - 主E1/E2/E3与补充训练固定提交`{ledger['code_commit']}`。发布时显式split参数及比较显示的改动另有兼容验证；不改写历史manifest。
 
@@ -72,6 +73,7 @@ Phase A/B已完成；Lab0阶段验收：**{status}**。整个Lab0–Lab9课程�
 | Lab0十一项必测及补充边界测试 | {'PASS' if passed==int(stats['tests']) else 'FAIL'} | {test.relative_to(ROOT).as_posix()}、test_traceability.md |
 | Lab0真实数据预算、正式E0–E4、8CF | {acceptance['status']} | reports/lab0/acceptance.json、report_evidence.json、原始ledger/runs |
 | Lab0数据split显式配置及发布兼容 | {'PASS' if code_ok else 'NOT RUN'} | docs/environment/release-compatibility.json |
+| 附加GPU N300的CV≤10% | FAIL | B1约20.8%、B16约13.6%；报告中保留原始波动及局限，不影响主N100已通过的事实 |
 | Lab0俄语六节报告/PDF视觉验收 | {'PASS' if build['visual_QA_status']=='PASS' else 'NOT RUN'} | reports/lab0/report.pdf、build_status.json |
 | Lab0 LaTeX编译 | BLOCKED | 预览进程CreateProcessWithLogonW启动错误1060；tex保留，PDF独立导出 |
 | Lab1–Lab9特定实现/自动测试/正式实验/报告 | NOT RUN | 不能以Lab0框架或fixture测试代替 |

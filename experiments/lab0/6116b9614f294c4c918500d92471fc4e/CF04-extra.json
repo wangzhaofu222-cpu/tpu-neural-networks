@@ -1,0 +1,23 @@
+{
+  "runs": [
+    "D:\\神经网络\\runs\\640b5fb517c666ee2ce4-2eacc02910704bfbbd95feae4626ba44",
+    "D:\\神经网络\\runs\\c25cb47bc0282725a620-214e3871a8e8497487723a62760e2f94",
+    "D:\\神经网络\\runs\\e74e6c8aa32ebadb48e5-fdb056f5c03546819b60bcef0a382e86"
+  ],
+  "pairs": [
+    {
+      "RUN_IDs": [
+        "640b5fb517c666ee2ce4-2eacc02910704bfbbd95feae4626ba44",
+        "e74e6c8aa32ebadb48e5-fdb056f5c03546819b60bcef0a382e86"
+      ],
+      "accuracy_difference": 0.0,
+      "trajectories_equal": false,
+      "max_relative_step_loss_difference": 0.5109808444976807,
+      "unequal_step_losses": 2016
+    }
+  ],
+  "status": "PAIR_FOUND",
+  "primary_E2_N_remains": 5,
+  "max_extra": 4,
+  "wall_seconds": 844.7263104915619
+}
