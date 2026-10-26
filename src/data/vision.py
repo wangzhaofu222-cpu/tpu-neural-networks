@@ -41,11 +41,22 @@ def datasets(config):
     from torchvision.datasets import CIFAR10
     train = CIFAR10(data['root'],train=True,download=data['download'])
     test = CIFAR10(data['root'],train=False,download=data['download'])
-    expected = stratified_split(train.targets,data['split_seed'],500,200,len(test))
     path = Path(data['split_path'])
+    split = None
     if path.exists():
         split = json.loads(path.read_text(encoding='utf-8'))
         validate_split(split)
+    counts = [data.get('val_per_class'),data.get('cal_per_class')]
+    if any(value is None for value in counts):
+        # Recover historical resolved configs from their saved shared split.
+        if split is None:
+            raise ValueError('A new CIFAR split requires explicit val_per_class and cal_per_class')
+        classes = len(np.unique(train.targets))
+        if any(len(split['roles'][role])%classes for role in ['val','cal']):
+            raise ValueError('Legacy split does not have integral per-class role counts')
+        counts = [len(split['roles'][role])//classes for role in ['val','cal']]
+    expected = stratified_split(train.targets,data['split_seed'],*counts,len(test))
+    if split is not None:
         if split != expected:
             raise ValueError('Shared split differs; refusing to overwrite')
     else:

@@ -106,7 +106,7 @@ def test_resume_in_new_process_exact_trajectory(fixture_config,tmp_path):
     b=ExperimentRunner(fixture_config).run(stop_after_epoch=2)
     cfg=tmp_path/'resume.yaml'
     cfg.write_text(yaml.safe_dump(fixture_config),encoding='utf-8')
-    result=subprocess.run([sys.executable,'-m','src.train','--config',str(cfg),'--resume',str(b/'checkpoints/last.pt')],capture_output=True,text=True,timeout=60)
+    result=subprocess.run([sys.executable,'-X','utf8','-m','src.train','--config',str(cfg),'--resume',str(b/'checkpoints/last.pt')],capture_output=True,text=True,encoding='utf-8',timeout=60)
     assert result.returncode==0,result.stderr
     c=Path(result.stdout.strip().splitlines()[-1])
     aa=torch.load(a/'checkpoints/last.pt',weights_only=False)

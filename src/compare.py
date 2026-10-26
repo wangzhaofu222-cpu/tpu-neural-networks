@@ -35,12 +35,29 @@ def compare_runs(runs,root='runs'):
     return {'groups':groups,'config_differences_from_first':[diff_configs(configs[0],c) for c in configs]}
 
 
+def markdown_table(result):
+    lines=['| RUN_ID | EXP_ID | Seed | ValAcc | ValLoss | Time s | Params | Status |',
+           '|---|---|---:|---:|---:|---:|---:|---|']
+    def value(x):
+        return '—' if x is None else f'{x:.6g}' if isinstance(x,float) else str(x)
+    for exp_id,rows in result['groups'].items():
+        for row in rows:
+            fields=[row['RUN_ID'],exp_id,row['seed'],row['validation_accuracy'],row['validation_loss'],
+                    row['seconds'],row['parameters'],row['status']]
+            lines.append('| '+' | '.join(value(x) for x in fields)+' |')
+    lines.extend(['','Config differences from the first run:',
+                  json.dumps(result['config_differences_from_first'],ensure_ascii=False,indent=2)])
+    return '\n'.join(lines)
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--runs',nargs='+',required=True)
     p.add_argument('--run-root',default='runs')
+    p.add_argument('--format',choices=['json','markdown'],default='json')
     a = p.parse_args()
-    print(json.dumps(compare_runs(a.runs,a.run_root),indent=2))
+    result=compare_runs(a.runs,a.run_root)
+    print(markdown_table(result) if a.format=='markdown' else json.dumps(result,indent=2))
 
 
 if __name__ == '__main__':

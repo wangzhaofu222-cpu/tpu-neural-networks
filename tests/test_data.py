@@ -42,3 +42,28 @@ def test_fingerprint_detects_changed_byte(tmp_path):
     original=file_hash(p)
     p.write_bytes(b'abcdEfgh')
     assert file_hash(p)!=original
+
+
+def test_cifar_consumer_uses_configured_roles_and_replays_legacy_split(fixture_config,tmp_path,monkeypatch):
+    import torchvision.datasets
+    from src.data.vision import datasets
+    class LocalCIFAR:
+        def __init__(self,root,train,download):
+            size=1000 if train else 20
+            self.data=np.random.default_rng(41+int(train)).integers(0,256,(size,32,32,3),dtype=np.uint8)
+            self.targets=(np.arange(size)%10).tolist()
+        def __len__(self): return len(self.targets)
+    monkeypatch.setattr(torchvision.datasets,'CIFAR10',LocalCIFAR)
+    cfg=copy.deepcopy(fixture_config)
+    cfg['data'].update(name='cifar10',root=str(tmp_path/'data'),split_path=str(tmp_path/'split.json'),
+                       train_fraction=.25,val_per_class=3,cal_per_class=2)
+    _,info=datasets(cfg)
+    assert info['split_sizes']=={'train':950,'val':30,'cal':20,'test':20}
+    assert info['actual_train_size']==230
+    legacy=copy.deepcopy(cfg)
+    del legacy['data']['val_per_class']; del legacy['data']['cal_per_class']
+    _,replayed=datasets(legacy)
+    assert replayed==info
+    cfg['data']['val_per_class']=4
+    with pytest.raises(ValueError,match='Shared split differs'):
+        datasets(cfg)

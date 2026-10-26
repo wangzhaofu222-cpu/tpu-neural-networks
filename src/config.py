@@ -54,6 +54,12 @@ def validate(cfg):
         raise ValueError('Invalid RNG seed')
     if cfg['data']['num_workers'] < 0 or cfg['runtime']['threads'] < 1:
         raise ValueError('Invalid resource configuration')
+    if cfg['data']['name']=='cifar10':
+        counts=[cfg['data'].get(k) for k in ['val_per_class','cal_per_class']]
+        if any(x is not None for x in counts) and not all(type(x) is int and x>0 for x in counts):
+            raise ValueError('Specify both positive integer per-class split counts')
+        if cfg['experiment']['lab']==0 and cfg['experiment']['purpose'] in {'formal','budget'} and counts[0] is not None and counts!=[500,200]:
+            raise ValueError('Lab 0 requires the teacher CIFAR role sizes')
     if cfg['logging']['save_every'] < 1:
         raise ValueError('save_every must be positive')
     if cfg['train']['accumulation_steps'] < 1:

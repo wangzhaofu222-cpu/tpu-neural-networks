@@ -11,6 +11,8 @@ data:
   root: data
   split_path: splits/cifar10.json
   split_seed: 1729
+  val_per_class: 500
+  cal_per_class: 200
   train_fraction: 0.25
   num_workers: 0
   download: false
