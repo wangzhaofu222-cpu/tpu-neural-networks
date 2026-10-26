@@ -96,9 +96,11 @@ class ExperimentRunner:
                 model.train()
                 loss_sum,correct,count = 0.,0,0
                 lr_used = optimizer.param_groups[0]['lr']
+                epoch_initial_step = global_step
                 optimizer.zero_grad(set_to_none=True)
                 accumulation = cfg['train']['accumulation_steps']
                 for batch_index,(x,y) in enumerate(dl['train']):
+                    optimizer_step_skipped = False
                     if budget and time.perf_counter()-wall_start > budget:
                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
                     if first_checksum is None:
@@ -112,18 +114,25 @@ class ExperimentRunner:
                     # Normalize the final, possibly shorter accumulation group correctly.
                     group_start = (batch_index//accumulation)*accumulation
                     group_length = min(accumulation,len(dl['train'])-group_start)
-                    scaler.scale(loss/group_length).backward()
+                    group_examples = sum(min(cfg['train']['batch_size'],len(ds['train'])-j*cfg['train']['batch_size'])
+                                         for j in range(group_start,group_start+group_length))
+                    scaled_loss = loss if accumulation == 1 else loss*len(y)/group_examples
+                    scaler.scale(scaled_loss).backward()
                     if (batch_index+1)%accumulation==0 or batch_index+1==len(dl['train']):
+                        previous_scale = scaler.get_scale()
                         scaler.step(optimizer)
                         scaler.update()
+                        optimizer_step_skipped = scaler.is_enabled() and scaler.get_scale() < previous_scale
                         optimizer.zero_grad(set_to_none=True)
-                        global_step += 1
+                        if not optimizer_step_skipped:
+                            global_step += 1
                     loss_sum += loss.item()*len(y)
                     correct += (logits.argmax(1)==y).sum().item()
                     count += len(y)
-                    self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used})
+                    self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used,'optimizer_step_skipped':optimizer_step_skipped})
                 val = evaluate_loader(model,dl['val'],device)
-                scheduler.step()
+                if global_step > epoch_initial_step:
+                    scheduler.step()
                 completed_epoch = epoch+1
                 record = {'epoch':completed_epoch,'global_step':global_step,'train_loss':loss_sum/count,
                           'validation_loss':val['loss'],'train_metric':correct/count,'validation_metric':val['accuracy'],

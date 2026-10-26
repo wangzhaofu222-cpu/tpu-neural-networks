@@ -5,7 +5,10 @@ from pathlib import Path
 
 root=Path(__file__).resolve().parents[1]
 env=root/'docs/environment'
-suite=ET.parse(env/'tests-lab0.xml').getroot().find('testsuite')
+test_file=env/'tests-lab0-final.xml'
+if not test_file.exists():
+    test_file=env/'tests-lab0.xml'
+suite=ET.parse(test_file).getroot().find('testsuite')
 stats=suite.attrib
 passed=int(stats['tests'])-int(stats['failures'])-int(stats['errors'])-int(stats['skipped'])
 ok=not int(stats['failures']) and not int(stats['errors'])
