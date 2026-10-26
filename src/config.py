@@ -1,0 +1,82 @@
+import copy
+import json
+from pathlib import Path
+import yaml
+
+
+def merge(base, override):
+    value = copy.deepcopy(base)
+    for key,item in override.items():
+        value[key] = merge(value[key],item) if isinstance(item,dict) and isinstance(value.get(key),dict) else copy.deepcopy(item)
+    return value
+
+
+def load_config(path, overrides=None):
+    path = Path(path)
+    cfg = yaml.safe_load(path.read_text(encoding='utf-8'))
+    if 'profile_path' in cfg:
+        profile = yaml.safe_load(Path(cfg.pop('profile_path')).read_text(encoding='utf-8'))
+        cfg = merge(cfg,profile)
+        cfg['experiment']['seed'] = cfg['profile']['base_seed']
+        # Resolve only before explicit, registered overrides (e.g. E2 seeds).
+    for override in overrides or []:
+        name,value = override.split('=',1)
+        node = cfg
+        parts = name.split('.')
+        for part in parts[:-1]:
+            if part not in node or not isinstance(node[part],dict):
+                raise ValueError(f'Unknown config path: {name}')
+            node = node[part]
+        if parts[-1] not in node:
+            raise ValueError(f'Unknown config key: {name}')
+        node[parts[-1]] = yaml.safe_load(value)
+    validate(cfg)
+    return cfg
+
+
+def validate(cfg):
+    for name in ['experiment','data','model','optimizer','scheduler','train','logging','profile','runtime']:
+        if not isinstance(cfg.get(name),dict):
+            raise ValueError(f'Missing section: {name}')
+    if cfg['optimizer']['name'] not in ['adamw','sgd']:
+        raise ValueError('Unsupported optimizer')
+    if cfg['scheduler']['name'] not in ['cosine','step']:
+        raise ValueError('Unsupported scheduler')
+    if cfg['runtime']['device'] not in ['cpu','cuda']:
+        raise ValueError('Device must be cpu or cuda')
+    if cfg['train']['amp'] and cfg['runtime']['device'] != 'cuda':
+        raise ValueError('AMP requires CUDA in this harness')
+    if cfg['train']['epochs'] < 1 or cfg['train']['batch_size'] < 1:
+        raise ValueError('epochs and batch_size must be positive')
+    if not 0 < cfg['data']['train_fraction'] <= 1:
+        raise ValueError('Invalid train fraction')
+    if not 0 <= cfg['experiment']['seed'] < 2**32:
+        raise ValueError('Invalid RNG seed')
+    if cfg['data']['num_workers'] < 0 or cfg['runtime']['threads'] < 1:
+        raise ValueError('Invalid resource configuration')
+    if cfg['logging']['save_every'] < 1:
+        raise ValueError('save_every must be positive')
+    if cfg['train']['accumulation_steps'] < 1:
+        raise ValueError('accumulation_steps must be positive')
+    if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:
+        raise ValueError('Lab 9 encoder conflict requires teacher clarification')
+    if not cfg['profile'].get('student_id_hash') or not cfg['profile'].get('id'):
+        raise ValueError('A real generated profile is required')
+    # Profile integrity can be checked from SHA256 directly for Lab 0 (without raw ID).
+    h = cfg['profile']['student_id_hash']
+    if len(h) != 64 or any(c not in '0123456789abcdef' for c in h):
+        raise ValueError('Invalid student hash')
+    if cfg['profile']['id'] != 'P'+h[:6]:
+        raise ValueError('Profile ID/hash mismatch')
+    if cfg['profile']['base_seed'] != int(h[:8],16) % 2**31:
+        raise ValueError('Profile base seed/hash mismatch')
+    if cfg['experiment']['lab'] == 0 and cfg['experiment']['purpose'] in {'formal','budget'}:
+        fields = [(cfg['model']['width'],[48,64,96,128],10,12),
+                  (cfg['model']['depth'],[3,4,5],12,14),
+                  (cfg['train']['batch_size'],[64,128,256],14,16),
+                  (cfg['optimizer']['name'],['adamw','sgd'],16,18),
+                  (cfg['scheduler']['name'],['cosine','step'],18,20),
+                  (cfg['data']['train_fraction'],[.20,.25,.30,.35],8,10)]
+        if any(actual != options[int(h[a:b],16)%len(options)] for actual,options,a,b in fields):
+            raise ValueError('Lab 0 formal/budget configuration deviates from assigned profile')
+    json.dumps(cfg,allow_nan=False)

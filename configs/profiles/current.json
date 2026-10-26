@@ -1,0 +1,99 @@
+{
+  "profile": {
+    "id": "P3adf02",
+    "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+    "base_seed": 987693601
+  },
+  "data": {
+    "train_fraction": 0.25,
+    "num_workers": 0
+  },
+  "model": {
+    "width": 96,
+    "depth": 4
+  },
+  "train": {
+    "batch_size": 64
+  },
+  "optimizer": {
+    "name": "adamw"
+  },
+  "scheduler": {
+    "name": "cosine"
+  },
+  "profile_batch_sizes": [
+    1,
+    16,
+    64,
+    256
+  ],
+  "lab1_depths": [
+    8,
+    24,
+    48,
+    96
+  ],
+  "lab1_bad_sigma": 0.02,
+  "lab1_optimizer": "sgd_momentum",
+  "lab2_fractions": [
+    0.05,
+    0.15,
+    0.3,
+    0.6,
+    1.0
+  ],
+  "lab2_corruptions": [
+    "blur",
+    "contrast",
+    "patch_shuffle"
+  ],
+  "lab2_strong_aug": "randaugment+cutmix",
+  "lab3_task": "copy",
+  "lab3_train_max": 128,
+  "lab3_depth": 2,
+  "lab4_tau": 0.1,
+  "lab4_third_aug": "flip",
+  "lab4_label_fractions": [
+    0.02,
+    0.05,
+    0.25,
+    1.0
+  ],
+  "lab5_dataset": "cora",
+  "lab5_second_gnn": "gat",
+  "lab5_depths": [
+    2,
+    3,
+    6,
+    12,
+    24
+  ],
+  "lab6_target": "eight_gaussians",
+  "lab6_eta": [
+    0.005,
+    0.02,
+    0.08,
+    0.5
+  ],
+  "lab6_scale": 4.0,
+  "lab7_T_beta": [
+    1000,
+    0.0001,
+    0.02
+  ],
+  "lab7_modes": [
+    6,
+    0.1
+  ],
+  "lab7_rare_weight": 0.02,
+  "lab8_arch": "cnn",
+  "lab8_corruption": "occlusion",
+  "lab8_pgd_eps_255": 2,
+  "lab9_visual_encoder": "cnn_lab2",
+  "lab9_p_drop": 0.5,
+  "lab9_gate": "scalar",
+  "lab9_encoder": "vit_small",
+  "lab9_encoder_resolution": "user_authorized_visual_encoder_precedence",
+  "lab9_effective_visual_encoder": "cnn_lab2",
+  "lab9_resolution_note": "Use explicit upstream checkpoint source; preserve conflicting architecture field; not teacher-confirmed."
+}

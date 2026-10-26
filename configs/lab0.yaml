@@ -1,0 +1,47 @@
+profile_path: configs/profiles/current.json
+experiment:
+  name: lab0_cifar10
+  lab: 0
+  seed: 0
+  deterministic: true
+  purpose: development
+data:
+  name: cifar10
+  root: data
+  split_path: splits/cifar10.json
+  split_seed: 1729
+  train_fraction: 0.25
+  num_workers: 0
+  download: false
+model:
+  name: small_cnn
+  width: 64
+  depth: 4
+  classes: 10
+optimizer:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+scheduler:
+  name: cosine
+  warmup_epochs: 1
+  step_size: 3
+  gamma: 0.5
+train:
+  epochs: 10
+  batch_size: 128
+  amp: false
+  accumulation_steps: 1
+logging:
+  backend: local
+  save_every: 1
+  run_root: runs
+runtime:
+  device: cpu
+  threads: 2
+  max_seconds: 120
+  dependency_lock: requirements.lock.txt
+profiling:
+  warmup: 10
+  repeats: 30

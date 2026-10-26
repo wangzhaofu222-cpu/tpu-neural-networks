@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tpu-neural-networks"
+version = "0.1.0"
+description = "Reproducible course experiment harness"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.6,<3", "torchvision>=0.21,<1", "numpy>=1.26,<3", "PyYAML>=6,<7", "scipy>=1.11,<2", "matplotlib>=3.8,<4", "psutil>=5.9,<8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

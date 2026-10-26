@@ -1,0 +1,15 @@
+.conda-env/
+.conda-pkgs/
+.venv/
+.cache/
+data/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pt
+*.pth
+runs/*/checkpoints/
+runs/*/plots/
+docs/requirements/sources/*.png
+tmp/
+.private/
