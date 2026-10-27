@@ -31,9 +31,12 @@ def execute(label, cfg, probe=False):
 
 
 def main():
+    global ROOT
     parser = argparse.ArgumentParser()
-    parser.add_argument('stage', choices=['smoke','budget','e1','lr','e2','boundary','e3','cf2'])
+    parser.add_argument('stage', choices=['smoke','budget','e1','lr','e2','boundary','e3','cf2','cf3','growth_diagnosis'])
+    parser.add_argument('--suite-root', default='experiments/lab1')
     args = parser.parse_args()
+    ROOT = Path(args.suite_root)
     base = load_config('configs/lab1.yaml')
     base['experiment']['purpose'] = 'formal'
     depths = [8,24,48,96]
@@ -88,6 +91,12 @@ def main():
         elif args.stage == 'cf2':
             base['model'].update(initialization='gaussian',width=1024,depth=96)
             execute('CF2_gaussian_width1024_depth96',base,probe=True)
+        elif args.stage == 'cf3':
+            base['model'].update(initialization='gaussian',width=256,depth=24)
+            execute('CF3_weight_bias_decomposition',base,probe=True)
+        elif args.stage == 'growth_diagnosis':
+            base['model'].update(name='residual_mlp',initialization='he',width=256,depth=96)
+            execute('E2_scaled96_growth_diagnosis',base,probe=True)
         elif args.stage == 'e3':
             prereg = json.loads((ROOT/'e3_preregistration.json').read_text())
             from src.utils.provenance import git_state

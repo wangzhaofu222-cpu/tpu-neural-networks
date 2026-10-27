@@ -122,3 +122,46 @@ def test_shared_runner_lab1_summary(fixture_config, tmp_path):
     assert summary['trainability']['GI'] >= 0
     assert (path/'diagnostics.jsonl').exists()
     assert (path/'probe.final.json').exists()
+
+
+def test_gradient_weight_bias_decomposition():
+    layer=torch.nn.Linear(128,128)
+    layer(torch.randn(64,128)).sum().backward()
+    rows=gradient_statistics(layer)['']
+    assert rows['per_parameter']['weight']['g']==pytest.approx(layer.weight.grad.double().norm().item()/128)
+    assert rows['per_parameter']['bias']['g']==pytest.approx(64.)
+    expected=math.sqrt(layer.weight.grad.double().square().sum().item()+layer.bias.grad.double().square().sum().item())/math.sqrt(128*129)
+    assert rows['g']==pytest.approx(expected)
+
+
+def test_statistic_overflow_flag():
+    row=statistics(torch.tensor([1e300,-1e300],dtype=torch.float64))
+    assert row['numerical_failure'] and row['statistic_overflow']
+
+
+def test_residual_second_moment_identity():
+    cfg=config();cfg.update(name='residual_mlp',alpha='inverse_sqrt_depth')
+    result=probe(build_model(cfg),torch.randn(64,128),123,'relu')
+    product=math.prod(r['predicted_local_ratio_with_cross'] for r in result['branch_moments'].values())
+    assert product==pytest.approx(result['q_ratio'],rel=1e-12)
+
+
+def test_shared_runner_retains_numerical_failure(fixture_config,monkeypatch):
+    import src.engine.runner as runner
+    cfg=fixture_config
+    cfg['experiment'].update(lab=1,purpose='test')
+    cfg['model']=config();cfg['model']['input_features']=3072
+    cfg['diagnostics']={'enabled':True,'probe_batch_size':64,'loss_subset_size':1024}
+    original=runner.build_model
+    def broken(config):
+        model=original(config)
+        with torch.no_grad():
+            next(model.parameters()).fill_(float('nan'))
+        return model
+    monkeypatch.setattr(runner,'build_model',broken)
+    path=runner.ExperimentRunner(cfg).run()
+    import json
+    summary=json.loads((path/'summary.json').read_text())
+    assert summary['status']=='FAILED' and summary['trainability']['numerical_failure']
+    assert summary['trainability']['rho_T'] is None
+    assert (path/'failure.json').exists()

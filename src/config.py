@@ -40,6 +40,23 @@ def validate(cfg):
             raise ValueError(f'Missing section: {name}')
     if cfg['optimizer']['name'] not in ['adamw','sgd']:
         raise ValueError('Unsupported optimizer')
+    if cfg['model']['name'] in {'deep_mlp','residual_mlp'}:
+        model=cfg['model']
+        if model['activation'] not in {'relu','tanh'} or model['normalization'] not in {'none','batchnorm','layernorm'}:
+            raise ValueError('Unsupported MLP activation or normalization')
+        if model['initialization'] not in {'he','xavier','gaussian'} or model['sigma'] <= 0:
+            raise ValueError('Invalid MLP initialization')
+        if any(type(model[k]) is not int or model[k] < 1 for k in ['depth','width']):
+            raise ValueError('MLP depth and width must be positive integers')
+        if model.get('normalization_position','before_activation') != 'before_activation':
+            raise ValueError('Normalization must precede activation')
+        alpha=model.get('alpha',1.)
+        if model['name']=='residual_mlp' and alpha!='inverse_sqrt_depth' and (not isinstance(alpha,(int,float)) or alpha<=0):
+            raise ValueError('Residual alpha must be positive or inverse_sqrt_depth')
+    if cfg.get('diagnostics',{}).get('enabled'):
+        d=cfg['diagnostics']
+        if d['probe_batch_size']<64 or d['loss_subset_size']<d['probe_batch_size']:
+            raise ValueError('Diagnostics require probe B>=64 and loss subset>=probe')
     if cfg['scheduler']['name'] not in ['cosine','step']:
         raise ValueError('Unsupported scheduler')
     if cfg['runtime']['device'] not in ['cpu','cuda']:

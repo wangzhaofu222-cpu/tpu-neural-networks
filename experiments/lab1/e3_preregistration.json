@@ -1,0 +1,46 @@
+{
+  "A": {
+    "name": "deep_mlp",
+    "depth": 96,
+    "alpha": "inverse_sqrt_depth"
+  },
+  "B": {
+    "name": "residual_mlp",
+    "depth": 96,
+    "alpha": "inverse_sqrt_depth"
+  },
+  "description_A": "обычная MLP, 96 скрытых слоёв",
+  "description_B": "остаточная MLP, 96 блоков, alpha=1/sqrt(96)",
+  "factor": "архитектура (model.name); остальные поля модели одинаковы",
+  "metric": "rho_T; lower is better",
+  "paired_difference": "A minus B",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "epochs": 3,
+  "lr": 0.003,
+  "expected_sign": 1,
+  "falsification": "not all deltas positive OR mean(delta)<2*sample_std(delta,ddof=1)",
+  "selection_evidence": [
+    {
+      "label": "E2_plain_96",
+      "RUN_ID": "f02840c34662292f2550-7cdcbabd38c5472aa0d47e49f5bb04a5",
+      "rho_T": 0.8060546252016025
+    },
+    {
+      "label": "E2_residual_scaled_96",
+      "RUN_ID": "0f7c5a6ad6fc18622306-27adbadc93c941d1af43fd88e9bac108",
+      "rho_T": 0.5136018925419176
+    }
+  ],
+  "base_config_hash": "21c263895481e39c46659a7949b680df5b34a33be7490ec596ef736b16318f85",
+  "limitations": "one fixed split, 3 epochs; architecture changes parameter count and number of linear transformations",
+  "known_E2_threshold_exception": {
+    "q_ratio": 6.996440262166932,
+    "first_block_c": 1.7418281560391444,
+    "bound": 6.849322298355175,
+    "status": "FAIL; not hidden or replaced; per-block moment diagnosis planned"
+  }
+}

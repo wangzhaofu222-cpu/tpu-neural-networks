@@ -1,3 +1,4 @@
+import math
 import torch
 
 
@@ -7,8 +8,11 @@ def statistics(tensor, activation=None):
     if not finite:
         return {'numerical_failure': True}
     variance = x.var(unbiased=False).item()
+    q = x.square().mean().item()
+    if not math.isfinite(variance) or not math.isfinite(q):
+        return {'numerical_failure': True, 'statistic_overflow': True}
     return {'mean': x.mean().item(), 'std': variance**.5, 'variance': variance,
-            'q': x.square().mean().item(), 'min': x.min().item(), 'max': x.max().item(),
+            'q': q, 'min': x.min().item(), 'max': x.max().item(),
             'zero_fraction': (x == 0).double().mean().item() if activation == 'relu' else None,
             'saturated_fraction': ((1-x.square()).abs() < .1).double().mean().item() if activation == 'tanh' else None,
             'numerical_failure': False}

@@ -55,11 +55,20 @@ def probe(model, batch, seed, activation):
     activation_monitor = ActivationMonitor({name: module for name,module in probe_model.named_modules()
                        if isinstance(module, (torch.nn.ReLU, torch.nn.Tanh))}, activation)
     extra = {}
-    handle = None
+    branch_handles = []
     if hasattr(probe_model, 'blocks'):
-        def branch(module, inputs, output):
-            extra['c'] = statistics(output)['q']/statistics(inputs[0])['q']
-        handle = probe_model.blocks[0].branch.register_forward_hook(branch)
+        extra['branch_moments'] = {}
+        for i,block in enumerate(probe_model.blocks):
+            def branch(module, inputs, output, i=i, alpha=block.alpha):
+                outq,inq = statistics(output).get('q'),statistics(inputs[0]).get('q')
+                c = outq/inq if outq is not None and inq is not None and inq>0 else None
+                cross = (inputs[0].detach().double()*output.detach().double()).mean().item()/inq if c is not None else None
+                row = {'c':c,'input_q':inq,'branch_q':outq,'normalized_cross':cross,
+                       'predicted_local_ratio_with_cross':1+alpha*alpha*c+2*alpha*cross if cross is not None else None}
+                extra['branch_moments'][str(i+1)] = row
+                if i==0:
+                    extra['c'] = c
+            branch_handles.append(block.branch.register_forward_hook(branch))
     try:
         h = probe_model.forward_features(x)
         g = torch.Generator().manual_seed(seed)
@@ -68,8 +77,9 @@ def probe(model, batch, seed, activation):
         (h@u).mean().backward()
         gradients = gradient_statistics(probe_model)
         if hasattr(probe_model, 'blocks'):
-            extra['q_ratio'] = monitor.rows[f'h{len(probe_model.blocks)}']['q']/monitor.rows['h0']['q']
-            extra['growth_per_block'] = extra['q_ratio']**(1/len(probe_model.blocks))
+            endq,startq = monitor.rows[f'h{len(probe_model.blocks)}'].get('q'),monitor.rows['h0'].get('q')
+            extra['q_ratio'] = endq/startq if endq is not None and startq is not None and startq>0 else None
+            extra['growth_per_block'] = extra['q_ratio']**(1/len(probe_model.blocks)) if extra['q_ratio'] is not None else None
         result = {'activations': monitor.rows, 'activation_outputs': activation_monitor.rows,
                 'gradients': gradients, 'chi': chi_estimates(monitor.rows),
                 'trainability': summarize(monitor.rows, [gradients]), **extra,
@@ -83,7 +93,7 @@ def probe(model, batch, seed, activation):
     finally:
         monitor.close()
         activation_monitor.close()
-        if handle is not None:
+        for handle in branch_handles:
             handle.remove()
 
 
