@@ -1,0 +1,14 @@
+{
+  "cnn": {
+    "lr": 0.003,
+    "path": "runs/lab2/cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc",
+    "RUN_ID": "cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc",
+    "validation_accuracy": 0.9324
+  },
+  "vit": {
+    "lr": 0.0003,
+    "path": "runs/lab2/766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+    "RUN_ID": "766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+    "validation_accuracy": 0.803
+  }
+}

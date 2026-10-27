@@ -1,37 +1,37 @@
-# Lab 2 conditional preregistration — before formal LR search and E1
+# Lab 2 E3 finalized hypothesis
 
-The canonical CIFAR ResNet18 and ViT (P4, six blocks, D384, six heads,
-MLP1536) are compared without pretraining. The primary comparison is
-parameter matched; MAC differences will be reported, not hidden.
+The conditional selection rule was committed in
+a49fccf3907e64b00e1cf83b05ce755fcf126e80 before formal E1/LR search.
+The original text is preserved as hypothesis.initial.md and in Git history.
+E1 seed1 is explicitly exploratory and reused, as required by PDF9.3;
+only seeds2,3 are new confirmatory training. No test measurement chooses
+this regime: selection.json is a timestamped validation-only lock.
 
-All primary runs use B128, AdamW weight decay .05, 500-step linear warmup
-and cosine decay to S10000 actual optimizer updates, A1, float32. Each
-architecture selects LR independently from .0003, .001, .003 using final
-validation accuracy at r1, with ties resolved by lower validation loss,
-then lower LR. Those r1 seed1 runs are reused by E1. All fractions use the
-same balanced nested class permutations, never resampled across models/seeds.
+Comparison: canonical CIFAR ResNet18 versus ViT P4/L6/D384/H6/MLP1536,
+parameter-matched mode, fixed fraction r=0.05. Fixed balanced subset
+indices from base_seed, common training seeds1,2,3, S10000 actual updates,
+B128, A1, AdamW wd.05, warmup500 then cosine, float32, no pretraining.
+CNN LR=0.003, ViT LR=0.0003, independently selected
+once on r1 final validation from the preregistered three-point grid.
 
-E3 regime selection is conditional: choose the profile fraction with largest
-absolute final validation accuracy difference (ViT minus CNN), ties choose
-smaller r. Freeze that selection before accessing test results. Predict
-the same sign on test as on validation. The finalized numerical prediction,
-selected fraction/LRs and original seed1 RUN_IDs will be committed before
-new E3 training seeds2,3. Seed1 is explicitly the reused exploratory E1 run,
-as required by the PDF; it is not represented as an independent replication.
+Expected mean test difference ViT minus CNN: approximately -0.256800
+(-25.680 percentage points), with negative sign,
+based on the selected seed1 final-validation gap, equation2.8. This is
+a prediction, not an observed test mean. Locality and shared spatial
+weights in equations2.1–2.2 versus learned global attention and positional
+embeddings in2.3–2.5 motivate possible differences at fixed finite data/S.
+No causal attribution to a single mechanism is claimed.
 
-The hypothesis fails if the test difference has the opposite sign or if
-the paired three-seed differences do not have one common nonzero sign and
-absolute mean at least twice sample standard deviation (ddof1). An
-inconclusive or reversed result is retained. No test result changes LR,
-fraction, architecture, S, seed list, or the selection rule.
+Refutation: an opposite/nonmatching mean sign, mixed or zero paired signs,
+or abs(mean_delta)<2*sample_std_delta (ddof1) rejects the stated stable
+architecture difference. All three paired differences must be shown;
+uncertainty is reported even if it contradicts this expectation.
 
-E2 uses the full-fraction E1 checkpoints with blur, contrast and patch
-shuffle at levels0–3. The map evaluates all five fractions at levels1–3
-plus clean. All paired inputs have identical per-image corruption seeds.
-CF2 adds only the small-fraction CNN equal-epoch S506 intervention; CF4
-profiles P2 without training; CF5 evaluates zero-filled translations.
-Optional augmentation/transfer/CKA training is outside this mandatory suite.
+Seed1 source runs:
+CNN 8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326
+ViT 76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab
 
-Smoke and 336-update resource budgets are development evidence only and
-are excluded from formal scientific results. No report is produced at
-this stage, in accordance with the user's instruction.
+The subset is held fixed across seeds. Three seeds describe initialization
+and batch ordering variability; they do not cover new subset draws,
+alternative recipes, or natural distribution shifts. E2 test observations
+cannot alter the validation-locked fraction, LR, seed list or stopping.
