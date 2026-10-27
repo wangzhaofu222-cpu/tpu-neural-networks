@@ -31,7 +31,7 @@ def compare_runs(runs,root='runs'):
         groups.setdefault(manifest['EXP_ID'],[]).append({'RUN_ID':manifest['RUN_ID'],'seed':manifest['seed'],
             'status':manifest['status'],'validation_accuracy':summary.get('validation_metric'),
             'validation_loss':summary.get('validation_loss'),'seconds':manifest.get('wall_seconds'),
-            'parameters':manifest['parameters']})
+            'parameters':manifest['parameters'], **summary.get('trainability', {})})
     return {'groups':groups,'config_differences_from_first':[diff_configs(configs[0],c) for c in configs]}
 
 
@@ -45,6 +45,11 @@ def markdown_table(result):
             fields=[row['RUN_ID'],exp_id,row['seed'],row['validation_accuracy'],row['validation_loss'],
                     row['seconds'],row['parameters'],row['status']]
             lines.append('| '+' | '.join(value(x) for x in fields)+' |')
+    diagnostic_rows = [r for rows in result['groups'].values() for r in rows if 'rho_T' in r]
+    if diagnostic_rows:
+        lines.extend(['', '| RUN_ID | rho_T | GI | AVD | Numerical failure |', '|---|---:|---:|---:|---|'])
+        for r in diagnostic_rows:
+            lines.append('| '+' | '.join(value(r.get(k)) for k in ['RUN_ID', 'rho_T', 'GI', 'AVD', 'numerical_failure'])+' |')
     lines.extend(['','Config differences from the first run:',
                   json.dumps(result['config_differences_from_first'],ensure_ascii=False,indent=2)])
     return '\n'.join(lines)

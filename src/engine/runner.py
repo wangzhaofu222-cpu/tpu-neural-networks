@@ -88,6 +88,10 @@ class ExperimentRunner:
         if device.type == 'cuda':
             torch.cuda.reset_peak_memory_stats(device)
         budget = cfg['runtime']['max_seconds']
+        diagnostics = None
+        if cfg.get('diagnostics', {}).get('enabled'):
+            from src.diagnostics.trainability import TrainingDiagnostics
+            diagnostics = TrainingDiagnostics(model, ds['train'], cfg, path)
         completed_epoch = start_epoch
         status = 'RUNNING'
         try:
@@ -106,6 +110,8 @@ class ExperimentRunner:
                     if first_checksum is None:
                         first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
                     x,y = x.to(device),y.to(device)
+                    if diagnostics:
+                        diagnostics.begin(batch_index, len(dl['train']))
                     with torch.autocast(device_type=device.type,enabled=cfg['train']['amp']):
                         logits = model(x)
                         loss = F.cross_entropy(logits,y)
@@ -118,6 +124,10 @@ class ExperimentRunner:
                                          for j in range(group_start,group_start+group_length))
                     scaled_loss = loss if accumulation == 1 else loss*len(y)/group_examples
                     scaler.scale(scaled_loss).backward()
+                    if diagnostics:
+                        diagnostics.end(epoch+1, batch_index)
+                        if not bool(torch.stack([torch.isfinite(p.grad).all() for p in model.parameters() if p.grad is not None]).all()):
+                            raise FloatingPointError('Non-finite parameter gradient')
                     if (batch_index+1)%accumulation==0 or batch_index+1==len(dl['train']):
                         previous_scale = scaler.get_scale()
                         scaler.step(optimizer)
@@ -131,6 +141,8 @@ class ExperimentRunner:
                     count += len(y)
                     self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used,'optimizer_step_skipped':optimizer_step_skipped})
                 val = evaluate_loader(model,dl['val'],device)
+                if diagnostics and not math.isfinite(val['loss']):
+                    raise FloatingPointError('Non-finite validation loss')
                 if global_step > epoch_initial_step:
                     scheduler.step()
                 completed_epoch = epoch+1
@@ -162,8 +174,14 @@ class ExperimentRunner:
         except Exception as exc:
             status = 'FAILED'
             write_json(path/'failure.json',{'type':type(exc).__name__,'message':str(exc),'completed_epoch':completed_epoch})
-            raise
+            if not (diagnostics and isinstance(exc, FloatingPointError)):
+                raise
         finally:
+            if diagnostics:
+                existing = json.loads((path/'summary.json').read_text(encoding='utf-8')) if (path/'summary.json').exists() else {
+                    'RUN_ID': manifest['RUN_ID'], 'EXP_ID': manifest['EXP_ID'], 'purpose': cfg['experiment']['purpose']}
+                existing['trainability'] = diagnostics.finish(failed=status == 'FAILED')
+                write_json(path/'summary.json', existing)
             manifest.update(status=status,completed_epoch=completed_epoch,global_step=global_step,
                             first_batch_checksum=first_checksum,wall_seconds=time.perf_counter()-wall_start)
             write_json(path/'manifest.json',manifest)
@@ -171,6 +189,26 @@ class ExperimentRunner:
                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
                 summary['status']=status
                 write_json(path/'summary.json',summary)
+        return path
+
+    def run_probe(self):
+        """No optimizer: same data, model factory, seeding and provenance as training."""
+        from src.diagnostics.trainability import TrainingDiagnostics
+        cfg = self.config
+        code = git_state()
+        if cfg['experiment']['purpose'] == 'formal' and (not code['commit'] or code['dirty']):
+            raise RuntimeError('Formal probes require committed clean source/config')
+        seed_all(cfg['experiment']['seed'], cfg['experiment']['deterministic'], cfg['runtime']['threads'])
+        start = time.perf_counter()
+        ds, info = datasets(cfg)
+        model = build_model(cfg['model']).to(cfg['runtime']['device'])
+        path, manifest = create_run(cfg, code, info, model)
+        diagnostics = TrainingDiagnostics(model, ds['train'], cfg, path)
+        write_json(path/'summary.json', {'RUN_ID': manifest['RUN_ID'], 'EXP_ID': manifest['EXP_ID'],
+                   'trainability': diagnostics.initial['trainability'], 'status': 'COMPLETED', 'optimizer_steps': 0,
+                   'purpose': cfg['experiment']['purpose']})
+        manifest.update(status='COMPLETED', completed_epoch=0, global_step=0, wall_seconds=time.perf_counter()-start)
+        write_json(path/'manifest.json', manifest)
         return path
 
     @staticmethod

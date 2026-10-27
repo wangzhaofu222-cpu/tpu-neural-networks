@@ -22,6 +22,12 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name'] == 'deep_mlp':
+        from src.models.deep_mlp import DeepMLP
+        return DeepMLP(cfg)
+    if cfg['name'] == 'residual_mlp':
+        from src.models.residual_mlp import ResidualMLP
+        return ResidualMLP(cfg)
     if cfg['name'] != 'small_cnn':
         raise ValueError('Unregistered model: '+cfg['name'])
     return SmallCNN(cfg['width'],cfg['depth'],cfg['classes'])

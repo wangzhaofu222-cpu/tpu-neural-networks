@@ -1,0 +1,12 @@
+{
+  "lab_hash": "9f33ba26d5216be4f012f055dbb9f12fb16a234e82576e44fe7b0bbc61ba8fb0",
+  "depths": [
+    8,
+    24,
+    48,
+    96
+  ],
+  "sigma": 0.02,
+  "optimizer": "sgd_momentum",
+  "verified": true
+}
