@@ -106,7 +106,8 @@ def test_chi_effective_depth():
     assert result['last_layer'] == 'h2'
 
 
-def test_shared_runner_lab1_summary(cfg, tmp_path):
+def test_shared_runner_lab1_summary(fixture_config, tmp_path):
+    cfg = fixture_config
     from src.engine.runner import ExperimentRunner
     cfg['experiment'].update(lab=1,purpose='test')
     cfg['model'] = config()
