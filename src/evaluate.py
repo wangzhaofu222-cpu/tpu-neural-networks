@@ -38,7 +38,13 @@ def main():
     p.add_argument('--run-root',default='runs')
     p.add_argument('--role',choices=['val','test'],default='val')
     p.add_argument('--checkpoint',choices=['last.pt','best.pt'],default='last.pt')
+    p.add_argument('--lab2-corruption',choices=['clean','gaussian_noise','blur','contrast','occlusion','translation','patch_shuffle'])
+    p.add_argument('--level',type=int,choices=[0,1,2,3],default=0)
     a = p.parse_args()
+    if a.lab2_corruption is not None:
+        from src.engine.runner import ExperimentRunner
+        print(ExperimentRunner.evaluate_checkpoint(a.run,a.lab2_corruption,a.level))
+        return
     print(json.dumps(evaluate_run(a.run,a.role,a.checkpoint,a.run_root)))
 
 

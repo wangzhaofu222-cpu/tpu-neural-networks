@@ -73,9 +73,13 @@ def main():
                'split_fingerprint':digest({'no_dataset_split_for_model_profiling':True}),
                'synthetic_fixture':False}
     path,manifest=create_run(cfg,git_state(),data_info,model)
-    result=profile_model(model,cfg['profile_batch_sizes'],device,**cfg['profiling'])
+    if cfg['experiment']['lab']==2:
+        from src.profiling.model_profiler import resource_profile
+        result=resource_profile(model,cfg['model'],device)
+    else:
+        result=profile_model(model,cfg['profile_batch_sizes'],device,**cfg['profiling'])
     result['config']=cfg
-    result['status']='DEVELOPMENT_MEASUREMENT_NOT_FORMAL_E4'
+    result['status']='COMPLETED_RESOURCE_PROFILE' if cfg['experiment']['lab']==2 else 'DEVELOPMENT_MEASUREMENT_NOT_FORMAL_E4'
     result['RUN_ID']=manifest['RUN_ID']
     write_json(path/'profile.json',result)
     manifest['status']='COMPLETED_PROFILING_ONLY'

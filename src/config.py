@@ -79,6 +79,17 @@ def validate(cfg):
             raise ValueError('Lab 0 requires the teacher CIFAR role sizes')
     if cfg['logging']['save_every'] < 1:
         raise ValueError('save_every must be positive')
+    if cfg['train'].get('max_steps') is not None:
+        if type(cfg['train']['max_steps']) is not int or cfg['train']['max_steps']<1:
+            raise ValueError('max_steps must be a positive integer')
+    if cfg['experiment']['lab']==2:
+        from src.data.augmentations import POLICIES
+        if cfg['data'].get('augmentation') not in POLICIES:raise ValueError('Invalid Lab2 augmentation')
+        if cfg['experiment']['purpose']=='formal' and cfg['experiment'].get('role') not in {'CF2','evaluation','profiling'}:
+            if cfg['train']['max_steps']!=10000 or cfg['train']['batch_size']!=128:
+                raise ValueError('Canonical Lab2 requires 10000 updates and batch128')
+            if cfg['data']['augmentation']!='A1' or cfg['optimizer']['name']!='adamw':
+                raise ValueError('Canonical Lab2 requires A1 and AdamW')
     if cfg['train']['accumulation_steps'] < 1:
         raise ValueError('accumulation_steps must be positive')
     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:

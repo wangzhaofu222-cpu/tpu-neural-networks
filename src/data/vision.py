@@ -86,6 +86,11 @@ def datasets(config):
             'synthetic_fixture':False}
     # The subset is part of experimental data conditions, not just a descriptive field.
     info['data_fingerprint'] = digest({'raw':fingerprint,'subset':info['subset_fingerprint']})
+    if config['experiment']['lab']==2:
+        from src.data.augmentations import AugmentedImages
+        info['train_subset_indices']=indices
+        info['augmentation']=data['augmentation']
+        ds['train']=AugmentedImages(ds['train'],data['augmentation'],config['experiment']['seed'])
     return ds,info
 
 

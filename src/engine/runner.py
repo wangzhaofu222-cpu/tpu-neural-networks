@@ -18,6 +18,11 @@ class ExperimentRunner:
     def __init__(self,config):
         self.config = config
 
+    @staticmethod
+    def evaluate_checkpoint(source,corruption='clean',level=0):
+        from src.engine.vision_evaluation import evaluate_checkpoint
+        return evaluate_checkpoint(source,corruption,level)
+
     def run(self,resume=None,stop_after_epoch=None,weights_only_epoch=None):
         cfg = self.config
         device = torch.device(cfg['runtime']['device'])
@@ -36,8 +41,16 @@ class ExperimentRunner:
         optimizer = (torch.optim.AdamW(model.parameters(),**options) if opt_cfg['name']=='adamw' else
                      torch.optim.SGD(model.parameters(),momentum=opt_cfg['momentum'],**options))
         total_epochs = cfg['train']['epochs']
+        step_limit = cfg['train'].get('max_steps')
+        step_schedule = cfg['scheduler'].get('unit') == 'optimizer_step'
+        if step_limit:
+            total_epochs = math.ceil(step_limit*cfg['train']['accumulation_steps']/len(dl['train']))+1
         warmup = cfg['scheduler']['warmup_epochs']
         def multiplier(epoch):
+            if step_schedule:
+                warm_steps=math.ceil(step_limit*cfg['scheduler']['warmup_fraction'])
+                if epoch<warm_steps:return (epoch+1)/max(1,warm_steps)
+                return .5*(1+math.cos(math.pi*min(1,(epoch-warm_steps)/max(1,step_limit-warm_steps))))
             if warmup and epoch < warmup:
                 return (epoch+1)/warmup
             if cfg['scheduler']['name'] == 'step':
@@ -65,6 +78,8 @@ class ExperimentRunner:
             else:
                 state = load_checkpoint(resume,model,optimizer,scheduler,scaler,g)
         if state is not None:
+            if state.get('partial_epoch'):
+                raise ValueError('Final partial data-epoch checkpoint is for inference; resume requires a complete data-epoch boundary')
             if state['config_hash'] != digest(cfg) or state['data_fingerprint'] != data_info['data_fingerprint'] or state['split_fingerprint'] != data_info['split_fingerprint']:
                 raise ValueError('Resume config/data/split mismatch')
             if state['source_hash'] != code['source_hash']:
@@ -93,11 +108,15 @@ class ExperimentRunner:
             from src.diagnostics.trainability import TrainingDiagnostics
             diagnostics = TrainingDiagnostics(model, ds['train'], cfg, path)
         completed_epoch = start_epoch
+        samples_processed=state.get('samples_processed',0) if state else 0
+        checkpoint_step=global_step
+        console_step=global_step
         status = 'RUNNING'
         try:
             for epoch in range(start_epoch,total_epochs):
                 epoch_start = time.perf_counter()
                 model.train()
+                if hasattr(ds['train'],'set_epoch'):ds['train'].set_epoch(epoch)
                 loss_sum,correct,count = 0.,0,0
                 lr_used = optimizer.param_groups[0]['lr']
                 epoch_initial_step = global_step
@@ -110,6 +129,10 @@ class ExperimentRunner:
                     if first_checksum is None:
                         first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
                     x,y = x.to(device),y.to(device)
+                    if step_limit:lr_used=optimizer.param_groups[0]['lr']
+                    if cfg['experiment']['lab']==2:
+                        from src.data.augmentations import mix_batch
+                        x,y,mixing=mix_batch(x,y,cfg['data']['augmentation'],cfg['model']['classes'])
                     if diagnostics:
                         diagnostics.begin(batch_index, len(dl['train']))
                     with torch.autocast(device_type=device.type,enabled=cfg['train']['amp']):
@@ -136,36 +159,52 @@ class ExperimentRunner:
                         optimizer.zero_grad(set_to_none=True)
                         if not optimizer_step_skipped:
                             global_step += 1
+                            if step_schedule:scheduler.step()
                     loss_sum += loss.item()*len(y)
-                    correct += (logits.argmax(1)==y).sum().item()
+                    correct += ((logits.argmax(1)==y).sum().item() if y.ndim==1 else y.gather(1,logits.argmax(1)[:,None]).sum().item())
                     count += len(y)
+                    samples_processed += len(y)
                     self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used,'optimizer_step_skipped':optimizer_step_skipped})
-                val = evaluate_loader(model,dl['val'],device)
+                    if step_limit and global_step>=step_limit:break
+                finished_steps=bool(step_limit and global_step>=step_limit)
+                partial_epoch=batch_index+1<len(dl['train'])
+                val = (evaluate_loader(model,dl['val'],device) if not cfg['train'].get('validation_at_end_only') or finished_steps else {'loss':None,'accuracy':None})
                 if diagnostics and not math.isfinite(val['loss']):
                     raise FloatingPointError('Non-finite validation loss')
-                if global_step > epoch_initial_step:
+                if global_step > epoch_initial_step and not step_schedule:
                     scheduler.step()
-                completed_epoch = epoch+1
+                completed_epoch = epoch if partial_epoch else epoch+1
                 record = {'epoch':completed_epoch,'global_step':global_step,'train_loss':loss_sum/count,
                           'validation_loss':val['loss'],'train_metric':correct/count,'validation_metric':val['accuracy'],
                           'learning_rate':lr_used,'epoch_time':time.perf_counter()-epoch_start,
                           'peak_gpu_memory_bytes':torch.cuda.max_memory_allocated(device) if device.type=='cuda' else None}
+                if step_limit:
+                    record.update(data_epochs=samples_processed/len(ds['train']),samples_processed=samples_processed,
+                                  partial_epoch=partial_epoch,target_optimizer_steps=step_limit)
                 self._append(path/'metrics.jsonl',record)
-                improved = val['accuracy'] > best
+                improved = val['accuracy'] is not None and val['accuracy'] > best
                 if improved:
                     best,best_epoch = val['accuracy'],completed_epoch
                 extra = {'best_accuracy':best,'best_epoch':best_epoch,'run_id':manifest['RUN_ID'],
                          'config_hash':digest(cfg),'data_fingerprint':data_info['data_fingerprint'],
                          'split_fingerprint':data_info['split_fingerprint'],'source_hash':code['source_hash'],
                          'first_batch_checksum':first_checksum}
-                if completed_epoch%cfg['logging']['save_every']==0 or completed_epoch==total_epochs or completed_epoch==stop_after_epoch:
+                if step_limit:extra.update(partial_epoch=partial_epoch,samples_processed=samples_processed)
+                save_due=(global_step-checkpoint_step>=cfg['logging'].get('save_every_steps',1000)) if step_limit else completed_epoch%cfg['logging']['save_every']==0
+                if save_due or finished_steps or completed_epoch==total_epochs or completed_epoch==stop_after_epoch:
                     save_checkpoint(path/'checkpoints/last.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
+                    checkpoint_step=global_step
                 if improved:
                     save_checkpoint(path/'checkpoints/best.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
                 write_json(path/'summary.json',{**record,'RUN_ID':manifest['RUN_ID'],'EXP_ID':manifest['EXP_ID'],
                            'best_accuracy':best,'best_epoch':best_epoch,'first_batch_checksum':first_checksum,
                            'checkpoint_for_final_metric':'checkpoints/last.pt','purpose':cfg['experiment']['purpose']})
-                print(json.dumps({'RUN_ID':manifest['RUN_ID'],**record}),flush=True)
+                if not step_limit or finished_steps or global_step-console_step>=cfg['logging'].get('console_every_steps',500):
+                    print(json.dumps({'RUN_ID':manifest['RUN_ID'],**record}),flush=True)
+                    console_step=global_step
+                if finished_steps:
+                    status='COMPLETED'
+                    break
                 if stop_after_epoch and completed_epoch >= stop_after_epoch and completed_epoch<total_epochs:
                     status = 'INTERRUPTED_AT_EPOCH_BOUNDARY'
                     break
@@ -173,22 +212,49 @@ class ExperimentRunner:
                 status = 'COMPLETED'
         except Exception as exc:
             status = 'FAILED'
+            exc.run_path=str(path)
             write_json(path/'failure.json',{'type':type(exc).__name__,'message':str(exc),'completed_epoch':completed_epoch})
             if not (diagnostics and isinstance(exc, FloatingPointError)):
                 raise
         finally:
+            training_seconds=time.perf_counter()-wall_start
             if diagnostics:
                 existing = json.loads((path/'summary.json').read_text(encoding='utf-8')) if (path/'summary.json').exists() else {
                     'RUN_ID': manifest['RUN_ID'], 'EXP_ID': manifest['EXP_ID'], 'purpose': cfg['experiment']['purpose']}
                 existing['trainability'] = diagnostics.finish(failed=status == 'FAILED')
                 write_json(path/'summary.json', existing)
+            if cfg['experiment']['lab']==2 and status=='COMPLETED' and cfg['logging'].get('profile_on_finish'):
+                from src.profiling.model_profiler import resource_profile
+                resources=resource_profile(model,cfg['model'],device)
+                resources['training_seconds']=training_seconds
+                resources['training_peak_gpu_memory_bytes']=record['peak_gpu_memory_bytes']
+                write_json(path/'resources.json',resources)
             manifest.update(status=status,completed_epoch=completed_epoch,global_step=global_step,
                             first_batch_checksum=first_checksum,wall_seconds=time.perf_counter()-wall_start)
             write_json(path/'manifest.json',manifest)
             if (path/'summary.json').exists():
                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
                 summary['status']=status
+                if step_limit:summary['training_seconds']=training_seconds
                 write_json(path/'summary.json',summary)
+        return path
+
+    def run_profile(self):
+        from src.profiling.model_profiler import resource_profile
+        cfg=self.config;code=git_state()
+        if cfg['experiment']['purpose']=='formal' and code['dirty']:raise RuntimeError('Uncommitted source')
+        seed_all(cfg['experiment']['seed'],True,cfg['runtime']['threads'])
+        device=torch.device(cfg['runtime']['device']);model=build_model(cfg['model']).to(device)
+        info={'dataset':'explicit resource-profiling tensors; no training',
+              'data_fingerprint':digest({'shape':[3,32,32],'distribution':'normal','seed':cfg['experiment']['seed']}),
+              'split_fingerprint':digest({'no_dataset_split_for_model_profiling':True}),'synthetic_fixture':False}
+        path,manifest=create_run(cfg,code,info,model)
+        result=resource_profile(model,cfg['model'],device)
+        result.update(RUN_ID=path.name,status='COMPLETED_RESOURCE_PROFILE',optimizer_steps=0)
+        write_json(path/'resources.json',result);write_json(path/'summary.json',result)
+        self._append(path/'metrics.jsonl',{'operation':'resource_profile','MACs':result['MACs'],'parameters':result['parameters']})
+        manifest.update(status='COMPLETED_RESOURCE_PROFILE',global_step=0,completed_epoch=0)
+        write_json(path/'manifest.json',manifest)
         return path
 
     def run_probe(self):

@@ -22,6 +22,12 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='cifar_resnet18':
+        from src.models.vision.resnet import CifarResNet18
+        return CifarResNet18(cfg['classes'])
+    if cfg['name']=='cifar_vit':
+        from src.models.vision.vit import CifarViT
+        return CifarViT(cfg)
     if cfg['name'] == 'deep_mlp':
         from src.models.deep_mlp import DeepMLP
         return DeepMLP(cfg)

@@ -1,0 +1,19 @@
+{
+  "lab_hash": "9147087cdf75eed563842815881992789a043551d394244de2bbddc36dd71ddf",
+  "fields": {
+    "lab2_fractions": [
+      0.05,
+      0.15,
+      0.3,
+      0.6,
+      1.0
+    ],
+    "lab2_corruptions": [
+      "blur",
+      "contrast",
+      "patch_shuffle"
+    ],
+    "lab2_strong_aug": "randaugment+cutmix"
+  },
+  "verified": true
+}

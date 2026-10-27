@@ -1,0 +1,34 @@
+[
+  {
+    "label": "smoke_cnn",
+    "RUN_ID": "4a227e9d36acc48ccccd-15dee69baa8d437c8d98d64bbf750f93",
+    "path": "runs/lab2/4a227e9d36acc48ccccd-15dee69baa8d437c8d98d64bbf750f93",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 4.595902100000785
+  },
+  {
+    "label": "smoke_vit",
+    "RUN_ID": "233d33ee606a9ec1bda4-1662255fb5174ae0bf8cf9a5dd83f021",
+    "path": "runs/lab2/233d33ee606a9ec1bda4-1662255fb5174ae0bf8cf9a5dd83f021",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 5.028655699999945
+  },
+  {
+    "label": "budget_cnn",
+    "RUN_ID": "6e92ea2db7dde2696da9-713c531cd57c433ea7e25b2bba606892",
+    "path": "runs/lab2/6e92ea2db7dde2696da9-713c531cd57c433ea7e25b2bba606892",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 44.35893769999893
+  },
+  {
+    "label": "budget_vit",
+    "RUN_ID": "6264776d1d241c16c27a-c90749a9feab414588d76a8fd3e9c718",
+    "path": "runs/lab2/6264776d1d241c16c27a-c90749a9feab414588d76a8fd3e9c718",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 64.32361479999963
+  }
+]
