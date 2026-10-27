@@ -5570,8 +5570,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "7   Индивидуальный профиль",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R078",
@@ -5580,8 +5584,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "НачинаясЛР1,параметрыкаждойработывычисляютсяизотдельногохеша:номера зачёткивместесномеромработы.Поэтомупрофилиразныхработнезависимы.Добавьте вгенераторпрофиляизЛР0функциюlab_pickитриполяЛР1: def  lab_pick(student_id:  str, lab: int, a:  int,  b:  int,  options:  list): hk  =  hashlib.sha256(f\"{student_id}:lab{lab}\".encode(\"utf-8\")).hexdigest() return  options[int(hk[a:b],  16)  % len(options)]",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R079",
@@ -5590,8 +5598,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "profile[\"lab1_depths\"]  =  lab_pick(sid,  1,  0,  2, [[4, 16,  32,  64],  [8,  24,  48,  96]])",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R080",
@@ -5600,8 +5612,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "profile[\"lab1_bad_sigma\"]  =  lab_pick(sid,  1,  2,  4,  [0.02,  0.05,  0.10]) profile[\"lab1_optimizer\"]  =  lab_pick(sid,  1,  4,  6,  [\"sgd_momentum\",  \"adamw\"])",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R081",
@@ -5610,8 +5626,12 @@
     "section": "7",
     "scope": "SOURCE_CLAUSE",
     "text": "Здесьsid—номерзачётки,profile—словарьпрофиляизЛР0.Профильзадаёт наборглубин,масштабσнеудачнойгауссовскойинициализации(1.7)   иоптимизатордля обучения.Заметьте:приширине256значенияσ = 0,02и0     ,05даютзатуханиесигнала,а σ= 0,10—рост(χ= 1,28).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R082",
@@ -5620,8 +5640,12 @@
     "section": "8",
     "scope": "SOURCE_CLAUSE",
     "text": "8   Задания",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R083",
@@ -5630,8 +5654,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "8.1   Задание 1. Монитор активаций и градиентов",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R084",
@@ -5640,8 +5668,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Что сделать.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R085",
@@ -5650,8 +5682,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "1. Реализуйтекомпонент,которыйдлякаждоговыбранногослоязаписывает:среднее, стандартноеотклонениеидисперсиюvl,среднийквадратq(l) (1.3)   ,минимуми максимум,долюнулевыхзначений(дляReLU)идолюнасыщенныхзначений,у которых|ϕ           ′(z)|<0,1(дляtanh).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R086",
@@ -5660,8 +5696,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "2. Длякаждогослояспараметрамизаписывайтенормуградиента,величинуgl(1.15) иотношениенормыградиентакнормепараметровслоя.Отдельнозаписывайте среднийквадратградиентаповыходуслояδ(l) (1.8).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R087",
@@ -5670,8 +5710,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "3. Используйтехуки(register_forward_hook, register_full_backward_hook)или хукитензоров,чтобынеменятьметодforward()модели[4].",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R088",
@@ -5680,8 +5724,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "4. Считайтестатистикивfloat64:присильномростесигналаквадратызначенийне помещаютсявfloat32.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R089",
@@ -5690,8 +5738,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Чтодолжнополучиться.Длялюбоймоделиоднимвызовомстроитсятаблица«слой →статистики».",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R090",
@@ -5700,8 +5752,12 @@
     "section": "8.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Как проверить себя.Свключённымивыключенныммониторомвыходмоделии градиентысовпадают(тесты1и2).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R091",
@@ -5710,8 +5766,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "8.2   Задание 2. Конфигурируемая глубокая сеть",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R092",
@@ -5720,8 +5780,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Что сделать.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R093",
@@ -5730,8 +5794,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "1. Реализуйтегенераторобычныхсетей(1.1)   иостаточныхсетей(1.11)    .Всёзадаётся конфигурацией:глубинаL,ширинаn,функцияактивации,нормализацияиеё место,схемаинициализации(he, xavier, gaussianсзаданнымσ),масштабветви α(1или1/          √L).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R094",
@@ -5740,8 +5808,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "2. Инициализируйтевесаявнопоконфигурации,асмещения—нулями.Неполагай- тесьнаинициализациюPyTorchпоумолчанию:вэтойработеинициализация— исследуемыйфактор[3].",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R095",
@@ -5750,8 +5822,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "3. Дляизмеренийдообучениянужнафункцияпотерьбезметок.Используйтелиней- нуюпробнуюфункцию",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R096",
@@ -5760,8 +5836,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "B∑︂ Lprobe = 1Bu⊤h(L)b  ,     ∥u∥      2 = 1,               (1.18) b=1",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R097",
@@ -5770,8 +5850,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "гдеh(L)b  —выходпоследнегоскрытогослоянаобъектеb,аu—фиксированный случайныйвекторединичнойдлины,порождённыйизseedпрофиля.Еёградиент повыходусетиодинаковдлявсехконфигураций,поэтомуизменениеградиентаот слоякслоюотражаеттолькосвойствасети.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R098",
@@ -5780,8 +5864,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "4. Пробныйbatch—фиксированныереальныеизображения,B≥   64.Размерbatchи режим(trainилиeval)записывайтевпаспортзапуска.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R099",
@@ -5790,8 +5878,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Что должно получиться.Любаясетьизэкспериментовсоздаётсяизменением конфигурации,безправкикода.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R100",
@@ -5800,8 +5892,12 @@
     "section": "8.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Как проверить себя.Выборочнаядисперсиявесовсовпадаетсцелевой(тест3); остаточныйблокснулевойветвьюничегонеменяет(тест4).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R101",
@@ -5810,8 +5906,12 @@
     "section": "8.3",
     "scope": "SOURCE_CLAUSE",
     "text": "8.3   Задание 3. Сводка обучаемости",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R102",
@@ -5820,8 +5920,12 @@
     "section": "8.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Что сделать.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R103",
@@ -5830,8 +5934,12 @@
     "section": "8.3",
     "scope": "SOURCE_CLAUSE",
     "text": "1. ДлякаждогозапускаавтоматическивычисляйтеρT(1.14)    , GI(1.16)      , AVD(1.17)       , наибольшиедолинулевыхинасыщенныхзначенийифлагчисленногосбоя— появленияNaNилиInfвошибке,активацияхилиградиентах.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R104",
@@ -5840,8 +5948,12 @@
     "section": "8.3",
     "scope": "SOURCE_CLAUSE",
     "text": "2.Сохраняйтесводкувsummary.jsonзапуска,например: \"trainability\": {\"rho_T\":  0.21,  \"GI\":  0.8, \"AVD\":  0.4, \"max_zero_fraction\":  0.55,  \"numerical_failure\": false}",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R105",
@@ -5850,8 +5962,12 @@
     "section": "8.3",
     "scope": "SOURCE_CLAUSE",
     "text": "3.Убедитесь,чтокомандаcompareизЛР0строитпоэтимсводкамобщуютаблицу длядесятковзапусков.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R106",
@@ -5860,8 +5976,12 @@
     "section": "8.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Что добавляется в общий проект. Модулиsrc/diagnostics/(activations.py, gradients.py, trainability.py)иsrc/models/(deep_mlp.py, residual_mlp.py).Ими выбудетепользоватьсявследующихработахдляанализалюбыхглубокихмоделей.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R107",
@@ -5870,8 +5990,12 @@
     "section": "8.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Как проверить себя.ПриискусственновнесённомNaNсводкаставитфлагчислен- ногосбоя(тест5).",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R108",
@@ -5880,8 +6004,12 @@
     "section": "9",
     "scope": "SOURCE_CLAUSE",
     "text": "9   Эксперименты",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R109",
@@ -5890,8 +6018,12 @@
     "section": "9",
     "scope": "SOURCE_CLAUSE",
     "text": "Передкаждымэкспериментомзапишитевотчётгипотезу:чтовыожидаетеувидеть ипочему,соссылкойнаформулуизраздела5.ЭкспериментыE1иE2—поисковые, достаточноодногоseed.ГлавныйвыводработыпроверяетсявE3натрёхseeds.Если результатразошёлсяспредсказанием,этодопустимо:укажите,какоепредположение выводаневыполнилосьипочему.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R110",
@@ -5900,8 +6032,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "9.1   Эксперимент E1. Сигнал в сети до обучения",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R111",
@@ -5910,8 +6046,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Вопрос.Можнолипоизмерениямсетидообученияпредсказать,какиеконфигурации будеттруднообучить?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R112",
@@ -5920,8 +6060,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Что сделать.Оптимизаторнеиспользуется.ВозьмитеобычнуюReLU-сетьширины 256безнормализации,всеглубиныизпрофиляитрисхемыинициализации:He(1.5)   , Xavier(1.6)   игауссовскуюсσизпрофиля(1.7)   .Длякаждойпары«глубина,инициализа- ция»выполнитепрямойпроходнапробномbatch,вычислитепробнуюфункцию(1.18)    и выполнитеобратныйпроход.Постройтеграфикипослоямвлогарифмическоммасштабе: q(l) ,среднийквадратδ (l) иg  l.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R113",
@@ -5930,8 +6074,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Сравнитеизмерениястеориейчерезизмеренныймножительнаслой—среднее геометрическоеизменениязаслой: (︃q(L))︃1       (︄   )︄1 L−1               L−1 ˆχ  fwd =  ,       ˆχ   bwd =(δ  (1))2,              (1.19) q(1)           (δ  (L)  )2",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R114",
@@ -5940,8 +6088,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "гдечертасверху—среднеепонейронамслояиобъектамbatch.Слои,гдезначения ушливмашинныйноль(q(l)  < 10−30 ),врасчётнеберутся;Lтогда—номерпоследнего учтённогослоя.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R115",
@@ -5950,8 +6102,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Порогприёмки.Нанаибольшейглубинепрофилядлякаждойсхемыинициализации ˆχ  fwdиˆχ     bwdотличаютсяотпредсказанногоχнеболеечемна20%.Предсказание:χ= 1 дляHe,χ = 1/2дляXavier,χ =nσ2/2длягауссовскойсхемы.Множительсчитаетсяпо скрытымслоямодинаковойширины,начинаясовторого.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R116",
@@ -5960,8 +6116,12 @@
     "section": "9.1",
     "scope": "SOURCE_CLAUSE",
     "text": "Границаприменимости.Повторитеизмерениедлягауссовскойсхемыпослеобучения втечениеоднойэпохи.Выполняетсялиформула(1.4)   итеперь?Какоееёпредположение нарушилосьпервым?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R117",
@@ -5970,8 +6130,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "9.2   Эксперимент E2. Глубина и остаточные связи",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R118",
@@ -5980,8 +6144,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Вопрос.Скакойглубиныобычнаясетьперестаётобучатьсяиспасаетлиеёостаточная связь?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R119",
@@ -5990,8 +6158,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Что сделать.ИнициализацияHe,ReLU,безнормализации,глубиныизпрофиля. Сравнитетриархитектуры:обычнуюсеть,остаточнуюсα = 1иостаточнуюсα = 1/√L.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R120",
@@ -6000,8 +6172,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "1. Дообученияизмерьтеq(L)  /q(0)дляостаточныхсетейикоэффициентc—отношение среднегоквадратавыходаветвиксреднемуквадратуеёвходавпервомблоке.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R121",
@@ -6010,8 +6186,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "2. Обучитекаждуюсеть3эпохиоптимизаторомизпрофиля.Скоростьобучения подберитеодинраздлясамоймелкойобычнойсетипосетке{10−3  ,3·10−3  ,10−2  ,3· 10−2  ,10 −1 }ииспользуйтедлявсехзапусков.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R122",
@@ -6020,8 +6200,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "3. Длякаждойпары«архитектура,глубина»запишитеρT, GI, AVDиточностьна val.Постройтеграфикиρ      TиGIотглубиныдлятрёхархитектур.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R123",
@@ -6030,8 +6214,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Порог приёмки.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R124",
@@ -6040,8 +6228,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "• Приα = 1измеренныйростзаблок(︁q(L)  /q(0))︁1/L отличаетсяотcнеболеечем1+",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R125",
@@ -6050,8 +6242,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "на20%.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R126",
@@ -6060,8 +6256,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "•Приα= 1/         √Lотношениеq                           (L)  /q(0)непревышает1,2e                         cнавсехглубинах.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R127",
@@ -6070,8 +6270,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "• Длякаждойархитектурыуказананаименьшаяглубина,накоторойсетьстановится необучаемой(ρT ≥ 0,9)илидаётчисленныйсбой.Еслитакойглубинывпрофиле нет,этоявноуказано.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R128",
@@ -6080,8 +6284,12 @@
     "section": "9.2",
     "scope": "SOURCE_CLAUSE",
     "text": "Граница применимости. Найденнаяглубинадляобычнойсетииповедениеоста- точнойсетисα = 1насамойбольшойглубинепрофиля.Совпадаетлинаблюдаемоес предсказанием(1.13)?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "COMPLETED_WITH_THRESHOLD_FAILURE",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R129",
@@ -6090,8 +6298,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "9.3   Эксперимент E3. Основное сравнение",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R130",
@@ -6100,8 +6312,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Вопрос.Выдерживаетлиглавныйвыводработысменуseed?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R131",
@@ -6110,8 +6326,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Что сделать.ПорезультатамE1–E2выберитедвеконфигурации,AиB,между которымиформулируетсяглавныйвывод.Например:обычнаясетьпротивостаточной сα = 1/√Lнасамойбольшойобучаемойглубине.Дозапусковзапишитевфайл hypothesis.mdизафиксируйтевGit:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R132",
@@ -6120,8 +6340,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "1.чемразличаютсяAиB—ровноодинфактор;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R133",
@@ -6130,8 +6354,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "2.чтозафиксировано:остальныефакторы,данные,числоэпох,seeds;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R134",
@@ -6140,8 +6368,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "3.какуюразницувыожидаете,покакойметрикеискакимзнаком;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R135",
@@ -6150,8 +6382,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "4.какойрезультатопровергнетгипотезу. Обучитекаждуюконфигурациюстремяобщимиseedss = 1,2,3.Дляосновнойметрики mвычислитепарныеразности: ⌜⃓⃓⎷ 3∑︂         1 3∑︂ ∆s =m(A,s)−m(B,s),                                  ¯∆ = 13∆s,       s∆ =2(∆s− ¯∆)2,    (1.20) s=1          s=1",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R136",
@@ -6160,8 +6396,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "гдеm(·,s )—метрикаконфигурацииприseeds, ¯∆—средняяразность,s∆—еёстан- дартноеотклонение.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R137",
@@ -6170,8 +6410,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Порогприёмки.Вывод«AиBразличаются»считаетсяустановленным,есливсетри разности∆                   sодногознакаи|¯∆|≥    2s∆.Иначевыводформулируетсякак«различиене установлено».Вотчётеприводятсявсетризначенияs,анетолькосреднее.Расхождение∆ результатасгипотезойнеснижаетоценку,еслионообъяснено.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R138",
@@ -6180,8 +6424,12 @@
     "section": "9.3",
     "scope": "SOURCE_CLAUSE",
     "text": "Границаприменимости.Триseedsописываютразброснаданномразбиенииданных. Перенестивыводнадругиеданныеонинепозволяют—укажитеэтовразделеоб ограничениях.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R139",
@@ -6190,8 +6438,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "10   Контрфактические вопросы",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R140",
@@ -6200,8 +6452,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "ОтветопираетсянавашичисласоссылкаминаRUN_ID.Еслидляответанужендопол- нительныйзапуск,выполнитеего.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R141",
@@ -6210,8 +6466,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "1. ОценитепосвоимданнымE1множительˆχ  fwdдляинициализацииHe.Какимпо формуле(1.4)    будетq(256)/q(1)?ПочемустабильностьприL = 16негарантирует обучаемостьприL= 256?Какоепредположениевыводанарушаетсяпервым?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R142",
@@ -6220,8 +6480,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "2. Ширинуувеличилив4раза,сохранивгауссовскуюинициализациюстемжеσ. Предскажитеновыйχпоформуле(1.7)ипроверьтеоднимзапускомE1.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R143",
@@ -6230,8 +6494,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "3. ВE1принеудачнойинициализацииградиентповыходамслоёвδ(l) затухает.Почему приэтомвеличиныglпочтиодинаковывовсехскрытыхслоях,кромепервого? Найдитеэтонасвоихграфикахиобъясните,сопоставивформулы(1.4)    и(1.8)   . Подсказка:градиентповесамслояравенпроизведениюградиентапоеговыходуи еговходногосигнала.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R144",
@@ -6240,8 +6508,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "4. Сопоставьтеизмеренныйростq(L)  /q(0)приα = 1изE2спредсказанием(1.13) длясвоихглубин.Почемуостаточнаясетьсα = 1можетстатьнеустойчивойпри большойглубине,хотяуградиентаестьпрямойпуть?",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R145",
@@ -6250,8 +6522,12 @@
     "section": "10",
     "scope": "SOURCE_CLAUSE",
     "text": "5. НайдитевE2двеконфигурациисблизкойточностьюнаval,нозаметноразнымGI. Можнолисчитатьиходинаковоустойчивымикувеличениюглубины?Проверьте наследующейглубинепрофиля.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R146",
@@ -6260,8 +6536,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "11   Обязательные тесты",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R147",
@@ -6270,8 +6550,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "1.Мониторактивацийнеменяетвыходмодели.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R148",
@@ -6280,8 +6564,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "2.Мониторградиентовнеменяетзначенияградиентов.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R149",
@@ -6290,8 +6578,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "3. Выборочнаядисперсиявесовпослеинициализацииотличаетсяотцелевойнеболее чемна10%приnl−1  nl≥10   4.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R150",
@@ -6300,8 +6592,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "4.Остаточныйблокснулевойветвьювозвращаетсвойвходсточностью−6 .       10",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R151",
@@ -6310,8 +6606,12 @@
     "section": "11",
     "scope": "SOURCE_CLAUSE",
     "text": "5.СводкаобучаемостиставитфлагчисленногосбояприNaNилиInf.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R152",
@@ -6320,8 +6620,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "12   Что сдать",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R153",
@@ -6330,8 +6634,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "Сдаютсямодулизаданий1–3,конфигурацииE1–E3,файлhypothesis.md,тестыиотчёт. Отчётсостоитизшестичастей:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R154",
@@ -6340,8 +6648,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "1. Профильипротокол:глубины,σ,оптимизатор,подобраннаяскоростьобучения.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R155",
@@ -6350,8 +6662,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "2.E1:графикипослоям,таблицаˆχпротивχ,выводы.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R156",
@@ -6360,8 +6676,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "3. E2:таблицаρT, GI, AVDиточностипоархитектурамиглубинам;ростсигнала дообучения;найденныеглубины.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R157",
@@ -6370,8 +6690,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "4. Карта обучаемости:одиндвумерныйсрез,например«глубина×архитектура →ρ    T»,сперечнемзафиксированныхфакторов.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R158",
@@ -6380,8 +6704,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "5.E3:гипотеза,все∆s,вывод.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R159",
@@ -6390,8 +6718,12 @@
     "section": "12",
     "scope": "SOURCE_CLAUSE",
     "text": "6.Ответы на контрфактические вопросы. КаждоечислосопровождаетсяссылкойнаRUN_ID.Графикистроятсяавтоматическииз сохранённыхрезультатов,безручногопереносачисел.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R160",
@@ -6400,8 +6732,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "13   Критерии завершения и оценивания",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R161",
@@ -6410,8 +6746,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "Работазавершена,еслиодновременно:",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R162",
@@ -6420,8 +6760,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•экспериментыE1–E3выполнены,укаждогорезультатаестьRUN_ID;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R163",
@@ -6430,8 +6774,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•тестыпроходят;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R164",
@@ -6440,8 +6788,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•файлhypothesis.mdзафиксированвGitдозапусковE3;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R165",
@@ -6450,8 +6802,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•картаобучаемостипостроенасперечнемзафиксированныхфакторов;",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R166",
@@ -6460,8 +6816,12 @@
     "section": "13",
     "scope": "SOURCE_CLAUSE",
     "text": "•навсеконтрфактическиевопросыданыответыссобственнымичислами. Весачастейоценкитеже,чтовЛР0:реализация0,15,экспериментальный протокол0,30,диагностика0,30,перенос0,25.",
-    "status": "NOT RUN",
-    "evidence": []
+    "status": "PASS",
+    "evidence": [
+      "reports/lab1/acceptance.json",
+      "reports/lab1/report.pdf",
+      "docs/requirements/lab1_execution_checklist.md"
+    ]
   },
   {
     "id": "L1-R167",

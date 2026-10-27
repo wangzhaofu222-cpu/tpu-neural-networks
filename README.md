@@ -57,4 +57,8 @@ split在`splits/`，按CIFAR官方train/test命名空间防止“相同数字索
 
 ## 当前范围
 
-Lab0已有完整真实训练、反事实测量与六节俄语报告，最终状态以`FINAL_CHECKLIST.md`及`reports/lab0/acceptance.json`为准。Lab1–9只有需求审计和profile规则，**尚未实现/训练/完成报告**；课程协议缺失导致的具体阻塞逐项列出。报告见`reports/lab0/report.pdf`，可编辑LaTeX源见`reports/lab0/main.tex`；本机LaTeX进程启动失败，PDF采用独立导出，不能声称LaTeX编译已通过。
+Lab0已有完整真实训练、反事实测量与六节俄语报告，原有证据保持不变；其历史LaTeX编译未验证记录仍保留。
+
+Lab1已复用同一个ExperimentRunner完成实现、E1/E2/E3、5个反事实问题与可训练性地图。最终47项测试通过，俄语报告9页，实际LaTeX编译和逐页视觉检查通过。**数值阈值未全部通过**：缩放残差L96的信号比例6.9964超出上限6.8493约2.15%，保留FAIL并用逐块方差与交叉项实测解释。α=1的4个训练条件发生真实数值失败，日志完整保留，不冒充三轮成功。报告和逐项状态见`reports/lab1/report.pdf`、`main.tex`、`acceptance.json`。
+
+Lab2–9尚未实现/训练/完成报告；课程协议缺失导致的具体阻塞逐项列出。新系列复现和Git事前假设要求见`REPRODUCIBILITY_GUIDE.md`，完整状态以`FINAL_CHECKLIST.md`为准。

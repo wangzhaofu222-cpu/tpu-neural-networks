@@ -1,0 +1,205 @@
+{
+  "gates": {
+    "E1_12_runs": true,
+    "E1_chi_within_20_percent": true,
+    "E1_after_epoch_all_depths": true,
+    "E2_12_runs": true,
+    "E2_growth_thresholds": false,
+    "E2_growth_failure_diagnosed": true,
+    "E3_six_completed_runs": true,
+    "formal_clean_git": true,
+    "all_formal_real_data": true,
+    "CF5_observed_pair": true,
+    "six_report_sections": true,
+    "preregistered_before_all_E3": true,
+    "E3_exactly_one_scientific_factor": true,
+    "full_epoch_step_counts": true,
+    "fixed_probe_and_gradient_sampling": true,
+    "GI_AVD_independent_recomputation": true,
+    "rho_independent_CPU_checkpoint_evaluation": true,
+    "formal_source_snapshots_match_Git": true,
+    "Lab0_all_preserved_artifact_bytes": true,
+    "all_automated_tests_pass": true,
+    "LaTeX_compiled": true,
+    "all_PDF_pages_visually_verified": true,
+    "PDF_hash_matches_QA": true,
+    "hypothesis_committed_content_and_original_working_bytes": true,
+    "preregistration_committed_content_and_original_working_bytes": true
+  },
+  "numeric_thresholds_pass": false,
+  "E3_difference_established": true,
+  "E1_details": {
+    "he": {
+      "fwd": 0.9803607290940637,
+      "bwd": 0.9946700489450593,
+      "effective_layers": 96,
+      "last_layer": "h96",
+      "predicted": 1.0,
+      "relative_fwd_error": 0.019639270905936312,
+      "relative_bwd_error": 0.005329951054940718
+    },
+    "xavier": {
+      "fwd": 0.49018038121475727,
+      "bwd": 0.4973350415502229,
+      "effective_layers": 96,
+      "last_layer": "h96",
+      "predicted": 0.5,
+      "relative_fwd_error": 0.019639237570485468,
+      "relative_bwd_error": 0.005329916899554199
+    },
+    "gaussian": {
+      "fwd": 0.0499015948312099,
+      "bwd": 0.05042134275419517,
+      "effective_layers": 23,
+      "last_layer": "h23",
+      "predicted": 0.0512,
+      "relative_fwd_error": 0.025359475952931643,
+      "relative_bwd_error": 0.015208149332125553
+    }
+  },
+  "E2_growth": {
+    "E2_residual_unit_8": {
+      "c": 2.1336904032094486,
+      "q_ratio": 6005.702093783177,
+      "growth_per_block": 2.9670199959446575,
+      "predicted_ratio": 9299.26664531294,
+      "relative_error_per_block": 0.053186622103476244,
+      "scaled_bound": null,
+      "pass": true
+    },
+    "E2_residual_unit_24": {
+      "c": 1.7179318353625277,
+      "q_ratio": 185468874525.74692,
+      "growth_per_block": 2.9478901311623127,
+      "predicted_ratio": 26407388482.209457,
+      "relative_error_per_block": 0.08460782305422021,
+      "scaled_bound": null,
+      "pass": true
+    },
+    "E2_residual_unit_48": {
+      "c": 1.8326204369482362,
+      "q_ratio": 3.7727717503139865e+22,
+      "growth_per_block": 2.9535688183824105,
+      "predicted_ratio": 5.07040256468022e+21,
+      "relative_error_per_block": 0.04269840740275099,
+      "scaled_bound": null,
+      "pass": true
+    },
+    "E2_residual_unit_96": {
+      "c": 1.7418281560391444,
+      "q_ratio": 2.8605211273086186e+45,
+      "growth_per_block": 2.9751210248896087,
+      "predicted_ratio": 1.1268400239543967e+42,
+      "relative_error_per_block": 0.08508661213381097,
+      "scaled_bound": null,
+      "pass": true
+    },
+    "E2_residual_scaled_8": {
+      "c": 2.1336904032094486,
+      "q_ratio": 5.477457909094656,
+      "growth_per_block": 1.2368652301380785,
+      "predicted_ratio": 6.6285900326182245,
+      "relative_error_per_block": null,
+      "scaled_bound": 10.135174121803532,
+      "pass": true
+    },
+    "E2_residual_scaled_24": {
+      "c": 1.7179318353625277,
+      "q_ratio": 5.693481923034958,
+      "growth_per_block": 1.0751624322438142,
+      "predicted_ratio": 5.255271776993349,
+      "relative_error_per_block": null,
+      "scaled_bound": 6.68758881015071,
+      "pass": true
+    },
+    "E2_residual_scaled_48": {
+      "c": 1.8326204369482362,
+      "q_ratio": 7.179433215392168,
+      "growth_per_block": 1.0419220083654948,
+      "predicted_ratio": 6.040590680126736,
+      "relative_error_per_block": null,
+      "scaled_bound": 7.500292304695432,
+      "pass": true
+    },
+    "E2_residual_scaled_96": {
+      "c": 1.7418281560391444,
+      "q_ratio": 6.996440262166932,
+      "growth_per_block": 1.0204713198035773,
+      "predicted_ratio": 5.619343430260981,
+      "relative_error_per_block": null,
+      "scaled_bound": 6.849322298355175,
+      "pass": false
+    }
+  },
+  "first_untrainable_depth": {
+    "plain": null,
+    "residual_unit": 8,
+    "residual_scaled": null
+  },
+  "pending": [],
+  "status": "COMPLETE_WITH_EXPLAINED_THRESHOLD_FAILURE",
+  "teacher_completion_standard_pass": true,
+  "all_numeric_thresholds_pass": false,
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "47",
+    "time": "23.451",
+    "timestamp": "2026-10-27T09:57:56.037350+07:00",
+    "hostname": "wang"
+  },
+  "Lab0_preserved_files": 374,
+  "source_snapshots": [
+    {
+      "path": "experiments/lab1/source-1fce7893e9b898a88d0d0764540460e1d441e95e5b2a453e99cebdbd44ca5055.json",
+      "source_hash": "1fce7893e9b898a88d0d0764540460e1d441e95e5b2a453e99cebdbd44ca5055",
+      "git_commit": "1224e2450ded36d57c302a2b0b995738634d726b",
+      "line_endings": {
+        "scripts/update_status.py": "Exact original bytes archived; mixed LF/CRLF normalized by Git; normalized source content verified"
+      }
+    },
+    {
+      "path": "experiments/lab1/source-ff3b8162cfa377c9f93b9af21f8e2ba1446e070ca18aded26fe558d3b42e4d83.json",
+      "source_hash": "ff3b8162cfa377c9f93b9af21f8e2ba1446e070ca18aded26fe558d3b42e4d83",
+      "git_commit": "31c9dfd932efb26bef3d305b70206bdd9cda4eb6",
+      "line_endings": {
+        "scripts/update_status.py": "Exact original bytes archived; mixed LF/CRLF normalized by Git; normalized source content verified"
+      }
+    }
+  ],
+  "E3_config_differences": [
+    {
+      "experiment.name": [
+        "E3_A_seed1",
+        "E3_B_seed1"
+      ],
+      "model.name": [
+        "deep_mlp",
+        "residual_mlp"
+      ]
+    },
+    {
+      "experiment.name": [
+        "E3_A_seed2",
+        "E3_B_seed2"
+      ],
+      "model.name": [
+        "deep_mlp",
+        "residual_mlp"
+      ]
+    },
+    {
+      "experiment.name": [
+        "E3_A_seed3",
+        "E3_B_seed3"
+      ],
+      "model.name": [
+        "deep_mlp",
+        "residual_mlp"
+      ]
+    }
+  ],
+  "final_audit_commit": "1224e2450ded36d57c302a2b0b995738634d726b"
+}

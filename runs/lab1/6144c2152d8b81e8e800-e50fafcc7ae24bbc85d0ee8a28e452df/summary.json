@@ -1,0 +1,41 @@
+{
+  "RUN_ID": "6144c2152d8b81e8e800-e50fafcc7ae24bbc85d0ee8a28e452df",
+  "EXP_ID": "6144c2152d8b81e8e800",
+  "trainability": {
+    "rho_T": null,
+    "GI": 3.091492125710238,
+    "median_g_by_layer": {
+      "layers.0.linear": 2.1820771130760175e-06,
+      "layers.1.linear": 3.287498477942029e-06,
+      "layers.2.linear": 3.3797054502540477e-06,
+      "layers.3.linear": 3.6584450999164674e-06,
+      "layers.4.linear": 4.002045477111016e-06,
+      "layers.5.linear": 4.656578794469835e-06,
+      "layers.6.linear": 5.372110158979171e-06,
+      "layers.7.linear": 6.802021497985517e-06,
+      "layers.8.linear": 8.892831093383514e-06,
+      "layers.9.linear": 1.3254927560881932e-05,
+      "layers.10.linear": 1.9607738125924718e-05,
+      "layers.11.linear": 2.70041291426987e-05,
+      "layers.12.linear": 3.817256727431824e-05,
+      "layers.13.linear": 6.71168853557755e-05,
+      "layers.14.linear": 0.00010576688774058036,
+      "layers.15.linear": 0.0001497935050832451,
+      "layers.16.linear": 0.00020877388744627235,
+      "layers.17.linear": 0.0002929510728054538,
+      "layers.18.linear": 0.00044124115250501256,
+      "layers.19.linear": 0.0005918385429106634,
+      "layers.20.linear": 0.0009322769984164884,
+      "layers.21.linear": 0.0012828375412062172,
+      "layers.22.linear": 0.0018163116369037087,
+      "layers.23.linear": 0.0026937818272725015
+    },
+    "AVD": 6.776035752055478,
+    "max_zero_fraction": 0.5635986328125,
+    "max_saturated_fraction": 0,
+    "numerical_failure": false
+  },
+  "status": "COMPLETED",
+  "optimizer_steps": 0,
+  "purpose": "formal"
+}

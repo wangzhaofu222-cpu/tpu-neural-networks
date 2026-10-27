@@ -26,3 +26,24 @@ Lab0主系列及CF4补充固定在提交`5abedb11663b56690456dca8e8fa3dba24fbb3a
 额外GPU长测为独立RUN_ID，N300、B1/B16的CV约20.8%/13.6%，阈值未通过，已写入报告及验收JSON。不得因主N100系列通过而删除或隐去这次诊断，也不宣称短batch延迟具有跨系列稳定性。
 
 `reports/lab0/main.tex`保留完整LaTeX源；本机内置编译进程无法启动（1060），编译未验证。`report.pdf`来自同一俄语文本的ReportLab独立导出并经逐页渲染检查，报告依赖与训练依赖分别锁定。其余Lab的正式实验和报告仍标NOT RUN/BLOCKED。
+
+## Lab1 复现实验
+
+全部训练仍由 src.engine.runner.ExperimentRunner 执行。环境与 requirements.lock.txt 沿用 Lab0。正式训练使用全部43000个训练样本；diagnostic_protocol.json 保存1024个rho索引及64个probe索引，均为train内索引。
+
+已有原始结果保存在 experiments/lab1/ledger.json；默认重入会继续同一系列，保留已有结果。需要从头复现时，使用新的系列目录，不能删除历史结果或把预算结果改为正式结果：
+
+```powershell
+.conda-env/python.exe -X utf8 -m scripts.lab1_suite e1 --suite-root experiments/lab1-reproduction
+.conda-env/python.exe -X utf8 -m scripts.lab1_suite lr --suite-root experiments/lab1-reproduction
+.conda-env/python.exe -X utf8 -m scripts.lab1_suite e2 --suite-root experiments/lab1-reproduction
+.conda-env/python.exe -X utf8 -m scripts.lab1_suite boundary --suite-root experiments/lab1-reproduction
+.conda-env/python.exe -X utf8 -m scripts.lab1_suite cf2 --suite-root experiments/lab1-reproduction
+.conda-env/python.exe -X utf8 -m scripts.lab1_suite cf3 --suite-root experiments/lab1-reproduction
+```
+
+E3必须在本次E1/E2后重新记录并真实提交假设，不能在已有E3之后重写事前记录。参见 reports/tools/preregister_lab1.py（支持 --suite-root），随后实际Git提交，再执行对应目录的e3。RUN_ID每次新建，不能要求UUID相同。不同Git提交会产生不同EXP_ID。
+
+用 `src.compare` 比较运行时会附加rho_T/GI/AVD/数值失败字段。GI按逐层g的跨步骤中位数计算；rho在训练结束后固定train子集计算；失败的α=1条件不具有三轮后rho。初始化probe是float64权重副本，训练为float32；这两种精度不可混为一谈。
+
+报告由 reports/tools/summarize_lab1.py 读取原始记录生成，真实LaTeX编译使用Tectonic0.17.0，下载来源及SHA256、编译日志、字体哈希见 reports/lab1/build_status.json。内置预览仍报Windows启动1060，独立编译结果已验证。历史Lab0报告不因此重建。

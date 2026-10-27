@@ -1,0 +1,64 @@
+experiment:
+  name: E2_residual_unit_24
+  lab: 1
+  seed: 987693601
+  deterministic: true
+  purpose: formal
+  resume_ablation: none
+data:
+  name: cifar10
+  root: data
+  split_path: splits/cifar10.json
+  split_seed: 1729
+  val_per_class: 500
+  cal_per_class: 200
+  train_fraction: 1.0
+  num_workers: 0
+  download: false
+model:
+  name: residual_mlp
+  input_features: 3072
+  width: 256
+  depth: 24
+  classes: 10
+  activation: relu
+  normalization: none
+  normalization_position: before_activation
+  initialization: he
+  sigma: 0.02
+  alpha: 1.0
+optimizer:
+  name: sgd
+  lr: 0.003
+  weight_decay: 0.0
+  momentum: 0.9
+scheduler:
+  name: step
+  warmup_epochs: 0
+  step_size: 100
+  gamma: 1.0
+train:
+  epochs: 3
+  batch_size: 128
+  amp: false
+  accumulation_steps: 1
+logging:
+  backend: local
+  save_every: 1
+  run_root: runs/lab1
+runtime:
+  device: cuda
+  threads: 2
+  max_seconds: 1800
+  dependency_lock: requirements.lock.txt
+profiling:
+  warmup: 10
+  repeats: 30
+profile:
+  id: P3adf02
+  student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+  base_seed: 987693601
+diagnostics:
+  enabled: true
+  probe_batch_size: 64
+  loss_subset_size: 1024

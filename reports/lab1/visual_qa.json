@@ -1,0 +1,46 @@
+{
+  "pages": 9,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "visual_QA_status": "PASS",
+  "findings": "All final pages individually inspected at 1.5x. Paragraph separation, tables, scientific plots, numerical-failure labels, six sections, five CF answers and RUN_ID registry checked; no clipped text, overlap or missing glyphs.",
+  "rendered_page_sha256": {
+    "1": "eb72f3e63b08914ee1a2c8e29d68b514aa347cb273a40f0f58a10925c122bd8b",
+    "2": "bfeee943e2c75d401a9cef6e45408b710b8eda57e92bf77674efab076264a73e",
+    "3": "6d2e4244da6cf34e3d8197ff02dc00730182b547df70f7cca99855264edabd22",
+    "4": "dbb0f50edad17dfdb598cd172da1a7cd3b208bd9c23f379960d244679f1d7f45",
+    "5": "c68dfb69487a2bdf229c4b1da7ae3427bdf5580a1900aa7e099c82ae3d38edc2",
+    "6": "dcc884a3f7e947c34ecd4848a74265860a177e6d654675b9978c1acb66dfefb7",
+    "7": "297e2935aa8bb5d498390e14e9ce7890c845871d10431e42453a7ce771ff74bb",
+    "8": "ec79f34d91bb52e0a838afc72d73cfc24a15f0ffbbc5e58c3f8a60f01471eca0",
+    "9": "5e37d528156c40055ab028c3206530440d1da4fae11f7a7901e73d61dd20ea99"
+  },
+  "fonts_embedded": {
+    "/IHAIZV+TimesNewRomanPS-BoldMT": true,
+    "/BZIVMZ+TimesNewRomanPSMT": true,
+    "/TQTHRL+CMMI10": true,
+    "/YEUUOC+CMR10": true,
+    "/AKHCZK+CMSY10": true,
+    "/VDVGTR+CMMI7": true,
+    "/CAFSZL+CMMI5": true,
+    "/DDIEWW+CMEX10": true,
+    "/FKPJSN+CMR7": true,
+    "/PVTTLK+CMSY7": true,
+    "/JAGKKY+CMMI9": true,
+    "/NOMARO+CMR9": true,
+    "/KPXLOM+CMMI6": true,
+    "/UTACNV+CMSY6": true,
+    "/FZDNHS+CMR6": true,
+    "/DZGKAF+CMSY9": true,
+    "/IXFAWU+Consolas": true
+  }
+}

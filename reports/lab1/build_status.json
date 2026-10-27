@@ -1,0 +1,41 @@
+{
+  "latex_compile_status": "PASS",
+  "compiler": "Tectonic 0.17.0 (XeTeX)",
+  "compiler_exit_code": 0,
+  "compiler_zip_sha256": "f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f",
+  "compiler_zip_source": "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-pc-windows-msvc.zip",
+  "command": "tectonic --keep-logs main.tex (cwd reports/lab1)",
+  "source_sha256": "6f630109939086179306d52e17faf72443fd6cff75270fa84a4159b357186c61",
+  "pdf_sha256": "96507eab069f32966b05e75217faea0063eaed9bc7ee302c464874e5a9348934",
+  "pages": 9,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "visual_QA_status": "PASS",
+  "all_fonts_embedded": true,
+  "overfull_boxes": 0,
+  "underfull_boxes": 0,
+  "native_preview_status": "FAILED_LAUNCH_1060; independent actual LaTeX compilation succeeded",
+  "nonfatal_environment_messages": [
+    "Fontconfig default configuration unavailable; fontspec resolved actual Windows font files",
+    "Absolute Windows font paths are platform-dependent; font hashes below"
+  ],
+  "font_files": {
+    "consola.ttf": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179",
+    "consolab.ttf": "7e8de70c92a891722bd3fbd623db005caab2bfe267e5dab5be46b95a44e0c7f1",
+    "consolai.ttf": "0b5b0484cf69ae973bd39380069f141271a4c9299b8885fa2d13f42aadbefef9",
+    "consolaz.ttf": "9bc225ec52aa8f4b88b98bb735b1908bd72c9e31a12139fafcc1bd6c86bed3b4",
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5",
+    "timesbd.ttf": "54fbe2c70af7c85a97bed0573227e3ccc4b2486012e3ca2a40c6bc77065846f5",
+    "timesbi.ttf": "3a29d114cb5229e8dbda5bef6c69be4a210a13b7277de4d66e9fc86963226f6c",
+    "timesi.ttf": "e7f7a88b65188328aea58670f955022e23c712f55679524729da1e4e03c49d88"
+  }
+}

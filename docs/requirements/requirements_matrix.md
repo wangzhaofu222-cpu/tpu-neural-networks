@@ -19,13 +19,13 @@
 | L0-CF01..08 | §24 p19 | 最小效应/样本数；workers2两运行；只权重resume；近同acc轨迹；cuDNN变化；改数据1字节；cold/warm；最优B差异 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
 | L0-T01..11 | §25 p19–20 | config；split；checkpoint outputs；metric；EXP变化；EXP稳定/RUN变化；不覆盖；代码变化；profile确定/区分；双profile无需改代码；CPU/CUDA配置 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
 | L0-REP | §27–28 p20–21 | 6节：profile预算、harness、E0–4、R0–3带模式、8CF、限制 | PASS — 证据见 [Lab0验收](lab0_acceptance.md) |
-| L1-IMP | §5–8 p2–8 | 显式He/Xavier/Gaussian；ReLU/tanh、BN/LN、残差；float64 hook统计q/v/zero/saturation/delta/gl/GI/AVD/rho_T/NaN；probe真实B≥64、单位u | NOT RUN |
-| L1-E1 | §9.1 p8–9 | 3init×profile深度、宽256/noNorm/ReLU；最大深度chi前/反误差≤20%；排除q<1e-30；Gaussian训练1epoch后复查理论 | NOT RUN |
-| L1-E2 | §9.2 p9 | plain/res alpha1/alpha1√L，3epoch；只为最浅plain选LR固定网格；signal增长误差≤20%；scaled q ratio≤1.2e^c；首个rho≥.9/NaN深度 | NOT RUN |
-| L1-E3 | §9.3 p10 | Git先假设；一因素A/B三seed；三差值/2std；二维trainability map | NOT RUN |
-| L1-CF01..05 | §10 p10–11 | 深256预测；宽×4实测；gl与delta；残差爆炸；近同acc不同GI下个深度 | NOT RUN |
-| L1-T01..05 | §11 p11 | hook不改output/grad；权重方差误差≤10%(fan产品≥1e4)；零分支identity≤1e-6；NaN/Inf flag | NOT RUN |
-| L1-REP | §12–13 p11 | 6节，全部RUN_ID与5CF | NOT RUN |
+| L1-IMP | §5–8 p2–8 | 显式He/Xavier/Gaussian；ReLU/tanh、BN/LN、残差；float64 hook统计q/v/zero/saturation/delta/gl/GI/AVD/rho_T/NaN；probe真实B≥64、单位u | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
+| L1-E1 | §9.1 p8–9 | 3init×profile深度、宽256/noNorm/ReLU；最大深度chi前/反误差≤20%；排除q<1e-30；Gaussian训练1epoch后复查理论 | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
+| L1-E2 | §9.2 p9 | plain/res alpha1/alpha1√L，3epoch；只为最浅plain选LR固定网格；signal增长误差≤20%；scaled q ratio≤1.2e^c；首个rho≥.9/NaN深度 | 完成；L96增长阈值FAIL，已诊断 — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
+| L1-E3 | §9.3 p10 | Git先假设；一因素A/B三seed；三差值/2std；二维trainability map | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
+| L1-CF01..05 | §10 p10–11 | 深256预测；宽×4实测；gl与delta；残差爆炸；近同acc不同GI下个深度 | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
+| L1-T01..05 | §11 p11 | hook不改output/grad；权重方差误差≤10%(fan产品≥1e4)；零分支identity≤1e-6；NaN/Inf flag | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
+| L1-REP | §12–13 p11 | 6节，全部RUN_ID与5CF | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
 | L2-IMP | §5–8 p2–8 | CIFAR ResNet18 stem3/s1无pool；ViT P4/D384/L6/h6/MLP1536；features接口；MAC计数含MHA；嵌套分层fractions；A0/A1/A2；6种扰动参数表 | NOT RUN |
 | L2-E1 | §9.1 p9 | S10000/B128；AdamW/LR三点各模型val选；10训练；参数±20%或MAC匹配；MAC误差≤1%；所有fractions图/r* | NOT RUN |
 | L2-E2 | §9.2 p10 | r1 checkpoint、不重训；profile三扰动s0..3；δ/均值/leader；clean完全相同；换leader两差幅≥.01 | NOT RUN |

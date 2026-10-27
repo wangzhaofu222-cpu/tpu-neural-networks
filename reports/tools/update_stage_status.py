@@ -81,6 +81,11 @@ Phase A/B已完成；Lab0阶段验收：**{status}**。整个Lab0–Lab9课程�
 | 全课程可提交完成验收 | NOT RUN | 仅完成阶段工作，不虚报全课程完成 |
 '''
     (ROOT/'FINAL_CHECKLIST.md').write_text(checklist,encoding='utf-8')
+    # Preserve any later, independently verified stage when refreshing Lab0 status.
+    import runpy
+    later=ROOT/'reports/tools/update_lab1_stage.py'
+    if later.exists():
+        runpy.run_path(str(later),run_name='__main__')
     print('Lab0 stage:',status)
 
 

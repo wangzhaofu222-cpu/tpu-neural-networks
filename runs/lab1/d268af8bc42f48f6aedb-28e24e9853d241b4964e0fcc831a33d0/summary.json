@@ -1,0 +1,25 @@
+{
+  "RUN_ID": "d268af8bc42f48f6aedb-28e24e9853d241b4964e0fcc831a33d0",
+  "EXP_ID": "d268af8bc42f48f6aedb",
+  "trainability": {
+    "rho_T": null,
+    "GI": 4.0945476933564695,
+    "median_g_by_layer": {
+      "layers.0.linear": 2.0394071189286934e-07,
+      "layers.1.linear": 1.1328156234631953e-06,
+      "layers.2.linear": 1.654451269388279e-06,
+      "layers.3.linear": 4.113596658306473e-06,
+      "layers.4.linear": 1.8099208192734534e-05,
+      "layers.5.linear": 9.739470040166167e-05,
+      "layers.6.linear": 0.0004813269702644227,
+      "layers.7.linear": 0.0025354424287426396
+    },
+    "AVD": 9.028798939321998,
+    "max_zero_fraction": 0.5216064453125,
+    "max_saturated_fraction": 0,
+    "numerical_failure": false
+  },
+  "status": "COMPLETED",
+  "optimizer_steps": 0,
+  "purpose": "formal"
+}
