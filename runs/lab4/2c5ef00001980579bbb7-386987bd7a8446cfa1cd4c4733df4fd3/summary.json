@@ -1,0 +1,25 @@
+{
+  "RUN_ID": "2c5ef00001980579bbb7-386987bd7a8446cfa1cd4c4733df4fd3",
+  "status": "COMPLETED_FEATURE_EXTRACTION",
+  "encoder_RUN_ID": "9bcb3e57a83e8f0b7c03-eba9695f16f344f7a05c93b54baaf23f",
+  "checkpoint": "last.pt",
+  "checkpoint_sha256": "4bde59be8df19434e1fea345d6151ce67df6a5680db171d7b781710bc32fc6eb",
+  "cache_path": "runs/lab4/2c5ef00001980579bbb7-386987bd7a8446cfa1cd4c4733df4fd3/features.pt",
+  "feature_cache_sha256": "55916654dabcdac01694e6868639d5f7600936e3e576f11eaccef3abe319ed50",
+  "feature_fingerprint": "a28e8f2cf8dc64323b21c8d9477ddd112e9309d772bd78499c38e762b4330a6d",
+  "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+  "encoder_state_sha256": "a092b03c452048e16c3f8ec3fabf77d38b9767bf5dc6c6302e812ed478d1faf8",
+  "repeated_extraction_max_error_h": 0.0,
+  "repeated_extraction_max_error_z": 0.0,
+  "role_sizes": {
+    "train": 43000,
+    "val": 5000,
+    "test": 10000
+  },
+  "cal_access": false,
+  "optimizer_steps": 0,
+  "operation_wall_seconds": 18.558443900001294,
+  "operation_started_at_utc": "2026-10-28T14:59:54.151305+00:00",
+  "controller_source_sha256": "c351ba08de43b26e963018ab4f6d86c514d0173031e9ef2feec9cc5a3bcd71ac",
+  "timing_scope": "featureprotocol call; Pythonstartup excluded"
+}

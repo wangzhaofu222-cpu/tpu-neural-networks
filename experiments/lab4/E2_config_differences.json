@@ -1,0 +1,190 @@
+{
+  "T": {},
+  "minus_random_resized_crop": {
+    "augmentations": [
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        },
+        {
+          "name": "color_jitter",
+          "p": 0.8,
+          "brightness": 0.4,
+          "contrast": 0.4,
+          "saturation": 0.4,
+          "hue": 0.1
+        },
+        {
+          "name": "flip",
+          "p": 0.5
+        }
+      ],
+      [
+        {
+          "name": "color_jitter",
+          "p": 0.8,
+          "brightness": 0.4,
+          "contrast": 0.4,
+          "saturation": 0.4,
+          "hue": 0.1
+        },
+        {
+          "name": "flip",
+          "p": 0.5
+        }
+      ]
+    ]
+  },
+  "minus_color_jitter": {
+    "augmentations": [
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        },
+        {
+          "name": "color_jitter",
+          "p": 0.8,
+          "brightness": 0.4,
+          "contrast": 0.4,
+          "saturation": 0.4,
+          "hue": 0.1
+        },
+        {
+          "name": "flip",
+          "p": 0.5
+        }
+      ],
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        },
+        {
+          "name": "flip",
+          "p": 0.5
+        }
+      ]
+    ]
+  },
+  "minus_flip": {
+    "augmentations": [
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        },
+        {
+          "name": "color_jitter",
+          "p": 0.8,
+          "brightness": 0.4,
+          "contrast": 0.4,
+          "saturation": 0.4,
+          "hue": 0.1
+        },
+        {
+          "name": "flip",
+          "p": 0.5
+        }
+      ],
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        },
+        {
+          "name": "color_jitter",
+          "p": 0.8,
+          "brightness": 0.4,
+          "contrast": 0.4,
+          "saturation": 0.4,
+          "hue": 0.1
+        }
+      ]
+    ]
+  },
+  "only_random_resized_crop": {
+    "augmentations": [
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        },
+        {
+          "name": "color_jitter",
+          "p": 0.8,
+          "brightness": 0.4,
+          "contrast": 0.4,
+          "saturation": 0.4,
+          "hue": 0.1
+        },
+        {
+          "name": "flip",
+          "p": 0.5
+        }
+      ],
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        }
+      ]
+    ]
+  },
+  "none": {
+    "augmentations": [
+      [
+        {
+          "name": "random_resized_crop",
+          "p": 1.0,
+          "scale": [
+            0.08,
+            1.0
+          ]
+        },
+        {
+          "name": "color_jitter",
+          "p": 0.8,
+          "brightness": 0.4,
+          "contrast": 0.4,
+          "saturation": 0.4,
+          "hue": 0.1
+        },
+        {
+          "name": "flip",
+          "p": 0.5
+        }
+      ],
+      []
+    ]
+  }
+}

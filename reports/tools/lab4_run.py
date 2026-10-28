@@ -12,7 +12,7 @@ import yaml
 from src.config import load_config,validate
 from src.engine.runner import ExperimentRunner
 from src.evaluation.ssl_evaluation import feature_cache,evaluate_probe
-from src.utils.io import write_json,file_hash
+from src.utils.io import write_json,file_hash,digest
 
 ROOT=Path('experiments/lab4');CONTROL=ROOT/'control'
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
@@ -153,10 +153,42 @@ if __name__=='__main__':
     parser.add_argument('--seed',type=int,default=1);parser.add_argument('--fraction',type=float,default=1.);parser.add_argument('--kind',default='h');a=parser.parse_args()
     if a.stage=='worker_train':worker_train(a.config,a.label,a.initialize,a.resume)
     elif a.stage=='worker_features':
-        p,r=feature_cache(a.source,a.checkpoint);append('features.json',{'label':a.label,'path':p.as_posix(),**r});print('FEATURES',a.label,p,flush=True)
+        started=time.perf_counter();started_utc=datetime.now(timezone.utc).isoformat()
+        p,r=feature_cache(a.source,a.checkpoint)
+        r.update(operation_wall_seconds=time.perf_counter()-started,operation_started_at_utc=started_utc,
+                 controller_source_sha256=file_hash(__file__),timing_scope='featureprotocol call; Pythonstartup excluded')
+        (p/'controller_snapshot.py').write_bytes(Path(__file__).read_bytes())
+        write_json(p/'summary.json',r);append('features.json',{'label':a.label,'path':p.as_posix(),**r});print('FEATURES',a.label,p,flush=True)
     elif a.stage=='worker_probe':
+        started=time.perf_counter();started_utc=datetime.now(timezone.utc).isoformat()
         c=base();c['experiment']['purpose']='budget' if a.budget else 'formal'
         if a.budget:c['evaluation'].update(probe_epochs=2,regularization_grid=[.001])
+        # A controller guard never treats an epoch-boundary pause as a completed probe.
+        import src.evaluation.ssl_evaluation as protocol
+        class PauseAwareRunner(ExperimentRunner):
+            def run(self,*args,**kwargs):
+                if Path(self.config['runtime']['pause_file']).exists():raise RuntimeError('Userpause: no newprobe candidate launched')
+                from src.utils.provenance import git_state
+                key=digest(self.config);source_hash=git_state()['source_hash'];interrupted=[]
+                for prior in Path(self.config['logging']['run_root']).iterdir():
+                    manifest_path=prior/'manifest.json'
+                    if not manifest_path.exists():continue
+                    m=read(manifest_path)
+                    if m['config_hash']!=key or m['source_hash']!=source_hash:continue
+                    if m['status']=='COMPLETED' and (prior/'checkpoints/last.pt').exists():return prior
+                    if m['status'].startswith('INTERRUPTED') and (prior/'checkpoints/last.pt').exists():interrupted.append(prior)
+                if interrupted and not kwargs.get('resume'):
+                    latest=max(interrupted,key=lambda p:(p/'checkpoints/last.pt').stat().st_mtime)
+                    kwargs['resume']=latest/'checkpoints/last.pt'
+                out=super().run(*args,**kwargs)
+                if read(out/'summary.json')['status']!='COMPLETED':raise RuntimeError('Userpause: incompleteprobe checkpoint preserved, no testscore claimed')
+                return out
+        protocol.ExperimentRunner=PauseAwareRunner
         p,r=evaluate_probe(c,a.source,a.seed,a.fraction,a.kind,a.label);append('evaluations.json',{'path':p.as_posix(),**r})
+        r.update(operation_wall_seconds=time.perf_counter()-started,operation_started_at_utc=started_utc,
+                 controller_source_sha256=file_hash(__file__),timing_scope='completeprobe selection/test protocol; includes candidate training; Pythonstartup excluded')
+        (p/'controller_snapshot.py').write_bytes(Path(__file__).read_bytes())
+        write_json(p/'summary.json',r)
+        values=rows('evaluations.json');values[-1]={'path':p.as_posix(),**r};write_json(ROOT/'evaluations.json',values)
         print('PROBE',a.label,r['test_accuracy'],r['knn_test_accuracy'],flush=True)
     else:globals()[a.stage]()

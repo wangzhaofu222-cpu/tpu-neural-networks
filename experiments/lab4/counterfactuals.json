@@ -1,0 +1,171 @@
+{
+  "Q2": {
+    "status": "BLOCKED",
+    "missing": "Протокол данных курса §4.6 color-defined-class control dataset",
+    "search": "all project filenames/PDF inventory; only10labPDFs and existing generated protocols found",
+    "impact": "Cannot define hue classes/splits without inventing teacher protocol; all other work proceeds",
+    "prior_user_confirmation": "Teacher protocol and dedicated packs unavailable",
+    "connected_search": {
+      "provider": "GoogleDrive",
+      "queries": [
+        "Протокол данных курса",
+        "Нейронные сети протокол"
+      ],
+      "results": "no matching documents returned",
+      "action": "read-only exactcourse-protocol search; nofiles modified"
+    }
+  },
+  "Q3": {
+    "status": "PASS",
+    "actual_pairs": [
+      {
+        "criterion": "accuracygap<=.01 andrankrelativegap>=.10",
+        "rank_relative_gap": 0.17899302068577955,
+        "accuracy_gap": 0.007799999999999918,
+        "A": {
+          "encoder": "SimCLR_epoch25",
+          "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+          "evaluation_RUN_ID": "161af2ac59fc30cca93c-a9707c14f765463591f3b0b35c51e615",
+          "probe_accuracy": 0.6769,
+          "h_effective_rank": 44.77734266687113,
+          "h_trace_cov": 33.46950202851343
+        },
+        "B": {
+          "encoder": "E2_T",
+          "encoder_RUN_ID": "cf2097134c33eef5506c-be1a9df9a9714bfe9b95948d626f55c9",
+          "evaluation_RUN_ID": "f6930c0a3a68eee5f646-633b0a71ee11487bbda64c3c2b30dfa7",
+          "probe_accuracy": 0.6691,
+          "h_effective_rank": 36.762510844645625,
+          "h_trace_cov": 106.75361026985841
+        }
+      },
+      {
+        "criterion": "rankrelativegap<=.10 andaccuracygap>=.02",
+        "rank_relative_gap": 0.0732303850830151,
+        "accuracy_gap": 0.11699999999999999,
+        "A": {
+          "encoder": "SimCLR_epoch25",
+          "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+          "evaluation_RUN_ID": "161af2ac59fc30cca93c-a9707c14f765463591f3b0b35c51e615",
+          "probe_accuracy": 0.6769,
+          "h_effective_rank": 44.77734266687113,
+          "h_trace_cov": 33.46950202851343
+        },
+        "B": {
+          "encoder": "E2_minus_color_jitter",
+          "encoder_RUN_ID": "9bcb3e57a83e8f0b7c03-eba9695f16f344f7a05c93b54baaf23f",
+          "evaluation_RUN_ID": "03116a6d278a2596e1ac-5c320e06d35f4db9806cc7143980c9c6",
+          "probe_accuracy": 0.5599,
+          "h_effective_rank": 41.49828062038203,
+          "h_trace_cov": 171.9663771303841
+        }
+      },
+      {
+        "criterion": "accuracygap<=.01 andrankrelativegap>=.10",
+        "rank_relative_gap": 0.17905826470875938,
+        "accuracy_gap": 0.009300000000000086,
+        "A": {
+          "encoder": "SimCLR_epoch25",
+          "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+          "evaluation_RUN_ID": "161af2ac59fc30cca93c-a9707c14f765463591f3b0b35c51e615",
+          "probe_accuracy": 0.6769,
+          "h_effective_rank": 44.77734266687113,
+          "h_trace_cov": 33.46950202851343
+        },
+        "B": {
+          "encoder": "E2_minus_flip",
+          "encoder_RUN_ID": "5f460eb41601d4914fdc-4263d43328524a0f915e3141c3d42896",
+          "evaluation_RUN_ID": "1ba737be8226bf3d27f9-1aec3789ae7943b0a164c7f1b9bb01bc",
+          "probe_accuracy": 0.6862,
+          "h_effective_rank": 36.75958939067169,
+          "h_trace_cov": 103.66172297554522
+        }
+      },
+      {
+        "criterion": "rankrelativegap<=.10 andaccuracygap>=.02",
+        "rank_relative_gap": 0.07976199252065368,
+        "accuracy_gap": 0.11699999999999999,
+        "A": {
+          "encoder": "SimCLR_epoch25",
+          "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+          "evaluation_RUN_ID": "161af2ac59fc30cca93c-a9707c14f765463591f3b0b35c51e615",
+          "probe_accuracy": 0.6769,
+          "h_effective_rank": 44.77734266687113,
+          "h_trace_cov": 33.46950202851343
+        },
+        "B": {
+          "encoder": "E2_only_random_resized_crop",
+          "encoder_RUN_ID": "0ac05f5c7a4bf57bba93-c64ca04b5e1c43d8b5a21130fdbfaf3a",
+          "evaluation_RUN_ID": "76ffb8d4e5612d080fc6-81d66cafbc3f41f68510e06e129e17f9",
+          "probe_accuracy": 0.5599,
+          "h_effective_rank": 41.205812595981406,
+          "h_trace_cov": 177.1873498347144
+        }
+      },
+      {
+        "criterion": "rankrelativegap<=.10 andaccuracygap>=.02",
+        "rank_relative_gap": 0.06020064482746691,
+        "accuracy_gap": 0.31549999999999995,
+        "A": {
+          "encoder": "SimCLR_epoch25",
+          "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+          "evaluation_RUN_ID": "161af2ac59fc30cca93c-a9707c14f765463591f3b0b35c51e615",
+          "probe_accuracy": 0.6769,
+          "h_effective_rank": 44.77734266687113,
+          "h_trace_cov": 33.46950202851343
+        },
+        "B": {
+          "encoder": "E2_none",
+          "encoder_RUN_ID": "ad1e859e697e9a1c182d-be89554cbb6d4ba6a349a2cdb81795ea",
+          "evaluation_RUN_ID": "11791a48092c8a621248-b32b5566845a44a98a747e62a041c408",
+          "probe_accuracy": 0.3614,
+          "h_effective_rank": 47.64564097689839,
+          "h_trace_cov": 83.52914806680869
+        }
+      },
+      {
+        "criterion": "rankrelativegap<=.10 andaccuracygap>=.02",
+        "rank_relative_gap": 0.05004600362750905,
+        "accuracy_gap": 0.2802,
+        "A": {
+          "encoder": "E2_T",
+          "encoder_RUN_ID": "cf2097134c33eef5506c-be1a9df9a9714bfe9b95948d626f55c9",
+          "evaluation_RUN_ID": "f6930c0a3a68eee5f646-633b0a71ee11487bbda64c3c2b30dfa7",
+          "probe_accuracy": 0.6691,
+          "h_effective_rank": 36.762510844645625,
+          "h_trace_cov": 106.75361026985841
+        },
+        "B": {
+          "encoder": "E2_minus_random_resized_crop",
+          "encoder_RUN_ID": "18d82233d80d6ba38d75-4603002b39054d37a544e63f8844618f",
+          "evaluation_RUN_ID": "e0d41b4aae60ede11d38-9215f50ca3ca44209c28a2caef62eb66",
+          "probe_accuracy": 0.3889,
+          "h_effective_rank": 34.92269409355815,
+          "h_trace_cov": 92.51808080442036
+        }
+      },
+      {
+        "criterion": "rankrelativegap<=.10 andaccuracygap>=.02",
+        "rank_relative_gap": 0.0499705064055934,
+        "accuracy_gap": 0.2973,
+        "A": {
+          "encoder": "E2_minus_random_resized_crop",
+          "encoder_RUN_ID": "18d82233d80d6ba38d75-4603002b39054d37a544e63f8844618f",
+          "evaluation_RUN_ID": "e0d41b4aae60ede11d38-9215f50ca3ca44209c28a2caef62eb66",
+          "probe_accuracy": 0.3889,
+          "h_effective_rank": 34.92269409355815,
+          "h_trace_cov": 92.51808080442036
+        },
+        "B": {
+          "encoder": "E2_minus_flip",
+          "encoder_RUN_ID": "5f460eb41601d4914fdc-4263d43328524a0f915e3141c3d42896",
+          "evaluation_RUN_ID": "1ba737be8226bf3d27f9-1aec3789ae7943b0a164c7f1b9bb01bc",
+          "probe_accuracy": 0.6862,
+          "h_effective_rank": 36.75958939067169,
+          "h_trace_cov": 103.66172297554522
+        }
+      }
+    ],
+    "answer": "Effective rank measures covariance dispersion, notwhetherdirections encode labels. Itmustbe shownwithtrace andmeannorm. When trace<=1e-6*d*mean_squared_norm, rankisundefined andreportednull/collapse_scale, neveran arbitraryepsilon-regularizednumber."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "RUN_ID": "351c38bc2f7e973e54ae-3a6d1626f1fe456cb4ef5a516d5ace41",
+  "status": "COMPLETED_FEATURE_EXTRACTION",
+  "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+  "checkpoint": "epoch_050.pt",
+  "checkpoint_sha256": "7cddbdf8d1f7c9255af0eb384e300285cb46020bcadf53e51b2876b59f953263",
+  "cache_path": "runs/lab4/351c38bc2f7e973e54ae-3a6d1626f1fe456cb4ef5a516d5ace41/features.pt",
+  "feature_cache_sha256": "e5494e74d6305c52594cbf1676ec6f56e6e9752d1a9ca9262400e6826414ebd2",
+  "feature_fingerprint": "634b833ae1398e3595091c9c6ae5c0e74fc85f6dfc19cb2177f1ebee0c763c15",
+  "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+  "encoder_state_sha256": "0f35819f0658b8d38318749bb29f9a4aa19970847b088981e22e90de206b509b",
+  "repeated_extraction_max_error_h": 0.0,
+  "repeated_extraction_max_error_z": 0.0,
+  "role_sizes": {
+    "train": 43000,
+    "val": 5000,
+    "test": 10000
+  },
+  "cal_access": false,
+  "optimizer_steps": 0,
+  "operation_wall_seconds": 18.198073500003375,
+  "operation_started_at_utc": "2026-10-28T14:19:42.667675+00:00",
+  "controller_source_sha256": "c351ba08de43b26e963018ab4f6d86c514d0173031e9ef2feec9cc5a3bcd71ac",
+  "timing_scope": "featureprotocol call; Pythonstartup excluded"
+}

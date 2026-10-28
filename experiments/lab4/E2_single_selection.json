@@ -1,0 +1,18 @@
+{
+  "operation": "random_resized_crop",
+  "candidates": [
+    {
+      "operation": "random_resized_crop",
+      "validation_delta": 0.28040000000000004
+    },
+    {
+      "operation": "color_jitter",
+      "validation_delta": 0.11299999999999999
+    },
+    {
+      "operation": "flip",
+      "validation_delta": -0.018999999999999906
+    }
+  ],
+  "criterion": "largest valprobe delta, ties baseconfigorder; testnotusedtoselectaugmentation"
+}
