@@ -77,6 +77,13 @@ def main():
                 'alternative_cost_decomposition':'PASS',
                 'interpretation':'Quadratic and linear measured terms coexist with fixed model/optimizer state. PDF §9.2 explicitly accepts decomposition when asymptotic intervals do not apply. Raw slope flags are retained.'}
             analysis[backend]['theory_attention_to_projections_MAC_ratio']={str(l):l/(4*128) for l in ls}
+            fc=analysis[backend]['decomposition']['forward_seconds']['longest_L_component_fractions']
+            mc=analysis[backend]['decomposition']['peak_memory_bytes']['longest_L_component_fractions']
+            analysis[backend]['measured_interpretation']={
+                'time':f'At largestL, descriptive forward fit fractions quadratic/linear/constant are {fc}. Small fixed-width GPU calls are dominated by dispatch/synchronization and fixed overhead in this timing range. Nonmonotone raw times prevent a clean asymptotic quadratic-time validation; raw samples remain published.',
+                'memory':f'At largestL, descriptive memory fit fractions quadratic/linear/constant are {mc}. Explicit storage has a large L² component; efficient storage is predominantly fixed+linear. Total peak slopes are suppressed by the constant allocator/library/model/optimizer baseline.',
+                'formula_3_10':'Attention products MAC=2B L²d perblock; QKV/output plusFFN MAC=8B Ld² forFFN2d. Their ratioL/(4d) ranges .125..2 on thisgrid. Arithmetic counts do not imply proportional walltime.',
+                'fit_limit':'Three-term nonnegative regression is descriptive; five lengths cannot establish unique causal contributions or measure hardware utilization from coefficients.'}
         axes[0].set_ylabel('Forward time (ms)');axes[1].set_ylabel('Actual CUDA peak (MiB)')
         fig.suptitle('B4,d128,N2,float16; forced backends; dashed: all-point regression',fontsize=10)
         fig.tight_layout();fig.savefig(FIG/'E2_scaling.png');plt.close(fig);write_json(ROOT/'E2_analysis.json',analysis)
@@ -112,6 +119,16 @@ def main():
             o['most_concentrated_answer_head']={'block':ranking[0][1],'head':ranking[0][2],'entropy':ranking[0][0]}
         if len(observations)==2:
             commentary['changes_2L0_minus_L0']={field:(np.array([b[field]['per_head'] for b in observations[1]['statistics']])-np.array([b[field]['per_head'] for b in observations[0]['statistics']])).tolist() for field in ['entropy','distance','target_mass','answer_entropy']}
+            first,last=observations
+            target1=float(np.mean(first['statistics'][1]['target_mass']['per_head']));target2=float(np.mean(last['statistics'][1]['target_mass']['per_head']))
+            entropy1=float(np.mean(first['statistics'][1]['entropy']['per_head']));entropy2=float(np.mean(last['statistics'][1]['entropy']['per_head']))
+            distance1=float(np.mean(first['statistics'][1]['distance']['per_head']));distance2=float(np.mean(last['statistics'][1]['distance']['per_head']))
+            commentary['measured_interpretation']={
+                'length_change':f'Block1 mean head entropy increases {entropy1:.6f} -> {entropy2:.6f} nats; mean distance {distance1:.6f} -> {distance2:.6f} tokens. Compare against uniform lnL, since entropy naturally depends on length.',
+                'target_change':f'At matching Copy source positions, block1 mean target mass drops {target1:.6f} -> {target2:.6f}. This coincides with M dropping from{by["E1_sinusoidal_L128"]["accuracy"]:.6f} to{by["E1_sinusoidal_L256"]["accuracy"]:.6f}, without establishing causation.',
+                'concentration':'The second block has lower entropy than the first at both lengths. Most concentrated answer head is separately identified for each length; head identities need not stay fixed.',
+                'normalization':{'L0_uniform_entropy':math.log(128),'2L0_uniform_entropy':math.log(256)},
+                'RUN_IDs':[first['RUN_ID'],last['RUN_ID']]}
         write_json(ROOT/'attention_analysis.json',commentary)
     if (ROOT/'E3.json').exists() and 'CF5_isolated_d256_L512' in by:
         e3=read(ROOT/'E3.json');e2a=read(ROOT/'E2_analysis.json');q2={}
@@ -130,9 +147,10 @@ def main():
             'Q4':{'full_curves':{pe:curves[pe]['points'] for pe in ['rope','absolute']},'paired':e3,
                 'answer':'Преимущество на одной длине не означает независимости навыка отдлины. Нужны всякриваяM(L), еёграница и трипарныеразности. Даже установленный знак относится квыбранной длине игенератору, ане кпроизвольномуконтексту.'},
             'Q5':{'L':512,'d1':128,'d2':256,'forward_ratio':ratio,'theoretical_L2d_ratio':2,'theoretical_Ld2_ratio':4,
+                'full_attention_plus_projection_MLP_MAC_ratio':3.,
                 'closer_to':2 if abs(ratio-2)<abs(ratio-4) else 4,'forward_seconds':[narrow['forward_seconds'],wide['forward_seconds']],
                 'RUN_IDs':[narrow['RUN_ID'],wide['RUN_ID']],
-                'answer':'Изменение ширины затрагивает QKV, выходную проекцию иMLP (Ld²), а также произведения внимания (L²d). Реальное время зависит иот загрузкиGPU/эффективности матриц; близость к2или4 сама по себе не изолирует механизм.'}}
+                'answer':f'Измеренное отношение {ratio:.6f} ближе к2, но меньше обоих чистых множителей. ПриL512,d128 MAC внимания2B L²d и проекций/MLP8B Ld² равны; удвоениеd увеличивает суммарный MAC в3раза. Время растёт лишь в{ratio:.6f}раза, поэтому фиксированные накладные расходы и загрузкаGPU существенны. По близости к2 нельзя заключить, что L²d причинно доминирует; сравнение двух арифметических членов не объясняет весь измеренныйwalltime.'}}
         write_json(ROOT/'counterfactuals.json',cf)
     print(json.dumps({'E1_validation':training['progression'][-1],'figures':len(list(FIG.glob('*.png')))},indent=2))
 

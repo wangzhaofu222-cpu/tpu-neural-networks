@@ -109,7 +109,7 @@ def one_profile(backend,length,width=128,cf5=False):
 def e3():
     selection=read(ROOT/'selection.json');prereg=read(ROOT/'preregistration_evidence.json')
     current=subprocess.run(['git','-c','safe.directory=D:/神经网络','show',prereg['git_commit']+':experiments/lab3/hypothesis.md'],capture_output=True,check=True).stdout
-    assert current== (ROOT/'hypothesis.md').read_bytes(), 'Hypothesis changed after preregistration'
+    assert current.decode('utf-8').replace('\r\n','\n')==(ROOT/'hypothesis.md').read_text(encoding='utf-8'), 'Hypothesis changed after preregistration'
     e1data=read(ROOT/'E1_training.json')
     for j in [1,2,3]:
         for pe in selection['positions']:
@@ -120,7 +120,8 @@ def e3():
             evaluate(f'E3_{pe}_j{j}_L{selection["L_star"]}',p,selection['L_star'])
 
 def diagnostics():
-    e=read(ROOT/'E1_training.json');selection=read(ROOT/'selection.json');pe=selection['positions'][0]
+    e=read(ROOT/'E1_training.json')
+    pe=max((v for v in e['paths'] if v!='none'),key=lambda v:read(Path(e['paths'][v])/'summary.json')['validation_metric'])
     for length in [128,256]:evaluate(f'attention_{pe}_L{length}',e['paths'][pe],length,diagnostics=True)
     for width in [128,256]:
         label=f'CF5_isolated_d{width}_L512'

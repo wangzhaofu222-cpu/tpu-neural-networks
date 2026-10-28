@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "formal_training_runs": 10,
+  "checkpoint_count": 24,
+  "historical_files_unchanged": 1538,
+  "E3_pairs": [
+    {
+      "seed": 1,
+      "only_PE_differs": true,
+      "common_input_sha256": "39d2ac814615493cf43a1d8c503aa98ddb8c37b0b72a1b437681cb7144d64ea3",
+      "training_RUN_IDs": [
+        "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec"
+      ],
+      "same_initial_backbone_test": "test_backbone_initialization_common_across_position_modes"
+    },
+    {
+      "seed": 2,
+      "only_PE_differs": true,
+      "common_input_sha256": "bbea5f3470eff2d76b6576148bea0ae0176bacf0244f6feca208b00f6c649624",
+      "training_RUN_IDs": [
+        "aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd",
+        "d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28"
+      ],
+      "same_initial_backbone_test": "test_backbone_initialization_common_across_position_modes"
+    },
+    {
+      "seed": 3,
+      "only_PE_differs": true,
+      "common_input_sha256": "5a88b722124f5b0071d089151afe0a11abb1f18bb334055630557b37670c874d",
+      "training_RUN_IDs": [
+        "614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8",
+        "599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c"
+      ],
+      "same_initial_backbone_test": "test_backbone_initialization_common_across_position_modes"
+    }
+  ],
+  "preregistration_commit": "4d6e559acec22b6af2d78e8ef96ff452a77b1d4c",
+  "raw_interval_failures_preserved": true,
+  "mandatory_blockers": [],
+  "tests": {
+    "tests": 88,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  }
+}

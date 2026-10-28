@@ -47,3 +47,23 @@ E3必须在本次E1/E2后重新记录并真实提交假设，不能在已有E3�
 用 `src.compare` 比较运行时会附加rho_T/GI/AVD/数值失败字段。GI按逐层g的跨步骤中位数计算；rho在训练结束后固定train子集计算；失败的α=1条件不具有三轮后rho。初始化probe是float64权重副本，训练为float32；这两种精度不可混为一谈。
 
 报告由 reports/tools/summarize_lab1.py 读取原始记录生成，真实LaTeX编译使用Tectonic0.17.0，下载来源及SHA256、编译日志、字体哈希见 reports/lab1/build_status.json。内置预览仍报Windows启动1060，独立编译结果已验证。历史Lab0报告不因此重建。
+
+## Lab3 数据与分析复现（不制作报告）
+
+统一训练入口仍为ExperimentRunner/src.train，configs/lab3.yaml记录正式参数。原始RUN位于runs/lab3，每条配置/manifest/step日志均已保留。权重只在本地保存，迁移时需连同checkpoints和精确环境复制；checkpoint_index.json记录24个文件的SHA256。不要把Git仓库本身当作已经携带权重。
+
+直接重算Lab3表格、统计与六张图（只写Lab3派生结果，不读取cal、不改Lab2）：
+
+```powershell
+$env:MPLCONFIGDIR = "$PWD/tmp/matplotlib-lab3"
+.conda-env/python.exe -X utf8 -m reports.tools.lab3_results
+.conda-env/python.exe -X utf8 -m reports.tools.lab3_audit
+```
+
+训练用100个等长batch构成一个完整dataepoch，按(seed,role,epoch,batch/example)确定性生成；test长度不进入train生成键。整数长度64..128均匀采样，Copy奇数减一。Cal物化后不读取，保留到Lab8。默认严格确定性、float32、explicitattention、无mask/padding。Token损失展平后计算以兼容确定性CUDA。
+
+E1的2000/4000/8000预算扩展仅在固定LR且其余配置完全相同时允许，恢复完整optimizer/scheduler/scaler/RNG，始终新建RUN_ID；正式结果在2000步已满足阈值，因此未扩展。测试验证了边界续训和预算扩展轨迹。历史运行需使用其manifest对应源码；不要在后续源码上强行跳过sourcehash检查。
+
+E3只改变PE；事前hypothesis.md在4d6e559提交，证据见preregistration_evidence.json。seed1和L*使用探索E1，seed2/3在该提交后运行。换seed复现时也改变生成序列；三个配对arm在各自seed中共享完全相同数据。历史hypothesis不回写。
+
+E2和CF5各条件是独立进程，10warmup+30repeat，CUDA同步及resetpeak。E2两实现同float16；CF5两宽度同float32。Flash不可用，实际强制efficientSDPA。五个同进程pilot原始记录保留但不进入主斜率分析。所有量化FAIL与被接受的替代分解分别保存；不能由分析门PASS抹去原始区间FAIL。

@@ -113,6 +113,9 @@ def test_resume_exact_and_unique_run_ids(tmp_path):
     c['train']['max_steps']=8
     extended=ExperimentRunner(c).run(resume=full/'checkpoints/last.pt')
     assert json.loads((extended/'summary.json').read_text())['global_step']==8
+    direct=ExperimentRunner(c).run()
+    a=torch.load(extended/'checkpoints/last.pt',weights_only=False);b=torch.load(direct/'checkpoints/last.pt',weights_only=False)
+    assert all(torch.equal(a['model'][k],b['model'][k]) for k in a['model'])
 
 def test_profile_schema_and_oom_recovery(tmp_path,monkeypatch):
     from src.profiling.sequence_profiler import measure,safe_measure
@@ -144,3 +147,14 @@ def test_backbone_initialization_common_across_position_modes(tmp_path):
         torch.manual_seed(1);c['model']['position']=pe
         states.append({k:v for k,v in SequenceTransformer(c['model']).state_dict().items() if not k.startswith('position.')})
     assert all(all(torch.equal(states[0][k],s[k]) for k in states[0]) for s in states)
+
+def test_supported_attention_backends_numerical_agreement(tmp_path):
+    c=config(tmp_path);torch.manual_seed(9);explicit=SequenceTransformer(c['model']).eval()
+    c['model']['backend']='sdpa_math';math_model=SequenceTransformer(c['model']).eval();math_model.load_state_dict(explicit.state_dict())
+    x=torch.randint(0,64,(2,16))
+    assert (explicit(x)-math_model(x)).abs().max()<1e-5
+    if torch.cuda.is_available():
+        c['model']['backend']='efficient';efficient=SequenceTransformer(c['model']).cuda().half().eval();efficient.load_state_dict(explicit.state_dict())
+        explicit=explicit.cuda().half()
+        a=explicit(x.cuda());b=efficient(x.cuda())
+        assert torch.allclose(a,b,atol=.005,rtol=.005)

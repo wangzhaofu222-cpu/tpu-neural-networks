@@ -170,6 +170,12 @@
       "256": 0.5,
       "512": 1.0,
       "1024": 2.0
+    },
+    "measured_interpretation": {
+      "time": "At largestL, descriptive forward fit fractions quadratic/linear/constant are [0.0, 0.26759832766252967, 0.7324016723374702]. Small fixed-width GPU calls are dominated by dispatch/synchronization and fixed overhead in this timing range. Nonmonotone raw times prevent a clean asymptotic quadratic-time validation; raw samples remain published.",
+      "memory": "At largestL, descriptive memory fit fractions quadratic/linear/constant are [0.6671856103704545, 0.059012091849384773, 0.2738022977801607]. Explicit storage has a large L² component; efficient storage is predominantly fixed+linear. Total peak slopes are suppressed by the constant allocator/library/model/optimizer baseline.",
+      "formula_3_10": "Attention products MAC=2B L²d perblock; QKV/output plusFFN MAC=8B Ld² forFFN2d. Their ratioL/(4d) ranges .125..2 on thisgrid. Arithmetic counts do not imply proportional walltime.",
+      "fit_limit": "Three-term nonnegative regression is descriptive; five lengths cannot establish unique causal contributions or measure hardware utilization from coefficients."
     }
   },
   "efficient": {
@@ -343,6 +349,12 @@
       "256": 0.5,
       "512": 1.0,
       "1024": 2.0
+    },
+    "measured_interpretation": {
+      "time": "At largestL, descriptive forward fit fractions quadratic/linear/constant are [0.3864090831835607, 0.0, 0.6135909168164394]. Small fixed-width GPU calls are dominated by dispatch/synchronization and fixed overhead in this timing range. Nonmonotone raw times prevent a clean asymptotic quadratic-time validation; raw samples remain published.",
+      "memory": "At largestL, descriptive memory fit fractions quadratic/linear/constant are [0.014277927667520358, 0.31026365578435644, 0.6754584165481232]. Explicit storage has a large L² component; efficient storage is predominantly fixed+linear. Total peak slopes are suppressed by the constant allocator/library/model/optimizer baseline.",
+      "formula_3_10": "Attention products MAC=2B L²d perblock; QKV/output plusFFN MAC=8B Ld² forFFN2d. Their ratioL/(4d) ranges .125..2 on thisgrid. Arithmetic counts do not imply proportional walltime.",
+      "fit_limit": "Three-term nonnegative regression is descriptive; five lengths cannot establish unique causal contributions or measure hardware utilization from coefficients."
     }
   }
 }

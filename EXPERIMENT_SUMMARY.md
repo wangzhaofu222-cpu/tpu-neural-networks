@@ -28,7 +28,7 @@ Phase A/B已完成；Lab0阶段验收：**PASS**。整个Lab0–Lab9课程项目
 | 0 | PASS | PDF经渲染检查；LaTeX编译器启动1060，tex编译未验证 |
 | 1 | 完成：实现、正式E1–E3、5CF、已编译俄语报告 | 缩放残差L96信号上界FAIL，已实测诊断；α=1数值失败保留 |
 | 2 | 正式实验完成；新报告按用户要求暂缓 | 逐项状态见 experiments/lab2/results.json |
-| 3 | NOT RUN | 本轮在Lab2结束后停止 |
+| 3 | 全部必做实验完成；报告按用户要求暂缓 | E2原始显存斜率区间FAIL；已完成PDF允许的替代成本分解 |
 | 4 | NOT RUN；CF2完整验收BLOCKED | 缺课程协议§4.6颜色控制集 |
 | 5 | NOT RUN；正式masks核验BLOCKED | 缺课程Planetoid masks |
 | 6–7 | NOT RUN；需求/profile已登记 | 长链、训练、采样与CF须各自先做真实预算 |
@@ -57,3 +57,13 @@ Phase A/B已完成；Lab0阶段验收：**PASS**。整个Lab0–Lab9课程项目
 - 自动测试 70 项通过；E3 平均差 -0.249467，样本标准差 0.017253，差异判定：成立。
 - 完整 PASS/FAIL/边界：experiments/lab2/results.json；原始 ledger、独立评估 RUN_ID、图表、反事实和 checkpoint 索引同目录。
 - 已保留全量模型，解除 Lab8 对 Lab2 checkpoint 的依赖；Lab8/9 尚未启动，其他数据缺口仍保留。未生成新报告，未启动 Lab3。
+
+## Lab3 阶段（本轮终点，报告暂缓）
+
+- 开始前独立核查Lab2：70测试通过、38checkpoint可加载、主要表格/统计逐字节重算一致；1538个历史文件保持不变。结果存于experiments/lab2_verification，原Lab2记录未重写。
+- 个人任务Copy，L0=128，N=2，d128/h4/FFN256/B32，AdamW固定LR=.003，四种PE均2000steps；LR仅按sinusoidal的valL0选择。
+- E1两项验证阈值PASS：none=.057861328125，bestPE−none=.40338134765625。L128/256/512/1024及额外P1评估完整；外推明显退化，未据定义域推断准确率保证。
+- E2显式/forced-efficient两后端各五长度，独立进程真实测量。显存全网格α=.435671/.127139（以results.json精确值为准），最长两点α=1.086481/.259660；原始区间FAIL保留。PDF§9.2允许的二次+线性+常数分解已完成，不能声称实测进入纯渐近区间。Flash不可用证据单列，未冒充支持。
+- E3假设事前提交4d6e559；L*=256，RoPE−absoluteP2三差值[-.0882568359375,-.07147216796875,-.056610107421875]，均值−.072113037109375，样本SD=.01583309481361658。三者同负且absmean>=2SD，差异成立，负向假设获得支持。seed1来自探索E1，其选择局限已披露。
+- 正式训练10次（选LR3+E1新增3+E3新增4），累计293.600067秒；含成功smoke/budget为12次、295.345164秒，失败smoke另保留。24个checkpoint（正式20），88项测试通过；6张科学图经视觉检查，五个反事实问题及按block/head注意力统计均已保存。
+- 当前证据：experiments/lab3/README.md、results.json、audit.json、checkpoint_index.json。没有生成或修改LaTeX/PDF报告，没有启动Lab4。

@@ -1,0 +1,10 @@
+{
+  "E1_source_commit": "2329461",
+  "E3_preregistration_commit": "4d6e559",
+  "changed_source_files": [
+    "src/diagnostics/attention_stats.py",
+    "src/engine/sequence_evaluation.py",
+    "src/models/sequence/transformer.py"
+  ],
+  "interpretation": "Changes serialize missing diagnostic values, record profiler failures and add explicitly selected alternative backends. The explicit branch used by every training run and the entire shared training/data/loss/checkpoint/optimizer code remain identical. Full git diff saved. No retraining or source-hash rewriting."
+}
