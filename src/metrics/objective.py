@@ -2,6 +2,9 @@
 import torch.nn.functional as F
 
 def objective(logits,y,reduction='mean'):
+    if logits.ndim==3 and y.ndim==2:
+        # Flatten token classification to deterministic CUDA NLL, avoiding NLL2d.
+        return F.cross_entropy(logits.transpose(1,2).reshape(-1,logits.shape[1]),y.reshape(-1),reduction=reduction)
     return F.cross_entropy(logits,y,reduction=reduction)
 
 def correct_count(logits,y):

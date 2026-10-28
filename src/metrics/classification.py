@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from src.metrics.objective import correct_count
+from src.metrics.objective import correct_count,objective
 
 
 @torch.no_grad()
@@ -12,7 +12,7 @@ def evaluate_loader(model,loader,device):
         for x,y in loader:
             x,y = x.to(device),y.to(device)
             logits = model(x)
-            loss_sum += F.cross_entropy(logits,y,reduction='sum').item()
+            loss_sum += objective(logits,y,reduction='sum').item()
             hits,targets=correct_count(logits,y)
             correct += hits
             count += targets

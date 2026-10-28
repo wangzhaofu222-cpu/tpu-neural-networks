@@ -27,7 +27,12 @@ def train(label,cfg,resume=None):
     old=lookup(label)
     if old:return Path(old['path'])
     validate(cfg);before=hardware();start=time.perf_counter()
-    p=ExperimentRunner(cfg).run(resume=resume)
+    try:p=ExperimentRunner(cfg).run(resume=resume)
+    except Exception as exc:
+        if hasattr(exc,'run_path'):
+            p=Path(exc.run_path);record({'label':label,'kind':'training','path':p.as_posix(),'RUN_ID':p.name,'status':'FAILED',
+                'purpose':cfg['experiment']['purpose'],'exception':str(exc),'seconds':time.perf_counter()-start})
+        raise
     s=read(p/'summary.json')
     record({'label':label,'kind':'training','path':p.as_posix(),'RUN_ID':p.name,'status':s['status'],
             'purpose':cfg['experiment']['purpose'],'steps':s['global_step'],'seconds':time.perf_counter()-start,

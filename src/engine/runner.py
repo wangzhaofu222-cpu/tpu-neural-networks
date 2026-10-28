@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 import torch
 import torch.nn.functional as F
-from src.metrics.objective import correct_count
+from src.metrics.objective import correct_count,objective
 from src.data.vision import datasets,loaders
 from src.models.small_cnn import build_model
 from src.engine.checkpoint import load_checkpoint,save_checkpoint
@@ -154,7 +154,7 @@ class ExperimentRunner:
                         diagnostics.begin(batch_index, len(dl['train']))
                     with torch.autocast(device_type=device.type,enabled=cfg['train']['amp']):
                         logits = model(x)
-                        loss = F.cross_entropy(logits,y)
+                        loss = objective(logits,y)
                     if not torch.isfinite(loss):
                         raise FloatingPointError('Non-finite training loss')
                     # Normalize the final, possibly shorter accumulation group correctly.
