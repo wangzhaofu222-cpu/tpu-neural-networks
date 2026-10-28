@@ -225,7 +225,10 @@ class ExperimentRunner:
                           'validation_loss':val['loss'],'train_metric':correct/count,'validation_metric':val['accuracy'],
                           'learning_rate':lr_used,'epoch_time':time.perf_counter()-epoch_start,
                           'peak_gpu_memory_bytes':torch.cuda.max_memory_allocated(device) if device.type=='cuda' else None}
-                if ssl_mode:record.update({k:v/count for k,v in similarity_sums.items()})
+                if ssl_mode:
+                    record.update({k:v/count for k,v in similarity_sums.items()})
+                    record['train_metric']=None
+                    record['train_metric_name']='not_applicable_SSL_uses_loss_and_similarities'
                 if representation_monitor and (completed_epoch%cfg['representation']['interval']==0 or completed_epoch==total_epochs):
                     record['representation']=representation_monitor.observe(completed_epoch)['representation']
                     record['epoch_time']=time.perf_counter()-epoch_start
@@ -249,7 +252,7 @@ class ExperimentRunner:
                     save_checkpoint(path/'checkpoints/best.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
                 if completed_epoch in cfg['logging'].get('keep_epochs',[]):
                     save_checkpoint(path/f'checkpoints/epoch_{completed_epoch:03}.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
-                if cfg['experiment']['lab']==4 and cfg['runtime'].get('gpu_stop_temperature') and device.type=='cuda':
+                if cfg['experiment']['lab']==4 and cfg['model']['name']=='simclr' and cfg['runtime'].get('gpu_stop_temperature') and device.type=='cuda':
                     import subprocess
                     measured=subprocess.run(['nvidia-smi','--query-gpu=temperature.gpu,memory.used,utilization.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True)
                     self._append(path/'hardware.jsonl',{'epoch':completed_epoch,'nvidia_smi':measured.stdout.strip(),'returncode':measured.returncode})
@@ -271,6 +274,12 @@ class ExperimentRunner:
                     break
                 if stop_after_epoch and completed_epoch >= stop_after_epoch and completed_epoch<total_epochs:
                     status = 'INTERRUPTED_AT_EPOCH_BOUNDARY'
+                    break
+                pause_file=cfg['runtime'].get('pause_file')
+                if pause_file and Path(pause_file).exists() and completed_epoch<total_epochs:
+                    # User-requested pause is checked only after a complete recoverable checkpoint.
+                    save_checkpoint(path/'checkpoints/last.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
+                    status='INTERRUPTED_AT_EPOCH_BOUNDARY'
                     break
             else:
                 status = 'COMPLETED'
@@ -299,7 +308,7 @@ class ExperimentRunner:
             if (path/'summary.json').exists():
                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
                 summary['status']=status
-                if step_limit:summary['training_seconds']=training_seconds
+                if step_limit or cfg['experiment']['lab']==4:summary['training_seconds']=training_seconds
                 write_json(path/'summary.json',summary)
         return path
 

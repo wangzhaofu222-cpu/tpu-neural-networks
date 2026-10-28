@@ -53,6 +53,7 @@ runtime:
   max_seconds: 0
   dependency_lock: requirements.lock.txt
   gpu_stop_temperature: 87
+  pause_file: experiments/lab4/PAUSE
 profiling:
   warmup: 10
   repeats: 30

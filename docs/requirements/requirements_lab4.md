@@ -6,22 +6,22 @@ PrimaryGPUprotocol:N256,Efull100,Eshort25. NoCPUsmallprotocolsubstitution. CF1 u
 
 | ID | Originalsource | Mandatory/optional | Requirement | Implementation | Verification | RUN_ID | Status |
 |---|---|---|---|---|---|---|---|
-|A01|§1,§8.2|mandatory|Reuse Lab0 training/provenance/RNG/checkpoints; no new training framework|src/engine/runner.py;shared factories|old88 regression +SSL resume tests|—|PENDING|
-|A02|§7|mandatory|SHA256 student_id:lab4 slices0:2/2:4/4:6 ->tau.1,flip,[.02,.05,.25,1]|src/profile_gen.py;configs/lab4.yaml|profile.json;rawID only .private/lab4_student_id.json|—|PENDING|
-|D01|§6|mandatory|Immutable Lab0 CIFAR43000/5000/2000/10000 roles|src/data/ssl_data.py|split_fingerprint,actualindices,role access tests|—|PENDING|
-|D02|§6|mandatory|SSL reads onlytrainimages, no targets; no val/test selection or earlystop; cal blocked|src/data/ssl_data.py|target-access spy and source audit;monitor trainonly|—|PENDING|
-|V01|(4.1)-(4.2),§8.1|mandatory|Independent two views; fiveops configurable; stablehash;Tminus generated;noaugment|src/ssl/views.py;augmentations.py|view0/2workers tests and8imagegrid|—|PENDING|
-|V02|§8.1 example|mandatory|RRCp1 scale.08..1;jitterp.8 strength.4/.4/.4/.1;flipp.5 (profile)|configs/lab4.yaml|savedresolvedconfig andaug_hash|—|PENDING|
-|M01|(4.3)|mandatory|CIFARResNet18 3x3,noinitialmaxpool,h512;projector512-ReLU-128 nobias|src/ssl/simclr.py|state_shapes andforward/backward|—|PENDING|
-|L01|(4.4)-(4.5),§8.2|mandatory|Concatenate2N,normalize,positive(i+N)%2N,diag-inf,logsumexp/tau,mean|src/ssl/losses.py|knownsame/orthogonal/tau.01 cases1e-5|—|PENDING|
-|L02|§8.2|mandatory|Return pos/negsim,N,2N-2,ln(2N-1);noexistingSimCLRloss|src/ssl/losses.py;runner|step logs andmanifest|—|PENDING|
-|L03|(4.6),§11.3|mandatory|Anchor gradient onalready-normalizedz equalsformula within1e-5|tests/test_lab4_ssl.py|autograd isolatedanchor term|—|PENDING|
-|F01|§8.3|mandatory|Extracth/zhat train,val,test eval/noaugment/no_grad/trainnormalization;cacheparentRUN|src/evaluation/features.py|fullstate hash unchanged;repeat error<=1e-6|—|PENDING|
+|A01|§1,§8.2|mandatory|Reuse Lab0 training/provenance/RNG/checkpoints; no new training framework|src/engine/runner.py;shared factories|old88 regression +SSL resume tests|—|PASS|
+|A02|§7|mandatory|SHA256 student_id:lab4 slices0:2/2:4/4:6 ->tau.1,flip,[.02,.05,.25,1]|src/profile_gen.py;configs/lab4.yaml|profile.json;rawID only .private/lab4_student_id.json|—|PASS|
+|D01|§6|mandatory|Immutable Lab0 CIFAR43000/5000/2000/10000 roles|src/data/ssl_data.py|split_fingerprint,actualindices,role access tests|—|PASS|
+|D02|§6|mandatory|SSL reads onlytrainimages, no targets; no val/test selection or earlystop; cal blocked|src/data/ssl_data.py|target-access spy and source audit;monitor trainonly|—|PASS|
+|V01|(4.1)-(4.2),§8.1|mandatory|Independent two views; fiveops configurable; stablehash;Tminus generated;noaugment|src/ssl/views.py;augmentations.py|view0/2workers tests and8imagegrid|—|PASS|
+|V02|§8.1 example|mandatory|RRCp1 scale.08..1;jitterp.8 strength.4/.4/.4/.1;flipp.5 (profile)|configs/lab4.yaml|savedresolvedconfig andaug_hash|—|PASS|
+|M01|(4.3)|mandatory|CIFARResNet18 3x3,noinitialmaxpool,h512;projector512-ReLU-128 nobias|src/ssl/simclr.py|state_shapes andforward/backward|—|PASS|
+|L01|(4.4)-(4.5),§8.2|mandatory|Concatenate2N,normalize,positive(i+N)%2N,diag-inf,logsumexp/tau,mean|src/ssl/losses.py|knownsame/orthogonal/tau.01 cases1e-5|—|PASS|
+|L02|§8.2|mandatory|Return pos/negsim,N,2N-2,ln(2N-1);noexistingSimCLRloss|src/ssl/losses.py;runner|step logs andmanifest|—|PASS|
+|L03|(4.6),§11.3|mandatory|Anchor gradient onalready-normalizedz equalsformula within1e-5|tests/test_lab4_ssl.py|autograd isolatedanchor term|—|PASS|
+|F01|§8.3|mandatory|Extracth/zhat train,val,test eval/noaugment/no_grad/trainnormalization;cacheparentRUN|src/evaluation/features.py|fullstate hash unchanged;repeat error<=1e-6|—|PASS|
 |P01|(4.10),§8.3|mandatory|Frozenfeaturelinearprobe;regularizationvalonly;testfinal;commonmethodallencoders|src/evaluation/linear_probe.py;sharedrunner|full encoderstatecheck,configmatrix|—|PENDING|
-|K01|(4.11)|mandatory|WeightedcosinekNN trainonly,k200,tau.07|src/evaluation/knn.py|roleguardandknownvectors|—|PENDING|
+|K01|(4.11)|mandatory|WeightedcosinekNN trainonly,k200,tau.07|src/evaluation/knn.py|roleguardandknownvectors|—|PASS|
 |R01|(4.7)-(4.8)|mandatory|5000fixedtrainids;norm,trace,eigenspectrum,reff,reff/d|src/diagnostics/representation.py;ssl_monitor.py|savedrawfeatures/spectrum anddiagnosticids|—|PENDING|
-|R02|§5.5|mandatory|trace<=1e-6*d*mean_squared_norm =>reffnull,collapse_scale;dimensionalratio<.2|representation.py|identical/rank1/Gaussian20d tests|—|PENDING|
-|R03|(4.9)|mandatory|zhatmeanvecnorm,traceidentity;pospairandrandompairsims fixedseed|ssl_monitor.py|identityerror<=1e-5;perexample rawsimilarities|—|PENDING|
+|R02|§5.5|mandatory|trace<=1e-6*d*mean_squared_norm =>reffnull,collapse_scale;dimensionalratio<.2|representation.py|identical/rank1/Gaussian20d tests|—|PASS|
+|R03|(4.9)|mandatory|zhatmeanvecnorm,traceidentity;pospairandrandompairsims fixedseed|ssl_monitor.py|identityerror<=1e-5;perexample rawsimilarities|—|PASS|
 |H01|§9|mandatory|E1/E2 exploratory hypotheses before experiments;theorybasis|experiments/lab4/exploratory_hypotheses.md|realGitcommit before realruns|—|PENDING|
 |E101|§9 common|mandatory|GPU N256,Efull100,Eshort25,tauprofile;commonSSLoptimizer/schedule|configs/lab4.yaml|formalconfigguards,resolvedconfigs|—|PENDING|
 |E102|§9.1|mandatory|B0randomno training;B1fulltrainlabels25epochcropflip;SSLfullT100|sharedrunner run(initialize_only=True) andrun()|distinctRUN_IDs andexactepochlogs|—|PENDING|
@@ -44,13 +44,13 @@ PrimaryGPUprotocol:N256,Efull100,Eshort25. NoCPUsmallprotocolsubstitution. CF1 u
 |C03|§10Q3|mandatory|Actualpair similarreff differentprobe ORreverse;scaleconvention|E1/E2summaryanalysis|closestactualpairs/numbers/RUN_IDs|—|PENDING|
 |C04|§10Q4|mandatory|FinalSSLprobe h vszhat actual;headnotautomaticallyharmful|sharedprobe feature_kind|newzhatprobeRUN andpairedhresult|—|PENDING|
 |C05|§10Q5|mandatory|CompareG(rmin)/G1;B1fairlabelbudget extraactualrun|CF5 supervisedtrainrmin25epochs,seed1,otherwiseB1same|labelsubsetmanifest,conditiondiff,actualprobe|—|PENDING|
-|T01|§11.1|mandatory|Views shape/samewhenoff/differentwhenon/workers>0|tests/test_lab4_ssl.py|actualpytest|—|PENDING|
-|T02|§11.2|mandatory|NT-Xentknownloss andtau.01finite tol1e-5|tests/test_lab4_ssl.py|actualpytest|—|PENDING|
-|T03|§11.3|mandatory|Anchorgradient eq4.6 tol1e-5|tests/test_lab4_ssl.py|actualpytest|—|PENDING|
-|T04|§11.4|mandatory|Probe fullencoderstate/BNbuffers unchanged;kNN trainonly|tests/test_lab4_ssl.py|actualpytest|—|PENDING|
-|T05|§11.5|mandatory|Rank1=1;Gaussiann20d rank>=.9d;identicalnull/collapse;eq4.9 tol1e-5|tests/test_lab4_ssl.py|actualpytest|—|PENDING|
-|T06|§11.6|mandatory|Nestedstratifiedsubsets/calaccesserror|tests/test_lab4_ssl.py|actualpytest|—|PENDING|
-|T07|Userengineering|mandatory|Resume/RNG/featuresrepeat/workers/pairing/RUNunique/stats/leakage/old88regression|tests/test_lab4_ssl.py +oldsuite|actualJUnit|—|PENDING|
+|T01|§11.1|mandatory|Views shape/samewhenoff/differentwhenon/workers>0|tests/test_lab4_ssl.py|actualpytest|—|PASS|
+|T02|§11.2|mandatory|NT-Xentknownloss andtau.01finite tol1e-5|tests/test_lab4_ssl.py|actualpytest|—|PASS|
+|T03|§11.3|mandatory|Anchorgradient eq4.6 tol1e-5|tests/test_lab4_ssl.py|actualpytest|—|PASS|
+|T04|§11.4|mandatory|Probe fullencoderstate/BNbuffers unchanged;kNN trainonly|tests/test_lab4_ssl.py|actualpytest|—|PASS|
+|T05|§11.5|mandatory|Rank1=1;Gaussiann20d rank>=.9d;identicalnull/collapse;eq4.9 tol1e-5|tests/test_lab4_ssl.py|actualpytest|—|PASS|
+|T06|§11.6|mandatory|Nestedstratifiedsubsets/calaccesserror|tests/test_lab4_ssl.py|actualpytest|—|PASS|
+|T07|Userengineering|mandatory|Resume/RNG/featuresrepeat/workers/pairing/RUNunique/stats/leakage/old88regression|tests/test_lab4_ssl.py +oldsuite|actualJUnit|—|PASS|
 |O01|§12-13/user|mandatory|Allconfigs,rawRUNlogs,localckpt/features/hashindices,summaries,plots,tests,finalGit|runs/lab4;experiments/lab4|finalaudit;nohistoricaloverwrite|—|PENDING|
 |O02|Useroverride§12|mandatory|NoLaTex/PDFformalreport;stopbeforeLab5|scope|NOT_APPLICABLEreport|—|NOT_APPLICABLE|
 |X01|§14.1|optional|Temperaturegrid5values andSGD-taucontrol|notrequested|notrun|—|NOT_APPLICABLE|
@@ -58,3 +58,5 @@ PrimaryGPUprotocol:N256,Efull100,Eshort25. NoCPUsmallprotocolsubstitution. CF1 u
 |X03|§14.3|optional|Facetransfer/RAVDESSactordata|notrequested;dedicatedpackmissing|notrun|—|NOT_APPLICABLE|
 
 ImplementationchoicesnotfixedbyPDF: SGDmomentum.9,SSLlr.3,wd1e-4,10epochwarmup+cosine,horizon100/25;samepolicyallSSL. Directsimultaneous2Nforward preservesBatchNorm andglobalNT-Xent. AMPwillbeusedonlyafterN256memory/numericaltests; losscomputedfloat32. Linearprobe fullbatchSGDmom.9,lr.1,200epochs,train-onlyfeaturestandardization,L2grid0/.001/.01 chosenbyval;testonlyfinal. Initial/mid/finalencodercheckpoints are0/25/50/75/100. E2critical/harmfulclassificationis exploratory singleseed.
+
+Preflight:106tests passed; N256 directglobal512-view training fitsAMP at1.34GiB peak. Onefullepoch including5000-image diagnostics43.54s; conservative100epochs4354s. Persistentworker base-seed RNG separated from checkpointed sampler RNG, exact2workerresume test passed. Budget/feature/probe smoke records are not formalexperiment results.

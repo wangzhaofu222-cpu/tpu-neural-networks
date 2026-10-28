@@ -1,0 +1,25 @@
+{
+  "stage": "PREFLIGHT_COMPLETE",
+  "tests": 106,
+  "Q2": "BLOCKED missingteacherProtocol4.6",
+  "formal_epochs": {
+    "E1_SSL": 100,
+    "B1": 25,
+    "E2_each_of_six": 25,
+    "CF1_N64": 25,
+    "CF5_lowlabel": 25
+  },
+  "effective_N": 256,
+  "AMP": true,
+  "remaining": [
+    "E1",
+    "E2",
+    "E3preregistrationGit",
+    "E3matrix",
+    "counterfactuals",
+    "analysisplots",
+    "finaltests_audit_commit"
+  ],
+  "pause_file": "experiments/lab4/PAUSE",
+  "stop_after_lab": 4
+}

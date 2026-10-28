@@ -1,0 +1,25 @@
+[
+  {
+    "label": "budget_features",
+    "path": "runs/lab4/ca3450356c45d2c5cc6e-66208ee571a04c61aad807f10090e93a",
+    "RUN_ID": "ca3450356c45d2c5cc6e-66208ee571a04c61aad807f10090e93a",
+    "status": "COMPLETED_FEATURE_EXTRACTION",
+    "encoder_RUN_ID": "9494511ca948c13ef8a0-991d6b88d4bf40c7bb72366df15b3de4",
+    "checkpoint": "last.pt",
+    "checkpoint_sha256": "eee276930246259be0642ba0be3c1d16fca9cca3cfdb2feafa3acdaf489fdfcc",
+    "cache_path": "runs/lab4/ca3450356c45d2c5cc6e-66208ee571a04c61aad807f10090e93a/features.pt",
+    "feature_cache_sha256": "22c36dc2190765bd3effe87c9378a095a868ccdaca8cfed5550c516953f1038e",
+    "feature_fingerprint": "2eb7f107164aa3c81811ef5993406f0c481615d72c7ca1d6af2492d5305eb4de",
+    "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+    "encoder_state_sha256": "2894fd6cb405f3600fb371715dc10977d010cb0e92381f616c2364e684b30004",
+    "repeated_extraction_max_error_h": 0.0,
+    "repeated_extraction_max_error_z": 0.0,
+    "role_sizes": {
+      "train": 43000,
+      "val": 5000,
+      "test": 10000
+    },
+    "cal_access": false,
+    "optimizer_steps": 0
+  }
+]

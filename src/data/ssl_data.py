@@ -55,11 +55,15 @@ def datasets(cfg):
     if mode=='contrastive':
         n=cfg['train']['batch_size'];info.update(N=n,tau=cfg['contrastive']['tau'],negative_count=2*n-2,
             random_baseline_loss=float(np.log(2*n-1)),drop_last=True,discarded_per_epoch=len(ids)%n)
+    info['worker_rng_protocol']='Checkpointed RandomSampler generator is independent of worker base-seed generator; augmentations are stateless(seed,epoch,image,view)'
     return ds,info
 
 def loaders(cfg,ds,generator):
     ssl=cfg['model']['mode']=='contrastive';workers=cfg['data']['num_workers']
     kw={'num_workers':workers,'worker_init_fn':seed_worker,'persistent_workers':workers>0,'pin_memory':cfg['runtime']['device']=='cuda'}
-    result={'train':torch.utils.data.DataLoader(ds['train'],batch_size=cfg['train']['batch_size'],shuffle=True,generator=generator,drop_last=ssl,**kw)}
+    sampler=torch.utils.data.RandomSampler(ds['train'],generator=generator)
+    worker_generator=torch.Generator().manual_seed(cfg['experiment']['seed']+4004)
+    result={'train':torch.utils.data.DataLoader(ds['train'],batch_size=cfg['train']['batch_size'],sampler=sampler,
+            generator=worker_generator,drop_last=ssl,**kw)}
     if 'val' in ds:result['val']=torch.utils.data.DataLoader(ds['val'],batch_size=256,shuffle=False,**{**kw,'persistent_workers':False})
     return result

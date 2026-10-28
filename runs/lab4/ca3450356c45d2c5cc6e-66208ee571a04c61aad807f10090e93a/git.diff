@@ -1,0 +1,25 @@
+diff --git a/src/engine/runner.py b/src/engine/runner.py
+index e108111..9db1feb 100644
+--- a/src/engine/runner.py
++++ b/src/engine/runner.py
+@@ -225,7 +225,10 @@ class ExperimentRunner:
+                           'validation_loss':val['loss'],'train_metric':correct/count,'validation_metric':val['accuracy'],
+                           'learning_rate':lr_used,'epoch_time':time.perf_counter()-epoch_start,
+                           'peak_gpu_memory_bytes':torch.cuda.max_memory_allocated(device) if device.type=='cuda' else None}
+-                if ssl_mode:record.update({k:v/count for k,v in similarity_sums.items()})
++                if ssl_mode:
++                    record.update({k:v/count for k,v in similarity_sums.items()})
++                    record['train_metric']=None
++                    record['train_metric_name']='not_applicable_SSL_uses_loss_and_similarities'
+                 if representation_monitor and (completed_epoch%cfg['representation']['interval']==0 or completed_epoch==total_epochs):
+                     record['representation']=representation_monitor.observe(completed_epoch)['representation']
+                     record['epoch_time']=time.perf_counter()-epoch_start
+@@ -299,7 +302,7 @@ class ExperimentRunner:
+             if (path/'summary.json').exists():
+                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
+                 summary['status']=status
+-                if step_limit:summary['training_seconds']=training_seconds
++                if step_limit or cfg['experiment']['lab']==4:summary['training_seconds']=training_seconds
+                 write_json(path/'summary.json',summary)
+         return path
+source_hash: 162512ceadb91f4026bb27230c0e5c3bd76e4ca105d5deb7afd059afc0d23533

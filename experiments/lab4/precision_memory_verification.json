@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "float32_RUN_ID": "ccd2f5d411c4b08f56a1-2c0f95926ad24b4a87ed1bf2892c63d7",
+  "AMP_RUN_ID": "e276884f1b4622eea724-548887f13f1d45249598a91e266c2ee4",
+  "same_first_batch_checksum": true,
+  "float32_first_loss": 6.1122727394104,
+  "AMP_first_loss": 6.112240791320801,
+  "absolute_loss_difference": 3.1948089599609375e-05,
+  "float32_peak_bytes": 4769939968,
+  "AMP_peak_bytes": 1383995392,
+  "effective_N": 256,
+  "simultaneous_views": 512,
+  "negatives_per_view": 510,
+  "denominator_candidates": 511,
+  "primary_precision": "AMPencoderwithfloat32globalNT-Xent",
+  "no_microbatch_independent_losses": true,
+  "checkpoint_resume": "106tests total; CPU,CUDAAMP,andpersistent2worker exact model+RNG trajectories verified",
+  "budget_protocol_note": "Budget GPU samples used the original worker/shuffle generator coupling. Before formal runs, RandomSampler andworkerbase-seed generators were separated; dedicated continuous-versus-restarted tests verify exact order. Memory/NT-Xent N andaugmentation distribution unchanged. Original budget records are retained."
+}

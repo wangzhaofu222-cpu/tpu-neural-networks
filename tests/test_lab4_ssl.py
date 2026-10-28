@@ -129,3 +129,22 @@ def test_formal_budget_guards(tmp_path):
     c=load_config('configs/lab4.yaml');c['experiment']['purpose']='formal';validate(c)
     c['train']['batch_size']=32
     with pytest.raises(ValueError):validate(c)
+
+def test_cuda_amp_ssl_resume_exact(tmp_path):
+    if not torch.cuda.is_available():return
+    c=config(tmp_path);c['runtime']['device']='cuda';c['train']['amp']=True
+    full=ExperimentRunner(c).run();partial=ExperimentRunner(c).run(stop_after_epoch=1)
+    resumed=ExperimentRunner(c).run(resume=partial/'checkpoints/last.pt')
+    a=torch.load(full/'checkpoints/last.pt',map_location='cpu',weights_only=False)
+    b=torch.load(resumed/'checkpoints/last.pt',map_location='cpu',weights_only=False)
+    assert a['global_step']==b['global_step'] and a['scaler']==b['scaler']
+    assert all(torch.equal(a['model'][k],b['model'][k]) for k in a['model'])
+    assert all(torch.equal(x,y) for x,y in zip(a['cuda_rng'],b['cuda_rng']))
+
+def test_persistent_multiworker_resume_keeps_shuffle_and_views(tmp_path):
+    c=config(tmp_path);c['data']['num_workers']=2
+    full=ExperimentRunner(c).run();partial=ExperimentRunner(c).run(stop_after_epoch=1)
+    resumed=ExperimentRunner(c).run(resume=partial/'checkpoints/last.pt')
+    a=torch.load(full/'checkpoints/last.pt',weights_only=False);b=torch.load(resumed/'checkpoints/last.pt',weights_only=False)
+    assert all(torch.equal(a['model'][k],b['model'][k]) for k in a['model'])
+    assert torch.equal(a['loader_rng'],b['loader_rng'])

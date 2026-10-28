@@ -34,6 +34,8 @@ def train(label,cfg,initialize=False,allow_failure=False):
     config.write_text(yaml.safe_dump(cfg,sort_keys=False),encoding='utf-8');validate(cfg)
     start=time.perf_counter();before=hardware()
     cmd=['worker_train','--config',str(config),'--label',label]
+    prior=next((v for v in reversed(rows('ledger.json')) if v['label']==label and v['status'].startswith('INTERRUPTED')),None)
+    if prior:cmd+=['--resume',str(Path(prior['path'])/'checkpoints/last.pt')]
     if initialize:cmd.append('--initialize')
     result=dispatch(cmd);out=CONTROL/f'{label}.json'
     if not out.exists():raise RuntimeError(f'Training worker interrupted; inspect checkpoint/run status for{label}')
@@ -45,10 +47,10 @@ def train(label,cfg,initialize=False,allow_failure=False):
         raise RuntimeError(f'Training failed:{label}; validcheckpoint retained in{record.get("path")}')
     return Path(record['path'])
 
-def worker_train(config,label,initialize=False):
+def worker_train(config,label,initialize=False,resume=None):
     cfg=load_config(config)
     try:
-        p=ExperimentRunner(cfg).run(initialize_only=initialize)
+        p=ExperimentRunner(cfg).run(initialize_only=initialize,resume=resume)
         record={'path':p.as_posix(),'RUN_ID':p.name,**read(p/'summary.json')}
         write_json(CONTROL/f'{label}.json',record)
     except Exception as exc:
@@ -82,7 +84,8 @@ def smoke():
     p=train('budget_N256_epoch1',c);s=read(p/'summary.json');m=read(p/'manifest.json')
     write_json(ROOT/'budget.json',{'RUN_ID':p.name,'actual_N':256,'negative_count':510,'AMP':True,
         'simultaneous_views':512,'NT_Xent_denominator_candidates':511,'loss_dtype':'float32',
-        'training_peak_allocator_bytes':s['peak_gpu_memory_bytes'],'measured_training_seconds_including_epoch0diagnostics':s['training_seconds'],
+        'training_peak_allocator_bytes':s['peak_gpu_memory_bytes'],'measured_training_seconds_including_epoch0diagnostics':s.get('training_seconds',m['wall_seconds']),
+        'timing_source':'summary.training_seconds' if 'training_seconds' in s else 'original manifest.wall_seconds; epoch-based timing field added afterward without repeating this budget',
         'measured_epoch_seconds':s['epoch_time'],'estimated_Efull100_seconds':s['epoch_time']*100,
         'estimated_Eshort25_seconds':s['epoch_time']*25,'estimated325epochs_conservative_seconds':s['epoch_time']*325,
         'measured_steps':s['global_step'],'images_per_epoch':42752,'images_per_second_including_diagnostics':42752/s['epoch_time'],
@@ -145,9 +148,10 @@ def counterfactuals():
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('stage',choices=['smoke','e1','e2','e3','counterfactuals','worker_train','worker_features','worker_probe'])
     for name in ['config','label','source']:parser.add_argument('--'+name)
+    parser.add_argument('--resume')
     parser.add_argument('--checkpoint',default='last.pt');parser.add_argument('--initialize',action='store_true');parser.add_argument('--budget',action='store_true')
     parser.add_argument('--seed',type=int,default=1);parser.add_argument('--fraction',type=float,default=1.);parser.add_argument('--kind',default='h');a=parser.parse_args()
-    if a.stage=='worker_train':worker_train(a.config,a.label,a.initialize)
+    if a.stage=='worker_train':worker_train(a.config,a.label,a.initialize,a.resume)
     elif a.stage=='worker_features':
         p,r=feature_cache(a.source,a.checkpoint);append('features.json',{'label':a.label,'path':p.as_posix(),**r});print('FEATURES',a.label,p,flush=True)
     elif a.stage=='worker_probe':
