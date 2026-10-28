@@ -13,5 +13,8 @@ def attention_statistics(a,targets):
     return result
 
 def summarize(stats):
-    return {name:{'per_head':torch.nanmean(v,dim=(0,2)).cpu().tolist(),
-                  'per_head_query':torch.nanmean(v,dim=0).cpu().tolist()} for name,v in stats.items()}
+    def values(t):
+        if t.ndim:return [values(v) for v in t]
+        return t.item() if torch.isfinite(t) else None
+    return {name:{'per_head':values(torch.nanmean(v,dim=(0,2)).cpu()),
+                  'per_head_query':values(torch.nanmean(v,dim=0).cpu())} for name,v in stats.items()}

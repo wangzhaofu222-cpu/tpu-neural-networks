@@ -92,6 +92,10 @@ def test_attention_uniform_numerical_stability():
     assert torch.isfinite(r['distance']).all();assert torch.nanmean(r['target_mass'])==1/16
     a.zero_();a[:,:,:,0]=1
     assert torch.isfinite(attention_statistics(a,t)['entropy']).all()
+    from src.diagnostics.attention_stats import summarize
+    summary=summarize(r)
+    assert summary['target_mass']['per_head_query'][0][0] is None
+    json.dumps(summary,allow_nan=False)
 
 def test_paired_statistics_and_log_slopes():
     assert paired([.8,.81,.79],[.2,.21,.19])['established']
