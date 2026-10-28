@@ -1,0 +1,34 @@
+{
+  "none": {
+    "first_failure": {
+      "length": 256,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": null
+  },
+  "absolute": {
+    "first_failure": {
+      "length": 1024,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": 512
+  },
+  "sinusoidal": {
+    "first_failure": {
+      "length": 256,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": 128
+  },
+  "rope": {
+    "first_failure": {
+      "length": 256,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": 128
+  }
+}

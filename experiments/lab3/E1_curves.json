@@ -1,0 +1,202 @@
+{
+  "none": {
+    "points": [
+      {
+        "length": 128,
+        "accuracy": 0.05859375,
+        "count": 16384,
+        "RUN_ID": "39a1e67c568afe0e37ae-fbdaf429f02949d3aa954ef0a7413191",
+        "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.9999998293333624,
+        "delta_pos": -0.06707763671875
+      },
+      {
+        "length": 256,
+        "accuracy": 0.041473388671875,
+        "count": 32768,
+        "RUN_ID": "f114fe509648da7b49f7-1b8c6edd068e418bac214fba181fdd09",
+        "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.7078123792000206,
+        "delta_pos": -0.061798095703125
+      },
+      {
+        "length": 512,
+        "accuracy": 0.0307769775390625,
+        "count": 65536,
+        "RUN_ID": "e1ac564e288280b848d4-502bea42f55047859fa3a1731b1f1bda",
+        "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.5252603270222375,
+        "delta_pos": -0.0474090576171875
+      },
+      {
+        "length": 1024,
+        "accuracy": 0.0247650146484375,
+        "count": 131072,
+        "RUN_ID": "6de547c4c16e6eb48409-a3de018b67e940b582cf6a3f528614ae",
+        "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.422656177866679,
+        "delta_pos": -0.03101348876953125
+      }
+    ],
+    "first_failure": {
+      "length": 256,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": null
+  },
+  "absolute": {
+    "points": [
+      {
+        "length": 128,
+        "accuracy": 0.12567138671875,
+        "count": 16384,
+        "RUN_ID": "d736946de91b20c626c4-a6f215ba70b84066af2d941dbbe12ee7",
+        "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.9999999204273983,
+        "delta_pos": 0.0
+      },
+      {
+        "length": 256,
+        "accuracy": 0.103271484375,
+        "count": 32768,
+        "RUN_ID": "845d705bc5bb903516c8-748407084dd1465c887abe46f362f47d",
+        "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.8217580696275658,
+        "delta_pos": 0.0
+      },
+      {
+        "length": 512,
+        "accuracy": 0.07818603515625,
+        "count": 65536,
+        "RUN_ID": "f8074c189505727e0ccf-3981eb86dc464a3f9f68f8031b5af2f2",
+        "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.6221466236364727,
+        "delta_pos": 0.0
+      },
+      {
+        "length": 1024,
+        "accuracy": 0.05577850341796875,
+        "count": 131072,
+        "RUN_ID": "cb812fc715c93835c683-84b994ebe1e346af8b5ed4bd654ca86a",
+        "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.4438440637593922,
+        "delta_pos": 0.0
+      }
+    ],
+    "first_failure": {
+      "length": 1024,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": 512
+  },
+  "sinusoidal": {
+    "points": [
+      {
+        "length": 128,
+        "accuracy": 0.46917724609375,
+        "count": 16384,
+        "RUN_ID": "ba603459beba7c94148e-5e3c9760ad2e49f9872957427a668afd",
+        "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.9999999786860939,
+        "delta_pos": 0.343505859375
+      },
+      {
+        "length": 256,
+        "accuracy": 0.02496337890625,
+        "count": 32768,
+        "RUN_ID": "8c10d0590ae01638d9dd-7337e208cccc48fda1929186f0f36f01",
+        "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.053206711497673004,
+        "delta_pos": -0.07830810546875
+      },
+      {
+        "length": 512,
+        "accuracy": 0.0214691162109375,
+        "count": 65536,
+        "RUN_ID": "4d707f93887c3d8b4457-251ba15323f044d7a744e6bc931b3b9b",
+        "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.04575907278559042,
+        "delta_pos": -0.0567169189453125
+      },
+      {
+        "length": 1024,
+        "accuracy": 0.01654815673828125,
+        "count": 131072,
+        "RUN_ID": "a52079b305a573b0a345-873c9a3089794dd7adb24c832d642ab5",
+        "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.03527058595307236,
+        "delta_pos": -0.0392303466796875
+      }
+    ],
+    "first_failure": {
+      "length": 256,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": 128
+  },
+  "rope": {
+    "points": [
+      {
+        "length": 128,
+        "accuracy": 0.1107177734375,
+        "count": 16384,
+        "RUN_ID": "61fdba3d7d201fa4d57f-a4b611115fa4462a806c8e87183cadcf",
+        "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.9999999096802729,
+        "delta_pos": -0.01495361328125
+      },
+      {
+        "length": 256,
+        "accuracy": 0.0150146484375,
+        "count": 32768,
+        "RUN_ID": "3b50ed6e7f33d6181d3f-f56b595426f14655b5f51ccd12feda63",
+        "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.1356118951385596,
+        "delta_pos": -0.0882568359375
+      },
+      {
+        "length": 512,
+        "accuracy": 0.0151519775390625,
+        "count": 65536,
+        "RUN_ID": "2d84c8b5e95f6e3f3142-7b9aff603250409484ac8d6dfaa1ce25",
+        "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.13685224783799765,
+        "delta_pos": -0.0630340576171875
+      },
+      {
+        "length": 1024,
+        "accuracy": 0.01593780517578125,
+        "count": 131072,
+        "RUN_ID": "92370f1efe2928f08dd0-7aab1815493d4fb482d0e0beb0ec0f06",
+        "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "status": "COMPLETED_EVALUATION",
+        "ER": 0.14394982161811534,
+        "delta_pos": -0.0398406982421875
+      }
+    ],
+    "first_failure": {
+      "length": 256,
+      "reason": "accuracy_at_or_below_chance_plus_005"
+    },
+    "boundary_beyond_grid": false,
+    "longest_measured_effective_length": 128
+  }
+}

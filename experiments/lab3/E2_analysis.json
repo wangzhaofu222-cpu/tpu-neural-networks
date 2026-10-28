@@ -1,0 +1,348 @@
+{
+  "explicit": {
+    "RUN_IDs": [
+      "24f7a8ba7960c3f9e999-f228a00ba2c347bcbb206618a346bcf5",
+      "a7b35549eff6ece9eb69-a9b4449f96a24e4292114bc491bdc52d",
+      "e5d04a9497324471d3a0-e6e5c7472e18460ea27e19556d23e10b",
+      "4931af932992351dfa50-cec56a3b47ad417a8c33b962b88da271",
+      "a086c993bc6d504fa01c-c14c5e9c287546348a7e18640a62bf27"
+    ],
+    "slopes": {
+      "forward_seconds": {
+        "global": 0.11808899087595082,
+        "intercept": -6.604347494081704,
+        "longest_two": -0.10425486189225057,
+        "doubling_ratios": [
+          {
+            "L1": 64,
+            "L2": 128,
+            "ratio": 1.0927773109633059
+          },
+          {
+            "L1": 128,
+            "L2": 256,
+            "ratio": 0.927678177174512
+          },
+          {
+            "L1": 256,
+            "L2": 512,
+            "ratio": 1.4006572339546346
+          },
+          {
+            "L1": 512,
+            "L2": 1024,
+            "ratio": 0.9302853019597279
+          }
+        ]
+      },
+      "training_step_seconds": {
+        "global": 0.014907845698809276,
+        "intercept": -4.768129932314365,
+        "longest_two": -0.02225715749999673,
+        "doubling_ratios": [
+          {
+            "L1": 64,
+            "L2": 128,
+            "ratio": 1.0600748293701756
+          },
+          {
+            "L1": 128,
+            "L2": 256,
+            "ratio": 1.043816284997721
+          },
+          {
+            "L1": 256,
+            "L2": 512,
+            "ratio": 0.963630772991724
+          },
+          {
+            "L1": 512,
+            "L2": 1024,
+            "ratio": 0.9846909080705261
+          }
+        ]
+      },
+      "peak_memory_bytes": {
+        "global": 0.43567122093066024,
+        "intercept": 16.070632565449092,
+        "longest_two": 1.0864807024842345,
+        "doubling_ratios": [
+          {
+            "L1": 64,
+            "L2": 128,
+            "ratio": 1.0360999515628115
+          },
+          {
+            "L1": 128,
+            "L2": 256,
+            "ratio": 1.1312424375756243
+          },
+          {
+            "L1": 256,
+            "L2": 512,
+            "ratio": 1.4298858677816537
+          },
+          {
+            "L1": 512,
+            "L2": 1024,
+            "ratio": 2.123553863023946
+          }
+        ]
+      }
+    },
+    "decomposition": {
+      "forward_seconds": {
+        "terms": "a L² + b L + c; coefficients normalized at longestL",
+        "longest_L_quadratic_linear_constant_contributions": [
+          0.0,
+          0.0008430472396358574,
+          0.002307373194601799
+        ],
+        "longest_L_component_fractions": [
+          0.0,
+          0.26759832766252967,
+          0.7324016723374702
+        ],
+        "fitted_values": [
+          0.00236006364707904,
+          0.0024127540995562808,
+          0.002518135004510763,
+          0.0027288968144197276,
+          0.0031504204342376564
+        ],
+        "relative_RMSE": 0.09604240402893599,
+        "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+      },
+      "training_step_seconds": {
+        "terms": "a L² + b L + c; coefficients normalized at longestL",
+        "longest_L_quadratic_linear_constant_contributions": [
+          0.0,
+          0.0001148368457298267,
+          0.009188828055605173
+        ],
+        "longest_L_component_fractions": [
+          0.0,
+          0.012343183782699284,
+          0.9876568162173007
+        ],
+        "fitted_values": [
+          0.009196005358463287,
+          0.009203182661321401,
+          0.00921753726703763,
+          0.009246246478470086,
+          0.009303664901335
+        ],
+        "relative_RMSE": 0.03208335736161013,
+        "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+      },
+      "peak_memory_bytes": {
+        "terms": "a L² + b L + c; coefficients normalized at longestL",
+        "longest_L_quadratic_linear_constant_contributions": [
+          170695289.4421253,
+          15097876.726122646,
+          70050615.21568629
+        ],
+        "longest_L_component_fractions": [
+          0.6671856103704545,
+          0.059012091849384773,
+          0.2738022977801607
+        ],
+        "fitted_values": [
+          71661010.98545226,
+          74604963.70398483,
+          84493539.98734978,
+          120273375.93927893,
+          255843781.38393423
+        ],
+        "relative_RMSE": 0.0014858627892575613,
+        "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+      }
+    },
+    "acceptance": {
+      "forward_quadratic_interval": "NOT_APPLICABLE",
+      "memory_expected_interval": "FAIL",
+      "alternative_cost_decomposition": "PASS",
+      "interpretation": "Quadratic and linear measured terms coexist with fixed model/optimizer state. PDF §9.2 explicitly accepts decomposition when asymptotic intervals do not apply. Raw slope flags are retained."
+    },
+    "theory_attention_to_projections_MAC_ratio": {
+      "64": 0.125,
+      "128": 0.25,
+      "256": 0.5,
+      "512": 1.0,
+      "1024": 2.0
+    }
+  },
+  "efficient": {
+    "RUN_IDs": [
+      "1550b6a9b24f1e551915-4edd8677db9c4fe19e100650ebfae848",
+      "6b665e12a6c53dfe2711-6bacc96b732a4dec945d276cfc54cb22",
+      "54002e33bd89266b4aa0-5d661f49f1044fb7ac129f098f820b8b",
+      "d07391af265a5628039e-173659cdb29b4766b24ffe9bd80cf1b3",
+      "e648147c7ab327beb2f0-876b5110f59748429fd2dd3d6c803968"
+    ],
+    "slopes": {
+      "forward_seconds": {
+        "global": 0.11865200086127968,
+        "intercept": -6.900747800466271,
+        "longest_two": 0.7495698427551258,
+        "doubling_ratios": [
+          {
+            "L1": 64,
+            "L2": 128,
+            "ratio": 0.9548154910411297
+          },
+          {
+            "L1": 128,
+            "L2": 256,
+            "ratio": 1.0233758938353004
+          },
+          {
+            "L1": 256,
+            "L2": 512,
+            "ratio": 0.9375243284143038
+          },
+          {
+            "L1": 512,
+            "L2": 1024,
+            "ratio": 1.6812914580689944
+          }
+        ]
+      },
+      "training_step_seconds": {
+        "global": 0.025052315619011483,
+        "intercept": -4.956933884865209,
+        "longest_two": 0.3197921960317166,
+        "doubling_ratios": [
+          {
+            "L1": 64,
+            "L2": 128,
+            "ratio": 0.9084605229689684
+          },
+          {
+            "L1": 128,
+            "L2": 256,
+            "ratio": 1.043321309128401
+          },
+          {
+            "L1": 256,
+            "L2": 512,
+            "ratio": 0.933981301701709
+          },
+          {
+            "L1": 512,
+            "L2": 1024,
+            "ratio": 1.2481507538978631
+          }
+        ]
+      },
+      "peak_memory_bytes": {
+        "global": 0.12713944005173985,
+        "intercept": 17.511141171139574,
+        "longest_two": 0.2596600012307421,
+        "doubling_ratios": [
+          {
+            "L1": 64,
+            "L2": 128,
+            "ratio": 1.0245618048208618
+          },
+          {
+            "L1": 128,
+            "L2": 256,
+            "ratio": 1.0552578700602813
+          },
+          {
+            "L1": 256,
+            "L2": 512,
+            "ratio": 1.1093832645720936
+          },
+          {
+            "L1": 512,
+            "L2": 1024,
+            "ratio": 1.1971965290359492
+          }
+        ]
+      }
+    },
+    "decomposition": {
+      "forward_seconds": {
+        "terms": "a L² + b L + c; coefficients normalized at longestL",
+        "longest_L_quadratic_linear_constant_contributions": [
+          0.0010695387033760786,
+          0.0,
+          0.0016983535380907257
+        ],
+        "longest_L_component_fractions": [
+          0.3864090831835607,
+          0.0,
+          0.6135909168164394
+        ],
+        "fitted_values": [
+          0.0017025314236507885,
+          0.0017150650803309769,
+          0.0017651997070517306,
+          0.001965738213934745,
+          0.002767892241466804
+        ],
+        "relative_RMSE": 0.07292926695935455,
+        "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+      },
+      "training_step_seconds": {
+        "terms": "a L² + b L + c; coefficients normalized at longestL",
+        "longest_L_quadratic_linear_constant_contributions": [
+          0.0013214800580806892,
+          0.0,
+          0.007756272119822612
+        ],
+        "longest_L_component_fractions": [
+          0.14557348913945709,
+          0.0,
+          0.8544265108605429
+        ],
+        "fitted_values": [
+          0.00776143415129949,
+          0.0077769202457301225,
+          0.007838864623452655,
+          0.008086642134342783,
+          0.009077752177903301
+        ],
+        "relative_RMSE": 0.05219873527401395,
+        "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+      },
+      "peak_memory_bytes": {
+        "terms": "a L² + b L + c; coefficients normalized at longestL",
+        "longest_L_quadratic_linear_constant_contributions": [
+          1468735.959519373,
+          31916073.452245306,
+          69482777.09803922
+        ],
+        "longest_L_component_fractions": [
+          0.014277927667520358,
+          0.31026365578435644,
+          0.6754584165481232
+        ],
+        "fitted_values": [
+          71483268.93864644,
+          73495235.27893738,
+          77553591.45857051,
+          85807997.81404172,
+          102867586.5098039
+        ],
+        "relative_RMSE": 0.0012882154002850114,
+        "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+      }
+    },
+    "acceptance": {
+      "forward_quadratic_interval": "NOT_APPLICABLE",
+      "memory_expected_interval": "FAIL",
+      "alternative_cost_decomposition": "PASS",
+      "interpretation": "Quadratic and linear measured terms coexist with fixed model/optimizer state. PDF §9.2 explicitly accepts decomposition when asymptotic intervals do not apply. Raw slope flags are retained."
+    },
+    "theory_attention_to_projections_MAC_ratio": {
+      "64": 0.125,
+      "128": 0.25,
+      "256": 0.5,
+      "512": 1.0,
+      "1024": 2.0
+    }
+  }
+}

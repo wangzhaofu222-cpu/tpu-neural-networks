@@ -1,0 +1,28 @@
+{
+  "steps": 2000,
+  "paths": {
+    "none": "runs/lab3/1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+    "absolute": "runs/lab3/9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+    "sinusoidal": "runs/lab3/016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+    "rope": "runs/lab3/66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd"
+  },
+  "progression": [
+    {
+      "steps": 2000,
+      "validation": {
+        "none": 0.057861328125,
+        "absolute": 0.12677001953125,
+        "sinusoidal": 0.46124267578125,
+        "rope": 0.10955810546875
+      },
+      "gap": 0.40338134765625,
+      "paths": {
+        "none": "runs/lab3/1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+        "absolute": "runs/lab3/9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+        "sinusoidal": "runs/lab3/016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+        "rope": "runs/lab3/66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd"
+      }
+    }
+  ],
+  "common_lr": 0.003
+}

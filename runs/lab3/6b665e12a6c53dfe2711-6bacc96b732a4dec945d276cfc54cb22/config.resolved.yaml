@@ -1,0 +1,81 @@
+experiment:
+  name: lab3_sequences
+  lab: 3
+  seed: 1
+  deterministic: true
+  purpose: formal
+  resume_ablation: none
+  role: profiling
+data:
+  name: synthetic_sequence
+  root: data/lab3
+  task: copy
+  L0: 128
+  train_fraction: 1.0
+  num_workers: 0
+  steps_per_epoch: 100
+  evaluation_examples: 256
+model:
+  name: sequence_transformer
+  width: 128
+  heads: 4
+  ffn: 256
+  depth: 2
+  position: none
+  max_length: 128
+  absolute_rule: P2
+  backend: efficient
+optimizer:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.01
+  momentum: 0.9
+scheduler:
+  name: constant
+  unit: optimizer_step
+  warmup_fraction: 0.0
+  warmup_epochs: 0
+  step_size: 100
+  gamma: 1.0
+train:
+  epochs: 10000
+  batch_size: 32
+  amp: false
+  accumulation_steps: 1
+  max_steps: 2000
+  validation_at_end_only: true
+logging:
+  backend: local
+  save_every: 1
+  run_root: runs/lab3
+  save_every_steps: 100
+  console_every_steps: 500
+runtime:
+  device: cuda
+  threads: 2
+  max_seconds: 7200
+  dependency_lock: requirements.lock.txt
+profiling:
+  warmup: 10
+  repeats: 30
+  dtype: float16
+  length: 128
+  process_isolation: true
+profile:
+  id: P3adf02
+  student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+  base_seed: 987693601
+  lab2_fractions:
+  - 0.05
+  - 0.15
+  - 0.3
+  - 0.6
+  - 1.0
+  lab2_corruptions:
+  - blur
+  - contrast
+  - patch_shuffle
+  lab2_strong_aug: randaugment+cutmix
+  lab3_task: copy
+  lab3_train_max: 128
+  lab3_depth: 2

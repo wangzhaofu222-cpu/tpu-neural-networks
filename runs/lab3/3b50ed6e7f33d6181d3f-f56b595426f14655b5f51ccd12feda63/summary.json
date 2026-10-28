@@ -1,0 +1,17 @@
+{
+  "loss": 6.943321853876114,
+  "accuracy": 0.0150146484375,
+  "count": 32768,
+  "status": "COMPLETED_EVALUATION",
+  "RUN_ID": "3b50ed6e7f33d6181d3f-f56b595426f14655b5f51ccd12feda63",
+  "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+  "length": 256,
+  "absolute_rule": "P2",
+  "position": "rope",
+  "seed": 1,
+  "role": "test",
+  "input_sha256": "39d2ac814615493cf43a1d8c503aa98ddb8c37b0b72a1b437681cb7144d64ea3",
+  "checkpoint_sha256": "3fa61e19c6b0b57346df1964ffa076cc7f9dead9fbd7eb669b3e43ac1fe04e05",
+  "optimizer_steps": 0,
+  "wall_seconds": 0.4269907999987481
+}
