@@ -5,6 +5,7 @@ import time
 from pathlib import Path
 import torch
 import torch.nn.functional as F
+from src.metrics.objective import correct_count
 from src.data.vision import datasets,loaders
 from src.models.small_cnn import build_model
 from src.engine.checkpoint import load_checkpoint,save_checkpoint
@@ -17,6 +18,15 @@ from src.utils.reproducibility import seed_all
 class ExperimentRunner:
     def __init__(self,config):
         self.config = config
+
+    def run_sequence_profile(self,length,dtype=torch.float32):
+        from src.engine.sequence_evaluation import profile
+        return profile(self.config,length,dtype)
+
+    @staticmethod
+    def evaluate_sequence(source,length,rule='P2',role='test',diagnostics=False):
+        from src.engine.sequence_evaluation import evaluate
+        return evaluate(source,length,rule,role,diagnostics)
 
     @staticmethod
     def evaluate_checkpoint(source,corruption='clean',level=0):
@@ -47,6 +57,7 @@ class ExperimentRunner:
             total_epochs = math.ceil(step_limit*cfg['train']['accumulation_steps']/len(dl['train']))+1
         warmup = cfg['scheduler']['warmup_epochs']
         def multiplier(epoch):
+            if cfg['scheduler']['name']=='constant':return 1.
             if step_schedule:
                 warm_steps=math.ceil(step_limit*cfg['scheduler']['warmup_fraction'])
                 if epoch<warm_steps:return (epoch+1)/max(1,warm_steps)
@@ -80,7 +91,13 @@ class ExperimentRunner:
         if state is not None:
             if state.get('partial_epoch'):
                 raise ValueError('Final partial data-epoch checkpoint is for inference; resume requires a complete data-epoch boundary')
-            if state['config_hash'] != digest(cfg) or state['data_fingerprint'] != data_info['data_fingerprint'] or state['split_fingerprint'] != data_info['split_fingerprint']:
+            config_match=state['config_hash']==digest(cfg)
+            if not config_match and cfg['experiment']['lab']==3:
+                import yaml,copy
+                prior=yaml.safe_load((Path(resume).parent.parent/'config.resolved.yaml').read_text(encoding='utf-8'))
+                expected=copy.deepcopy(prior);expected['train']['max_steps']=cfg['train']['max_steps']
+                config_match=(expected==cfg and cfg['train']['max_steps']>prior['train']['max_steps'] and cfg['scheduler']['name']=='constant')
+            if not config_match or state['data_fingerprint'] != data_info['data_fingerprint'] or state['split_fingerprint'] != data_info['split_fingerprint']:
                 raise ValueError('Resume config/data/split mismatch')
             if state['source_hash'] != code['source_hash']:
                 raise ValueError('Resume source changed')
@@ -160,9 +177,10 @@ class ExperimentRunner:
                         if not optimizer_step_skipped:
                             global_step += 1
                             if step_schedule:scheduler.step()
-                    loss_sum += loss.item()*len(y)
-                    correct += ((logits.argmax(1)==y).sum().item() if y.ndim==1 else y.gather(1,logits.argmax(1)[:,None]).sum().item())
-                    count += len(y)
+                    hits,targets=correct_count(logits,y)
+                    loss_sum += loss.item()*targets
+                    correct += hits
+                    count += targets
                     samples_processed += len(y)
                     self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used,'optimizer_step_skipped':optimizer_step_skipped})
                     if step_limit and global_step>=step_limit:break

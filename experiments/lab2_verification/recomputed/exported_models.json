@@ -1,0 +1,84 @@
+{
+  "cnn": {
+    "RUN_ID": "cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc",
+    "checkpoint": "runs/lab2/cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc/checkpoints/last.pt",
+    "checkpoint_sha256": "c3df4eb404bc862d23e5850e9f3638b72b531df452a386a747d29b8f284f41d8",
+    "resolved_config": "runs/lab2/cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc/config.resolved.yaml",
+    "model": {
+      "name": "cifar_resnet18",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "feature_dimension": 512,
+    "normalization": {
+      "mean": [
+        0.4913593061552382,
+        0.4820096833319084,
+        0.4463430876474862
+      ],
+      "std": [
+        0.2466760290143046,
+        0.24313375859044625,
+        0.26125503162712693
+      ],
+      "source": "full train role only"
+    },
+    "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+    "training_fraction": 1.0,
+    "seed": 1,
+    "optimizer_steps": 10000,
+    "selection": "final validation LR grid; reused E1 r1",
+    "source_hash": "bbc19e251ef3a9506848bd2b2e2ae6534cdf00a510c7c311a083e96887f3879a",
+    "git_commit": "eeed9dc5c38d047e2498e47fa7d2cdc8ef71ef5d",
+    "corruption_protocol": "experiments/lab2/corruption_protocol.json",
+    "intended_future_use": "Lab8 robustness/calibration and Lab9 visual features; no later lab executed here"
+  },
+  "vit": {
+    "RUN_ID": "766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+    "checkpoint": "runs/lab2/766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b/checkpoints/last.pt",
+    "checkpoint_sha256": "a4793c3fa2ba34ce300030d161fc69a38bb1c23b1d3e7284e82a4379989d4dd0",
+    "resolved_config": "runs/lab2/766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b/config.resolved.yaml",
+    "model": {
+      "name": "cifar_vit",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "feature_dimension": 384,
+    "normalization": {
+      "mean": [
+        0.4913593061552382,
+        0.4820096833319084,
+        0.4463430876474862
+      ],
+      "std": [
+        0.2466760290143046,
+        0.24313375859044625,
+        0.26125503162712693
+      ],
+      "source": "full train role only"
+    },
+    "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+    "training_fraction": 1.0,
+    "seed": 1,
+    "optimizer_steps": 10000,
+    "selection": "final validation LR grid; reused E1 r1",
+    "source_hash": "bbc19e251ef3a9506848bd2b2e2ae6534cdf00a510c7c311a083e96887f3879a",
+    "git_commit": "eeed9dc5c38d047e2498e47fa7d2cdc8ef71ef5d",
+    "corruption_protocol": "experiments/lab2/corruption_protocol.json",
+    "intended_future_use": "Lab8 robustness/calibration and Lab9 visual features; no later lab executed here"
+  }
+}

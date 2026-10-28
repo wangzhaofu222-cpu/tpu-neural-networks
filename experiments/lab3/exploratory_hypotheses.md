@@ -1,0 +1,7 @@
+# E1/E2 hypotheses before real experiments
+
+E1: By permutation equivariance (3.4), identical blank tokens cannot produce different Copy outputs without order information. NoPE should remain close to chance (acceptance <=1/64+.05). At least one representation should exceed it by.20 atL0 within2000/4000/8000updates. Learned absoluteP2 compresses positions on longer inputs (3.6), while sinusoidal/RoPE are defined beyondL0 but untrained offsets may degrade performance (3.7–3.9). Predict substantial extrapolation degradation; no guaranteed ordering between the three position methods. All four final budgets are equal. Choose LR once from sinusoidal valL0 only.
+
+E2: Explicit attention retains quadratic L×L intermediates. Expect longer-length time/memory slopes closer to2, with Ld² projections and fixed parameters/optimizer state lowering the global slope (3.10). Forced flash, if supported, should reduce activationmemory scaling toward1; allocatorpeak includes model/state and may show smaller slopes. Compare actual allocator peaks; report analytic matrix and largesttensor separately. UseB4, d128,N2,h4, float16 for both backends,10warmups+30timedrepeats, independently forced kernels, no backend fallback. Training-step profiler uses AdamWlr0,eps1e-4 so state/gradient/step costs are measured without converged training. E1 scientific training remainsfloat32.
+
+These are exploratory predictions. E3 pair,L*,sign andfalsification will be registered in a separate hypothesis.md and committed only afterE1 andbefore newE3training.

@@ -1,0 +1,15 @@
+{
+  "status": "PAUSED_BY_USER",
+  "paused_at_utc": "2026-10-27T12:40:13.868224+00:00",
+  "completed_formal_training_processes": 14,
+  "completed_evaluations": 53,
+  "incomplete_evaluation_RUN_IDs": [
+    "efc15ee5bcc3ba34bfa2-42d0385b00314f728994f9e611397754"
+  ],
+  "E1_training": "all ten scientific conditions completed; selected full-r LR candidates reused",
+  "E3_new_seeds": "NOT_STARTED",
+  "E3_fraction": 0.05,
+  "E3_preregistration_commit": "1377329fe86501a1bf8d691779348294f2353ffb",
+  "next_command": ".conda-env/python.exe -X utf8 -m scripts.lab2_evaluate e1",
+  "resume_note": "Driver skips completed evaluation labels. Retain incomplete RUN_ID as interruption evidence. Then E3, CF2, profiles, all-six-corruption tables, final tests/analysis/status/Git commit remain. No new report."
+}

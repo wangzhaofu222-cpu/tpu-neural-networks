@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "resumed_at_utc": "2026-10-28T05:41:09.040381+00:00",
+  "pause_snapshot": "experiments/lab2/pause_state.json",
+  "pause_snapshot_sha256": "77a1eee61f38d5084bec6a57ca0793b7f636411cd165e1dac7d9fdbaac68a170",
+  "completed_training_at_resume": 14,
+  "completed_evaluations_at_resume": 53,
+  "current_stage": "completed; no active experiment processes; stopped after Lab2",
+  "new_E3_seeds_not_started": false,
+  "completed_at_utc": "2026-10-28T07:30:30.948780+00:00",
+  "completed_formal_training": 19,
+  "completed_evaluations": 135
+}

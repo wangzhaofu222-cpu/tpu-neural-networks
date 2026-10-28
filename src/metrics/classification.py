@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+from src.metrics.objective import correct_count
 
 
 @torch.no_grad()
@@ -12,8 +13,9 @@ def evaluate_loader(model,loader,device):
             x,y = x.to(device),y.to(device)
             logits = model(x)
             loss_sum += F.cross_entropy(logits,y,reduction='sum').item()
-            correct += (logits.argmax(1)==y).sum().item()
-            count += len(y)
+            hits,targets=correct_count(logits,y)
+            correct += hits
+            count += targets
     finally:
         model.train(was_training)
     if count == 0:

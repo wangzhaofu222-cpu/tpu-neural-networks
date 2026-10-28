@@ -1,0 +1,51 @@
+{
+  "status": "E1_E2_EVALUATION_COMPLETE_E3_PENDING",
+  "E1": [
+    {
+      "fraction": 0.05,
+      "cnn": 0.7074,
+      "vit": 0.4502
+    },
+    {
+      "fraction": 0.15,
+      "cnn": 0.8378,
+      "vit": 0.5914
+    },
+    {
+      "fraction": 0.3,
+      "cnn": 0.8799,
+      "vit": 0.6879
+    },
+    {
+      "fraction": 0.6,
+      "cnn": 0.907,
+      "vit": 0.7601
+    },
+    {
+      "fraction": 1.0,
+      "cnn": 0.925,
+      "vit": 0.7991
+    }
+  ],
+  "E2_means": [
+    {
+      "blur": {
+        "cnn": 0.4906333333333333,
+        "vit": 0.5397
+      }
+    },
+    {
+      "contrast": {
+        "cnn": 0.7715666666666666,
+        "vit": 0.45683333333333337
+      }
+    },
+    {
+      "patch_shuffle": {
+        "cnn": 0.39543333333333336,
+        "vit": 0.5714666666666667
+      }
+    }
+  ],
+  "completed_evaluations": 112
+}

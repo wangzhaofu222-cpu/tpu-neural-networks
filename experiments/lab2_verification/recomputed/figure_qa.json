@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-28T07:30:30.943710+00:00",
+  "visually_inspected_figures": 6,
+  "checks": [
+    "all labels readable",
+    "no clipped labels or legends",
+    "correct log-r ticks",
+    "map fixed variables explicit",
+    "all three paired seeds visible"
+  ],
+  "files": {
+    "E1_learning_curves.png": "95346a4304549142fc8e56b5777899101145ea98ace122275c006f716a14630d",
+    "E2_corruptions.png": "1b942ac32a6a3ebde7c6117f8a658cb4e2d924ee6b50554e0703852f45a1d576",
+    "E3_paired_seeds.png": "2e521cc246e0e4c55582d5f94f0afab2ccef469bec685f24cdc26a5fb10ae1a8",
+    "time_accuracy.png": "8323378cee4de62b1b2c957b326bd78d9e455f98399e0085741ce35e29bc6214",
+    "trainability_map.png": "411f675fc200f9d21a5cf2e247f2697b3a317fb72675ce81e36901ea145fab35",
+    "training_loss.png": "79056ff515ed1e4c9bf933d793cac60ebdebeea5c41c1a6d278c9ea5d6be33be"
+  }
+}

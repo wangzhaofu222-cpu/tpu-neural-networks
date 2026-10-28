@@ -22,6 +22,9 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='sequence_transformer':
+        from src.models.sequence.transformer import SequenceTransformer
+        return SequenceTransformer(cfg)
     if cfg['name']=='cifar_resnet18':
         from src.models.vision.resnet import CifarResNet18
         return CifarResNet18(cfg['classes'])

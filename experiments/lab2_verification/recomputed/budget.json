@@ -1,0 +1,11 @@
+{
+  "seconds_per_update_including_one_final_validation_and_checkpoint": {
+    "cnn": 0.12209119315476376,
+    "vit": 0.1791274086309505
+  },
+  "primary_updates": 180000,
+  "CF2_updates": 506,
+  "estimated_training_seconds": 27171.452304450595,
+  "formal_training_executions": 19,
+  "architecture": "canonical GPU pair; float32; batch128; unchanged 10000-step primary budget"
+}

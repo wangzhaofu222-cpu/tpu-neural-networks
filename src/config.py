@@ -57,7 +57,7 @@ def validate(cfg):
         d=cfg['diagnostics']
         if d['probe_batch_size']<64 or d['loss_subset_size']<d['probe_batch_size']:
             raise ValueError('Diagnostics require probe B>=64 and loss subset>=probe')
-    if cfg['scheduler']['name'] not in ['cosine','step']:
+    if cfg['scheduler']['name'] not in ['cosine','step','constant']:
         raise ValueError('Unsupported scheduler')
     if cfg['runtime']['device'] not in ['cpu','cuda']:
         raise ValueError('Device must be cpu or cuda')
@@ -90,6 +90,17 @@ def validate(cfg):
                 raise ValueError('Canonical Lab2 requires 10000 updates and batch128')
             if cfg['data']['augmentation']!='A1' or cfg['optimizer']['name']!='adamw':
                 raise ValueError('Canonical Lab2 requires A1 and AdamW')
+    if cfg['experiment']['lab']==3:
+        m=cfg['model'];d=cfg['data']
+        if d['task']!=cfg['profile']['lab3_task'] or d['L0']!=cfg['profile']['lab3_train_max']:
+            raise ValueError('Lab3 task/length differs from profile')
+        if cfg['experiment']['purpose']=='formal' and cfg['experiment'].get('role') not in {'profiling','CF5','evaluation'}:
+            if (m['width'],m['heads'],m['ffn'],m['depth'],cfg['train']['batch_size'])!=(128,4,256,cfg['profile']['lab3_depth'],32):
+                raise ValueError('Lab3 canonical architecture/batch mismatch')
+            if cfg['train']['max_steps'] not in [2000,4000,8000] or cfg['optimizer']['name']!='adamw':
+                raise ValueError('Lab3 canonical training budget/optimizer mismatch')
+        if d['evaluation_examples']<200 and cfg['experiment']['purpose']!='test':raise ValueError('Lab3 needs >=200 evaluation examples')
+        if m['width']%m['heads'] or (m['width']//m['heads'])%2:raise ValueError('Even head dimension required')
     if cfg['train']['accumulation_steps'] < 1:
         raise ValueError('accumulation_steps must be positive')
     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:

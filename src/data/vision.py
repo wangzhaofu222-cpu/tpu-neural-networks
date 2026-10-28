@@ -25,6 +25,9 @@ class ArrayImages(Dataset):
 
 def datasets(config):
     data = config['data']
+    if data['name']=='synthetic_sequence':
+        from src.data.synthetic_sequence import sequence_datasets
+        return sequence_datasets(config)
     if data['name'] == 'test_fixture':
         if config['experiment']['purpose'] != 'test':
             raise ValueError('Synthetic fixtures are for tests only, never course results')
@@ -95,6 +98,9 @@ def datasets(config):
 
 
 def loaders(config, ds, generator):
+    if config['data']['name']=='synthetic_sequence':
+        from src.data.synthetic_sequence import sequence_loaders
+        return sequence_loaders(config,ds,generator)
     kw = {'batch_size':config['train']['batch_size'], 'num_workers':config['data']['num_workers'],
           'worker_init_fn':seed_worker, 'persistent_workers':False}
     # Independent validation generator prevents evaluation calls from perturbing shuffle RNG.
