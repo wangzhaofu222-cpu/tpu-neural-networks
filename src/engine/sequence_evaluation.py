@@ -67,7 +67,12 @@ def profile(cfg,length,dtype=torch.float32):
     info={'data_fingerprint':digest({'length':length,'batch':4,'dtype':str(dtype),'seed':cfg['experiment']['seed']}),
           'split_fingerprint':digest({'profiling_only':True}),'synthetic_fixture':False}
     path,m=create_run(cfg,code,info,model)
-    result=safe_measure(model,length,warmup=cfg['profiling']['warmup'],repeats=cfg['profiling']['repeats'])
+    try:result=safe_measure(model,length,warmup=cfg['profiling']['warmup'],repeats=cfg['profiling']['repeats'])
+    except Exception as exc:
+        result={'status':'FAILED_PROFILE','RUN_ID':path.name,'length':length,'exception':str(exc)}
+        write_json(path/'failure.json',result);write_json(path/'summary.json',result)
+        m.update(status='FAILED_PROFILE',global_step=0);write_json(path/'manifest.json',m)
+        raise
     result.update(RUN_ID=path.name,optimizer_steps=0,operation='resource_profiling_training_step_not_scientific_training')
     write_json(path/'summary.json',result);write_json(path/'resources.json',result)
     m.update(status=result['status'],global_step=0);write_json(path/'manifest.json',m)

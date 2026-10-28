@@ -4,6 +4,7 @@ import copy
 import json
 import subprocess
 import time
+import sys
 from datetime import datetime,timezone
 from pathlib import Path
 import torch
@@ -90,14 +91,20 @@ def e1():
     evaluate('E1_absolute_P1_L256',paths['absolute'],256,'P1')
 
 def e2():
-    for backend in ['explicit','flash']:
+    for backend in ['explicit','efficient']:
         for length in [64,128,256,512,1024]:
-            label=f'E2_{backend}_L{length}'
+            label=f'E2_isolated_{backend}_L{length}'
             if lookup(label):continue
-            c=base();c['experiment'].update(purpose='formal',role='profiling');c['model'].update(position='none',backend=backend)
-            c['profiling']['dtype']='float16';c['profiling']['length']=length
-            p,r=ExperimentRunner(c).run_sequence_profile(length,torch.float16)
-            record({'label':label,'kind':'profiling','path':p.as_posix(),**r});print('PROFILE',label,r,flush=True)
+            subprocess.run([sys.executable,'-X','utf8','-m','reports.tools.lab3_run','one_profile','--backend',backend,'--length',str(length)],check=True)
+
+def one_profile(backend,length,width=128,cf5=False):
+    label=f'CF5_isolated_d{width}_L{length}' if cf5 else f'E2_isolated_{backend}_L{length}'
+    if lookup(label):return
+    c=base();c['experiment'].update(purpose='formal',role='CF5' if cf5 else 'profiling');c['model'].update(position='none',backend=backend,width=width,ffn=width*2)
+    c['profiling'].update(dtype='float32' if cf5 else 'float16',length=length,process_isolation=True)
+    p,r=ExperimentRunner(c).run_sequence_profile(length,torch.float32 if cf5 else torch.float16)
+    record({'label':label,'kind':'profiling','path':p.as_posix(),**r})
+    print('PROFILE',label,{k:r.get(k) for k in ['RUN_ID','status','forward_seconds','training_step_seconds','peak_memory_bytes']},flush=True)
 
 def e3():
     selection=read(ROOT/'selection.json');prereg=read(ROOT/'preregistration_evidence.json')
@@ -116,13 +123,13 @@ def diagnostics():
     e=read(ROOT/'E1_training.json');selection=read(ROOT/'selection.json');pe=selection['positions'][0]
     for length in [128,256]:evaluate(f'attention_{pe}_L{length}',e['paths'][pe],length,diagnostics=True)
     for width in [128,256]:
-        label=f'CF5_d{width}_L512'
+        label=f'CF5_isolated_d{width}_L512'
         if lookup(label):continue
-        c=base();c['experiment'].update(purpose='formal',role='CF5');c['model'].update(position='none',width=width,ffn=width*2)
-        c['profiling'].update(length=512,dtype='float32')
-        p,r=ExperimentRunner(c).run_sequence_profile(512,torch.float32)
-        record({'label':label,'kind':'profiling','path':p.as_posix(),**r})
+        subprocess.run([sys.executable,'-X','utf8','-m','reports.tools.lab3_run','one_profile','--backend','explicit','--length','512','--width',str(width),'--cf5'],check=True)
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=['smoke','lr','e1','e2','e3','diagnostics'])
-    globals()[parser.parse_args().stage]()
+    parser=argparse.ArgumentParser();parser.add_argument('stage',choices=['smoke','lr','e1','e2','e3','diagnostics','one_profile'])
+    parser.add_argument('--backend');parser.add_argument('--length',type=int);parser.add_argument('--width',type=int,default=128);parser.add_argument('--cf5',action='store_true')
+    args=parser.parse_args()
+    if args.stage=='one_profile':one_profile(args.backend,args.length,args.width,args.cf5)
+    else:globals()[args.stage]()

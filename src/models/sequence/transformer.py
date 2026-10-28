@@ -17,8 +17,9 @@ class Attention(nn.Module):
             if mask is not None:scores=scores.masked_fill(~mask,float('-inf'))
             a=scores.softmax(-1);z=a@v
         else:
-            if self.backend!='flash':raise ValueError(self.backend)
-            with sdpa_kernel(SDPBackend.FLASH_ATTENTION):
+            backends={'flash':SDPBackend.FLASH_ATTENTION,'efficient':SDPBackend.EFFICIENT_ATTENTION,'sdpa_math':SDPBackend.MATH,'cudnn':SDPBackend.CUDNN_ATTENTION}
+            if self.backend not in backends:raise ValueError(self.backend)
+            with sdpa_kernel(backends[self.backend]):
                 z=F.scaled_dot_product_attention(q,k,v,attn_mask=mask,dropout_p=0.,is_causal=False)
             a=None
         return self.out(z.transpose(1,2).reshape(b,l,d)),a
