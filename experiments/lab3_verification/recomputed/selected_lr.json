@@ -1,0 +1,41 @@
+{
+  "winner": {
+    "lr": 0.003,
+    "role": "val",
+    "length": 128,
+    "position": "sinusoidal",
+    "accuracy": 0.46124267578125,
+    "path": "runs/lab3/016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+    "RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3"
+  },
+  "candidates": [
+    {
+      "lr": 0.0003,
+      "role": "val",
+      "length": 128,
+      "position": "sinusoidal",
+      "accuracy": 0.27197265625,
+      "path": "runs/lab3/24c37688180bcc4dbad0-f29883a005b94f14805677b347e8cb09",
+      "RUN_ID": "24c37688180bcc4dbad0-f29883a005b94f14805677b347e8cb09"
+    },
+    {
+      "lr": 0.001,
+      "role": "val",
+      "length": 128,
+      "position": "sinusoidal",
+      "accuracy": 0.12945556640625,
+      "path": "runs/lab3/5fb785f4f536a5d02407-7c3736e49708459986436f31bf6e0cbb",
+      "RUN_ID": "5fb785f4f536a5d02407-7c3736e49708459986436f31bf6e0cbb"
+    },
+    {
+      "lr": 0.003,
+      "role": "val",
+      "length": 128,
+      "position": "sinusoidal",
+      "accuracy": 0.46124267578125,
+      "path": "runs/lab3/016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+      "RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3"
+    }
+  ],
+  "criterion": "max final valL0 accuracy, ties smallerLR; no test read"
+}

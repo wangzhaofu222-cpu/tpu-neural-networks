@@ -25,6 +25,12 @@ class ArrayImages(Dataset):
 
 def datasets(config):
     data = config['data']
+    if data['name'] in {'ssl_cifar10','ssl_test_fixture'}:
+        from src.data.ssl_data import datasets as ssl_datasets
+        return ssl_datasets(config)
+    if data['name']=='ssl_features':
+        from src.evaluation.linear_probe import datasets as feature_datasets
+        return feature_datasets(config)
     if data['name']=='synthetic_sequence':
         from src.data.synthetic_sequence import sequence_datasets
         return sequence_datasets(config)
@@ -98,6 +104,12 @@ def datasets(config):
 
 
 def loaders(config, ds, generator):
+    if config['data']['name'] in {'ssl_cifar10','ssl_test_fixture'}:
+        from src.data.ssl_data import loaders as ssl_loaders
+        return ssl_loaders(config,ds,generator)
+    if config['data']['name']=='ssl_features':
+        from src.evaluation.linear_probe import loaders as feature_loaders
+        return feature_loaders(config,ds,generator)
     if config['data']['name']=='synthetic_sequence':
         from src.data.synthetic_sequence import sequence_loaders
         return sequence_loaders(config,ds,generator)

@@ -1,0 +1,11 @@
+{
+  "profile": {
+    "id": "P3adf02",
+    "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+    "base_seed": 987693601
+  },
+  "lab3_task": "copy",
+  "lab3_train_max": 128,
+  "lab3_depth": 2,
+  "rule": "SHA256 student_id:lab3; slices0:2,2:4,4:6"
+}

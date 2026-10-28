@@ -1,0 +1,845 @@
+{
+  "status": "COMPLETED_EXPERIMENTS_REPORT_DEFERRED",
+  "acceptance": {
+    "Lab2_independent_integrity": "PASS",
+    "historical_Lab0_to_Lab2_unchanged": "PASS",
+    "six_mandatory_groups_and_regression_tests": "PASS",
+    "shared_harness_and_exact_resume_tests": "PASS",
+    "individual_profile_copy128depth2": "PASS",
+    "independent_roles_and_cal_unread": "PASS",
+    "E1_all_four_modes_common_recipe": "PASS",
+    "E1_validation_no_position_threshold": "PASS",
+    "E1_validation_position_gain": "PASS",
+    "E1_all_lengths_P1_P2_curves_boundaries": "PASS",
+    "E2_two_supported_backends_five_lengths_actual_measurements": "PASS",
+    "E2_alternative_decomposition_allowed_by_PDF_9_2": "PASS",
+    "E3_preregistered_before_new_seeds": "PASS",
+    "E3_only_PE_differs_and_paired_seeds": "PASS",
+    "E3_teacher_rule_applied_without_changing_threshold": "PASS",
+    "attention_per_block_head_L0_2L0": "PASS",
+    "five_counterfactual_answers_real_RUN_IDs": "PASS",
+    "checkpoint_integrity": "PASS",
+    "figures_from_saved_records": "PASS",
+    "formal_report_deferred_by_user": "NOT_APPLICABLE",
+    "optional_section14": "NOT_APPLICABLE"
+  },
+  "raw_E2_interval_gates": {
+    "explicit": {
+      "forward_quadratic_interval": "NOT_APPLICABLE",
+      "memory_expected_interval": "FAIL",
+      "alternative_cost_decomposition": "PASS",
+      "interpretation": "Quadratic and linear measured terms coexist with fixed model/optimizer state. PDF §9.2 explicitly accepts decomposition when asymptotic intervals do not apply. Raw slope flags are retained."
+    },
+    "efficient": {
+      "forward_quadratic_interval": "NOT_APPLICABLE",
+      "memory_expected_interval": "FAIL",
+      "alternative_cost_decomposition": "PASS",
+      "interpretation": "Quadratic and linear measured terms coexist with fixed model/optimizer state. PDF §9.2 explicitly accepts decomposition when asymptotic intervals do not apply. Raw slope flags are retained."
+    }
+  },
+  "backend_unavailable": {
+    "flash": "BLOCKED_THIS_WINDOWS_BUILD_NOT_COMPILED; substituted separately forced supported efficient backend"
+  },
+  "automated_tests": {
+    "tests": 88,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "E1_validation": {
+    "none": 0.057861328125,
+    "absolute": 0.12677001953125,
+    "sinusoidal": 0.46124267578125,
+    "rope": 0.10955810546875
+  },
+  "E1_steps": 2000,
+  "E1_common_lr": 0.003,
+  "E1_curves": {
+    "none": {
+      "points": [
+        {
+          "length": 128,
+          "accuracy": 0.05859375,
+          "count": 16384,
+          "RUN_ID": "39a1e67c568afe0e37ae-fbdaf429f02949d3aa954ef0a7413191",
+          "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.9999998293333624,
+          "delta_pos": -0.06707763671875
+        },
+        {
+          "length": 256,
+          "accuracy": 0.041473388671875,
+          "count": 32768,
+          "RUN_ID": "f114fe509648da7b49f7-1b8c6edd068e418bac214fba181fdd09",
+          "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.7078123792000206,
+          "delta_pos": -0.061798095703125
+        },
+        {
+          "length": 512,
+          "accuracy": 0.0307769775390625,
+          "count": 65536,
+          "RUN_ID": "e1ac564e288280b848d4-502bea42f55047859fa3a1731b1f1bda",
+          "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.5252603270222375,
+          "delta_pos": -0.0474090576171875
+        },
+        {
+          "length": 1024,
+          "accuracy": 0.0247650146484375,
+          "count": 131072,
+          "RUN_ID": "6de547c4c16e6eb48409-a3de018b67e940b582cf6a3f528614ae",
+          "parent_RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.422656177866679,
+          "delta_pos": -0.03101348876953125
+        }
+      ],
+      "first_failure": {
+        "length": 256,
+        "reason": "accuracy_at_or_below_chance_plus_005"
+      },
+      "boundary_beyond_grid": false,
+      "longest_measured_effective_length": null
+    },
+    "absolute": {
+      "points": [
+        {
+          "length": 128,
+          "accuracy": 0.12567138671875,
+          "count": 16384,
+          "RUN_ID": "d736946de91b20c626c4-a6f215ba70b84066af2d941dbbe12ee7",
+          "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.9999999204273983,
+          "delta_pos": 0.0
+        },
+        {
+          "length": 256,
+          "accuracy": 0.103271484375,
+          "count": 32768,
+          "RUN_ID": "845d705bc5bb903516c8-748407084dd1465c887abe46f362f47d",
+          "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.8217580696275658,
+          "delta_pos": 0.0
+        },
+        {
+          "length": 512,
+          "accuracy": 0.07818603515625,
+          "count": 65536,
+          "RUN_ID": "f8074c189505727e0ccf-3981eb86dc464a3f9f68f8031b5af2f2",
+          "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.6221466236364727,
+          "delta_pos": 0.0
+        },
+        {
+          "length": 1024,
+          "accuracy": 0.05577850341796875,
+          "count": 131072,
+          "RUN_ID": "cb812fc715c93835c683-84b994ebe1e346af8b5ed4bd654ca86a",
+          "parent_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.4438440637593922,
+          "delta_pos": 0.0
+        }
+      ],
+      "first_failure": {
+        "length": 1024,
+        "reason": "accuracy_at_or_below_chance_plus_005"
+      },
+      "boundary_beyond_grid": false,
+      "longest_measured_effective_length": 512
+    },
+    "sinusoidal": {
+      "points": [
+        {
+          "length": 128,
+          "accuracy": 0.46917724609375,
+          "count": 16384,
+          "RUN_ID": "ba603459beba7c94148e-5e3c9760ad2e49f9872957427a668afd",
+          "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.9999999786860939,
+          "delta_pos": 0.343505859375
+        },
+        {
+          "length": 256,
+          "accuracy": 0.02496337890625,
+          "count": 32768,
+          "RUN_ID": "8c10d0590ae01638d9dd-7337e208cccc48fda1929186f0f36f01",
+          "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.053206711497673004,
+          "delta_pos": -0.07830810546875
+        },
+        {
+          "length": 512,
+          "accuracy": 0.0214691162109375,
+          "count": 65536,
+          "RUN_ID": "4d707f93887c3d8b4457-251ba15323f044d7a744e6bc931b3b9b",
+          "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.04575907278559042,
+          "delta_pos": -0.0567169189453125
+        },
+        {
+          "length": 1024,
+          "accuracy": 0.01654815673828125,
+          "count": 131072,
+          "RUN_ID": "a52079b305a573b0a345-873c9a3089794dd7adb24c832d642ab5",
+          "parent_RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.03527058595307236,
+          "delta_pos": -0.0392303466796875
+        }
+      ],
+      "first_failure": {
+        "length": 256,
+        "reason": "accuracy_at_or_below_chance_plus_005"
+      },
+      "boundary_beyond_grid": false,
+      "longest_measured_effective_length": 128
+    },
+    "rope": {
+      "points": [
+        {
+          "length": 128,
+          "accuracy": 0.1107177734375,
+          "count": 16384,
+          "RUN_ID": "61fdba3d7d201fa4d57f-a4b611115fa4462a806c8e87183cadcf",
+          "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.9999999096802729,
+          "delta_pos": -0.01495361328125
+        },
+        {
+          "length": 256,
+          "accuracy": 0.0150146484375,
+          "count": 32768,
+          "RUN_ID": "3b50ed6e7f33d6181d3f-f56b595426f14655b5f51ccd12feda63",
+          "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.1356118951385596,
+          "delta_pos": -0.0882568359375
+        },
+        {
+          "length": 512,
+          "accuracy": 0.0151519775390625,
+          "count": 65536,
+          "RUN_ID": "2d84c8b5e95f6e3f3142-7b9aff603250409484ac8d6dfaa1ce25",
+          "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.13685224783799765,
+          "delta_pos": -0.0630340576171875
+        },
+        {
+          "length": 1024,
+          "accuracy": 0.01593780517578125,
+          "count": 131072,
+          "RUN_ID": "92370f1efe2928f08dd0-7aab1815493d4fb482d0e0beb0ec0f06",
+          "parent_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+          "status": "COMPLETED_EVALUATION",
+          "ER": 0.14394982161811534,
+          "delta_pos": -0.0398406982421875
+        }
+      ],
+      "first_failure": {
+        "length": 256,
+        "reason": "accuracy_at_or_below_chance_plus_005"
+      },
+      "boundary_beyond_grid": false,
+      "longest_measured_effective_length": 128
+    }
+  },
+  "E2": {
+    "explicit": {
+      "RUN_IDs": [
+        "24f7a8ba7960c3f9e999-f228a00ba2c347bcbb206618a346bcf5",
+        "a7b35549eff6ece9eb69-a9b4449f96a24e4292114bc491bdc52d",
+        "e5d04a9497324471d3a0-e6e5c7472e18460ea27e19556d23e10b",
+        "4931af932992351dfa50-cec56a3b47ad417a8c33b962b88da271",
+        "a086c993bc6d504fa01c-c14c5e9c287546348a7e18640a62bf27"
+      ],
+      "slopes": {
+        "forward_seconds": {
+          "global": 0.11808899087595082,
+          "intercept": -6.604347494081704,
+          "longest_two": -0.10425486189225057,
+          "doubling_ratios": [
+            {
+              "L1": 64,
+              "L2": 128,
+              "ratio": 1.0927773109633059
+            },
+            {
+              "L1": 128,
+              "L2": 256,
+              "ratio": 0.927678177174512
+            },
+            {
+              "L1": 256,
+              "L2": 512,
+              "ratio": 1.4006572339546346
+            },
+            {
+              "L1": 512,
+              "L2": 1024,
+              "ratio": 0.9302853019597279
+            }
+          ]
+        },
+        "training_step_seconds": {
+          "global": 0.014907845698809276,
+          "intercept": -4.768129932314365,
+          "longest_two": -0.02225715749999673,
+          "doubling_ratios": [
+            {
+              "L1": 64,
+              "L2": 128,
+              "ratio": 1.0600748293701756
+            },
+            {
+              "L1": 128,
+              "L2": 256,
+              "ratio": 1.043816284997721
+            },
+            {
+              "L1": 256,
+              "L2": 512,
+              "ratio": 0.963630772991724
+            },
+            {
+              "L1": 512,
+              "L2": 1024,
+              "ratio": 0.9846909080705261
+            }
+          ]
+        },
+        "peak_memory_bytes": {
+          "global": 0.43567122093066024,
+          "intercept": 16.070632565449092,
+          "longest_two": 1.0864807024842345,
+          "doubling_ratios": [
+            {
+              "L1": 64,
+              "L2": 128,
+              "ratio": 1.0360999515628115
+            },
+            {
+              "L1": 128,
+              "L2": 256,
+              "ratio": 1.1312424375756243
+            },
+            {
+              "L1": 256,
+              "L2": 512,
+              "ratio": 1.4298858677816537
+            },
+            {
+              "L1": 512,
+              "L2": 1024,
+              "ratio": 2.123553863023946
+            }
+          ]
+        }
+      },
+      "decomposition": {
+        "forward_seconds": {
+          "terms": "a L² + b L + c; coefficients normalized at longestL",
+          "longest_L_quadratic_linear_constant_contributions": [
+            0.0,
+            0.0008430472396358574,
+            0.002307373194601799
+          ],
+          "longest_L_component_fractions": [
+            0.0,
+            0.26759832766252967,
+            0.7324016723374702
+          ],
+          "fitted_values": [
+            0.00236006364707904,
+            0.0024127540995562808,
+            0.002518135004510763,
+            0.0027288968144197276,
+            0.0031504204342376564
+          ],
+          "relative_RMSE": 0.09604240402893599,
+          "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+        },
+        "training_step_seconds": {
+          "terms": "a L² + b L + c; coefficients normalized at longestL",
+          "longest_L_quadratic_linear_constant_contributions": [
+            0.0,
+            0.0001148368457298267,
+            0.009188828055605173
+          ],
+          "longest_L_component_fractions": [
+            0.0,
+            0.012343183782699284,
+            0.9876568162173007
+          ],
+          "fitted_values": [
+            0.009196005358463287,
+            0.009203182661321401,
+            0.00921753726703763,
+            0.009246246478470086,
+            0.009303664901335
+          ],
+          "relative_RMSE": 0.03208335736161013,
+          "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+        },
+        "peak_memory_bytes": {
+          "terms": "a L² + b L + c; coefficients normalized at longestL",
+          "longest_L_quadratic_linear_constant_contributions": [
+            170695289.4421253,
+            15097876.726122646,
+            70050615.21568629
+          ],
+          "longest_L_component_fractions": [
+            0.6671856103704545,
+            0.059012091849384773,
+            0.2738022977801607
+          ],
+          "fitted_values": [
+            71661010.98545226,
+            74604963.70398483,
+            84493539.98734978,
+            120273375.93927893,
+            255843781.38393423
+          ],
+          "relative_RMSE": 0.0014858627892575613,
+          "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+        }
+      },
+      "acceptance": {
+        "forward_quadratic_interval": "NOT_APPLICABLE",
+        "memory_expected_interval": "FAIL",
+        "alternative_cost_decomposition": "PASS",
+        "interpretation": "Quadratic and linear measured terms coexist with fixed model/optimizer state. PDF §9.2 explicitly accepts decomposition when asymptotic intervals do not apply. Raw slope flags are retained."
+      },
+      "theory_attention_to_projections_MAC_ratio": {
+        "64": 0.125,
+        "128": 0.25,
+        "256": 0.5,
+        "512": 1.0,
+        "1024": 2.0
+      },
+      "measured_interpretation": {
+        "time": "At largestL, descriptive forward fit fractions quadratic/linear/constant are [0.0, 0.26759832766252967, 0.7324016723374702]. Small fixed-width GPU calls are dominated by dispatch/synchronization and fixed overhead in this timing range. Nonmonotone raw times prevent a clean asymptotic quadratic-time validation; raw samples remain published.",
+        "memory": "At largestL, descriptive memory fit fractions quadratic/linear/constant are [0.6671856103704545, 0.059012091849384773, 0.2738022977801607]. Explicit storage has a large L² component; efficient storage is predominantly fixed+linear. Total peak slopes are suppressed by the constant allocator/library/model/optimizer baseline.",
+        "formula_3_10": "Attention products MAC=2B L²d perblock; QKV/output plusFFN MAC=8B Ld² forFFN2d. Their ratioL/(4d) ranges .125..2 on thisgrid. Arithmetic counts do not imply proportional walltime.",
+        "fit_limit": "Three-term nonnegative regression is descriptive; five lengths cannot establish unique causal contributions or measure hardware utilization from coefficients."
+      }
+    },
+    "efficient": {
+      "RUN_IDs": [
+        "1550b6a9b24f1e551915-4edd8677db9c4fe19e100650ebfae848",
+        "6b665e12a6c53dfe2711-6bacc96b732a4dec945d276cfc54cb22",
+        "54002e33bd89266b4aa0-5d661f49f1044fb7ac129f098f820b8b",
+        "d07391af265a5628039e-173659cdb29b4766b24ffe9bd80cf1b3",
+        "e648147c7ab327beb2f0-876b5110f59748429fd2dd3d6c803968"
+      ],
+      "slopes": {
+        "forward_seconds": {
+          "global": 0.11865200086127968,
+          "intercept": -6.900747800466271,
+          "longest_two": 0.7495698427551258,
+          "doubling_ratios": [
+            {
+              "L1": 64,
+              "L2": 128,
+              "ratio": 0.9548154910411297
+            },
+            {
+              "L1": 128,
+              "L2": 256,
+              "ratio": 1.0233758938353004
+            },
+            {
+              "L1": 256,
+              "L2": 512,
+              "ratio": 0.9375243284143038
+            },
+            {
+              "L1": 512,
+              "L2": 1024,
+              "ratio": 1.6812914580689944
+            }
+          ]
+        },
+        "training_step_seconds": {
+          "global": 0.025052315619011483,
+          "intercept": -4.956933884865209,
+          "longest_two": 0.3197921960317166,
+          "doubling_ratios": [
+            {
+              "L1": 64,
+              "L2": 128,
+              "ratio": 0.9084605229689684
+            },
+            {
+              "L1": 128,
+              "L2": 256,
+              "ratio": 1.043321309128401
+            },
+            {
+              "L1": 256,
+              "L2": 512,
+              "ratio": 0.933981301701709
+            },
+            {
+              "L1": 512,
+              "L2": 1024,
+              "ratio": 1.2481507538978631
+            }
+          ]
+        },
+        "peak_memory_bytes": {
+          "global": 0.12713944005173985,
+          "intercept": 17.511141171139574,
+          "longest_two": 0.2596600012307421,
+          "doubling_ratios": [
+            {
+              "L1": 64,
+              "L2": 128,
+              "ratio": 1.0245618048208618
+            },
+            {
+              "L1": 128,
+              "L2": 256,
+              "ratio": 1.0552578700602813
+            },
+            {
+              "L1": 256,
+              "L2": 512,
+              "ratio": 1.1093832645720936
+            },
+            {
+              "L1": 512,
+              "L2": 1024,
+              "ratio": 1.1971965290359492
+            }
+          ]
+        }
+      },
+      "decomposition": {
+        "forward_seconds": {
+          "terms": "a L² + b L + c; coefficients normalized at longestL",
+          "longest_L_quadratic_linear_constant_contributions": [
+            0.0010695387033760786,
+            0.0,
+            0.0016983535380907257
+          ],
+          "longest_L_component_fractions": [
+            0.3864090831835607,
+            0.0,
+            0.6135909168164394
+          ],
+          "fitted_values": [
+            0.0017025314236507885,
+            0.0017150650803309769,
+            0.0017651997070517306,
+            0.001965738213934745,
+            0.002767892241466804
+          ],
+          "relative_RMSE": 0.07292926695935455,
+          "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+        },
+        "training_step_seconds": {
+          "terms": "a L² + b L + c; coefficients normalized at longestL",
+          "longest_L_quadratic_linear_constant_contributions": [
+            0.0013214800580806892,
+            0.0,
+            0.007756272119822612
+          ],
+          "longest_L_component_fractions": [
+            0.14557348913945709,
+            0.0,
+            0.8544265108605429
+          ],
+          "fitted_values": [
+            0.00776143415129949,
+            0.0077769202457301225,
+            0.007838864623452655,
+            0.008086642134342783,
+            0.009077752177903301
+          ],
+          "relative_RMSE": 0.05219873527401395,
+          "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+        },
+        "peak_memory_bytes": {
+          "terms": "a L² + b L + c; coefficients normalized at longestL",
+          "longest_L_quadratic_linear_constant_contributions": [
+            1468735.959519373,
+            31916073.452245306,
+            69482777.09803922
+          ],
+          "longest_L_component_fractions": [
+            0.014277927667520358,
+            0.31026365578435644,
+            0.6754584165481232
+          ],
+          "fitted_values": [
+            71483268.93864644,
+            73495235.27893738,
+            77553591.45857051,
+            85807997.81404172,
+            102867586.5098039
+          ],
+          "relative_RMSE": 0.0012882154002850114,
+          "scope": "descriptive nonnegative fit; projection/attention/constant assignment is a model, not isolated mechanism proof"
+        }
+      },
+      "acceptance": {
+        "forward_quadratic_interval": "NOT_APPLICABLE",
+        "memory_expected_interval": "FAIL",
+        "alternative_cost_decomposition": "PASS",
+        "interpretation": "Quadratic and linear measured terms coexist with fixed model/optimizer state. PDF §9.2 explicitly accepts decomposition when asymptotic intervals do not apply. Raw slope flags are retained."
+      },
+      "theory_attention_to_projections_MAC_ratio": {
+        "64": 0.125,
+        "128": 0.25,
+        "256": 0.5,
+        "512": 1.0,
+        "1024": 2.0
+      },
+      "measured_interpretation": {
+        "time": "At largestL, descriptive forward fit fractions quadratic/linear/constant are [0.3864090831835607, 0.0, 0.6135909168164394]. Small fixed-width GPU calls are dominated by dispatch/synchronization and fixed overhead in this timing range. Nonmonotone raw times prevent a clean asymptotic quadratic-time validation; raw samples remain published.",
+        "memory": "At largestL, descriptive memory fit fractions quadratic/linear/constant are [0.014277927667520358, 0.31026365578435644, 0.6754584165481232]. Explicit storage has a large L² component; efficient storage is predominantly fixed+linear. Total peak slopes are suppressed by the constant allocator/library/model/optimizer baseline.",
+        "formula_3_10": "Attention products MAC=2B L²d perblock; QKV/output plusFFN MAC=8B Ld² forFFN2d. Their ratioL/(4d) ranges .125..2 on thisgrid. Arithmetic counts do not imply proportional walltime.",
+        "fit_limit": "Three-term nonnegative regression is descriptive; five lengths cannot establish unique causal contributions or measure hardware utilization from coefficients."
+      }
+    }
+  },
+  "E3": {
+    "deltas": [
+      -0.0882568359375,
+      -0.07147216796875,
+      -0.056610107421875
+    ],
+    "mean": -0.072113037109375,
+    "sample_std": 0.01583309481361658,
+    "same_nonzero_sign": true,
+    "established": true,
+    "A": "rope",
+    "B": "absolute",
+    "L_star": 256,
+    "rows": [
+      {
+        "position": "rope",
+        "seed": 1,
+        "length": 256,
+        "accuracy": 0.0150146484375,
+        "training_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "evaluation_RUN_ID": "73af15a95254a9e7505e-2e6fac200dc94a5cb29771d88a799892",
+        "reused_E1": true
+      },
+      {
+        "position": "rope",
+        "seed": 2,
+        "length": 256,
+        "accuracy": 0.022491455078125,
+        "training_RUN_ID": "aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd",
+        "evaluation_RUN_ID": "193c197aef769453e75d-e9a9467ad1ae40259380dc6fa5f2de8a",
+        "reused_E1": false
+      },
+      {
+        "position": "rope",
+        "seed": 3,
+        "length": 256,
+        "accuracy": 0.01702880859375,
+        "training_RUN_ID": "614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8",
+        "evaluation_RUN_ID": "eb89d1360a5bbf004cd5-db43c23a876243ef9b928d34e4eeb852",
+        "reused_E1": false
+      },
+      {
+        "position": "absolute",
+        "seed": 1,
+        "length": 256,
+        "accuracy": 0.103271484375,
+        "training_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+        "evaluation_RUN_ID": "81e535c7a7b9c0de7464-43393f737a44426d8e19b60afe00a413",
+        "reused_E1": true
+      },
+      {
+        "position": "absolute",
+        "seed": 2,
+        "length": 256,
+        "accuracy": 0.093963623046875,
+        "training_RUN_ID": "d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28",
+        "evaluation_RUN_ID": "f8268a85bca09e3e6428-fb23fd829ffb493996177de32bea4628",
+        "reused_E1": false
+      },
+      {
+        "position": "absolute",
+        "seed": 3,
+        "length": 256,
+        "accuracy": 0.073638916015625,
+        "training_RUN_ID": "599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c",
+        "evaluation_RUN_ID": "91d130aa0b251a01039b-c16e40fd77ae43b48536503b6812c710",
+        "reused_E1": false
+      }
+    ],
+    "hypothesis_supported": true,
+    "conclusion": "различие установлено"
+  },
+  "paired_integrity": [
+    {
+      "seed": 1,
+      "only_PE_differs": true,
+      "common_input_sha256": "39d2ac814615493cf43a1d8c503aa98ddb8c37b0b72a1b437681cb7144d64ea3",
+      "training_RUN_IDs": [
+        "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec"
+      ],
+      "same_initial_backbone_test": "test_backbone_initialization_common_across_position_modes"
+    },
+    {
+      "seed": 2,
+      "only_PE_differs": true,
+      "common_input_sha256": "bbea5f3470eff2d76b6576148bea0ae0176bacf0244f6feca208b00f6c649624",
+      "training_RUN_IDs": [
+        "aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd",
+        "d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28"
+      ],
+      "same_initial_backbone_test": "test_backbone_initialization_common_across_position_modes"
+    },
+    {
+      "seed": 3,
+      "only_PE_differs": true,
+      "common_input_sha256": "5a88b722124f5b0071d089151afe0a11abb1f18bb334055630557b37670c874d",
+      "training_RUN_IDs": [
+        "614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8",
+        "599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c"
+      ],
+      "same_initial_backbone_test": "test_backbone_initialization_common_across_position_modes"
+    }
+  ],
+  "completed_formal_training_runs": 10,
+  "formal_training_updates": 20000,
+  "formal_training_seconds": 293.60006700000304,
+  "completed_training_runs_including_smoke_budget": 12,
+  "training_seconds_including_smoke_budget": 295.3451643000044,
+  "failed_training_invocations_preserved": 1,
+  "training_runs": [
+    {
+      "label": "smoke",
+      "RUN_ID": "0750102e0a9cdebc4fcf-08fb5c88ddc642bfa9ff11e965f3f04b",
+      "purpose": "smoke",
+      "steps": 2,
+      "training_seconds": 0.40194460000202525,
+      "peak_gpu_memory_bytes": 147275264
+    },
+    {
+      "label": "budget",
+      "RUN_ID": "5fc2480955e69be2a244-80b649b55173477e81300d3a269de004",
+      "purpose": "budget",
+      "steps": 100,
+      "training_seconds": 1.3431526999993366,
+      "peak_gpu_memory_bytes": 155204096
+    },
+    {
+      "label": "LR_0.0003",
+      "RUN_ID": "24c37688180bcc4dbad0-f29883a005b94f14805677b347e8cb09",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 26.943853799999488,
+      "peak_gpu_memory_bytes": 151815680
+    },
+    {
+      "label": "LR_0.001",
+      "RUN_ID": "5fb785f4f536a5d02407-7c3736e49708459986436f31bf6e0cbb",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 27.037366999997175,
+      "peak_gpu_memory_bytes": 155204096
+    },
+    {
+      "label": "LR_0.003",
+      "RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 27.740734999999404,
+      "peak_gpu_memory_bytes": 158592512
+    },
+    {
+      "label": "E1_none_S2000",
+      "RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 26.221611500001018,
+      "peak_gpu_memory_bytes": 151815680
+    },
+    {
+      "label": "E1_absolute_S2000",
+      "RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 26.23133510000116,
+      "peak_gpu_memory_bytes": 155400704
+    },
+    {
+      "label": "E1_rope_S2000",
+      "RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 32.94963120000102,
+      "peak_gpu_memory_bytes": 158854656
+    },
+    {
+      "label": "E3_rope_j2",
+      "RUN_ID": "aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 36.507621600001585,
+      "peak_gpu_memory_bytes": 151881216
+    },
+    {
+      "label": "E3_absolute_j2",
+      "RUN_ID": "d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 27.859788800000388,
+      "peak_gpu_memory_bytes": 155400704
+    },
+    {
+      "label": "E3_rope_j3",
+      "RUN_ID": "614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 34.620661900000414,
+      "peak_gpu_memory_bytes": 155466240
+    },
+    {
+      "label": "E3_absolute_j3",
+      "RUN_ID": "599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c",
+      "purpose": "formal",
+      "steps": 2000,
+      "training_seconds": 27.487461100001383,
+      "peak_gpu_memory_bytes": 158985728
+    }
+  ],
+  "checkpoints": 24,
+  "formal_checkpoints": 20,
+  "historical_files_preserved": 1538,
+  "preregistration_commit": "4d6e559acec22b6af2d78e8ef96ff452a77b1d4c",
+  "checkpoint_storage": "Local runs/lab3/*/checkpoints; ignored byGit; hash index committed",
+  "limitations": [
+    "E3 seed1 and comparison length were selected using exploratory E1; seeds2/3 were unseen at preregistration.",
+    "Only one synthetic Copy protocol, 3 seeds and one device; no natural-text or universal length-generalization claim.",
+    "NoPE predicts a repeated blank-token output and can exploit fragment frequency; chance1/64 is a random guess baseline, not an optimal bag-of-tokens upper bound.",
+    "E2 wall latencies are not monotone at these smallGPU workloads; launch/synchronization and operating variability matter. Raw slope failures retained; not evidence against attention complexity.",
+    "Memory peaks include constant weights/optimizer/library allocations; fit contributions are descriptive, not isolated causal proof.",
+    "Flash unsupported; efficient SDPA is explicitly forced and independently measured, not relabelled Flash."
+  ],
+  "continuation_state": {
+    "active_processes": [],
+    "next_lab_not_started": 4,
+    "reports_created": false
+  }
+}

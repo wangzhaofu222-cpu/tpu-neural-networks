@@ -22,6 +22,11 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='simclr':
+        from src.ssl.simclr import SimCLR
+        return SimCLR(cfg)
+    if cfg['name']=='linear_probe':
+        return nn.Linear(cfg['input_dim'],cfg['classes'])
     if cfg['name']=='sequence_transformer':
         from src.models.sequence.transformer import SequenceTransformer
         return SequenceTransformer(cfg)

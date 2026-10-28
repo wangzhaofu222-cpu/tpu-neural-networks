@@ -101,6 +101,16 @@ def validate(cfg):
                 raise ValueError('Lab3 canonical training budget/optimizer mismatch')
         if d['evaluation_examples']<200 and cfg['experiment']['purpose']!='test':raise ValueError('Lab3 needs >=200 evaluation examples')
         if m['width']%m['heads'] or (m['width']//m['heads'])%2:raise ValueError('Even head dimension required')
+    if cfg['experiment']['lab']==4:
+        if cfg['data']['name'] not in {'ssl_cifar10','ssl_features','ssl_test_fixture','test_fixture'}:raise ValueError('InvalidLab4 data')
+        if cfg['model']['name']=='simclr':
+            m=cfg['model']
+            if (m['projection_hidden'],m['projection_dim'])!=(512,128):raise ValueError('Lab4 projection dimensions fixed')
+            if cfg['experiment']['purpose']=='formal' and cfg['experiment']['role'] not in {'feature_extraction','probe_evaluation'}:
+                role=cfg['experiment']['role'];epochs=cfg['train']['epochs'];batch=cfg['train']['batch_size']
+                if epochs!=(100 if role=='E1_SSL' else 25) and role!='B0':raise ValueError('Lab4 GPU epoch budget mismatch')
+                if batch!=(64 if role=='CF1' else 256):raise ValueError('Lab4 effectiveN mismatch')
+                if m['mode']=='contrastive' and cfg['contrastive']['tau']!=cfg['profile']['lab4_tau']:raise ValueError('Lab4 assignedtau mismatch')
     if cfg['train']['accumulation_steps'] < 1:
         raise ValueError('accumulation_steps must be positive')
     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:

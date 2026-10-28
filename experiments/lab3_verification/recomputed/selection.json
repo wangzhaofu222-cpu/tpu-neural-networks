@@ -1,0 +1,37 @@
+{
+  "positions": [
+    "rope",
+    "absolute"
+  ],
+  "L_star": 256,
+  "predicted_sign": -1,
+  "E1_candidates": [
+    {
+      "length": 256,
+      "delta_rope_minus_absolute_P2": -0.0882568359375,
+      "RUN_IDs": [
+        "3b50ed6e7f33d6181d3f-f56b595426f14655b5f51ccd12feda63",
+        "845d705bc5bb903516c8-748407084dd1465c887abe46f362f47d"
+      ]
+    },
+    {
+      "length": 512,
+      "delta_rope_minus_absolute_P2": -0.0630340576171875,
+      "RUN_IDs": [
+        "2d84c8b5e95f6e3f3142-7b9aff603250409484ac8d6dfaa1ce25",
+        "f8074c189505727e0ccf-3981eb86dc464a3f9f68f8031b5af2f2"
+      ]
+    },
+    {
+      "length": 1024,
+      "delta_rope_minus_absolute_P2": -0.0398406982421875,
+      "RUN_IDs": [
+        "92370f1efe2928f08dd0-7aab1815493d4fb482d0e0beb0ec0f06",
+        "cb812fc715c93835c683-84b994ebe1e346af8b5ed4bd654ca86a"
+      ]
+    }
+  ],
+  "selection": "Compare RoPE versus absoluteP2 as requested by counterfactualQ4; choose exploratory E1 test length with maximal absolute paired difference, ties shorter length. Seed1 is reused and selection-exposed; newseeds2/3 unseen.",
+  "registered_at_utc": "2026-10-28T08:51:38.314495+00:00",
+  "E1_sha256": "fa156bfd68cd201b6bb6adf46537c834f50b4c96c2ccb4d97e5b8d3447e88ce9"
+}

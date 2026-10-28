@@ -1,0 +1,14 @@
+{
+  "hardware": {
+    "at_utc": "2026-10-28T08:42:20.953653+00:00",
+    "nvidia_smi": "NVIDIA GeForce RTX 3060 Laptop GPU, 6144 MiB, 2068 MiB, 39, 37 %",
+    "returncode": 0
+  },
+  "RUN_ID": "5fc2480955e69be2a244-80b649b55173477e81300d3a269de004",
+  "measured100_steps_seconds": 1.3431526999993366,
+  "training_peak_gpu_memory_bytes": 155204096,
+  "seconds_per_step_including_validation_checkpoint": 0.013431526999993367,
+  "estimated_2000_step_run_seconds": 26.863053999986732,
+  "maximum_planned_scientific_updates": 80000,
+  "scope": "Smoke and budget are not scientific formal experiments; conservative estimate includes validation and checkpoint overhead."
+}

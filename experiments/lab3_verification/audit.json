@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "protected_files": 1908,
+  "original_records_unchanged": true,
+  "checkpoint_count": 24,
+  "formal_training_count": 10,
+  "E3": {
+    "deltas": [
+      -0.0882568359375,
+      -0.07147216796875,
+      -0.056610107421875
+    ],
+    "mean": -0.072113037109375,
+    "sample_std": 0.01583309481361658,
+    "same_nonzero_sign": true,
+    "established": true,
+    "A": "rope",
+    "B": "absolute",
+    "L_star": 256,
+    "rows": [
+      {
+        "position": "rope",
+        "seed": 1,
+        "length": 256,
+        "accuracy": 0.0150146484375,
+        "training_RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+        "evaluation_RUN_ID": "73af15a95254a9e7505e-2e6fac200dc94a5cb29771d88a799892",
+        "reused_E1": true
+      },
+      {
+        "position": "rope",
+        "seed": 2,
+        "length": 256,
+        "accuracy": 0.022491455078125,
+        "training_RUN_ID": "aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd",
+        "evaluation_RUN_ID": "193c197aef769453e75d-e9a9467ad1ae40259380dc6fa5f2de8a",
+        "reused_E1": false
+      },
+      {
+        "position": "rope",
+        "seed": 3,
+        "length": 256,
+        "accuracy": 0.01702880859375,
+        "training_RUN_ID": "614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8",
+        "evaluation_RUN_ID": "eb89d1360a5bbf004cd5-db43c23a876243ef9b928d34e4eeb852",
+        "reused_E1": false
+      },
+      {
+        "position": "absolute",
+        "seed": 1,
+        "length": 256,
+        "accuracy": 0.103271484375,
+        "training_RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+        "evaluation_RUN_ID": "81e535c7a7b9c0de7464-43393f737a44426d8e19b60afe00a413",
+        "reused_E1": true
+      },
+      {
+        "position": "absolute",
+        "seed": 2,
+        "length": 256,
+        "accuracy": 0.093963623046875,
+        "training_RUN_ID": "d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28",
+        "evaluation_RUN_ID": "f8268a85bca09e3e6428-fb23fd829ffb493996177de32bea4628",
+        "reused_E1": false
+      },
+      {
+        "position": "absolute",
+        "seed": 3,
+        "length": 256,
+        "accuracy": 0.073638916015625,
+        "training_RUN_ID": "599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c",
+        "evaluation_RUN_ID": "91d130aa0b251a01039b-c16e40fd77ae43b48536503b6812c710",
+        "reused_E1": false
+      }
+    ],
+    "hypothesis_supported": true,
+    "conclusion": "различие установлено"
+  },
+  "preregistration_commit": "4d6e559acec22b6af2d78e8ef96ff452a77b1d4c",
+  "raw_E2_memory_interval_FAILs_preserved": 2,
+  "statistics_reproduced_from_raw": true,
+  "five_counterfactuals_have_measured_evidence": true
+}

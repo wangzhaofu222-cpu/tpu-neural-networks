@@ -1,0 +1,482 @@
+[
+  {
+    "path": "runs/lab3/0750102e0a9cdebc4fcf-08fb5c88ddc642bfa9ff11e965f3f04b/checkpoints/last.pt",
+    "sha256": "abb7cbe7ef76a309cfb46adcd371fa3e896436ae8ec9744db4aa1eb50343c32d",
+    "RUN_ID": "0750102e0a9cdebc4fcf-08fb5c88ddc642bfa9ff11e965f3f04b",
+    "kind": "last",
+    "purpose": "smoke",
+    "steps": 2,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/0750102e0a9cdebc4fcf-08fb5c88ddc642bfa9ff11e965f3f04b/checkpoints/best.pt",
+    "sha256": "f5df05d8f6cd405eb1ee463af2faddc9ddf9026cdb2c185688a1ab9edf11a3e5",
+    "RUN_ID": "0750102e0a9cdebc4fcf-08fb5c88ddc642bfa9ff11e965f3f04b",
+    "kind": "best",
+    "purpose": "smoke",
+    "steps": 2,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/5fc2480955e69be2a244-80b649b55173477e81300d3a269de004/checkpoints/last.pt",
+    "sha256": "9705e12ad16dbfc0882944bb7b8794f45052463f8ae6239f2b5158e4b442001b",
+    "RUN_ID": "5fc2480955e69be2a244-80b649b55173477e81300d3a269de004",
+    "kind": "last",
+    "purpose": "budget",
+    "steps": 100,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/5fc2480955e69be2a244-80b649b55173477e81300d3a269de004/checkpoints/best.pt",
+    "sha256": "bacc4925fc9660fde59feb1e16ac6968ec00585f15ab746844edf99120ad65a8",
+    "RUN_ID": "5fc2480955e69be2a244-80b649b55173477e81300d3a269de004",
+    "kind": "best",
+    "purpose": "budget",
+    "steps": 100,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/24c37688180bcc4dbad0-f29883a005b94f14805677b347e8cb09/checkpoints/last.pt",
+    "sha256": "e3c53961b3af557ab3d165b9b2ed4706d3e04417e942ee8f68a2abbdd6df48a7",
+    "RUN_ID": "24c37688180bcc4dbad0-f29883a005b94f14805677b347e8cb09",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/24c37688180bcc4dbad0-f29883a005b94f14805677b347e8cb09/checkpoints/best.pt",
+    "sha256": "aebebd44d978ac717c042ec6deeaa15c4caa8badc27874709834f1b8394f35dd",
+    "RUN_ID": "24c37688180bcc4dbad0-f29883a005b94f14805677b347e8cb09",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/5fb785f4f536a5d02407-7c3736e49708459986436f31bf6e0cbb/checkpoints/last.pt",
+    "sha256": "34db36ccb4b59360cb4339ff1de5b117777b86a574cefc22a541b0543fc1e35f",
+    "RUN_ID": "5fb785f4f536a5d02407-7c3736e49708459986436f31bf6e0cbb",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/5fb785f4f536a5d02407-7c3736e49708459986436f31bf6e0cbb/checkpoints/best.pt",
+    "sha256": "ee47a89716a9ed090a284f66eaac8fb41062561a34787a3b519a4b50eee04bd8",
+    "RUN_ID": "5fb785f4f536a5d02407-7c3736e49708459986436f31bf6e0cbb",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3/checkpoints/last.pt",
+    "sha256": "69a4e8071c02f871ea53f402736c9fd8892023921be827da49d6984178e74a41",
+    "RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3/checkpoints/best.pt",
+    "sha256": "e71b72d06260dff47fad5b1eaf3de92e7218e5c89c2f60877a9616f3008afc23",
+    "RUN_ID": "016faa514d674b9c5edf-fd73a71e51454f73964ba6b199eb56f3",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "sinusoidal",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f/checkpoints/last.pt",
+    "sha256": "12a5af603d4dd820b48b7d4281b06d150187e8b70c2aafed2d06710eceb11b16",
+    "RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "none",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f/checkpoints/best.pt",
+    "sha256": "21fa1c3b0ea1af224089100ef9f8acbff7445052a16c6497a49631e85828860c",
+    "RUN_ID": "1b59c4285a88b1bd5719-8044d41be23a4d24921f1dceed84558f",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "none",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec/checkpoints/last.pt",
+    "sha256": "eec670cabdad2e02b14458d6b9ee8297bd13ec794a870500875f70b11e8801fd",
+    "RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "absolute",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec/checkpoints/best.pt",
+    "sha256": "ffa35bfb7d2f94d5227d05e10bcce5ee7b1a4bc15007f8ae5b6d38a2c7b0520c",
+    "RUN_ID": "9c2291805fbd35ff9b3d-a1e0837e91d64d24bb998a56a73133ec",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "absolute",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd/checkpoints/last.pt",
+    "sha256": "3fa61e19c6b0b57346df1964ffa076cc7f9dead9fbd7eb669b3e43ac1fe04e05",
+    "RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "rope",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd/checkpoints/best.pt",
+    "sha256": "ed1b8906a91612519b607b63f6c55b5baedbd549b8220c7537f83d8300e2df20",
+    "RUN_ID": "66f9ba953bfa790af513-ab580c3bd5a94d88a7ac8900f9084ecd",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 1,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "rope",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd/checkpoints/last.pt",
+    "sha256": "43c768652841cbb470a0a25e9b1e226ddf4889142f159c36dea4589c87e49130",
+    "RUN_ID": "aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 2,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "rope",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd/checkpoints/best.pt",
+    "sha256": "98f3666faaba1544c320fb459a058ea7838e64e2d0a61fcd8c5c4962043baba9",
+    "RUN_ID": "aa942c7b2934a5f60b1b-d9d89150325c4b228e1f854372ab9ebd",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 2,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "rope",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28/checkpoints/last.pt",
+    "sha256": "38dea8dc1e96d633d838244baa03ff5eee45522499d99ef7b18ce5b06ffae208",
+    "RUN_ID": "d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 2,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "absolute",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28/checkpoints/best.pt",
+    "sha256": "22b04166a7301de97ba1f26b2f4a215809fb53563b16876b220701beeb87161f",
+    "RUN_ID": "d37eb14e11e88f7cb016-1c72177311be471b8b34585a14bfba28",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 2,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "absolute",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8/checkpoints/last.pt",
+    "sha256": "429d47e60313ce5899b25e952b603956288f21d67c6f9e8e71078e5158d1abee",
+    "RUN_ID": "614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 3,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "rope",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8/checkpoints/best.pt",
+    "sha256": "cf11958f70cdbe0364691c74876e50fd18c208aa99057bae73ebac6eaba390ed",
+    "RUN_ID": "614df9730c4a1b66e551-05d2abbe63564c6a8e044d78ecc0f4a8",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 3,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "rope",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c/checkpoints/last.pt",
+    "sha256": "28f618d17d6b86df282783083255e9db6e808d9f39045f2866eea273ba8c8046",
+    "RUN_ID": "599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c",
+    "kind": "last",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 3,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "absolute",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  },
+  {
+    "path": "runs/lab3/599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c/checkpoints/best.pt",
+    "sha256": "b5b07a1d33cf70cc64887dad9b742e4359b859789310147800adc2683d649e83",
+    "RUN_ID": "599130f3b4f297de5fb5-98d3132bc09747bc92ff14818d3e008c",
+    "kind": "best",
+    "purpose": "formal",
+    "steps": 2000,
+    "seed": 3,
+    "model": {
+      "name": "sequence_transformer",
+      "width": 128,
+      "heads": 4,
+      "ffn": 256,
+      "depth": 2,
+      "position": "absolute",
+      "max_length": 128,
+      "absolute_rule": "P2",
+      "backend": "explicit"
+    }
+  }
+]

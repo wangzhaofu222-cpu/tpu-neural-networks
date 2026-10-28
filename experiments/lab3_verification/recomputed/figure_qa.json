@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "path": "experiments/lab3/figures/attention_heads.png",
+      "visually_inspected": true,
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab3/figures/E1_extrapolation.png",
+      "visually_inspected": true,
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab3/figures/E2_scaling.png",
+      "visually_inspected": true,
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab3/figures/E3_paired_seeds.png",
+      "visually_inspected": true,
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab3/figures/P1_P2.png",
+      "visually_inspected": true,
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab3/figures/training_loss.png",
+      "visually_inspected": true,
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    "readable labels and units",
+    "legends identify PE rules and backends",
+    "no clipping",
+    "all plots generated from saved RUN records",
+    "raw nonmonotone profiler times retained"
+  ]
+}

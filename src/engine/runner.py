@@ -33,8 +33,9 @@ class ExperimentRunner:
         from src.engine.vision_evaluation import evaluate_checkpoint
         return evaluate_checkpoint(source,corruption,level)
 
-    def run(self,resume=None,stop_after_epoch=None,weights_only_epoch=None):
+    def run(self,resume=None,stop_after_epoch=None,weights_only_epoch=None,initialize_only=False):
         cfg = self.config
+        ssl_mode=cfg['model']['name']=='simclr' and cfg['model']['mode']=='contrastive'
         device = torch.device(cfg['runtime']['device'])
         if device.type == 'cuda' and not torch.cuda.is_available():
             raise RuntimeError('CUDA requested but unavailable; no silent CPU fallback')
@@ -124,6 +125,23 @@ class ExperimentRunner:
         if cfg.get('diagnostics', {}).get('enabled'):
             from src.diagnostics.trainability import TrainingDiagnostics
             diagnostics = TrainingDiagnostics(model, ds['train'], cfg, path)
+        representation_monitor=None
+        if cfg.get('representation',{}).get('enabled'):
+            from src.diagnostics.ssl_monitor import RepresentationMonitor
+            representation_monitor=RepresentationMonitor(model,ds['train'],cfg,path)
+        if cfg['model']['name']=='simclr' and not resume:
+            extra0={'best_accuracy':best,'best_epoch':best_epoch,'run_id':path.name,'config_hash':digest(cfg),
+                    'data_fingerprint':data_info['data_fingerprint'],'split_fingerprint':data_info['split_fingerprint'],
+                    'source_hash':code['source_hash'],'first_batch_checksum':None}
+            save_checkpoint(path/'checkpoints/epoch_000.pt',model,optimizer,scheduler,scaler,0,0,g,**extra0)
+            if representation_monitor:representation_monitor.observe(0)
+            if initialize_only:
+                shutil.copy2(path/'checkpoints/epoch_000.pt',path/'checkpoints/last.pt')
+                manifest.update(status='COMPLETED_INITIALIZATION',global_step=0,completed_epoch=0)
+                write_json(path/'manifest.json',manifest)
+                write_json(path/'summary.json',{'RUN_ID':path.name,'status':'COMPLETED_INITIALIZATION','global_step':0,'optimizer_steps':0,
+                    'representation':representation_monitor.last['representation'] if representation_monitor else None})
+                return path
         completed_epoch = start_epoch
         samples_processed=state.get('samples_processed',0) if state else 0
         checkpoint_step=global_step
@@ -135,6 +153,7 @@ class ExperimentRunner:
                 model.train()
                 if hasattr(ds['train'],'set_epoch'):ds['train'].set_epoch(epoch)
                 loss_sum,correct,count = 0.,0,0
+                similarity_sums={'positive_similarity':0.,'negative_similarity':0.}
                 lr_used = optimizer.param_groups[0]['lr']
                 epoch_initial_step = global_step
                 optimizer.zero_grad(set_to_none=True)
@@ -144,7 +163,10 @@ class ExperimentRunner:
                     if budget and time.perf_counter()-wall_start > budget:
                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
                     if first_checksum is None:
-                        first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
+                        if cfg['experiment']['lab']==4:
+                            import hashlib
+                            first_checksum=hashlib.sha256(x.detach().cpu().contiguous().numpy().tobytes()+y.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
+                        else:first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
                     x,y = x.to(device),y.to(device)
                     if step_limit:lr_used=optimizer.param_groups[0]['lr']
                     if cfg['experiment']['lab']==2:
@@ -154,7 +176,10 @@ class ExperimentRunner:
                         diagnostics.begin(batch_index, len(dl['train']))
                     with torch.autocast(device_type=device.type,enabled=cfg['train']['amp']):
                         logits = model(x)
-                        loss = objective(logits,y)
+                        if ssl_mode:
+                            from src.ssl.losses import nt_xent
+                            loss,contrast_stats=nt_xent(*logits,cfg['contrastive']['tau'])
+                        else:loss = objective(logits,y)
                     if not torch.isfinite(loss):
                         raise FloatingPointError('Non-finite training loss')
                     # Normalize the final, possibly shorter accumulation group correctly.
@@ -177,16 +202,20 @@ class ExperimentRunner:
                         if not optimizer_step_skipped:
                             global_step += 1
                             if step_schedule:scheduler.step()
-                    hits,targets=correct_count(logits,y)
+                    hits,targets=(0,len(y)) if ssl_mode else correct_count(logits,y)
+                    if ssl_mode:
+                        for key in similarity_sums:similarity_sums[key]+=contrast_stats[key]*len(y)
                     loss_sum += loss.item()*targets
                     correct += hits
                     count += targets
                     samples_processed += len(y)
-                    self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used,'optimizer_step_skipped':optimizer_step_skipped})
+                    self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used,'optimizer_step_skipped':optimizer_step_skipped,
+                        **(contrast_stats if ssl_mode else {})})
                     if step_limit and global_step>=step_limit:break
                 finished_steps=bool(step_limit and global_step>=step_limit)
                 partial_epoch=batch_index+1<len(dl['train'])
-                val = (evaluate_loader(model,dl['val'],device) if not cfg['train'].get('validation_at_end_only') or finished_steps else {'loss':None,'accuracy':None})
+                evaluate_at_end=finished_steps or (not step_limit and epoch+1==total_epochs)
+                val = (evaluate_loader(model,dl['val'],device) if not ssl_mode and (not cfg['train'].get('validation_at_end_only') or evaluate_at_end) else {'loss':None,'accuracy':None})
                 if diagnostics and not math.isfinite(val['loss']):
                     raise FloatingPointError('Non-finite validation loss')
                 if global_step > epoch_initial_step and not step_schedule:
@@ -196,6 +225,10 @@ class ExperimentRunner:
                           'validation_loss':val['loss'],'train_metric':correct/count,'validation_metric':val['accuracy'],
                           'learning_rate':lr_used,'epoch_time':time.perf_counter()-epoch_start,
                           'peak_gpu_memory_bytes':torch.cuda.max_memory_allocated(device) if device.type=='cuda' else None}
+                if ssl_mode:record.update({k:v/count for k,v in similarity_sums.items()})
+                if representation_monitor and (completed_epoch%cfg['representation']['interval']==0 or completed_epoch==total_epochs):
+                    record['representation']=representation_monitor.observe(completed_epoch)['representation']
+                    record['epoch_time']=time.perf_counter()-epoch_start
                 if step_limit:
                     record.update(data_epochs=samples_processed/len(ds['train']),samples_processed=samples_processed,
                                   partial_epoch=partial_epoch,target_optimizer_steps=step_limit)
@@ -214,11 +247,24 @@ class ExperimentRunner:
                     checkpoint_step=global_step
                 if improved:
                     save_checkpoint(path/'checkpoints/best.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
+                if completed_epoch in cfg['logging'].get('keep_epochs',[]):
+                    save_checkpoint(path/f'checkpoints/epoch_{completed_epoch:03}.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
+                if cfg['experiment']['lab']==4 and cfg['runtime'].get('gpu_stop_temperature') and device.type=='cuda':
+                    import subprocess
+                    measured=subprocess.run(['nvidia-smi','--query-gpu=temperature.gpu,memory.used,utilization.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True)
+                    self._append(path/'hardware.jsonl',{'epoch':completed_epoch,'nvidia_smi':measured.stdout.strip(),'returncode':measured.returncode})
+                    if measured.returncode==0 and float(measured.stdout.split(',')[0])>=cfg['runtime']['gpu_stop_temperature']:
+                        raise RuntimeError('GPU temperature safety threshold reached; complete epoch checkpoint preserved')
                 write_json(path/'summary.json',{**record,'RUN_ID':manifest['RUN_ID'],'EXP_ID':manifest['EXP_ID'],
                            'best_accuracy':best,'best_epoch':best_epoch,'first_batch_checksum':first_checksum,
                            'checkpoint_for_final_metric':'checkpoints/last.pt','purpose':cfg['experiment']['purpose']})
-                if not step_limit or finished_steps or global_step-console_step>=cfg['logging'].get('console_every_steps',500):
-                    print(json.dumps({'RUN_ID':manifest['RUN_ID'],**record}),flush=True)
+                console_due=(not step_limit or finished_steps or global_step-console_step>=cfg['logging'].get('console_every_steps',500))
+                if cfg['model']['name']=='linear_probe':console_due=(epoch+1==total_epochs)
+                if console_due:
+                    console_record={**record}
+                    if cfg['experiment']['lab']==4 and 'representation' in console_record:
+                        console_record['representation']={name:{k:v for k,v in stats.items() if k!='eigenvalues'} for name,stats in console_record['representation'].items()}
+                    print(json.dumps({'RUN_ID':manifest['RUN_ID'],**console_record}),flush=True)
                     console_step=global_step
                 if finished_steps:
                     status='COMPLETED'

@@ -1,0 +1,30 @@
+[
+  {
+    "backend": "FLASH_ATTENTION",
+    "supported": false,
+    "exception": "No available kernel. Aborting execution.",
+    "warnings": [
+      "Memory efficient kernel not used because: (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\aten\\src\\ATen\\native\\transformers\\cuda\\sdp_utils.cpp:838.)",
+      "Memory Efficient attention has been runtime disabled. (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\aten\\src\\ATen/native/transformers/sdp_utils_cpp.h:548.)",
+      "Flash attention kernel not used because: (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\aten\\src\\ATen\\native\\transformers\\cuda\\sdp_utils.cpp:840.)",
+      "Torch was not compiled with flash attention. (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\aten\\src\\ATen\\native\\transformers\\cuda\\sdp_utils.cpp:659.)",
+      "CuDNN attention kernel not used because: (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\aten\\src\\ATen\\native\\transformers\\cuda\\sdp_utils.cpp:842.)",
+      "CuDNN attention has been runtime disabled. (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\pytorch\\aten\\src\\ATen\\native\\transformers\\cuda\\sdp_utils.cpp:578.)"
+    ]
+  },
+  {
+    "backend": "EFFICIENT_ATTENTION",
+    "supported": true,
+    "warnings": []
+  },
+  {
+    "backend": "CUDNN_ATTENTION",
+    "supported": true,
+    "warnings": []
+  },
+  {
+    "backend": "MATH",
+    "supported": true,
+    "warnings": []
+  }
+]

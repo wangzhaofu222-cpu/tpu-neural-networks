@@ -1,0 +1,49 @@
+diff --git a/src/diagnostics/attention_stats.py b/src/diagnostics/attention_stats.py
+index 8a9d4c9..e45b742 100644
+--- a/src/diagnostics/attention_stats.py
++++ b/src/diagnostics/attention_stats.py
+@@ -13,5 +13,8 @@ def attention_statistics(a,targets):
+     return result
+ 
+ def summarize(stats):
+-    return {name:{'per_head':torch.nanmean(v,dim=(0,2)).cpu().tolist(),
+-                  'per_head_query':torch.nanmean(v,dim=0).cpu().tolist()} for name,v in stats.items()}
++    def values(t):
++        if t.ndim:return [values(v) for v in t]
++        return t.item() if torch.isfinite(t) else None
++    return {name:{'per_head':values(torch.nanmean(v,dim=(0,2)).cpu()),
++                  'per_head_query':values(torch.nanmean(v,dim=0).cpu())} for name,v in stats.items()}
+diff --git a/src/engine/sequence_evaluation.py b/src/engine/sequence_evaluation.py
+index 1a8e930..fc92594 100644
+--- a/src/engine/sequence_evaluation.py
++++ b/src/engine/sequence_evaluation.py
+@@ -67,7 +67,12 @@ def profile(cfg,length,dtype=torch.float32):
+     info={'data_fingerprint':digest({'length':length,'batch':4,'dtype':str(dtype),'seed':cfg['experiment']['seed']}),
+           'split_fingerprint':digest({'profiling_only':True}),'synthetic_fixture':False}
+     path,m=create_run(cfg,code,info,model)
+-    result=safe_measure(model,length,warmup=cfg['profiling']['warmup'],repeats=cfg['profiling']['repeats'])
++    try:result=safe_measure(model,length,warmup=cfg['profiling']['warmup'],repeats=cfg['profiling']['repeats'])
++    except Exception as exc:
++        result={'status':'FAILED_PROFILE','RUN_ID':path.name,'length':length,'exception':str(exc)}
++        write_json(path/'failure.json',result);write_json(path/'summary.json',result)
++        m.update(status='FAILED_PROFILE',global_step=0);write_json(path/'manifest.json',m)
++        raise
+     result.update(RUN_ID=path.name,optimizer_steps=0,operation='resource_profiling_training_step_not_scientific_training')
+     write_json(path/'summary.json',result);write_json(path/'resources.json',result)
+     m.update(status=result['status'],global_step=0);write_json(path/'manifest.json',m)
+diff --git a/src/models/sequence/transformer.py b/src/models/sequence/transformer.py
+index 5227954..c5473cb 100644
+--- a/src/models/sequence/transformer.py
++++ b/src/models/sequence/transformer.py
+@@ -17,8 +17,9 @@ class Attention(nn.Module):
+             if mask is not None:scores=scores.masked_fill(~mask,float('-inf'))
+             a=scores.softmax(-1);z=a@v
+         else:
+-            if self.backend!='flash':raise ValueError(self.backend)
+-            with sdpa_kernel(SDPBackend.FLASH_ATTENTION):
++            backends={'flash':SDPBackend.FLASH_ATTENTION,'efficient':SDPBackend.EFFICIENT_ATTENTION,'sdpa_math':SDPBackend.MATH,'cudnn':SDPBackend.CUDNN_ATTENTION}
++            if self.backend not in backends:raise ValueError(self.backend)
++            with sdpa_kernel(backends[self.backend]):
+                 z=F.scaled_dot_product_attention(q,k,v,attn_mask=mask,dropout_p=0.,is_causal=False)
+             a=None
+         return self.out(z.transpose(1,2).reshape(b,l,d)),a
