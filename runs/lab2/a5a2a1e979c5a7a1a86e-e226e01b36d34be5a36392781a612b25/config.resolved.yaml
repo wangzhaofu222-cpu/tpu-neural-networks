@@ -1,0 +1,98 @@
+experiment:
+  name: eval_495f34d7f6c639e46a93-9104dc9ff56f47f5aab182fd287ed1a8_patch_shuffle_3
+  lab: 2
+  seed: 1
+  deterministic: true
+  purpose: formal
+  resume_ablation: none
+  role: evaluation
+data:
+  name: cifar10
+  root: data
+  split_path: splits/cifar10.json
+  split_seed: 1729
+  val_per_class: 500
+  cal_per_class: 200
+  train_fraction: 0.15
+  num_workers: 0
+  download: false
+  augmentation: A1
+model:
+  name: cifar_vit
+  classes: 10
+  image_size: 32
+  patch_size: 4
+  num_layers: 6
+  num_heads: 6
+  hidden_dim: 384
+  mlp_dim: 1536
+  comparison_mode: param_matched
+  pretrained: false
+optimizer:
+  name: adamw
+  lr: 0.0003
+  weight_decay: 0.05
+  momentum: 0.9
+scheduler:
+  name: cosine
+  unit: optimizer_step
+  warmup_fraction: 0.05
+  warmup_epochs: 0
+  step_size: 100
+  gamma: 1.0
+train:
+  epochs: 1000
+  batch_size: 128
+  amp: false
+  accumulation_steps: 1
+  max_steps: 10000
+  validation_at_end_only: true
+logging:
+  backend: local
+  save_every: 1
+  run_root: runs/lab2
+  save_every_steps: 1000
+  console_every_steps: 500
+  profile_on_finish: true
+runtime:
+  device: cuda
+  threads: 2
+  max_seconds: 7200
+  dependency_lock: requirements.lock.txt
+profiling:
+  warmup: 10
+  repeats: 30
+profile:
+  id: P3adf02
+  student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+  base_seed: 987693601
+  lab2_fractions:
+  - 0.05
+  - 0.15
+  - 0.3
+  - 0.6
+  - 1.0
+  lab2_corruptions:
+  - blur
+  - contrast
+  - patch_shuffle
+  lab2_strong_aug: randaugment+cutmix
+evaluation:
+  parent_RUN_ID: 495f34d7f6c639e46a93-9104dc9ff56f47f5aab182fd287ed1a8
+  checkpoint_sha256: dfcd9dc77c43649cbc5d4c78bc7212ff361f46ff4c222a67805940190bc1d011
+  split: 1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574
+  normalization:
+    mean:
+    - 0.4913593061552382
+    - 0.4820096833319084
+    - 0.4463430876474862
+    std:
+    - 0.2466760290143046
+    - 0.24313375859044625
+    - 0.26125503162712693
+    source: full train role only
+  corruption: patch_shuffle
+  level: 3
+  seed: 987693601
+  version: 1
+  input_sha256: ffb0212034b85578ebfe1bb1e09638cb78a0250b68cd345c2ec1745167f14eee

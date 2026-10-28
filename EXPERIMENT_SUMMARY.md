@@ -27,11 +27,12 @@ Phase A/B已完成；Lab0阶段验收：**PASS**。整个Lab0–Lab9课程项目
 |---|---|---|
 | 0 | PASS | PDF经渲染检查；LaTeX编译器启动1060，tex编译未验证 |
 | 1 | 完成：实现、正式E1–E3、5CF、已编译俄语报告 | 缩放残差L96信号上界FAIL，已实测诊断；α=1数值失败保留 |
-| 2–3 | NOT RUN；需求/profile已登记 | 按依赖次序逐个开发、测试、预算后运行 |
+| 2 | 正式实验完成；新报告按用户要求暂缓 | 逐项状态见 experiments/lab2/results.json |
+| 3 | NOT RUN | 本轮在Lab2结束后停止 |
 | 4 | NOT RUN；CF2完整验收BLOCKED | 缺课程协议§4.6颜色控制集 |
 | 5 | NOT RUN；正式masks核验BLOCKED | 缺课程Planetoid masks |
 | 6–7 | NOT RUN；需求/profile已登记 | 长链、训练、采样与CF须各自先做真实预算 |
-| 8 | NOT RUN | 缺Lab2训练checkpoint；近OOD附加缺11类名单 |
+| 8 | NOT RUN | Lab2 checkpoint已保存；近OOD附加缺11类名单 |
 | 9 | BLOCKED（正式数据） | 缺人脸帧/音频预处理包、演员/clip划分；编码器已按用户授权选cnn_lab2 |
 
 ## 已知边界
@@ -46,3 +47,13 @@ Phase A/B已完成；Lab0阶段验收：**PASS**。整个Lab0–Lab9课程项目
 - E3假设先真实Git提交，再运行共同seeds1/2/3。rho(A)-rho(B)=[0.2834983102697599, 0.2876807579434426, 0.3025880211525119]；均值0.291256、样本std0.010034；差异判定：成立。只适用于同一数据划分。
 - 自动测试47项全通过；报告9页，真实LaTeX编译与每页图像检查均通过。运行累计28.24分钟（含准备、小测试和预算；开发、测试和报告编译另计）。
 - 证据：reports/lab1/acceptance.json、results.json、report.pdf、main.tex、experiments/lab1/ledger.json、hypothesis.md。
+
+
+## Lab2 阶段（报告按用户要求暂缓）
+
+- 复用公共 ExperimentRunner，完成标准 ResNet18/ViT、E1 五比例、E2 三扰动、E3 三配对 seed、地图及全部五个反事实问题。
+- 完成 19 个正式训练运行，逻辑轨迹共 180506 次优化器更新；已记录训练耗时下界 7.398 小时。复用记录不重复计数。
+- 曾有1个外部中断父进程，从完整checkpoint精确恢复；499个已记录更新被重放。20次正式进程调用中19次完成，记录的实际更新含重放为181005次。中断父进程精确总时长不可恢复，不能伪报精确累计时长。
+- 自动测试 70 项通过；E3 平均差 -0.249467，样本标准差 0.017253，差异判定：成立。
+- 完整 PASS/FAIL/边界：experiments/lab2/results.json；原始 ledger、独立评估 RUN_ID、图表、反事实和 checkpoint 索引同目录。
+- 已保留全量模型，解除 Lab8 对 Lab2 checkpoint 的依赖；Lab8/9 尚未启动，其他数据缺口仍保留。未生成新报告，未启动 Lab3。

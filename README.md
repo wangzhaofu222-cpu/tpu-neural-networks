@@ -61,4 +61,4 @@ Lab0已有完整真实训练、反事实测量与六节俄语报告，原有证�
 
 Lab1已复用同一个ExperimentRunner完成实现、E1/E2/E3、5个反事实问题与可训练性地图。最终47项测试通过，俄语报告9页，实际LaTeX编译和逐页视觉检查通过。**数值阈值未全部通过**：缩放残差L96的信号比例6.9964超出上限6.8493约2.15%，保留FAIL并用逐块方差与交叉项实测解释。α=1的4个训练条件发生真实数值失败，日志完整保留，不冒充三轮成功。报告和逐项状态见`reports/lab1/report.pdf`、`main.tex`、`acceptance.json`。
 
-Lab2–9尚未实现/训练/完成报告；课程协议缺失导致的具体阻塞逐项列出。新系列复现和Git事前假设要求见`REPRODUCIBILITY_GUIDE.md`，完整状态以`FINAL_CHECKLIST.md`为准。
+Lab2已完成标准模型、正式实验、多seed统计、反事实及checkpoint保存，新报告按用户要求暂缓，证据见`experiments/lab2/README.md`。Lab3–9尚未实现/训练/完成报告；课程协议缺失导致的具体阻塞逐项列出。新系列复现和Git事前假设要求见`REPRODUCIBILITY_GUIDE.md`，完整状态以`FINAL_CHECKLIST.md`为准。

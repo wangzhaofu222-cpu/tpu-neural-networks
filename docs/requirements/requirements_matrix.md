@@ -26,13 +26,13 @@
 | L1-CF01..05 | §10 p10–11 | 深256预测；宽×4实测；gl与delta；残差爆炸；近同acc不同GI下个深度 | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
 | L1-T01..05 | §11 p11 | hook不改output/grad；权重方差误差≤10%(fan产品≥1e4)；零分支identity≤1e-6；NaN/Inf flag | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
 | L1-REP | §12–13 p11 | 6节，全部RUN_ID与5CF | PASS — 逐项证据见 [Lab1验收](lab1_acceptance.md) |
-| L2-IMP | §5–8 p2–8 | CIFAR ResNet18 stem3/s1无pool；ViT P4/D384/L6/h6/MLP1536；features接口；MAC计数含MHA；嵌套分层fractions；A0/A1/A2；6种扰动参数表 | NOT RUN |
-| L2-E1 | §9.1 p9 | S10000/B128；AdamW/LR三点各模型val选；10训练；参数±20%或MAC匹配；MAC误差≤1%；所有fractions图/r* | NOT RUN |
-| L2-E2 | §9.2 p10 | r1 checkpoint、不重训；profile三扰动s0..3；δ/均值/leader；clean完全相同；换leader两差幅≥.01 | NOT RUN |
-| L2-E3 | §9.3 p10–11 | val选主要模式；Git假设；三共seed/同子集；map+三差值 | NOT RUN |
-| L2-CF01..05 | §10 p11 | 数据曲线；少数据同epoch步数重训；MAC/time；P减半测MAC；translation2/4/8额外评估 | NOT RUN |
-| L2-T01..06 | §11 p11 | patch roundtrip；logits/features/不改参数；单convMAC；子集嵌套均衡/恰S步；A0确定；扰动s0/标签/seed | NOT RUN |
-| L2-REP | §12–13 p12 | 6节含资源/curve/shift/E3 map/5CF限制；保留r1 checkpoint供8/9 | NOT RUN |
+| L2-IMP | §5–8 p2–8 | CIFAR ResNet18 stem3/s1无pool；ViT P4/D384/L6/h6/MLP1536；features接口；MAC计数含MHA；嵌套分层fractions；A0/A1/A2；6种扰动参数表 | PASS — 逐项证据见 experiments/lab2/results.json / lab2_execution_checklist.md |
+| L2-E1 | §9.1 p9 | S10000/B128；AdamW/LR三点各模型val选；10训练；参数±20%或MAC匹配；MAC误差≤1%；所有fractions图/r* | PASS — 逐项证据见 experiments/lab2/results.json / lab2_execution_checklist.md |
+| L2-E2 | §9.2 p10 | r1 checkpoint、不重训；profile三扰动s0..3；δ/均值/leader；clean完全相同；换leader两差幅≥.01 | PASS — 逐项证据见 experiments/lab2/results.json / lab2_execution_checklist.md |
+| L2-E3 | §9.3 p10–11 | val选主要模式；Git假设；三共seed/同子集；map+三差值 | PASS — 逐项证据见 experiments/lab2/results.json / lab2_execution_checklist.md |
+| L2-CF01..05 | §10 p11 | 数据曲线；少数据同epoch步数重训；MAC/time；P减半测MAC；translation2/4/8额外评估 | PASS — 逐项证据见 experiments/lab2/results.json / lab2_execution_checklist.md |
+| L2-T01..06 | §11 p11 | patch roundtrip；logits/features/不改参数；单convMAC；子集嵌套均衡/恰S步；A0确定；扰动s0/标签/seed | PASS — 逐项证据见 experiments/lab2/results.json / lab2_execution_checklist.md |
+| L2-REP | §12–13 p12 | 6节含资源/curve/shift/E3 map/5CF限制；保留r1 checkpoint供8/9 | 按用户要求暂缓新报告 |
 | L3-IMP | §5–8 p2–8 | no-pos/absolute P1/P2/P3/sinusoidal/RoPE；d128/h4/FF2d/preNorm/noCausal；64词表/三个生成器/角色seed；显式attention诊断 | NOT RUN |
 | L3-E1 | §9.1 p8–9 | B32/S2000→4000→8000，val规则统一S；LR只val L0选；test≥200序列/L0,2,4,8倍；P1额外2倍；no-pos≤1/64+.05、最好领先≥.20或诊断 | NOT RUN |
 | L3-E2 | §9.2 p9 | B4/≥5长度64..1024；forward/train-step/实测peak；10warmup；log斜率/最大两点；二次α1.6..2.4、无显式矩阵memory .8..1.2或分解解释 | NOT RUN |

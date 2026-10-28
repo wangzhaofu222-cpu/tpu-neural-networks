@@ -1,0 +1,14 @@
+{
+  "loss": 1.4276967715263367,
+  "accuracy": 0.57,
+  "count": 10000,
+  "RUN_ID": "147e425022cc50e83f89-f41ed2c89b8d4d41a6ab4fcb9251af9c",
+  "parent_RUN_ID": "766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+  "corruption": "patch_shuffle",
+  "level": 2,
+  "input_sha256": "2e8dbae7ca0cfbd772de3ea196896e8eada7f7363664025fad2c706663c0567c",
+  "checkpoint_sha256": "a4793c3fa2ba34ce300030d161fc69a38bb1c23b1d3e7284e82a4379989d4dd0",
+  "status": "COMPLETED_EVALUATION",
+  "optimizer_steps": 0,
+  "wall_seconds": 3.5933330000007118
+}

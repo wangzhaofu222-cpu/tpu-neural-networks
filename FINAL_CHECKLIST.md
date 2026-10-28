@@ -1,6 +1,6 @@
 # 阶段验收清单
 
-全课程状态：NOT RUN（未完成Lab2–Lab9）。Lab0：PASS。
+全课程状态：NOT RUN（未完成Lab3–Lab9）。Lab0：PASS。
 
 | 要求 | 状态 | 证据 |
 |---|---|---|
@@ -16,6 +16,8 @@
 | Lab1实现、必测、正式E1–E3、5CF、地图、Git事前假设 | 完成 | reports/lab1/acceptance.json |
 | Lab1全部数值阈值 | FAIL（1项） | 缩放残差L96上界超出约2.15%，已用逐块矩实测解释 |
 | Lab1俄语LaTeX编译及全部页面检查 | PASS | reports/lab1/build_status.json |
-| Lab2–Lab9特定实现/自动测试/正式实验/报告 | NOT RUN | 不能以已有框架或fixture测试代替 |
+| Lab2实现/正式E1–E3/5CF/地图/checkpoint | 完成 | experiments/lab2/results.json；逐项数值状态见其中acceptance |
+| Lab2新报告 | 按用户要求暂缓 | 不生成LaTeX/PDF |
+| Lab3–Lab9特定实现/自动测试/正式实验/报告 | NOT RUN | 本轮没有启动Lab3 |
 | Lab4 CF2 / Lab5 masks / Lab9协议与数据 | BLOCKED | 用户确认没有教师协议/专用包，missing_resources.md |
 | 全课程可提交完成验收 | NOT RUN | 仅完成阶段工作，不虚报全课程完成 |

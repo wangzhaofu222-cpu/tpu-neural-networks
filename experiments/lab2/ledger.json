@@ -30,5 +30,220 @@
     "kind": "training",
     "status": "COMPLETED",
     "elapsed_seconds": 64.32361479999963
+  },
+  {
+    "label": "LR_cnn_0.0003_j1",
+    "RUN_ID": "d331030da5669a506905-9563c71fcd824c359c23dd13ab144703",
+    "path": "runs/lab2/d331030da5669a506905-9563c71fcd824c359c23dd13ab144703",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1226.9128163999994
+  },
+  {
+    "label": "LR_cnn_0.001_j1",
+    "RUN_ID": "739a8232e3c83f66792d-b6de8956cc884480906c64f8da5a2f9f",
+    "path": "runs/lab2/739a8232e3c83f66792d-b6de8956cc884480906c64f8da5a2f9f",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1247.4730927
+  },
+  {
+    "label": "LR_cnn_0.003_j1",
+    "RUN_ID": "cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc",
+    "path": "runs/lab2/cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1191.2463308999995
+  },
+  {
+    "label": "LR_vit_0.0003_j1",
+    "RUN_ID": "766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+    "path": "runs/lab2/766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1834.5562396999994
+  },
+  {
+    "label": "LR_vit_0.001_j1",
+    "RUN_ID": "99d394e1b0dddd6bc200-04db9de0e52d4469ac1c432ad2447167",
+    "path": "runs/lab2/99d394e1b0dddd6bc200-04db9de0e52d4469ac1c432ad2447167",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1728.9348541
+  },
+  {
+    "label": "LR_vit_0.003_j1",
+    "RUN_ID": "8ab649c9694e033e772a-6f72a38e00a749e68600ceecdfc37012",
+    "path": "runs/lab2/8ab649c9694e033e772a-6f72a38e00a749e68600ceecdfc37012",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1856.2762371999997
+  },
+  {
+    "label": "E1_cnn_r0.05_j1",
+    "RUN_ID": "8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326",
+    "path": "runs/lab2/8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1202.4690418999999
+  },
+  {
+    "label": "E1_cnn_r0.15_j1",
+    "RUN_ID": "b50b6ea8552d63768374-4d1f73742ac24869a8d8cee0b7cfcc77",
+    "path": "runs/lab2/b50b6ea8552d63768374-4d1f73742ac24869a8d8cee0b7cfcc77",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1195.0312393999993
+  },
+  {
+    "label": "E1_cnn_r0.3_j1",
+    "RUN_ID": "5b5befc1e4def983b9ee-22c1988662a44a8c9b33328924f411ab",
+    "path": "runs/lab2/5b5befc1e4def983b9ee-22c1988662a44a8c9b33328924f411ab",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1201.0800028999984
+  },
+  {
+    "label": "E1_cnn_r0.6_j1",
+    "RUN_ID": "1127217ff6ad88909e85-a8b568720c0c4b4ea2f2098459e6ec33",
+    "path": "runs/lab2/1127217ff6ad88909e85-a8b568720c0c4b4ea2f2098459e6ec33",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1053.115765999999,
+    "resumed_from": "1127217ff6ad88909e85-6dfccf80698847269119e905722501dc",
+    "inherited_optimizer_steps": 1010,
+    "new_optimizer_updates": 8990
+  },
+  {
+    "label": "E1_cnn_r1_j1",
+    "RUN_ID": "cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc",
+    "path": "runs/lab2/cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc",
+    "kind": "alias",
+    "status": "COMPLETED",
+    "elapsed_seconds": 0.0,
+    "reuse_reason": "Identical completed scientific condition, not a new training execution"
+  },
+  {
+    "label": "E1_vit_r0.05_j1",
+    "RUN_ID": "76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab",
+    "path": "runs/lab2/76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1709.4266743999997
+  },
+  {
+    "label": "E1_vit_r0.15_j1",
+    "RUN_ID": "495f34d7f6c639e46a93-9104dc9ff56f47f5aab182fd287ed1a8",
+    "path": "runs/lab2/495f34d7f6c639e46a93-9104dc9ff56f47f5aab182fd287ed1a8",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1712.9920991
+  },
+  {
+    "label": "E1_vit_r0.3_j1",
+    "RUN_ID": "29176cb8f39f6f4d8171-6885d00915674ed3ade5cd94f2531767",
+    "path": "runs/lab2/29176cb8f39f6f4d8171-6885d00915674ed3ade5cd94f2531767",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1728.5119278000002
+  },
+  {
+    "label": "E1_vit_r0.6_j1",
+    "RUN_ID": "f154afa0aa4ee77b3250-ea30b6ab3cf942eab4e96026e089f583",
+    "path": "runs/lab2/f154afa0aa4ee77b3250-ea30b6ab3cf942eab4e96026e089f583",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1733.3826499999996
+  },
+  {
+    "label": "E1_vit_r1_j1",
+    "RUN_ID": "766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+    "path": "runs/lab2/766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b",
+    "kind": "alias",
+    "status": "COMPLETED",
+    "elapsed_seconds": 0.0,
+    "reuse_reason": "Identical completed scientific condition, not a new training execution"
+  },
+  {
+    "label": "E3_cnn_j1",
+    "RUN_ID": "8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326",
+    "path": "runs/lab2/8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326",
+    "kind": "alias",
+    "status": "COMPLETED",
+    "elapsed_seconds": 0.0,
+    "reuse_reason": "Identical completed scientific condition, not a new training execution"
+  },
+  {
+    "label": "E3_cnn_j2",
+    "RUN_ID": "f1a84ec3e8723294d4a2-14cad9141a774b6daee3100c969640f6",
+    "path": "runs/lab2/f1a84ec3e8723294d4a2-14cad9141a774b6daee3100c969640f6",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1223.691649100001
+  },
+  {
+    "label": "E3_cnn_j3",
+    "RUN_ID": "69ac6bd9ed94ae61d1aa-873bbd5089054e138a586cd2a337e139",
+    "path": "runs/lab2/69ac6bd9ed94ae61d1aa-873bbd5089054e138a586cd2a337e139",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1186.2474141999992
+  },
+  {
+    "label": "E3_vit_j1",
+    "RUN_ID": "76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab",
+    "path": "runs/lab2/76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab",
+    "kind": "alias",
+    "status": "COMPLETED",
+    "elapsed_seconds": 0.0,
+    "reuse_reason": "Identical completed scientific condition, not a new training execution"
+  },
+  {
+    "label": "E3_vit_j2",
+    "RUN_ID": "1620cd8ad55b41c9e6c2-7e9c1d9d13e44a5bbee06a6bc7693cac",
+    "path": "runs/lab2/1620cd8ad55b41c9e6c2-7e9c1d9d13e44a5bbee06a6bc7693cac",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1720.5907430000007
+  },
+  {
+    "label": "E3_vit_j3",
+    "RUN_ID": "793fe73a531b8002205c-4bc06191663d459e941756cc0e6a26b1",
+    "path": "runs/lab2/793fe73a531b8002205c-4bc06191663d459e941756cc0e6a26b1",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 1718.8982942000002
+  },
+  {
+    "label": "CF2_equal_epochs_cnn",
+    "RUN_ID": "d1a718622a886ab7d1fd-42792e1b10654612a8812f0182aee6f1",
+    "path": "runs/lab2/d1a718622a886ab7d1fd-42792e1b10654612a8812f0182aee6f1",
+    "kind": "training",
+    "status": "COMPLETED",
+    "elapsed_seconds": 64.25536759999886
+  },
+  {
+    "label": "CF4_ViT_patch2_profile",
+    "RUN_ID": "3f22804f8649bd648df6-65596ace07164264a7d02cf72f8804d1",
+    "path": "runs/lab2/3f22804f8649bd648df6-65596ace07164264a7d02cf72f8804d1",
+    "kind": "profiling",
+    "status": "COMPLETED_RESOURCE_PROFILE",
+    "elapsed_seconds": 8.055885600000693
+  },
+  {
+    "label": "Resource_cnn_isolated",
+    "RUN_ID": "6bc75d819a5946322699-091079c70f3340e38399106a4ed2e479",
+    "path": "runs/lab2/6bc75d819a5946322699-091079c70f3340e38399106a4ed2e479",
+    "kind": "profiling",
+    "status": "COMPLETED_RESOURCE_PROFILE",
+    "elapsed_seconds": 1.8192654000013135
+  },
+  {
+    "label": "Resource_vit_isolated",
+    "RUN_ID": "926a4920cb8df7d1c889-862b8ed15ef54c1d9ad6483604dfbb6c",
+    "path": "runs/lab2/926a4920cb8df7d1c889-862b8ed15ef54c1d9ad6483604dfbb6c",
+    "kind": "profiling",
+    "status": "COMPLETED_RESOURCE_PROFILE",
+    "elapsed_seconds": 2.5414125000006607
   }
 ]

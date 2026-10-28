@@ -1,0 +1,16 @@
+{
+  "domain": "Raw float RGB [0,1], transform then clip to [0,1], then normalize using full training-role statistics",
+  "image_seed": "(profile.base_seed + original_test_index * 1009) modulo 2^63",
+  "paired_models": "Identical cached normalized input tensor and labels, SHA256 compared across architectures and fractions",
+  "level0": "Exact input identity for every corruption",
+  "parameters_by_level_1_2_3": {
+    "gaussian_noise": {"sigma": [0.04,0.08,0.12]},
+    "blur": {"sigma": [0.5,1.0,1.5], "kernel_size": [5,7,11], "padding": "torchvision gaussian_blur reflection"},
+    "contrast": {"factor": [0.6,0.4,0.2], "center": "Mean brightness across all image channels and pixels"},
+    "occlusion": {"side": [6,10,14], "fill": 0.5, "position": "Uniform valid top-left, seeded"},
+    "translation": {"pixels": [2,4,8], "axis_sign": "Uniform seeded axis and sign, same seed across levels", "fill": 0.0},
+    "patch_shuffle": {"block_side": [16,8,4], "grid_origin": "upper left", "permutation": "seeded torch.randperm"}
+  },
+  "profile_E2": ["blur","contrast","patch_shuffle"],
+  "CF5_extra": "translation"
+}

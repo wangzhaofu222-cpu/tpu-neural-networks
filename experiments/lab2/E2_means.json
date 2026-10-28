@@ -1,0 +1,23 @@
+[
+  {
+    "corruption": "blur",
+    "cnn_mean": 0.4906333333333333,
+    "vit_mean": 0.5397,
+    "delta": 0.04906666666666665,
+    "leader_reversal": true
+  },
+  {
+    "corruption": "contrast",
+    "cnn_mean": 0.7715666666666666,
+    "vit_mean": 0.45683333333333337,
+    "delta": -0.31473333333333325,
+    "leader_reversal": false
+  },
+  {
+    "corruption": "patch_shuffle",
+    "cnn_mean": 0.39543333333333336,
+    "vit_mean": 0.5714666666666667,
+    "delta": 0.17603333333333332,
+    "leader_reversal": true
+  }
+]

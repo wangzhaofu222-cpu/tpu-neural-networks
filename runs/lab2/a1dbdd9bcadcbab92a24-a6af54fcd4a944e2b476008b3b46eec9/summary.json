@@ -1,0 +1,14 @@
+{
+  "loss": 0.6175813470840454,
+  "accuracy": 0.8855,
+  "count": 10000,
+  "RUN_ID": "a1dbdd9bcadcbab92a24-a6af54fcd4a944e2b476008b3b46eec9",
+  "parent_RUN_ID": "1127217ff6ad88909e85-a8b568720c0c4b4ea2f2098459e6ec33",
+  "corruption": "contrast",
+  "level": 1,
+  "input_sha256": "36353606ab54a480630ad4a1f52ad990a338f49c21c86c9c3c828dbb6c4815b1",
+  "checkpoint_sha256": "a6046ce475865fe2eefa4d4ca08f887905465c81cf2cc83a499faa570f7904be",
+  "status": "COMPLETED_EVALUATION",
+  "optimizer_steps": 0,
+  "wall_seconds": 1.9653453999999329
+}
