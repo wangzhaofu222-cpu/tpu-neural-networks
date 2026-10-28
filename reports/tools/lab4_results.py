@@ -170,12 +170,18 @@ def main():
             for r in fractions:
                 paired=paired_gain(values('SimCLR',r),values('B0',r));gains.append({'fraction':r,**paired})
             stats.update(matrix=matrix,rmin=fractions[0],gains=gains,hypothesis_supported=stats['established'] and stats['mean']*hyp['predicted_sign']>0,
+                hypothesis_support_scope='Direction only under the preregistered teacher rule; the point magnitude forecast is not declared confirmed. Its numerical error is reported separately as preregistered.',
                 preregistered_point_prediction=hyp['predicted_mean_difference'],
                 point_prediction_error=stats['mean']-hyp['predicted_mean_difference'],
                 ssl_better_established=stats['established'] and stats['mean']>0,
                 conclusion='различие установлено' if stats['established'] else 'различие не установлено',
                 limitations=['Seeds change selectedtraininglabels andprobeinitialization, notSSLpretraining; onlyonefixedencoder perarm.',
                     '5000labelledvalidationimages selectregularization; thisoptimisticfew-labelcondition issharedbyallarms.'])
+            stats['label_budget_analysis']={
+                'B0_full_minus_rmin':float(np.mean(values('B0',1.))-np.mean(values('B0',fractions[0]))),
+                'SSL_full_minus_rmin':float(np.mean(values('SimCLR',1.))-np.mean(values('SimCLR',fractions[0]))),
+                'G_rmin_minus_G1':gains[0]['mean']-gains[-1]['mean'],
+                'interpretation':'The magnitude forecast was the recorded heuristic, half E1 G(1), not a theoretical bound. Compare the measured accuracy drops of B0 and SSL as labels decrease: their difference arithmetically accounts for G(rmin)-G(1). This is descriptive evidence, not proof of a particular causal optimization mechanism. Forecast error is retained; seeds, thresholds and the hypothesis are unchanged.'}
             summary['E3']=stats;write_json(ROOT/'E3_statistics.json',stats);csv_table('E3_gain.csv',gains)
             fig,axes=plt.subplots(1,2,figsize=(10,4));markers=['o','s','^']
             for name in ['B0','B1','SimCLR']:
@@ -211,6 +217,7 @@ def main():
     if 'CF4_SSL_z_hat' in evaluations and 'E1_SSL_epoch100_h' in evaluations:
         h,z=evaluations['E1_SSL_epoch100_h'],evaluations['CF4_SSL_z_hat']
         cf['Q4']={'status':'PASS','h_probe_accuracy':h['test_accuracy'],'z_hat_probe_accuracy':z['test_accuracy'],'difference_h_minus_z':h['test_accuracy']-z['test_accuracy'],
+            'h_knn_accuracy':h['knn_test_accuracy'],'z_hat_knn_accuracy':z['knn_test_accuracy'],
             'RUN_IDs':[h['RUN_ID'],z['RUN_ID']],'answer':'Theprojection head optimizesaugmentationinvariance andchangesdimension/geometry. Thisprobecomparison canreveal aclassificationinformation difference underthislinearprocedure, butalowerzscore alone doesnotshowtheheadharmscontrastivelearning oralltasks.'}
     if 'E3' in summary and 'CF5_B1_low_labels_h' in evaluations:
         low=evaluations['CF5_B1_low_labels_h'];gains=summary['E3']['gains'];rmin=gains[0]['fraction']

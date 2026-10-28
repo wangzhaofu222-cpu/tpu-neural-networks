@@ -20,9 +20,14 @@ def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def git(*args):return subprocess.run(['git','-c','safe.directory=D:/神经网络',*args],capture_output=True,text=True,encoding='utf-8',check=True).stdout.strip()
 def main():
     torch.set_num_threads(2);result=read(ROOT/'results.json');proof=read(ROOT/'preregistration_evidence.json')
+    teacher=read(ROOT/'teacher_source.json');assert file_hash(teacher['path'])==teacher['sha256'] and teacher['pages']==14
     cfg=yaml.safe_load(Path('configs/lab4.yaml').read_text());images,split,mean,std,_=bundle(cfg['data']['root'],cfg['data']['split_path'])
     historical=read('experiments/lab3_verification/historical_files.json')
     assert all(Path(p).exists() and file_hash(p)==h for p,h in historical.items())
+    assert read('experiments/lab3_verification/audit.json')['status']=='PASS'
+    exploratory_commit=git('log','-1','--format=%H','--','experiments/lab4/exploratory_hypotheses.md')
+    assert git('show',exploratory_commit+':experiments/lab4/exploratory_hypotheses.md')==(ROOT/'exploratory_hypotheses.md').read_text(encoding='utf-8').strip()
+    exploratory_time=datetime.fromisoformat(git('show','-s','--format=%cI',exploratory_commit))
     checkpoints=[];registry=[];encoders=[];probe_runs=[]
     for path in sorted(Path('runs/lab4').iterdir()):
         if not path.is_dir():continue
@@ -41,6 +46,8 @@ def main():
                 'partial_epoch':state.get('partial_epoch',False),'purpose':m['purpose'],'model':c['model']['name']})
             del state,model
         if m['purpose']!='formal' or m['status']!='COMPLETED':continue
+        git('merge-base','--is-ancestor',exploratory_commit,m['git_commit'])
+        assert datetime.fromisoformat(m['started_at'])>exploratory_time
         rows=[json.loads(v) for v in (path/'steps.jsonl').read_text().splitlines()];s=read(path/'summary.json')
         assert rows and s['epoch']==c['train']['epochs']
         assert sum(not r['optimizer_step_skipped'] for r in rows)==s['global_step']
@@ -141,17 +148,23 @@ def main():
     tests=ET.parse('docs/environment/tests-lab4-final.xml').getroot();suites=list(tests.iter('testsuite'))
     counts={k:sum(int(s.get(k,0)) for s in suites) for k in ['tests','errors','failures','skipped']}
     assert counts['tests']>=106 and counts['errors']==counts['failures']==counts['skipped']==0
+    figure_qa=read(ROOT/'figure_QA.json');assert figure_qa['status']=='PASS' and figure_qa['count']==8
+    assert all(file_hash(r['path'])==r['sha256'] and r['status']=='PASS' for r in figure_qa['figures'])
+    assert not list(ROOT.rglob('*.tex')) and not list(ROOT.rglob('*.pdf')) and not Path('reports/lab4').exists()
+    assert not list(Path('runs/lab5').glob('*/manifest.json'))
     cf=read(ROOT/'counterfactuals.json');assert set(cf)=={'Q1','Q2','Q3','Q4','Q5'}
     assert cf['Q2']['status']=='BLOCKED'
     gates={'historical_Lab0_to_Lab3_unchanged':'PASS','Lab3_independent_audit':'PASS','mandatory_tests_and_regressions':'PASS',
         'N256_global_NT_Xent_not_microbatch_approximation':'PASS','GPU100_25_epoch_protocol':'PASS','trainonly_unlabelled_pretraining_cal_guard':'PASS',
         'E1_three_encoders_common_probe_knn':'PASS','E1_five_SSL_checkpoints_including0':'PASS',
+        'E1_E2_exploratory_hypotheses_precede_formal_training':'PASS',
         'E1_final_loss_at_or_below_random':'PASS' if result['E1']['loss_threshold_pass'] else 'FAIL',
         'E1_G1_sign_reported':'PASS',
         'E2_six_variants_only_augmentation_changes':'PASS','E2_conditional_thresholds_applied':'PASS','E3_preregistered_before_new_runs':'PASS',
         'E3_complete36_matrix_nested_shared_indices':'PASS','E3_teacher_rule_applied':'PASS',
         'frozen_encoder_full_state_and_feature_repeatability':'PASS',
         'representation_scale_rank_spectrum_raw_recomputed':'PASS','CF1':'PASS','CF2':'BLOCKED','CF3':cf['Q3']['status'] if cf['Q3']['status']=='PASS' else 'FAIL',
+        'eight_figures_visually_verified_and_hashed':'PASS',
         'CF4':'PASS','CF5':'PASS','formal_report':'NOT_APPLICABLE','optional_section14':'NOT_APPLICABLE'}
     totals={'formal_encoder_training_runs':len(encoders),'formal_probe_candidate_training_runs':len(probe_runs),
         'formal_encoder_training_seconds':sum(r['training_seconds'] for r in encoders),'formal_probe_training_seconds':sum(r['training_seconds'] for r in probe_runs),

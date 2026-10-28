@@ -15,6 +15,45 @@
       "action": "read-only exactcourse-protocol search; nofiles modified"
     }
   },
+  "Q1": {
+    "status": "PASS",
+    "measurements": [
+      {
+        "RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "N": 256,
+        "negatives": 510,
+        "random_baseline_loss": 6.236369590203704,
+        "first_loss": 6.110857963562012,
+        "last_loss": 0.5978800058364868,
+        "epoch_budget": 100,
+        "first_step_skipped": false,
+        "baseline_minus_last_loss": 5.638489584367218
+      },
+      {
+        "RUN_ID": "cf2097134c33eef5506c-be1a9df9a9714bfe9b95948d626f55c9",
+        "N": 256,
+        "negatives": 510,
+        "random_baseline_loss": 6.236369590203704,
+        "first_loss": 6.110857963562012,
+        "last_loss": 1.0349464416503906,
+        "epoch_budget": 25,
+        "first_step_skipped": false,
+        "baseline_minus_last_loss": 5.201423148553314
+      },
+      {
+        "RUN_ID": "1cc8373c23ca198cfc9c-ea07fbed8d9f4fb4a4ac843ba75fd140",
+        "N": 64,
+        "negatives": 126,
+        "random_baseline_loss": 4.844187086458591,
+        "first_loss": 4.693625450134277,
+        "last_loss": 0.495635062456131,
+        "epoch_budget": 25,
+        "first_step_skipped": false,
+        "baseline_minus_last_loss": 4.34855202400246
+      }
+    ],
+    "answer": "NT-Xent denominators contain2N-1 candidates, andtauchanges attainableloss andgradientscale. DifferentN/tau lossvalues are not directly comparable. E1full100first/lastloss isreported asrequired; E2T25 providesanexisting horizon-matchedN256referenceforCF1N64/25. Batchnormalizationgrouping andnumberofupdatesalsochange withN, sothis isnot anisolateddenominator-onlymechanismestimate."
+  },
   "Q3": {
     "status": "PASS",
     "actual_pairs": [
@@ -167,5 +206,97 @@
       }
     ],
     "answer": "Effective rank measures covariance dispersion, notwhetherdirections encode labels. Itmustbe shownwithtrace andmeannorm. When trace<=1e-6*d*mean_squared_norm, rankisundefined andreportednull/collapse_scale, neveran arbitraryepsilon-regularizednumber."
+  },
+  "Q4": {
+    "status": "PASS",
+    "h_probe_accuracy": 0.7662,
+    "z_hat_probe_accuracy": 0.682,
+    "difference_h_minus_z": 0.08419999999999994,
+    "h_knn_accuracy": 0.7053,
+    "z_hat_knn_accuracy": 0.7352,
+    "RUN_IDs": [
+      "3ec66db45b2793e9a39a-1178fb68191d4a91813cdcb3596c91f8",
+      "e8f5ef72a935dc40e61f-83a8d5792fc843fcbb6adb10d3a3f09e"
+    ],
+    "answer": "Theprojection head optimizesaugmentationinvariance andchangesdimension/geometry. Thisprobecomparison canreveal aclassificationinformation difference underthislinearprocedure, butalowerzscore alone doesnotshowtheheadharmscontrastivelearning oralltasks."
+  },
+  "Q5": {
+    "status": "PASS",
+    "G_rmin": {
+      "fraction": 0.02,
+      "deltas": [
+        0.3741,
+        0.377,
+        0.3677
+      ],
+      "mean": 0.37293333333333334,
+      "sample_std": 0.004758501164582519,
+      "same_nonzero_sign": true,
+      "established": true
+    },
+    "G1": {
+      "fraction": 1.0,
+      "deltas": [
+        0.3305,
+        0.32670000000000005,
+        0.3256
+      ],
+      "mean": 0.3276,
+      "sample_std": 0.002570992026436489,
+      "same_nonzero_sign": true,
+      "established": true
+    },
+    "low_label_supervised_control": {
+      "test_accuracy": 0.4155,
+      "RUN_ID": "afdbaaa4186fc95dcffa-6a57d79c78bc4e628112f73574e14af6",
+      "encoder_RUN_ID": "8bdb2fad07d1c7b4ffb8-f8f68962ebab42539e38e8fc76d5c056",
+      "label_subset_fingerprint": "3bdc5054293fda0436b137746d11a9abadefcd585821d4f3e8514a93607887c9"
+    },
+    "encoder_budget_comparison": {
+      "E1_B1": {
+        "RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "successful_optimizer_updates": 4200,
+        "physical_batches": 4200
+      },
+      "CF5_B1_low_labels": {
+        "RUN_ID": "8bdb2fad07d1c7b4ffb8-f8f68962ebab42539e38e8fc76d5c056",
+        "successful_optimizer_updates": 100,
+        "physical_batches": 100
+      }
+    },
+    "comparison_seed1": {
+      "B0": {
+        "encoder": "B0",
+        "seed": 1,
+        "fraction": 0.02,
+        "probe_accuracy": 0.2903,
+        "RUN_ID": "3c7f8aef44b742e0d740-bd1161b222d74355b48b70233c125f00",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "3bdc5054293fda0436b137746d11a9abadefcd585821d4f3e8514a93607887c9",
+        "reused_E1": false
+      },
+      "B1": {
+        "encoder": "B1",
+        "seed": 1,
+        "fraction": 0.02,
+        "probe_accuracy": 0.8792,
+        "RUN_ID": "bb3af5bd7af619070d74-06292b0f3b3c44dc81c24e0ab6d172f5",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "3bdc5054293fda0436b137746d11a9abadefcd585821d4f3e8514a93607887c9",
+        "reused_E1": false
+      },
+      "SimCLR": {
+        "encoder": "SimCLR",
+        "seed": 1,
+        "fraction": 0.02,
+        "probe_accuracy": 0.6644,
+        "RUN_ID": "d0f2ed8844513313f79a-aecf0e05c9a149a99c35bef5fe93ebf2",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "3bdc5054293fda0436b137746d11a9abadefcd585821d4f3e8514a93607887c9",
+        "reused_E1": false
+      }
+    },
+    "conditions": "CF5 B1 encoder uses only S1(rmin) labels for 25 epochs, same B1 optimizer/architecture/cropflip/schedule. Probe uses exactly the same 860 indices. Compared to full B1, unique encoder labels change 43000 -> 860 and physical batches 4200 -> 100; successful optimizer updates are reported separately including AMP skips. Equal epochs do not match exposure or compute. SSL sees 43000 unlabelled images for 100 epochs. All probes still use 5000 val labels for L2 selection.",
+    "answer": "OriginalB1features alreadycontain supervisionfromall43000trainlabels evenwhenprobehasfewlabels, sotheB1-SSLgap isnot apriceofrefusinglabels. Thelow-labelencodercontrol reduces thatlabel-budgetconfounding butdoesnot matchtotalcompute ordataexposure."
   }
 }

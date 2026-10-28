@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "count": 8,
+  "checked_at_utc": "2026-10-28T16:06:22.607209+00:00",
+  "checks": "Visual inspection: titles, axes, legends, nonclipped text; all eight figures reference actual saved measurements. No formal report created.",
+  "figures": [
+    {
+      "path": "experiments/lab4/figures/augmentation_views.png",
+      "sha256": "4f655c9a0cd603b0b730a15c28883db6ce87e12ce519c346f9201a845969650c",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab4/figures/E1_loss_probe.png",
+      "sha256": "1a0db193ff3076c277ce1e9d654bee6fa0d82a1b3ba418c968b6aa8da1d84881",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab4/figures/E1_rank_trace.png",
+      "sha256": "83069e32539a67b9ccd835ab24c111779327bbce23dd2c03711db3b9f226fb11",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab4/figures/E1_similarities.png",
+      "sha256": "af5ebd6cea7a9f3121f9686d76f083390ae6970be66f998dc06422125b436277",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab4/figures/E1_spectra.png",
+      "sha256": "1deb74b57ec7ec43d99dfbb62ddbc245d971253124b92bff417419e27a2da781",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab4/figures/E2_ablation.png",
+      "sha256": "6c3ef17e26b4f5d84b92b258e04e661e0ded9b6cc1d36248675bc2b72d10fdcc",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab4/figures/E2_all_variants.png",
+      "sha256": "63827389db3374ea7890cba07187f719fe666fef61007ae60c801b7083bbe1bc",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/lab4/figures/E3_label_efficiency.png",
+      "sha256": "8486f0b68176a553211e22bc90ed55a9ec2ba36627cbf76519565b9ac280b179",
+      "status": "PASS"
+    }
+  ]
+}

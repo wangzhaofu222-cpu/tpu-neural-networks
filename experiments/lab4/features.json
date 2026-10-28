@@ -372,5 +372,32 @@
     "operation_started_at_utc": "2026-10-28T15:37:16.048676+00:00",
     "controller_source_sha256": "c351ba08de43b26e963018ab4f6d86c514d0173031e9ef2feec9cc5a3bcd71ac",
     "timing_scope": "featureprotocol call; Pythonstartup excluded"
+  },
+  {
+    "label": "CF5_B1_low_labels_features",
+    "path": "runs/lab4/f8f033a11f968367b9f7-0810796cc43047aa97b69afcd8e36265",
+    "RUN_ID": "f8f033a11f968367b9f7-0810796cc43047aa97b69afcd8e36265",
+    "status": "COMPLETED_FEATURE_EXTRACTION",
+    "encoder_RUN_ID": "8bdb2fad07d1c7b4ffb8-f8f68962ebab42539e38e8fc76d5c056",
+    "checkpoint": "last.pt",
+    "checkpoint_sha256": "27b5742f4413863a456e1bcadddbb6c6683eaecc1ed3153dc35807d7fe54e084",
+    "cache_path": "runs/lab4/f8f033a11f968367b9f7-0810796cc43047aa97b69afcd8e36265/features.pt",
+    "feature_cache_sha256": "2c461e8824e13939eaeec446b2aabaf13198066f82522dcccdc05de99eba63dc",
+    "feature_fingerprint": "70cf3415d6e2038af2c37c92866d2c9ce82660d86dc36fbc41afba8e05a46907",
+    "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+    "encoder_state_sha256": "d3a0cd77d6e5d76ac5bdcdf0bfaf7743f8a4d6df1724276bcfe52656a31a1b37",
+    "repeated_extraction_max_error_h": 0.0,
+    "repeated_extraction_max_error_z": 0.0,
+    "role_sizes": {
+      "train": 43000,
+      "val": 5000,
+      "test": 10000
+    },
+    "cal_access": false,
+    "optimizer_steps": 0,
+    "operation_wall_seconds": 18.246981600001163,
+    "operation_started_at_utc": "2026-10-28T16:04:03.681796+00:00",
+    "controller_source_sha256": "c351ba08de43b26e963018ab4f6d86c514d0173031e9ef2feec9cc5a3bcd71ac",
+    "timing_scope": "featureprotocol call; Pythonstartup excluded"
   }
 ]

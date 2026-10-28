@@ -1,5 +1,5 @@
 {
-  "stage": "E2_RUNNING",
+  "stage": "COMPLETED_EXCEPT_CF2_MISSING_PROTOCOL",
   "tests": 106,
   "Q2": "BLOCKED missingteacherProtocol4.6",
   "formal_epochs": {
@@ -12,21 +12,22 @@
   "effective_N": 256,
   "AMP": true,
   "remaining": [
-    "E2",
-    "E3preregistrationGit",
-    "E3matrix",
-    "counterfactuals",
-    "analysisplots",
-    "finaltests_audit_commit"
+    "CF2_after_teacher_Protocol_4.6"
   ],
   "pause_file": "experiments/lab4/PAUSE",
   "stop_after_lab": 4,
   "formal_source_commit": "6ff631c",
   "active_run": null,
   "active_epoch": null,
-  "active_loss": 0.5545064514268658,
-  "E3_preregistered": false,
-  "process_session_id": 21905,
+  "active_loss": null,
+  "E3_preregistered": true,
+  "process_session_id": null,
   "updated_at_utc": "2026-10-28T14:13:40.099682+00:00",
-  "E1_completed": true
+  "E1_completed": true,
+  "E2_completed": true,
+  "preregistration_commit": "57f3fd3d7fe2d8f39c5f28efb73f2b2f9e363e41",
+  "E3_completed": true,
+  "audit_status": "BLOCKED",
+  "formal_reports_created": false,
+  "Lab5_started": false
 }

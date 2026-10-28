@@ -58,7 +58,7 @@ Phase A/B已完成；Lab0阶段验收：**PASS**。整个Lab0–Lab9课程项目
 - 完整 PASS/FAIL/边界：experiments/lab2/results.json；原始 ledger、独立评估 RUN_ID、图表、反事实和 checkpoint 索引同目录。
 - 已保留全量模型，解除 Lab8 对 Lab2 checkpoint 的依赖；Lab8/9 尚未启动，其他数据缺口仍保留。未生成新报告，未启动 Lab3。
 
-## Lab3 阶段（本轮终点，报告暂缓）
+## Lab3 阶段（历史记录，报告暂缓）
 
 - 开始前独立核查Lab2：70测试通过、38checkpoint可加载、主要表格/统计逐字节重算一致；1538个历史文件保持不变。结果存于experiments/lab2_verification，原Lab2记录未重写。
 - 个人任务Copy，L0=128，N=2，d128/h4/FFN256/B32，AdamW固定LR=.003，四种PE均2000steps；LR仅按sinusoidal的valL0选择。
@@ -66,4 +66,16 @@ Phase A/B已完成；Lab0阶段验收：**PASS**。整个Lab0–Lab9课程项目
 - E2显式/forced-efficient两后端各五长度，独立进程真实测量。显存全网格α=.435671/.127139（以results.json精确值为准），最长两点α=1.086481/.259660；原始区间FAIL保留。PDF§9.2允许的二次+线性+常数分解已完成，不能声称实测进入纯渐近区间。Flash不可用证据单列，未冒充支持。
 - E3假设事前提交4d6e559；L*=256，RoPE−absoluteP2三差值[-.0882568359375,-.07147216796875,-.056610107421875]，均值−.072113037109375，样本SD=.01583309481361658。三者同负且absmean>=2SD，差异成立，负向假设获得支持。seed1来自探索E1，其选择局限已披露。
 - 正式训练10次（选LR3+E1新增3+E3新增4），累计293.600067秒；含成功smoke/budget为12次、295.345164秒，失败smoke另保留。24个checkpoint（正式20），88项测试通过；6张科学图经视觉检查，五个反事实问题及按block/head注意力统计均已保存。
-- 当前证据：experiments/lab3/README.md、results.json、audit.json、checkpoint_index.json。没有生成或修改LaTeX/PDF报告，没有启动Lab4。
+- 当前证据：experiments/lab3/README.md、results.json、audit.json、checkpoint_index.json。该阶段没有生成或修改LaTeX/PDF报告；该阶段结束时尚未启动Lab4。
+
+<!-- LAB4_AUDITED_STATUS -->
+## Lab4 最终证据状态：BLOCKED
+
+- Lab3 独立复核 PASS：88 项测试重跑，1908 个历史文件不变，原有 E2 两项 FAIL 保留。
+- Lab4 E1/E2/E3 均已执行，完整 36 格 E3 矩阵包括 3 格明确复用的 E1 结果。E3 事前 Git：`57f3fd3d7fe2d8f39c5f28efb73f2b2f9e363e41`。
+- E1 probe：B0 43.57%、B1 89.88%、SimCLR 76.62%；G(1)=+33.05 个百分点。
+- E3 rmin 三差值：[0.3741, 0.377, 0.3677]，均值 0.372933333，样本 SD 0.004758501，教师判定：различие установлено。事前点预测 0.165250，误差 +0.207683333；方向成立不等于数值预测准确。
+- 106 项自动测试全部通过。四个反事实问题有实测依据；Q2 缺教师 Protocol §4.6，保留 BLOCKED。因此不能宣称全部必做任务已无条件通过。
+- 正式编码器训练 10 次，probe 正则化候选训练 144 次；B0 仅初始化。编码器累计训练 2.5510 小时；完整非重叠计时见 audit.json。
+- 本地 checkpoint 共 334 个，其中正式 325 个；所有配置、原始记录、特征缓存、哈希及路径均已登记。大型权重和缓存不强制加入 Git。
+- 按用户要求不制作或修改正式 LaTeX/PDF 报告；Lab5 未启动。全部详细数值与 PASS/FAIL/BLOCKED 见 experiments/lab4/results.json、audit.json、counterfactuals.json。

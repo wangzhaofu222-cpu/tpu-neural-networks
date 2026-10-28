@@ -67,3 +67,8 @@ E1的2000/4000/8000预算扩展仅在固定LR且其余配置完全相同时允�
 E3只改变PE；事前hypothesis.md在4d6e559提交，证据见preregistration_evidence.json。seed1和L*使用探索E1，seed2/3在该提交后运行。换seed复现时也改变生成序列；三个配对arm在各自seed中共享完全相同数据。历史hypothesis不回写。
 
 E2和CF5各条件是独立进程，10warmup+30repeat，CUDA同步及resetpeak。E2两实现同float16；CF5两宽度同float32。Flash不可用，实际强制efficientSDPA。五个同进程pilot原始记录保留但不进入主斜率分析。所有量化FAIL与被接受的替代分解分别保存；不能由分析门PASS抹去原始区间FAIL。
+
+<!-- LAB4_AUDITED_STATUS -->
+## Lab4 冻结特征实验
+
+使用既有 .conda-env 与 ExperimentRunner，命令和恢复限制见 experiments/lab4/README.md。重算顺序：reports.tools.lab4_results → 完整 pytest（JUnit 路径 docs/environment/tests-lab4-final.xml）→ reports.tools.lab4_audit → reports.tools.lab4_finalize。重算分析不会重新训练模型。E3 假设及 E1/E2 事前快照不可修改；原始 checkpoint 和特征保存在 runs/lab4 并由哈希索引登记。若要重新执行主实验，应使用已登记的源提交及原配置，不把新运行覆盖到旧 RUN_ID。

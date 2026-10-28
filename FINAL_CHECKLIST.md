@@ -1,6 +1,6 @@
 # 阶段验收清单
 
-全课程状态：尚未完成（Lab4–Lab9未运行；Lab2/3新报告按要求暂缓）。Lab0：PASS。
+全课程状态：尚未完成（Lab4 CF2 尚缺资料、Lab5–Lab9未运行；Lab2/3新报告按要求暂缓）。Lab0：PASS。
 
 | 要求 | 状态 | 证据 |
 |---|---|---|
@@ -27,6 +27,38 @@
 | Lab3 E3三seed差异判定 | PASS | mean−.072113、sampleSD=.015833，三差同负且absmean>=2SD |
 | Lab0–Lab3全部自动测试 | PASS | docs/environment/tests-lab3-final.xml；88通过，0失败/跳过 |
 | Lab3新报告 | NOT_APPLICABLE | 用户明确本轮不制作报告 |
-| Lab4–Lab9特定实现/自动测试/正式实验/报告 | NOT RUN | 本轮在Lab3后停止 |
+| Lab5–Lab9特定实现/自动测试/正式实验/报告 | NOT RUN | 本轮在Lab4后停止 |
 | Lab4 CF2 / Lab5 masks / Lab9协议与数据 | BLOCKED | 用户确认没有教师协议/专用包，missing_resources.md |
 | 全课程可提交完成验收 | NOT RUN | 仅完成阶段工作，不虚报全课程完成 |
+
+<!-- LAB4_AUDITED_STATUS -->
+## Lab4 审计
+
+| 要求 | 状态 | 证据 |
+|---|---|---|
+| historical_Lab0_to_Lab3_unchanged | PASS | experiments/lab4/audit.json |
+| Lab3_independent_audit | PASS | experiments/lab4/audit.json |
+| mandatory_tests_and_regressions | PASS | experiments/lab4/audit.json |
+| N256_global_NT_Xent_not_microbatch_approximation | PASS | experiments/lab4/audit.json |
+| GPU100_25_epoch_protocol | PASS | experiments/lab4/audit.json |
+| trainonly_unlabelled_pretraining_cal_guard | PASS | experiments/lab4/audit.json |
+| E1_three_encoders_common_probe_knn | PASS | experiments/lab4/audit.json |
+| E1_five_SSL_checkpoints_including0 | PASS | experiments/lab4/audit.json |
+| E1_E2_exploratory_hypotheses_precede_formal_training | PASS | experiments/lab4/audit.json |
+| E1_final_loss_at_or_below_random | PASS | experiments/lab4/audit.json |
+| E1_G1_sign_reported | PASS | experiments/lab4/audit.json |
+| E2_six_variants_only_augmentation_changes | PASS | experiments/lab4/audit.json |
+| E2_conditional_thresholds_applied | PASS | experiments/lab4/audit.json |
+| E3_preregistered_before_new_runs | PASS | experiments/lab4/audit.json |
+| E3_complete36_matrix_nested_shared_indices | PASS | experiments/lab4/audit.json |
+| E3_teacher_rule_applied | PASS | experiments/lab4/audit.json |
+| frozen_encoder_full_state_and_feature_repeatability | PASS | experiments/lab4/audit.json |
+| representation_scale_rank_spectrum_raw_recomputed | PASS | experiments/lab4/audit.json |
+| CF1 | PASS | experiments/lab4/audit.json |
+| CF2 | BLOCKED | experiments/lab4/audit.json |
+| CF3 | PASS | experiments/lab4/audit.json |
+| eight_figures_visually_verified_and_hashed | PASS | experiments/lab4/audit.json |
+| CF4 | PASS | experiments/lab4/audit.json |
+| CF5 | PASS | experiments/lab4/audit.json |
+| formal_report | NOT_APPLICABLE | experiments/lab4/audit.json |
+| optional_section14 | NOT_APPLICABLE | experiments/lab4/audit.json |
