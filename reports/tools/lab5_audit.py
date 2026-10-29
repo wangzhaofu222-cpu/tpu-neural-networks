@@ -47,6 +47,25 @@ def main():
     import hashlib
     check('E2_hypothesis_immutable_git_blob',hashlib.sha256(hypothesis_blob).hexdigest()==file_hash(R/'hypothesis.md'))
     git('merge-base','--is-ancestor',prereg['commit'],'HEAD')
+    exploratory_commit='e8b3d49'
+    exploratory_blob=subprocess.check_output(['git','-c','safe.directory=D:/神经网络','show',exploratory_commit+':experiments/lab5/exploratory_hypotheses.md'])
+    check('E1_E3_exploratory_hypotheses_immutable',hashlib.sha256(exploratory_blob).hexdigest()==file_hash(R/'exploratory_hypotheses.md'))
+    exploratory_time=datetime.fromisoformat(git('show','-s','--format=%cI',exploratory_commit))
+    first_model_time=min(datetime.fromisoformat(read(Path(p)/'manifest.json')['started_at']) for p in unique_train)
+    check('E1_E3_hypotheses_before_first_formal_model',exploratory_time<first_model_time)
+    prediction=read(R/'CF2_prediction.json');added_graph=read(R/'graphs/add_0.5.json')
+    added_time=datetime.fromisoformat(read(Path('runs/lab5')/added_graph['RUN_ID']/'manifest.json')['started_at'])
+    prediction_blob=subprocess.check_output(['git','-c','safe.directory=D:/神经网络','show',prereg['commit']+':experiments/lab5/CF2_prediction.json'])
+    local_prediction=(R/'CF2_prediction.json').read_bytes()
+    normalized_equal=prediction_blob.replace(b'\r\n',b'\n')==local_prediction.replace(b'\r\n',b'\n')
+    check('CF2_prediction_before_graph_and_immutable_normalized_git_blob',datetime.fromisoformat(prediction['recorded_at'])<added_time and normalized_equal,
+          'Git stores LF; local write_json uses Windows CRLF. Normalize only newline bytes, not numeric content/order/timestamps.')
+    write_json(R/'CF2_git_newline_verification.json',{'raw_byte_identical':prediction_blob==local_prediction,'newline_normalized_byte_identical':normalized_equal,
+        'json_values_identical':json.loads(prediction_blob)==prediction,'recorded_at':prediction['recorded_at'],'graph_started_at':added_time.isoformat(),
+        'note':'Initial added audit check incorrectly compared Git LF with local CRLF; no prediction or graph result was changed.'})
+    qa=read(R/'figure_QA.json');fp=read(R/'figure_provenance.json')
+    check('four_figures_visually_reviewed',qa['status']=='PASS' and len(qa['figures'])==4)
+    check('figure_hashes_current',all(file_hash(R/'figures'/p)==h for p,h in fp['figures'].items()))
     train_seconds=0.;formal_ids=[]
     for name in sorted(all_train):
         p=Path(name);m=read(p/'manifest.json');s=read(p/'summary.json');cfg=yaml.safe_load((p/'config.resolved.yaml').read_text(encoding='utf-8'))
@@ -104,17 +123,23 @@ def main():
     write_json(R/'checkpoint_inventory.json',checkpoint_inventory);write_json(R/'graph_regeneration_audit.json',graph_evidence)
     write_json(R/'evaluation_recalculation.json',evaluation_inventory)
     all_ckpts=list(Path('runs/lab5').glob('*/checkpoints/*.pt'))
+    finished=datetime.now(timezone.utc);started=min(read(Path(p)/'manifest.json')['started_at'] for p in unique_train)
+    old_test_start=ET.parse('docs/environment/tests-lab4-verification-before-lab5.xml').getroot().find('testsuite').attrib['timestamp']
     stats={'model_training_runs':len(unique_train),'linear_probe_training_runs':len(probe_sources),'formal_training_runs':len(all_train),
        'formal_training_seconds':train_seconds,'formal_optimizer_steps':200*len(all_train),'formal_checkpoints':len(checkpoint_inventory),'all_lab5_checkpoints':len(all_ckpts),
        'layer_summaries':layer_count,'final_tests_passed':int(tests.attrib['tests']),
        'budget_runs':6,'budget_training_seconds':sum(m['training_seconds'] for m in read(R/'budget.json')['measurements'] if m['status']=='COMPLETED'),
-       'experiment_start':min(read(Path(p)/'manifest.json')['started_at'] for p in unique_train),
-       'audit_finished_at':datetime.now(timezone.utc).isoformat()}
+       'experiment_start':started,'audit_finished_at':finished.isoformat(),
+       'formal_workflow_wall_seconds':(finished-datetime.fromisoformat(started)).total_seconds(),
+       'Lab4_regression_start_to_final_audit_wall_seconds':(finished-datetime.fromisoformat(old_test_start)).total_seconds()}
     write_json(R/'execution_statistics.json',stats)
     result={'status':'PASS' if all(c['status']=='PASS' for c in checks) else 'FAIL','checks':checks,'check_count':len(checks),
        'failed':[c for c in checks if c['status']=='FAIL'],'statistics':stats,
        'teacher_split_independently_verified':False,'public_masks_user_authorized':True,
        'Lab4_Q2':'BLOCKED (unchanged; absent course color protocol)','Lab5_BLOCKED':[],
+       'scientific_predictions':{'E2_direction':'SUPPORTED' if e2['mean_delta']>0 and e2['same_nonzero_sign'] else 'NOT_SUPPORTED',
+          'E2_preregistered_magnitude_band':'PASS' if .15<=e2['mean_delta']<=.35 else 'FAIL (quantitative prediction contradicted; experiment retained)',
+          'E2_teacher_statistical_rule':e2['teacher_conclusion']},
        'scope':'no formal report generated; no Lab6 executed'}
     write_json(R/'final_audit.json',result);print(json.dumps({'status':result['status'],'failed':result['failed'],'statistics':stats}))
 if __name__=='__main__':main()

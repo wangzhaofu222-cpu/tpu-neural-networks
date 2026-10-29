@@ -1,0 +1,52 @@
+experiment:
+  name: layer_probe
+  lab: 5
+  seed: 1
+  deterministic: true
+  purpose: formal
+  role: layer_probe
+data:
+  name: graph_features
+  graph_path: data/lab5/original.pt
+  train_fraction: 1.0
+  num_workers: 0
+  features_path: data\lab5\features\fc85ae1f0ca34e21ea17-0c431d6bd0a44bb0a88fd89f2cfb4857\layer11.pt
+model:
+  name: linear_probe
+  input_dim: 64
+  classes: 7
+optimizer:
+  name: adam
+  lr: 0.01
+  weight_decay: 0.001
+  momentum: 0
+scheduler:
+  name: constant
+  warmup_epochs: 0
+train:
+  epochs: 200
+  batch_size: 2708
+  amp: false
+  accumulation_steps: 1
+logging:
+  run_root: runs/lab5
+  save_every: 200
+  keep_epochs: []
+runtime:
+  device: cpu
+  threads: 2
+  max_seconds: 0
+  dependency_lock: docs/environment/lab5-requirements.lock.txt
+  pause_file: experiments/lab5/PAUSE
+profile:
+  id: P3adf02
+  student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+  base_seed: 987693601
+  lab5_dataset: cora
+  lab5_second_gnn: gat
+  lab5_depths:
+  - 2
+  - 3
+  - 6
+  - 12
+  - 24

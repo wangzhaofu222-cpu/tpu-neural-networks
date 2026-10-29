@@ -11,9 +11,11 @@ from src.graph.datasets import fingerprints
 
 def main():
     out=Path('experiments/lab5');out.mkdir(exist_ok=True)
-    p=generate('8\u0412\u043c53514');profile=p['profile']
+    # Private input stays outside tracked configuration and public artifacts.
+    sid=json.loads(Path('.private/lab4_student_id.json').read_text(encoding='utf-8'))['student_id']
+    p=generate(sid);profile=p['profile']
     profile.update({k:p[k] for k in ['lab5_dataset','lab5_second_gnn','lab5_depths']})
-    write_json(out/'profile.json',{'profile':profile,'lab5_hash':hashlib.sha256('8\u0412\u043c53514:lab5'.encode()).hexdigest()})
+    write_json(out/'profile.json',{'profile':profile,'lab5_hash':hashlib.sha256((sid+':lab5').encode()).hexdigest()})
     write_json(out/'split_decision.json',{'date':'2026-10-29','user_decision':'使用 PyG public masks，并保留未核对声明',
         'teacher_protocol_found':False,'teacher_split_independently_verified':False,
         'public_mask_substitution_authorized':True,'cal_role':[]})

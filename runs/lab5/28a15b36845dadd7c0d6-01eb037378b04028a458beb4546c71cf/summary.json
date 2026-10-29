@@ -1,0 +1,103 @@
+{
+  "epoch": 200,
+  "global_step": 200,
+  "train_loss": 0.31097057461738586,
+  "validation_loss": 1.9420654296875,
+  "train_metric": 0.9214285714285714,
+  "validation_metric": 0.658,
+  "learning_rate": 0.01,
+  "epoch_time": 0.09148800000002666,
+  "peak_gpu_memory_bytes": null,
+  "RUN_ID": "28a15b36845dadd7c0d6-01eb037378b04028a458beb4546c71cf",
+  "EXP_ID": "28a15b36845dadd7c0d6",
+  "best_accuracy": 0.71,
+  "best_epoch": 185,
+  "first_batch_checksum": "aef9a34a6c70e367fe81fc2452babbed47cc2f9e323a993e4111970b89f3841e",
+  "checkpoint_for_final_metric": "checkpoints/last.pt",
+  "purpose": "formal",
+  "status": "COMPLETED",
+  "training_seconds": 18.87199529999998,
+  "smoothing": {
+    "RUN_ID": "ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca",
+    "source_RUN_ID": "28a15b36845dadd7c0d6-01eb037378b04028a458beb4546c71cf",
+    "untrained": false,
+    "pair_count": 20000,
+    "pair_seed": 1729,
+    "pair_hash": "9fb23cb5bf4fbd4b033273e50f8e5ada756c1eb9c6d4fe641fc181cd8ea2fd9e",
+    "zero_vector_convention": "cosine contribution zero if either vector zero; zero full H energy null",
+    "probe_protocol": "frozen features; column mean/std fitted on train only; 200 full-batch Adam epochs lr.01 wd.001; val best earliest; no test evaluation",
+    "operator": "Dtilde^-1/2(A+I)Dtilde^-1/2; energy uses undirected raw edge sum after degree correction",
+    "layers": [
+      {
+        "layer": 0,
+        "S": 0.05518457226968526,
+        "energy": 0.6166526844594132,
+        "probe_val": 0.464,
+        "probe_best_epoch": 186,
+        "probe_RUN_ID": "f0d155b10d8be4de485b-b04f497e59f5433cadfa8f9a54edafb9",
+        "feature_path": "data\\lab5\\features\\ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca\\layer0.pt",
+        "feature_sha256": "f67577e6b300bd0e689f2a38476e8515d372a26279da0f82ca32180987ad770a"
+      },
+      {
+        "layer": 1,
+        "S": 0.49300968340705303,
+        "energy": 0.07264470363607434,
+        "probe_val": 0.726,
+        "probe_best_epoch": 198,
+        "probe_RUN_ID": "f8a2938f9bcf40100984-ae43cb2a827f4bcba83f11e0a5eef3de",
+        "feature_path": "data\\lab5\\features\\ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca\\layer1.pt",
+        "feature_sha256": "5550551568e82c4440c7e5de4c961b2c0b756862f48456b5002aa5fc60aaac7b"
+      },
+      {
+        "layer": 2,
+        "S": 0.5798199053964488,
+        "energy": 0.03514776978491988,
+        "probe_val": 0.678,
+        "probe_best_epoch": 195,
+        "probe_RUN_ID": "3f5555e0a83dc91e46ce-1b1db454fcd44355b651884560faf505",
+        "feature_path": "data\\lab5\\features\\ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca\\layer2.pt",
+        "feature_sha256": "6975fc5f7d02c0f9d1fb56d0acb67566755ac9b36f94c4a25242456cb525d895"
+      },
+      {
+        "layer": 3,
+        "S": 0.5792217462653321,
+        "energy": 0.02523843384576555,
+        "probe_val": 0.706,
+        "probe_best_epoch": 16,
+        "probe_RUN_ID": "21400ef4f33e08c8cf4f-8cc93d418d6f4c58bf854f09394f4f0d",
+        "feature_path": "data\\lab5\\features\\ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca\\layer3.pt",
+        "feature_sha256": "eaa36a23b5b7e58f46efe48b86eb5041d3aa21ade2999c3a8240763811a74c19"
+      },
+      {
+        "layer": 4,
+        "S": 0.575790664751044,
+        "energy": 0.021127697754872755,
+        "probe_val": 0.702,
+        "probe_best_epoch": 19,
+        "probe_RUN_ID": "7fc916fcf5f7367623d7-367240df24bd4ae59738671d0e116410",
+        "feature_path": "data\\lab5\\features\\ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca\\layer4.pt",
+        "feature_sha256": "d3010e0c1303dae1e87a3c49861a1d0990eb82cde9a52b8362748b8c7d7b90a0"
+      },
+      {
+        "layer": 5,
+        "S": 0.4728097418094206,
+        "energy": 0.022459026353891524,
+        "probe_val": 0.708,
+        "probe_best_epoch": 20,
+        "probe_RUN_ID": "b174391e8fa194e858c9-5d3dda4db06443449ac641162b215bf9",
+        "feature_path": "data\\lab5\\features\\ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca\\layer5.pt",
+        "feature_sha256": "783e7683c69f40773abcea0da74f236f0b074b9afbb6c5fb7e4841b01fa998cd"
+      },
+      {
+        "layer": 6,
+        "S": 0.2758749695244005,
+        "energy": 0.020570480509466568,
+        "probe_val": 0.702,
+        "probe_best_epoch": 187,
+        "probe_RUN_ID": "54a7e62a3a2e36b0b801-90a7cb1caa06456fa667d52ea87f9871",
+        "feature_path": "data\\lab5\\features\\ec05eb2f52a5c4901b25-9c7e1ea62d7d41c8a646f59dfcc2aaca\\layer6.pt",
+        "feature_sha256": "e4a75b661a6f5287a0c12b8e1088678760f7fedd64d4bb1054de7f06bff0d90e"
+      }
+    ]
+  }
+}

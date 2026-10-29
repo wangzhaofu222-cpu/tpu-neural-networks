@@ -1,0 +1,53 @@
+{
+  "RUN_ID": "500bb6f7318f315e35b3-4454d99e333c40708c10e54c249e704c",
+  "source_RUN_ID": "3f5b20ec09259c18b1bf-b0a8634dc3ae4969bf52505b5b7a841f",
+  "untrained": false,
+  "pair_count": 20000,
+  "pair_seed": 1729,
+  "pair_hash": "9fb23cb5bf4fbd4b033273e50f8e5ada756c1eb9c6d4fe641fc181cd8ea2fd9e",
+  "zero_vector_convention": "cosine contribution zero if either vector zero; zero full H energy null",
+  "probe_protocol": "frozen features; column mean/std fitted on train only; 200 full-batch Adam epochs lr.01 wd.001; val best earliest; no test evaluation",
+  "operator": "Dtilde^-1/2(A+I)Dtilde^-1/2; energy uses undirected raw edge sum after degree correction",
+  "layers": [
+    {
+      "layer": 0,
+      "S": 0.05518457226968526,
+      "energy": 0.6166526844594132,
+      "probe_val": 0.464,
+      "probe_best_epoch": 186,
+      "probe_RUN_ID": "dd2f36d01f03f2e2981b-36e47ecd5a644cadaf44bbb7cb6b6e90",
+      "feature_path": "data\\lab5\\features\\500bb6f7318f315e35b3-4454d99e333c40708c10e54c249e704c\\layer0.pt",
+      "feature_sha256": "f67577e6b300bd0e689f2a38476e8515d372a26279da0f82ca32180987ad770a"
+    },
+    {
+      "layer": 1,
+      "S": 0.7877665420022458,
+      "energy": 0.06897890074794148,
+      "probe_val": 0.782,
+      "probe_best_epoch": 9,
+      "probe_RUN_ID": "ffea0ba98354fb5e850b-8dc1731a05444180b43c793fc8bfbf4d",
+      "feature_path": "data\\lab5\\features\\500bb6f7318f315e35b3-4454d99e333c40708c10e54c249e704c\\layer1.pt",
+      "feature_sha256": "0217e5b614e4baaa302cdc83db72c594ac95dbbfea066eaff9fecc165f4bcfc6"
+    },
+    {
+      "layer": 2,
+      "S": 0.7183301003307124,
+      "energy": 0.026746539131945444,
+      "probe_val": 0.788,
+      "probe_best_epoch": 10,
+      "probe_RUN_ID": "821d133eac16b890d6c6-d43e083a7eb540d2a7879911ab878b4c",
+      "feature_path": "data\\lab5\\features\\500bb6f7318f315e35b3-4454d99e333c40708c10e54c249e704c\\layer2.pt",
+      "feature_sha256": "f8abd9552ee4d4f12ef91100a89e522c82290897b018f8b92dfb751d5bc04fc1"
+    },
+    {
+      "layer": 3,
+      "S": 0.16582449335482013,
+      "energy": 0.035624467898452944,
+      "probe_val": 0.792,
+      "probe_best_epoch": 60,
+      "probe_RUN_ID": "3e8510cd43e8d7ce626e-1a70f426c36c4c4ab6fd99308e3d4643",
+      "feature_path": "data\\lab5\\features\\500bb6f7318f315e35b3-4454d99e333c40708c10e54c249e704c\\layer3.pt",
+      "feature_sha256": "ccc1c3bfa91abefe750d77355067a6eda9021ad2ee37c43dbf15745ad9c7b639"
+    }
+  ]
+}

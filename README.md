@@ -69,3 +69,9 @@ Lab3已完成Copy/L0=128/深度2的全部必做实验、三seed配对、注意�
 ## Lab4
 
 实验已推进至 Lab4，Q2 因缺教师 Protocol §4.6 保留 BLOCKED；不虚报全部完成。复现入口与数据索引见 [Lab4 README](experiments/lab4/README.md)，逐项验收见 [Lab4 audit](experiments/lab4/audit.json)。没有制作新报告，没有启动 Lab5。
+
+
+<!-- LAB5_AUDITED_STATUS -->
+## Lab5 图结构实验
+
+Lab5 已实施 E1–E3、35次完整模型训练和102次逐层 probe，130项自动测试通过。详见 [Lab5 实验汇总](experiments/lab5/EXPERIMENT_SUMMARY.md)、[复现说明](experiments/lab5/README.md) 和 [独立审计](experiments/lab5/final_audit.json)。正式运行均为200epochs；预算测试单独保存。E2事前记录为25b13ff，量级预测失败保留，不改写假设。PyG public masks已获用户授权，但教师独立split仍UNVERIFIED；Lab4颜色协议Q2仍BLOCKED。未制作正式报告，未执行Lab6。

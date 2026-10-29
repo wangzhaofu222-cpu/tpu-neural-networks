@@ -1,0 +1,20 @@
+{
+  "generator": "reports.tools.lab5_artifacts",
+  "data_sources": {
+    "E1.json": "0192affb9143a831bc76f22c379957296aadb52457b97fb216d51ed2895352f4",
+    "E2.json": "9c05236f040bfd709ed21b4d9a548be28211324d4d4c001d79556db8852f29e0",
+    "E3.json": "3f0cef1c85817334b5b4e532788991cbbed8eb951a82075f53dc895324f99973",
+    "run_index.json": "7ba43eec137459f2c6ea404f627b70b315a2ea795c0a01bea75a64b6d3363147"
+  },
+  "figures": {
+    "E1_deletion.png": "46703039b548f9a571396fb8343fb99c57e61ad1db51033f35cbd47b806ce2e2",
+    "E1_deletion.svg": "1c19d1eb3d5d752f0e09810558120c3a44e86311db0e839e19be2f79e4ea5bac",
+    "E2_paired.png": "89d51fd6fc2095f4a9524722f31e360654a600ab32eb3f28fa11833a26284a5b",
+    "E2_paired.svg": "bbf9d6816389fc2a88c9adf10c2b53a7dfd62164082207b3a4b81ec28121d733",
+    "E3_layers.png": "997c6ed57971e4c39d2a5966763a616be0e0d55082755e19564feefb93437e12",
+    "E3_layers.svg": "149987aad55ee81fbce52360bbe0a423539d5bb8183e7476ddd37f57a2ef7657",
+    "E3_residual.png": "d301f8c2ab3ffbfc0422401bfc467ccea7594ceb3504ef0880909cf4ea64a1c9",
+    "E3_residual.svg": "52f7f689ef85a6784d9e15e42bc0a4e223641d65d2a74329396b8cd052d086ba"
+  },
+  "RUN_ID_sources": "E1_models.csv, E1_deletion.csv, E2_pairs.csv, E3_depths.csv, E3_all_layers.csv; source/evaluation/probe IDs all preserved"
+}

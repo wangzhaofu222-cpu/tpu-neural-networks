@@ -27,24 +27,28 @@ def main():
       '', '| Seed | 原图GCN (%) | null GCN (%) | MLP (%) | Δ (pp) | null hE | hdeg | 交换成功率 |', '|---|---:|---:|---:|---:|---:|---:|---:|']
     for r in e2['paired']:lines.append(f"|{r['seed']}|{100*r['original']['test']:.2f}|{100*r['null']['test']:.2f}|{100*r['mlp']['test']:.2f}|{100*r['delta']:.2f}|{r['null_hE']:.5f}|{r['hdeg']:.5f}|{100*r['swap_success']:.2f}%|")
     lines+=['',f"平均Δ={100*e2['mean_delta']:.3f}pp，样本SD(ddof=1)={100*e2['sample_sd_delta']:.3f}pp；同号={e2['same_nonzero_sign']}；教师判定：{e2['teacher_conclusion']}。",
-      f"定量假设预测+15至+35pp，实测{'在' if .15<=e2['mean_delta']<=.35 else '不在'}预测区间；即使方向支持，量级偏离也必须保留。ER seed1 test={100*e2['ER']['test']:.2f}%；ER改变度分布，单seed差异不能单独归因于度。三seeds仅反映当前固定split下的变异。",
+      f"定量假设预测+15至+35pp，实测{'在（PASS）' if .15<=e2['mean_delta']<=.35 else '不在（量级预测FAIL）'}预测区间；方向支持不抹去量级预测失败。ER seed1 test={100*e2['ER']['test']:.2f}%；ER改变度分布，单seed差异不能单独归因于度。三seeds仅反映当前固定split下的变异。",
       '', '## E3','',f"val最优深度={e3['lstar_validation']}；sm={100*e3['sm']:.3f}pp，明显下降阈值=2sm={100*e3['threshold']:.3f}pp。",
       '| 深度 | Train/Val/Test (%) | ρT | GI | S | Ê | 输出层probe val (%) | 诊断 |','|---|---|---:|---:|---:|---:|---:|---|']
     for r in e3['plain']:lines.append(f"|{r['depth']}|{100*r['train']:.2f}/{100*r['val']:.2f}/{100*r['test']:.2f}|{r['rhoT']:.5f}|{r['GI']:.4f}|{r['S']:.5f}|{r['energy']:.5g}|{100*r['probe_val']:.2f}|{r['diagnosis']}|")
     res=e3['residual'];smooth=[r['depth'] for r in e3['plain'] if r['diagnosis']=='smoothing']
+    smoothing=read(R/'run_index.json')['smoothing'];untrained={r['layer']:r for r in smoothing['untrained']['layers']}
     lines+=['',f"严格按教师联合判据归为有害过度平滑的深度：{smooth if smooth else '未观察到可确证案例'}。S升高本身不够；rho、梯度和probe一起决定解释。GI>=6是事前公开的分析惯例，教师PDF未给出该数字。",
       f"24层残差模型 Train/Val/Test={100*res['train']:.2f}/{100*res['val']:.2f}/{100*res['test']:.2f}%，ρT={res['rhoT']:.5f}，GI={res['GI']:.4f}，S={res['S']:.5f}，Ê={res['energy']:.5g}，probe={100*res['probe_val']:.2f}%。输入维度不匹配用可学习投影，后续隐藏层identity skip，输出无skip/ReLU；不可直接套用无权传播极限。",
       'rhoT/GI表为最佳val checkpoint、eval模式、train标签诊断；末轮训练rho及训练期每层梯度中位数GI另列E3_depths.csv，每一步原始梯度保存在训练RUN中。逐层probe、S、Ê和RUN_ID见E3_all_layers.csv；未训练传播包含0..24层。',
+      '同层数能量对比（训练模型 / 无权传播）：'+ '；'.join(f"L={r['depth']}: {r['energy']:.6g}/{untrained[r['depth']]['energy']:.6g}，训练后{'更强' if r['energy']<untrained[r['depth']]['energy'] else '更弱'}平滑" for r in e3['plain'])+'。该比较指能量而非单独的S，并非对训练失败的因果证明。',
       '', '## 交付与限制','',
       '结构依赖地图：structure_map.csv/json，逐项列出固定变量、变化变量、可比范围和RUN_ID。五个反事实答案：counterfactual_answers.md；CF4遵守事前规则，不按结果改阈值。',
       f"完整模型正式训练{st['model_training_runs']}次；线性probe正式训练{st['linear_probe_training_runs']}次；合计{st['formal_training_runs']}次、{st['formal_optimizer_steps']}次更新。另有6个5epoch预算测试，未冒充正式结果。",
       f"正式训练累计{st['formal_training_seconds']:.2f}秒（{st['formal_training_seconds']/60:.2f}分钟，含诊断和保存）；预算训练{st['budget_training_seconds']:.2f}秒。正式阶段开始{st['experiment_start']}，独立审计完成{st['audit_finished_at']}。",
+      f"正式工作流墙钟{st['formal_workflow_wall_seconds']/60:.2f}分钟；从Lab4回归测试开始至最终审计墙钟{st['Lab4_regression_start_to_final_audit_wall_seconds']/60:.2f}分钟（包含核查、安装、实现、测试和分析）。",
       f"本地checkpoint：正式{st['formal_checkpoints']}个，Lab5全部{st['all_lab5_checkpoints']}个。权重、原始Cora、图和逐层特征在本地；Git保存配置、哈希、预测JSON、表格、图、日志与审计，不强制加入大权重。",
       f"Lab5 阻塞项：{audit['Lab5_BLOCKED']}；审计失败项：{audit['failed']}。教师split核对UNVERIFIED，不以用户替代授权伪装为核对通过；Lab4 Q2仍BLOCKED。",
       '未生成LaTeX/PDF/正式俄语报告；未执行Lab6。', '']
     (R/'EXPERIMENT_SUMMARY.md').write_text('\n'.join(lines),encoding='utf-8')
     p=Path('docs/requirements/requirements_lab5.md');text=p.read_text(encoding='utf-8')
     text=text.replace('| RUNNING |','| PASS |').replace('| PENDING |','| PASS |')
+    text=text.replace('raw test.index, per-role indices/hash/classes, masks disjoint | PASS |','raw test.index, per-role indices/hash/classes, masks disjoint | PASS_SUBSTITUTION; COURSE_SPLIT_UNVERIFIED |')
     if audit['failed']:text+='\nActual audit exceptions (never suppress):\n'+json.dumps(audit['failed'],ensure_ascii=False,indent=2)+'\n'
     if any(c['check']=='CF4_predeclared_witness' for c in audit['failed']):text=text.replace('| C04 |','| C04 |',1).replace('actual data | PASS |','actual data | FAIL |')
     p.write_text(text,encoding='utf-8')

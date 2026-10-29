@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from src.utils.io import write_json
+from src.utils.io import write_json,file_hash
 
 R=Path('experiments/lab5');F=R/'figures'
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
@@ -50,7 +50,7 @@ def main():
     ax[1].plot(p,[r['expected_isolated'] for r in e1['deletion']],'s--',label='Sum p^degree',color=colors[1])
     ax[1].set(xlabel='Edge deletion probability p',ylabel='Isolated nodes',ylim=(0,2800));ax[1].legend()
     ax[2].plot(p,[r['hE'] if r['hE'] is not None else np.nan for r in e1['deletion']],'o-',color=colors[2])
-    ax[2].set(xlabel='Edge deletion probability p',ylabel='Edge homophily hE',ylim=(0,1));ax[2].text(.95,.1,'p=1: undefined',ha='right')
+    ax[2].set(xlabel='Edge deletion probability p',ylabel='Edge homophily hE',ylim=(0,1),xlim=(0,1));ax[2].text(.95,.1,'p=1: undefined',ha='right')
     save(fig,'E1_deletion','Shared seed1 edge draws; independent deletion per undirected edge. MLP has separately selected val hyperparameters.')
     fig,ax=plt.subplots(1,2,figsize=(10,4));seeds=[1,2,3]
     for name,label,c,m in [('original_test','GCN original',colors[0],'o'),('null_test','GCN degree-preserving null',colors[1],'s'),('MLP_test','MLP',colors[2],'^')]:
@@ -138,6 +138,11 @@ Original GCN={pct(base['test'])}. ModeA={pct(half['A_test'])}, drop={100*(base['
 
 The immutable all_training_selection_lock.json selected depth {e3['lstar_validation']} using val before E3 depth-test inspection. Posthoc test argmax is depth {e3['test_argmax_posthoc']}; {'they agree' if e3['lstar_validation']==e3['test_argmax_posthoc'] else 'they differ'}. The per-depth evaluation RUN_IDs are in E3_depths.csv. This posthoc computation changes no configuration, checkpoint or result. E1 had already exposed the separately required depth2 baseline test outcome; no claim of a wholly unseen depth2 test is made. Transduction permits X and edge access, not test-label selection. Selecting depth on test would reuse the evaluation labels and bias the final estimate even if the two argmax depths happen to agree.
 '''
+    text+='\nFor Q2, random added cross-class neighbors reduce edge homophily and can inject misleading messages. Random deletion largely preserves hE but reduces the available neighbors; the interventions damage different information. The measured one-seed difference does not quantify sampling uncertainty.\n'
     (R/'counterfactual_answers.md').write_text(text,encoding='utf-8')
+    write_json(R/'figure_provenance.json',{'generator':'reports.tools.lab5_artifacts',
+        'data_sources':{p.name:file_hash(p) for p in [R/'E1.json',R/'E2.json',R/'E3.json',R/'run_index.json']},
+        'figures':{p.name:file_hash(p) for p in F.iterdir() if p.is_file()},
+        'RUN_ID_sources':'E1_models.csv, E1_deletion.csv, E2_pairs.csv, E3_depths.csv, E3_all_layers.csv; source/evaluation/probe IDs all preserved'})
     print(json.dumps({'figures':4,'CF4':cf4['status'],'witnesses':len(witnesses),'posthoc_test_depth':e3['test_argmax_posthoc']}))
 if __name__=='__main__':main()

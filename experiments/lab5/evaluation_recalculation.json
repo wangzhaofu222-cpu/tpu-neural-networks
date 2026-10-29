@@ -1,0 +1,162 @@
+[
+  {
+    "key": "E1_mlp",
+    "RUN_ID": "6dc64393605049154c62-e390858402844dfd8439193a33e59414",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_gcn",
+    "RUN_ID": "19bb59fb13252ba73de3-8e0a3696718f4ddeab1c9f002206edfb",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_gat",
+    "RUN_ID": "922f39512d2e378e6dbb-c3c1afd5768f4eafa3007b4ab4a1f32a",
+    "prediction_exact": true
+  },
+  {
+    "key": "reference",
+    "RUN_ID": "bbd70e9d93c66b126f85-f91c802e7c9f465da17b1aa7fe19ed61",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_A_0.1",
+    "RUN_ID": "62a3f951f734211c790b-6dca5b96e4e44425b6e5796659c96566",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_B_0.1",
+    "RUN_ID": "7a06b6037c33f8a33db6-6e6f3e43e7f142aba33b93f2d03d250f",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_A_0.3",
+    "RUN_ID": "70e7e801068fbaa14e8f-9467fd3dd4ba44718b292b5c08203fc9",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_B_0.3",
+    "RUN_ID": "6de45895a645a6005574-2da6d1e8af83463083c3385dcf511764",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_A_0.5",
+    "RUN_ID": "03e1619b9899f2883b3d-e8688222db92423ab88987a7a88c7756",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_B_0.5",
+    "RUN_ID": "83bdc4e3aa823dd29101-0d25d7abb9e542859b180983675318bb",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_A_0.8",
+    "RUN_ID": "37127c5b272beb01e37c-e6ee9636a6e3437f91ba82ebb1a250f3",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_B_0.8",
+    "RUN_ID": "34e91694bbcc95320d27-0bfa21f151fc4ecb93ba45132b502497",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_A_1",
+    "RUN_ID": "58d3bc7f71ceff589bf7-671dd326e27249b8b7a9ad18f512935b",
+    "prediction_exact": true
+  },
+  {
+    "key": "E1_B_1",
+    "RUN_ID": "4d480d550deb7c01b60b-a2e9c042795a49348f137754b2faaeb7",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_original_1",
+    "RUN_ID": "170997eb0516db15268e-bc9dd3adb6484c389e2394bef1c25035",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_null_1",
+    "RUN_ID": "f1612dc13ae579d47fdc-1f33df1ac3aa47ec84dbd76b938a4bbc",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_mlp_1",
+    "RUN_ID": "d16ae08008f6b91f6683-f4d55238a7904264a8e389e6ede11e4f",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_original_2",
+    "RUN_ID": "5e3dc7b2b4a8f04c4a58-eff300233e574c70a12504bbae61a014",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_null_2",
+    "RUN_ID": "12f1a133897b3514871e-78d2f0eafae24f43afdb2e073cf08062",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_mlp_2",
+    "RUN_ID": "5de448d7512566739e65-a51c5e51536349998f2e89db502a7cf9",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_original_3",
+    "RUN_ID": "9f9a170b0c7c29985d28-995dbbd00e024bfe9c0b8241a2a14def",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_null_3",
+    "RUN_ID": "97644abed27cf38f5473-057f3aed2da14031bce8c388124d7535",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_mlp_3",
+    "RUN_ID": "adf064ebe053b9d71fcd-90727d1abb7f46aa9a33e1d5a5a86201",
+    "prediction_exact": true
+  },
+  {
+    "key": "E2_ER",
+    "RUN_ID": "e1f9226c3807d9516799-e75943f539284dec846455ee78becf0f",
+    "prediction_exact": true
+  },
+  {
+    "key": "E3_plain_2",
+    "RUN_ID": "e5ad68ca624d0add75bb-bff2432311f343f38cc3b99ea9cb6706",
+    "prediction_exact": true
+  },
+  {
+    "key": "E3_plain_3",
+    "RUN_ID": "dc798ebb889c12508ca1-4181225ecd5749a89b607ef6adcf12a3",
+    "prediction_exact": true
+  },
+  {
+    "key": "E3_plain_6",
+    "RUN_ID": "55f726aa5ad6110db52f-4be93b2939ec4cf486e46c79f956fcff",
+    "prediction_exact": true
+  },
+  {
+    "key": "E3_plain_12",
+    "RUN_ID": "e419bb0c9f4ea256ac1a-425b7d8b9307440cb45c9e0d132fa69b",
+    "prediction_exact": true
+  },
+  {
+    "key": "E3_plain_24",
+    "RUN_ID": "585876aa03341faa5aa8-c2c6fd3a6d7743218e7a3bdc52bbef2b",
+    "prediction_exact": true
+  },
+  {
+    "key": "E3_residual",
+    "RUN_ID": "d2b7fd35c37f89ad6858-a757e668893346a79a82c1823e72216f",
+    "prediction_exact": true
+  },
+  {
+    "key": "CF1_GAT",
+    "RUN_ID": "d4019e4d9ffc0f51ebad-da107eb6b1fc474bad480d4ee24e01f3",
+    "prediction_exact": true
+  },
+  {
+    "key": "CF2_added",
+    "RUN_ID": "804407ffb262222bf788-5188bcee62fe409d81452e808519f81b",
+    "prediction_exact": true
+  }
+]

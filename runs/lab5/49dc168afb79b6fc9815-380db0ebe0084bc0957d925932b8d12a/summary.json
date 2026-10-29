@@ -1,0 +1,43 @@
+{
+  "RUN_ID": "49dc168afb79b6fc9815-380db0ebe0084bc0957d925932b8d12a",
+  "source_RUN_ID": "161525da61d13689ebfa-5a0dec5c5d7647d6a945bc8bb9dc5514",
+  "untrained": false,
+  "pair_count": 20000,
+  "pair_seed": 1729,
+  "pair_hash": "9fb23cb5bf4fbd4b033273e50f8e5ada756c1eb9c6d4fe641fc181cd8ea2fd9e",
+  "zero_vector_convention": "cosine contribution zero if either vector zero; zero full H energy null",
+  "probe_protocol": "frozen features; column mean/std fitted on train only; 200 full-batch Adam epochs lr.01 wd.001; val best earliest; no test evaluation",
+  "operator": "Dtilde^-1/2(A+I)Dtilde^-1/2; energy uses undirected raw edge sum after degree correction",
+  "layers": [
+    {
+      "layer": 0,
+      "S": 0.05518457226968526,
+      "energy": 0.6166526844594132,
+      "probe_val": 0.464,
+      "probe_best_epoch": 186,
+      "probe_RUN_ID": "ee1954f79ee7ac1ea8da-008d856ec23843c1a0b42b0d2c01f195",
+      "feature_path": "data\\lab5\\features\\49dc168afb79b6fc9815-380db0ebe0084bc0957d925932b8d12a\\layer0.pt",
+      "feature_sha256": "f67577e6b300bd0e689f2a38476e8515d372a26279da0f82ca32180987ad770a"
+    },
+    {
+      "layer": 1,
+      "S": 0.8751972019783316,
+      "energy": 0.06198188419633208,
+      "probe_val": 0.782,
+      "probe_best_epoch": 19,
+      "probe_RUN_ID": "8153d5dd8492676db92b-0700efde84e442f4b5d6b4a47b385f35",
+      "feature_path": "data\\lab5\\features\\49dc168afb79b6fc9815-380db0ebe0084bc0957d925932b8d12a\\layer1.pt",
+      "feature_sha256": "a48ceb9b4737200b84b1af72233e30e034383335b6c43098a552564f75bd54ac"
+    },
+    {
+      "layer": 2,
+      "S": 0.1278816021688073,
+      "energy": 0.06377736877997532,
+      "probe_val": 0.796,
+      "probe_best_epoch": 112,
+      "probe_RUN_ID": "586b65a9ee6ec6075b79-18370803cf3a4796b82d51a54d4391bd",
+      "feature_path": "data\\lab5\\features\\49dc168afb79b6fc9815-380db0ebe0084bc0957d925932b8d12a\\layer2.pt",
+      "feature_sha256": "f8233324fbfbac1cb254791e7b16cefe4db127a9dadf5e40f38608b0ff04d00d"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "preexisting_packages": 30,
+  "changed_preexisting_packages": {},
+  "preexisting_constraints_sha256": "ceab8d822179413ce5f42d6786f1531712ae8484432784901d91ccb9e12ae385",
+  "pytorch": "2.7.1+cu126",
+  "torchvision": "0.22.1+cu126",
+  "torch_geometric": "2.7.0",
+  "torch_upgrade_performed": false,
+  "pip_check": "No broken requirements found",
+  "lab5_lock_sha256": "6e2c96c7a47e4569e9c33025202eadc80057daace48ed120c3102c06403a8038"
+}
