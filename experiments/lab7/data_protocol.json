@@ -1,0 +1,31 @@
+{
+  "seeds": {
+    "train": 701,
+    "val": 702,
+    "test": 703
+  },
+  "sizes": {
+    "train": 20000,
+    "val": 5000,
+    "test": 5000
+  },
+  "normalization": {
+    "mean": [
+      -0.1807725544349425,
+      0.002545791305752875
+    ],
+    "scale": [
+      0.6248889821013015,
+      0.772889300605879
+    ],
+    "rule": "per-coordinate population std from train only; raw=z*scale+mean"
+  },
+  "role_file_hashes": {
+    "train": "022b0e13fe94493009eb9378b8ee619ffb89b00405981e5fdfa857a47a929863",
+    "val": "b59dac16a24bd1e0096cf09c004a89b0ca667821b0dc977b0e16507dbd548e3c",
+    "test": "bd804f380f134f99f41831911cf18d0eae325b3c3fbc744fd32187dfbebab109"
+  },
+  "cal": null,
+  "standardized_training": true,
+  "metrics_in_original_units": true
+}

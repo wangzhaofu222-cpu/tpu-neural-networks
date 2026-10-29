@@ -131,6 +131,18 @@ def validate(cfg):
             if (cfg['train']['max_steps'],cfg['train']['batch_size'],cfg['optimizer']['name'],cfg['optimizer']['lr'])!=(5000,256,'adam',.001):raise ValueError('Lab6 fixed training budget mismatch')
             if cfg['sampling']['steps']!=50 or cfg['sampling']['temperature']!=1:raise ValueError('Lab6 fixed Langevin K/T mismatch')
             if cfg['generative']['energy_regularization']!=0:raise ValueError('Unregistered regularization change')
+    if cfg['experiment']['lab']==7:
+        from src.diffusion.schedules import make_schedule
+        make_schedule(cfg['diffusion'])
+        if cfg['data']['name']!='rare_gmm2d' or cfg['model']['name']!='diffusion_mlp':raise ValueError('Lab7 requires registered GMM/epsilon model')
+        p=cfg['profile'];d=cfg['data'];m=cfg['model']
+        if [d['M'],d['rho']]!=p['lab7_modes']:raise ValueError('Assigned modes changed')
+        if cfg['experiment']['purpose']=='formal':
+            expected_weight=p['lab7_rare_weight']*d.get('rare_weight_multiplier',1.)
+            if d['pi0']!=expected_weight or d.get('rare_weight_multiplier',1.) not in [1.,.5,.25]:raise ValueError('Unregistered rare weight')
+            if (cfg['train']['max_steps'],cfg['train']['batch_size'],cfg['optimizer']['lr'])!=(20000,512,.001):raise ValueError('Lab7 formal budget changed')
+            if m['width'] not in [128,256] or m['depth']!=6 or m['time_dim']!=128:raise ValueError('Unregistered architecture')
+            if cfg['diffusion']['T'] not in [p['lab7_T_beta'][0],10*p['lab7_T_beta'][0]]:raise ValueError('Unregistered training T')
     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:
         raise ValueError('Lab 9 encoder conflict requires teacher clarification')
     if not cfg['profile'].get('student_id_hash') or not cfg['profile'].get('id'):

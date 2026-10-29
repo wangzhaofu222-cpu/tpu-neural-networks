@@ -24,6 +24,9 @@ class ArrayImages(Dataset):
 
 
 def datasets(config):
+    if config['data']['name']=='rare_gmm2d':
+        from src.data.gmm2d import datasets as diffusion_datasets
+        return diffusion_datasets(config)
     data = config['data']
     if data['name']=='gaussian_mixture_2d':
         from src.data.generative import datasets as generative_datasets
@@ -110,6 +113,9 @@ def datasets(config):
 
 
 def loaders(config, ds, generator):
+    if config['data']['name']=='rare_gmm2d':
+        from src.data.gmm2d import loaders as diffusion_loaders
+        return diffusion_loaders(config,ds,generator)
     if config['data']['name']=='gaussian_mixture_2d':
         from src.data.generative import loaders as generative_loaders
         return generative_loaders(config,ds,generator)

@@ -1,0 +1,133 @@
+{
+  "rows": [
+    {
+      "depth": 2,
+      "val_NLL": 2.3448194350481035,
+      "val_NLL_SEM": 0.010561275680945528,
+      "MMD2": 0.012850460977132494,
+      "Cov": 0.0,
+      "Dmode": 0.5895999999999999,
+      "parameters": 17412,
+      "sample_seconds": 0.003362800000104471,
+      "exact_test_NLL": 2.351696757721901,
+      "RUN_ID": "3e2187dd37b36a2bd1f4-234f10ef43c849029d91fc8cca2cf506",
+      "source_RUN_ID": "0ad44515fd9437461a52-ccca7095250148cc8e1c7243fac2114e",
+      "invertibility": {
+        "dtype": "float64 with converted learned weights",
+        "test_points": 5000,
+        "median_epsilon": 1.3789180569010569e-17,
+        "max_epsilon": 3.9542238792815493e-16,
+        "autograd_points": 100,
+        "max_logdet_error": 1.1102230246251565e-16,
+        "norm20_points": 100,
+        "norm20_seed": 6201,
+        "norm20_median_epsilon": 4.44089209628018e-17,
+        "norm20_max_epsilon": 8.926082642886924e-16
+      }
+    },
+    {
+      "depth": 4,
+      "val_NLL": 1.1799740039467812,
+      "val_NLL_SEM": 0.015323605515354834,
+      "MMD2": 0.00022592469329740794,
+      "Cov": 1.0,
+      "Dmode": 0.023799999999999967,
+      "parameters": 34824,
+      "sample_seconds": 0.005140999999639462,
+      "exact_test_NLL": 1.198655328166485,
+      "RUN_ID": "cd7ee9b6a143040ac788-c7a3d8f7e6614b93a28ed0155caacf53",
+      "source_RUN_ID": "2cf78e2957013f7a1392-976757dae99d4f93a79d3a7648af9d7e",
+      "invertibility": {
+        "dtype": "float64 with converted learned weights",
+        "test_points": 5000,
+        "median_epsilon": 1.157447707276693e-16,
+        "max_epsilon": 1.5029235767817279e-15,
+        "autograd_points": 100,
+        "max_logdet_error": 1.3489209749195652e-14,
+        "norm20_points": 100,
+        "norm20_seed": 6201,
+        "norm20_median_epsilon": 1.3629016810347117e-13,
+        "norm20_max_epsilon": 1.3634437225740592e-11
+      }
+    },
+    {
+      "depth": 8,
+      "val_NLL": 1.1346770509600639,
+      "val_NLL_SEM": 0.014648499866835895,
+      "MMD2": 9.680675360934643e-05,
+      "Cov": 1.0,
+      "Dmode": 0.010800000000000008,
+      "parameters": 69648,
+      "sample_seconds": 0.009394300000167277,
+      "exact_test_NLL": 1.151692914879322,
+      "RUN_ID": "a0314c5c3d42f5040040-6e051e63939e4c07846ff27ff10ff079",
+      "source_RUN_ID": "c8fbbd1ec0df1fab5db6-c8d9aac7e54540b1b3319aa2d6670087",
+      "invertibility": {
+        "dtype": "float64 with converted learned weights",
+        "test_points": 5000,
+        "median_epsilon": 1.266065247384982e-16,
+        "max_epsilon": 2.5293689273457983e-15,
+        "autograd_points": 100,
+        "max_logdet_error": 2.886579864025407e-15,
+        "norm20_points": 100,
+        "norm20_seed": 6201,
+        "norm20_median_epsilon": 3.6885292664327447e-13,
+        "norm20_max_epsilon": 2.1009554130252733e-10
+      }
+    },
+    {
+      "depth": 16,
+      "val_NLL": 1.1397115485787392,
+      "val_NLL_SEM": 0.013861994293237105,
+      "MMD2": 7.432077492453004e-05,
+      "Cov": 1.0,
+      "Dmode": 0.004999999999999974,
+      "parameters": 139296,
+      "sample_seconds": 0.022970999999415653,
+      "exact_test_NLL": 1.1583168642520905,
+      "RUN_ID": "6f7020df7a993543ca96-e9094c92df4a4acdb304487a46618133",
+      "source_RUN_ID": "196e303e9fb1bd3e788e-314f29270df449c486da4dd862908b03",
+      "invertibility": {
+        "dtype": "float64 with converted learned weights",
+        "test_points": 5000,
+        "median_epsilon": 1.5873190281692294e-16,
+        "max_epsilon": 2.799137374830395e-14,
+        "autograd_points": 100,
+        "max_logdet_error": 4.3076653355456074e-14,
+        "norm20_points": 100,
+        "norm20_seed": 6201,
+        "norm20_median_epsilon": 3.029575541881082e-07,
+        "norm20_max_epsilon": 0.00010701972483449962
+      }
+    }
+  ],
+  "selection": {
+    "selected_depth": 8,
+    "all_improvements_clear": false,
+    "adjacent_comparisons": [
+      {
+        "from": 2,
+        "to": 4,
+        "val_NLL_improvement": 1.164845431101322,
+        "paired_difference_SEM": 0.01075765899631418,
+        "clear": true
+      },
+      {
+        "from": 4,
+        "to": 8,
+        "val_NLL_improvement": 0.04529695298671722,
+        "paired_difference_SEM": 0.004523343377232386,
+        "clear": true
+      },
+      {
+        "from": 8,
+        "to": 16,
+        "val_NLL_improvement": -0.005034497618675232,
+        "paired_difference_SEM": 0.0029657729313510442,
+        "clear": false
+      }
+    ],
+    "rule": "smallest depth with next paired val NLL gain<=2SEM; if every gain clear use8; test excluded"
+  },
+  "selected_at": "2026-10-29T04:36:00.817674+00:00"
+}

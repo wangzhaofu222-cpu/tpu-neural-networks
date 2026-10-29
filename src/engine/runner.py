@@ -36,7 +36,7 @@ class ExperimentRunner:
     def run(self,resume=None,stop_after_epoch=None,weights_only_epoch=None,initialize_only=False):
         cfg = self.config
         ssl_mode=cfg['model']['name']=='simclr' and cfg['model']['mode']=='contrastive'
-        generative_mode=cfg['experiment']['lab']==6
+        generative_mode=cfg['experiment']['lab'] in {6,7}
         device = torch.device(cfg['runtime']['device'])
         if device.type == 'cuda' and not torch.cuda.is_available():
             raise RuntimeError('CUDA requested but unavailable; no silent CPU fallback')
@@ -50,8 +50,12 @@ class ExperimentRunner:
         model = build_model(cfg['model']).to(device)
         generative_state=None
         if generative_mode:
-            from src.engine.generative import GenerativeState
-            generative_state=GenerativeState(cfg)
+            if cfg['experiment']['lab']==7:
+                from src.engine.diffusion import DiffusionState
+                generative_state=DiffusionState(cfg)
+            else:
+                from src.engine.generative import GenerativeState
+                generative_state=GenerativeState(cfg)
         opt_cfg = cfg['optimizer']
         options = {'lr':opt_cfg['lr'],'weight_decay':opt_cfg['weight_decay']}
         optimizer = (torch.optim.AdamW(model.parameters(),**options) if opt_cfg['name']=='adamw' else
@@ -170,7 +174,7 @@ class ExperimentRunner:
                     if budget and time.perf_counter()-wall_start > budget:
                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
                     if first_checksum is None:
-                        if cfg['experiment']['lab'] in {4,5,6}:
+                        if cfg['experiment']['lab'] in {4,5,6,7}:
                             import hashlib
                             first_checksum=hashlib.sha256(x.detach().cpu().contiguous().numpy().tobytes()+y.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
                         else:first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
@@ -200,7 +204,9 @@ class ExperimentRunner:
                                          for j in range(group_start,group_start+group_length))
                     scaled_loss = loss if accumulation == 1 else loss*len(y)/group_examples
                     scaler.scale(scaled_loss).backward()
-                    if generative_state:
+                    if generative_state and cfg['experiment']['lab']==7:
+                        generative_stats['gradient_norm']=float(torch.stack([p.grad.detach().norm() for p in model.parameters() if p.grad is not None]).norm())
+                    elif generative_state:
                         generative_stats['gradient_norm']=math.sqrt(sum(p.grad.detach().double().square().sum().item() for p in model.parameters() if p.grad is not None))
                     if cfg['experiment']['lab']==5 and cfg['model']['name']=='graph_network':
                         from src.diagnostics.oversmoothing import gradient_record
@@ -232,8 +238,11 @@ class ExperimentRunner:
                 partial_epoch=batch_index+1<len(dl['train'])
                 evaluate_at_end=finished_steps or (not step_limit and epoch+1==total_epochs)
                 if generative_mode:
-                    from src.engine.generative import evaluate as evaluate_generative
-                    val=evaluate_generative(model,dl['val'],device)
+                    if cfg['experiment']['lab']==7:
+                        val=generative_state.evaluate(model,dl['val'],device)
+                    else:
+                        from src.engine.generative import evaluate as evaluate_generative
+                        val=evaluate_generative(model,dl['val'],device)
                 else:val = (evaluate_loader(model,dl['val'],device) if not ssl_mode and (not cfg['train'].get('validation_at_end_only') or evaluate_at_end) else {'loss':None,'accuracy':None})
                 if diagnostics and not math.isfinite(val['loss']):
                     raise FloatingPointError('Non-finite validation loss')

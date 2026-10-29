@@ -1,0 +1,28 @@
+{
+  "generator": "reports.tools.lab6_artifacts",
+  "input_hashes": {
+    "E1.json": "375b4655890b90815d7fb9ff0d90098c56caea387da73bc0751045e78283c4e3",
+    "E2.json": "37d03357a71d616d77291156f7ab92553d49faba631ae2dab995ed51f7213305",
+    "E3.json": "a39ecab1cdf0fbd2a379b2253b2dc1080bbe2d4bd47a10d33ad2bf5e5548fc4b",
+    "run_index.json": "a587c9bf5df7b0e2fb864b9542e7082cca092443a653069c2ed19757ec47f418"
+  },
+  "figure_hashes": {
+    "E1_density.png": "a772e22b337bb119d3dd680478677e511f8c3f638673ba5ad9f8de1d14842a1e",
+    "E1_density.svg": "066ba727b6e97216c750d0ed720b9168750ab08fd7ab507c2644d7b1dc815cfc",
+    "E1_eta.png": "f695effe7fd7a854f0c11766fd9f7bcb9c7646ae804c396d839172fc2a1d675c",
+    "E1_eta.svg": "1753e4543e119438aaa0f2793f07aba9ed0b17280014f1a2d0a5ed738d06b3de",
+    "E1_quadratic.png": "910200533a40f7a07355b959a8252ac13157541cb934438262244d2247fa2ea6",
+    "E1_quadratic.svg": "323137d9706757c0334be29e21a6d230dd325ea30b37630a2aed315eedc3a9ad",
+    "E1_trajectories.png": "0cb09e116bd7b4e49fff0417bc18a246fdbd437190b3078a83d2c520d38d0ca9",
+    "E1_trajectories.svg": "c602b5bfcef60c578e5f1ae695cf4b872adc070ade1a9395c83835eed2aeeabc",
+    "E2_depth.png": "13ccae349c0f9f892def13ea837d82a7da56bcf3898d1677a2cae23ba03f810e",
+    "E2_depth.svg": "868eb03d533f87aad3ff1a1903b1fba5037033299cc207809c7ce52a2e208d5c",
+    "E3_bridge_pairs.png": "5f8a1a40882de4bd930433e8c01826192085571008b81748409aa6c09cf0ff02",
+    "E3_bridge_pairs.svg": "b2cc09d5807b6370a5442e136bb652714b0d7e51e0ac2f2ceedb7d7fe4a19cc8",
+    "E3_density.png": "31965ffdaa70cf0658309d990859829d2d6368f7bc7c70814af6bc040ef58eb2",
+    "E3_density.svg": "2f4f6dbfb58cf645920eaa50d69fb0d47324691a4a4e46d10f2889ac5e9489d5",
+    "E3_samples.png": "ae06f3e0abc1e3564c27fd95ab51aa8329d254db0734082b4689547b870023ef",
+    "E3_samples.svg": "8bcb6e3c86da6496558313d49ef2f1e7f5ecdc6e7e584d6b226010c0ed6811c2"
+  },
+  "RUN_ID_mapping": "E1_eta.csv,E1_quadratic.csv,E2_depths.csv,E3_models.csv,E3_pairs.csv"
+}

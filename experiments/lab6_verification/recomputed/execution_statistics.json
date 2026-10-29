@@ -1,0 +1,16 @@
+{
+  "formal_model_training_runs": 11,
+  "formal_optimizer_steps": 55000,
+  "formal_training_seconds": 1952.5797313999983,
+  "formal_checkpoints": 55,
+  "all_lab6_checkpoints": 63,
+  "budget_training_runs": 4,
+  "formal_evaluation_runs": 14,
+  "quadratic_runs": 5,
+  "noise_runs": 10,
+  "final_tests_passed": 153,
+  "first_formal_model_started_at": "2026-10-29T04:24:09.088030+00:00",
+  "audit_finished_at": "2026-10-29T08:53:20.875321+00:00",
+  "formal_workflow_wall_seconds": 16151.787291,
+  "verification_to_audit_wall_seconds": 17139.899402
+}

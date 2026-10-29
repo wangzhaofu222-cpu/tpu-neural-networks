@@ -22,6 +22,9 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='diffusion_mlp':
+        from src.models.diffusion.mlp_eps import EpsilonMLP
+        return EpsilonMLP(cfg)
     if cfg['name']=='energy_model':
         from src.generative.ebm import EnergyModel
         return EnergyModel(cfg)

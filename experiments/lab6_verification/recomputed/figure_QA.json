@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "reviewed_at": "2026-10-29T05:03:46.180573+00:00",
+  "review_method": "Codex visually inspected all eight final PNG previews; E3 bridge chart reinspected after seed-color fix",
+  "figures": [
+    {
+      "file": "E1_density.png",
+      "sha256": "a772e22b337bb119d3dd680478677e511f8c3f638673ba5ad9f8de1d14842a1e",
+      "status": "PASS"
+    },
+    {
+      "file": "E1_eta.png",
+      "sha256": "f695effe7fd7a854f0c11766fd9f7bcb9c7646ae804c396d839172fc2a1d675c",
+      "status": "PASS"
+    },
+    {
+      "file": "E1_quadratic.png",
+      "sha256": "910200533a40f7a07355b959a8252ac13157541cb934438262244d2247fa2ea6",
+      "status": "PASS"
+    },
+    {
+      "file": "E1_trajectories.png",
+      "sha256": "0cb09e116bd7b4e49fff0417bc18a246fdbd437190b3078a83d2c520d38d0ca9",
+      "status": "PASS"
+    },
+    {
+      "file": "E2_depth.png",
+      "sha256": "13ccae349c0f9f892def13ea837d82a7da56bcf3898d1677a2cae23ba03f810e",
+      "status": "PASS"
+    },
+    {
+      "file": "E3_bridge_pairs.png",
+      "sha256": "5f8a1a40882de4bd930433e8c01826192085571008b81748409aa6c09cf0ff02",
+      "status": "PASS"
+    },
+    {
+      "file": "E3_density.png",
+      "sha256": "31965ffdaa70cf0658309d990859829d2d6368f7bc7c70814af6bc040ef58eb2",
+      "status": "PASS"
+    },
+    {
+      "file": "E3_samples.png",
+      "sha256": "ae06f3e0abc1e3564c27fd95ab51aa8329d254db0734082b4689547b870023ef",
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    "readable titles,axes,legends,captions; no clipping or overlap",
+    "physical fractions have nonnegative axes",
+    "depth ticks are exactly2,4,8,16 without misleading minor labels",
+    "density comparison uses common logarithmic color limits",
+    "EBM grid estimate and exact Flow density explicitly distinguished",
+    "full sample extent and outside counts disclosed",
+    "norm20 inversion kept separate from data-domain acceptance",
+    "all three bridge curves distinguishable by seed color and model line style",
+    "statistics and plots derived from saved RUNs with file hashes"
+  ]
+}
