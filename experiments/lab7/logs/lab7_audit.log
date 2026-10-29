@@ -1,0 +1,37 @@
+Training and checkpoints audited
+Evaluation audited E1_linear_DDPM
+Evaluation audited E1_cosine_DDPM
+Evaluation audited E1_short_T_exact_DDPM
+Evaluation audited E1_full_T_exact_DDPM
+Evaluation audited E2_network_ddpm_1000
+Evaluation audited E2_network_ddim_5
+Evaluation audited E2_network_ddim_10
+Evaluation audited E2_network_ddim_20
+Evaluation audited E2_network_ddim_50
+Evaluation audited E2_network_ddim_100
+Evaluation audited E2_network_ddim_1000
+Evaluation audited E2_exact_ddpm_1000
+Evaluation audited E2_exact_ddim_5
+Evaluation audited E2_exact_ddim_10
+Evaluation audited E2_exact_ddim_20
+Evaluation audited E2_exact_ddim_50
+Evaluation audited E2_exact_ddim_100
+Evaluation audited E2_exact_ddim_1000
+Evaluation audited E2_network_DDIM_T_initial_7402
+Evaluation audited E2_network_DDIM_T_initial_7403
+Evaluation audited E2_low_network_1
+Evaluation audited E2_low_network_2
+Evaluation audited E2_low_exact_1
+Evaluation audited E2_low_exact_2
+Evaluation audited diagnostic_trajectory_linear
+Evaluation audited diagnostic_trajectory_cosine
+Evaluation audited E3_A_2
+Evaluation audited E3_B_2
+Evaluation audited E3_A_3
+Evaluation audited E3_B_3
+Evaluation audited rare_0.5_A
+Evaluation audited rare_0.25_A
+Evaluation audited Q1_T_times10_DDPM
+Evaluation audited Q2_zero_predictor_DDPM
+Evaluation audited Q4_cosine_DDIM5
+FINAL AUDIT 467 checks; failures: []

@@ -38,7 +38,8 @@ def main():
         t=e1['theory'][kind];m=e1['models'][kind];q=m['quality'];s=m['training_summary']
         out.append(f"|{kind}|{t['alpha_bar_T']:.9g}|{t['train_mean_terminal_KL']:.9g}|{t['SNR_less_point01_fraction']:.4f}|{s['train_loss']:.8g}|{s['validation_loss']:.8g}|{q['MMD2']:.8g}|{q['Dmode']:.6g}|{q['Cov']:.4f}|{q['RUN_ID']}|")
     b=e1['boundary_short'];out += ['',f"正向过程首批固定seed结果：{ {k:e1['theory'][k]['all_forward_moments_PASS'] for k in ['linear','cosine']} }。全部10个条件逐坐标均值/方差、4SEM阈值已保存，不通过时不换seed。",
-        f"T/10边界：T={b['K']}，alpha_barT={b['alpha_bar_T']:.9g}，KL={b['terminal_KL']:.9g}，有效终点协议={b['terminal_protocol_valid']}；精确DDPM MMD²={b['MMD2']:.8g}，Dmode={b['Dmode']:.6g}，RUN_ID={b['RUN_ID']}。这是显式违反终点条件的诊断，不冒充正式训练。",'',
+        f"T/10边界：T={b['K']}，alpha_barT={b['alpha_bar_T']:.9g}，KL={b['terminal_KL']:.9g}，有效终点协议={b['terminal_protocol_valid']}；精确DDPM MMD²={b['MMD2']:.8g}，Dmode={b['Dmode']:.6g}，RUN_ID={b['RUN_ID']}。这是显式违反终点条件的诊断，不冒充正式训练。",
+        f"本次T/10相对完整T的MMD²差={b['MMD2']-e1['boundary_full']['MMD2']:.8g}、Dmode差={b['Dmode']-e1['boundary_full']['Dmode']:.8g}。没有观察到质量恶化，不能据此宣称违反协议有益：式7.5是给定x0的条件KL平均，并非混合边际对N(0,I)的KL；一次差值还需与固定指标噪声比较。正式训练门保持不变。",'',
         '## D. E2','', '| Predictor | Sampler | K/NFE | MMD² | Dmode | Cov | 5次计时中位秒 | RUN_ID |','|---|---|---:|---:|---:|---:|---:|---|']
     for r in e2['rows']+e2['low_K']:out.append(f"|{r['predictor']}|{r['sampler']}|{r['NFE']}|{r['MMD2']:.8g}|{r['Dmode']:.6g}|{r['Cov']:.4f}|{r['seconds_median']:.6g}|{r['RUN_ID']}|")
     out += ['',f"主网格均预热后真实重复5次；K1/2补充样本单独评价，不假称五次性能计时。DDIM_T三初始噪声MMD²={e2['MMD_T_values']}，s_MMD={e2['s_MMD']:.9g}；最小有效K={e2['smallest_effective_K']}，阈值2s={e2['selection_threshold']:.9g}。",
@@ -62,7 +63,9 @@ def main():
         '| pi0 | train稀有分量数量 | 生成p0 | Cov | PDF稀有覆盖 | 新训练source RUN_ID |','|---|---:|---:|---:|---|---|']
     for r in sup['rare_boundaries']:
         q=r['quality'];out.append(f"|{r['pi0']}|{r['train_component0_count']}|{q['rare_frequency']}|{q['Cov']}|{q['rare_covered_pdf']}|{Path(r['training_source']).name}|")
-    out += ['', '两种稀有权重均重新生成对应目标及train统计，并各训练完整20000步。若仍覆盖，不虚构失效点；若不覆盖，仅定位本次测量的权重区间。','',
+    covered=[r['quality']['rare_covered_pdf'] for r in sup['rare_boundaries']]
+    boundary_conclusion='两种降低权重条件下稀有模式仍被覆盖，本次pi0=.01和.005范围内未找到覆盖失效点；不外推未知阈值。' if all(covered) else '按逐行实测覆盖标志定位本次测量的失效区间，不外推未测权重。'
+    out += ['', '两种稀有权重均重新生成对应目标及train统计，并各训练完整20000步。'+boundary_conclusion,'',
         '## G. 交付','',f"正式训练{st['formal_training_runs']}次，共{st['formal_optimizer_updates']}updates；预算训练{st['budget_training_runs']}次，模型评价RUN{st['evaluation_runs']}次，诊断/噪声RUN{st['diagnostic_noise_runs']}次，总RUN目录{st['all_run_folders']}。",
         f"正式训练累计{st['formal_training_seconds']:.3f}秒（{st['formal_training_seconds']/60:.3f}分钟）；正式工作流墙钟{st['formal_workflow_wall_seconds']/60:.3f}分钟；历史核查至审计{st['verification_to_audit_wall_seconds']/60:.3f}分钟。",
         f"checkpoint正式{st['formal_checkpoints']}，含预算共{st['all_checkpoints']}；图表{st['figure_groups']}组SVG/PNG；测试{st['tests_passed']}项；独立审计{a['check_count']}项。",

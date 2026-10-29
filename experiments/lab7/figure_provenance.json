@@ -1,0 +1,41 @@
+{
+  "source_records": {
+    "experiments\\lab7\\E1.json": "2c1521bcfaadf3c3cc2019aa07d221ec4ec6b03510eeb7ea43979092b3688511",
+    "experiments\\lab7\\E2.json": "ec13acf8e5dda5e91e8364a2f4ffa5b26d20bda43aeea619eefc25a3a19abc58",
+    "experiments\\lab7\\E3.json": "ce09a6ed5a61fedef45b0b304dbbd03f11b3d0735da6d0e1ad8800560310ab1d",
+    "experiments\\lab7\\diagnostics.json": "7b82419a49179b7fc19b71a8a27dce582acf62a6cf763159c5ee687a65de058e",
+    "experiments\\lab7\\supplements.json": "d61843b3e99e59e3274ff648f4b6e5bc550dfbaf092569aae88c35a092578284"
+  },
+  "figure_hashes": {
+    "counterfactual_controls.png": "e0515313540de6052be1424b8a16b2fd6227a363b497066c68c0b9ca39eaff2a",
+    "counterfactual_controls.svg": "9e092ed276acaa29d880db1419489469093ae0b3bf850e98675d21cd6804e9e1",
+    "diagnostic_score_cosine.png": "27db7c3619bd43ceafb0fd12292788f393ee7f82b56e9f91de81c5db9f414e2d",
+    "diagnostic_score_cosine.svg": "35cc2abaed63e301209cf5f438b9dcbb5f199498f2e0f677ea412c39109737cf",
+    "diagnostic_score_linear.png": "bae512686b263f30191aba741ed98a0bef491580802fd80fdd36aa905d63855a",
+    "diagnostic_score_linear.svg": "dcc089679ef9058a52275c2654753f165a8b0723dba036ea413d2e6ce454997e",
+    "diagnostic_timestep.png": "62c4df75c8a63231b2387d24de32601418e3cfc2dc843468f0268c1a6b5af70e",
+    "diagnostic_timestep.svg": "d8c1bf9d511b23d4cfd6c2915f7414e0b045cb3dfc1f2b7484deb2f02b627a83",
+    "diagnostic_trajectories.png": "a505f6568d8593d55d4df7990ded330e5d3f1e46069f4b0c9a1d603a40a17960",
+    "diagnostic_trajectories.svg": "a34b042a6e4fbd202b1cd6ced208fb1715e497bebcb38c6accf8e2477fd15344",
+    "E1_forward_clouds.png": "f770a97a694ae09b9fdad2c45765d93164173d3d620797f13844442c473f6b8a",
+    "E1_forward_clouds.svg": "48390f4cf77ad8bd8e22d579ffcf8a7b7675cb6f0b2410b1f760a362b9de50ab",
+    "E1_samples.png": "34148b91e7d817e603c6e7857964a3fbd84d35b45ad4d06a1ade534cb3840222",
+    "E1_samples.svg": "4daa1ca247166577aa18cf19a54ecd8a55b59378b2514b0e7a1edf587432cb93",
+    "E1_schedules.png": "6383997ad7e7686e436a00f6a592032329797c284723df6b40342841c86ceeb3",
+    "E1_schedules.svg": "f73536a330ee2a3c9ab817c3d270894f39afe4313ae9ec6a390a9e6f74d93aa2",
+    "E1_training.png": "eca820c3bdab28dedec08ade79a7355a70987c93e7edf143b3124bf782de81ac",
+    "E1_training.svg": "cfc03d465adb5f812f4186077d2da8e5c1a24cf4c00d58eea27c7874880f7150",
+    "E2_cost_quality.png": "67e7ecac04d6e79f783636b14ed150e764e176f7c6a7e62e51584ae027a6ebae",
+    "E2_cost_quality.svg": "ede54937c160692e349e667065a1fab73afeb61ab772406ccb46fdde2bfa4de5",
+    "E2_extreme_K.png": "de1398e30575194a3a75c2ceead73205737be5fda450dde906e0335c0db53aad",
+    "E2_extreme_K.svg": "fd5c124926210dec0f6e55e065896eaa6723786eb9d1c1eb3d372a156e10282d",
+    "E3_mode_frequencies.png": "30ffc7a2cf440a59856c43aad3392ca1a704af33a519384abbf502845d61040e",
+    "E3_mode_frequencies.svg": "1b757eb71342891922032209a26fec0a1c6742cbbdb30f1e9c0a17734626b7c2",
+    "E3_paired_difference.png": "89bc8714191d29210830f74a0d3e3425b4bd276d3bab1590c71a189b8b3174bc",
+    "E3_paired_difference.svg": "b986ebd210584bc4ff8254e2cf4ffc20961c65377c53fede8faf42dcbbc22dc8",
+    "supplement_rare.png": "72ebccf1e174fd6a00ad7a08a598e65adf72ccf986e9ab304d6e29fdd1536a4f",
+    "supplement_rare.svg": "eedcc948de31d98cc541cccab43cc2ed3e773290499a24b053eb6e595708ef6c"
+  },
+  "figure_groups": 14,
+  "note": "generated from raw saved records; no optimization or sampling"
+}

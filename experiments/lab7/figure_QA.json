@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "file": "counterfactual_controls.png",
+      "sha256": "e0515313540de6052be1424b8a16b2fd6227a363b497066c68c0b9ca39eaff2a",
+      "status": "PASS"
+    },
+    {
+      "file": "diagnostic_score_cosine.png",
+      "sha256": "27db7c3619bd43ceafb0fd12292788f393ee7f82b56e9f91de81c5db9f414e2d",
+      "status": "PASS"
+    },
+    {
+      "file": "diagnostic_score_linear.png",
+      "sha256": "bae512686b263f30191aba741ed98a0bef491580802fd80fdd36aa905d63855a",
+      "status": "PASS"
+    },
+    {
+      "file": "diagnostic_timestep.png",
+      "sha256": "62c4df75c8a63231b2387d24de32601418e3cfc2dc843468f0268c1a6b5af70e",
+      "status": "PASS"
+    },
+    {
+      "file": "diagnostic_trajectories.png",
+      "sha256": "a505f6568d8593d55d4df7990ded330e5d3f1e46069f4b0c9a1d603a40a17960",
+      "status": "PASS"
+    },
+    {
+      "file": "E1_forward_clouds.png",
+      "sha256": "f770a97a694ae09b9fdad2c45765d93164173d3d620797f13844442c473f6b8a",
+      "status": "PASS"
+    },
+    {
+      "file": "E1_samples.png",
+      "sha256": "34148b91e7d817e603c6e7857964a3fbd84d35b45ad4d06a1ade534cb3840222",
+      "status": "PASS"
+    },
+    {
+      "file": "E1_schedules.png",
+      "sha256": "6383997ad7e7686e436a00f6a592032329797c284723df6b40342841c86ceeb3",
+      "status": "PASS"
+    },
+    {
+      "file": "E1_training.png",
+      "sha256": "eca820c3bdab28dedec08ade79a7355a70987c93e7edf143b3124bf782de81ac",
+      "status": "PASS"
+    },
+    {
+      "file": "E2_cost_quality.png",
+      "sha256": "67e7ecac04d6e79f783636b14ed150e764e176f7c6a7e62e51584ae027a6ebae",
+      "status": "PASS"
+    },
+    {
+      "file": "E2_extreme_K.png",
+      "sha256": "de1398e30575194a3a75c2ceead73205737be5fda450dde906e0335c0db53aad",
+      "status": "PASS"
+    },
+    {
+      "file": "E3_mode_frequencies.png",
+      "sha256": "30ffc7a2cf440a59856c43aad3392ca1a704af33a519384abbf502845d61040e",
+      "status": "PASS"
+    },
+    {
+      "file": "E3_paired_difference.png",
+      "sha256": "89bc8714191d29210830f74a0d3e3425b4bd276d3bab1590c71a189b8b3174bc",
+      "status": "PASS"
+    },
+    {
+      "file": "supplement_rare.png",
+      "sha256": "72ebccf1e174fd6a00ad7a08a598e65adf72ccf986e9ab304d6e29fdd1536a4f",
+      "status": "PASS"
+    }
+  ],
+  "review": "All14 figure groups visually inspected via contact sheet and full-size score/cost/E3/rare/control views. Score title clipping corrected; controls explicitly disclose samples outside zoom. Axis units, legends, frequency categories, log scales and nonoverlapping text checked."
+}

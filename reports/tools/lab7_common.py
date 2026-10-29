@@ -40,12 +40,19 @@ def train(key,cfg):
         p=Path(idx['training'][key]);assert read(p/'manifest.json')['global_step']==20000;return p
     cfg=copy.deepcopy(cfg);cfg['experiment'].update(purpose='formal',role=key)
     # Recover completed orphan runs without retraining if a controller stopped before indexing.
+    continuation=None
     for p in Path('runs/lab7').glob('*'):
         if (p/'manifest.json').exists():
             m=read(p/'manifest.json')
             if m['config_hash']==digest(cfg) and m['status']=='COMPLETED' and m.get('global_step')==20000:
                 update('training',key,str(p));return p
-    p=ExperimentRunner(cfg).run();assert read(p/'manifest.json')['global_step']==20000
+            if m['config_hash']==digest(cfg) and m['status'] in ['INTERRUPTED_AT_EPOCH_BOUNDARY','FAILED'] and (p/'checkpoints/last.pt').exists():
+                state=torch.load(p/'checkpoints/last.pt',map_location='cpu',weights_only=False)
+                if not state.get('partial_epoch') and (continuation is None or state['global_step']>continuation[0]):
+                    continuation=(state['global_step'],p/'checkpoints/last.pt')
+            if m['config_hash']==digest(cfg) and m['status']=='RUNNING':
+                raise RuntimeError('A config-identical RUN is marked RUNNING; do not duplicate it. Inspect the process before explicit checkpoint recovery.')
+    p=ExperimentRunner(cfg).run(resume=continuation[1] if continuation else None);assert read(p/'manifest.json')['global_step']==20000
     update('training',key,str(p));return p
 
 
@@ -98,6 +105,7 @@ def evaluate(key,source,sampler='ddpm',K=None,predictor='network',initial_seed=7
     if schedule_override:cfg['diffusion']=copy.deepcopy(schedule_override)
     short=cfg['diffusion']['T']<cfg['profile']['lab7_T_beta'][0]
     s=make_schedule(cfg['diffusion'],diagnostic=short).to(cfg['runtime']['device'])
+    cfg['diffusion']['alpha_bar_T']=float(s.alpha_bar[-1])
     protocol,roles,stats=metric_protocol(cfg);dist=target(cfg)
     device=torch.device(cfg['runtime']['device']);dtype=torch.float64 if predictor=='exact' else torch.float32
     xT=torch.randn(5000,2,generator=torch.Generator().manual_seed(initial_seed),dtype=torch.float64).to(device=device,dtype=dtype)

@@ -9,6 +9,14 @@ from src.utils.io import write_json
 from reports.tools.lab7_common import R,base,read,source_model,evaluate
 
 
+def render_markdown(answers,path):
+    text=['# Lab7 五个反事实问题（实测证据）','']
+    for i,answer in enumerate(answers,1):
+        text += [f'## Q{i}: '+answer['question'],'',answer['explanation'],'','RUN_ID: '+', '.join(answer['RUN_IDs']),'',
+                 '```json',__import__('json').dumps({k:v for k,v in answer.items() if k not in ['explanation','question']},ensure_ascii=False,indent=2),'```','']
+    Path(path).write_text('\n'.join(text),encoding='utf-8')
+
+
 def main():
     torch.set_num_threads(2)
     e1=read(R/'E1.json');e2=read(R/'E2.json');e3=read(R/'E3.json');d=read(R/'diagnostics.json');s=read(R/'supplements.json')
@@ -33,6 +41,7 @@ def main():
             'SNR_less_point01_fraction':e1['theory'][k]['SNR_less_point01_fraction'],
             'E_epsilon_by_t':d[k]['errors']} for k in ['linear','cosine']},
         'explanation':'Lsimple按各自调度均匀抽t，平均的是不同噪声难度的任务；高噪声时epsilon容易预测。需结合Eepsilon随t曲线与SNR<.01比例，按原始尺度MMD²及Dmode评价生成质量。Lsimple不是NLL，两个调度的训练损失不能单独证明质量排序。'}
+    q3['explanation']+=f" 本次linear/cosine固定val Lsimple分别为{q3['models']['linear']['fixed_val_Lsimple']:.6g}/{q3['models']['cosine']['fixed_val_Lsimple']:.6g}；MMD²差为{linear['MMD2']-cosine['MMD2']:.6g}，Dmode差为{linear['Dmode']-cosine['Dmode']:.6g}。这两个质量差值需与已保存噪声基线比较，不能只凭数值排序宣布可靠改善。"
     q4={'question':'终点网络误差如何被放大？','RUN_IDs':[d[k]['RUN_ID'] for k in ['linear','cosine']],
         'models':{k:{'terminal_error':d[k]['errors'][-1],
             'E_net_T_div_SNR':d[k]['errors'][-1]['E_net']/d[k]['errors'][-1]['SNR']} for k in ['linear','cosine']},
@@ -66,7 +75,7 @@ def main():
         for requested,actual in times_used.items():
             if requested==0:continue
             labels=torch.cdist(saved[actual].double(),schedule.alpha_bar[actual].sqrt().cpu()*centers).argmin(1)
-            modes.append({'requested_t':requested,'actual_t':actual,'agreement_all':float((labels==final).double().mean()),
+            modes.append({'requested_t':requested,'actual_t':actual,'SNR':float(schedule.snr[actual]),'agreement_all':float((labels==final).double().mean()),
                 'per_final_mode':[float((labels[final==m]==m).double().mean()) if (final==m).any() else None for m in range(dist.M)]})
         path=Path('runs/lab7')/q['RUN_ID'];torch.save({'saved':saved,'times_used':times_used},path/'Q5_extra_trajectory.pt')
         q5={'question':'Cov=1是否足够？','RUN_IDs':[q['RUN_ID']],**chosen,
@@ -74,14 +83,13 @@ def main():
             'largest_absolute_deviation_category':max(range(len(deviations)),key=lambda i:abs(deviations[i])),
             'trajectory_mode_agreement':modes,'trajectory_retained_times_used':times_used,
             'explanation':'选择正式E3中Cov=1且Dmode最大的实际运行。Cov只检查每模式频率是否超过参考一半，允许过量或不足；Dmode还计入全部频率与离群类别。轨迹给出同一模型/采样器在不同噪声阶段对最终模式的指向比例，只作描述，不把模式决定归因于单一时间点。DDIM若不含请求时间，明确使用最近保留tau，不声称拥有不存在的中间状态。'}
+        under=min(range(len(deviations)),key=lambda i:deviations[i]);over=max(range(len(deviations)),key=lambda i:deviations[i])
+        q5.update(most_underrepresented_category=under,most_overrepresented_category=over)
+        q5['explanation']+=f" 实测seed{chosen['seed']}配置{chosen['arm']}：Dmode={q['Dmode']:.6g}，稀有模式频率={q['rare_frequency']:.6g}。类别{under}低估{abs(deviations[under]):.6g}，类别{over}高估{deviations[over]:.6g}（末类别{len(deviations)-1}为离群点）。"
     else:q5={'question':'Cov=1是否足够？','RUN_IDs':[p[a]['RUN_ID'] for p in e3['pairs'] for a in ['A','B']],
              'status':'BLOCKED','explanation':'正式E3无Cov=1条件，保留全部运行证据，不能虚构教师要求的案例；Cov/Dmode解释另据真实频率给出。'}
     answers=[q1,q2,q3,q4,q5];write_json(R/'counterfactual_answers.json',answers)
-    text=['# Lab7 五个反事实问题（实测证据）','']
-    for i,answer in enumerate(answers,1):
-        text += [f'## Q{i}: '+answer['question'],'',answer['explanation'],'','RUN_ID: '+', '.join(answer['RUN_IDs']),'',
-                 '```json',__import__('json').dumps({k:v for k,v in answer.items() if k not in ['explanation','question']},ensure_ascii=False,indent=2),'```','']
-    (R/'counterfactual_answers.md').write_text('\n'.join(text),encoding='utf-8')
+    render_markdown(answers,R/'counterfactual_answers.md')
     print('Five counterfactual answers saved',flush=True)
 
 

@@ -28,7 +28,9 @@ def pts(run):return torch.load(Path('runs/lab7')/run/'generated_samples.pt',weig
 
 def main():
     F.mkdir(parents=True,exist_ok=True)
-    e1=read(R/'E1.json');e2=read(R/'E2.json');diag=read(R/'diagnostics.json');e3=read(R/'E3.json');sup=read(R/'supplements.json')
+    e1=read(R/'E1.json');e2=read(R/'E2.json');diag=read(R/'diagnostics.json')
+    e3=read(R/'E3.json') if (R/'E3.json').exists() else None
+    sup=read(R/'supplements.json') if (R/'supplements.json').exists() else None
     data=torch.load('data/lab7/base/test.pt',weights_only=False).numpy()
     theory=e1['theory'];fig,ax=plt.subplots(1,3,figsize=(12,3.5))
     for kind in ['linear','cosine']:
@@ -51,7 +53,7 @@ def main():
     fig,axes=plt.subplots(1,3,figsize=(11,3.7))
     for a,(kind,x) in zip(axes,[('target',data)]+[(k,pts(e1['models'][k]['quality']['RUN_ID'])) for k in ['linear','cosine']]):
         a.scatter(data[:,0],data[:,1],s=.7,c='gray',alpha=.2,rasterized=True);a.scatter(x[:,0],x[:,1],s=1,alpha=.4,rasterized=True)
-        a.set(title=kind if kind=='target' else kind+' / DDPM / K=1000',xlim=(-1.7,1.7),ylim=(-1.7,1.7),aspect='equal')
+        a.set(title=kind if kind=='target' else kind+' / DDPM / K=1000 / eta=n/a',xlim=(-1.7,1.7),ylim=(-1.7,1.7),aspect='equal')
     save(fig,'E1_samples')
     table('E1_models.csv',[{'schedule':kind,**{k:v for k,v in theory[kind].items() if k!='forward_moments'},
         'train_Lsimple':e1['models'][kind]['training_summary']['train_loss'],'val_Lsimple':e1['models'][kind]['training_summary']['validation_loss'],
@@ -65,7 +67,7 @@ def main():
             a.plot([r['NFE'] for r in rows],[r[key] for r in rows],'o-',label=pred+' DDIM eta=0',color=color)
             r=next(r for r in e2['rows'] if r['predictor']==pred and r['sampler']=='ddpm')
             a.scatter(r['NFE'],r[key],marker='*',s=110,color=color,label=pred+' DDPM')
-            a.set(xscale='log',xlabel='NFE per trajectory',ylabel=key)
+            a.set(xscale='log',xlabel='NFE per trajectory',ylabel={'MMD2':'MMD²','Dmode':'Dmode','seconds_median':'Median sampling time (s)'}[key])
     axes[0].axhline(e2['exact_noise_threshold'],ls=':',c='black',label='noise mean + 3SD')
     axes[1].axhline(noise['Dmode_noise_mean'],ls=':',c='black');axes[0].legend(fontsize=7)
     axes[0].set_yscale('log');axes[2].set_yscale('log');save(fig,'E2_cost_quality')
@@ -95,7 +97,7 @@ def main():
             axes[row,2].set(title=f"weighted cos={f['weighted_cosine']:.3f}\nlength ratio={f['weighted_length_ratio']:.3f}")
         fig.colorbar(image,ax=axes[:,2].tolist(),fraction=.025,pad=.02)
         # Explicit layout avoids colorbar overlap with tight_layout.
-        fig.subplots_adjust(left=.06,right=.88,bottom=.04,top=.97,hspace=.4,wspace=.3)
+        fig.subplots_adjust(left=.06,right=.88,bottom=.04,top=.93,hspace=.4,wspace=.3)
         fig.savefig(F/('diagnostic_score_'+kind+'.png'),dpi=150);fig.savefig(F/('diagnostic_score_'+kind+'.svg'),metadata={'Date':None});plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(11,4))
     for kind in ['linear','cosine']:
@@ -105,6 +107,9 @@ def main():
         for j in range(20):axes[1].plot(path[:,j,0],path[:,j,1],alpha=.15,lw=.6)
     axes[0].set(xlabel='t/T (denoising proceeds right to left)',ylabel='Agreement with final geometric mode',ylim=(0,1));axes[0].legend()
     axes[1].set(title='First20 fixed DDPM paths per schedule',xlabel='standardized x',ylabel='standardized y');save(fig,'diagnostic_trajectories')
+    if e3 is None or sup is None:
+        print('Exploratory plots generated; E3/supplementary plots await their raw results',flush=True)
+        return
     table('E3_models.csv',[{'seed':p['seed'],'arm':a,**p[a]} for p in e3['pairs'] for a in ['A','B']])
     table('E3_pairs.csv',[{'seed':p['seed'],'A_Dmode':p['A']['Dmode'],'B_Dmode':p['B']['Dmode'],'delta':delta,
          'A_RUN_ID':p['A']['RUN_ID'],'B_RUN_ID':p['B']['RUN_ID']} for p,delta in zip(e3['pairs'],e3['deltas'])])
@@ -120,6 +125,19 @@ def main():
     fig,axes=plt.subplots(1,2,figsize=(10,3.8));r=sup['rare_boundaries'];axes[0].plot([v['pi0'] for v in r],[v['quality']['rare_frequency'] for v in r],'o-',label='Generated rare frequency')
     axes[0].plot([v['pi0'] for v in r],[v['pi0']/2 for v in r],'--',label='pi0/2 shorthand');axes[0].set(xlabel='Target pi0',ylabel='Mode0 frequency');axes[0].legend(fontsize=8)
     axes[1].bar([str(v['pi0']) for v in r],[v['train_component0_count'] for v in r]);axes[1].set(xlabel='Target pi0',ylabel='Actual rare component train count');save(fig,'supplement_rare')
+    if (R/'counterfactual_answers.json').exists():
+        answers=read(R/'counterfactual_answers.json')
+        controls=[('linear DDIM K=5 eta=0',answers[3]['DDIM5']['linear']),
+                  ('cosine DDIM K=5 eta=0',answers[3]['DDIM5']['cosine']),
+                  ('linear DDPM T=10000 eta=n/a',sup['Q1']['quality']),
+                  ('zero epsilon DDPM T=1000 eta=n/a',sup['Q2']['quality'])]
+        fig,axes=plt.subplots(2,2,figsize=(9,8))
+        for ax,(title,r) in zip(axes.flat,controls):
+            x=pts(r['RUN_ID']);outside=np.mean(np.any(np.abs(x)>2,axis=1))
+            ax.scatter(data[:,0],data[:,1],s=.7,c='gray',alpha=.15,rasterized=True)
+            ax.scatter(x[:,0],x[:,1],s=1,alpha=.3,rasterized=True)
+            ax.set(title=title+f"\noutside view={100*outside:.1f}%; Dmode={r['Dmode']:.3f}",xlim=(-2,2),ylim=(-2,2),aspect='equal')
+        save(fig,'counterfactual_controls')
     provenance={'source_records':{str(p):file_hash(p) for p in [R/'E1.json',R/'E2.json',R/'E3.json',R/'diagnostics.json',R/'supplements.json']},
         'figure_hashes':{p.name:file_hash(p) for p in sorted(F.glob('*')) if p.suffix in ['.png','.svg']},
         'figure_groups':len(list(F.glob('*.png'))),'note':'generated from raw saved records; no optimization or sampling'}

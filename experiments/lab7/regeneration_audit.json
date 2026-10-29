@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "file": "E1_forward_moments.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E1_models.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E2_sampling.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E3_models.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E3_pairs.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "supplement_rare.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "timestep_errors.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\counterfactual_controls.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_cosine.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_linear.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_timestep.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_trajectories.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_forward_clouds.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_samples.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_schedules.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_training.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_cost_quality.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_extreme_K.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_mode_frequencies.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_paired_difference.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\supplement_rare.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\counterfactual_controls.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_cosine.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_linear.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_timestep.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\diagnostic_trajectories.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_forward_clouds.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_samples.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_schedules.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_training.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_cost_quality.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_extreme_K.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_mode_frequencies.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_paired_difference.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\supplement_rare.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "counterfactual_answers.md",
+      "byte_identical": true
+    }
+  ],
+  "optimizer_updates": 0,
+  "note": "SVGtimestamps suppressed andhashsalt fixed;tables/PNG/SVG compared byte-for-byte"
+}

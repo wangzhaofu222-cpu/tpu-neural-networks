@@ -88,3 +88,17 @@ E2按val配对SEM选择Kf=8；E3三seed的MMD²差异满足教师统计判据。
 [复现说明](experiments/lab6/README.md)。正式训练累计1952.580秒；55个正式checkpoint，含预算共63个，本地保留且有哈希索引。
 Lab5旧130测试、625审计及全部286个checkpoint加载复核通过，5450个历史文件未改；Lab5 E2量级预测FAIL、课程split UNVERIFIED、Lab4 Q2 BLOCKED均保留。
 这些段落是各阶段的历史快照；本段为当前进度。本次不制作俄语/LaTeX/PDF报告，未启动Lab7。
+
+<!-- LAB7_AUDITED_STATUS -->
+## Lab7 当前完成状态
+
+Lab7已复用同一ExperimentRunner完成全部必做实验和五个反事实问题；本次未制作或修改正式俄语/LaTeX/PDF报告，未进入Lab8。
+个人参数T1000,beta[.0001,.02],M6,rho.1,pi0.02；默认width256/depth6/time128保留，实测预算后使用CUDA。
+E1两模型各完整20000updates；E2网络和精确score全部DDPM/DDIM网格及K1/2、五次计时、误差/score/1000轨迹诊断均完成。
+E3为同一linear模型上的DDPM与DDIM50；事前Git=f65a5ff1e4eb61ce9c387c5a3c75926beaca0f55，三差=[-0.036199999999999996, -0.047740000000000005, -0.04712000000000002]，教师结论=различие установлено。
+两种降低稀有权重的目标及Q1十倍T均真实重新训练20000updates；未用直接换测试目标替代训练。
+最终180项测试通过、467项独立审计通过；需求状态={'PASS': 47, 'FAIL': 0, 'BLOCKED': 0, 'NOT_APPLICABLE': 4}，科学阈值以逐项记录为准。
+正式训练7次、累计1924.478秒；正式checkpoint35个，含预算39个；14组SVG/PNG。
+全部表格/PNG/SVG及反事实Markdown在独立目录再生成逐字节一致；所有模型/原始样本/轨迹/RNG本地保留并登记SHA256。
+详见 [Lab7中文汇总](experiments/lab7/EXPERIMENT_SUMMARY.md)、[复现说明](experiments/lab7/README.md)、[逐项要求](docs/requirements/requirements_lab7.md)、[独立审计](experiments/lab7/final_audit.json)。
+Lab0–6原始记录保持不变：Lab4Q2 BLOCKED、Lab5课程split UNVERIFIED、Lab5E2量级FAIL、Lab6E1混合FAIL均保留；前文各阶段段落为历史快照。

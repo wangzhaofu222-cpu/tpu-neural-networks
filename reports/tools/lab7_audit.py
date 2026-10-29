@@ -48,11 +48,14 @@ def main():
         check('full20000_'+key,m['status']=='COMPLETED' and m['global_step']==20000 and len(steps)==20000 and [r['global_step'] for r in steps]==list(range(1,20001)))
         check('formal_budget_'+key,c['train']['batch_size']==512 and c['optimizer']['lr']==.001 and c['optimizer']['name']=='adam' and summary['samples_processed']==10240000 and not any(r['optimizer_step_skipped'] for r in steps))
         check('clean_source_'+key,not m['git_dirty'] and m['source_hash']==code['source_hash'])
+        check('RUN_config_seed_identity_'+key,m['RUN_ID']==p.name and m['config_hash']==digest(c) and m['seed']==c['experiment']['seed'] and c['experiment']['role']==key)
         roles,stats=roles_and_stats(c);hashes={k:hashlib.sha256(v.numpy().tobytes()).hexdigest() for k,v in roles.items()}
         check('data_and_train_only_stats_'+key,hashes==m['role_fingerprints'] and m['normalization']==stats and m['split_sizes']['cal']==0)
         z=standardize(roles['train'],stats)
         check('unit_train_variance_'+key,torch.allclose(z.mean(0),torch.zeros(2,dtype=torch.float64),atol=1e-12) and torch.allclose(z.var(0,correction=0),torch.ones(2,dtype=torch.float64),atol=1e-12))
         schedule=make_schedule(c['diffusion']);check('valid_terminal_'+key,schedule.alpha_bar[-1]<=1e-3 and abs(float(schedule.alpha_bar[-1])-c['diffusion']['alpha_bar_T'])<1e-15)
+        resolved=read(p/'schedule.resolved.json')
+        check('actual_schedule_beta_range_'+key,resolved['effective_beta_range']==[float(schedule.beta[1:].min()),float(schedule.beta[1:].max())] and resolved['original_config_sha256']==file_hash(p/'config.resolved.yaml'))
         check('hypothesis_before_training_'+key,datetime.fromisoformat(m['started_at'])>(prereg_time if key.startswith('E3_') else prospective))
         for f in sorted((p/'checkpoints').glob('*.pt')):
             state=torch.load(f,map_location='cpu',weights_only=False);model=build_model(c['model']);model.load_state_dict(state['model'],strict=True)
@@ -67,6 +70,9 @@ def main():
     check('E1_paired_training_t_epsilon_stream',all(a['t_mean']==b['t_mean'] and a['noise_checksum_sum']==b['noise_checksum_sum'] for a,b in zip(aa,bb)))
     ac=yaml.safe_load((ca/'config.resolved.yaml').read_text());bc=yaml.safe_load((cb/'config.resolved.yaml').read_text());ac['experiment']['role']=bc['experiment']['role'];ac['diffusion']=bc['diffusion']
     check('E1_only_schedule_differs',ac==bc)
+    short=make_schedule({**cfg['diffusion'],'T':cfg['diffusion']['T']//10},diagnostic=True)
+    base_roles,base_stats=roles_and_stats(cfg)
+    check('short_T_diagnostic_actual_terminal',not short.protocol_valid and abs(float(short.alpha_bar[-1])-e1['boundary_short']['alpha_bar_T'])<1e-15 and abs(terminal_kl(short,standardize(base_roles['train'],base_stats))-e1['boundary_short']['terminal_KL'])<1e-15)
     protocols={}
     for path in sorted((R/'metrics').glob('*.json')):
         if path.name=='bandwidth.json':continue
@@ -94,6 +100,7 @@ def main():
         check('NFE_tau_no_clipping_'+key,row['NFE']==row['K']==len(row['tau']) and row['tau'][-1]==c['diffusion']['T'] and not row['clipping'] and all(a<b for a,b in zip(row['tau'],row['tau'][1:])))
         check('timing_repetitions_'+key,len(row['seconds_repetitions'])==row['timing_repeats'] and row['repeat_max_difference']==0 and abs(float(np.median(row['seconds_repetitions']))-row['seconds_median'])<1e-12)
         check('source_checkpoint_hash_'+key,file_hash(Path('runs/lab7')/row['source_RUN_ID']/'checkpoints/last.pt')==row['source_checkpoint_sha256'])
+        resolved=read(p/'schedule.resolved.json');check('resolved_reverse_protocol_'+key,resolved['tau']==row['tau'] and resolved['DDIM_eta']==row['eta'] and resolved['original_config_sha256']==file_hash(p/'config.resolved.yaml'))
         # Replay every saved sampler from the actual model/exact predictor and RNG seed.
         model,_,_=source_model(Path('runs/lab7')/row['source_RUN_ID']);device=c['runtime']['device'];s=make_schedule(c['diffusion'],diagnostic=not row['terminal_protocol_valid']).to(device)
         fn=model if row['predictor']=='network' else ExactPredictor(target(c),stats,s) if row['predictor']=='exact' else lambda x,t:torch.zeros_like(x)
@@ -114,6 +121,14 @@ def main():
                 m=read(Path('runs/lab7')/pair[arm]['RUN_ID']/'manifest.json')
                 check('E3_preregistered_evaluation_'+arm+str(pair['seed']),datetime.fromisoformat(m['started_at'])>prereg_time)
     for kind in ['linear','cosine']:
+        model,c,_=source_model(idx['training']['E1_'+kind]);model=model.double()
+        schedule=make_schedule(c['diffusion']).to(c['runtime']['device'])
+        gen=torch.Generator().manual_seed(7901)
+        initial=torch.randn(9,2,generator=gen,dtype=torch.float64).to(c['runtime']['device'])
+        noise=torch.randn(schedule.T+1,9,2,generator=gen,dtype=torch.float64).to(c['runtime']['device'])
+        ddpm,_=ddpm_sample(model,schedule,initial,z=noise)
+        ddim,_=ddim_sample(model,schedule,initial,schedule.T,eta=1.,z=noise)
+        check('float64_full_DDIMeta1_equals_DDPM_'+kind,float((ddpm-ddim).abs().max())<=1e-6)
         errors=diag[kind]['errors'];check('diagnostic_time_grid_'+kind,len(errors)>=20 and errors[0]['t']==1 and errors[-1]['t']==cfg['diffusion']['T'])
         check('epsilon_x0_identity_'+kind,all(abs(r['E_x0']-r['E_epsilon']/r['SNR'])<=max(1e-6,abs(r['E_x0'])*1e-4) for r in errors))
         check('finite_MC_error_decomposition_'+kind,all(abs(r['E_epsilon']-r['E_epsilon_star']-r['E_net']-r['cross_term'])<1e-5 for r in errors))
@@ -122,9 +137,15 @@ def main():
         check('1000_full_DDPM_trajectories_'+kind,len(trajectories)==cfg['diffusion']['T']+1 and all(v.shape==(1000,2) for v in trajectories.values()))
         for i,f in enumerate(torch.load(Path('runs/lab7')/diag[kind]['RUN_ID']/'score_fields.pt',weights_only=False)):
             check('weighted_field_'+kind+'_'+str(i),f['points'].shape==(1681,2) and abs(float((f['weights']*f['cosine']).sum())-f['weighted_cosine'])<1e-6)
+            norms=f['exact'].norm(dim=1);valid=norms>1e-12
+            selfcos=f['exact'][valid].square().sum(1)/norms[valid].square()
+            check('exact_field_selfcosine_'+kind+'_'+str(i),torch.allclose(selfcos,torch.ones_like(selfcos),atol=1e-6))
     for r in sup['rare_boundaries']:
         c=base();c['data']['pi0']=r['pi0'];roles,stats=roles_and_stats(c);_,labels=target(c).sample(20000,701,True)
         check('rare_target_retrained_'+str(r['pi0']),int((labels==0).sum())==r['train_component0_count'] and r['normalization']==stats and r['training_source']!=idx['training']['E1_linear'])
+        check('rare_raw_role_files_'+str(r['pi0']),all(file_hash(v['path'])==v['sha256'] and torch.equal(torch.load(v['path'],weights_only=False),roles[role]) for role,v in r['data_files'].items()))
+    forward_audit=read(R/'forward_regeneration_audit.json')
+    check('registered_forward_moments_exactly_reconstructed',forward_audit['status']=='PASS' and file_hash(forward_audit['raw_reconstructed_path'])==forward_audit['sha256'])
     check('Q1_real10T_training',read(Path(sup['Q1']['training_source'])/'manifest.json')['global_step']==20000 and sup['Q1']['quality']['NFE']==10*cfg['diffusion']['T'])
     # PureNumPy variance recursion independent of sampler implementation.
     beta=np.linspace(.0001,.02,cfg['diffusion']['T']);alpha=1-beta;abar=np.r_[1.,np.cumprod(alpha)]
@@ -141,6 +162,8 @@ def main():
     check('final_tests',int(suite.attrib['failures'])==int(suite.attrib['errors'])==0)
     answers=read(R/'counterfactual_answers.json');check('five_real_counterfactuals',len(answers)==5 and all(a['RUN_IDs'] for a in answers))
     qa=read(R/'figure_QA.json');provenance=read(R/'figure_provenance.json')
+    check('independent_numpy_mode_oracle',read(R/'independent_mode_audit.json')['status']=='PASS')
+    check('independent_artifact_regeneration',read(R/'regeneration_audit.json')['status']=='PASS')
     check('figures_visually_verified',qa['status']=='PASS' and len(qa['figures'])==provenance['figure_groups'])
     check('figure_hashes',all(file_hash(R/'figures'/n)==h for n,h in provenance['figure_hashes'].items()))
     for budget in read(R/'budget.json')['measurements']:
@@ -159,7 +182,7 @@ def main():
     begin=ET.parse('docs/environment/tests-lab6-verification-before-lab7.xml').getroot().find('testsuite').attrib['timestamp']
     stats['verification_to_audit_wall_seconds']=(datetime.now(timezone.utc)-datetime.fromisoformat(begin)).total_seconds()
     write_json(R/'checkpoint_inventory.json',inventory)
-    raw=list(Path('runs/lab7').glob('*/*.pt'))+list(Path('data/lab7').rglob('*.pt'))+list((R/'metrics').rglob('*.pt'))
+    raw=list(Path('runs/lab7').glob('*/*.pt'))+list(Path('data/lab7').rglob('*.pt'))+list((R/'metrics').rglob('*.pt'))+[Path(forward_audit['raw_reconstructed_path'])]
     write_json(R/'raw_artifact_inventory.json',[{'path':str(p),'bytes':p.stat().st_size,'sha256':file_hash(p)} for p in sorted(raw)])
     write_json(R/'execution_statistics.json',stats)
     write_json(R/'final_audit.json',{'status':'PASS' if all(c['status']=='PASS' for c in checks) else 'FAIL','checks':checks,'check_count':len(checks),

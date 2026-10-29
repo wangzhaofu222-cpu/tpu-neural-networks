@@ -4,7 +4,7 @@ from pathlib import Path
 import torch
 from src.diffusion.schedules import make_schedule,terminal_kl
 from src.data.gmm2d import roles_and_stats,standardize,target
-from src.utils.io import write_json
+from src.utils.io import write_json,file_hash
 from reports.tools.lab7_common import R,base,read,registry,train,evaluate,metric_protocol
 
 
@@ -16,13 +16,17 @@ def main():
         cfg=copy.deepcopy(c);cfg['data']['rare_weight_multiplier']=multiplier;cfg['data']['pi0']=c['data']['pi0']*multiplier
         cfg['diffusion']['kind']=A['schedule'];cfg['diffusion']['alpha_bar_T']=float(make_schedule(cfg['diffusion']).alpha_bar[-1])
         cfg['experiment']['seed']=1
+        roles,stats=roles_and_stats(cfg)
+        data_path=Path('data/lab7')/('rare_'+str(cfg['data']['pi0']));data_path.mkdir(exist_ok=True)
+        for role,x in roles.items():
+            if not (data_path/(role+'.pt')).exists():torch.save(x,data_path/(role+'.pt'))
         source=train('rare_'+str(multiplier),cfg)
         q=evaluate('rare_'+str(multiplier)+'_A',source,A['sampler'],A['K'])
         _,labels=target(cfg).sample(20000,cfg['data']['seeds']['train'],True)
-        roles,stats=roles_and_stats(cfg)
         rare.append({'multiplier':multiplier,'pi0':cfg['data']['pi0'],'train_component0_count':int((labels==0).sum()),
             'train_geometric_mode0_count':int((target(cfg).mode_id(roles['train'])==0).sum()),
-            'training_source':str(source),'normalization':stats,'quality':q})
+            'training_source':str(source),'normalization':stats,'quality':q,
+            'data_files':{role:{'path':str(data_path/(role+'.pt')),'sha256':file_hash(data_path/(role+'.pt'))} for role in roles}})
     cfg=copy.deepcopy(c);cfg['diffusion']['T']*=10;cfg['diffusion']['alpha_bar_T']=float(make_schedule(cfg['diffusion']).alpha_bar[-1])
     source=train('Q1_T_times10',cfg)
     q=evaluate('Q1_T_times10_DDPM',source,timing_repeats=5,warmup=True)

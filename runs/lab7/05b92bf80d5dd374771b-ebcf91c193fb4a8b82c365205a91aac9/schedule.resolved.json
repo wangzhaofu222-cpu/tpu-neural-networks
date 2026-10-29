@@ -1,0 +1,30 @@
+{
+  "RUN_ID": "05b92bf80d5dd374771b-ebcf91c193fb4a8b82c365205a91aac9",
+  "original_config_sha256": "9973336d6aefcd75b793c9b1773292c5b87b63f4d3d0386f4c55a7c581b11257",
+  "kind": "linear",
+  "T": 1000,
+  "dtype": "float64",
+  "effective_beta_range": [
+    0.0001,
+    0.02
+  ],
+  "linear_beta_arguments": [
+    0.0001,
+    0.02
+  ],
+  "cosine_delta": null,
+  "cosine_beta_cap": null,
+  "alpha_bar_0": 1.0,
+  "alpha_bar_T": 4.0358297653756754e-05,
+  "terminal_protocol_valid": true,
+  "original_diffusion_alpha_bar_T_metadata": 4.0358297653756754e-05,
+  "original_diffusion_scalar_stale": false,
+  "reverse_variance": "posterior",
+  "posterior_var_1": 0.0,
+  "posterior_var_T": 0.01999998352656061,
+  "sampler": null,
+  "tau": null,
+  "DDIM_eta": null,
+  "clipping": false,
+  "note": "beta_min/max in original cosine config are unused linear-schedule arguments; actual cosine range is effective_beta_range. The early shortT diagnostic retained an inherited diffusion.alpha_bar_T scalar, while its evaluation.alpha_bar_T and all actual calculations were correct; original_diffusion_scalar_stale exposes this and this companion resolves it without overwriting provenance. No reverse tau/eta applies to training-only or metric-noise runs."
+}
