@@ -24,7 +24,9 @@ def main():
     plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none'})
     colors=['#0072B2','#D55E00','#009E73','#CC79A7','#E69F00','#56B4E9']
     baseline=[]
-    for kind,r in e1['models'].items():baseline.append({'model':kind,**{k:r[k] for k in ['train','val','test','best_epoch','RUN_ID','source_RUN_ID']},'Gtop':e1['Gtop'].get(kind)})
+    for kind,r in e1['models'].items():
+        training=read(Path('runs/lab5')/r['source_RUN_ID']/'summary.json')
+        baseline.append({'model':kind,**{k:r[k] for k in ['train','val','test','best_epoch','RUN_ID','source_RUN_ID']},'Gtop':e1['Gtop'].get(kind),'training_seconds':training['training_seconds']})
     table('E1_models.csv',baseline);table('E1_deletion.csv',e1['deletion'])
     paired=[]
     for r in e2['paired']:

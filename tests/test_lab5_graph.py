@@ -114,6 +114,15 @@ def test_validation_depth_selection_and_pdf_diagnosis():
     assert classify_depth(.3,1,.01,.3,.1,.8)=='smoothing'
     assert classify_depth(.7,1,.01,.3,.1,.8)=='mixed'
 
+def test_probe_constant_train_columns_do_not_amplify_val_only_features(tmp_path):
+    g=load_graph('data/lab5/original.pt');x=torch.zeros(2708,2)
+    x[g['val_mask'],0]=1.;x[:,1]=torch.arange(2708).float()
+    f=tmp_path/'features.pt';torch.save(x,f)
+    c=config(purpose='test');c['data'].update(name='graph_features',features_path=str(f))
+    ds,_=datasets(c);z=ds['val'][0]
+    assert torch.equal(z[g['val_mask'],0],torch.ones(500))
+    assert abs(z[g['train_mask'],1].mean())<1e-6
+
 def test_mandatory6_test_label_mutation_real_grid(tmp_path):
     g=load_graph('data/lab5/original.pt');mut={k:v.clone() for k,v in g.items()}
     mut['y'][mut['test_mask']]=torch.randint(0,7,(1000,),generator=torch.Generator().manual_seed(777))

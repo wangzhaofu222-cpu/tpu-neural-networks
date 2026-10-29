@@ -16,6 +16,7 @@ R=Path('experiments/lab5')
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def git(*args):return subprocess.check_output(['git','-c','safe.directory=D:/神经网络',*args]).decode().strip()
 def main():
+    torch.set_num_threads(2)
     checks=[]
     def check(name,ok,detail=None):
         checks.append({'check':name,'status':'PASS' if bool(ok) else 'FAIL','detail':detail})
@@ -54,7 +55,8 @@ def main():
         best=max(metrics,key=lambda r:r['validation_metric']);check('val_epoch_selection_'+p.name,best['epoch']==s['best_epoch'] and best['validation_metric']==s['best_accuracy'])
         for f in sorted((p/'checkpoints').glob('*.pt')):
             state=torch.load(f,weights_only=False,map_location='cpu')
-            required={'model','optimizer','scheduler','scaler','epoch','global_step','config_hash','source_hash'}
+            required={'model','optimizer','scheduler','scaler','epoch','global_step','config_hash','source_hash',
+                      'python_rng','numpy_rng','torch_rng','cuda_rng','loader_rng','data_fingerprint','split_fingerprint'}
             check('checkpoint_'+p.name+'_'+f.stem,required<=set(state))
             checkpoint_inventory.append({'path':str(f),'sha256':file_hash(f),'epoch':state['epoch'],'RUN_ID':p.name})
         if cfg['experiment']['role'] in {'E2_original','E2_null','E2_MLP'}:
@@ -101,8 +103,9 @@ def main():
     check('final_tests',int(tests.attrib['failures'])==0 and int(tests.attrib['errors'])==0)
     write_json(R/'checkpoint_inventory.json',checkpoint_inventory);write_json(R/'graph_regeneration_audit.json',graph_evidence)
     write_json(R/'evaluation_recalculation.json',evaluation_inventory)
+    all_ckpts=list(Path('runs/lab5').glob('*/checkpoints/*.pt'))
     stats={'model_training_runs':len(unique_train),'linear_probe_training_runs':len(probe_sources),'formal_training_runs':len(all_train),
-       'formal_training_seconds':train_seconds,'formal_optimizer_steps':200*len(all_train),'formal_checkpoints':len(checkpoint_inventory),
+       'formal_training_seconds':train_seconds,'formal_optimizer_steps':200*len(all_train),'formal_checkpoints':len(checkpoint_inventory),'all_lab5_checkpoints':len(all_ckpts),
        'layer_summaries':layer_count,'final_tests_passed':int(tests.attrib['tests']),
        'budget_runs':6,'budget_training_seconds':sum(m['training_seconds'] for m in read(R/'budget.json')['measurements'] if m['status']=='COMPLETED'),
        'experiment_start':min(read(Path(p)/'manifest.json')['started_at'] for p in unique_train),

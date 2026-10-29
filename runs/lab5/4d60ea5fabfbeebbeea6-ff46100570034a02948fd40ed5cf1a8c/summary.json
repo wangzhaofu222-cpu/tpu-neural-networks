@@ -1,0 +1,20 @@
+{
+  "epoch": 200,
+  "global_step": 200,
+  "train_loss": 0.22734059393405914,
+  "validation_loss": 0.7201755981445312,
+  "train_metric": 0.9785714285714285,
+  "validation_metric": 0.802,
+  "learning_rate": 0.01,
+  "epoch_time": 0.0630034999999225,
+  "peak_gpu_memory_bytes": null,
+  "RUN_ID": "4d60ea5fabfbeebbeea6-ff46100570034a02948fd40ed5cf1a8c",
+  "EXP_ID": "4d60ea5fabfbeebbeea6",
+  "best_accuracy": 0.814,
+  "best_epoch": 104,
+  "first_batch_checksum": "aef9a34a6c70e367fe81fc2452babbed47cc2f9e323a993e4111970b89f3841e",
+  "checkpoint_for_final_metric": "checkpoints/last.pt",
+  "purpose": "formal",
+  "status": "COMPLETED",
+  "training_seconds": 13.794709799999964
+}

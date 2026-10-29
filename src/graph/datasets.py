@@ -20,7 +20,10 @@ def datasets(cfg):
     if cfg['data']['name']=='graph_features':
         features=torch.load(cfg['data']['features_path'],weights_only=False)
         # Standardization is fitted using train-role nodes only.
-        mean=features[g['train_mask']].mean(0);std=features[g['train_mask']].std(0).clamp_min(1e-6)
+        mean=features[g['train_mask']].mean(0);std=features[g['train_mask']].std(0)
+        # StandardScaler convention: a constant train column has unit scale.
+        # Never amplify a feature seen only outside train by division by epsilon.
+        std=torch.where(std<1e-6,torch.ones_like(std),std)
         x=(features-mean)/std
     else:x=g['x']
     ds={}
