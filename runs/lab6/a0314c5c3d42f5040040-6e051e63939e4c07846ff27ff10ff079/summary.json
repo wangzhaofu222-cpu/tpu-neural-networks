@@ -1,0 +1,97 @@
+{
+  "RUN_ID": "a0314c5c3d42f5040040-6e051e63939e4c07846ff27ff10ff079",
+  "source_RUN_ID": "c8fbbd1ec0df1fab5db6-c8d9aac7e54540b1b3319aa2d6670087",
+  "target": "two_blobs",
+  "kind": "flow",
+  "seed": 1,
+  "checkpoint_sha256": "d8907b780cf5ca391926cef8b4782a424ba604fb95dafc7d3c8550a560cea47b",
+  "source_global_step": 5000,
+  "parameters": 69648,
+  "training_seconds": 83.80857950000063,
+  "sample_count": 5000,
+  "sample_seed": 7001,
+  "sample_seconds": 0.009394300000167277,
+  "metric_protocol_RUN_ID": "64521b6bd4f39fbfa4d4-8f74e7ded1d14245bd2b3b2a09cd67bc",
+  "Cov": 1.0,
+  "Dmode": 0.010800000000000008,
+  "Dmode_exact_target": 0.011045501730878891,
+  "MMD2": 9.680675360934643e-05,
+  "mode_counts_including_outlier_first": [
+    75,
+    2417,
+    2508
+  ],
+  "reference_mode_counts_including_outlier_first": [
+    62,
+    2471,
+    2467
+  ],
+  "exact_mode_probabilities_outlier_first": [
+    0.011108996538242266,
+    0.49444550173087887,
+    0.49444550173087887
+  ],
+  "MMD_estimator": "empirical V-statistic, including diagonals",
+  "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+  "normalized_on_omega": false,
+  "density_kind": "exact_Flow_density_no_grid_renormalization",
+  "domain": [
+    [
+      -15,
+      15
+    ],
+    [
+      -15,
+      15
+    ]
+  ],
+  "grid_shape": [
+    120,
+    120
+  ],
+  "spacing": 0.25,
+  "cell_area": 0.0625,
+  "Dgrid": 0.00011710951878308247,
+  "grid_integral": 0.9966207891004317,
+  "sampler": {},
+  "val_NLL": 1.1346770509600639,
+  "val_NLL_SEM": 0.014648499866835895,
+  "exact_test_NLL": 1.151692914879322,
+  "test_NLL_SEM": 0.015158872682689934,
+  "invertibility": {
+    "dtype": "float64 with converted learned weights",
+    "test_points": 5000,
+    "median_epsilon": 1.266065247384982e-16,
+    "max_epsilon": 2.5293689273457983e-15,
+    "autograd_points": 100,
+    "max_logdet_error": 2.886579864025407e-15,
+    "norm20_points": 100,
+    "norm20_seed": 6201,
+    "norm20_median_epsilon": 3.6885292664327447e-13,
+    "norm20_max_epsilon": 2.1009554130252733e-10
+  },
+  "midpoint": {
+    "center_indices": [
+      0,
+      1
+    ],
+    "centers": [
+      [
+        -2.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0
+      ]
+    ],
+    "point": [
+      0.0,
+      0.0
+    ],
+    "true_log_density": -21.652153679979694,
+    "model_log_density": -7.587550163269043,
+    "model_density_kind": "exact_Flow_density_no_grid_renormalization",
+    "log_density_excess_over_true": 14.064603516710651
+  }
+}

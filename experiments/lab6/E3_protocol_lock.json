@@ -1,0 +1,527 @@
+{
+  "recorded_at": "2026-10-29T04:37:07.360084+00:00",
+  "target": "eight_gaussians",
+  "eta": 0.02,
+  "K": 50,
+  "temperature": 1.0,
+  "depth": 8,
+  "cap": 4.0,
+  "capacity_match": {
+    "ebm_width": 185,
+    "flow_width": 64,
+    "flow_depth": 8,
+    "ebm_parameters": 69561,
+    "flow_parameters": 69648,
+    "relative_gap_over_smaller": 0.0012507008237374391,
+    "original_EBM_width": 128,
+    "rule": "retain width128 if within20%, otherwise integer width minimizing gap; only EBM width changes"
+  },
+  "primary_metric": "MMD2",
+  "A": "EBM",
+  "B": "Flow",
+  "difference": "MMD2(EBM)-MMD2(Flow)",
+  "expected_sign": "positive",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "config_hashes": {
+    "ebm_1": "bd306db6dc42d1f5f8262d69e2638cbc4d8cdbf8df0593eb8747843f59fe5e95",
+    "flow_1": "224e06512d2f1e0fce1762c326e494a6d24549e56d1b777ea1e7b130888c2057",
+    "ebm_2": "31269a18d23bffeb4d0a457eaa613678fecf73bf14cddcbdb37c8a5e403df818",
+    "flow_2": "573e6ce421bfdf708866ad9b086a3b6f962dca60358524f435708d482127d109",
+    "ebm_3": "5b0b2064f4eb8915b3a394bde29a0c03af1e238648011d41a33cd6fe5c37b836",
+    "flow_3": "a5a1728b97492d5af96f9795cdbaad16d5f1115d9044a1035465d1f16ec46e4a"
+  },
+  "resolved_configs": {
+    "ebm_1": {
+      "experiment": {
+        "name": "E3_ebm",
+        "lab": 6,
+        "seed": 1,
+        "deterministic": true,
+        "purpose": "formal",
+        "role": "E3_ebm"
+      },
+      "data": {
+        "name": "gaussian_mixture_2d",
+        "target": "eight_gaussians",
+        "train_fraction": 1.0,
+        "num_workers": 0
+      },
+      "model": {
+        "name": "energy_model",
+        "width": 185,
+        "depth": 3,
+        "cap": 4.0
+      },
+      "optimizer": {
+        "name": "adam",
+        "lr": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0
+      },
+      "scheduler": {
+        "name": "constant",
+        "unit": "epoch",
+        "warmup_epochs": 0
+      },
+      "train": {
+        "epochs": 65,
+        "max_steps": 5000,
+        "batch_size": 256,
+        "amp": false,
+        "accumulation_steps": 1
+      },
+      "sampling": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "steps": 50,
+        "boundary": "reflection"
+      },
+      "generative": {
+        "energy_regularization": 0.0,
+        "checkpoint_selection": "fixed5000step_endpoint"
+      },
+      "logging": {
+        "run_root": "runs/lab6",
+        "save_every": 1,
+        "save_every_steps": 500,
+        "console_every_steps": 500,
+        "keep_epochs": [
+          16,
+          32,
+          48
+        ]
+      },
+      "runtime": {
+        "device": "cpu",
+        "threads": 2,
+        "max_seconds": 0,
+        "dependency_lock": "docs/environment/lab6-requirements.lock.txt",
+        "pause_file": "experiments/lab6/PAUSE"
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab6_target": "eight_gaussians",
+        "lab6_eta": [
+          0.005,
+          0.02,
+          0.08,
+          0.5
+        ],
+        "lab6_scale": 4.0
+      }
+    },
+    "flow_1": {
+      "experiment": {
+        "name": "E3_flow",
+        "lab": 6,
+        "seed": 1,
+        "deterministic": true,
+        "purpose": "formal",
+        "role": "E3_flow"
+      },
+      "data": {
+        "name": "gaussian_mixture_2d",
+        "target": "eight_gaussians",
+        "train_fraction": 1.0,
+        "num_workers": 0
+      },
+      "model": {
+        "name": "normalizing_flow",
+        "width": 64,
+        "depth": 8,
+        "cap": 4.0
+      },
+      "optimizer": {
+        "name": "adam",
+        "lr": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0
+      },
+      "scheduler": {
+        "name": "constant",
+        "unit": "epoch",
+        "warmup_epochs": 0
+      },
+      "train": {
+        "epochs": 65,
+        "max_steps": 5000,
+        "batch_size": 256,
+        "amp": false,
+        "accumulation_steps": 1
+      },
+      "sampling": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "steps": 50,
+        "boundary": "reflection"
+      },
+      "generative": {
+        "energy_regularization": 0.0,
+        "checkpoint_selection": "fixed5000step_endpoint"
+      },
+      "logging": {
+        "run_root": "runs/lab6",
+        "save_every": 1,
+        "save_every_steps": 500,
+        "console_every_steps": 500,
+        "keep_epochs": [
+          16,
+          32,
+          48
+        ]
+      },
+      "runtime": {
+        "device": "cpu",
+        "threads": 2,
+        "max_seconds": 0,
+        "dependency_lock": "docs/environment/lab6-requirements.lock.txt",
+        "pause_file": "experiments/lab6/PAUSE"
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab6_target": "eight_gaussians",
+        "lab6_eta": [
+          0.005,
+          0.02,
+          0.08,
+          0.5
+        ],
+        "lab6_scale": 4.0
+      }
+    },
+    "ebm_2": {
+      "experiment": {
+        "name": "E3_ebm",
+        "lab": 6,
+        "seed": 2,
+        "deterministic": true,
+        "purpose": "formal",
+        "role": "E3_ebm"
+      },
+      "data": {
+        "name": "gaussian_mixture_2d",
+        "target": "eight_gaussians",
+        "train_fraction": 1.0,
+        "num_workers": 0
+      },
+      "model": {
+        "name": "energy_model",
+        "width": 185,
+        "depth": 3,
+        "cap": 4.0
+      },
+      "optimizer": {
+        "name": "adam",
+        "lr": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0
+      },
+      "scheduler": {
+        "name": "constant",
+        "unit": "epoch",
+        "warmup_epochs": 0
+      },
+      "train": {
+        "epochs": 65,
+        "max_steps": 5000,
+        "batch_size": 256,
+        "amp": false,
+        "accumulation_steps": 1
+      },
+      "sampling": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "steps": 50,
+        "boundary": "reflection"
+      },
+      "generative": {
+        "energy_regularization": 0.0,
+        "checkpoint_selection": "fixed5000step_endpoint"
+      },
+      "logging": {
+        "run_root": "runs/lab6",
+        "save_every": 1,
+        "save_every_steps": 500,
+        "console_every_steps": 500,
+        "keep_epochs": [
+          16,
+          32,
+          48
+        ]
+      },
+      "runtime": {
+        "device": "cpu",
+        "threads": 2,
+        "max_seconds": 0,
+        "dependency_lock": "docs/environment/lab6-requirements.lock.txt",
+        "pause_file": "experiments/lab6/PAUSE"
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab6_target": "eight_gaussians",
+        "lab6_eta": [
+          0.005,
+          0.02,
+          0.08,
+          0.5
+        ],
+        "lab6_scale": 4.0
+      }
+    },
+    "flow_2": {
+      "experiment": {
+        "name": "E3_flow",
+        "lab": 6,
+        "seed": 2,
+        "deterministic": true,
+        "purpose": "formal",
+        "role": "E3_flow"
+      },
+      "data": {
+        "name": "gaussian_mixture_2d",
+        "target": "eight_gaussians",
+        "train_fraction": 1.0,
+        "num_workers": 0
+      },
+      "model": {
+        "name": "normalizing_flow",
+        "width": 64,
+        "depth": 8,
+        "cap": 4.0
+      },
+      "optimizer": {
+        "name": "adam",
+        "lr": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0
+      },
+      "scheduler": {
+        "name": "constant",
+        "unit": "epoch",
+        "warmup_epochs": 0
+      },
+      "train": {
+        "epochs": 65,
+        "max_steps": 5000,
+        "batch_size": 256,
+        "amp": false,
+        "accumulation_steps": 1
+      },
+      "sampling": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "steps": 50,
+        "boundary": "reflection"
+      },
+      "generative": {
+        "energy_regularization": 0.0,
+        "checkpoint_selection": "fixed5000step_endpoint"
+      },
+      "logging": {
+        "run_root": "runs/lab6",
+        "save_every": 1,
+        "save_every_steps": 500,
+        "console_every_steps": 500,
+        "keep_epochs": [
+          16,
+          32,
+          48
+        ]
+      },
+      "runtime": {
+        "device": "cpu",
+        "threads": 2,
+        "max_seconds": 0,
+        "dependency_lock": "docs/environment/lab6-requirements.lock.txt",
+        "pause_file": "experiments/lab6/PAUSE"
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab6_target": "eight_gaussians",
+        "lab6_eta": [
+          0.005,
+          0.02,
+          0.08,
+          0.5
+        ],
+        "lab6_scale": 4.0
+      }
+    },
+    "ebm_3": {
+      "experiment": {
+        "name": "E3_ebm",
+        "lab": 6,
+        "seed": 3,
+        "deterministic": true,
+        "purpose": "formal",
+        "role": "E3_ebm"
+      },
+      "data": {
+        "name": "gaussian_mixture_2d",
+        "target": "eight_gaussians",
+        "train_fraction": 1.0,
+        "num_workers": 0
+      },
+      "model": {
+        "name": "energy_model",
+        "width": 185,
+        "depth": 3,
+        "cap": 4.0
+      },
+      "optimizer": {
+        "name": "adam",
+        "lr": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0
+      },
+      "scheduler": {
+        "name": "constant",
+        "unit": "epoch",
+        "warmup_epochs": 0
+      },
+      "train": {
+        "epochs": 65,
+        "max_steps": 5000,
+        "batch_size": 256,
+        "amp": false,
+        "accumulation_steps": 1
+      },
+      "sampling": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "steps": 50,
+        "boundary": "reflection"
+      },
+      "generative": {
+        "energy_regularization": 0.0,
+        "checkpoint_selection": "fixed5000step_endpoint"
+      },
+      "logging": {
+        "run_root": "runs/lab6",
+        "save_every": 1,
+        "save_every_steps": 500,
+        "console_every_steps": 500,
+        "keep_epochs": [
+          16,
+          32,
+          48
+        ]
+      },
+      "runtime": {
+        "device": "cpu",
+        "threads": 2,
+        "max_seconds": 0,
+        "dependency_lock": "docs/environment/lab6-requirements.lock.txt",
+        "pause_file": "experiments/lab6/PAUSE"
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab6_target": "eight_gaussians",
+        "lab6_eta": [
+          0.005,
+          0.02,
+          0.08,
+          0.5
+        ],
+        "lab6_scale": 4.0
+      }
+    },
+    "flow_3": {
+      "experiment": {
+        "name": "E3_flow",
+        "lab": 6,
+        "seed": 3,
+        "deterministic": true,
+        "purpose": "formal",
+        "role": "E3_flow"
+      },
+      "data": {
+        "name": "gaussian_mixture_2d",
+        "target": "eight_gaussians",
+        "train_fraction": 1.0,
+        "num_workers": 0
+      },
+      "model": {
+        "name": "normalizing_flow",
+        "width": 64,
+        "depth": 8,
+        "cap": 4.0
+      },
+      "optimizer": {
+        "name": "adam",
+        "lr": 0.001,
+        "weight_decay": 0.0,
+        "momentum": 0.0
+      },
+      "scheduler": {
+        "name": "constant",
+        "unit": "epoch",
+        "warmup_epochs": 0
+      },
+      "train": {
+        "epochs": 65,
+        "max_steps": 5000,
+        "batch_size": 256,
+        "amp": false,
+        "accumulation_steps": 1
+      },
+      "sampling": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "steps": 50,
+        "boundary": "reflection"
+      },
+      "generative": {
+        "energy_regularization": 0.0,
+        "checkpoint_selection": "fixed5000step_endpoint"
+      },
+      "logging": {
+        "run_root": "runs/lab6",
+        "save_every": 1,
+        "save_every_steps": 500,
+        "console_every_steps": 500,
+        "keep_epochs": [
+          16,
+          32,
+          48
+        ]
+      },
+      "runtime": {
+        "device": "cpu",
+        "threads": 2,
+        "max_seconds": 0,
+        "dependency_lock": "docs/environment/lab6-requirements.lock.txt",
+        "pause_file": "experiments/lab6/PAUSE"
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab6_target": "eight_gaussians",
+        "lab6_eta": [
+          0.005,
+          0.02,
+          0.08,
+          0.5
+        ],
+        "lab6_scale": 4.0
+      }
+    }
+  },
+  "E1_selection_sha256": "375b4655890b90815d7fb9ff0d90098c56caea387da73bc0751045e78283c4e3",
+  "E2_selection_sha256": "37d03357a71d616d77291156f7ab92553d49faba631ae2dab995ed51f7213305"
+}

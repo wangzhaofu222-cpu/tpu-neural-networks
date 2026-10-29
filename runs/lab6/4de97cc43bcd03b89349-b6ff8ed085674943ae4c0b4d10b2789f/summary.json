@@ -1,0 +1,26 @@
+{
+  "RUN_ID": "4de97cc43bcd03b89349-b6ff8ed085674943ae4c0b4d10b2789f",
+  "seed": 6102,
+  "sample_count": 5000,
+  "Cov": 1.0,
+  "Dmode": 0.002000000000000001,
+  "Dmode_exact_target": 0.0011544982691211285,
+  "MMD2": 1.2289650318075829e-05,
+  "mode_counts_including_outlier_first": [
+    52,
+    2478,
+    2470
+  ],
+  "reference_mode_counts_including_outlier_first": [
+    62,
+    2471,
+    2467
+  ],
+  "exact_mode_probabilities_outlier_first": [
+    0.011108996538242266,
+    0.49444550173087887,
+    0.49444550173087887
+  ],
+  "MMD_estimator": "empirical V-statistic, including diagonals",
+  "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers"
+}

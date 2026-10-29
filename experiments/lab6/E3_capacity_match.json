@@ -1,0 +1,10 @@
+{
+  "ebm_width": 185,
+  "flow_width": 64,
+  "flow_depth": 8,
+  "ebm_parameters": 69561,
+  "flow_parameters": 69648,
+  "relative_gap_over_smaller": 0.0012507008237374391,
+  "original_EBM_width": 128,
+  "rule": "retain width128 if within20%, otherwise integer width minimizing gap; only EBM width changes"
+}

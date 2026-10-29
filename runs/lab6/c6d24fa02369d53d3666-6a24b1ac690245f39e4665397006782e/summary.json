@@ -1,0 +1,26 @@
+{
+  "eta": 0.08,
+  "sigma": 0.4,
+  "effective_temperature": 1.0000000000000002,
+  "chains": 8,
+  "burn_in": 10000,
+  "draws_per_chain": 200000,
+  "seed": 8103,
+  "variance_per_chain": [
+    1.037432328846183,
+    1.0384632983474362,
+    1.050939826972077,
+    1.056518562790304,
+    1.072121727217082,
+    1.0183864714857687,
+    1.0291401664726907,
+    1.0514906960071815
+  ],
+  "measured_variance": 1.0443116347673405,
+  "theory_variance": 1.0416666666666667,
+  "relative_error": 0.002539169376646768,
+  "acceptance": "PASS",
+  "method": "scipy lfilter executes all finite AR1 steps; eight independent innovations; no stationary analytic sampling; double precision",
+  "RUN_ID": "c6d24fa02369d53d3666-6a24b1ac690245f39e4665397006782e",
+  "optimizer_steps": 0
+}

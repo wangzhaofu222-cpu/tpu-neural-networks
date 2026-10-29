@@ -1,0 +1,169 @@
+{
+  "RUN_ID": "a2aa71727b0df9797290-ab2f5729578d4848953a9728cba469e8",
+  "source_RUN_ID": "90803714ee7813d313f0-7741207547b7491dabeba08a2be0959d",
+  "target": "two_blobs",
+  "kind": "ebm",
+  "seed": 1,
+  "checkpoint_sha256": "4af70bb105e9479a8ded5bd9a511d810e5d486aadf8ed0cda7cf323cce0e5327",
+  "source_global_step": 5000,
+  "parameters": 33537,
+  "training_seconds": 296.08212339999955,
+  "sample_count": 5000,
+  "sample_seed": 7001,
+  "sample_seconds": 0.4475077999995847,
+  "metric_protocol_RUN_ID": "64521b6bd4f39fbfa4d4-8f74e7ded1d14245bd2b3b2a09cd67bc",
+  "Cov": 0.0,
+  "Dmode": 0.915,
+  "Dmode_exact_target": 0.9162910034617577,
+  "MMD2": 0.12910655887923705,
+  "mode_counts_including_outlier_first": [
+    4637,
+    188,
+    175
+  ],
+  "reference_mode_counts_including_outlier_first": [
+    62,
+    2471,
+    2467
+  ],
+  "exact_mode_probabilities_outlier_first": [
+    0.011108996538242266,
+    0.49444550173087887,
+    0.49444550173087887
+  ],
+  "MMD_estimator": "empirical V-statistic, including diagonals",
+  "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+  "normalized_on_omega": true,
+  "density_kind": "grid_estimate_not_exact_likelihood",
+  "log_Z_hat_omega": 3.343580633041921,
+  "Z_hat_omega": 28.320350156773202,
+  "tail_unnormalized_integral_upper_bound_R14": 0.0028690129014617765,
+  "tail_fraction_bound_numerator_over_estimated_Z": 0.00010130570016188915,
+  "tail_probability_rigorous_upper_bound": 0.00013791280933656192,
+  "tail_note": "Eq6.3 is an unnormalized integral bound; division by gridZ uses an estimated denominator, not an exact normalization.",
+  "domain": [
+    [
+      -15,
+      15
+    ],
+    [
+      -15,
+      15
+    ]
+  ],
+  "grid_shape": [
+    120,
+    120
+  ],
+  "spacing": 0.25,
+  "cell_area": 0.0625,
+  "Dgrid": 0.0015629600742856583,
+  "grid_integral": 1.0000000000000007,
+  "sampler": {
+    "eta": 0.08,
+    "temperature": 1.0,
+    "sigma": 0.4,
+    "sigma_squared": 0.16,
+    "DK": 3.2972171306610107,
+    "energy_curve": [
+      0.8935223817825317,
+      0.9134446382522583,
+      0.9330955147743225,
+      0.9389581084251404,
+      0.9625268578529358,
+      0.991977334022522,
+      1.0267137289047241,
+      1.0549043416976929,
+      1.0824826955795288,
+      1.115659475326538,
+      1.1261675357818604,
+      1.1515133380889893,
+      1.1623308658599854,
+      1.195436954498291,
+      1.2117960453033447,
+      1.232362151145935,
+      1.2504301071166992,
+      1.2731679677963257,
+      1.2846450805664062,
+      1.2998812198638916,
+      1.3138278722763062,
+      1.328000545501709,
+      1.3492398262023926,
+      1.361775279045105,
+      1.372844934463501,
+      1.3948363065719604,
+      1.4040995836257935,
+      1.4209201335906982,
+      1.4405463933944702,
+      1.4422694444656372,
+      1.4522711038589478,
+      1.4683035612106323,
+      1.478371500968933,
+      1.4945847988128662,
+      1.5061745643615723,
+      1.509495496749878,
+      1.5299766063690186,
+      1.5412172079086304,
+      1.5526039600372314,
+      1.5510921478271484,
+      1.5728195905685425,
+      1.5843987464904785,
+      1.5852746963500977,
+      1.595361351966858,
+      1.610849380493164,
+      1.6136435270309448,
+      1.620162844657898,
+      1.6272279024124146,
+      1.6360827684402466,
+      1.650398850440979,
+      1.659648060798645
+    ],
+    "pre_reflection_outside_proposal_fraction": 0.0,
+    "finite": true,
+    "mode_switch_count": 471,
+    "chain_ever_changed_valid_mode_fraction": 0.08959999680519104,
+    "mode_label_changes_including_outliers": 18188,
+    "final_other_mode_fraction": 0.0034000000450760126
+  },
+  "mean_test_energy": -0.7175567746162415,
+  "center_energies": [
+    -0.7777777910232544,
+    -0.7777777910232544
+  ],
+  "origin_energy": 1.0,
+  "outside_final_fraction": 0.0,
+  "stable": true,
+  "center_start_mixing": {
+    "mode_switch_count": 798,
+    "chain_ever_changed_valid_mode_fraction": 0.15060000121593475,
+    "mode_label_changes_including_outliers": 23585,
+    "final_other_mode_fraction": 0.017799999564886093,
+    "chains": 5000,
+    "start_center": 0,
+    "seed": 7101
+  },
+  "midpoint": {
+    "center_indices": [
+      0,
+      1
+    ],
+    "centers": [
+      [
+        -2.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0
+      ]
+    ],
+    "point": [
+      0.0,
+      0.0
+    ],
+    "true_log_density": -21.652153679979694,
+    "model_log_density": -4.343580722808838,
+    "model_density_kind": "grid_estimate_not_exact_likelihood",
+    "log_density_excess_over_true": 17.308572957170856
+  }
+}
