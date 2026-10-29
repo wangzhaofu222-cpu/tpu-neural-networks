@@ -38,7 +38,7 @@ def validate(cfg):
     for name in ['experiment','data','model','optimizer','scheduler','train','logging','profile','runtime']:
         if not isinstance(cfg.get(name),dict):
             raise ValueError(f'Missing section: {name}')
-    if cfg['optimizer']['name'] not in ['adamw','sgd']:
+    if cfg['optimizer']['name'] not in ['adamw','sgd','adam']:
         raise ValueError('Unsupported optimizer')
     if cfg['model']['name'] in {'deep_mlp','residual_mlp'}:
         model=cfg['model']
@@ -113,6 +113,14 @@ def validate(cfg):
                 if m['mode']=='contrastive' and cfg['contrastive']['tau']!=cfg['profile']['lab4_tau']:raise ValueError('Lab4 assignedtau mismatch')
     if cfg['train']['accumulation_steps'] < 1:
         raise ValueError('accumulation_steps must be positive')
+    if cfg['experiment']['lab']==5:
+        if cfg['data']['name'] not in {'planetoid_graph','graph_features'}:raise ValueError('Invalid Lab5 data')
+        if cfg['profile']['lab5_dataset']!='cora' or cfg['profile']['lab5_second_gnn']!='gat' or cfg['profile']['lab5_depths']!=[2,3,6,12,24]:raise ValueError('Lab5 profile mismatch')
+        if cfg['experiment']['purpose']=='formal' and cfg['model']['name']=='graph_network':
+            if cfg['train']['epochs']!=200 or cfg['optimizer']['name']!='adam':raise ValueError('Lab5 requires full200 epochs and Adam')
+            if cfg['model']['dropout']!=.5 or cfg['model']['width'] not in [16,64]:raise ValueError('Lab5 canonical dropout/width')
+            if cfg['model']['depth'] not in cfg['profile']['lab5_depths']:raise ValueError('Unassigned Lab5 depth')
+        if cfg['train']['accumulation_steps']!=1:raise ValueError('Graph training is full-batch')
     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:
         raise ValueError('Lab 9 encoder conflict requires teacher clarification')
     if not cfg['profile'].get('student_id_hash') or not cfg['profile'].get('id'):

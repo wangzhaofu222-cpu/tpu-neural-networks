@@ -22,6 +22,9 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='graph_network':
+        from src.models.graph import GraphNetwork
+        return GraphNetwork(cfg)
     if cfg['name']=='simclr':
         from src.ssl.simclr import SimCLR
         return SimCLR(cfg)

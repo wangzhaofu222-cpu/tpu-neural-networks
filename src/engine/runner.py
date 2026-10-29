@@ -50,6 +50,7 @@ class ExperimentRunner:
         opt_cfg = cfg['optimizer']
         options = {'lr':opt_cfg['lr'],'weight_decay':opt_cfg['weight_decay']}
         optimizer = (torch.optim.AdamW(model.parameters(),**options) if opt_cfg['name']=='adamw' else
+                     torch.optim.Adam(model.parameters(),**options) if opt_cfg['name']=='adam' else
                      torch.optim.SGD(model.parameters(),momentum=opt_cfg['momentum'],**options))
         total_epochs = cfg['train']['epochs']
         step_limit = cfg['train'].get('max_steps')
@@ -108,7 +109,7 @@ class ExperimentRunner:
         (path/'checkpoints').mkdir()
         if resume:
             parent_path = Path(resume).parent.parent
-            for name in ['metrics.jsonl','steps.jsonl']:
+            for name in ['metrics.jsonl','steps.jsonl']+(['gradients.jsonl'] if cfg['experiment']['lab']==5 else []):
                 if (parent_path/name).exists():
                     # Keep only entries that logically precede this checkpoint.
                     records = [json.loads(line) for line in (parent_path/name).read_text().splitlines()]
@@ -163,7 +164,7 @@ class ExperimentRunner:
                     if budget and time.perf_counter()-wall_start > budget:
                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
                     if first_checksum is None:
-                        if cfg['experiment']['lab']==4:
+                        if cfg['experiment']['lab'] in {4,5}:
                             import hashlib
                             first_checksum=hashlib.sha256(x.detach().cpu().contiguous().numpy().tobytes()+y.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
                         else:first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
@@ -189,6 +190,9 @@ class ExperimentRunner:
                                          for j in range(group_start,group_start+group_length))
                     scaled_loss = loss if accumulation == 1 else loss*len(y)/group_examples
                     scaler.scale(scaled_loss).backward()
+                    if cfg['experiment']['lab']==5 and cfg['model']['name']=='graph_network':
+                        from src.diagnostics.oversmoothing import gradient_record
+                        self._append(path/'gradients.jsonl',{'epoch':epoch+1,**gradient_record(model)})
                     if diagnostics:
                         diagnostics.end(epoch+1, batch_index)
                         if not bool(torch.stack([torch.isfinite(p.grad).all() for p in model.parameters() if p.grad is not None]).all()):
@@ -262,6 +266,7 @@ class ExperimentRunner:
                            'best_accuracy':best,'best_epoch':best_epoch,'first_batch_checksum':first_checksum,
                            'checkpoint_for_final_metric':'checkpoints/last.pt','purpose':cfg['experiment']['purpose']})
                 console_due=(not step_limit or finished_steps or global_step-console_step>=cfg['logging'].get('console_every_steps',500))
+                if cfg['experiment']['lab']==5:console_due=(epoch+1==total_epochs or (epoch+1)%50==0)
                 if cfg['model']['name']=='linear_probe':console_due=(epoch+1==total_epochs)
                 if console_due:
                     console_record={**record}
@@ -308,7 +313,7 @@ class ExperimentRunner:
             if (path/'summary.json').exists():
                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
                 summary['status']=status
-                if step_limit or cfg['experiment']['lab']==4:summary['training_seconds']=training_seconds
+                if step_limit or cfg['experiment']['lab'] in {4,5}:summary['training_seconds']=training_seconds
                 write_json(path/'summary.json',summary)
         return path
 

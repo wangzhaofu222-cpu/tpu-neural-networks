@@ -1,0 +1,53 @@
+{
+  "registered_at_utc": "2026-10-28T15:38:34.426361+00:00",
+  "A": "SimCLR",
+  "B": "B0",
+  "rmin": 0.02,
+  "fractions": [
+    0.02,
+    0.05,
+    0.25,
+    1.0
+  ],
+  "predicted_sign": 1,
+  "predicted_mean_difference": 0.16525,
+  "prediction_basis": "half of the measured E1full-label gain as aheuristicpointforecast; ifnearzero, +.05theoreticalexploratoryforecast",
+  "E1_G1": 0.3305,
+  "encoders": {
+    "B0": {
+      "path": "runs/lab4/7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+      "RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+      "checkpoint": "last.pt",
+      "checkpoint_sha256": "dab9be8d8b7875b97e58aa8ba46b6666ad77d51fdeef0a46eb57bce80f7413d3",
+      "feature_RUN_ID": "ba10256c645ed92098b4-5ed3817055a845a3ba007416a9ba631f",
+      "encoder_state_sha256": "62d74a7769cc123e5a24c46b7dde558e71f7d5d6f3f7b159cb960698fbf5e39d"
+    },
+    "B1": {
+      "path": "runs/lab4/46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+      "RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+      "checkpoint": "last.pt",
+      "checkpoint_sha256": "f7b08e5d0e2c8099183335fbfe1ed143b1a2ab25a8dd3308a5d96dc6844a7fd6",
+      "feature_RUN_ID": "9f2d0ee02b702abaff50-7213772581684275acbe05d6dec6f1f0",
+      "encoder_state_sha256": "e25538a2b691ed4780f15021cd05109cee53a39bbd3e28a0167a83334a942de3"
+    },
+    "SimCLR": {
+      "path": "runs/lab4/c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+      "RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+      "checkpoint": "epoch_100.pt",
+      "checkpoint_sha256": "ebd3f1221c030d61baa40fd9f81cf0ebf80263e14019945def1cd0c7585d55d5",
+      "feature_RUN_ID": "63cf1c9d822e1fb0f08f-26bc5a3281564641ab9f083eabd195ef",
+      "encoder_state_sha256": "59ca9c4e20021524bd72ab65a3b1e4cc13a58557a209a007cb0c15b4a2eb2d1a"
+    }
+  },
+  "E1_E2_results_sha256": "4ec4d3bd5c13e96e392fd49ec0da13bab8d4ce29e77ce3236a7a451f72bb8c87",
+  "E1_E2_snapshot_path": "experiments/lab4/E1_E2_before_E3.json",
+  "probe_seeds": [
+    1,
+    2,
+    3
+  ],
+  "pretraining_seed": 1,
+  "unit_of_analysis": "image",
+  "reuse": "The3seed1/r1 cells reuse exactlyidentical E1probes; all9rmincells andother24nonreusedE3cells are unseen. Reuse isexplicit, notrepresented as newtraining.",
+  "falsification": "Anestablished opposite sign contradicts direction; mixed/zero signs orabsmean<2SD mean differenceunestablished. Pointforecast error isreported separately, no newmargin replaces teachercriterion."
+}

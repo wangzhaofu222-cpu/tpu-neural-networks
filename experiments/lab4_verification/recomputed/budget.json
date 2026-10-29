@@ -1,0 +1,21 @@
+{
+  "RUN_ID": "9494511ca948c13ef8a0-991d6b88d4bf40c7bb72366df15b3de4",
+  "actual_N": 256,
+  "negative_count": 510,
+  "AMP": true,
+  "simultaneous_views": 512,
+  "NT_Xent_denominator_candidates": 511,
+  "loss_dtype": "float32",
+  "training_peak_allocator_bytes": 1434309632,
+  "measured_training_seconds_including_epoch0diagnostics": 57.986258000004455,
+  "timing_source": "original manifest.wall_seconds; epoch-based timing field added afterward without repeating this budget",
+  "measured_epoch_seconds": 43.540312100005394,
+  "estimated_Efull100_seconds": 4354.031210000539,
+  "estimated_Eshort25_seconds": 1088.5078025001349,
+  "estimated325epochs_conservative_seconds": 14150.601432501753,
+  "measured_steps": 167,
+  "images_per_epoch": 42752,
+  "images_per_second_including_diagnostics": 981.8946612464614,
+  "model": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "scope": "Budgetisnotformal; no CPU reducedprotocol andno microbatch independent losses."
+}

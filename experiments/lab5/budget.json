@@ -1,0 +1,78 @@
+{
+  "measurements": [
+    {
+      "device": "cpu",
+      "kind": "mlp",
+      "depth": 2,
+      "RUN_ID": "4e943d5698c6bc7b0f0d-3b5514532abe4c8c94830c91b6eb71eb",
+      "status": "COMPLETED",
+      "training_seconds": 0.34181240000020807,
+      "wall_seconds": 3.0873366999999234,
+      "steady_epoch_seconds": 0.05784862500007648,
+      "projected_200_epoch_seconds": 11.569725000015296,
+      "peak_gpu_bytes": null
+    },
+    {
+      "device": "cpu",
+      "kind": "gcn",
+      "depth": 2,
+      "RUN_ID": "0811a9e3f2ec865c9f3c-3f3ec882f56c435eaa53089b9556d23b",
+      "status": "COMPLETED",
+      "training_seconds": 0.371887900000047,
+      "wall_seconds": 0.7321051999999781,
+      "steady_epoch_seconds": 0.06464180000000397,
+      "projected_200_epoch_seconds": 12.928360000000794,
+      "peak_gpu_bytes": null
+    },
+    {
+      "device": "cpu",
+      "kind": "gat",
+      "depth": 2,
+      "RUN_ID": "1dcf7864dfb64b6e6322-2b1c10626b134527a8e8e2246c4de334",
+      "status": "COMPLETED",
+      "training_seconds": 0.44445679999989807,
+      "wall_seconds": 0.8254770000000917,
+      "steady_epoch_seconds": 0.07827257500002816,
+      "projected_200_epoch_seconds": 15.654515000005631,
+      "peak_gpu_bytes": null
+    },
+    {
+      "device": "cpu",
+      "kind": "gcn",
+      "depth": 24,
+      "RUN_ID": "fc7b636f749b7c7307c5-d5832170dd664ae2a4e9cff9d9b7fb15",
+      "status": "COMPLETED",
+      "training_seconds": 1.0604745999999068,
+      "wall_seconds": 1.3943699000001288,
+      "steady_epoch_seconds": 0.19564875000003212,
+      "projected_200_epoch_seconds": 39.129750000006425,
+      "peak_gpu_bytes": null
+    },
+    {
+      "device": "cuda",
+      "kind": "gcn",
+      "depth": 2,
+      "RUN_ID": "310b8ac185854dac6673-971b605191a648cd9ec924fafc28c7ed",
+      "status": "COMPLETED",
+      "training_seconds": 0.8767319999999472,
+      "wall_seconds": 1.3681190999998307,
+      "steady_epoch_seconds": 0.02376622499991754,
+      "projected_200_epoch_seconds": 4.753244999983508,
+      "peak_gpu_bytes": 170314240
+    },
+    {
+      "device": "cuda",
+      "kind": "gat",
+      "depth": 2,
+      "RUN_ID": "72f56c8ac8fe3d37995b-db4cce5861344cf1b47424748d862a90",
+      "status": "COMPLETED",
+      "training_seconds": 0.2804458999999042,
+      "wall_seconds": 0.6190615000000435,
+      "steady_epoch_seconds": 0.03317352499999515,
+      "projected_200_epoch_seconds": 6.63470499999903,
+      "peak_gpu_bytes": 179803648
+    }
+  ],
+  "formal_device": "cpu",
+  "decision": "CPU full-batch deterministic; no GPU needed by teacher. Budget runs are not formal evidence."
+}

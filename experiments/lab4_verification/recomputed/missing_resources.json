@@ -1,0 +1,18 @@
+{
+  "Q2": {
+    "status": "BLOCKED",
+    "missing": "Протокол данных курса §4.6 color-defined-class control dataset",
+    "search": "all project filenames/PDF inventory; only10labPDFs and existing generated protocols found",
+    "impact": "Cannot define hue classes/splits without inventing teacher protocol; all other work proceeds",
+    "prior_user_confirmation": "Teacher protocol and dedicated packs unavailable",
+    "connected_search": {
+      "provider": "GoogleDrive",
+      "queries": [
+        "Протокол данных курса",
+        "Нейронные сети протокол"
+      ],
+      "results": "no matching documents returned",
+      "action": "read-only exactcourse-protocol search; nofiles modified"
+    }
+  }
+}

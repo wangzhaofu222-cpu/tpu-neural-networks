@@ -1,0 +1,1192 @@
+{
+  "status": "BLOCKED",
+  "block_reason": "CF2 requires missing teacher Protocol 4.6; other requirements are audited individually",
+  "acceptance": {
+    "historical_Lab0_to_Lab3_unchanged": "PASS",
+    "Lab3_independent_audit": "PASS",
+    "mandatory_tests_and_regressions": "PASS",
+    "N256_global_NT_Xent_not_microbatch_approximation": "PASS",
+    "GPU100_25_epoch_protocol": "PASS",
+    "trainonly_unlabelled_pretraining_cal_guard": "PASS",
+    "E1_three_encoders_common_probe_knn": "PASS",
+    "E1_five_SSL_checkpoints_including0": "PASS",
+    "E1_E2_exploratory_hypotheses_precede_formal_training": "PASS",
+    "E1_final_loss_at_or_below_random": "PASS",
+    "E1_G1_sign_reported": "PASS",
+    "E2_six_variants_only_augmentation_changes": "PASS",
+    "E2_conditional_thresholds_applied": "PASS",
+    "E3_preregistered_before_new_runs": "PASS",
+    "E3_complete36_matrix_nested_shared_indices": "PASS",
+    "E3_teacher_rule_applied": "PASS",
+    "frozen_encoder_full_state_and_feature_repeatability": "PASS",
+    "representation_scale_rank_spectrum_raw_recomputed": "PASS",
+    "CF1": "PASS",
+    "CF2": "BLOCKED",
+    "CF3": "PASS",
+    "eight_figures_visually_verified_and_hashed": "PASS",
+    "CF4": "PASS",
+    "CF5": "PASS",
+    "formal_report": "NOT_APPLICABLE",
+    "optional_section14": "NOT_APPLICABLE"
+  },
+  "automated_tests": {
+    "tests": 106,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "totals": {
+    "formal_encoder_training_runs": 10,
+    "formal_probe_candidate_training_runs": 144,
+    "formal_encoder_training_seconds": 9183.4856268,
+    "formal_probe_training_seconds": 202.4956174999752,
+    "checkpoint_count": 334,
+    "formal_checkpoint_count": 325,
+    "RUN_ID_count": 223,
+    "formal_encoder_and_initialization_wall_seconds": 9290.724258700007,
+    "formal_feature_operation_seconds": 257.8175231000132,
+    "formal_probe_selection_and_test_seconds": 505.8404927999727,
+    "formal_measured_active_seconds": 10054.382274599993,
+    "formal_protocol_first_started_at_utc": "2026-10-28T13:08:48.743350+00:00",
+    "formal_protocol_last_finished_at_utc": "2026-10-28T16:04:34.228046+00:00",
+    "formal_protocol_calendar_span_seconds": 10545.484696,
+    "timing_scope": "Nonoverlapping measured encoder/initialization workers + feature protocols + complete probe selection/test protocols. Probe candidate training is already included in probe protocols and is not added twice. Feature/probe Python startup, analysis, tests and idle time excluded."
+  },
+  "encoder_runs": [
+    {
+      "RUN_ID": "0ac05f5c7a4bf57bba93-c64ca04b5e1c43d8b5a21130fdbfaf3a",
+      "role": "E2",
+      "epochs": 25,
+      "optimizer_updates": 4175,
+      "physical_batches": 4175,
+      "AMP_skips": 0,
+      "training_seconds": 679.5642701000033,
+      "peak_allocator_bytes": 1434309632
+    },
+    {
+      "RUN_ID": "18d82233d80d6ba38d75-4603002b39054d37a544e63f8844618f",
+      "role": "E2",
+      "epochs": 25,
+      "optimizer_updates": 4175,
+      "physical_batches": 4175,
+      "AMP_skips": 0,
+      "training_seconds": 689.3045923000027,
+      "peak_allocator_bytes": 1434309632
+    },
+    {
+      "RUN_ID": "1cc8373c23ca198cfc9c-ea07fbed8d9f4fb4a4ac843ba75fd140",
+      "role": "CF1",
+      "epochs": 25,
+      "optimizer_updates": 16771,
+      "physical_batches": 16775,
+      "AMP_skips": 4,
+      "training_seconds": 870.5763783999937,
+      "peak_allocator_bytes": 511856128
+    },
+    {
+      "RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+      "role": "B1",
+      "epochs": 25,
+      "optimizer_updates": 4200,
+      "physical_batches": 4200,
+      "AMP_skips": 0,
+      "training_seconds": 459.5502933000025,
+      "peak_allocator_bytes": 814648320
+    },
+    {
+      "RUN_ID": "5f460eb41601d4914fdc-4263d43328524a0f915e3141c3d42896",
+      "role": "E2",
+      "epochs": 25,
+      "optimizer_updates": 4175,
+      "physical_batches": 4175,
+      "AMP_skips": 0,
+      "training_seconds": 727.7301225999981,
+      "peak_allocator_bytes": 1434309632
+    },
+    {
+      "RUN_ID": "8bdb2fad07d1c7b4ffb8-f8f68962ebab42539e38e8fc76d5c056",
+      "role": "CF5",
+      "epochs": 25,
+      "optimizer_updates": 100,
+      "physical_batches": 100,
+      "AMP_skips": 0,
+      "training_seconds": 52.142575199999555,
+      "peak_allocator_bytes": 814648320
+    },
+    {
+      "RUN_ID": "9bcb3e57a83e8f0b7c03-eba9695f16f344f7a05c93b54baaf23f",
+      "role": "E2",
+      "epochs": 25,
+      "optimizer_updates": 4175,
+      "physical_batches": 4175,
+      "AMP_skips": 0,
+      "training_seconds": 679.7972676999998,
+      "peak_allocator_bytes": 1434309632
+    },
+    {
+      "RUN_ID": "ad1e859e697e9a1c182d-be89554cbb6d4ba6a349a2cdb81795ea",
+      "role": "E2",
+      "epochs": 25,
+      "optimizer_updates": 4175,
+      "physical_batches": 4175,
+      "AMP_skips": 0,
+      "training_seconds": 675.9231712000037,
+      "peak_allocator_bytes": 1434309632
+    },
+    {
+      "RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+      "role": "E1_SSL",
+      "epochs": 100,
+      "optimizer_updates": 16697,
+      "physical_batches": 16700,
+      "AMP_skips": 3,
+      "training_seconds": 3575.4294105999943,
+      "peak_allocator_bytes": 1434309632
+    },
+    {
+      "RUN_ID": "cf2097134c33eef5506c-be1a9df9a9714bfe9b95948d626f55c9",
+      "role": "E2",
+      "epochs": 25,
+      "optimizer_updates": 4175,
+      "physical_batches": 4175,
+      "AMP_skips": 0,
+      "training_seconds": 773.4675454000026,
+      "peak_allocator_bytes": 1434309632
+    }
+  ],
+  "probe_runs": [
+    {
+      "RUN_ID": "02d53022000f8fcacea6-0a4b5a59f7dc40818de15c20f891a6ec",
+      "training_seconds": 0.8023076000026776,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "07a0b67ce1dedc875847-47800a8e2bf74ae78c9cd5f605d2dafc",
+      "training_seconds": 1.937390500002948,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "08b27ed94b3d808dd95c-b2e4ffde84104c73b2ca46655c15779c",
+      "training_seconds": 0.7629107000029762,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "0c4709107ab58fbb13ad-8b4bd08127694c708662f3e8be28c7b7",
+      "training_seconds": 1.1139657999956398,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "0d8087f7473d45b4e797-b830eb03803a4ece9e43b944b7004d83",
+      "training_seconds": 0.757709799996519,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "0e44d34bf9b58a7f5fce-6e27debc410b4b5c89d70a2f544722e2",
+      "training_seconds": 0.7646448000014061,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "10b3fc8e38745cfa3892-d28044f6974e4511bcd6c54b8108a294",
+      "training_seconds": 1.0662601000003633,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "11ab72d17f082fbf1ece-c5a9baed99074d5bb05857882b99b574",
+      "training_seconds": 1.9371870999966632,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "11e00dada365e67bafc6-00c59d2674884c7783baeb21a443d34e",
+      "training_seconds": 1.2559163000041735,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "13c59d1832459fe3080b-d179ec1be574425b80ba783bb682da0a",
+      "training_seconds": 0.7650883000023896,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "14953a91ec86d518523d-32e55952f8824c35afe70b873eb62609",
+      "training_seconds": 1.8148854000028223,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "161ac4d64733604dfc04-fbea3532de974f3e8be0459dbdb44088",
+      "training_seconds": 2.399904999998398,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "1644c69302edb22922ad-e7f9a3562fd8411aada8e9dcaa746822",
+      "training_seconds": 1.8702808000016375,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "16a7d363601cd1a86521-15a2b2f48c194049b6debe1a03938ae8",
+      "training_seconds": 0.8222083000000566,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "18d073839b4f828b7646-46967703eef84f54a6c8116ce9b3231e",
+      "training_seconds": 0.7627072999966913,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "1a0c256ab27952519e2f-3b30b98bf3ae4bfe89c8324a7aa79445",
+      "training_seconds": 1.960982700002205,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "1f9d9f88dd2a4c31d20c-c51fa675ab054d91818446b1bcf2c964",
+      "training_seconds": 2.4523322000022745,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "225920ebcbc645d99efe-36519f4ab5eb49a5b5f3e6c6b0cbde3f",
+      "training_seconds": 1.124616100001731,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "26a716ac475ae1bff4f5-d68d827642a44abc87c4125fbe44a4dc",
+      "training_seconds": 1.0262180999998236,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "27576ba6e11a3e0c53cf-503a023a29bc4d3eab1fe7f2d71231e6",
+      "training_seconds": 0.816231600001629,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "2784897acfb990d13ca9-7e5064d889c74c499b3666e80dcbb6df",
+      "training_seconds": 1.868418300000485,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "2798b7ef81e0e17fb7ad-b04a2fba8dbd4699927073de09f21af2",
+      "training_seconds": 0.7637130000002799,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "2aad060ab6574aa9b7cb-a013dd1537ef410d89e833b54e2afd6c",
+      "training_seconds": 0.7957901999980095,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "2b97734b1a4ac4c04a74-f097bb0792404e9a921f7e405fd924e3",
+      "training_seconds": 0.8146207000027061,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "2ead2a66f1c71cbcebb0-f5dd22e8f0df4b43aa0eaff42490231a",
+      "training_seconds": 0.7566427999990992,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "2eba1e51550f94ebcb63-3649ddd05de94f089b952accbe3868a5",
+      "training_seconds": 0.8146287000054144,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "30495c7bb643bb22474c-0015b74fd96f44809e4425cd4cc1c483",
+      "training_seconds": 2.4733683000013116,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "3055e1671127e09637d6-a7295c180c9b46e2aeea65d2bd7105c6",
+      "training_seconds": 1.8767893999975058,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "31d9209fc204b81436a3-2afa326021bd46d590320977d3db92fb",
+      "training_seconds": 0.9294546000019182,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "335125db41da23b4e16f-c0b65d6107674dbf994fe9c961fef28e",
+      "training_seconds": 1.9912770000009914,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "34a01df5912541fbf52e-1aaf58ce5602417eb094d1bae7c8dbe6",
+      "training_seconds": 1.0603132000032929,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "351bd59c17cfceb61422-23ddcebdc56c4a88ab99e7c71e8a95cb",
+      "training_seconds": 2.030421199997363,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "36064b60a10550dfb8bf-12d747f3afd1451c9ded406b32757b13",
+      "training_seconds": 1.1166449999946053,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "3a983f2d3ac5df2ce3df-43ecdbc895824bcb9496dd62f488bdf9",
+      "training_seconds": 1.1669726999971317,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "3d7cb4a39cc3d0a48700-1a415d2452de444499eb9191f0febb6a",
+      "training_seconds": 0.8124662000045646,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "401e9b8b215c173ec440-c899d631a7494da7bbd1c30eaa17b673",
+      "training_seconds": 2.424952100001974,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "41482a7e50d730772eff-02c94bbc2fc54db5875ba0c414c56f15",
+      "training_seconds": 1.9621027999965008,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "4387514b0f2db7d16c1a-b4e5177da6744890a326566515bd6169",
+      "training_seconds": 0.8065289000005578,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "441e54a46416b0f6ea29-11595be6b1434c639e264743d29902a6",
+      "training_seconds": 0.8960118000031798,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "45e67dcfbc6e1c1787a8-6a87e5a36cd54f2e97ddae3440b891cf",
+      "training_seconds": 0.883272199993371,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "461e60be96db8721c796-b97c10809f184b06b0b6747f58e4a843",
+      "training_seconds": 2.4290850999968825,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "465fcbfa2bb4e087ea2a-bba7fbf0686a4ce883ac6ccef845cea2",
+      "training_seconds": 1.921039099994232,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "46e4f84bcd92c7e42a93-8d4df91713be41d5a150eec91ff0ab14",
+      "training_seconds": 0.7966247000003932,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "47a495cdc77f702cae49-b51b2395914f42a38638a82d4a99b98b",
+      "training_seconds": 2.0914255999960005,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "48084bcaf982edca4a29-051c3024586d40e49152e7494242bf9d",
+      "training_seconds": 2.4384123999989242,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "4992f7a4396193993a6a-390a5c1053db4e3e9ea33e71b3a7743b",
+      "training_seconds": 0.7725691000014194,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "49a870c961ef7788a390-fdfdb60499a9442a8faf9f3710b90b2a",
+      "training_seconds": 0.8112526999975671,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "4c0928965ed83ca8b470-569a7646cdea4f559a63fe57e120c124",
+      "training_seconds": 0.9213727000023937,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "4e302367466dcecbf8ae-b4943f9f72d54c3fa584515f3f0ec9e2",
+      "training_seconds": 2.407558599996264,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "4f1a42565663222c510c-15aca1ed6e5e4c079de62fa38f01246a",
+      "training_seconds": 1.1104052000009688,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "559f8d20ea478b566e48-86f7b5a4a2a6427494ea9cc42d90b640",
+      "training_seconds": 1.8748149999955785,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "5765eb64d2baf9728b58-5f35e3dbcf2f4b28be2ef15183e3b274",
+      "training_seconds": 1.9450482000029297,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "57d7423439034ac3c78d-d873ccaa62bf4850b2d662e6234fc37c",
+      "training_seconds": 1.8886204000009457,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "59b03d5d93ec983fe220-91c67f78a2f5433abd32146492ac383c",
+      "training_seconds": 0.807778700000199,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "5cb5539e14515f168a69-3924d804187848b4ac6fba0a023a65ff",
+      "training_seconds": 1.9375906999994186,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "5d3b37568ca41c18ff4a-a9e620d6519046958422454061dc89a8",
+      "training_seconds": 0.7624661000008928,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "616d3cfb5ae75c081dab-b705fca2944d40958bf0439ef888122d",
+      "training_seconds": 2.4864596000043093,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "6492cc0247d39aa32bf1-3855c1c639364643ba16ac651947b2cd",
+      "training_seconds": 1.9045090999934473,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "677feca85af30a6127d8-5941ca47b0cc4ef2a5e291ab6f75b451",
+      "training_seconds": 1.9682408000007854,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "68b91f8f9614a6b39147-ad440003e08d44e89b799f85a69ef66b",
+      "training_seconds": 0.8009645999991335,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "69af0d3432471696da62-cd4f38de50fe4fce96741934ef8b2bdf",
+      "training_seconds": 0.8695193000021391,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "6b5ec53a7df1f8cfc6cb-1a4da94f1ba44d6eb3d59274ed931757",
+      "training_seconds": 0.859746099995391,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "6c6c02c99afbe220cf15-26726a1f24b041dba966e623893067f6",
+      "training_seconds": 0.9318974999987404,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "6cf16be2f4090718a3d1-2aab725703d94ee3ac47784c2e99ac4f",
+      "training_seconds": 0.8775527999969199,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "6d3fb479ba9a9a4d4021-721d785e5c914c6f9b6285f05f8a62ab",
+      "training_seconds": 2.418719900000724,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "6d91032cd04d79c2276b-1204ef6086484be0a829583d4f94c72d",
+      "training_seconds": 0.8255730000018957,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "6e6b93d83105b1ceb20b-66238fe1edf04c69b0d62a8c78cf8ff2",
+      "training_seconds": 1.0455561999988277,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "716fb15dff24f757a30c-700e5f5f174544109af032e4b78adf8a",
+      "training_seconds": 1.022758299994166,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "72c44192b2bfd7bbaba3-b51c912aac204c4193818ebc4793b9dd",
+      "training_seconds": 1.9871150999970268,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "72eaa49f2844e3c8e199-55c3ed8077244429aebfee5d4e93f6de",
+      "training_seconds": 1.9531461999940802,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "73059c86f77b4084d2aa-ad4383dc4e8444d78c6a3303edacbd13",
+      "training_seconds": 1.0616418999998132,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "747c0d436d22a0b530b0-c92ce1e582c34b6ca1abce706c14327e",
+      "training_seconds": 1.880608100000245,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "7567bfd6f96da693828a-5994db7c12cd4bf5a5f1a62227e3c51d",
+      "training_seconds": 1.8830221999960486,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "798b48afb10e19f1ac67-68bfc8f476f04df9bb33be16f5f08368",
+      "training_seconds": 0.9042107999994187,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "7c32febcf5ffbcbc702d-5299339427784b728b56a0ff8d01c33c",
+      "training_seconds": 0.7821312999949441,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "7e43da44af876d672da6-8c84355b84954f788143d8492f1218f5",
+      "training_seconds": 1.9470336000013049,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "7f1fe0f917b99e96782a-66829bb6ff4c480b9eef8eff20c07183",
+      "training_seconds": 0.7768513999981224,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "7f7245e1ad02e63c3060-ebcea150ffd4496d90ebb32ea1979043",
+      "training_seconds": 1.0244285000007949,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "85efe1f8139d37dde456-676cc849b5d64334962b27d4ec0c5a13",
+      "training_seconds": 2.4198331000006874,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "869b2fbba334e33eb9a1-62366b87b3344938bec1eca2aa8ede6e",
+      "training_seconds": 1.9488257999983034,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "86e81a13266d6fa40adf-5b74eb01519643d481ed374783d95f8a",
+      "training_seconds": 1.1184448999993037,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "8790dde2eb1ec0c49a99-18feb481f00f408fb1bdc4a683506d18",
+      "training_seconds": 2.175511000001279,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "8955347a6e74f963476c-81eadcc9c90f4a11b28a13c72d23b449",
+      "training_seconds": 2.015865200002736,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "8f60a7f7044ffd9c3813-08f3d868421840b880498b74c3fd9d96",
+      "training_seconds": 1.1208224000001792,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "9070a4f3808e53ad445d-9d90f1ed881d419e995b872fddf2365b",
+      "training_seconds": 0.9053352000046289,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "92c2943537fc1ae452b4-481bcbac54cf400d8b9e683edd1026a3",
+      "training_seconds": 1.0704869999972288,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "948ff904e67b482a7a2a-6293714ede5149eb95d69829922dd054",
+      "training_seconds": 0.9259443999981158,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "99b3ea616842d0def3a6-46170b5e81e14c82ac5418bd4793dfb1",
+      "training_seconds": 1.929318800001056,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "99b686faf45863ce397d-9d2f53561ba240eba8a399ef6157fe0e",
+      "training_seconds": 2.222917499995674,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "9dfab9d8b0a08a73c0b1-f640b00c2bb54fcea78d60e1800e81ee",
+      "training_seconds": 2.4778816000034567,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "9e1e6549e0c870f9325c-a04305b6c5714721abdafb8dfe1c7f6f",
+      "training_seconds": 1.903460499997891,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "a139b2ba66f5da2abe63-f63f8ed947ee4ffd9c46ba63c48ead45",
+      "training_seconds": 1.081348400002753,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "a221977d26a1b899fa2d-c4aab57ac43845b9ae5117ec58d155f5",
+      "training_seconds": 1.117961000003561,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "a2ca611f221d51afe99d-a16cfa4a55ed480bb2839d87b8bf8ec7",
+      "training_seconds": 0.9151361999975052,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "a2cbc7748c0d578490e4-224d59a222d24c68b2148429ffc0d020",
+      "training_seconds": 0.8117724999974598,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "a4f84359a4b15fe0db59-c78b54979c934500bfb127c0e20d0489",
+      "training_seconds": 1.029518299998017,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "a7a169157cd442857f38-b04b101793934b6d8468664e01b8695f",
+      "training_seconds": 1.9436688999994658,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "a99c577c747ec2db5a79-0e7470ac545f4d7dbdaae2537a4ed327",
+      "training_seconds": 1.9254371999995783,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "a9e23f5c319919d7c950-dcc8f3a14d8d4d41abc4dcf38fdf00ba",
+      "training_seconds": 1.9886254000011832,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "aa291aee4ccda4ea1db3-af9beeb093db456dba9a16d9f13df05a",
+      "training_seconds": 1.047758700005943,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "ab295c48cf7ddf8c1a62-61f64c46af92477f95d2e20d59adfb84",
+      "training_seconds": 2.40177969999786,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "ab83ac7e0cce48a248cc-3498d2e61a8141b28a860bce85cc3539",
+      "training_seconds": 0.9227195999992546,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "abb9741225345ff8ffeb-c7ea90cdc7a04f3d98934d861155ecd7",
+      "training_seconds": 0.8757361999960267,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "ad21e99a05cf22cd1235-5d648e90297e452eb236741400b5a5b6",
+      "training_seconds": 0.804332699997758,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "b0e281b69e852165e9d2-e7d6405a02fb4922900a397c7211b5fe",
+      "training_seconds": 0.7702664000025834,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "b2262955178c4f1a5dba-2b4848ef8cc44b6ab1e457a147eb61e3",
+      "training_seconds": 0.884293200004322,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "ba823188517413560501-810fcb12bbac4261a6f5ae29d331e0a0",
+      "training_seconds": 0.7677703000008478,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "bd8f728f0916ef7cb2f9-8bd285ba32f54711a0551126ce023dbe",
+      "training_seconds": 1.1289699000044493,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "c02bad68ad330c7a95e1-333f3cb487e44985bc7056207b5fbaec",
+      "training_seconds": 0.7663488999969559,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "c1ccb9d83b55ffbe745d-ac84fbfaf6784978a9eb23ac81bce7f0",
+      "training_seconds": 1.9918986999982735,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "c89c8e98a4ea8995603a-5a345efe28394f14b505795de394c954",
+      "training_seconds": 0.9187328000043635,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "ca48cefa92e221a4f4ed-37d3f3e30f59476e8c1cd4562c203e36",
+      "training_seconds": 2.4083299999983865,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "ca923ee2ce7254073171-f0702bb0e027443bb6bcaf9fbccba2b0",
+      "training_seconds": 0.765685600003053,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "d0505ffbac3cd6101e75-a75c4e8b31914c7d9f28aa28be5fc2b0",
+      "training_seconds": 0.7745041999951354,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "d07bed4ac88c6b3cc1dd-a7aa325e8ebb4d0b8b26054da403ad8d",
+      "training_seconds": 1.9889562000025762,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "d1104201aec09bfb5dd0-5d4fb2d7d31c4466a4079fdb3248837f",
+      "training_seconds": 0.8256374999982654,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "d1341b614bd00da5e86b-0dac1907805748e19315c23d96342b71",
+      "training_seconds": 1.7659735999986879,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "d3a4d5728407d6cbc887-ed915ace87a44618bf3cec1d2d0ce6ca",
+      "training_seconds": 2.517342800005281,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "d4483e31f6f577ca014a-c9e84ac4f9c6491c8212e1f6d7be8f0e",
+      "training_seconds": 0.9335607000029995,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "d71b8c04a49580a0e086-5e203da3e93544bb8c1751b6053e8317",
+      "training_seconds": 1.9531767000007676,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "d776a446f12b767f3fc1-206b2908f7b6460d81136b30ebb991a9",
+      "training_seconds": 1.103939700005867,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "d8f1e10a1c605a5ee938-8e6b95a4768d4b828e8421879a8e99a2",
+      "training_seconds": 1.9380909999963478,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "daaed84daf3a378e9a2b-ddb59b38c07548c096c4bd11c03d2f08",
+      "training_seconds": 2.419505999998364,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "dbbeac60961341cf5d0f-dbdb8e3fd5ff445fb8091a416f2460f1",
+      "training_seconds": 1.0436859000037657,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "de08923b5cb6f7c72551-7cc0f802b3c9489d8c2c69a29881426c",
+      "training_seconds": 2.438029799996002,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "de8cf6547b54d1f8ca54-cd47e2695fbb477f8ecfa27d1acb6dcd",
+      "training_seconds": 1.9569417999955476,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "df22be2c5540754774fe-4b856758690a4977808f51a76babe5e1",
+      "training_seconds": 0.9330352999968454,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "e09676170eb45d8e93ba-aa8fa9a9150e4507919b3f771fcf5482",
+      "training_seconds": 1.0657733999978518,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "e2f8a44410ec99d8e2b1-cf4a9bf37cb04679b20ceefbebc1217f",
+      "training_seconds": 1.938239800001611,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "e32c8887adf0ff13f62f-f3f70ee54c914d559251f98ff8425341",
+      "training_seconds": 1.0463472999981605,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "e35397b786a19174ccdc-18d3545023ae41068b64f65bb06c6355",
+      "training_seconds": 1.0486455999998725,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "e42aa501a7cef44fd013-f2ee54621e204c52aadc6c734add30c9",
+      "training_seconds": 0.9292464000027394,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "e4ccba7d52ba600b3c9b-cb5152370105439a8a17a764b0433b5e",
+      "training_seconds": 0.8939434999992955,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "e6e8e9c9fba00decbb50-3a5426f3b84c413d9665afe836e36d33",
+      "training_seconds": 1.9093166999955429,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "ea10de6fab9899935a68-bce5c31e3d884c0ab8f54a26a5e5ce36",
+      "training_seconds": 1.9671701999977813,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "ed5bf53a03c387a2d201-58196379c7d740c188d9bbc261b9fe5c",
+      "training_seconds": 2.048536599999352,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "eff6b9e543d94d89878b-32bb333301724c32a2a39f5f15346855",
+      "training_seconds": 1.0313181999954395,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 1
+    },
+    {
+      "RUN_ID": "f7032604e851ab7dbbd0-41c3bae8866a451e914447f6a6016fe7",
+      "training_seconds": 0.7779819000061252,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "f782d322c6145a574e1e-ae80c33193504a8ea83d7c37662a4401",
+      "training_seconds": 0.7584625000017695,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "f8a684d3d22a7f8f5087-9eec7ff6ab4d4df6acbf0e8951dfc3de",
+      "training_seconds": 0.8189455000028829,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "f99778848c0064a0ed81-43aa511344e340c9ba21ebd1b8ec19b1",
+      "training_seconds": 0.8136965000012424,
+      "epochs": 200,
+      "regularization": 0.001,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "fa5462e9471e1ec78e1d-a1d9fa779be44c5ebe7ce78f05be49a5",
+      "training_seconds": 2.4858059999969555,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 3
+    },
+    {
+      "RUN_ID": "fa567ff8ec73ba5d44a7-74f1b593954e45ccaead934b0adb19aa",
+      "training_seconds": 0.8855078000051435,
+      "epochs": 200,
+      "regularization": 0.0,
+      "seed": 2
+    },
+    {
+      "RUN_ID": "fa8259af7e09ceb0f29b-a560311e0c9742069ae8c89adb765a95",
+      "training_seconds": 2.395672200000263,
+      "epochs": 200,
+      "regularization": 0.01,
+      "seed": 1
+    }
+  ],
+  "historical_files_preserved": 1908,
+  "preregistration_commit": "57f3fd3d7fe2d8f39c5f28efb73f2b2f9e363e41",
+  "CF2_blocker": {
+    "status": "BLOCKED",
+    "missing": "Протокол данных курса §4.6 color-defined-class control dataset",
+    "search": "all project filenames/PDF inventory; only10labPDFs and existing generated protocols found",
+    "impact": "Cannot define hue classes/splits without inventing teacher protocol; all other work proceeds",
+    "prior_user_confirmation": "Teacher protocol and dedicated packs unavailable",
+    "connected_search": {
+      "provider": "GoogleDrive",
+      "queries": [
+        "Протокол данных курса",
+        "Нейронные сети протокол"
+      ],
+      "results": "no matching documents returned",
+      "action": "read-only exactcourse-protocol search; nofiles modified"
+    }
+  },
+  "raw_scientific_outcomes": {
+    "G1_positive": true,
+    "E3_difference_established": true
+  },
+  "criteria_note": "PositiveG1 or an establishedE3difference isnotmandatory: PDFallowsnegativeG1/anunestablisheddifference withanalysis. Their actual signs/statistics are preserved, notconvertedintoinventedacceptancethresholds.",
+  "no_formal_reports_created": true,
+  "Lab5_started": false
+}

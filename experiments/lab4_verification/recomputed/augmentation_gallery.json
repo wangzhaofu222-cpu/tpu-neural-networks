@@ -1,0 +1,17 @@
+{
+  "role": "train",
+  "image_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "view_seed": 987702611,
+  "augmentation_hash": "e9379af9d2b9567d420ee09ec5bff68ade7fe5b6fd7a5e0dac0b140e14895ff3",
+  "labels_read": false,
+  "output": "experiments/lab4/figures/augmentation_views.png"
+}

@@ -1,0 +1,807 @@
+{
+  "report": "DEFERRED_BY_USER",
+  "Q2": "BLOCKED missingteacherProtocol§4.6",
+  "E1": {
+    "rows": [
+      {
+        "encoder": "B0",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "evaluation_RUN_ID": "20986de0ae364d2e58ce-02995bd34d574f009efb1948d5bbb2de",
+        "epoch": 0,
+        "probe_accuracy": 0.4357,
+        "knn_accuracy": 0.3822,
+        "h_trace_cov": 95.46421361117335,
+        "h_effective_rank": 3.1561014855517575,
+        "h_effective_rank_ratio": 0.006164260713968276,
+        "z_trace_cov": 0.01348106750886349,
+        "z_effective_rank": 28.47379060461116,
+        "z_effective_rank_ratio": 0.2224514890985247,
+        "mean_zhat_norm": 0.9932379517605422,
+        "collapse_scale_h": false,
+        "collapse_scale_z": false,
+        "any_PDF_collapse_diagnostic": true
+      },
+      {
+        "encoder": "B1",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "evaluation_RUN_ID": "6772377c79bbe0439794-1c25b550be9d459ca96f4047f14051de",
+        "epoch": 25,
+        "probe_accuracy": 0.8988,
+        "knn_accuracy": 0.8959,
+        "h_trace_cov": 34.5522598230549,
+        "h_effective_rank": 16.491562091958286,
+        "h_effective_rank_ratio": 0.03221008221085603,
+        "z_trace_cov": 0.4112624908104072,
+        "z_effective_rank": 19.09897395989783,
+        "z_effective_rank_ratio": 0.1492107340617018,
+        "mean_zhat_norm": 0.7673459210249632,
+        "collapse_scale_h": false,
+        "collapse_scale_z": false,
+        "any_PDF_collapse_diagnostic": true
+      },
+      {
+        "encoder": "SimCLR",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "evaluation_RUN_ID": "3ec66db45b2793e9a39a-1178fb68191d4a91813cdcb3596c91f8",
+        "epoch": 100,
+        "probe_accuracy": 0.7662,
+        "knn_accuracy": 0.7053,
+        "h_trace_cov": 8.282801271283706,
+        "h_effective_rank": 75.61020602102063,
+        "h_effective_rank_ratio": 0.14767618363480592,
+        "z_trace_cov": 0.9986193114174253,
+        "z_effective_rank": 59.87271581701969,
+        "z_effective_rank_ratio": 0.4677555923204663,
+        "mean_zhat_norm": 0.03975439510287155,
+        "collapse_scale_h": false,
+        "collapse_scale_z": false,
+        "any_PDF_collapse_diagnostic": true
+      }
+    ],
+    "G1": 0.3305,
+    "final_NT_Xent_loss": 0.5537832034919077,
+    "B1_minus_SSL_probe": 0.13260000000000005,
+    "interpretation": "The full-label probe gain is descriptive for one fixed pretraining seed. B1 uses labels during encoder training; its gap from SSL is not a matched-label-budget cost estimate. Rank and collapse flags describe feature geometry and must be interpreted together with the measured downstream accuracies, not as a replacement for them.",
+    "random_baseline_loss": 6.236369590203704,
+    "loss_threshold_pass": true,
+    "probe_checkpoints": [
+      {
+        "epoch": 0,
+        "probe_accuracy": 0.4357,
+        "validation_accuracy": 0.4302,
+        "evaluation_RUN_ID": "32b6ee4ef289f8d231a3-6c65a07572794cae8e7d03d90aa20d21",
+        "h_effective_rank": 3.1561014855517575,
+        "z_effective_rank": 28.47379060461116
+      },
+      {
+        "epoch": 25,
+        "probe_accuracy": 0.6769,
+        "validation_accuracy": 0.6862,
+        "evaluation_RUN_ID": "161af2ac59fc30cca93c-a9707c14f765463591f3b0b35c51e615",
+        "h_effective_rank": 44.77734266687113,
+        "z_effective_rank": 38.427184025793565
+      },
+      {
+        "epoch": 50,
+        "probe_accuracy": 0.7211,
+        "validation_accuracy": 0.7366,
+        "evaluation_RUN_ID": "814c55f620edc283039f-1d307201830645fbbb91b206ed96f1e6",
+        "h_effective_rank": 56.93145816825556,
+        "z_effective_rank": 49.144507927893386
+      },
+      {
+        "epoch": 75,
+        "probe_accuracy": 0.7529,
+        "validation_accuracy": 0.7532,
+        "evaluation_RUN_ID": "b5657df9be0f7d211876-cb13a08b891d4512b26e0001d0fcf6e7",
+        "h_effective_rank": 68.379220139426,
+        "z_effective_rank": 56.54076592819337
+      },
+      {
+        "epoch": 100,
+        "probe_accuracy": 0.7662,
+        "validation_accuracy": 0.7616,
+        "evaluation_RUN_ID": "3ec66db45b2793e9a39a-1178fb68191d4a91813cdcb3596c91f8",
+        "h_effective_rank": 75.61020602102063,
+        "z_effective_rank": 59.87271581701969
+      }
+    ],
+    "plateau_analysis": {
+      "definition": "lossdrop>=.05 andabsprobechange<=.01 between adjacentmeasuredcheckpoints25..100",
+      "observed": false,
+      "matching_intervals": [],
+      "all_intervals": [
+        {
+          "epoch1": 25,
+          "epoch2": 50,
+          "loss_decrease": 0.2654326004896336,
+          "probe_change": 0.04420000000000002
+        },
+        {
+          "epoch1": 50,
+          "epoch2": 75,
+          "loss_decrease": 0.2153632933508136,
+          "probe_change": 0.03180000000000005
+        },
+        {
+          "epoch1": 75,
+          "epoch2": 100,
+          "loss_decrease": 0.10914644277738239,
+          "probe_change": 0.013299999999999979
+        }
+      ]
+    }
+  },
+  "E2": {
+    "rows": [
+      {
+        "variant": "T",
+        "training_RUN_ID": "cf2097134c33eef5506c-be1a9df9a9714bfe9b95948d626f55c9",
+        "evaluation_RUN_ID": "f6930c0a3a68eee5f646-633b0a71ee11487bbda64c3c2b30dfa7",
+        "probe_accuracy": 0.6691,
+        "validation_probe_accuracy": 0.673,
+        "knn_accuracy": 0.5967,
+        "delta_probe": 0.0,
+        "delta_knn": 0.0,
+        "h_effective_rank": 36.762510844645625,
+        "h_trace_cov": 106.75361026985841,
+        "h_rank_ratio": 0.07180177899344849,
+        "z_rank_ratio": 0.29747380955502034,
+        "mean_zhat_norm": 0.03390767178146079,
+        "collapse": true,
+        "full_T_collapse": true,
+        "new_collapse_relative_to_full_T": false,
+        "positive_half_gain_threshold_crossed": false,
+        "negative_half_gain_threshold_crossed": false,
+        "classification": "boundary_or_reference"
+      },
+      {
+        "variant": "minus_random_resized_crop",
+        "training_RUN_ID": "18d82233d80d6ba38d75-4603002b39054d37a544e63f8844618f",
+        "evaluation_RUN_ID": "e0d41b4aae60ede11d38-9215f50ca3ca44209c28a2caef62eb66",
+        "probe_accuracy": 0.3889,
+        "validation_probe_accuracy": 0.3926,
+        "knn_accuracy": 0.3457,
+        "delta_probe": 0.2802,
+        "delta_knn": 0.251,
+        "h_effective_rank": 34.92269409355815,
+        "h_trace_cov": 92.51808080442036,
+        "h_rank_ratio": 0.06820838690148076,
+        "z_rank_ratio": 0.9842477401115143,
+        "mean_zhat_norm": 0.017057029354348854,
+        "collapse": true,
+        "full_T_collapse": true,
+        "new_collapse_relative_to_full_T": false,
+        "positive_half_gain_threshold_crossed": true,
+        "negative_half_gain_threshold_crossed": false,
+        "classification": "critical_collapse_observed"
+      },
+      {
+        "variant": "minus_color_jitter",
+        "training_RUN_ID": "9bcb3e57a83e8f0b7c03-eba9695f16f344f7a05c93b54baaf23f",
+        "evaluation_RUN_ID": "03116a6d278a2596e1ac-5c320e06d35f4db9806cc7143980c9c6",
+        "probe_accuracy": 0.5599,
+        "validation_probe_accuracy": 0.56,
+        "knn_accuracy": 0.4863,
+        "delta_probe": 0.10920000000000007,
+        "delta_knn": 0.1104,
+        "h_effective_rank": 41.49828062038203,
+        "h_trace_cov": 171.9663771303841,
+        "h_rank_ratio": 0.08105132933668366,
+        "z_rank_ratio": 0.5995362346339204,
+        "mean_zhat_norm": 0.0395942066213811,
+        "collapse": true,
+        "full_T_collapse": true,
+        "new_collapse_relative_to_full_T": false,
+        "positive_half_gain_threshold_crossed": false,
+        "negative_half_gain_threshold_crossed": false,
+        "classification": "critical_collapse_observed"
+      },
+      {
+        "variant": "minus_flip",
+        "training_RUN_ID": "5f460eb41601d4914fdc-4263d43328524a0f915e3141c3d42896",
+        "evaluation_RUN_ID": "1ba737be8226bf3d27f9-1aec3789ae7943b0a164c7f1b9bb01bc",
+        "probe_accuracy": 0.6862,
+        "validation_probe_accuracy": 0.692,
+        "knn_accuracy": 0.6083,
+        "delta_probe": -0.017100000000000004,
+        "delta_knn": -0.011599999999999944,
+        "h_effective_rank": 36.75958939067169,
+        "h_trace_cov": 103.66172297554522,
+        "h_rank_ratio": 0.07179607302865565,
+        "z_rank_ratio": 0.2789783397923837,
+        "mean_zhat_norm": 0.03776490532129662,
+        "collapse": true,
+        "full_T_collapse": true,
+        "new_collapse_relative_to_full_T": false,
+        "positive_half_gain_threshold_crossed": false,
+        "negative_half_gain_threshold_crossed": false,
+        "classification": "critical_collapse_observed"
+      },
+      {
+        "variant": "only_random_resized_crop",
+        "training_RUN_ID": "0ac05f5c7a4bf57bba93-c64ca04b5e1c43d8b5a21130fdbfaf3a",
+        "evaluation_RUN_ID": "76ffb8d4e5612d080fc6-81d66cafbc3f41f68510e06e129e17f9",
+        "probe_accuracy": 0.5599,
+        "validation_probe_accuracy": 0.5654,
+        "knn_accuracy": 0.4806,
+        "delta_probe": 0.10920000000000007,
+        "delta_knn": 0.11609999999999998,
+        "h_effective_rank": 41.205812595981406,
+        "h_trace_cov": 177.1873498347144,
+        "h_rank_ratio": 0.08048010272652618,
+        "z_rank_ratio": 0.5909580480608542,
+        "mean_zhat_norm": 0.04080657752130964,
+        "collapse": true,
+        "full_T_collapse": true,
+        "new_collapse_relative_to_full_T": false,
+        "positive_half_gain_threshold_crossed": false,
+        "negative_half_gain_threshold_crossed": false,
+        "classification": "boundary_or_reference"
+      },
+      {
+        "variant": "none",
+        "training_RUN_ID": "ad1e859e697e9a1c182d-be89554cbb6d4ba6a349a2cdb81795ea",
+        "evaluation_RUN_ID": "11791a48092c8a621248-b32b5566845a44a98a747e62a041c408",
+        "probe_accuracy": 0.3614,
+        "validation_probe_accuracy": 0.3586,
+        "knn_accuracy": 0.3304,
+        "delta_probe": 0.30770000000000003,
+        "delta_knn": 0.2663,
+        "h_effective_rank": 47.64564097689839,
+        "h_trace_cov": 83.52914806680869,
+        "h_rank_ratio": 0.09305789253300467,
+        "z_rank_ratio": 0.9862581146143617,
+        "mean_zhat_norm": 0.017495983547324664,
+        "collapse": true,
+        "full_T_collapse": true,
+        "new_collapse_relative_to_full_T": false,
+        "positive_half_gain_threshold_crossed": true,
+        "negative_half_gain_threshold_crossed": false,
+        "classification": "boundary_or_reference"
+      }
+    ],
+    "G0": 0.23340000000000005,
+    "half_gain_rule_applicable": true,
+    "invariances": {
+      "random_resized_crop": "translation,scale,cropcontent invariance",
+      "color_jitter": "brightness,contrast,saturation,hue invariance",
+      "flip": "horizontalmirror invariance"
+    },
+    "boundary_selection": {
+      "operation": "random_resized_crop",
+      "candidates": [
+        {
+          "operation": "random_resized_crop",
+          "validation_delta": 0.28040000000000004
+        },
+        {
+          "operation": "color_jitter",
+          "validation_delta": 0.11299999999999999
+        },
+        {
+          "operation": "flip",
+          "validation_delta": -0.018999999999999906
+        }
+      ],
+      "criterion": "largest valprobe delta, ties baseconfigorder; testnotusedtoselectaugmentation"
+    },
+    "limitations": "Singleseed1 exploratoryaugmentation effects; collapse threshold isdiagnostic, notproofthat usefulclassificationinformation isabsent. IfbothTandablation triggerdimensionalcollapse, theliteralteacherflagdoesnotestablishthat removalcausednewcollapse; full_T_collapse andnew_collapse_relative_to_full_T are reported separately.",
+    "boundary_analysis": {
+      "B0_probe_accuracy": 0.4357,
+      "measurements": [
+        {
+          "variant": "only_random_resized_crop",
+          "probe_minus_B0": 0.12419999999999998,
+          "delta_from_T": 0.10920000000000007,
+          "collapse": true
+        },
+        {
+          "variant": "none",
+          "probe_minus_B0": -0.07429999999999998,
+          "delta_from_T": 0.30770000000000003,
+          "collapse": true
+        }
+      ],
+      "equation_4_6": "With identical views, the positive equals the anchor. Its attraction is parallel to the normalized anchor and therefore vanishes in the tangent space after differentiating L2 normalization. The softmax-weighted negative terms still repel other images. Thus identical views can learn instance separation without useful augmentation invariance, and complete collapse is not inevitable. The measured scale, mean vector norm and rank flags distinguish these outcomes; a low rank alone does not prove absence of class information."
+    }
+  },
+  "E3": {
+    "deltas": [
+      0.3741,
+      0.377,
+      0.3677
+    ],
+    "mean": 0.37293333333333334,
+    "sample_std": 0.004758501164582519,
+    "same_nonzero_sign": true,
+    "established": true,
+    "matrix": [
+      {
+        "encoder": "B0",
+        "seed": 1,
+        "fraction": 0.02,
+        "probe_accuracy": 0.2903,
+        "RUN_ID": "3c7f8aef44b742e0d740-bd1161b222d74355b48b70233c125f00",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "3bdc5054293fda0436b137746d11a9abadefcd585821d4f3e8514a93607887c9",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 1,
+        "fraction": 0.02,
+        "probe_accuracy": 0.8792,
+        "RUN_ID": "bb3af5bd7af619070d74-06292b0f3b3c44dc81c24e0ab6d172f5",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "3bdc5054293fda0436b137746d11a9abadefcd585821d4f3e8514a93607887c9",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 1,
+        "fraction": 0.02,
+        "probe_accuracy": 0.6644,
+        "RUN_ID": "d0f2ed8844513313f79a-aecf0e05c9a149a99c35bef5fe93ebf2",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "3bdc5054293fda0436b137746d11a9abadefcd585821d4f3e8514a93607887c9",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 1,
+        "fraction": 0.05,
+        "probe_accuracy": 0.3404,
+        "RUN_ID": "94799e5340c431f44d10-421a68542f484130a956a4d0a2817328",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "81e50b5f78be929ea9bce99bf35a46169a70ef69353405f2f8ffaa75426d9867",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 1,
+        "fraction": 0.05,
+        "probe_accuracy": 0.8871,
+        "RUN_ID": "e27466bf96573995537d-173f3d881ea24c7f941ccf5d21fba50e",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "81e50b5f78be929ea9bce99bf35a46169a70ef69353405f2f8ffaa75426d9867",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 1,
+        "fraction": 0.05,
+        "probe_accuracy": 0.7009,
+        "RUN_ID": "54eb481fa7f4ad13318f-0ff77e54e49c46859a5d943460833217",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "81e50b5f78be929ea9bce99bf35a46169a70ef69353405f2f8ffaa75426d9867",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 1,
+        "fraction": 0.25,
+        "probe_accuracy": 0.4142,
+        "RUN_ID": "9531bceb8a2fc0fe48d9-715cbd9dac20434092978a36fd4a87c8",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "8889f1cae1b2fd8815a321cd14e3e6de9202061401f142aba0afcce9c695daa1",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 1,
+        "fraction": 0.25,
+        "probe_accuracy": 0.8964,
+        "RUN_ID": "480a91744bca12f73c0e-cb7473269dec4c50819e86ab4bd319ca",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "8889f1cae1b2fd8815a321cd14e3e6de9202061401f142aba0afcce9c695daa1",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 1,
+        "fraction": 0.25,
+        "probe_accuracy": 0.7491,
+        "RUN_ID": "33f6190438bd41880294-5a04e24a81454f3ea6dc208cfa61ad96",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "8889f1cae1b2fd8815a321cd14e3e6de9202061401f142aba0afcce9c695daa1",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 1,
+        "fraction": 1.0,
+        "probe_accuracy": 0.4357,
+        "RUN_ID": "20986de0ae364d2e58ce-02995bd34d574f009efb1948d5bbb2de",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": true
+      },
+      {
+        "encoder": "B1",
+        "seed": 1,
+        "fraction": 1.0,
+        "probe_accuracy": 0.8988,
+        "RUN_ID": "6772377c79bbe0439794-1c25b550be9d459ca96f4047f14051de",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": true
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 1,
+        "fraction": 1.0,
+        "probe_accuracy": 0.7662,
+        "RUN_ID": "3ec66db45b2793e9a39a-1178fb68191d4a91813cdcb3596c91f8",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": true
+      },
+      {
+        "encoder": "B0",
+        "seed": 2,
+        "fraction": 0.02,
+        "probe_accuracy": 0.2882,
+        "RUN_ID": "0a61afbb48f9b3fe8fed-94f3228db806496986f85002bb6ee3af",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "5f0688d07673ff91dcf9e2de3e46a5131936e07b0558beca78c8f119b2c8c0be",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 2,
+        "fraction": 0.02,
+        "probe_accuracy": 0.8817,
+        "RUN_ID": "44e30187926a9335ad65-a8df351b229f4891bab31aa621eac135",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "5f0688d07673ff91dcf9e2de3e46a5131936e07b0558beca78c8f119b2c8c0be",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 2,
+        "fraction": 0.02,
+        "probe_accuracy": 0.6652,
+        "RUN_ID": "f2d962fdb04c1ea9c080-5310603d7990472cbd3f857b3a07b517",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "5f0688d07673ff91dcf9e2de3e46a5131936e07b0558beca78c8f119b2c8c0be",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 2,
+        "fraction": 0.05,
+        "probe_accuracy": 0.3489,
+        "RUN_ID": "bd0dbcbac960b45a26f3-e8605a9511454e3195cee8a4c7b9f317",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "fba173aec81f0de534508a780855299e06e60e9fd842474823f40348304516d7",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 2,
+        "fraction": 0.05,
+        "probe_accuracy": 0.89,
+        "RUN_ID": "3543093bef77b712a843-8817c078559a4bc4920ca010ba26efd5",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "fba173aec81f0de534508a780855299e06e60e9fd842474823f40348304516d7",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 2,
+        "fraction": 0.05,
+        "probe_accuracy": 0.7097,
+        "RUN_ID": "ab20bfb7426b53110234-e06e420fdbef4171847aeb70fabc8c1e",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "fba173aec81f0de534508a780855299e06e60e9fd842474823f40348304516d7",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 2,
+        "fraction": 0.25,
+        "probe_accuracy": 0.4108,
+        "RUN_ID": "3751a069a45158ebe2dd-894c21a53c714f7a8aa9623baeab5fd4",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "e7882de42b1b67b764981afc93f39a295adb1e2a406851e0f97d63ba13a064df",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 2,
+        "fraction": 0.25,
+        "probe_accuracy": 0.8978,
+        "RUN_ID": "97c7f59410dcfadba88e-545942d0e323495d9bc099e7a5c70b2a",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "e7882de42b1b67b764981afc93f39a295adb1e2a406851e0f97d63ba13a064df",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 2,
+        "fraction": 0.25,
+        "probe_accuracy": 0.7483,
+        "RUN_ID": "71353f2f592eb1389279-e4e337cf357d49948fbff56cbe89d0ea",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "e7882de42b1b67b764981afc93f39a295adb1e2a406851e0f97d63ba13a064df",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 2,
+        "fraction": 1.0,
+        "probe_accuracy": 0.438,
+        "RUN_ID": "1762c1f110328a969753-7b1f0443d3034873a8a7253b7091fb15",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 2,
+        "fraction": 1.0,
+        "probe_accuracy": 0.8997,
+        "RUN_ID": "2b8d1e2b95c99e891da7-03a4808805dd40249cabb3eec59c1fd2",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 2,
+        "fraction": 1.0,
+        "probe_accuracy": 0.7647,
+        "RUN_ID": "782a94d1ba573f6f384a-1afaeebf5b8145e69c7a801d1ce0e7e2",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 3,
+        "fraction": 0.02,
+        "probe_accuracy": 0.2922,
+        "RUN_ID": "735bd7988fe54fb5ed5c-6638d16ec9d24dec8fdff3e1e412762a",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "ff30e8ec33ef3f1c67e747fc033ee6a113be989dff0d29442fbe2059432b0389",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 3,
+        "fraction": 0.02,
+        "probe_accuracy": 0.8795,
+        "RUN_ID": "7707b4c1b6abad188a76-fe2824b588b8432097b21ee1b7ff58f1",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "ff30e8ec33ef3f1c67e747fc033ee6a113be989dff0d29442fbe2059432b0389",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 3,
+        "fraction": 0.02,
+        "probe_accuracy": 0.6599,
+        "RUN_ID": "e80a6111230ce1625d1d-f62531a87cd0450a89b1cdc99080048f",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "ff30e8ec33ef3f1c67e747fc033ee6a113be989dff0d29442fbe2059432b0389",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 3,
+        "fraction": 0.05,
+        "probe_accuracy": 0.34,
+        "RUN_ID": "9ba770d2b17159110ad9-162b1fd219b7475a899e62f211555b88",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "7f70c3cd4df8c0c559d65054e3a8b09f5f15f70122d9ed05a95b0f3921df0f29",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 3,
+        "fraction": 0.05,
+        "probe_accuracy": 0.891,
+        "RUN_ID": "7b196f8df9ea8ff3e18c-1f66f5203af44c6584099c41a72a0562",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "7f70c3cd4df8c0c559d65054e3a8b09f5f15f70122d9ed05a95b0f3921df0f29",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 3,
+        "fraction": 0.05,
+        "probe_accuracy": 0.7037,
+        "RUN_ID": "035b72c0bf02b565a316-79ff3b006dfb4cf6b8b3146ac93748da",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "7f70c3cd4df8c0c559d65054e3a8b09f5f15f70122d9ed05a95b0f3921df0f29",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 3,
+        "fraction": 0.25,
+        "probe_accuracy": 0.4093,
+        "RUN_ID": "688534d495db805cbde4-8fe5eaffdc464eff91facde1330cf293",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "5161bc74cdd2c65e02a921cb294f02f8702e7e148f172e21864fc8d4e874e170",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 3,
+        "fraction": 0.25,
+        "probe_accuracy": 0.8978,
+        "RUN_ID": "616404aaa342eb7b876d-6c74dceb1bb04904b0ba182547f99f08",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "5161bc74cdd2c65e02a921cb294f02f8702e7e148f172e21864fc8d4e874e170",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 3,
+        "fraction": 0.25,
+        "probe_accuracy": 0.7494,
+        "RUN_ID": "9fe8c27b6bf7c4483d4e-2c9792a1f4c044469d9f659c420380e9",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "5161bc74cdd2c65e02a921cb294f02f8702e7e148f172e21864fc8d4e874e170",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B0",
+        "seed": 3,
+        "fraction": 1.0,
+        "probe_accuracy": 0.4385,
+        "RUN_ID": "4c067fe2b7a607c8510a-9eb34d71f45a466b8cc94e4821c55d5f",
+        "encoder_RUN_ID": "7fc5473bc118537f9cd5-c17ad242c32040868e02c626cabc0802",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": false
+      },
+      {
+        "encoder": "B1",
+        "seed": 3,
+        "fraction": 1.0,
+        "probe_accuracy": 0.8984,
+        "RUN_ID": "eab31435e9c36b3cf4d1-a6c2ba2eb0d64cfc80f59bc20acd5349",
+        "encoder_RUN_ID": "46ff100b6e37093a7ed4-a4bc75d2a1a04515b28bf814c9be4f9a",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": false
+      },
+      {
+        "encoder": "SimCLR",
+        "seed": 3,
+        "fraction": 1.0,
+        "probe_accuracy": 0.7641,
+        "RUN_ID": "ab55dcf925cd063924bb-1b8822617b51435997d6d7516dc5e61a",
+        "encoder_RUN_ID": "c104dc28794c5ceb9246-22c0ee13ed0945a9ad08df8d9a2642ea",
+        "subset_fingerprint": "b3120d65a5504ec6c354645147ff8f01c461b9aefbe80a2268d09f81a4a4c903",
+        "reused_E1": false
+      }
+    ],
+    "rmin": 0.02,
+    "gains": [
+      {
+        "fraction": 0.02,
+        "deltas": [
+          0.3741,
+          0.377,
+          0.3677
+        ],
+        "mean": 0.37293333333333334,
+        "sample_std": 0.004758501164582519,
+        "same_nonzero_sign": true,
+        "established": true
+      },
+      {
+        "fraction": 0.05,
+        "deltas": [
+          0.3605,
+          0.3608,
+          0.36369999999999997
+        ],
+        "mean": 0.36166666666666664,
+        "sample_std": 0.0017672954855748584,
+        "same_nonzero_sign": true,
+        "established": true
+      },
+      {
+        "fraction": 0.25,
+        "deltas": [
+          0.3349,
+          0.33749999999999997,
+          0.34009999999999996
+        ],
+        "mean": 0.33749999999999997,
+        "sample_std": 0.002599999999999991,
+        "same_nonzero_sign": true,
+        "established": true
+      },
+      {
+        "fraction": 1.0,
+        "deltas": [
+          0.3305,
+          0.32670000000000005,
+          0.3256
+        ],
+        "mean": 0.3276,
+        "sample_std": 0.002570992026436489,
+        "same_nonzero_sign": true,
+        "established": true
+      }
+    ],
+    "hypothesis_supported": true,
+    "hypothesis_support_scope": "Direction only under the preregistered teacher rule; the point magnitude forecast is not declared confirmed. Its numerical error is reported separately as preregistered.",
+    "preregistered_point_prediction": 0.16525,
+    "point_prediction_error": 0.20768333333333333,
+    "ssl_better_established": true,
+    "conclusion": "различие установлено",
+    "limitations": [
+      "Seeds change selectedtraininglabels andprobeinitialization, notSSLpretraining; onlyonefixedencoder perarm.",
+      "5000labelledvalidationimages selectregularization; thisoptimisticfew-labelcondition issharedbyallarms."
+    ],
+    "label_budget_analysis": {
+      "B0_full_minus_rmin": 0.1471666666666666,
+      "SSL_full_minus_rmin": 0.10183333333333333,
+      "G_rmin_minus_G1": 0.04533333333333334,
+      "interpretation": "The magnitude forecast was the recorded heuristic, half E1 G(1), not a theoretical bound. Compare the measured accuracy drops of B0 and SSL as labels decrease: their difference arithmetically accounts for G(rmin)-G(1). This is descriptive evidence, not proof of a particular causal optimization mechanism. Forecast error is retained; seeds, thresholds and the hypothesis are unchanged."
+    }
+  },
+  "counterfactual_status": {
+    "Q2": "BLOCKED",
+    "Q1": "PASS",
+    "Q3": "PASS",
+    "Q4": "PASS",
+    "Q5": "PASS"
+  },
+  "acceptance": {
+    "historical_Lab0_to_Lab3_unchanged": "PASS",
+    "Lab3_independent_audit": "PASS",
+    "mandatory_tests_and_regressions": "PASS",
+    "N256_global_NT_Xent_not_microbatch_approximation": "PASS",
+    "GPU100_25_epoch_protocol": "PASS",
+    "trainonly_unlabelled_pretraining_cal_guard": "PASS",
+    "E1_three_encoders_common_probe_knn": "PASS",
+    "E1_five_SSL_checkpoints_including0": "PASS",
+    "E1_E2_exploratory_hypotheses_precede_formal_training": "PASS",
+    "E1_final_loss_at_or_below_random": "PASS",
+    "E1_G1_sign_reported": "PASS",
+    "E2_six_variants_only_augmentation_changes": "PASS",
+    "E2_conditional_thresholds_applied": "PASS",
+    "E3_preregistered_before_new_runs": "PASS",
+    "E3_complete36_matrix_nested_shared_indices": "PASS",
+    "E3_teacher_rule_applied": "PASS",
+    "frozen_encoder_full_state_and_feature_repeatability": "PASS",
+    "representation_scale_rank_spectrum_raw_recomputed": "PASS",
+    "CF1": "PASS",
+    "CF2": "BLOCKED",
+    "CF3": "PASS",
+    "eight_figures_visually_verified_and_hashed": "PASS",
+    "CF4": "PASS",
+    "CF5": "PASS",
+    "formal_report": "NOT_APPLICABLE",
+    "optional_section14": "NOT_APPLICABLE"
+  },
+  "automated_tests": {
+    "tests": 106,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "totals": {
+    "formal_encoder_training_runs": 10,
+    "formal_probe_candidate_training_runs": 144,
+    "formal_encoder_training_seconds": 9183.4856268,
+    "formal_probe_training_seconds": 202.4956174999752,
+    "checkpoint_count": 334,
+    "formal_checkpoint_count": 325,
+    "RUN_ID_count": 223,
+    "formal_encoder_and_initialization_wall_seconds": 9290.724258700007,
+    "formal_feature_operation_seconds": 257.8175231000132,
+    "formal_probe_selection_and_test_seconds": 505.8404927999727,
+    "formal_measured_active_seconds": 10054.382274599993,
+    "formal_protocol_first_started_at_utc": "2026-10-28T13:08:48.743350+00:00",
+    "formal_protocol_last_finished_at_utc": "2026-10-28T16:04:34.228046+00:00",
+    "formal_protocol_calendar_span_seconds": 10545.484696,
+    "timing_scope": "Nonoverlapping measured encoder/initialization workers + feature protocols + complete probe selection/test protocols. Probe candidate training is already included in probe protocols and is not added twice. Feature/probe Python startup, analysis, tests and idle time excluded."
+  }
+}

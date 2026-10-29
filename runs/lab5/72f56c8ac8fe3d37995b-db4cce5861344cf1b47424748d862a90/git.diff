@@ -1,0 +1,129 @@
+diff --git a/src/config.py b/src/config.py
+index aaa7563..9d5a06c 100644
+--- a/src/config.py
++++ b/src/config.py
+@@ -38,7 +38,7 @@ def validate(cfg):
+     for name in ['experiment','data','model','optimizer','scheduler','train','logging','profile','runtime']:
+         if not isinstance(cfg.get(name),dict):
+             raise ValueError(f'Missing section: {name}')
+-    if cfg['optimizer']['name'] not in ['adamw','sgd']:
++    if cfg['optimizer']['name'] not in ['adamw','sgd','adam']:
+         raise ValueError('Unsupported optimizer')
+     if cfg['model']['name'] in {'deep_mlp','residual_mlp'}:
+         model=cfg['model']
+@@ -113,6 +113,14 @@ def validate(cfg):
+                 if m['mode']=='contrastive' and cfg['contrastive']['tau']!=cfg['profile']['lab4_tau']:raise ValueError('Lab4 assignedtau mismatch')
+     if cfg['train']['accumulation_steps'] < 1:
+         raise ValueError('accumulation_steps must be positive')
++    if cfg['experiment']['lab']==5:
++        if cfg['data']['name'] not in {'planetoid_graph','graph_features'}:raise ValueError('Invalid Lab5 data')
++        if cfg['profile']['lab5_dataset']!='cora' or cfg['profile']['lab5_second_gnn']!='gat' or cfg['profile']['lab5_depths']!=[2,3,6,12,24]:raise ValueError('Lab5 profile mismatch')
++        if cfg['experiment']['purpose']=='formal' and cfg['model']['name']=='graph_network':
++            if cfg['train']['epochs']!=200 or cfg['optimizer']['name']!='adam':raise ValueError('Lab5 requires full200 epochs and Adam')
++            if cfg['model']['dropout']!=.5 or cfg['model']['width'] not in [16,64]:raise ValueError('Lab5 canonical dropout/width')
++            if cfg['model']['depth'] not in cfg['profile']['lab5_depths']:raise ValueError('Unassigned Lab5 depth')
++        if cfg['train']['accumulation_steps']!=1:raise ValueError('Graph training is full-batch')
+     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:
+         raise ValueError('Lab 9 encoder conflict requires teacher clarification')
+     if not cfg['profile'].get('student_id_hash') or not cfg['profile'].get('id'):
+diff --git a/src/data/vision.py b/src/data/vision.py
+index c77aaef..a0526f6 100644
+--- a/src/data/vision.py
++++ b/src/data/vision.py
+@@ -25,6 +25,9 @@ class ArrayImages(Dataset):
+ 
+ def datasets(config):
+     data = config['data']
++    if data['name'] in {'planetoid_graph','graph_features'}:
++        from src.graph.datasets import datasets as graph_datasets
++        return graph_datasets(config)
+     if data['name'] in {'ssl_cifar10','ssl_test_fixture'}:
+         from src.data.ssl_data import datasets as ssl_datasets
+         return ssl_datasets(config)
+@@ -104,6 +107,9 @@ def datasets(config):
+ 
+ 
+ def loaders(config, ds, generator):
++    if config['data']['name'] in {'planetoid_graph','graph_features'}:
++        from src.graph.datasets import loaders as graph_loaders
++        return graph_loaders(config,ds,generator)
+     if config['data']['name'] in {'ssl_cifar10','ssl_test_fixture'}:
+         from src.data.ssl_data import loaders as ssl_loaders
+         return ssl_loaders(config,ds,generator)
+diff --git a/src/engine/runner.py b/src/engine/runner.py
+index e5faef4..b886c3f 100644
+--- a/src/engine/runner.py
++++ b/src/engine/runner.py
+@@ -50,6 +50,7 @@ class ExperimentRunner:
+         opt_cfg = cfg['optimizer']
+         options = {'lr':opt_cfg['lr'],'weight_decay':opt_cfg['weight_decay']}
+         optimizer = (torch.optim.AdamW(model.parameters(),**options) if opt_cfg['name']=='adamw' else
++                     torch.optim.Adam(model.parameters(),**options) if opt_cfg['name']=='adam' else
+                      torch.optim.SGD(model.parameters(),momentum=opt_cfg['momentum'],**options))
+         total_epochs = cfg['train']['epochs']
+         step_limit = cfg['train'].get('max_steps')
+@@ -163,7 +164,7 @@ class ExperimentRunner:
+                     if budget and time.perf_counter()-wall_start > budget:
+                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
+                     if first_checksum is None:
+-                        if cfg['experiment']['lab']==4:
++                        if cfg['experiment']['lab'] in {4,5}:
+                             import hashlib
+                             first_checksum=hashlib.sha256(x.detach().cpu().contiguous().numpy().tobytes()+y.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
+                         else:first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
+@@ -189,6 +190,9 @@ class ExperimentRunner:
+                                          for j in range(group_start,group_start+group_length))
+                     scaled_loss = loss if accumulation == 1 else loss*len(y)/group_examples
+                     scaler.scale(scaled_loss).backward()
++                    if cfg['experiment']['lab']==5 and cfg['model']['name']=='graph_network':
++                        from src.diagnostics.oversmoothing import gradient_record
++                        self._append(path/'gradients.jsonl',{'epoch':epoch+1,**gradient_record(model)})
+                     if diagnostics:
+                         diagnostics.end(epoch+1, batch_index)
+                         if not bool(torch.stack([torch.isfinite(p.grad).all() for p in model.parameters() if p.grad is not None]).all()):
+@@ -262,6 +266,7 @@ class ExperimentRunner:
+                            'best_accuracy':best,'best_epoch':best_epoch,'first_batch_checksum':first_checksum,
+                            'checkpoint_for_final_metric':'checkpoints/last.pt','purpose':cfg['experiment']['purpose']})
+                 console_due=(not step_limit or finished_steps or global_step-console_step>=cfg['logging'].get('console_every_steps',500))
++                if cfg['experiment']['lab']==5:console_due=(epoch+1==total_epochs or (epoch+1)%50==0)
+                 if cfg['model']['name']=='linear_probe':console_due=(epoch+1==total_epochs)
+                 if console_due:
+                     console_record={**record}
+@@ -308,7 +313,7 @@ class ExperimentRunner:
+             if (path/'summary.json').exists():
+                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
+                 summary['status']=status
+-                if step_limit or cfg['experiment']['lab']==4:summary['training_seconds']=training_seconds
++                if step_limit or cfg['experiment']['lab'] in {4,5}:summary['training_seconds']=training_seconds
+                 write_json(path/'summary.json',summary)
+         return path
+ 
+diff --git a/src/metrics/objective.py b/src/metrics/objective.py
+index 627226b..dfe83cf 100644
+--- a/src/metrics/objective.py
++++ b/src/metrics/objective.py
+@@ -8,6 +8,9 @@ def objective(logits,y,reduction='mean'):
+     return F.cross_entropy(logits,y,reduction=reduction)
+ 
+ def correct_count(logits,y):
++    if y.ndim==1:
++        mask=y!=-100
++        return ((logits.argmax(1)==y)&mask).sum().item(),mask.sum().item()
+     if y.ndim==2 and logits.ndim==3:
+         mask=y!=-100
+         return ((logits.argmax(1)==y)&mask).sum().item(),mask.sum().item()
+diff --git a/src/models/small_cnn.py b/src/models/small_cnn.py
+index 5ff7426..bf7cc53 100644
+--- a/src/models/small_cnn.py
++++ b/src/models/small_cnn.py
+@@ -22,6 +22,9 @@ class SmallCNN(nn.Module):
+ 
+ 
+ def build_model(cfg):
++    if cfg['name']=='graph_network':
++        from src.models.graph import GraphNetwork
++        return GraphNetwork(cfg)
+     if cfg['name']=='simclr':
+         from src.ssl.simclr import SimCLR
+         return SimCLR(cfg)
+source_hash: ff98526a3bc6cd82172450326d3a8e50f7a1aaceae751cc13860722689764e08

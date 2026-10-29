@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "max_absolute_error": 9.367506770274758e-17,
+  "tolerance": 1e-05,
+  "N": 7,
+  "d": 11,
+  "tau": 0.1,
+  "derivation": "Eq4.6 peranchor + candidate-column contributions, averaged over2N, followed by exact L2 normalization chain rule",
+  "implementation_under_test": "src.ssl.losses.nt_xent; autograd on raw z1/z2",
+  "dtype": "float64",
+  "not_a_training_result": true
+}

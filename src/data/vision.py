@@ -25,6 +25,9 @@ class ArrayImages(Dataset):
 
 def datasets(config):
     data = config['data']
+    if data['name'] in {'planetoid_graph','graph_features'}:
+        from src.graph.datasets import datasets as graph_datasets
+        return graph_datasets(config)
     if data['name'] in {'ssl_cifar10','ssl_test_fixture'}:
         from src.data.ssl_data import datasets as ssl_datasets
         return ssl_datasets(config)
@@ -104,6 +107,9 @@ def datasets(config):
 
 
 def loaders(config, ds, generator):
+    if config['data']['name'] in {'planetoid_graph','graph_features'}:
+        from src.graph.datasets import loaders as graph_loaders
+        return graph_loaders(config,ds,generator)
     if config['data']['name'] in {'ssl_cifar10','ssl_test_fixture'}:
         from src.data.ssl_data import loaders as ssl_loaders
         return ssl_loaders(config,ds,generator)

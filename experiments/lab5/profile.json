@@ -1,0 +1,17 @@
+{
+  "profile": {
+    "id": "P3adf02",
+    "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+    "base_seed": 987693601,
+    "lab5_dataset": "cora",
+    "lab5_second_gnn": "gat",
+    "lab5_depths": [
+      2,
+      3,
+      6,
+      12,
+      24
+    ]
+  },
+  "lab5_hash": "42bb7da80db319d7d93543243f4be9820fdee8060a6687858db43840e9a3debd"
+}

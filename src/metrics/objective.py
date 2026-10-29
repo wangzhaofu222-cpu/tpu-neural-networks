@@ -8,6 +8,9 @@ def objective(logits,y,reduction='mean'):
     return F.cross_entropy(logits,y,reduction=reduction)
 
 def correct_count(logits,y):
+    if y.ndim==1:
+        mask=y!=-100
+        return ((logits.argmax(1)==y)&mask).sum().item(),mask.sum().item()
     if y.ndim==2 and logits.ndim==3:
         mask=y!=-100
         return ((logits.argmax(1)==y)&mask).sum().item(),mask.sum().item()
