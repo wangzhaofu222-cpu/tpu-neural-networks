@@ -1,0 +1,115 @@
+{
+  "RUN_ID": "2a9a084eb89b7f2d68d6-5b4d9d6c2aa5417aa7f56898bf06b98e",
+  "source_RUN_ID": "a39eb91e92f73e583288-31afc8b5b86c45b8a2cdd968b16d2d57",
+  "target": "eight_gaussians",
+  "kind": "flow",
+  "seed": 3,
+  "checkpoint_sha256": "2d300aeca06ef296925a3664188226bb4ccd9d7b77eb316b00d5b0ba9b37846c",
+  "source_global_step": 5000,
+  "parameters": 69648,
+  "training_seconds": 79.31118220000008,
+  "sample_count": 5000,
+  "sample_seed": 7003,
+  "sample_seconds": 0.009830500000134634,
+  "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+  "Cov": 1.0,
+  "Dmode": 0.0978,
+  "Dmode_exact_target": 0.09266825259631829,
+  "MMD2": 0.00027718677360710764,
+  "mode_counts_including_outlier_first": [
+    449,
+    555,
+    663,
+    454,
+    606,
+    568,
+    571,
+    491,
+    643
+  ],
+  "reference_mode_counts_including_outlier_first": [
+    62,
+    626,
+    598,
+    632,
+    635,
+    628,
+    628,
+    585,
+    606
+  ],
+  "exact_mode_probabilities_outlier_first": [
+    0.011108996538242266,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972
+  ],
+  "MMD_estimator": "empirical V-statistic, including diagonals",
+  "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+  "normalized_on_omega": false,
+  "density_kind": "exact_Flow_density_no_grid_renormalization",
+  "domain": [
+    [
+      -15,
+      15
+    ],
+    [
+      -15,
+      15
+    ]
+  ],
+  "grid_shape": [
+    120,
+    120
+  ],
+  "spacing": 0.25,
+  "cell_area": 0.0625,
+  "Dgrid": 0.0006905851990375714,
+  "grid_integral": 1.0368301251997698,
+  "sampler": {},
+  "val_NLL": 2.001966896748543,
+  "val_NLL_SEM": 0.01425396734888607,
+  "exact_test_NLL": 2.0315651613473893,
+  "test_NLL_SEM": 0.017678714282158454,
+  "invertibility": {
+    "dtype": "float64 with converted learned weights",
+    "test_points": 5000,
+    "median_epsilon": 1.9755778690000867e-16,
+    "max_epsilon": 2.4247726502070548e-15,
+    "autograd_points": 100,
+    "max_logdet_error": 9.547918011776346e-15,
+    "norm20_points": 100,
+    "norm20_seed": 6201,
+    "norm20_median_epsilon": 1.6758116898322606e-15,
+    "norm20_max_epsilon": 3.122358862406797e-13
+  },
+  "midpoint": {
+    "center_indices": [
+      0,
+      1
+    ],
+    "centers": [
+      [
+        3.0,
+        0.0
+      ],
+      [
+        2.121320343559643,
+        2.121320343559643
+      ]
+    ],
+    "point": [
+      2.5606601717798214,
+      1.0606601717798214
+    ],
+    "true_log_density": -16.480539160917736,
+    "model_log_density": -5.690201282501221,
+    "model_density_kind": "exact_Flow_density_no_grid_renormalization",
+    "log_density_excess_over_true": 10.790337878416516
+  }
+}

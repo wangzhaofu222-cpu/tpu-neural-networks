@@ -1,0 +1,2296 @@
+{
+  "status": "PASS",
+  "count": 286,
+  "includes_budget_checkpoints": true,
+  "optimizer_updates_executed": 0,
+  "checkpoints": [
+    {
+      "path": "runs\\lab5\\041d3dca2624f4d07182-5c060262d67549f585d683b26a464380\\checkpoints\\best.pt",
+      "sha256": "78e45d9a63573e70c78b7c0d35ee7c4af611b9e5b166cfe44535ad55e0d7898d",
+      "RUN_ID": "041d3dca2624f4d07182-5c060262d67549f585d683b26a464380",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\041d3dca2624f4d07182-5c060262d67549f585d683b26a464380\\checkpoints\\last.pt",
+      "sha256": "ad8ddb36fe0e5dc1818060fbf0738b7078e2be035ee2432fb1477cc14872c8cb",
+      "RUN_ID": "041d3dca2624f4d07182-5c060262d67549f585d683b26a464380",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\063433d654e645ba8007-3bfeb297024742c6b78f16a5b7b5286c\\checkpoints\\best.pt",
+      "sha256": "a12275b3f1c7e6170eb7c89c2bae6dbb1612a7c71af738064d3078686e094c94",
+      "RUN_ID": "063433d654e645ba8007-3bfeb297024742c6b78f16a5b7b5286c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\063433d654e645ba8007-3bfeb297024742c6b78f16a5b7b5286c\\checkpoints\\last.pt",
+      "sha256": "fefb7a791eb6532f7802a98c141604c7d07c4c4f4552f9ac434b29b784df768f",
+      "RUN_ID": "063433d654e645ba8007-3bfeb297024742c6b78f16a5b7b5286c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0695f14a1b01232583a2-224b089b19d943ada9c86e74b4bad35c\\checkpoints\\best.pt",
+      "sha256": "e8c22f1eb4b0a2c10cec6d662826ee825434a36ce29d798befece491477612bc",
+      "RUN_ID": "0695f14a1b01232583a2-224b089b19d943ada9c86e74b4bad35c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0695f14a1b01232583a2-224b089b19d943ada9c86e74b4bad35c\\checkpoints\\last.pt",
+      "sha256": "c9ba1f79ed974825cecae56706b29a8994914ac2d4995c6672ebc0880e581541",
+      "RUN_ID": "0695f14a1b01232583a2-224b089b19d943ada9c86e74b4bad35c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0811a9e3f2ec865c9f3c-3f3ec882f56c435eaa53089b9556d23b\\checkpoints\\best.pt",
+      "sha256": "f863adfdb39c81c5d15c5869343cf59b67edfec863a0714cfe078637c8962545",
+      "RUN_ID": "0811a9e3f2ec865c9f3c-3f3ec882f56c435eaa53089b9556d23b",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0811a9e3f2ec865c9f3c-3f3ec882f56c435eaa53089b9556d23b\\checkpoints\\last.pt",
+      "sha256": "354786bae1dcfdf43e454cfa786d3d403d4e1af1e73b76c49c128997b2493144",
+      "RUN_ID": "0811a9e3f2ec865c9f3c-3f3ec882f56c435eaa53089b9556d23b",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0aab5aa1fdffd190d6fb-bf978754383c4e958006d51b66db838b\\checkpoints\\best.pt",
+      "sha256": "f5add43d733d8fa1996b10e6241764985328f603d0495c125d8fd06eb38902b4",
+      "RUN_ID": "0aab5aa1fdffd190d6fb-bf978754383c4e958006d51b66db838b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0aab5aa1fdffd190d6fb-bf978754383c4e958006d51b66db838b\\checkpoints\\last.pt",
+      "sha256": "7b1ef5da52e0c717523e268ffb1bb96bb0e7be30c59a21372c12523a40e47867",
+      "RUN_ID": "0aab5aa1fdffd190d6fb-bf978754383c4e958006d51b66db838b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0c46c6d1b6093c6d768f-95d5e0b47d714ebdb21889496cc3eb16\\checkpoints\\best.pt",
+      "sha256": "afab85a851f73858ed574237c23af19fa131c658308a9ffd6ea98ab668dbc720",
+      "RUN_ID": "0c46c6d1b6093c6d768f-95d5e0b47d714ebdb21889496cc3eb16",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0c46c6d1b6093c6d768f-95d5e0b47d714ebdb21889496cc3eb16\\checkpoints\\last.pt",
+      "sha256": "169108cea8e808df3edd8870d870d05ea9a3a55c42d165c915819b6d610a213e",
+      "RUN_ID": "0c46c6d1b6093c6d768f-95d5e0b47d714ebdb21889496cc3eb16",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0ca014746f31ecaf3e3c-0f2aec2108b945f9a7fcfa2b2643cfa7\\checkpoints\\best.pt",
+      "sha256": "3f35047030813d52e4c69cac1acd399448fcd8eda24aa5144ba802ca3d405fce",
+      "RUN_ID": "0ca014746f31ecaf3e3c-0f2aec2108b945f9a7fcfa2b2643cfa7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0ca014746f31ecaf3e3c-0f2aec2108b945f9a7fcfa2b2643cfa7\\checkpoints\\last.pt",
+      "sha256": "b40c7a28e85deaa5d941ad65763c81b5987940cffb5a9d2e612cf584b23f5b67",
+      "RUN_ID": "0ca014746f31ecaf3e3c-0f2aec2108b945f9a7fcfa2b2643cfa7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0cd85b20e93703559160-27dbc3f81e0d40caa68f288d5830addb\\checkpoints\\best.pt",
+      "sha256": "43616393de8b45700c6a5d7be043ba9910a7d041474e2b60a15135e9656f3084",
+      "RUN_ID": "0cd85b20e93703559160-27dbc3f81e0d40caa68f288d5830addb",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\0cd85b20e93703559160-27dbc3f81e0d40caa68f288d5830addb\\checkpoints\\last.pt",
+      "sha256": "4f692d4f2e11e608527d949d1eef282d1e4e3442aaceeb3687f184ce30b5936a",
+      "RUN_ID": "0cd85b20e93703559160-27dbc3f81e0d40caa68f288d5830addb",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\120930eddbc78a04a764-5fd4b55c9c4b4125bec72c97ec9b4788\\checkpoints\\best.pt",
+      "sha256": "af0eb33ac932c86bb06c605580d715122698150c43eb147427bead9e0c60fdbc",
+      "RUN_ID": "120930eddbc78a04a764-5fd4b55c9c4b4125bec72c97ec9b4788",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\120930eddbc78a04a764-5fd4b55c9c4b4125bec72c97ec9b4788\\checkpoints\\last.pt",
+      "sha256": "006b975fd262af6b2a400f3a38332252fcc76ba8069359ccc48fd6a7c8b2874c",
+      "RUN_ID": "120930eddbc78a04a764-5fd4b55c9c4b4125bec72c97ec9b4788",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\123029756b4763ea61f2-1b96790a77c44b46beff11b3e7643612\\checkpoints\\best.pt",
+      "sha256": "d977f08ff2e5b58b2c0eec259469bd5e458018ad57afe240b79327c3488b5c26",
+      "RUN_ID": "123029756b4763ea61f2-1b96790a77c44b46beff11b3e7643612",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\123029756b4763ea61f2-1b96790a77c44b46beff11b3e7643612\\checkpoints\\last.pt",
+      "sha256": "08c46e3c7ebb1b9134299b41a040c8a0784d4c799b943d3df59eb799a201888d",
+      "RUN_ID": "123029756b4763ea61f2-1b96790a77c44b46beff11b3e7643612",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\125147a9a06f14ab619f-62dc620402b84c899f3d01b08dcffb4e\\checkpoints\\best.pt",
+      "sha256": "ca79dd9e7b0124fa7fab71d9767f164e6176e306d8705c7be25e4c1267827a35",
+      "RUN_ID": "125147a9a06f14ab619f-62dc620402b84c899f3d01b08dcffb4e",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\125147a9a06f14ab619f-62dc620402b84c899f3d01b08dcffb4e\\checkpoints\\last.pt",
+      "sha256": "8cb2bd0afb5ffb0a1f3ab2a115824d5a4ba0c3a7378e1cbe882a4875b01f9ae3",
+      "RUN_ID": "125147a9a06f14ab619f-62dc620402b84c899f3d01b08dcffb4e",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\131669d247592377b75c-51f88dc7ae5b4e849f3b2b3676ec9bfc\\checkpoints\\best.pt",
+      "sha256": "4cefa6daf6025467fb6d950833a33ac6c89d68c104aa7aa939ce7d95c16437e6",
+      "RUN_ID": "131669d247592377b75c-51f88dc7ae5b4e849f3b2b3676ec9bfc",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\131669d247592377b75c-51f88dc7ae5b4e849f3b2b3676ec9bfc\\checkpoints\\last.pt",
+      "sha256": "cc7c19f537e08f42ae9872d252e05516ce2062de24ec5a9e2ef34f57d7d4db0e",
+      "RUN_ID": "131669d247592377b75c-51f88dc7ae5b4e849f3b2b3676ec9bfc",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\135a611b6ba4f29d700c-2be08dc0089149fba758c8142c46791c\\checkpoints\\best.pt",
+      "sha256": "4cc3e1a554b88774dedd41794dd9f1693e8ba9e3733abb80d5b0c8f221720f74",
+      "RUN_ID": "135a611b6ba4f29d700c-2be08dc0089149fba758c8142c46791c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\135a611b6ba4f29d700c-2be08dc0089149fba758c8142c46791c\\checkpoints\\last.pt",
+      "sha256": "93de1ee3aba9636d19a1f24732bac34b2d7ea334d9b9b718398df48d9ff2886f",
+      "RUN_ID": "135a611b6ba4f29d700c-2be08dc0089149fba758c8142c46791c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\161525da61d13689ebfa-5a0dec5c5d7647d6a945bc8bb9dc5514\\checkpoints\\best.pt",
+      "sha256": "bff9fc62c47bb1fb0ae66029deb3989b32f1c2aab71db3edf43683bf27e24145",
+      "RUN_ID": "161525da61d13689ebfa-5a0dec5c5d7647d6a945bc8bb9dc5514",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\161525da61d13689ebfa-5a0dec5c5d7647d6a945bc8bb9dc5514\\checkpoints\\last.pt",
+      "sha256": "ac1b4b980d01f42e5bcbbc061dc8b19adb5e6405d64cd499910855832f63b77c",
+      "RUN_ID": "161525da61d13689ebfa-5a0dec5c5d7647d6a945bc8bb9dc5514",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1b3a30aee8943e5be257-1274fe3a29a541348bedcaaa4e744719\\checkpoints\\best.pt",
+      "sha256": "fb9bd5f28b9f5476e897dbe494b9073bf05985a4372f4a574853c7bc9bd60888",
+      "RUN_ID": "1b3a30aee8943e5be257-1274fe3a29a541348bedcaaa4e744719",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1b3a30aee8943e5be257-1274fe3a29a541348bedcaaa4e744719\\checkpoints\\last.pt",
+      "sha256": "8c47ed97c639f67311288db33688f9fc0e23f2436bc809dce8f8481940973def",
+      "RUN_ID": "1b3a30aee8943e5be257-1274fe3a29a541348bedcaaa4e744719",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1bbf83ce9faf194df14e-426dd84025b34e33b59281e56b243f78\\checkpoints\\best.pt",
+      "sha256": "a2172945dec9775ec8d528a56abf0cbb0d041c4b18e73c63a33f392fa3af3d65",
+      "RUN_ID": "1bbf83ce9faf194df14e-426dd84025b34e33b59281e56b243f78",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1bbf83ce9faf194df14e-426dd84025b34e33b59281e56b243f78\\checkpoints\\last.pt",
+      "sha256": "85f280b635344d8f92f58e2526408dbfe8cad002b9ff5ed7dbf18f709bd5834a",
+      "RUN_ID": "1bbf83ce9faf194df14e-426dd84025b34e33b59281e56b243f78",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1dcf7864dfb64b6e6322-2b1c10626b134527a8e8e2246c4de334\\checkpoints\\best.pt",
+      "sha256": "37b3b287046d7c6f6c703ece5a55bc8f927104480fa587c319a206ab841bd7c5",
+      "RUN_ID": "1dcf7864dfb64b6e6322-2b1c10626b134527a8e8e2246c4de334",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1dcf7864dfb64b6e6322-2b1c10626b134527a8e8e2246c4de334\\checkpoints\\last.pt",
+      "sha256": "4884ac385dc4074e759ad2d2ab677c66dfb91889489ee4654e95210e95dc456e",
+      "RUN_ID": "1dcf7864dfb64b6e6322-2b1c10626b134527a8e8e2246c4de334",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1e8dec50048e2c3db8fc-0b70667d541a496da87ae433abc42f90\\checkpoints\\best.pt",
+      "sha256": "caadfd03b2f22a3e40a3e8228f5453eae74124485e700660d20440f86703def2",
+      "RUN_ID": "1e8dec50048e2c3db8fc-0b70667d541a496da87ae433abc42f90",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1e8dec50048e2c3db8fc-0b70667d541a496da87ae433abc42f90\\checkpoints\\last.pt",
+      "sha256": "4168d4c1986f8dce2ee0ffd41a696ffe278f99abcd97651a8f6493f96eae57c7",
+      "RUN_ID": "1e8dec50048e2c3db8fc-0b70667d541a496da87ae433abc42f90",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1e9fa843379227bd3563-632f943a982849b6b7a63b55ae2e286c\\checkpoints\\best.pt",
+      "sha256": "3d253d86eea7ce21f648ae1ef171bdb0327e1f23eea748778855b89360096b93",
+      "RUN_ID": "1e9fa843379227bd3563-632f943a982849b6b7a63b55ae2e286c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\1e9fa843379227bd3563-632f943a982849b6b7a63b55ae2e286c\\checkpoints\\last.pt",
+      "sha256": "feaa432b7a3ed9e0a13864de2e870dc96cb781b8b50a93da555f69d75168577f",
+      "RUN_ID": "1e9fa843379227bd3563-632f943a982849b6b7a63b55ae2e286c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\21400ef4f33e08c8cf4f-8cc93d418d6f4c58bf854f09394f4f0d\\checkpoints\\best.pt",
+      "sha256": "7f6df1520637ba7a059363b504d8745b6ba4329c8b998427352d695e512aedbc",
+      "RUN_ID": "21400ef4f33e08c8cf4f-8cc93d418d6f4c58bf854f09394f4f0d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\21400ef4f33e08c8cf4f-8cc93d418d6f4c58bf854f09394f4f0d\\checkpoints\\last.pt",
+      "sha256": "2a06574a6ed612cb9f783a4063aa2a8c246724e7408da9f4a2aeff88614159c8",
+      "RUN_ID": "21400ef4f33e08c8cf4f-8cc93d418d6f4c58bf854f09394f4f0d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\21932c77ff0db0817932-ba13af141571435ea1bed3b25d687724\\checkpoints\\best.pt",
+      "sha256": "cd2daf1b3d29c2edaa4962a0a397e4b0f944cb34accdec0cdf7b59dd883a992a",
+      "RUN_ID": "21932c77ff0db0817932-ba13af141571435ea1bed3b25d687724",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\21932c77ff0db0817932-ba13af141571435ea1bed3b25d687724\\checkpoints\\last.pt",
+      "sha256": "5514dc1ee8ad5ff76864b2bfbcb3b671532f81212f71b7ccfcec0ad03bc1bb9f",
+      "RUN_ID": "21932c77ff0db0817932-ba13af141571435ea1bed3b25d687724",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\234191dd47c52dd7cd4a-c679be1cdd384c339f4148663c92a2e7\\checkpoints\\best.pt",
+      "sha256": "b512f9c9e1f927db84783df9e3a08c6d4906b00071e9fcee5d6a2fcbc5ff50f3",
+      "RUN_ID": "234191dd47c52dd7cd4a-c679be1cdd384c339f4148663c92a2e7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\234191dd47c52dd7cd4a-c679be1cdd384c339f4148663c92a2e7\\checkpoints\\last.pt",
+      "sha256": "f421e711ae451fbf34c8ec708ce2b13247a1b209fe84f66fc60a0fbbea8df876",
+      "RUN_ID": "234191dd47c52dd7cd4a-c679be1cdd384c339f4148663c92a2e7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\24b230ca7c82493d531d-ee5765df603a42f79d0f7b566f451083\\checkpoints\\best.pt",
+      "sha256": "cd359936d0c66ddb6221357e77e417a8af14479bb843e4657ea7ed0756cbfd22",
+      "RUN_ID": "24b230ca7c82493d531d-ee5765df603a42f79d0f7b566f451083",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\24b230ca7c82493d531d-ee5765df603a42f79d0f7b566f451083\\checkpoints\\last.pt",
+      "sha256": "8b92ad9afa45782c56935471eea137aa63eec4ac1f8eff77afa50e9d28066292",
+      "RUN_ID": "24b230ca7c82493d531d-ee5765df603a42f79d0f7b566f451083",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\28a15b36845dadd7c0d6-01eb037378b04028a458beb4546c71cf\\checkpoints\\best.pt",
+      "sha256": "e20f7599f8794d5499cab6fe9aa3a50d6bc1d121c81ed9219304fc6a28777d61",
+      "RUN_ID": "28a15b36845dadd7c0d6-01eb037378b04028a458beb4546c71cf",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\28a15b36845dadd7c0d6-01eb037378b04028a458beb4546c71cf\\checkpoints\\last.pt",
+      "sha256": "d3e15fec1f596f306d3b6e628a1d47e1f7080a3cc1b161325a5aabd6036773db",
+      "RUN_ID": "28a15b36845dadd7c0d6-01eb037378b04028a458beb4546c71cf",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\28fdf357e77971738f7e-1284755485f547be9ffd995ed74824e5\\checkpoints\\best.pt",
+      "sha256": "194f5509c0095d45a8870fdbb5de4aeceb4a72d701f8b17fb6fc60a2514fb071",
+      "RUN_ID": "28fdf357e77971738f7e-1284755485f547be9ffd995ed74824e5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\28fdf357e77971738f7e-1284755485f547be9ffd995ed74824e5\\checkpoints\\last.pt",
+      "sha256": "66014e899d92cd74d87f3d66d20d87a2c13629964641f1938268fb148d989d29",
+      "RUN_ID": "28fdf357e77971738f7e-1284755485f547be9ffd995ed74824e5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\2d56fc5f1c3513168c6c-253cf67e594e43ea92d694c34037b205\\checkpoints\\best.pt",
+      "sha256": "5c19f3286d764529f3e04dd97f987e6fe6240e0e39c266d45965e416cca2210c",
+      "RUN_ID": "2d56fc5f1c3513168c6c-253cf67e594e43ea92d694c34037b205",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\2d56fc5f1c3513168c6c-253cf67e594e43ea92d694c34037b205\\checkpoints\\last.pt",
+      "sha256": "58d79c6aefb81bdca86bc7faabd9de5bd0bf7779e53f4692dbab65cf3b00da84",
+      "RUN_ID": "2d56fc5f1c3513168c6c-253cf67e594e43ea92d694c34037b205",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\2f451eddb9fe2a433ce6-15f7f537152b441b937042d983cef67a\\checkpoints\\best.pt",
+      "sha256": "1658ae19a79a22e082e157a57c7d6f47744dbe4c74dcb4faa8837b45c348dcb4",
+      "RUN_ID": "2f451eddb9fe2a433ce6-15f7f537152b441b937042d983cef67a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\2f451eddb9fe2a433ce6-15f7f537152b441b937042d983cef67a\\checkpoints\\last.pt",
+      "sha256": "c0c3b8fda2a72354778f9567671ed324d178df4133911664785068610ea2d443",
+      "RUN_ID": "2f451eddb9fe2a433ce6-15f7f537152b441b937042d983cef67a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\310b8ac185854dac6673-971b605191a648cd9ec924fafc28c7ed\\checkpoints\\best.pt",
+      "sha256": "6b28211cd2b9c5ca38322bfab67305c0b02548415fffb508e8c9c3dc001ced9e",
+      "RUN_ID": "310b8ac185854dac6673-971b605191a648cd9ec924fafc28c7ed",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\310b8ac185854dac6673-971b605191a648cd9ec924fafc28c7ed\\checkpoints\\last.pt",
+      "sha256": "a85590dfd49d0cfbbe36659ade9634149c47e78cdb9b7fe04ec2a9c054b2eada",
+      "RUN_ID": "310b8ac185854dac6673-971b605191a648cd9ec924fafc28c7ed",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3121454480dd0e91378b-541f5f2542cf497d9240604da7e6fd19\\checkpoints\\best.pt",
+      "sha256": "b56fcfd5f12a9f818850d63494c9b2cbdbad5be67b7e700a931e8ebeef7240dd",
+      "RUN_ID": "3121454480dd0e91378b-541f5f2542cf497d9240604da7e6fd19",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3121454480dd0e91378b-541f5f2542cf497d9240604da7e6fd19\\checkpoints\\last.pt",
+      "sha256": "ec62ebb976bf8a39c9b409a2870edd5bb1d9ac5477a4d199b2a3ba5efae8e36b",
+      "RUN_ID": "3121454480dd0e91378b-541f5f2542cf497d9240604da7e6fd19",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\32f1ae9f5c3f4b968dc8-a51328b16a7940038c6d30c9b4a5e68d\\checkpoints\\best.pt",
+      "sha256": "63ba6c77b21764a81f87f5de2232ca08acf8b16e371f12a38c82325ea201e3a6",
+      "RUN_ID": "32f1ae9f5c3f4b968dc8-a51328b16a7940038c6d30c9b4a5e68d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\32f1ae9f5c3f4b968dc8-a51328b16a7940038c6d30c9b4a5e68d\\checkpoints\\last.pt",
+      "sha256": "14049f0cbff12dca8faab2ec0ffdd87b9c71c9f064f58e45a41a5fbe3489b5b7",
+      "RUN_ID": "32f1ae9f5c3f4b968dc8-a51328b16a7940038c6d30c9b4a5e68d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\34b3c59f8303c04aa6e9-e8376ac78f854c3e9615be5b690c7215\\checkpoints\\best.pt",
+      "sha256": "ac106befc30076d1b409e5e857c49138e2ac5df98f63c516538075a6d9f2ade0",
+      "RUN_ID": "34b3c59f8303c04aa6e9-e8376ac78f854c3e9615be5b690c7215",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\34b3c59f8303c04aa6e9-e8376ac78f854c3e9615be5b690c7215\\checkpoints\\last.pt",
+      "sha256": "5e434bdbd6a53ff69be893030450de58d20e9677733730c0e33a1892e3a7f93b",
+      "RUN_ID": "34b3c59f8303c04aa6e9-e8376ac78f854c3e9615be5b690c7215",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\37b9d3b4094a7f21cd06-e2b65dbdf1c94368bae5307a875a73c8\\checkpoints\\best.pt",
+      "sha256": "6ff2ab1dcef0260e8dd3ed20e58d0eb8f7864968db301e3887cc7b3342fc26d3",
+      "RUN_ID": "37b9d3b4094a7f21cd06-e2b65dbdf1c94368bae5307a875a73c8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\37b9d3b4094a7f21cd06-e2b65dbdf1c94368bae5307a875a73c8\\checkpoints\\last.pt",
+      "sha256": "bfb992c83f5ae131a77e91c7284e4ba173c1c841a150bac756666ef27d8b1a41",
+      "RUN_ID": "37b9d3b4094a7f21cd06-e2b65dbdf1c94368bae5307a875a73c8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\39a7fa18e4588cd1511c-678efb85e38347a5a679c8c3ab7597d0\\checkpoints\\best.pt",
+      "sha256": "b3745f485b1712ed88bab7f4764922ec9a7a16d557f97a52fd06aec71404c06e",
+      "RUN_ID": "39a7fa18e4588cd1511c-678efb85e38347a5a679c8c3ab7597d0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\39a7fa18e4588cd1511c-678efb85e38347a5a679c8c3ab7597d0\\checkpoints\\last.pt",
+      "sha256": "62a67ea3badc5233ecbd27fe3d696435231a2196630643eace6a3544f8d88451",
+      "RUN_ID": "39a7fa18e4588cd1511c-678efb85e38347a5a679c8c3ab7597d0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3e532587bb019d0e69df-c66c2f4696c34b68a736ed51f12c1285\\checkpoints\\best.pt",
+      "sha256": "877369d9cd531650b122c43299e16390eb11644c521c04bb7b4d177a28a1883b",
+      "RUN_ID": "3e532587bb019d0e69df-c66c2f4696c34b68a736ed51f12c1285",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3e532587bb019d0e69df-c66c2f4696c34b68a736ed51f12c1285\\checkpoints\\last.pt",
+      "sha256": "2c14dfa1524c50abf074dd6b11acfff5c9f8409e3de71c6bb091dffa4ac510b3",
+      "RUN_ID": "3e532587bb019d0e69df-c66c2f4696c34b68a736ed51f12c1285",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3e8510cd43e8d7ce626e-1a70f426c36c4c4ab6fd99308e3d4643\\checkpoints\\best.pt",
+      "sha256": "2cc3852ab0d8044b68ba24df2acdf025feace8243a2d749e23768f26dc486798",
+      "RUN_ID": "3e8510cd43e8d7ce626e-1a70f426c36c4c4ab6fd99308e3d4643",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3e8510cd43e8d7ce626e-1a70f426c36c4c4ab6fd99308e3d4643\\checkpoints\\last.pt",
+      "sha256": "9a6f01fdc5250fd258ef23f62114b4910375c6d75f3cd39c16c9ee5a81aecedd",
+      "RUN_ID": "3e8510cd43e8d7ce626e-1a70f426c36c4c4ab6fd99308e3d4643",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3f5555e0a83dc91e46ce-1b1db454fcd44355b651884560faf505\\checkpoints\\best.pt",
+      "sha256": "1d956965ba8bbacba6fdcee4eb43994d25f476d82f47077f8b2d1f440bfb0250",
+      "RUN_ID": "3f5555e0a83dc91e46ce-1b1db454fcd44355b651884560faf505",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3f5555e0a83dc91e46ce-1b1db454fcd44355b651884560faf505\\checkpoints\\last.pt",
+      "sha256": "db5afb6549b5839fcfb39c67ee06fa95161c2635f293030a3950ae53760fd6e1",
+      "RUN_ID": "3f5555e0a83dc91e46ce-1b1db454fcd44355b651884560faf505",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3f5b20ec09259c18b1bf-b0a8634dc3ae4969bf52505b5b7a841f\\checkpoints\\best.pt",
+      "sha256": "b58985112895274b2f89dd3052b479fb681a92014a23b66fc00ee6a9e5b0276b",
+      "RUN_ID": "3f5b20ec09259c18b1bf-b0a8634dc3ae4969bf52505b5b7a841f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\3f5b20ec09259c18b1bf-b0a8634dc3ae4969bf52505b5b7a841f\\checkpoints\\last.pt",
+      "sha256": "482b296ee08d4fe01c4d2cb3833b4af34d81ba5df8dd2b24dd5ef7977ec49f36",
+      "RUN_ID": "3f5b20ec09259c18b1bf-b0a8634dc3ae4969bf52505b5b7a841f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\44b24f537f04a7121ddf-b9730a45fb35497bb2c272c3a1f3e9a0\\checkpoints\\best.pt",
+      "sha256": "6e2367ec5f85ed40c67987601e10d15b5187105c942beaf5be4490a95a75189d",
+      "RUN_ID": "44b24f537f04a7121ddf-b9730a45fb35497bb2c272c3a1f3e9a0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\44b24f537f04a7121ddf-b9730a45fb35497bb2c272c3a1f3e9a0\\checkpoints\\last.pt",
+      "sha256": "3297d0351fe73c08ff3051f448391f9e67ae3b7affe48e16c6a07afaaf628ff0",
+      "RUN_ID": "44b24f537f04a7121ddf-b9730a45fb35497bb2c272c3a1f3e9a0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\44c516dc49af0b96b9ca-d6bd452d083f48a5a5fe028849990680\\checkpoints\\best.pt",
+      "sha256": "83b18422a6e49196b9c3bbfd679f4bae2b82b7f46a31cd498de10d9a73956dc4",
+      "RUN_ID": "44c516dc49af0b96b9ca-d6bd452d083f48a5a5fe028849990680",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\44c516dc49af0b96b9ca-d6bd452d083f48a5a5fe028849990680\\checkpoints\\last.pt",
+      "sha256": "7f231fa265fbc29788ce41b985434a17c61e606995d402bec051bc69eb55143a",
+      "RUN_ID": "44c516dc49af0b96b9ca-d6bd452d083f48a5a5fe028849990680",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\45f21d9482beb5882b40-dbf33538d03647429c4687dc032c9bb1\\checkpoints\\best.pt",
+      "sha256": "0e04ce78448671cd877cba9271411bbe10287e4d181f850a0f2bf107c303712b",
+      "RUN_ID": "45f21d9482beb5882b40-dbf33538d03647429c4687dc032c9bb1",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\45f21d9482beb5882b40-dbf33538d03647429c4687dc032c9bb1\\checkpoints\\last.pt",
+      "sha256": "47796843f1630bc2b975f933042132d3c0e8923c4c62f4ae1c6da96aefdb6498",
+      "RUN_ID": "45f21d9482beb5882b40-dbf33538d03647429c4687dc032c9bb1",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\45ff0a29fff1809b0d7b-98d3ffe62e394ecea746e6b022d63cb9\\checkpoints\\best.pt",
+      "sha256": "e3946325e3faae0daf08d9a8bbec464a64cd700e20570855a36ac739ae56bd1e",
+      "RUN_ID": "45ff0a29fff1809b0d7b-98d3ffe62e394ecea746e6b022d63cb9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\45ff0a29fff1809b0d7b-98d3ffe62e394ecea746e6b022d63cb9\\checkpoints\\last.pt",
+      "sha256": "483392a253cbb51b6562242a183325ced796c09df16b0868a34de8ef2525028a",
+      "RUN_ID": "45ff0a29fff1809b0d7b-98d3ffe62e394ecea746e6b022d63cb9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\46cac5e860b52e269dc6-08fb1f9adbd447339b35c6f683a157a3\\checkpoints\\best.pt",
+      "sha256": "09f2e6a73a5d8620d46fea69d138103ae31a79dfc02ddbc24ab9d71fae8b6e0f",
+      "RUN_ID": "46cac5e860b52e269dc6-08fb1f9adbd447339b35c6f683a157a3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\46cac5e860b52e269dc6-08fb1f9adbd447339b35c6f683a157a3\\checkpoints\\last.pt",
+      "sha256": "8eb285de585a5580647bae86242f5a542790c2260fc8976c2a98723a57f7073e",
+      "RUN_ID": "46cac5e860b52e269dc6-08fb1f9adbd447339b35c6f683a157a3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\47d1b660a457162b60d4-be9ce5a4648b47b78e40495988f40885\\checkpoints\\best.pt",
+      "sha256": "1e6f36acb99482a34fd15ad773d810d61d1f06c66b6c97cdf725c5ffda4efa7b",
+      "RUN_ID": "47d1b660a457162b60d4-be9ce5a4648b47b78e40495988f40885",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\47d1b660a457162b60d4-be9ce5a4648b47b78e40495988f40885\\checkpoints\\last.pt",
+      "sha256": "db13a50a030ab342531eae9b777f7ec033b5d4c1958308775ed99c381bee2470",
+      "RUN_ID": "47d1b660a457162b60d4-be9ce5a4648b47b78e40495988f40885",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\48b8fc8f7aa734182adc-6163115fb42345238c2a09d43620da7f\\checkpoints\\best.pt",
+      "sha256": "8f4eff80b180148196a5ab98f96714f2cfb0d1bf656015f92e880f286464f965",
+      "RUN_ID": "48b8fc8f7aa734182adc-6163115fb42345238c2a09d43620da7f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\48b8fc8f7aa734182adc-6163115fb42345238c2a09d43620da7f\\checkpoints\\last.pt",
+      "sha256": "a247dab6391cae25c12b6e33259068988e02d3c401a5f6a0dc1becff57482d17",
+      "RUN_ID": "48b8fc8f7aa734182adc-6163115fb42345238c2a09d43620da7f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4abb3712f29feeb8b15b-750ad5d82deb4eada6fb34c320c77a1a\\checkpoints\\best.pt",
+      "sha256": "755106f723497fe0f1c14adb86a14c77a6d6c2ed427770bd5c0afbe911b97d06",
+      "RUN_ID": "4abb3712f29feeb8b15b-750ad5d82deb4eada6fb34c320c77a1a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4abb3712f29feeb8b15b-750ad5d82deb4eada6fb34c320c77a1a\\checkpoints\\last.pt",
+      "sha256": "c5300951d8aa92c2839288964cd3d5232e4217579e710ce168f23d1bcddfcda2",
+      "RUN_ID": "4abb3712f29feeb8b15b-750ad5d82deb4eada6fb34c320c77a1a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4d60ea5fabfbeebbeea6-ff46100570034a02948fd40ed5cf1a8c\\checkpoints\\best.pt",
+      "sha256": "6af0ea2e6340b6d31b1e7046f0ab598d01f79f55a5aef7401ee517d58a8fb666",
+      "RUN_ID": "4d60ea5fabfbeebbeea6-ff46100570034a02948fd40ed5cf1a8c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4d60ea5fabfbeebbeea6-ff46100570034a02948fd40ed5cf1a8c\\checkpoints\\last.pt",
+      "sha256": "a5bbc5dbd5fe28e11c15e2d88a53118752c194920584f3a6385d86160f9af454",
+      "RUN_ID": "4d60ea5fabfbeebbeea6-ff46100570034a02948fd40ed5cf1a8c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4e943d5698c6bc7b0f0d-3b5514532abe4c8c94830c91b6eb71eb\\checkpoints\\best.pt",
+      "sha256": "a2c9b43d59a176df67bd5e7eeed861f9530e4f55cd6b6968548542d276d9161f",
+      "RUN_ID": "4e943d5698c6bc7b0f0d-3b5514532abe4c8c94830c91b6eb71eb",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4e943d5698c6bc7b0f0d-3b5514532abe4c8c94830c91b6eb71eb\\checkpoints\\last.pt",
+      "sha256": "088910972df13ac2b6cb337e710f300045969bce8e8c1a563628415052c0d62a",
+      "RUN_ID": "4e943d5698c6bc7b0f0d-3b5514532abe4c8c94830c91b6eb71eb",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4f1309ccef0732379b95-45fdb132ca524446ad58255badf971ab\\checkpoints\\best.pt",
+      "sha256": "f68ebcb4c87b5725afbebc1d51d92c6f794bd657e5acb22b6ad7eff66b51b980",
+      "RUN_ID": "4f1309ccef0732379b95-45fdb132ca524446ad58255badf971ab",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\4f1309ccef0732379b95-45fdb132ca524446ad58255badf971ab\\checkpoints\\last.pt",
+      "sha256": "0fd3a27979398a053c4f39c8b6894d5d02c48e131d5040161de527dbad6f20e4",
+      "RUN_ID": "4f1309ccef0732379b95-45fdb132ca524446ad58255badf971ab",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\526ea102dc025649d001-becc1ea6474f46408901646acc07cff9\\checkpoints\\best.pt",
+      "sha256": "8f9572787be7a2cb3a95792d68744a45959dcc5fc8663b0d72fc3019bc3910c3",
+      "RUN_ID": "526ea102dc025649d001-becc1ea6474f46408901646acc07cff9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\526ea102dc025649d001-becc1ea6474f46408901646acc07cff9\\checkpoints\\last.pt",
+      "sha256": "20de179a0a13501cc7df85c6fe3dd56799837adae87a99583efd9fd90e2d2106",
+      "RUN_ID": "526ea102dc025649d001-becc1ea6474f46408901646acc07cff9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\539692886916628b6839-1a2f5f67b8d740a0b0491328abf4f97a\\checkpoints\\best.pt",
+      "sha256": "47eab024d534d824d421922e0ba00b5581965f74692013fe4dc96a436f51dfad",
+      "RUN_ID": "539692886916628b6839-1a2f5f67b8d740a0b0491328abf4f97a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\539692886916628b6839-1a2f5f67b8d740a0b0491328abf4f97a\\checkpoints\\last.pt",
+      "sha256": "89a6cb39def147ddb68a3f8ec4e12d8e7f5238aa886aea1330950c161c983a46",
+      "RUN_ID": "539692886916628b6839-1a2f5f67b8d740a0b0491328abf4f97a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\54102248e5b0ba70544a-62e4cf14fc35422fa93c0704ea25cecc\\checkpoints\\best.pt",
+      "sha256": "ae61a522a1d88c75e536a06a67e5db7bc949a77dbb37cd5c0c9ed38cadd66fe9",
+      "RUN_ID": "54102248e5b0ba70544a-62e4cf14fc35422fa93c0704ea25cecc",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\54102248e5b0ba70544a-62e4cf14fc35422fa93c0704ea25cecc\\checkpoints\\last.pt",
+      "sha256": "13fc4cd4b192d6d18652f7dbd7a776c4b49565d28437c7869e63fd65903f842a",
+      "RUN_ID": "54102248e5b0ba70544a-62e4cf14fc35422fa93c0704ea25cecc",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\54a7e62a3a2e36b0b801-90a7cb1caa06456fa667d52ea87f9871\\checkpoints\\best.pt",
+      "sha256": "ec80838fcb718197cd66877d07fddaf8816b7b98394420f2ee4c80460cacdc2a",
+      "RUN_ID": "54a7e62a3a2e36b0b801-90a7cb1caa06456fa667d52ea87f9871",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\54a7e62a3a2e36b0b801-90a7cb1caa06456fa667d52ea87f9871\\checkpoints\\last.pt",
+      "sha256": "d92e542e8219f129cbc6451ff11066844eb9a956b81b572498aa763492d1fb83",
+      "RUN_ID": "54a7e62a3a2e36b0b801-90a7cb1caa06456fa667d52ea87f9871",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\555559686ba49f071d9f-8521bd26bd8748c3b20663d13ce1ad0d\\checkpoints\\best.pt",
+      "sha256": "621bf7b479f52f4ae5079a247f205234f1aed5011ad775babc3741ee4dfc2c2d",
+      "RUN_ID": "555559686ba49f071d9f-8521bd26bd8748c3b20663d13ce1ad0d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\555559686ba49f071d9f-8521bd26bd8748c3b20663d13ce1ad0d\\checkpoints\\last.pt",
+      "sha256": "eb9408e4013dfc7e60c0912aaa1bf6df2e4826117b86e61b1229d25200572cb3",
+      "RUN_ID": "555559686ba49f071d9f-8521bd26bd8748c3b20663d13ce1ad0d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\58390f150902e27f68ad-322c575664124c338d8f961779dce0e8\\checkpoints\\best.pt",
+      "sha256": "4891203d6e98944271890d5107a80944784476a7b3c36b683d74e96e27b08270",
+      "RUN_ID": "58390f150902e27f68ad-322c575664124c338d8f961779dce0e8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\58390f150902e27f68ad-322c575664124c338d8f961779dce0e8\\checkpoints\\last.pt",
+      "sha256": "73d0cb739e167ec0315cc657d7d1cf4e6bd47026383ea12b7edfffb6fe9cf787",
+      "RUN_ID": "58390f150902e27f68ad-322c575664124c338d8f961779dce0e8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\586b65a9ee6ec6075b79-18370803cf3a4796b82d51a54d4391bd\\checkpoints\\best.pt",
+      "sha256": "e84884457e79fd01b7b1d93ca2c742debf5ed725967da5ea2d82e81a6a4fb401",
+      "RUN_ID": "586b65a9ee6ec6075b79-18370803cf3a4796b82d51a54d4391bd",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\586b65a9ee6ec6075b79-18370803cf3a4796b82d51a54d4391bd\\checkpoints\\last.pt",
+      "sha256": "1f8e41b7540f2ec955ed6a3af68bbc90028e8d7f7b0c83d0555cf341d21b91fd",
+      "RUN_ID": "586b65a9ee6ec6075b79-18370803cf3a4796b82d51a54d4391bd",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\59872b8bd7319843ed9d-d66b5297347846f68e95358b8a395d2e\\checkpoints\\best.pt",
+      "sha256": "b524d485f141d96206b647127c288b325236412548bc4660de8b9b5704a94fb3",
+      "RUN_ID": "59872b8bd7319843ed9d-d66b5297347846f68e95358b8a395d2e",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\59872b8bd7319843ed9d-d66b5297347846f68e95358b8a395d2e\\checkpoints\\last.pt",
+      "sha256": "c81b570100d0a05a6a277d7e2443da117a75a3951c731ab0738262dd682ea24d",
+      "RUN_ID": "59872b8bd7319843ed9d-d66b5297347846f68e95358b8a395d2e",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\5c5854a66a8db9e6f7f2-e64c290690664181960bbfd99fcff60e\\checkpoints\\best.pt",
+      "sha256": "ab064a204782b85f734fffd4566f7599b0774028862d050b6953ccc5afff40b2",
+      "RUN_ID": "5c5854a66a8db9e6f7f2-e64c290690664181960bbfd99fcff60e",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\5c5854a66a8db9e6f7f2-e64c290690664181960bbfd99fcff60e\\checkpoints\\last.pt",
+      "sha256": "92c1f79337f9b99b84ba53723164a4e6a976cc2a5c43fad0a5887eab9b88d35d",
+      "RUN_ID": "5c5854a66a8db9e6f7f2-e64c290690664181960bbfd99fcff60e",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\61815d8284ca3457e42c-107846a9f3b74d51b46ca28c9574d902\\checkpoints\\best.pt",
+      "sha256": "fe63583cbc077abb467bcb0a2fe48004103172948baea00fd07237436b6ab7ff",
+      "RUN_ID": "61815d8284ca3457e42c-107846a9f3b74d51b46ca28c9574d902",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\61815d8284ca3457e42c-107846a9f3b74d51b46ca28c9574d902\\checkpoints\\last.pt",
+      "sha256": "488c00f3f79335a05b774003628ad750ecfe99f152f498d284e363e593699b52",
+      "RUN_ID": "61815d8284ca3457e42c-107846a9f3b74d51b46ca28c9574d902",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\619dff02993073b0988b-63a317d81b804ddb805c4be6d0ca99ea\\checkpoints\\best.pt",
+      "sha256": "507e046ebc6cff70ea97af6cf2b804fbd05740f8987fba4a8962ee78176cc7f4",
+      "RUN_ID": "619dff02993073b0988b-63a317d81b804ddb805c4be6d0ca99ea",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\619dff02993073b0988b-63a317d81b804ddb805c4be6d0ca99ea\\checkpoints\\last.pt",
+      "sha256": "af6323361ed8c7557fe0908baa1b34d0446f3ae49dc508c88a45ad88f1880940",
+      "RUN_ID": "619dff02993073b0988b-63a317d81b804ddb805c4be6d0ca99ea",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\61e779497c4b0be66363-19946fe3e9704b5186f47587c755ba71\\checkpoints\\best.pt",
+      "sha256": "9484151e0ab981231435fb63188174cb06eb0f6eecd051afe85aa5b75cb03e5e",
+      "RUN_ID": "61e779497c4b0be66363-19946fe3e9704b5186f47587c755ba71",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\61e779497c4b0be66363-19946fe3e9704b5186f47587c755ba71\\checkpoints\\last.pt",
+      "sha256": "35677b25d23e8801fed3e0e2a0cebdc3b69b396a6be3f91910dab26c5e52be53",
+      "RUN_ID": "61e779497c4b0be66363-19946fe3e9704b5186f47587c755ba71",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6264639bde7efd35b1bb-ac30661204f24b7faac14b80a7eb1f70\\checkpoints\\best.pt",
+      "sha256": "19887206b54cd83aa8cfb5650a58af368f5c7245f1aeb379745f87be91228a45",
+      "RUN_ID": "6264639bde7efd35b1bb-ac30661204f24b7faac14b80a7eb1f70",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6264639bde7efd35b1bb-ac30661204f24b7faac14b80a7eb1f70\\checkpoints\\last.pt",
+      "sha256": "d61a1c2ad1c96ac2809deca9bce56204b63e51f5e95aba9ffec55ffca98f970c",
+      "RUN_ID": "6264639bde7efd35b1bb-ac30661204f24b7faac14b80a7eb1f70",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\62d5a011d9e4477f1663-31279bf03d40474b8849ccb2a30f5b57\\checkpoints\\best.pt",
+      "sha256": "a81ecf923d1ac9b2d9ce27076298d3ceb0738d89ca96afade1156d3aa0110708",
+      "RUN_ID": "62d5a011d9e4477f1663-31279bf03d40474b8849ccb2a30f5b57",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\62d5a011d9e4477f1663-31279bf03d40474b8849ccb2a30f5b57\\checkpoints\\last.pt",
+      "sha256": "9b9d77b125700c4cba65a19f9b7ee9a409df867e7844f1503b2e29471c5fe873",
+      "RUN_ID": "62d5a011d9e4477f1663-31279bf03d40474b8849ccb2a30f5b57",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\63ed2446f720364f7821-21448bf5a1d2416cac17e78fb6fb6ca8\\checkpoints\\best.pt",
+      "sha256": "0fb9fc4bfc10e149af54eefd1bb556c5ef8b21ddf379dd4f3701375baf8fd5bb",
+      "RUN_ID": "63ed2446f720364f7821-21448bf5a1d2416cac17e78fb6fb6ca8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\63ed2446f720364f7821-21448bf5a1d2416cac17e78fb6fb6ca8\\checkpoints\\last.pt",
+      "sha256": "f34f49cea3f0a134c704ad224f4df5fd2c3117136648b1ae7462d08a0f2a663d",
+      "RUN_ID": "63ed2446f720364f7821-21448bf5a1d2416cac17e78fb6fb6ca8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\645385ff335318cdddca-62a23de723124b88b4fc1b6ca7e4e9d4\\checkpoints\\best.pt",
+      "sha256": "b4678cd31e8c58e67d189b68b0cf53e2bb075df970e2c29c93887a2ce221bccc",
+      "RUN_ID": "645385ff335318cdddca-62a23de723124b88b4fc1b6ca7e4e9d4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\645385ff335318cdddca-62a23de723124b88b4fc1b6ca7e4e9d4\\checkpoints\\last.pt",
+      "sha256": "9d4d45958362fabe01f0377f2f7720c735f8987c6df9f0dd34b142f223942100",
+      "RUN_ID": "645385ff335318cdddca-62a23de723124b88b4fc1b6ca7e4e9d4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\67698dc448b795fddd35-a492b06eaee14f2d9df8143cf0bd4188\\checkpoints\\best.pt",
+      "sha256": "e4bf6eaebd62297fec58645999f47441bc89acc20c97b5e53706c77b78167130",
+      "RUN_ID": "67698dc448b795fddd35-a492b06eaee14f2d9df8143cf0bd4188",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\67698dc448b795fddd35-a492b06eaee14f2d9df8143cf0bd4188\\checkpoints\\last.pt",
+      "sha256": "42362f4e37e3d8880afeb50e3b67b200c461fefc9bd52f61f70c15ac39458ab4",
+      "RUN_ID": "67698dc448b795fddd35-a492b06eaee14f2d9df8143cf0bd4188",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\67a0e32fe2ed60f82195-94e9ff6338904587a3f84227a7f8b583\\checkpoints\\best.pt",
+      "sha256": "116c401a7452c396a65a2bdf34ffdd1d9d6f6298fd28e40020d7ce11beaf6516",
+      "RUN_ID": "67a0e32fe2ed60f82195-94e9ff6338904587a3f84227a7f8b583",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\67a0e32fe2ed60f82195-94e9ff6338904587a3f84227a7f8b583\\checkpoints\\last.pt",
+      "sha256": "deecb0c3fa27da963e0bf9516052047bba7890e4b5262cd5d6e280d58f131c6c",
+      "RUN_ID": "67a0e32fe2ed60f82195-94e9ff6338904587a3f84227a7f8b583",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6c13e17b81925c807810-5014a8fd3c5e4a1e8386b9b854224c78\\checkpoints\\best.pt",
+      "sha256": "696a788f37da3833f3a2523dc2455cc6dc1466d4390e6ebf7d1935650824c06d",
+      "RUN_ID": "6c13e17b81925c807810-5014a8fd3c5e4a1e8386b9b854224c78",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6c13e17b81925c807810-5014a8fd3c5e4a1e8386b9b854224c78\\checkpoints\\last.pt",
+      "sha256": "a022e675dbc3d41c97df263be6d19c5d9aeafa59f00b05cbd02ce0bc523d9a09",
+      "RUN_ID": "6c13e17b81925c807810-5014a8fd3c5e4a1e8386b9b854224c78",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6c898fbb31a195319043-fab7b2f373a34e7ca3bb1804d434cc30\\checkpoints\\best.pt",
+      "sha256": "db0f3ab2a8b7e1dc2eb9d9a415e820bac8741f5a7de4e0a7d04a7fb250ea11b0",
+      "RUN_ID": "6c898fbb31a195319043-fab7b2f373a34e7ca3bb1804d434cc30",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6c898fbb31a195319043-fab7b2f373a34e7ca3bb1804d434cc30\\checkpoints\\last.pt",
+      "sha256": "06a7bb4698af190df78df30167f57a251d550ecdc32f973dc1b7359ab55060fa",
+      "RUN_ID": "6c898fbb31a195319043-fab7b2f373a34e7ca3bb1804d434cc30",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6d706c96cdafff677478-8d3a1b8555c34ac88ca29fe6fa649243\\checkpoints\\best.pt",
+      "sha256": "8e6aa68439d73f8f574b2575c8393e176c4f86b5f945413386a764b0b2133a6a",
+      "RUN_ID": "6d706c96cdafff677478-8d3a1b8555c34ac88ca29fe6fa649243",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\6d706c96cdafff677478-8d3a1b8555c34ac88ca29fe6fa649243\\checkpoints\\last.pt",
+      "sha256": "1df09edca5a4b62396f3aaff6fcf6d88a524e0005788c9159c04ecc6c6e5e2a4",
+      "RUN_ID": "6d706c96cdafff677478-8d3a1b8555c34ac88ca29fe6fa649243",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\72f56c8ac8fe3d37995b-db4cce5861344cf1b47424748d862a90\\checkpoints\\best.pt",
+      "sha256": "f6ce08de58a724007e3ec38fce9dfc1a734b571c01076a5a2fcfbb6b7bf082f6",
+      "RUN_ID": "72f56c8ac8fe3d37995b-db4cce5861344cf1b47424748d862a90",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\72f56c8ac8fe3d37995b-db4cce5861344cf1b47424748d862a90\\checkpoints\\last.pt",
+      "sha256": "c5cf43a2e5e3e5e81f45a2d51f6624cfd5d7dbf1388872795e0f94128993be46",
+      "RUN_ID": "72f56c8ac8fe3d37995b-db4cce5861344cf1b47424748d862a90",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7585b848a49f9e61757e-42bcee133bb9477591464c683eabb563\\checkpoints\\best.pt",
+      "sha256": "61dac11c31902594922e9e95abc56a6e60e3763f7b2cfd3a3fba505030dd4ca1",
+      "RUN_ID": "7585b848a49f9e61757e-42bcee133bb9477591464c683eabb563",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7585b848a49f9e61757e-42bcee133bb9477591464c683eabb563\\checkpoints\\last.pt",
+      "sha256": "f5bed0974dd500784253f9b8faa207fcc5df8636a57a59aa9f01f19cec42f681",
+      "RUN_ID": "7585b848a49f9e61757e-42bcee133bb9477591464c683eabb563",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\77c502bc95aff0794560-3f7060d509be485cbd751389a60a00d2\\checkpoints\\best.pt",
+      "sha256": "d9dadd32cea39eaca65431fd928f73a4897dbfcf494fb2fc404d1c6898981edc",
+      "RUN_ID": "77c502bc95aff0794560-3f7060d509be485cbd751389a60a00d2",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\77c502bc95aff0794560-3f7060d509be485cbd751389a60a00d2\\checkpoints\\last.pt",
+      "sha256": "9cb1270309813b3e234264d2f9a68a53de13907337dbcce47808f5561ed8cba1",
+      "RUN_ID": "77c502bc95aff0794560-3f7060d509be485cbd751389a60a00d2",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7c2d8d4e9195f04b356a-c3d9ed2dcf0449b19783111c209a76f0\\checkpoints\\best.pt",
+      "sha256": "7d59b6b1454653695747dbe0aaf402fc9518ed5c8ba387cddc64d2903d54fd10",
+      "RUN_ID": "7c2d8d4e9195f04b356a-c3d9ed2dcf0449b19783111c209a76f0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7c2d8d4e9195f04b356a-c3d9ed2dcf0449b19783111c209a76f0\\checkpoints\\last.pt",
+      "sha256": "43cde6538126172f2fbeba0d39066b6e41ee556a2ae62169172744388eb85444",
+      "RUN_ID": "7c2d8d4e9195f04b356a-c3d9ed2dcf0449b19783111c209a76f0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7cc920b5fcdbf12f5a66-143ddfe52d3f435f8cd0ad683fd4f047\\checkpoints\\best.pt",
+      "sha256": "19e624d4bf52b76e291834b5cb8e359615afd3c4aa012c8362e198dfbfc538ed",
+      "RUN_ID": "7cc920b5fcdbf12f5a66-143ddfe52d3f435f8cd0ad683fd4f047",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7cc920b5fcdbf12f5a66-143ddfe52d3f435f8cd0ad683fd4f047\\checkpoints\\last.pt",
+      "sha256": "7238224195f3fee14afe0ccd3a114502c35bde810416372e62156ee1c1ead562",
+      "RUN_ID": "7cc920b5fcdbf12f5a66-143ddfe52d3f435f8cd0ad683fd4f047",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7fc916fcf5f7367623d7-367240df24bd4ae59738671d0e116410\\checkpoints\\best.pt",
+      "sha256": "6df81bc38066a80e3aac287038ad33a5fddd73dad61c25eb6aacf33a9cd855ac",
+      "RUN_ID": "7fc916fcf5f7367623d7-367240df24bd4ae59738671d0e116410",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\7fc916fcf5f7367623d7-367240df24bd4ae59738671d0e116410\\checkpoints\\last.pt",
+      "sha256": "f92da73a6f8952fe74788f1b519dfa8f0ce37e88de608a0d26b425b05138181d",
+      "RUN_ID": "7fc916fcf5f7367623d7-367240df24bd4ae59738671d0e116410",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\80767570b4d925d40a9b-4b56696d0757443c88f38fcedd6e71d8\\checkpoints\\best.pt",
+      "sha256": "15cf65bc814ef68b3fad45ca2507a386a951c9ca3e73325f790343cb7574c799",
+      "RUN_ID": "80767570b4d925d40a9b-4b56696d0757443c88f38fcedd6e71d8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\80767570b4d925d40a9b-4b56696d0757443c88f38fcedd6e71d8\\checkpoints\\last.pt",
+      "sha256": "da6f9a15aae1305ebf3d41067278e341d5b88a86df34877b72dc2b298f3c79f3",
+      "RUN_ID": "80767570b4d925d40a9b-4b56696d0757443c88f38fcedd6e71d8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8153d5dd8492676db92b-0700efde84e442f4b5d6b4a47b385f35\\checkpoints\\best.pt",
+      "sha256": "d0ac9d72be280298fe2f768c8955f60eb120f1a3c63afc6dd710c206f3278802",
+      "RUN_ID": "8153d5dd8492676db92b-0700efde84e442f4b5d6b4a47b385f35",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8153d5dd8492676db92b-0700efde84e442f4b5d6b4a47b385f35\\checkpoints\\last.pt",
+      "sha256": "ff16ae2f7239044cf6d7ac64ecf9fad78a2536f419eeae31883bf62dae17f627",
+      "RUN_ID": "8153d5dd8492676db92b-0700efde84e442f4b5d6b4a47b385f35",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\821d133eac16b890d6c6-d43e083a7eb540d2a7879911ab878b4c\\checkpoints\\best.pt",
+      "sha256": "91d15615f12a006e474d5b85b9500e8bb208cfc0cb43a462d09173c2cd3e8d69",
+      "RUN_ID": "821d133eac16b890d6c6-d43e083a7eb540d2a7879911ab878b4c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\821d133eac16b890d6c6-d43e083a7eb540d2a7879911ab878b4c\\checkpoints\\last.pt",
+      "sha256": "36ab5d02fcd94e30e80e3509ec4b332befd5fa7304f8226e83a49d5b82d8f1eb",
+      "RUN_ID": "821d133eac16b890d6c6-d43e083a7eb540d2a7879911ab878b4c",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8542d09d0366af1eb5d6-c601cbd0238746299ab0ae7228e02866\\checkpoints\\best.pt",
+      "sha256": "8dc95e15d65e56c0b2cf62db16f5516e18ed09327d26d57eb64eadf98ad66fd0",
+      "RUN_ID": "8542d09d0366af1eb5d6-c601cbd0238746299ab0ae7228e02866",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8542d09d0366af1eb5d6-c601cbd0238746299ab0ae7228e02866\\checkpoints\\last.pt",
+      "sha256": "9ffbe26a7f1d71d46c209f357e051c750cdfeff4f4918c9fe024e9ec4e367136",
+      "RUN_ID": "8542d09d0366af1eb5d6-c601cbd0238746299ab0ae7228e02866",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8788bf297ad23eac1f52-5f8b6e314cae4705a57453cf623a5ad0\\checkpoints\\best.pt",
+      "sha256": "d1ab4b69f67fe570c6538ee82d7d5695546b0769e78dce8f1e0ed30036fca8dc",
+      "RUN_ID": "8788bf297ad23eac1f52-5f8b6e314cae4705a57453cf623a5ad0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8788bf297ad23eac1f52-5f8b6e314cae4705a57453cf623a5ad0\\checkpoints\\last.pt",
+      "sha256": "6cb67bfa029dd5b4a207071d47ddce2fabd61ac78ab5b6a98e3065171ed650b8",
+      "RUN_ID": "8788bf297ad23eac1f52-5f8b6e314cae4705a57453cf623a5ad0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\88206e881af8797f6107-92470afddc354adeb19d14f5d8efa576\\checkpoints\\best.pt",
+      "sha256": "5fd56989c6c06c814bf088fa149623ca166a602cd4525b2659eb5015cc91a68e",
+      "RUN_ID": "88206e881af8797f6107-92470afddc354adeb19d14f5d8efa576",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\88206e881af8797f6107-92470afddc354adeb19d14f5d8efa576\\checkpoints\\last.pt",
+      "sha256": "77922f9c261f6ad26aa5ecfc8ba2d791f03e22e88b7df613b47277765da96a16",
+      "RUN_ID": "88206e881af8797f6107-92470afddc354adeb19d14f5d8efa576",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8a126c670f935d362cdb-cdc2009a229d4d1f9f36355de25bde95\\checkpoints\\best.pt",
+      "sha256": "8a3fc7fb5614e8599cd03d89e7a3f36a5bf43cbf7d3326dd9ce6cac6fb0dc791",
+      "RUN_ID": "8a126c670f935d362cdb-cdc2009a229d4d1f9f36355de25bde95",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8a126c670f935d362cdb-cdc2009a229d4d1f9f36355de25bde95\\checkpoints\\last.pt",
+      "sha256": "ed681afd27debd5f3bc9aa643bcca2fecd422a1bf25f2a8d00bc297d61e18805",
+      "RUN_ID": "8a126c670f935d362cdb-cdc2009a229d4d1f9f36355de25bde95",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8b9df0e90c36d2c63269-41ec897b46ce4b87b6533d8e0e89443d\\checkpoints\\best.pt",
+      "sha256": "86cfa0a7dc625e989b2442fd16af70a13aba388e61dbb7c63286ead2638d9810",
+      "RUN_ID": "8b9df0e90c36d2c63269-41ec897b46ce4b87b6533d8e0e89443d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8b9df0e90c36d2c63269-41ec897b46ce4b87b6533d8e0e89443d\\checkpoints\\last.pt",
+      "sha256": "912c22e222755eb8ef1c73ee0e1619c37b06593adfef77f701fe8f0f4c7ad649",
+      "RUN_ID": "8b9df0e90c36d2c63269-41ec897b46ce4b87b6533d8e0e89443d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8f84a71525b5baafa201-7450eb59cd284090817b24ae8df2fe25\\checkpoints\\best.pt",
+      "sha256": "a9e8fdebc797a96fc46a7593e2b600278228ff128727cd43b05da935122bd7eb",
+      "RUN_ID": "8f84a71525b5baafa201-7450eb59cd284090817b24ae8df2fe25",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\8f84a71525b5baafa201-7450eb59cd284090817b24ae8df2fe25\\checkpoints\\last.pt",
+      "sha256": "fdae286ba5473a02df239068692cfc323ce1464148a1ac6ed156526e2f851996",
+      "RUN_ID": "8f84a71525b5baafa201-7450eb59cd284090817b24ae8df2fe25",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9060f72070478093f7c2-c7354c088f7c4c8e8013163836ca935a\\checkpoints\\best.pt",
+      "sha256": "4fcb5079be680011cb01f7b8970d03ba6f4a95d8b6c87540794b039a3ddd9dac",
+      "RUN_ID": "9060f72070478093f7c2-c7354c088f7c4c8e8013163836ca935a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9060f72070478093f7c2-c7354c088f7c4c8e8013163836ca935a\\checkpoints\\last.pt",
+      "sha256": "8070f41057dd0d8e601f04f5b8cfa464dd62e8821f9e8032c8f4a764683c6edd",
+      "RUN_ID": "9060f72070478093f7c2-c7354c088f7c4c8e8013163836ca935a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\941d4821385267b96719-02c1b6b8b263487298b9f9bbcc1d6938\\checkpoints\\best.pt",
+      "sha256": "00d8266f58f685689ffa984623fdbbfdfc40868439829248a740f961902f0de7",
+      "RUN_ID": "941d4821385267b96719-02c1b6b8b263487298b9f9bbcc1d6938",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\941d4821385267b96719-02c1b6b8b263487298b9f9bbcc1d6938\\checkpoints\\last.pt",
+      "sha256": "953f481438e3b8039b7db77026f23b3a3693bec669410d256857a0c97cfab285",
+      "RUN_ID": "941d4821385267b96719-02c1b6b8b263487298b9f9bbcc1d6938",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9548c5be3d1b25752ac6-175762101d994626a15a63f84ad94e82\\checkpoints\\best.pt",
+      "sha256": "3dcd1abea3c5425f10c17aa19f4961de16efdb093b8cb2252f284ab460e61e41",
+      "RUN_ID": "9548c5be3d1b25752ac6-175762101d994626a15a63f84ad94e82",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9548c5be3d1b25752ac6-175762101d994626a15a63f84ad94e82\\checkpoints\\last.pt",
+      "sha256": "96c0d9f5b1e06df32e454e610bec514b4d632a22aa158763c3dfd57099e07862",
+      "RUN_ID": "9548c5be3d1b25752ac6-175762101d994626a15a63f84ad94e82",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9b85c0976f70d0e515f2-692f7098017c4ebebd1ed773ed81456a\\checkpoints\\best.pt",
+      "sha256": "19da1eb91c45349fd1741b8578b64d618199103f48d62a5c9cfdf57105e14289",
+      "RUN_ID": "9b85c0976f70d0e515f2-692f7098017c4ebebd1ed773ed81456a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9b85c0976f70d0e515f2-692f7098017c4ebebd1ed773ed81456a\\checkpoints\\last.pt",
+      "sha256": "d68d02accef2234e6f0c4b33f46743c5fb5bcaf7d57a73989f383f6229cd889c",
+      "RUN_ID": "9b85c0976f70d0e515f2-692f7098017c4ebebd1ed773ed81456a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9bcbbe2610a40222e8bd-94c275122a454ca59481811e80546f43\\checkpoints\\best.pt",
+      "sha256": "156dc6a83ceb2fd112e2a90e1c1f69e6f31c4816289c874fb098fccff58dcd79",
+      "RUN_ID": "9bcbbe2610a40222e8bd-94c275122a454ca59481811e80546f43",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9bcbbe2610a40222e8bd-94c275122a454ca59481811e80546f43\\checkpoints\\last.pt",
+      "sha256": "6aee3bea7550346c1f3b9baa8f962a9b09f96c7abc69fad92d2e65ae8236835c",
+      "RUN_ID": "9bcbbe2610a40222e8bd-94c275122a454ca59481811e80546f43",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9f31134dc39d2a9c8553-454f52cbce8347358820287c34839e3b\\checkpoints\\best.pt",
+      "sha256": "b89657d3492f1b3706e98160a07e8ffd3a4bf2289d09e30ed191b4998733cbc0",
+      "RUN_ID": "9f31134dc39d2a9c8553-454f52cbce8347358820287c34839e3b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\9f31134dc39d2a9c8553-454f52cbce8347358820287c34839e3b\\checkpoints\\last.pt",
+      "sha256": "15c226e1438bc0c98be623de0ad852cfa3e1a8eca6caf5138e7f5f79c0fb4286",
+      "RUN_ID": "9f31134dc39d2a9c8553-454f52cbce8347358820287c34839e3b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a13cd586d2c7488c4b15-c6ff4be319e74ffc812c27a942212608\\checkpoints\\best.pt",
+      "sha256": "dd6df7a1ea146f2d9bf0b1cb66f4ad4499e90df0a91fef176734fc2d8b6bc3d6",
+      "RUN_ID": "a13cd586d2c7488c4b15-c6ff4be319e74ffc812c27a942212608",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a13cd586d2c7488c4b15-c6ff4be319e74ffc812c27a942212608\\checkpoints\\last.pt",
+      "sha256": "8ff7d783e0cc60388be1199365d9937527eccbb29454c22a2af6e747dff530fc",
+      "RUN_ID": "a13cd586d2c7488c4b15-c6ff4be319e74ffc812c27a942212608",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a19c02e73ca4af14d1bf-b529b4c9be104f2aac049e51b3aa6029\\checkpoints\\best.pt",
+      "sha256": "35fc9b067cb8da56a77348d4c35a35fab5410c90b18f3f1d437b1ab2c4c0c2e8",
+      "RUN_ID": "a19c02e73ca4af14d1bf-b529b4c9be104f2aac049e51b3aa6029",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a19c02e73ca4af14d1bf-b529b4c9be104f2aac049e51b3aa6029\\checkpoints\\last.pt",
+      "sha256": "5b1626c25c0e0ae0bb2d8adaa9cb3bc46e4b52d32834bd0a30d383f48ae1abae",
+      "RUN_ID": "a19c02e73ca4af14d1bf-b529b4c9be104f2aac049e51b3aa6029",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a304cedba97f6811843b-702a9049d8eb4dff9c8f91bf13e494b0\\checkpoints\\best.pt",
+      "sha256": "dfed9387fd212f8173c40be2b202849933691d69ed7a714789d2fdfd751eab5a",
+      "RUN_ID": "a304cedba97f6811843b-702a9049d8eb4dff9c8f91bf13e494b0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a304cedba97f6811843b-702a9049d8eb4dff9c8f91bf13e494b0\\checkpoints\\last.pt",
+      "sha256": "f56195f32441232a9b3095487dca60a8d63c5cd07cddef559dde107b0e82d120",
+      "RUN_ID": "a304cedba97f6811843b-702a9049d8eb4dff9c8f91bf13e494b0",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a87f755785ec1a6e2775-932304a7626141fd917d771749a6e0f3\\checkpoints\\best.pt",
+      "sha256": "90cf3592ac780876f1390d67c242be38b1710fb198ee4cfd0c3ad93934317cfd",
+      "RUN_ID": "a87f755785ec1a6e2775-932304a7626141fd917d771749a6e0f3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\a87f755785ec1a6e2775-932304a7626141fd917d771749a6e0f3\\checkpoints\\last.pt",
+      "sha256": "a99f9647f4b344893addbaf94a4b48dc35ffe8d3378c0e49b31723f8be3de2d8",
+      "RUN_ID": "a87f755785ec1a6e2775-932304a7626141fd917d771749a6e0f3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\aa3da6cce30cdfe9c8cd-53e26f97fa5a4caeb5ee0677f7951039\\checkpoints\\best.pt",
+      "sha256": "188db4adeec96eae5162920116e7511e3caf7d1b41ce6b5b8798bc5a2453985f",
+      "RUN_ID": "aa3da6cce30cdfe9c8cd-53e26f97fa5a4caeb5ee0677f7951039",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\aa3da6cce30cdfe9c8cd-53e26f97fa5a4caeb5ee0677f7951039\\checkpoints\\last.pt",
+      "sha256": "2dd97538f673f064eac0b81adaebbda4706b9ef703b5cf5425455371a4e243e5",
+      "RUN_ID": "aa3da6cce30cdfe9c8cd-53e26f97fa5a4caeb5ee0677f7951039",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\aa6edd49f65b4e22281e-4fe1e824d4444dada956a3b814f2ab49\\checkpoints\\best.pt",
+      "sha256": "a457229d26b757d5ae9bd5c9553cfd4a2592844a7c9ee8e2a7d03563281e5ca6",
+      "RUN_ID": "aa6edd49f65b4e22281e-4fe1e824d4444dada956a3b814f2ab49",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\aa6edd49f65b4e22281e-4fe1e824d4444dada956a3b814f2ab49\\checkpoints\\last.pt",
+      "sha256": "bf4ed4cf5329ccd3031911e4a21d3a22270ba14fec0d724b6e463892f6ea66c3",
+      "RUN_ID": "aa6edd49f65b4e22281e-4fe1e824d4444dada956a3b814f2ab49",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ab8d381745367ce892d3-f3bcd9f1f3524706ac5b342c52cd30f4\\checkpoints\\best.pt",
+      "sha256": "d5576c755bde7d811b9ce4cdf3a0d5cc79dbc2a8ca4d88b03ccf26e97bf676de",
+      "RUN_ID": "ab8d381745367ce892d3-f3bcd9f1f3524706ac5b342c52cd30f4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ab8d381745367ce892d3-f3bcd9f1f3524706ac5b342c52cd30f4\\checkpoints\\last.pt",
+      "sha256": "ef22eb8bce12ede4e9c21e4e2b343caf8c7c2f9888051a51ded80e6e33f07b54",
+      "RUN_ID": "ab8d381745367ce892d3-f3bcd9f1f3524706ac5b342c52cd30f4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\aee795afa2726d22b058-2b6bfdd765504f91a32c0f629f1259a4\\checkpoints\\best.pt",
+      "sha256": "c1f67904b492ac5c95c09494b8e7192f22aa290a430faba96f5bc1d8a7389151",
+      "RUN_ID": "aee795afa2726d22b058-2b6bfdd765504f91a32c0f629f1259a4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\aee795afa2726d22b058-2b6bfdd765504f91a32c0f629f1259a4\\checkpoints\\last.pt",
+      "sha256": "15cbe61609db321ce08a9e2a8c57639008f39e6499a792370f6a7545e0906685",
+      "RUN_ID": "aee795afa2726d22b058-2b6bfdd765504f91a32c0f629f1259a4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b021c54240b4bb693493-70abe849978f485f99d7aec615041b9b\\checkpoints\\best.pt",
+      "sha256": "52382a14842f1bbe23b9ee750178a00e58bfbfb911f1478c99876f7455953996",
+      "RUN_ID": "b021c54240b4bb693493-70abe849978f485f99d7aec615041b9b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b021c54240b4bb693493-70abe849978f485f99d7aec615041b9b\\checkpoints\\last.pt",
+      "sha256": "2457f6a23503ec80b72e78455403fb0dfdc1d8af329fb85061dcfda8153c7feb",
+      "RUN_ID": "b021c54240b4bb693493-70abe849978f485f99d7aec615041b9b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b174391e8fa194e858c9-5d3dda4db06443449ac641162b215bf9\\checkpoints\\best.pt",
+      "sha256": "9d8f6e3ad0771ccb536ccb4cff24361cabec1fd708c5f54519a11642a72c8baa",
+      "RUN_ID": "b174391e8fa194e858c9-5d3dda4db06443449ac641162b215bf9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b174391e8fa194e858c9-5d3dda4db06443449ac641162b215bf9\\checkpoints\\last.pt",
+      "sha256": "fa14cdedca086d3449fd1b5f564835e609577bb8943729d79d38b773cc19204c",
+      "RUN_ID": "b174391e8fa194e858c9-5d3dda4db06443449ac641162b215bf9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b247ff735b71f4e82123-29c7993f1f194bc591da7f9e844368d7\\checkpoints\\best.pt",
+      "sha256": "e57cce127a996ff940a8ea01b6a728103fee5951e8e079f0313bdbae1c93e09f",
+      "RUN_ID": "b247ff735b71f4e82123-29c7993f1f194bc591da7f9e844368d7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b247ff735b71f4e82123-29c7993f1f194bc591da7f9e844368d7\\checkpoints\\last.pt",
+      "sha256": "73af790d5eb1f478fc8864427dee1bafab5f673083250406f75472a00c0a5ca7",
+      "RUN_ID": "b247ff735b71f4e82123-29c7993f1f194bc591da7f9e844368d7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b2cdce6a74735f252d53-217c761165014db0a2273452d2452822\\checkpoints\\best.pt",
+      "sha256": "5aa07f5bfc416449200d64d6e8af2959679ffb7421c79ec178fe41adf22460ee",
+      "RUN_ID": "b2cdce6a74735f252d53-217c761165014db0a2273452d2452822",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b2cdce6a74735f252d53-217c761165014db0a2273452d2452822\\checkpoints\\last.pt",
+      "sha256": "a95824dab96e9a3b5f13834602d8eae3687d39c79934fda209eecac9951b73a1",
+      "RUN_ID": "b2cdce6a74735f252d53-217c761165014db0a2273452d2452822",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b365d862b854120fafb3-13b554eb35804aaa9846712afdc3700f\\checkpoints\\best.pt",
+      "sha256": "750c6a1c8366625d199f9449a6aca59a10b8eb237b4d19b0ae9e0db864437531",
+      "RUN_ID": "b365d862b854120fafb3-13b554eb35804aaa9846712afdc3700f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b365d862b854120fafb3-13b554eb35804aaa9846712afdc3700f\\checkpoints\\last.pt",
+      "sha256": "c9e4b21c3e8b1107c271b2057c989fef332bb158033564b4a673c4e7b3dcf1ca",
+      "RUN_ID": "b365d862b854120fafb3-13b554eb35804aaa9846712afdc3700f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b474a39bbef4e97b8c52-249b3dceafaf4cbb9580feeea06d71a3\\checkpoints\\best.pt",
+      "sha256": "93bb4817180bc0a7b4d535a6ae964e510c13737443744f704c5aa56fcfcb4193",
+      "RUN_ID": "b474a39bbef4e97b8c52-249b3dceafaf4cbb9580feeea06d71a3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b474a39bbef4e97b8c52-249b3dceafaf4cbb9580feeea06d71a3\\checkpoints\\last.pt",
+      "sha256": "9601e806daad042eccea8c4fbd1697cffa17c9a769d650012c1db9b6e134c544",
+      "RUN_ID": "b474a39bbef4e97b8c52-249b3dceafaf4cbb9580feeea06d71a3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b4f4e6f42d3e833e58db-bad6bf18cbfd43f28659adccc2e710e7\\checkpoints\\best.pt",
+      "sha256": "a19848106bf313ff587bde78a1eb773a04191ea0bd33c8c2631546ac54a553b9",
+      "RUN_ID": "b4f4e6f42d3e833e58db-bad6bf18cbfd43f28659adccc2e710e7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b4f4e6f42d3e833e58db-bad6bf18cbfd43f28659adccc2e710e7\\checkpoints\\last.pt",
+      "sha256": "0b50d300aaf256f887bffa51c8912feba4cf138c296394e0681dc7abbcbe3f4c",
+      "RUN_ID": "b4f4e6f42d3e833e58db-bad6bf18cbfd43f28659adccc2e710e7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b6ac3dc076b095b5b2ec-0ac9cfca971c48c7babc38840ba07d1b\\checkpoints\\best.pt",
+      "sha256": "53e90674e17622a70829db188b24f0a80b3acc8ac5b2c0a87b605a4405a97326",
+      "RUN_ID": "b6ac3dc076b095b5b2ec-0ac9cfca971c48c7babc38840ba07d1b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\b6ac3dc076b095b5b2ec-0ac9cfca971c48c7babc38840ba07d1b\\checkpoints\\last.pt",
+      "sha256": "e7c8c6e076c6d1688361e205d5d918f9c7ebf89f594e20122aac9b6921720acf",
+      "RUN_ID": "b6ac3dc076b095b5b2ec-0ac9cfca971c48c7babc38840ba07d1b",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\bbadda9f2dfdf51d3ed8-6d2790121d3e40f99ff650b9c9543fb7\\checkpoints\\best.pt",
+      "sha256": "afb3c1338e851434906b0ad30c0049ee7028193febc965ff3a29e88ac509271c",
+      "RUN_ID": "bbadda9f2dfdf51d3ed8-6d2790121d3e40f99ff650b9c9543fb7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\bbadda9f2dfdf51d3ed8-6d2790121d3e40f99ff650b9c9543fb7\\checkpoints\\last.pt",
+      "sha256": "dff1dd98f135ac6ae03987b4de72286e0262aa2e0c0a2c6aedffbee89e46bec4",
+      "RUN_ID": "bbadda9f2dfdf51d3ed8-6d2790121d3e40f99ff650b9c9543fb7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\bf0f98470a5160529ef7-ab4368c1ccfb4157af51c2e0abe1cd51\\checkpoints\\best.pt",
+      "sha256": "1f8b95efaf4be6c374cfe47eef2b922a613e86123d7fcc3b4d7107e658dc6d07",
+      "RUN_ID": "bf0f98470a5160529ef7-ab4368c1ccfb4157af51c2e0abe1cd51",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\bf0f98470a5160529ef7-ab4368c1ccfb4157af51c2e0abe1cd51\\checkpoints\\last.pt",
+      "sha256": "0eeaf9385038ae6c9c0c05734870a99ed5a6bf0ee63f21bbc14f21e0b930a671",
+      "RUN_ID": "bf0f98470a5160529ef7-ab4368c1ccfb4157af51c2e0abe1cd51",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\bf3268cdbeaa0f716400-4c2eb421b60a4aa1a0833d3c91e898c5\\checkpoints\\best.pt",
+      "sha256": "1093bdaf979f69ac03ddd222f252862112dbaa30de5b3ee0d9c2e4777cc668d2",
+      "RUN_ID": "bf3268cdbeaa0f716400-4c2eb421b60a4aa1a0833d3c91e898c5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\bf3268cdbeaa0f716400-4c2eb421b60a4aa1a0833d3c91e898c5\\checkpoints\\last.pt",
+      "sha256": "3bb7bc181230372aa60a22c8a9b4edd31fdf05e5947f1a2bd9597f85553daa53",
+      "RUN_ID": "bf3268cdbeaa0f716400-4c2eb421b60a4aa1a0833d3c91e898c5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\c6cee2b3123c1c1cecdf-ceac9395a8354df6bf9918efd059a2bf\\checkpoints\\best.pt",
+      "sha256": "5a83d3b2fbd70f00e6a8cf8520890b0544a27378b4e98d4a1261af0ef1f7cb23",
+      "RUN_ID": "c6cee2b3123c1c1cecdf-ceac9395a8354df6bf9918efd059a2bf",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\c6cee2b3123c1c1cecdf-ceac9395a8354df6bf9918efd059a2bf\\checkpoints\\last.pt",
+      "sha256": "c04ad32ad7dc08bb172c00c71a6628bf342ce7e9b1966b0cb473583f8dd427a2",
+      "RUN_ID": "c6cee2b3123c1c1cecdf-ceac9395a8354df6bf9918efd059a2bf",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\c88bb5eb96052a9a91e1-a8cb44830e5c4be89dad7feaf9b25b55\\checkpoints\\best.pt",
+      "sha256": "67b59d50455d9e750351809aec7c8a545d427adfacd37b63d504e57f420cc682",
+      "RUN_ID": "c88bb5eb96052a9a91e1-a8cb44830e5c4be89dad7feaf9b25b55",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\c88bb5eb96052a9a91e1-a8cb44830e5c4be89dad7feaf9b25b55\\checkpoints\\last.pt",
+      "sha256": "d06be759f0357f0360dd88aaef1f2e0ed608bcb809bc07ce774777c37b60dc44",
+      "RUN_ID": "c88bb5eb96052a9a91e1-a8cb44830e5c4be89dad7feaf9b25b55",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\cf52f2e0933fbc473388-4f479f42660a459285618296e1dee5b5\\checkpoints\\best.pt",
+      "sha256": "7c9b0a93c110744f10591b171e23963c814ac50f7e53ca9be230194293934beb",
+      "RUN_ID": "cf52f2e0933fbc473388-4f479f42660a459285618296e1dee5b5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\cf52f2e0933fbc473388-4f479f42660a459285618296e1dee5b5\\checkpoints\\last.pt",
+      "sha256": "903e72a8fe78d7c6a50275bd4ef7910367e77ea1d0d4994cc3c87f9c56d91519",
+      "RUN_ID": "cf52f2e0933fbc473388-4f479f42660a459285618296e1dee5b5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\cf9de2bec679ba9cee8e-a5930a2ac0b04ee796cae6c90473df6f\\checkpoints\\best.pt",
+      "sha256": "9d41c11cd9f2881f27246b9c4043d8a9a8befc631b30edc5eb243eb4f80c690a",
+      "RUN_ID": "cf9de2bec679ba9cee8e-a5930a2ac0b04ee796cae6c90473df6f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\cf9de2bec679ba9cee8e-a5930a2ac0b04ee796cae6c90473df6f\\checkpoints\\last.pt",
+      "sha256": "0886d60c00a732b8d49ae748e8219b95e1e60b95ea54cd61dffbf3f5eb93d58d",
+      "RUN_ID": "cf9de2bec679ba9cee8e-a5930a2ac0b04ee796cae6c90473df6f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d0653bbb6ff6994a8440-b885f9687d664b91bd164303106fbe59\\checkpoints\\best.pt",
+      "sha256": "df27199101a8fc98a162c9c4a50512f0cfd4c1c663b2a7e627616c1c2f8e4514",
+      "RUN_ID": "d0653bbb6ff6994a8440-b885f9687d664b91bd164303106fbe59",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d0653bbb6ff6994a8440-b885f9687d664b91bd164303106fbe59\\checkpoints\\last.pt",
+      "sha256": "8dd75bb5d14f2f747e502a768f1cceed49f3b50f0563c97e48a7acf1de836976",
+      "RUN_ID": "d0653bbb6ff6994a8440-b885f9687d664b91bd164303106fbe59",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d486f8c4d9515ae7b61c-7919e721620e4d8b940d0000ab795c2f\\checkpoints\\best.pt",
+      "sha256": "bcbbfd634139b218b0fd7a061305e9c0ca2d83e05698b0223e270fcbc99c350f",
+      "RUN_ID": "d486f8c4d9515ae7b61c-7919e721620e4d8b940d0000ab795c2f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d486f8c4d9515ae7b61c-7919e721620e4d8b940d0000ab795c2f\\checkpoints\\last.pt",
+      "sha256": "87c0bdc5fbf1087e89996fe0dddae1bedace11d2815739e7b37eea0991335a6d",
+      "RUN_ID": "d486f8c4d9515ae7b61c-7919e721620e4d8b940d0000ab795c2f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d5b8d724578a8e6a3539-7cac82059eca40f299906d6c0c017387\\checkpoints\\best.pt",
+      "sha256": "0edd995916c97e27f631c7af5216552f74103ab88142d2d62bd865a7e71efd9f",
+      "RUN_ID": "d5b8d724578a8e6a3539-7cac82059eca40f299906d6c0c017387",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d5b8d724578a8e6a3539-7cac82059eca40f299906d6c0c017387\\checkpoints\\last.pt",
+      "sha256": "bc93d710853efd9fcdc888c90e0c6ad4d8f1f088a888ecc151505c922c5b43c7",
+      "RUN_ID": "d5b8d724578a8e6a3539-7cac82059eca40f299906d6c0c017387",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d787e11039bbfaf29adf-fdacc5a7d0724666821559416297e06a\\checkpoints\\best.pt",
+      "sha256": "17bfd23ad22a69d957b5a99c5acf22b5172acc909c79f857adb8a1b316e908d1",
+      "RUN_ID": "d787e11039bbfaf29adf-fdacc5a7d0724666821559416297e06a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d787e11039bbfaf29adf-fdacc5a7d0724666821559416297e06a\\checkpoints\\last.pt",
+      "sha256": "044445ebf192ce69407540a84435c9f1c8cadf30d1011c4e84cec683e68d54b5",
+      "RUN_ID": "d787e11039bbfaf29adf-fdacc5a7d0724666821559416297e06a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d8132eff0cbac49d96d6-f3486f5a20be43a8bd378df501bbcd81\\checkpoints\\best.pt",
+      "sha256": "7d03572b2642a558e58e5c611077a2ec8c194f42c2e128c09a4e0a158252e6a3",
+      "RUN_ID": "d8132eff0cbac49d96d6-f3486f5a20be43a8bd378df501bbcd81",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d8132eff0cbac49d96d6-f3486f5a20be43a8bd378df501bbcd81\\checkpoints\\last.pt",
+      "sha256": "7a06fde480ec21e44eb789110f6d99562692f5210fc4c9d4b25baf7f45129c44",
+      "RUN_ID": "d8132eff0cbac49d96d6-f3486f5a20be43a8bd378df501bbcd81",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d8a4051769b9b534fb87-07b7e789583d4c58855e5691c94ebfd7\\checkpoints\\best.pt",
+      "sha256": "b8d474ddbec564a873ebf1a8c8ae45e28acd123086a0fd261c677d4a4aa5e37b",
+      "RUN_ID": "d8a4051769b9b534fb87-07b7e789583d4c58855e5691c94ebfd7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\d8a4051769b9b534fb87-07b7e789583d4c58855e5691c94ebfd7\\checkpoints\\last.pt",
+      "sha256": "194f07aefa547ca60a3852ea03e7a7ae799b3737993e1d8db614aa2304478fbf",
+      "RUN_ID": "d8a4051769b9b534fb87-07b7e789583d4c58855e5691c94ebfd7",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\da16c87ec57c94c443da-816937c0e9544f988cb72bb3c7f1fa22\\checkpoints\\best.pt",
+      "sha256": "39f3ccb157fa4e9a7df161aac6a883f236f37fa47ee902da7eec2e1be16b8531",
+      "RUN_ID": "da16c87ec57c94c443da-816937c0e9544f988cb72bb3c7f1fa22",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\da16c87ec57c94c443da-816937c0e9544f988cb72bb3c7f1fa22\\checkpoints\\last.pt",
+      "sha256": "51644ad8d136ac4ad5ebaedebb38fa18026b0c543abf82fa6dd56f494a7b0090",
+      "RUN_ID": "da16c87ec57c94c443da-816937c0e9544f988cb72bb3c7f1fa22",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\dd2f36d01f03f2e2981b-36e47ecd5a644cadaf44bbb7cb6b6e90\\checkpoints\\best.pt",
+      "sha256": "c3802dee0953ac05231900e1a18c18915053b8527f72fd8568949253837b0faa",
+      "RUN_ID": "dd2f36d01f03f2e2981b-36e47ecd5a644cadaf44bbb7cb6b6e90",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\dd2f36d01f03f2e2981b-36e47ecd5a644cadaf44bbb7cb6b6e90\\checkpoints\\last.pt",
+      "sha256": "d1832465e56a804c4bf339f2efd8319e8db431354eeaba31916111b6beefb876",
+      "RUN_ID": "dd2f36d01f03f2e2981b-36e47ecd5a644cadaf44bbb7cb6b6e90",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\dd4fa7d43654a0675883-e159322af5aa4e339df39b0c6fae4bf5\\checkpoints\\best.pt",
+      "sha256": "387c97e35ffa7c4c9ecf87be3d632fddd17234541de0bb1966f7cdb0a6f3412a",
+      "RUN_ID": "dd4fa7d43654a0675883-e159322af5aa4e339df39b0c6fae4bf5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\dd4fa7d43654a0675883-e159322af5aa4e339df39b0c6fae4bf5\\checkpoints\\last.pt",
+      "sha256": "874c77259847ff5b93e173ecc96bf638ba1d85249aa0763c9ccc4ee254c36fe1",
+      "RUN_ID": "dd4fa7d43654a0675883-e159322af5aa4e339df39b0c6fae4bf5",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\e6c916f838011ce22dbb-0b3c3d64df6149ff9c3a80ab54b10195\\checkpoints\\best.pt",
+      "sha256": "7ffb5789d0f538681074038f3c58fc4f7539dc8ee7644ca320cd983afebf4381",
+      "RUN_ID": "e6c916f838011ce22dbb-0b3c3d64df6149ff9c3a80ab54b10195",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\e6c916f838011ce22dbb-0b3c3d64df6149ff9c3a80ab54b10195\\checkpoints\\last.pt",
+      "sha256": "d4d57db48382a98552f95d141dc095ecd6cd26f9d0592752922836d6a51e0515",
+      "RUN_ID": "e6c916f838011ce22dbb-0b3c3d64df6149ff9c3a80ab54b10195",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\e8144812deaaf99a7f31-ec57ea799e854d3d9a0ab17d7480519a\\checkpoints\\best.pt",
+      "sha256": "45676186e3a1307e2d98fd63a9354e65492c430ea1bb29399f6d5102c8fd92fa",
+      "RUN_ID": "e8144812deaaf99a7f31-ec57ea799e854d3d9a0ab17d7480519a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\e8144812deaaf99a7f31-ec57ea799e854d3d9a0ab17d7480519a\\checkpoints\\last.pt",
+      "sha256": "621b6eef295f53fb1cf482ee5b4ad9d53b3eece85343f3bf948c46018d230070",
+      "RUN_ID": "e8144812deaaf99a7f31-ec57ea799e854d3d9a0ab17d7480519a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ebdd9a2bf89a49301b8a-32c65dfaf6174c948cc2b78fc4a9d3f2\\checkpoints\\best.pt",
+      "sha256": "81d65cd04b07339dbe7075b5be36c17fbe8ab363fb9d85b44295cadc8a4d18b9",
+      "RUN_ID": "ebdd9a2bf89a49301b8a-32c65dfaf6174c948cc2b78fc4a9d3f2",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ebdd9a2bf89a49301b8a-32c65dfaf6174c948cc2b78fc4a9d3f2\\checkpoints\\last.pt",
+      "sha256": "f0130acc6eb3c6dfaa64d104b501d9a565a08dc03dc921d409498f335e9ed5c3",
+      "RUN_ID": "ebdd9a2bf89a49301b8a-32c65dfaf6174c948cc2b78fc4a9d3f2",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ec644fb0af4b0c55055d-2def2f1c48184a679334f071e32e043a\\checkpoints\\best.pt",
+      "sha256": "efe9f03a94e3d129cb85550c6c27683837d41784c2843d454016fcf5c9295c1c",
+      "RUN_ID": "ec644fb0af4b0c55055d-2def2f1c48184a679334f071e32e043a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ec644fb0af4b0c55055d-2def2f1c48184a679334f071e32e043a\\checkpoints\\last.pt",
+      "sha256": "a99d046e7eb1bdff66daa74de5babc93ec85a86634b03b125a63700204355bfe",
+      "RUN_ID": "ec644fb0af4b0c55055d-2def2f1c48184a679334f071e32e043a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ec9837cbae9eb62e775e-35bd2104e2ce4d169f14589bb1001f9a\\checkpoints\\best.pt",
+      "sha256": "0725e271713d7740c0bb0045d2255bc55f751a871257e8ca97a19ac781ca867d",
+      "RUN_ID": "ec9837cbae9eb62e775e-35bd2104e2ce4d169f14589bb1001f9a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ec9837cbae9eb62e775e-35bd2104e2ce4d169f14589bb1001f9a\\checkpoints\\last.pt",
+      "sha256": "9ecac5a37dd90b5fee3b47236dbd66d0cd1071eb54b7f3cf6ba4fb2ca453845c",
+      "RUN_ID": "ec9837cbae9eb62e775e-35bd2104e2ce4d169f14589bb1001f9a",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\edeef41969ef79d3c19c-dd147e4fd15246798e87113cb31bb9a8\\checkpoints\\best.pt",
+      "sha256": "379672764688511b0d60dfa35eaf40056502e5a68d1af0e20a79b7e639f0e5d1",
+      "RUN_ID": "edeef41969ef79d3c19c-dd147e4fd15246798e87113cb31bb9a8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\edeef41969ef79d3c19c-dd147e4fd15246798e87113cb31bb9a8\\checkpoints\\last.pt",
+      "sha256": "2d7a6af0681a4329d4bef4dee0c3226886c178d18fab52f3a6dc736c400995f9",
+      "RUN_ID": "edeef41969ef79d3c19c-dd147e4fd15246798e87113cb31bb9a8",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ee1954f79ee7ac1ea8da-008d856ec23843c1a0b42b0d2c01f195\\checkpoints\\best.pt",
+      "sha256": "a2f4ee36bd09586d98479bd20f8565268ca9a322926ca277db7aa1b236b14ee0",
+      "RUN_ID": "ee1954f79ee7ac1ea8da-008d856ec23843c1a0b42b0d2c01f195",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ee1954f79ee7ac1ea8da-008d856ec23843c1a0b42b0d2c01f195\\checkpoints\\last.pt",
+      "sha256": "7d2eaa5843c3d19c886b28bc5e8f6381c56d9252ae568489664972f5386404e4",
+      "RUN_ID": "ee1954f79ee7ac1ea8da-008d856ec23843c1a0b42b0d2c01f195",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ef88f43564bc7c6f9e32-e327fa6b4a46488aad6799a26b0d5ad4\\checkpoints\\best.pt",
+      "sha256": "10ca8a505be08548b889ba83eeaf45705da009e0db1d9e78c07727cf5238d8c6",
+      "RUN_ID": "ef88f43564bc7c6f9e32-e327fa6b4a46488aad6799a26b0d5ad4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ef88f43564bc7c6f9e32-e327fa6b4a46488aad6799a26b0d5ad4\\checkpoints\\last.pt",
+      "sha256": "985d6c52bde5640fe2ad28957e6067b7446e37acce4a51be10eaf44b0b9d598c",
+      "RUN_ID": "ef88f43564bc7c6f9e32-e327fa6b4a46488aad6799a26b0d5ad4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ef9d564765ed5d0c9bfe-0e3a23990b564da29bda8dab4f8599fc\\checkpoints\\best.pt",
+      "sha256": "e1d47a34de0c47bcf746341264d14033bab7e84f49155ee78b531d73341d3ff9",
+      "RUN_ID": "ef9d564765ed5d0c9bfe-0e3a23990b564da29bda8dab4f8599fc",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ef9d564765ed5d0c9bfe-0e3a23990b564da29bda8dab4f8599fc\\checkpoints\\last.pt",
+      "sha256": "b115b9c23fc61e8740b18f3004d4fa770bbe6a120ed4f254300f0a83612867ab",
+      "RUN_ID": "ef9d564765ed5d0c9bfe-0e3a23990b564da29bda8dab4f8599fc",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\efcf830ea5c8dc12522f-681d4e715a0746bea9bc6fead8f5abf4\\checkpoints\\best.pt",
+      "sha256": "dc0d615b286fd13391bc38a5c2f47615ed84c9ff6ccbb81a873553d4f195e781",
+      "RUN_ID": "efcf830ea5c8dc12522f-681d4e715a0746bea9bc6fead8f5abf4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\efcf830ea5c8dc12522f-681d4e715a0746bea9bc6fead8f5abf4\\checkpoints\\last.pt",
+      "sha256": "6f16ad03c36467da7c942830c18972e836d21293e79d4f55264e47f96c1c4b99",
+      "RUN_ID": "efcf830ea5c8dc12522f-681d4e715a0746bea9bc6fead8f5abf4",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\efff5b3ae075431e9477-448d950db43e48faaf4630a13f9e7cad\\checkpoints\\best.pt",
+      "sha256": "d5a07ff56434ec95091021e99cd0f85f5be9d19604435bf193d4b0c6547197ed",
+      "RUN_ID": "efff5b3ae075431e9477-448d950db43e48faaf4630a13f9e7cad",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\efff5b3ae075431e9477-448d950db43e48faaf4630a13f9e7cad\\checkpoints\\last.pt",
+      "sha256": "0f8295cfee2fa6d35d15af572bb9ec7346f329bfd633c55e41507cc0fc5ed539",
+      "RUN_ID": "efff5b3ae075431e9477-448d950db43e48faaf4630a13f9e7cad",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f05f8a7f313cefdb3eb3-a593b76c42e04418980d2526bbe7d58f\\checkpoints\\best.pt",
+      "sha256": "5d9357fafd9c82a8c040a1fff9643837e7a5d238064e55a458ddd2aa3ce2afaf",
+      "RUN_ID": "f05f8a7f313cefdb3eb3-a593b76c42e04418980d2526bbe7d58f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f05f8a7f313cefdb3eb3-a593b76c42e04418980d2526bbe7d58f\\checkpoints\\last.pt",
+      "sha256": "a785c717a935c40b643e43842538db27af7907841299ad3e3ec77cb57531c2f7",
+      "RUN_ID": "f05f8a7f313cefdb3eb3-a593b76c42e04418980d2526bbe7d58f",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f0d155b10d8be4de485b-b04f497e59f5433cadfa8f9a54edafb9\\checkpoints\\best.pt",
+      "sha256": "170173569b6dbfb82a485a6014f03cc129ff2f66df610799c8ee9d8639b908d1",
+      "RUN_ID": "f0d155b10d8be4de485b-b04f497e59f5433cadfa8f9a54edafb9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f0d155b10d8be4de485b-b04f497e59f5433cadfa8f9a54edafb9\\checkpoints\\last.pt",
+      "sha256": "9885194830e0c8e08a2cf9a357fd3dbb844429e4fd96124586c0e09d0de4bae5",
+      "RUN_ID": "f0d155b10d8be4de485b-b04f497e59f5433cadfa8f9a54edafb9",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f162feee044f9673d762-b6a47c268ced43edbb830df586e01026\\checkpoints\\best.pt",
+      "sha256": "2fdbd7d88da5c75ef28b9e44d1aa2fcb524250112926276305980a6cafcb6242",
+      "RUN_ID": "f162feee044f9673d762-b6a47c268ced43edbb830df586e01026",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f162feee044f9673d762-b6a47c268ced43edbb830df586e01026\\checkpoints\\last.pt",
+      "sha256": "fcfe07ec95a2c04a2e2c08604b9c0dc16a78216ab4805e0919202d4deef2ab1c",
+      "RUN_ID": "f162feee044f9673d762-b6a47c268ced43edbb830df586e01026",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f8a2938f9bcf40100984-ae43cb2a827f4bcba83f11e0a5eef3de\\checkpoints\\best.pt",
+      "sha256": "e670e5864191f410f5476138f1c97f13c65e5a2549b03faa7fb76d4d6636cd44",
+      "RUN_ID": "f8a2938f9bcf40100984-ae43cb2a827f4bcba83f11e0a5eef3de",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f8a2938f9bcf40100984-ae43cb2a827f4bcba83f11e0a5eef3de\\checkpoints\\last.pt",
+      "sha256": "9befea6858189a377e26004c7084df43492a924bc0b78cd9353ad1a6d752bd54",
+      "RUN_ID": "f8a2938f9bcf40100984-ae43cb2a827f4bcba83f11e0a5eef3de",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f9fd76bf094441761c3a-1710b57e8eb2411096561efaea64dab3\\checkpoints\\best.pt",
+      "sha256": "31e325cc6ace48eb82de8db9e21c13ad2e9df081a41c23a95b1935df0c31ddcb",
+      "RUN_ID": "f9fd76bf094441761c3a-1710b57e8eb2411096561efaea64dab3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\f9fd76bf094441761c3a-1710b57e8eb2411096561efaea64dab3\\checkpoints\\last.pt",
+      "sha256": "fd4a279f1b3fcf9b4cc04179c85312d33df2264757c1187c97c12a4ab8f26488",
+      "RUN_ID": "f9fd76bf094441761c3a-1710b57e8eb2411096561efaea64dab3",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fa76fa9bc016cf9a77b6-8d979e7114ec4aa1be11ab65133bf1df\\checkpoints\\best.pt",
+      "sha256": "5514fe0834f3e7338ffeb579eb385296a202008fb10d362294bc176258e30ae3",
+      "RUN_ID": "fa76fa9bc016cf9a77b6-8d979e7114ec4aa1be11ab65133bf1df",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fa76fa9bc016cf9a77b6-8d979e7114ec4aa1be11ab65133bf1df\\checkpoints\\last.pt",
+      "sha256": "aea54d4ef0f579020b772c0891fabfd40d3de3732f9785958a02854f1e4e1e43",
+      "RUN_ID": "fa76fa9bc016cf9a77b6-8d979e7114ec4aa1be11ab65133bf1df",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fb2244313ee382eb7133-4032eafd9e6e4c1f8c48174143c5cd33\\checkpoints\\best.pt",
+      "sha256": "9b6266030890e5dd6a82a1da8cc5b30b886f02e9536eeb973d6722e79c3c8310",
+      "RUN_ID": "fb2244313ee382eb7133-4032eafd9e6e4c1f8c48174143c5cd33",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fb2244313ee382eb7133-4032eafd9e6e4c1f8c48174143c5cd33\\checkpoints\\last.pt",
+      "sha256": "e8e92007893d5758c557dcb270bd33a8c9f0a7b01e020d19f198c85e001aef0f",
+      "RUN_ID": "fb2244313ee382eb7133-4032eafd9e6e4c1f8c48174143c5cd33",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fc7b636f749b7c7307c5-d5832170dd664ae2a4e9cff9d9b7fb15\\checkpoints\\best.pt",
+      "sha256": "cc74c877685b08727218099ae4926077b063e47f61c0317012c250dfc7cc9f04",
+      "RUN_ID": "fc7b636f749b7c7307c5-d5832170dd664ae2a4e9cff9d9b7fb15",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fc7b636f749b7c7307c5-d5832170dd664ae2a4e9cff9d9b7fb15\\checkpoints\\last.pt",
+      "sha256": "9e46dc90002e757b5a5d0e0ac43289283adf9e9ff15f407efbc2d1e8d018674d",
+      "RUN_ID": "fc7b636f749b7c7307c5-d5832170dd664ae2a4e9cff9d9b7fb15",
+      "purpose": "budget",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fe131f98346ab0a7bad5-87ba634dd7cd4450b6dc3bbf677b8e8d\\checkpoints\\best.pt",
+      "sha256": "bee20ea6df0538663ee11402ef6995ce88dbcb032eaa967a07c40f4dae58c7bd",
+      "RUN_ID": "fe131f98346ab0a7bad5-87ba634dd7cd4450b6dc3bbf677b8e8d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\fe131f98346ab0a7bad5-87ba634dd7cd4450b6dc3bbf677b8e8d\\checkpoints\\last.pt",
+      "sha256": "8a74876c94171821f6de0d5d39b44bb0e4cad6092f4302088e48c31c6d2e250b",
+      "RUN_ID": "fe131f98346ab0a7bad5-87ba634dd7cd4450b6dc3bbf677b8e8d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ffea0ba98354fb5e850b-8dc1731a05444180b43c793fc8bfbf4d\\checkpoints\\best.pt",
+      "sha256": "08da607e24fe1900b2a83a191c17f619c7e51b4e1ab96caf27e1613ab669e463",
+      "RUN_ID": "ffea0ba98354fb5e850b-8dc1731a05444180b43c793fc8bfbf4d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    },
+    {
+      "path": "runs\\lab5\\ffea0ba98354fb5e850b-8dc1731a05444180b43c793fc8bfbf4d\\checkpoints\\last.pt",
+      "sha256": "8b5cee4ec07eb6774f1532f2c6295e02d3db565e1adcc28246f42f208729fd10",
+      "RUN_ID": "ffea0ba98354fb5e850b-8dc1731a05444180b43c793fc8bfbf4d",
+      "purpose": "formal",
+      "load_status": "PASS",
+      "config_hash_matches": true
+    }
+  ]
+}

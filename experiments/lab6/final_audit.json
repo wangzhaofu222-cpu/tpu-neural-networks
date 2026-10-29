@@ -1,0 +1,1227 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Lab0_5_historical_bytes_protected",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "Lab5_verification130tests625checks",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "historical_states_retained",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "real_immutable_E3_Git_hypothesis",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_immutable_Git_protocol_lock",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_E2_selection_hashes_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_E2_immutable_exploratory_Git_record",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_E2_hypotheses_before_training",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "private_profile_independent_hash_slices",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_two_blobs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_eight_gaussians",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_four_corners",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_three_blobs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_fixed_bandwidth_two_blobs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_two_blobs_6101",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_two_blobs_6102",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_two_blobs_6103",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_two_blobs_6104",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_two_blobs_6105",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "five_noise_means_two_blobs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_fixed_bandwidth_eight_gaussians",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_eight_gaussians_6101",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_eight_gaussians_6102",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_eight_gaussians_6103",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_eight_gaussians_6104",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_eight_gaussians_6105",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "five_noise_means_eight_gaussians",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "eleven_distinct_full_model_training_runs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E1_EBM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E1_EBM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_training_sampler_E1_EBM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_EBM_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_EBM_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_EBM_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_EBM_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_EBM_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E2_Flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E2_Flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_2_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_2_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_2_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_2_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_2_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E2_Flow_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E2_Flow_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_4_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_4_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_4_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_4_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_4_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E2_Flow_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E2_Flow_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_8_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_8_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_8_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_8_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_8_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E2_Flow_16",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E2_Flow_16",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_16_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_16_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_16_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_16_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E2_Flow_16_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_training_sampler_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_1_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_1_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_1_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_1_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_1_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_prereg_before_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_locked_config_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_1_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_1_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_1_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_1_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_1_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_prereg_before_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_locked_config_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_training_sampler_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_2_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_2_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_2_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_2_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_2_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_prereg_before_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_locked_config_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_2_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_2_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_2_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_2_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_2_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_prereg_before_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_locked_config_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_training_sampler_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_3_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_3_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_3_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_3_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_ebm_3_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_prereg_before_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_locked_config_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full5000_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_optimizer_batch_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_3_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_3_epoch_016",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_3_epoch_032",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_3_epoch_048",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_flow_3_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_prereg_before_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_locked_config_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_7ad775b95b7dc0debfef-1521fb8346b541e4896ad175730c1c7a_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_7ad775b95b7dc0debfef-1521fb8346b541e4896ad175730c1c7a_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_7698dafa74797d6c35df-e42d74d6971b476d885bd70325b39dc5_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_7698dafa74797d6c35df-e42d74d6971b476d885bd70325b39dc5_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_9c7ec6b59ae5d857ab5c-73049988be884a9097bc355f5e7ad2cd_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_9c7ec6b59ae5d857ab5c-73049988be884a9097bc355f5e7ad2cd_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_971acd6c44bd23406731-8d4f769f20fc495284e0a69a211b96fe_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_971acd6c44bd23406731-8d4f769f20fc495284e0a69a211b96fe_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E1_eta_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E1_eta_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_frozen_sampler_reproduction_E1_eta_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_grid_not_exact_NLL_E1_eta_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E1_eta_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E1_eta_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E1_eta_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_frozen_sampler_reproduction_E1_eta_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_grid_not_exact_NLL_E1_eta_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E1_eta_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E1_eta_0.08",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E1_eta_0.08",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_frozen_sampler_reproduction_E1_eta_0.08",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_grid_not_exact_NLL_E1_eta_0.08",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E1_eta_0.08",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E1_eta_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E1_eta_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_frozen_sampler_reproduction_E1_eta_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_grid_not_exact_NLL_E1_eta_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E1_eta_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E2_Flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E2_Flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_exact_likelihood_and_generation_E2_Flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_inverse_acceptance_E2_Flow_2",
+      "status": "PASS",
+      "detail": {
+        "median": 1.3789180569010569e-17,
+        "logdet_error": 1.1102230246251565e-16
+      }
+    },
+    {
+      "check": "Flow_farfield_recomputed_E2_Flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E2_Flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E2_Flow_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E2_Flow_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_exact_likelihood_and_generation_E2_Flow_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_inverse_acceptance_E2_Flow_4",
+      "status": "PASS",
+      "detail": {
+        "median": 1.157447707276693e-16,
+        "logdet_error": 1.3489209749195652e-14
+      }
+    },
+    {
+      "check": "Flow_farfield_recomputed_E2_Flow_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E2_Flow_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E2_Flow_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E2_Flow_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_exact_likelihood_and_generation_E2_Flow_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_inverse_acceptance_E2_Flow_8",
+      "status": "PASS",
+      "detail": {
+        "median": 1.266065247384982e-16,
+        "logdet_error": 2.886579864025407e-15
+      }
+    },
+    {
+      "check": "Flow_farfield_recomputed_E2_Flow_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E2_Flow_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E2_Flow_16",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E2_Flow_16",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_exact_likelihood_and_generation_E2_Flow_16",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_inverse_acceptance_E2_Flow_16",
+      "status": "PASS",
+      "detail": {
+        "median": 1.5873190281692294e-16,
+        "logdet_error": 4.3076653355456074e-14
+      }
+    },
+    {
+      "check": "Flow_farfield_recomputed_E2_Flow_16",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E2_Flow_16",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_frozen_sampler_reproduction_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_grid_not_exact_NLL_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E3_ebm_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_exact_likelihood_and_generation_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_inverse_acceptance_E3_flow_1",
+      "status": "PASS",
+      "detail": {
+        "median": 1.7053172868731723e-16,
+        "logdet_error": 4.440892098500626e-14
+      }
+    },
+    {
+      "check": "Flow_farfield_recomputed_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E3_flow_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_frozen_sampler_reproduction_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_grid_not_exact_NLL_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E3_ebm_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_exact_likelihood_and_generation_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_inverse_acceptance_E3_flow_2",
+      "status": "PASS",
+      "detail": {
+        "median": 1.934783632703128e-16,
+        "logdet_error": 6.217248937900877e-15
+      }
+    },
+    {
+      "check": "Flow_farfield_recomputed_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E3_flow_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_frozen_sampler_reproduction_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "EBM_grid_not_exact_NLL_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E3_ebm_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample_metrics_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "density_grid_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_exact_likelihood_and_generation_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Flow_inverse_acceptance_E3_flow_3",
+      "status": "PASS",
+      "detail": {
+        "median": 1.9755778690000867e-16,
+        "logdet_error": 9.547918011776346e-15
+      }
+    },
+    {
+      "check": "Flow_farfield_recomputed_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "midpoint_E3_flow_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_quadratic_finite_chain_eta_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "quadratic_5percent_acceptance_eta_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_quadratic_finite_chain_eta_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "quadratic_5percent_acceptance_eta_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_quadratic_finite_chain_eta_0.08",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "quadratic_5percent_acceptance_eta_0.08",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_quadratic_finite_chain_eta_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "quadratic_5percent_acceptance_eta_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full_quadratic_finite_chain_wrong_noise_control",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "quadratic_5percent_acceptance_wrong_noise_control",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_eta_rule",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_centers_below_midpoint",
+      "status": "PASS",
+      "detail": {
+        "centers": [
+          -0.7777777910232544,
+          -0.7777777910232544
+        ],
+        "midpoint": 1.0
+      }
+    },
+    {
+      "check": "E1_tail_and_maxeta_theory",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "one_frozen_EBM_all_eta",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_val_only_depth_rule",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_independent_numpy_depth_rule",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_paired_data_order_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_capacity_20percent_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_paired_data_order_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_capacity_20percent_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_paired_data_order_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_capacity_20percent_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_independent_paired_statistics",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_independent_numpy_sampleSD_and_all_gates",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all_final_tests",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "five_measured_counterfactuals",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all_figures_visually_reviewed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "figure_provenance_hashes",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "check_count": 234,
+  "failed": [],
+  "statistics": {
+    "formal_model_training_runs": 11,
+    "formal_optimizer_steps": 55000,
+    "formal_training_seconds": 1952.5797313999983,
+    "formal_checkpoints": 55,
+    "all_lab6_checkpoints": 63,
+    "budget_training_runs": 4,
+    "formal_evaluation_runs": 14,
+    "quadratic_runs": 5,
+    "noise_runs": 10,
+    "final_tests_passed": 153,
+    "first_formal_model_started_at": "2026-10-29T04:24:09.088030+00:00",
+    "audit_finished_at": "2026-10-29T05:04:27.525639+00:00",
+    "formal_workflow_wall_seconds": 2418.437609,
+    "verification_to_audit_wall_seconds": 3406.54972
+  },
+  "Lab4_Q2": "BLOCKED",
+  "Lab5_course_split": "UNVERIFIED",
+  "historical_E2_magnitude_prediction": "FAIL retained",
+  "E1_mixing_observation": "FAIL observed; teacher-required fallback applied",
+  "E3_statistical_conclusion": "различие установлено",
+  "E3_hypothesis_supported": true,
+  "scope": "No formal report; no Lab7; no old model retraining"
+}

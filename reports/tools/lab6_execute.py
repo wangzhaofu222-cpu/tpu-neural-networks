@@ -7,6 +7,7 @@ from src.generative.experiments import config,train,evaluate,noise_baseline,quad
 from src.diagnostics.density_metrics import select_flow_depth,paired_statistics
 from src.analysis.generative_comparison import match_parameters
 from src.utils.io import write_json,digest
+from src.engine.runner import ExperimentRunner
 from src.utils.preregistration import verify_git_hypothesis
 
 R=Path('experiments/lab6');INDEX=R/'run_index.json'
@@ -14,7 +15,22 @@ def index():return read(INDEX) if INDEX.exists() else {'training':{},'evaluation
 def train_once(key,cfg):
     idx=index()
     if key not in idx['training']:
-        p=train(cfg);s=read(Path(p)/'summary.json')
+        # Recover a completed-but-not-indexed RUN or a controlled epoch-boundary pause.
+        # Never silently launch a duplicate while an equivalent RUN still says RUNNING.
+        matching=[]
+        for mp in Path(cfg['logging']['run_root']).glob('*/manifest.json'):
+            m=read(mp)
+            if m['config_hash']==digest(cfg):matching.append((mp.parent,m))
+        done=[(p,m) for p,m in matching if m['status']=='COMPLETED' and m['global_step']==5000]
+        interrupted=[(p,m) for p,m in matching if m['status']=='INTERRUPTED_AT_EPOCH_BOUNDARY']
+        if done:p=str(done[0][0]).replace('\\','/')
+        elif interrupted:
+            previous=max(interrupted,key=lambda v:v[1]['global_step'])[0]
+            p=str(ExperimentRunner(cfg).run(resume=previous/'checkpoints/last.pt')).replace('\\','/')
+        elif any(m['status']=='RUNNING' for _,m in matching):
+            raise RuntimeError('Equivalent RUN still marked RUNNING; inspect/recover its checkpoint rather than duplicate training')
+        else:p=train(cfg)
+        s=read(Path(p)/'summary.json')
         if s['status']!='COMPLETED' or s['global_step']!=5000:raise RuntimeError('Formal training paused/failed: '+p)
         idx['training'][key]=p;write_json(INDEX,idx)
     return idx['training'][key]
@@ -25,6 +41,7 @@ def evaluate_once(key,source,**kwargs):
     return idx['evaluations'][key]
 
 def e1():
+    if (R/'E1.json').exists():print('E1 already complete; preserving original selection and timestamp',flush=True);return
     noise_baseline('two_blobs')
     source=train_once('E1_EBM',config(role='E1_EBM'))
     etas=read(R/'profile.json')['profile']['lab6_eta'];rows=[];quadratic=[]
@@ -56,6 +73,7 @@ def e1():
     write_json(R/'E1.json',result);print('E1 COMPLETE',json.dumps({'selected_eta':result['selected_eta'],'mixing':result['mixing_rule_satisfied'],'center_acceptance':result['center_energy_acceptance'],'variance_acceptance':result['variance_acceptance']}),flush=True)
 
 def e2():
+    if (R/'E2.json').exists():print('E2 already complete; preserving original selection and timestamp',flush=True);return
     rows=[];nll={}
     for depth in [2,4,8,16]:
         source=train_once(f'E2_Flow_{depth}',config(kind='flow',depth=depth,role='E2_Flow'))
@@ -69,6 +87,7 @@ def e2():
     print('E2 COMPLETE',json.dumps({'selected_depth':selection['selected_depth'],'capacity_match':match}),flush=True)
 
 def e3():
+    if (R/'E3.json').exists():print('E3 already complete; preserving original paired results',flush=True);return
     prereg=read(R/'preregistration_evidence.json');verify_git_hypothesis(prereg['commit'],'experiments/lab6/hypothesis.md')
     lock=read(R/'E3_protocol_lock.json');match=read(R/'E3_capacity_match.json');e1=read(R/'E1.json');e2=read(R/'E2.json')
     if lock['eta']!=e1['selected_eta'] or lock['depth']!=e2['selection']['selected_depth'] or lock['capacity_match']!=match:raise ValueError('Preregistered selection changed')

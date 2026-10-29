@@ -54,3 +54,10 @@ $env:MPLCONFIGDIR='D:\神经网络\tmp\mplconfig'
 ```
 
 The audit replays finite samplers and recalculates metrics from trusted checkpoints/rawrecords without optimizer updates. Regeneratedfigures can differ only in SVGcreationmetadata;scientifictables must reproduce. Large localweights/samples/grids/trajectories/innovations are ignored byGit but their hashes are inventoried. Configs,metrics,plots,logs,RUN_IDs,scientificfailures andaudits are tracked. Preserve local artifacts;do not replace missingweights with fabricated results.
+
+
+## Final independent regeneration
+
+`regeneration_audit.json` confirms byte-identical regeneration of all five CSVs, both counterfactual answer files and eight PNG previews into `verification/regenerated/`, with no training. SVG creation timestamps are not compared. `reports.tools.lab6_regeneration_check` intentionally refuses to overwrite an existing regeneration directory; preserve the verification evidence and use a fresh namespace for another reproduction. `../lab5_verification/all_checkpoints_loadability.json` independently verifies all286 old checkpoints, including budget runs. Durable console logs are in `logs/`.
+
+`requirement_status.json` separates scientific observations from procedural checks: OBS01 is FAIL because mixing never reaches20%; E108 is PASS because the specified fallback was applied faithfully. Alleta Cov=0 is disclosed rather than reclassified as good sampling. The independent audit PASS means measurements/provenance were verified, not that every scientific threshold was reached. Final audit and regeneration do not execute optimizer updates.

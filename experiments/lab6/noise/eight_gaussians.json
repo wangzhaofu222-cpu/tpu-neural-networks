@@ -1,0 +1,229 @@
+{
+  "target": "eight_gaussians",
+  "repetitions": [
+    {
+      "RUN_ID": "b01d5d187ab41cb63f53-1744b58926f64960be90f40272e0b013",
+      "seed": 6101,
+      "sample_count": 5000,
+      "Cov": 1.0,
+      "Dmode": 0.011800000000000015,
+      "Dmode_exact_target": 0.013245501730878885,
+      "MMD2": 1.4287571347804118e-05,
+      "mode_counts_including_outlier_first": [
+        58,
+        596,
+        604,
+        636,
+        626,
+        637,
+        612,
+        594,
+        637
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers"
+    },
+    {
+      "RUN_ID": "843fe08e3073ad608e5f-6ca89a3e2dd142beaf2f3dacd7f2ecb0",
+      "seed": 6102,
+      "sample_count": 5000,
+      "Cov": 1.0,
+      "Dmode": 0.025599999999999984,
+      "Dmode_exact_target": 0.01594312283640142,
+      "MMD2": 0.0001999525105638167,
+      "mode_counts_including_outlier_first": [
+        52,
+        609,
+        629,
+        633,
+        621,
+        600,
+        569,
+        636,
+        651
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers"
+    },
+    {
+      "RUN_ID": "35fd29f5c6fc5f7cb121-ea3828e5605040d988ade78934b488be",
+      "seed": 6103,
+      "sample_count": 5000,
+      "Cov": 1.0,
+      "Dmode": 0.01780000000000001,
+      "Dmode_exact_target": 0.010543122836401408,
+      "MMD2": 2.5768019736416292e-05,
+      "mode_counts_including_outlier_first": [
+        48,
+        594,
+        628,
+        628,
+        620,
+        631,
+        604,
+        636,
+        611
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers"
+    },
+    {
+      "RUN_ID": "56e0116c8a83ffdd7f15-1c8d1f5426dc4ba181e55850ba8f095b",
+      "seed": 6104,
+      "sample_count": 5000,
+      "Cov": 1.0,
+      "Dmode": 0.022599999999999995,
+      "Dmode_exact_target": 0.013354498269121134,
+      "MMD2": 0.00021267084502230027,
+      "mode_counts_including_outlier_first": [
+        53,
+        659,
+        617,
+        593,
+        597,
+        630,
+        601,
+        631,
+        619
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers"
+    },
+    {
+      "RUN_ID": "f4859762e431d7a723e8-3c917a58587a4516a1d8cec95f66b575",
+      "seed": 6105,
+      "sample_count": 5000,
+      "Cov": 1.0,
+      "Dmode": 0.018400000000000014,
+      "Dmode_exact_target": 0.01625687716359857,
+      "MMD2": 4.953135842966638e-05,
+      "mode_counts_including_outlier_first": [
+        59,
+        614,
+        644,
+        600,
+        611,
+        639,
+        649,
+        599,
+        585
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers"
+    }
+  ],
+  "noise_MMD2": 0.00010044206102000075,
+  "noise_Dmode": 0.019240000000000004,
+  "protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+  "noise_definition": "mean of five fresh5000target vs fixed5000test comparisons"
+}

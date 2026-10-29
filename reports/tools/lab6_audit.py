@@ -27,7 +27,14 @@ def main():
     old=read('experiments/lab5/final_audit.json');check('historical_states_retained',old['scientific_predictions']['E2_preregistered_magnitude_band'].startswith('FAIL') and not old['teacher_split_independently_verified'] and old['Lab4_Q2'].startswith('BLOCKED'))
     idx=read(R/'run_index.json');e1=read(R/'E1.json');e2=read(R/'E2.json');e3=read(R/'E3.json');lock=read(R/'E3_protocol_lock.json');prereg=read(R/'preregistration_evidence.json')
     check('real_immutable_E3_Git_hypothesis',verify_git_hypothesis(prereg['commit'],'experiments/lab6/hypothesis.md'))
+    blob=subprocess.check_output(['git','-c','safe.directory=D:/神经网络','show',prereg['commit']+':experiments/lab6/E3_protocol_lock.json'])
+    check('E3_immutable_Git_protocol_lock',blob.replace(b'\r\n',b'\n')==(R/'E3_protocol_lock.json').read_bytes().replace(b'\r\n',b'\n'))
+    check('E1_E2_selection_hashes_unchanged',file_hash(R/'E1.json')==lock['E1_selection_sha256'] and file_hash(R/'E2.json')==lock['E2_selection_sha256'])
     prereg_time=datetime.fromisoformat(prereg['committed_at'])
+    exploratory_commit='df8be0cc88e0649bc406e2222ee9cad028de5f08'
+    check('E1_E2_immutable_exploratory_Git_record',verify_git_hypothesis(exploratory_commit,'experiments/lab6/exploratory_hypotheses.md'))
+    prospective_time=datetime.fromisoformat(subprocess.check_output(['git','-c','safe.directory=D:/神经网络','show','-s','--format=%cI',exploratory_commit]).decode().strip())
+    check('E1_E2_hypotheses_before_training',all(datetime.fromisoformat(read(Path(p)/'manifest.json')['started_at'])>prospective_time for k,p in idx['training'].items() if k.startswith(('E1_','E2_'))))
     sid=read('.private/lab4_student_id.json')['student_id'];h=hashlib.sha256((sid+':lab6').encode()).hexdigest();profile=read(R/'profile.json')
     expected={'lab6_target':['eight_gaussians','four_corners','three_blobs'][int(h[:2],16)%3],
         'lab6_eta':[[.01,.05,.1,.4],[.005,.02,.08,.5]][int(h[2:4],16)%2],'lab6_scale':[1.,2.,4.][int(h[4:6],16)%3]}
@@ -69,6 +76,13 @@ def main():
             kind=key.split('_')[1];seed=c['experiment']['seed'];check('E3_locked_config_'+key,digest(c)==lock['config_hashes'][f'{kind}_{seed}'])
         training_seconds+=s['training_seconds']
     print('Training/checkpoint verification complete',flush=True)
+    all_inventory=list(inventory)
+    for row in read(R/'budget.json')['measurements']:
+        p=Path('runs/lab6')/row['RUN_ID'];c=yaml.safe_load((p/'config.resolved.yaml').read_text(encoding='utf-8'))
+        for f in (p/'checkpoints').glob('*.pt'):
+            state=torch.load(f,weights_only=False,map_location='cpu')
+            check('budget_checkpoint_'+p.name+'_'+f.stem,state['config_hash']==digest(c) and state['global_step']==30)
+            all_inventory.append({'path':str(f),'sha256':file_hash(f),'RUN_ID':p.name,'global_step':state['global_step'],'purpose':'budget'})
     evaluated={};val_pointwise={}
     for key,r in idx['evaluations'].items():
         source=Path('runs/lab6')/r['source_RUN_ID'];model,c,state=source_model(source);p=Path('runs/lab6')/r['RUN_ID'];target=distribution(r['target']);roles=roles_cache[target.name]
@@ -115,6 +129,11 @@ def main():
     check('one_frozen_EBM_all_eta',len({idx['evaluations'][f"E1_eta_{r['eta']}"]['checkpoint_sha256'] for r in e1['eta_rows']})==1)
     selection=select_flow_depth(e2['rows'],val_pointwise)
     check('E2_val_only_depth_rule',selection==e2['selection'])
+    independent_depth=None
+    for a,b in zip([2,4,8],[4,8,16]):
+        difference=(val_pointwise[a]-val_pointwise[b]).numpy();gain=float(np.mean(difference));sem=float(np.std(difference,ddof=1)/math.sqrt(len(difference)))
+        if independent_depth is None and gain<=2*sem:independent_depth=a
+    check('E2_independent_numpy_depth_rule',(8 if independent_depth is None else independent_depth)==e2['selection']['selected_depth'])
     for seed in [1,2,3]:
         a=Path(idx['training'][f'E3_ebm_{seed}']);b=Path(idx['training'][f'E3_flow_{seed}']);am=read(a/'manifest.json');bm=read(b/'manifest.json')
         ac=torch.load(a/'checkpoints/last.pt',weights_only=False);bc=torch.load(b/'checkpoints/last.pt',weights_only=False)
@@ -123,6 +142,11 @@ def main():
     q=e3['primary_metric'];noise=read(R/'noise/eight_gaussians.json')['noise_'+q]
     paired=paired_statistics([r['ebm'][q] for r in e3['paired_runs']],[r['flow'][q] for r in e3['paired_runs']],noise)
     check('E3_independent_paired_statistics',paired==e3['paired_statistics'])
+    independent_delta=np.asarray([r['ebm'][q]-r['flow'][q] for r in e3['paired_runs']],dtype=np.float64)
+    independent_mean=float(np.mean(independent_delta));independent_sd=float(np.std(independent_delta,ddof=1))
+    same=bool(np.all(independent_delta>0) or np.all(independent_delta<0))
+    established=same and abs(independent_mean)>=2*independent_sd and abs(independent_mean)>=noise
+    check('E3_independent_numpy_sampleSD_and_all_gates',abs(independent_mean-paired['mean'])<1e-12 and abs(independent_sd-paired['sample_sd'])<1e-12 and established==(paired['conclusion']=='различие установлено'))
     import xml.etree.ElementTree as ET
     tests=ET.parse('docs/environment/tests-lab6-final.xml').getroot().find('testsuite')
     check('all_final_tests',int(tests.attrib['failures'])==0 and int(tests.attrib['errors'])==0)
@@ -139,6 +163,9 @@ def main():
         'formal_workflow_wall_seconds':(finished-datetime.fromisoformat(first)).total_seconds(),
         'verification_to_audit_wall_seconds':(finished-datetime.fromisoformat(oldstart)).total_seconds()}
     write_json(R/'checkpoint_inventory.json',inventory);write_json(R/'execution_statistics.json',stats)
+    write_json(R/'all_checkpoint_inventory.json',all_inventory)
+    raw_paths=[p for p in Path('runs/lab6').glob('*/*.pt')]+list(Path('data/lab6').rglob('*.pt'))
+    write_json(R/'raw_artifact_inventory.json',[{'path':str(p),'bytes':p.stat().st_size,'sha256':file_hash(p)} for p in sorted(raw_paths)])
     audit={'status':'PASS' if all(c['status']=='PASS' for c in checks) else 'FAIL','checks':checks,'check_count':len(checks),
         'failed':[c for c in checks if c['status']=='FAIL'],'statistics':stats,
         'Lab4_Q2':'BLOCKED','Lab5_course_split':'UNVERIFIED','historical_E2_magnitude_prediction':'FAIL retained',

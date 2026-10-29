@@ -1,0 +1,115 @@
+{
+  "RUN_ID": "bab2188b75245e2f8cc6-eb1fc37eee9946628b3aa16785a17233",
+  "source_RUN_ID": "402b20e7a9d07f55b6fe-cd7351287b924cbc991f15d097ffa745",
+  "target": "eight_gaussians",
+  "kind": "flow",
+  "seed": 2,
+  "checkpoint_sha256": "63ce49f89dd2bf8750354eeb4237a8f142bb7a6fc037f346555a6ec9a3fb7c5f",
+  "source_global_step": 5000,
+  "parameters": 69648,
+  "training_seconds": 79.50687819999985,
+  "sample_count": 5000,
+  "sample_seed": 7002,
+  "sample_seconds": 0.011378300000615127,
+  "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+  "Cov": 1.0,
+  "Dmode": 0.10120000000000001,
+  "Dmode_exact_target": 0.10249100346175774,
+  "MMD2": 0.00028826055626152147,
+  "mode_counts_including_outlier_first": [
+    568,
+    609,
+    485,
+    540,
+    573,
+    579,
+    604,
+    577,
+    465
+  ],
+  "reference_mode_counts_including_outlier_first": [
+    62,
+    626,
+    598,
+    632,
+    635,
+    628,
+    628,
+    585,
+    606
+  ],
+  "exact_mode_probabilities_outlier_first": [
+    0.011108996538242266,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972,
+    0.12361137543271972
+  ],
+  "MMD_estimator": "empirical V-statistic, including diagonals",
+  "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+  "normalized_on_omega": false,
+  "density_kind": "exact_Flow_density_no_grid_renormalization",
+  "domain": [
+    [
+      -15,
+      15
+    ],
+    [
+      -15,
+      15
+    ]
+  ],
+  "grid_shape": [
+    120,
+    120
+  ],
+  "spacing": 0.25,
+  "cell_area": 0.0625,
+  "Dgrid": 0.0006157089605213763,
+  "grid_integral": 1.0083459584449943,
+  "sampler": {},
+  "val_NLL": 1.9876819796562195,
+  "val_NLL_SEM": 0.023328437659543334,
+  "exact_test_NLL": 2.039677725124359,
+  "test_NLL_SEM": 0.034235447426632475,
+  "invertibility": {
+    "dtype": "float64 with converted learned weights",
+    "test_points": 5000,
+    "median_epsilon": 1.934783632703128e-16,
+    "max_epsilon": 1.851467164691363e-15,
+    "autograd_points": 100,
+    "max_logdet_error": 6.217248937900877e-15,
+    "norm20_points": 100,
+    "norm20_seed": 6201,
+    "norm20_median_epsilon": 6.695946412890841e-14,
+    "norm20_max_epsilon": 1.5293640789627854e-09
+  },
+  "midpoint": {
+    "center_indices": [
+      0,
+      1
+    ],
+    "centers": [
+      [
+        3.0,
+        0.0
+      ],
+      [
+        2.121320343559643,
+        2.121320343559643
+      ]
+    ],
+    "point": [
+      2.5606601717798214,
+      1.0606601717798214
+    ],
+    "true_log_density": -16.480539160917736,
+    "model_log_density": -7.298760414123535,
+    "model_density_kind": "exact_Flow_density_no_grid_renormalization",
+    "log_density_excess_over_true": 9.181778746794201
+  }
+}

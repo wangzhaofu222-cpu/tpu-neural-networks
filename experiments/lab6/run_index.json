@@ -4,7 +4,13 @@
     "E2_Flow_2": "runs/lab6/0ad44515fd9437461a52-ccca7095250148cc8e1c7243fac2114e",
     "E2_Flow_4": "runs/lab6/2cf78e2957013f7a1392-976757dae99d4f93a79d3a7648af9d7e",
     "E2_Flow_8": "runs/lab6/c8fbbd1ec0df1fab5db6-c8d9aac7e54540b1b3319aa2d6670087",
-    "E2_Flow_16": "runs/lab6/196e303e9fb1bd3e788e-314f29270df449c486da4dd862908b03"
+    "E2_Flow_16": "runs/lab6/196e303e9fb1bd3e788e-314f29270df449c486da4dd862908b03",
+    "E3_ebm_1": "runs/lab6/608fb8221cdef67bad13-f7a0b6b9a0c8494bb3dd15266f2b88aa",
+    "E3_flow_1": "runs/lab6/846ec76c5d66b310dc4b-a21003d61ca34f6f800290b7ab4e1c00",
+    "E3_ebm_2": "runs/lab6/293004af0829b291462e-7b6a8ec2182e4b2587054df0a89d8181",
+    "E3_flow_2": "runs/lab6/402b20e7a9d07f55b6fe-cd7351287b924cbc991f15d097ffa745",
+    "E3_ebm_3": "runs/lab6/a898a870a96504842ffb-db8b82b4e0a24d04b0109d5c4c6eeaa6",
+    "E3_flow_3": "runs/lab6/a39eb91e92f73e583288-31afc8b5b86c45b8a2cdd968b16d2d57"
   },
   "evaluations": {
     "E1_eta_0.005": {
@@ -1069,6 +1075,903 @@
         "model_log_density": -11.786792755126953,
         "model_density_kind": "exact_Flow_density_no_grid_renormalization",
         "log_density_excess_over_true": 9.865360924852741
+      }
+    },
+    "E3_ebm_1": {
+      "RUN_ID": "d20b01c7307c0257f2dd-15fc31e7e1964437b127450ffaac2fe0",
+      "source_RUN_ID": "608fb8221cdef67bad13-f7a0b6b9a0c8494bb3dd15266f2b88aa",
+      "target": "eight_gaussians",
+      "kind": "ebm",
+      "seed": 1,
+      "checkpoint_sha256": "d15158d6222e342bf7462102f914b65c7310a4019eeedb5ea69d900c83fd0405",
+      "source_global_step": 5000,
+      "parameters": 69561,
+      "training_seconds": 379.7752832999995,
+      "sample_count": 5000,
+      "sample_seed": 7001,
+      "sample_seconds": 0.8838518000002296,
+      "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+      "Cov": 0.0,
+      "Dmode": 0.8382,
+      "Dmode_exact_target": 0.8394910034617578,
+      "MMD2": 0.012902242024113608,
+      "mode_counts_including_outlier_first": [
+        4253,
+        118,
+        97,
+        105,
+        113,
+        102,
+        58,
+        74,
+        80
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+      "normalized_on_omega": true,
+      "density_kind": "grid_estimate_not_exact_likelihood",
+      "log_Z_hat_omega": 3.460961335571812,
+      "Z_hat_omega": 31.847578012776346,
+      "tail_unnormalized_integral_upper_bound_R14": 0.0028690129014617765,
+      "tail_fraction_bound_numerator_over_estimated_Z": 9.008574844563722e-05,
+      "tail_probability_rigorous_upper_bound": 0.00013791280933656192,
+      "tail_note": "Eq6.3 is an unnormalized integral bound; division by gridZ uses an estimated denominator, not an exact normalization.",
+      "domain": [
+        [
+          -15,
+          15
+        ],
+        [
+          -15,
+          15
+        ]
+      ],
+      "grid_shape": [
+        120,
+        120
+      ],
+      "spacing": 0.25,
+      "cell_area": 0.0625,
+      "Dgrid": 0.00149331498278991,
+      "grid_integral": 1.0000000000000002,
+      "sampler": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "sigma": 0.2,
+        "sigma_squared": 0.04,
+        "DK": 1.7703068256378174,
+        "energy_curve": [
+          1.0752793550491333,
+          1.0718142986297607,
+          1.0626811981201172,
+          1.0695921182632446,
+          1.063032627105713,
+          1.0555475950241089,
+          1.0593245029449463,
+          1.0575207471847534,
+          1.052932620048523,
+          1.049165964126587,
+          1.0460121631622314,
+          1.0413585901260376,
+          1.0528886318206787,
+          1.0490427017211914,
+          1.0477280616760254,
+          1.0401296615600586,
+          1.0388469696044922,
+          1.0359078645706177,
+          1.0325336456298828,
+          1.0258315801620483,
+          1.0287094116210938,
+          1.0293889045715332,
+          1.032133936882019,
+          1.0240968465805054,
+          1.027323603630066,
+          1.0238970518112183,
+          1.0312902927398682,
+          1.029106855392456,
+          1.0293058156967163,
+          1.0273979902267456,
+          1.028482437133789,
+          1.025565266609192,
+          1.025869607925415,
+          1.0288774967193604,
+          1.0285522937774658,
+          1.0202196836471558,
+          1.0221807956695557,
+          1.0226941108703613,
+          1.0291963815689087,
+          1.024228572845459,
+          1.0302709341049194,
+          1.0296252965927124,
+          1.0280635356903076,
+          1.0359132289886475,
+          1.0375642776489258,
+          1.0355966091156006,
+          1.0298988819122314,
+          1.0449297428131104,
+          1.035650610923767,
+          1.0467119216918945,
+          1.042114019393921
+        ],
+        "pre_reflection_outside_proposal_fraction": 0.0,
+        "finite": true,
+        "mode_switch_count": 221,
+        "chain_ever_changed_valid_mode_fraction": 0.042399998754262924,
+        "mode_label_changes_including_outliers": 10035,
+        "final_other_mode_fraction": 0.0012000000569969416
+      },
+      "mean_test_energy": -0.42297807335853577,
+      "center_energies": [
+        -0.5,
+        -0.5000000596046448,
+        -0.5,
+        -0.5000000596046448,
+        -0.5,
+        -0.5000000596046448,
+        -0.5,
+        -0.5000000596046448
+      ],
+      "origin_energy": 1.0,
+      "outside_final_fraction": 0.0,
+      "stable": true,
+      "midpoint": {
+        "center_indices": [
+          0,
+          1
+        ],
+        "centers": [
+          [
+            3.0,
+            0.0
+          ],
+          [
+            2.121320343559643,
+            2.121320343559643
+          ]
+        ],
+        "point": [
+          2.5606601717798214,
+          1.0606601717798214
+        ],
+        "true_log_density": -16.480539160917736,
+        "model_log_density": -4.887737274169922,
+        "model_density_kind": "grid_estimate_not_exact_likelihood",
+        "log_density_excess_over_true": 11.592801886747814
+      }
+    },
+    "E3_flow_1": {
+      "RUN_ID": "cbfee41a37a5abc05267-03ff7991347b4adcb139e792bac0563e",
+      "source_RUN_ID": "846ec76c5d66b310dc4b-a21003d61ca34f6f800290b7ab4e1c00",
+      "target": "eight_gaussians",
+      "kind": "flow",
+      "seed": 1,
+      "checkpoint_sha256": "3bdb6e26bd41aca2bff576e43db98e8e89db15ae113e2c3bfb830678b951b5ab",
+      "source_global_step": 5000,
+      "parameters": 69648,
+      "training_seconds": 84.46796150000046,
+      "sample_count": 5000,
+      "sample_seed": 7001,
+      "sample_seconds": 0.009094199999708508,
+      "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+      "Cov": 1.0,
+      "Dmode": 0.08580000000000002,
+      "Dmode_exact_target": 0.08747962802903803,
+      "MMD2": 0.0001582838569871292,
+      "mode_counts_including_outlier_first": [
+        486,
+        561,
+        603,
+        534,
+        602,
+        625,
+        456,
+        535,
+        598
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+      "normalized_on_omega": false,
+      "density_kind": "exact_Flow_density_no_grid_renormalization",
+      "domain": [
+        [
+          -15,
+          15
+        ],
+        [
+          -15,
+          15
+        ]
+      ],
+      "grid_shape": [
+        120,
+        120
+      ],
+      "spacing": 0.25,
+      "cell_area": 0.0625,
+      "Dgrid": 0.0006424398117006106,
+      "grid_integral": 1.022282050947662,
+      "sampler": {},
+      "val_NLL": 1.959510591173172,
+      "val_NLL_SEM": 0.012838335702897585,
+      "exact_test_NLL": 2.0372558330774306,
+      "test_NLL_SEM": 0.029678634939616408,
+      "invertibility": {
+        "dtype": "float64 with converted learned weights",
+        "test_points": 5000,
+        "median_epsilon": 1.7053172868731723e-16,
+        "max_epsilon": 1.1078665630157282e-14,
+        "autograd_points": 100,
+        "max_logdet_error": 4.440892098500626e-14,
+        "norm20_points": 100,
+        "norm20_seed": 6201,
+        "norm20_median_epsilon": 7.739580721600333e-12,
+        "norm20_max_epsilon": 1.1247949402446416e-09
+      },
+      "midpoint": {
+        "center_indices": [
+          0,
+          1
+        ],
+        "centers": [
+          [
+            3.0,
+            0.0
+          ],
+          [
+            2.121320343559643,
+            2.121320343559643
+          ]
+        ],
+        "point": [
+          2.5606601717798214,
+          1.0606601717798214
+        ],
+        "true_log_density": -16.480539160917736,
+        "model_log_density": -23.625484466552734,
+        "model_density_kind": "exact_Flow_density_no_grid_renormalization",
+        "log_density_excess_over_true": -7.144945305634998
+      }
+    },
+    "E3_ebm_2": {
+      "RUN_ID": "5146ebd52e80abca688c-8b1c99ce0b90452a8a5e9c185a9f3181",
+      "source_RUN_ID": "293004af0829b291462e-7b6a8ec2182e4b2587054df0a89d8181",
+      "target": "eight_gaussians",
+      "kind": "ebm",
+      "seed": 2,
+      "checkpoint_sha256": "2202c7d5d548e014d122453c9173991b66b5073b11981e636e50c3201673b797",
+      "source_global_step": 5000,
+      "parameters": 69561,
+      "training_seconds": 352.64576979999947,
+      "sample_count": 5000,
+      "sample_seed": 7002,
+      "sample_seconds": 0.8334301000004416,
+      "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+      "Cov": 0.0,
+      "Dmode": 0.8402,
+      "Dmode_exact_target": 0.8414910034617578,
+      "MMD2": 0.012454764776403282,
+      "mode_counts_including_outlier_first": [
+        4263,
+        76,
+        92,
+        80,
+        106,
+        117,
+        101,
+        78,
+        87
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+      "normalized_on_omega": true,
+      "density_kind": "grid_estimate_not_exact_likelihood",
+      "log_Z_hat_omega": 3.48335532105524,
+      "Z_hat_omega": 32.56881778801061,
+      "tail_unnormalized_integral_upper_bound_R14": 0.0028690129014617765,
+      "tail_fraction_bound_numerator_over_estimated_Z": 8.809079040375642e-05,
+      "tail_probability_rigorous_upper_bound": 0.00013791280933656192,
+      "tail_note": "Eq6.3 is an unnormalized integral bound; division by gridZ uses an estimated denominator, not an exact normalization.",
+      "domain": [
+        [
+          -15,
+          15
+        ],
+        [
+          -15,
+          15
+        ]
+      ],
+      "grid_shape": [
+        120,
+        120
+      ],
+      "spacing": 0.25,
+      "cell_area": 0.0625,
+      "Dgrid": 0.001517291873336675,
+      "grid_integral": 0.9999999999999998,
+      "sampler": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "sigma": 0.2,
+        "sigma_squared": 0.04,
+        "DK": 1.7766636610031128,
+        "energy_curve": [
+          1.0741353034973145,
+          1.0633015632629395,
+          1.056930422782898,
+          1.0626826286315918,
+          1.0596332550048828,
+          1.058194637298584,
+          1.05733060836792,
+          1.055127501487732,
+          1.0515809059143066,
+          1.0503019094467163,
+          1.0467654466629028,
+          1.0476605892181396,
+          1.0389715433120728,
+          1.0395331382751465,
+          1.0401071310043335,
+          1.033294677734375,
+          1.0313388109207153,
+          1.0341297388076782,
+          1.03385591506958,
+          1.0355827808380127,
+          1.0265733003616333,
+          1.036391258239746,
+          1.0292840003967285,
+          1.031409502029419,
+          1.0278890132904053,
+          1.0242204666137695,
+          1.030625343322754,
+          1.0236259698867798,
+          1.027832269668579,
+          1.0315994024276733,
+          1.0318130254745483,
+          1.0297719240188599,
+          1.0278047323226929,
+          1.0312165021896362,
+          1.0300238132476807,
+          1.033757209777832,
+          1.0280309915542603,
+          1.0329647064208984,
+          1.0308284759521484,
+          1.0345308780670166,
+          1.0443143844604492,
+          1.0373646020889282,
+          1.032144546508789,
+          1.0304639339447021,
+          1.030672311782837,
+          1.0353741645812988,
+          1.0281755924224854,
+          1.0341416597366333,
+          1.0321812629699707,
+          1.0374482870101929,
+          1.0395029783248901
+        ],
+        "pre_reflection_outside_proposal_fraction": 0.0,
+        "finite": true,
+        "mode_switch_count": 247,
+        "chain_ever_changed_valid_mode_fraction": 0.047600001096725464,
+        "mode_label_changes_including_outliers": 10499,
+        "final_other_mode_fraction": 0.0010000000474974513
+      },
+      "mean_test_energy": -0.4227304756641388,
+      "center_energies": [
+        -0.5,
+        -0.5000000596046448,
+        -0.5,
+        -0.5000000596046448,
+        -0.5,
+        -0.5000000596046448,
+        -0.5,
+        -0.5000000596046448
+      ],
+      "origin_energy": 1.0,
+      "outside_final_fraction": 0.0,
+      "stable": true,
+      "midpoint": {
+        "center_indices": [
+          0,
+          1
+        ],
+        "centers": [
+          [
+            3.0,
+            0.0
+          ],
+          [
+            2.121320343559643,
+            2.121320343559643
+          ]
+        ],
+        "point": [
+          2.5606601717798214,
+          1.0606601717798214
+        ],
+        "true_log_density": -16.480539160917736,
+        "model_log_density": -4.910131931304932,
+        "model_density_kind": "grid_estimate_not_exact_likelihood",
+        "log_density_excess_over_true": 11.570407229612805
+      }
+    },
+    "E3_flow_2": {
+      "RUN_ID": "bab2188b75245e2f8cc6-eb1fc37eee9946628b3aa16785a17233",
+      "source_RUN_ID": "402b20e7a9d07f55b6fe-cd7351287b924cbc991f15d097ffa745",
+      "target": "eight_gaussians",
+      "kind": "flow",
+      "seed": 2,
+      "checkpoint_sha256": "63ce49f89dd2bf8750354eeb4237a8f142bb7a6fc037f346555a6ec9a3fb7c5f",
+      "source_global_step": 5000,
+      "parameters": 69648,
+      "training_seconds": 79.50687819999985,
+      "sample_count": 5000,
+      "sample_seed": 7002,
+      "sample_seconds": 0.011378300000615127,
+      "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+      "Cov": 1.0,
+      "Dmode": 0.10120000000000001,
+      "Dmode_exact_target": 0.10249100346175774,
+      "MMD2": 0.00028826055626152147,
+      "mode_counts_including_outlier_first": [
+        568,
+        609,
+        485,
+        540,
+        573,
+        579,
+        604,
+        577,
+        465
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+      "normalized_on_omega": false,
+      "density_kind": "exact_Flow_density_no_grid_renormalization",
+      "domain": [
+        [
+          -15,
+          15
+        ],
+        [
+          -15,
+          15
+        ]
+      ],
+      "grid_shape": [
+        120,
+        120
+      ],
+      "spacing": 0.25,
+      "cell_area": 0.0625,
+      "Dgrid": 0.0006157089605213763,
+      "grid_integral": 1.0083459584449943,
+      "sampler": {},
+      "val_NLL": 1.9876819796562195,
+      "val_NLL_SEM": 0.023328437659543334,
+      "exact_test_NLL": 2.039677725124359,
+      "test_NLL_SEM": 0.034235447426632475,
+      "invertibility": {
+        "dtype": "float64 with converted learned weights",
+        "test_points": 5000,
+        "median_epsilon": 1.934783632703128e-16,
+        "max_epsilon": 1.851467164691363e-15,
+        "autograd_points": 100,
+        "max_logdet_error": 6.217248937900877e-15,
+        "norm20_points": 100,
+        "norm20_seed": 6201,
+        "norm20_median_epsilon": 6.695946412890841e-14,
+        "norm20_max_epsilon": 1.5293640789627854e-09
+      },
+      "midpoint": {
+        "center_indices": [
+          0,
+          1
+        ],
+        "centers": [
+          [
+            3.0,
+            0.0
+          ],
+          [
+            2.121320343559643,
+            2.121320343559643
+          ]
+        ],
+        "point": [
+          2.5606601717798214,
+          1.0606601717798214
+        ],
+        "true_log_density": -16.480539160917736,
+        "model_log_density": -7.298760414123535,
+        "model_density_kind": "exact_Flow_density_no_grid_renormalization",
+        "log_density_excess_over_true": 9.181778746794201
+      }
+    },
+    "E3_ebm_3": {
+      "RUN_ID": "a8da75f7a516997e4e82-8ccd9a201e074f289e6c29682a2d5a43",
+      "source_RUN_ID": "a898a870a96504842ffb-db8b82b4e0a24d04b0109d5c4c6eeaa6",
+      "target": "eight_gaussians",
+      "kind": "ebm",
+      "seed": 3,
+      "checkpoint_sha256": "1df42adbbf12bfcb1bbbf8011c848a448999369d2e812948e9b52bb5aa7ca87f",
+      "source_global_step": 5000,
+      "parameters": 69561,
+      "training_seconds": 347.5651320999996,
+      "sample_count": 5000,
+      "sample_seed": 7003,
+      "sample_seconds": 0.7278661000000284,
+      "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+      "Cov": 0.0,
+      "Dmode": 0.8514,
+      "Dmode_exact_target": 0.8526910034617577,
+      "MMD2": 0.014868719628449156,
+      "mode_counts_including_outlier_first": [
+        4319,
+        112,
+        90,
+        93,
+        87,
+        61,
+        58,
+        96,
+        84
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+      "normalized_on_omega": true,
+      "density_kind": "grid_estimate_not_exact_likelihood",
+      "log_Z_hat_omega": 3.3996014698768326,
+      "Z_hat_omega": 29.95216083014141,
+      "tail_unnormalized_integral_upper_bound_R14": 0.0028690129014617765,
+      "tail_fraction_bound_numerator_over_estimated_Z": 9.578650828339024e-05,
+      "tail_probability_rigorous_upper_bound": 0.00013791280933656192,
+      "tail_note": "Eq6.3 is an unnormalized integral bound; division by gridZ uses an estimated denominator, not an exact normalization.",
+      "domain": [
+        [
+          -15,
+          15
+        ],
+        [
+          -15,
+          15
+        ]
+      ],
+      "grid_shape": [
+        120,
+        120
+      ],
+      "spacing": 0.25,
+      "cell_area": 0.0625,
+      "Dgrid": 0.0015975868754180775,
+      "grid_integral": 0.9999999999999993,
+      "sampler": {
+        "eta": 0.02,
+        "temperature": 1.0,
+        "sigma": 0.2,
+        "sigma_squared": 0.04,
+        "DK": 1.7428375482559204,
+        "energy_curve": [
+          1.086363434791565,
+          1.0817893743515015,
+          1.0793604850769043,
+          1.0781415700912476,
+          1.0781103372573853,
+          1.0801191329956055,
+          1.077530026435852,
+          1.0797653198242188,
+          1.0757768154144287,
+          1.0717732906341553,
+          1.071312665939331,
+          1.0710924863815308,
+          1.0675725936889648,
+          1.0703550577163696,
+          1.0708383321762085,
+          1.063826322555542,
+          1.0636385679244995,
+          1.062016487121582,
+          1.069936990737915,
+          1.069355845451355,
+          1.0644166469573975,
+          1.067365288734436,
+          1.0605933666229248,
+          1.0640207529067993,
+          1.0677767992019653,
+          1.0611507892608643,
+          1.063066840171814,
+          1.0660765171051025,
+          1.0739257335662842,
+          1.068423867225647,
+          1.0770844221115112,
+          1.073257565498352,
+          1.076699137687683,
+          1.0718958377838135,
+          1.0657650232315063,
+          1.0730727910995483,
+          1.066534161567688,
+          1.061007022857666,
+          1.064345359802246,
+          1.067629337310791,
+          1.0713930130004883,
+          1.072109580039978,
+          1.0786337852478027,
+          1.0823901891708374,
+          1.07847261428833,
+          1.0760669708251953,
+          1.0825047492980957,
+          1.0820283889770508,
+          1.0852371454238892,
+          1.0830626487731934,
+          1.0840789079666138
+        ],
+        "pre_reflection_outside_proposal_fraction": 0.0,
+        "finite": true,
+        "mode_switch_count": 213,
+        "chain_ever_changed_valid_mode_fraction": 0.04100000113248825,
+        "mode_label_changes_including_outliers": 9727,
+        "final_other_mode_fraction": 0.0017999999690800905
+      },
+      "mean_test_energy": 0.04944636672735214,
+      "center_energies": [
+        -0.5,
+        -0.5000000596046448,
+        -0.5,
+        -0.5000000596046448,
+        1.5,
+        1.5,
+        -0.5,
+        -0.5000000596046448
+      ],
+      "origin_energy": 1.0,
+      "outside_final_fraction": 0.0,
+      "stable": true,
+      "midpoint": {
+        "center_indices": [
+          0,
+          1
+        ],
+        "centers": [
+          [
+            3.0,
+            0.0
+          ],
+          [
+            2.121320343559643,
+            2.121320343559643
+          ]
+        ],
+        "point": [
+          2.5606601717798214,
+          1.0606601717798214
+        ],
+        "true_log_density": -16.480539160917736,
+        "model_log_density": -4.826334476470947,
+        "model_density_kind": "grid_estimate_not_exact_likelihood",
+        "log_density_excess_over_true": 11.654204684446789
+      }
+    },
+    "E3_flow_3": {
+      "RUN_ID": "2a9a084eb89b7f2d68d6-5b4d9d6c2aa5417aa7f56898bf06b98e",
+      "source_RUN_ID": "a39eb91e92f73e583288-31afc8b5b86c45b8a2cdd968b16d2d57",
+      "target": "eight_gaussians",
+      "kind": "flow",
+      "seed": 3,
+      "checkpoint_sha256": "2d300aeca06ef296925a3664188226bb4ccd9d7b77eb316b00d5b0ba9b37846c",
+      "source_global_step": 5000,
+      "parameters": 69648,
+      "training_seconds": 79.31118220000008,
+      "sample_count": 5000,
+      "sample_seed": 7003,
+      "sample_seconds": 0.009830500000134634,
+      "metric_protocol_RUN_ID": "6c7aae281c888ce380c9-8396b11864f143eaa7fbadb9333ddbbe",
+      "Cov": 1.0,
+      "Dmode": 0.0978,
+      "Dmode_exact_target": 0.09266825259631829,
+      "MMD2": 0.00027718677360710764,
+      "mode_counts_including_outlier_first": [
+        449,
+        555,
+        663,
+        454,
+        606,
+        568,
+        571,
+        491,
+        643
+      ],
+      "reference_mode_counts_including_outlier_first": [
+        62,
+        626,
+        598,
+        632,
+        635,
+        628,
+        628,
+        585,
+        606
+      ],
+      "exact_mode_probabilities_outlier_first": [
+        0.011108996538242266,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972,
+        0.12361137543271972
+      ],
+      "MMD_estimator": "empirical V-statistic, including diagonals",
+      "Dmode_estimator": "two-sample plug-in using fixed5000test reference including outliers",
+      "normalized_on_omega": false,
+      "density_kind": "exact_Flow_density_no_grid_renormalization",
+      "domain": [
+        [
+          -15,
+          15
+        ],
+        [
+          -15,
+          15
+        ]
+      ],
+      "grid_shape": [
+        120,
+        120
+      ],
+      "spacing": 0.25,
+      "cell_area": 0.0625,
+      "Dgrid": 0.0006905851990375714,
+      "grid_integral": 1.0368301251997698,
+      "sampler": {},
+      "val_NLL": 2.001966896748543,
+      "val_NLL_SEM": 0.01425396734888607,
+      "exact_test_NLL": 2.0315651613473893,
+      "test_NLL_SEM": 0.017678714282158454,
+      "invertibility": {
+        "dtype": "float64 with converted learned weights",
+        "test_points": 5000,
+        "median_epsilon": 1.9755778690000867e-16,
+        "max_epsilon": 2.4247726502070548e-15,
+        "autograd_points": 100,
+        "max_logdet_error": 9.547918011776346e-15,
+        "norm20_points": 100,
+        "norm20_seed": 6201,
+        "norm20_median_epsilon": 1.6758116898322606e-15,
+        "norm20_max_epsilon": 3.122358862406797e-13
+      },
+      "midpoint": {
+        "center_indices": [
+          0,
+          1
+        ],
+        "centers": [
+          [
+            3.0,
+            0.0
+          ],
+          [
+            2.121320343559643,
+            2.121320343559643
+          ]
+        ],
+        "point": [
+          2.5606601717798214,
+          1.0606601717798214
+        ],
+        "true_log_density": -16.480539160917736,
+        "model_log_density": -5.690201282501221,
+        "model_density_kind": "exact_Flow_density_no_grid_renormalization",
+        "log_density_excess_over_true": 10.790337878416516
       }
     }
   },

@@ -8,6 +8,9 @@ def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def main():
     audit=read(R/'final_audit.json');e1=read(R/'E1.json');e2=read(R/'E2.json');e3=read(R/'E3.json');st=audit['statistics'];idx=read(R/'run_index.json');match=e3['capacity_match'];pair=e3['paired_statistics']
     requirements=Path('docs/requirements/requirements_lab6.md').read_text(encoding='utf-8');lines=[];statuses=[]
+    if '| OBS01 |' not in requirements:
+        finding = 'PASS' if e1['mixing_rule_satisfied'] else 'FAIL'
+        requirements = requirements.replace('\n## Prospective clarifications', '\n| OBS01 | §10.1 observed center-to-other-mode mixing ≥20% | separate scientific outcome; prescribed fallback E108 is evaluated independently | E1.json: all four measured fractions below .20 | '+finding+' |\n\n## Prospective clarifications')
     for line in requirements.splitlines():
         if line.startswith('|') and line.endswith('|'):
             parts=line.split('|');ident=parts[1].strip()
@@ -53,6 +56,7 @@ def main():
     out+=['',f"选择Kf={e2['selection']['selected_depth']}。相邻差使用同一val点上的配对NLL差SEM，规则已事前固定；若全部增益明显按PDF选8。具体比较：",'',
       '```json',json.dumps(e2['selection'],ensure_ascii=False,indent=2),'```','',
       'Jacobian与roundtrip独立检查；float64转换的是已学权重，不是重新训练模型。norm20结果仅作压力诊断，不套用数据区域验收阈值。',
+      f"最深16层的norm20中位误差={e2['rows'][-1]['invertibility']['norm20_median_epsilon']:.6g}，最大误差={e2['rows'][-1]['invertibility']['norm20_max_epsilon']:.6g}；与数据点误差相比明显增长，保留此数值局限，不用压力测试结果反向修改个人c或已选Kf。",
       '', '## E. E3','',f"目标={e3['target']}；EBM宽度{match['ebm_width']}、参数{match['ebm_parameters']}；Flow宽度64、参数{match['flow_parameters']}；相对较小模型的参数差={100*match['relative_gap_over_smaller']:.4f}%≤20%。只调整允许的EBM宽度，K50/eta/Kf/c不变。",
       f"主指标={e3['primary_metric']}，Delta=EBM−Flow，事前预测为正。真实事前Git提交={e3['preregistration_commit']}，原始hypothesis.md未改写。",
       '', '| Seed | 模型 | Cov | Dmode | MMD² | 精确test NLL（仅Flow） | Dgrid（EBM网格估计） | 训练秒/采样秒 | RUN_ID |',
@@ -69,7 +73,7 @@ def main():
     excess=[p['flow']['midpoint']['log_density_excess_over_true'] for p in e3['paired_runs']]
     out+=['',f"Flow中点相对真实密度的倍数={ [float(__import__('math').exp(min(x,700))) for x in excess] }。{'实测中点明显高于真实，连线图显示概率桥；桥高度按实测连续量报告。' if min(excess)>__import__('math').log(10) else '未在所有seed观察到超过一个数量级的中点过剩，不强行宣布普遍明显的桥。'}这只是描述性解释，不是新增教师验收阈值。EBM也可能在间隙留下过多密度，数据附近低能量不能排除这一点。",
       '', '## F. 交付与审计','',
-      '五个反事实问题均在counterfactual_answers.json/md中完成，含中文解释、实测值、计算及RUN_ID。八组图表提供SVG/PNG，均来自已保存记录并逐图检查。',
+      '五个反事实问题均在counterfactual_answers.json/md中完成，含中文解释、实测值、计算及RUN_ID。八组图表提供SVG/PNG，均来自已保存记录并逐图检查。独立再生成的5份CSV、JSON/Markdown反事实答案及8张PNG均逐字节一致，见regeneration_audit.json；全部286个Lab5 checkpoint严格加载检查通过，见../lab5_verification/all_checkpoints_loadability.json。',
       f"正式模型训练{st['formal_model_training_runs']}次、共{st['formal_optimizer_steps']}次更新；预算训练{st['budget_training_runs']}次，另有{st['formal_evaluation_runs']}个正式模型评估RUN、{st['quadratic_runs']}个完整二次链RUN、{st['noise_runs']}个噪声RUN。",
       f"正式训练累计{st['formal_training_seconds']:.3f}秒（{st['formal_training_seconds']/60:.3f}分钟）；正式工作流墙钟{st['formal_workflow_wall_seconds']/60:.3f}分钟；从Lab5回归开始至最终审计墙钟{st['verification_to_audit_wall_seconds']/60:.3f}分钟。",
       f"checkpoint：正式{st['formal_checkpoints']}个，Lab6含预算共{st['all_lab6_checkpoints']}个。完整模型/optimizer/scheduler/scaler/RNG/replay均已核验；原始轨迹、随机创新、样本、网格本地保留并记录哈希。",
