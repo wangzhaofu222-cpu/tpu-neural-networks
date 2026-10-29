@@ -121,6 +121,16 @@ def validate(cfg):
             if cfg['model']['dropout']!=.5 or cfg['model']['width'] not in [16,64]:raise ValueError('Lab5 canonical dropout/width')
             if cfg['model']['depth'] not in cfg['profile']['lab5_depths']:raise ValueError('Unassigned Lab5 depth')
         if cfg['train']['accumulation_steps']!=1:raise ValueError('Graph training is full-batch')
+    if cfg['experiment']['lab']==6:
+        if cfg['data']['name']!='gaussian_mixture_2d':raise ValueError('Invalid Lab6 data')
+        if cfg['model']['name'] not in {'energy_model','normalizing_flow'}:raise ValueError('Invalid Lab6 model')
+        if cfg['train']['accumulation_steps']!=1 or cfg['train']['amp']:raise ValueError('Lab6 uses full precision, no accumulation')
+        if cfg['profile']['lab6_target']!='eight_gaussians' or cfg['profile']['lab6_eta']!=[.005,.02,.08,.5] or cfg['profile']['lab6_scale']!=4.:raise ValueError('Lab6 profile mismatch')
+        if cfg['model']['name']=='normalizing_flow' and cfg['model']['cap']!=cfg['profile']['lab6_scale']:raise ValueError('Assigned scale cap changed')
+        if cfg['experiment']['purpose']=='formal':
+            if (cfg['train']['max_steps'],cfg['train']['batch_size'],cfg['optimizer']['name'],cfg['optimizer']['lr'])!=(5000,256,'adam',.001):raise ValueError('Lab6 fixed training budget mismatch')
+            if cfg['sampling']['steps']!=50 or cfg['sampling']['temperature']!=1:raise ValueError('Lab6 fixed Langevin K/T mismatch')
+            if cfg['generative']['energy_regularization']!=0:raise ValueError('Unregistered regularization change')
     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:
         raise ValueError('Lab 9 encoder conflict requires teacher clarification')
     if not cfg['profile'].get('student_id_hash') or not cfg['profile'].get('id'):

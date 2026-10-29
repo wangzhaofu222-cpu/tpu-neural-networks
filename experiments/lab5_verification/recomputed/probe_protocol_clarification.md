@@ -1,0 +1,3 @@
+# Before any formal layer probe is executed
+
+Source review after E2, before E3/probes, found that a constant training feature column should use unit scale rather than an epsilon divisor. Otherwise a word/feature absent in the 140 training nodes but present in val could be amplified by 1e6 without any train evidence. We adopt the standard constant-column unit-scale convention; nonconstant columns still use train mean/sampleSD. This clarification uses no measured probe outcome. A regression test exercises a feature present only outside train. All E1/E2 model runs use planetoid_graph, which never enters the graph_features standardization branch, so their numerical training is unaffected. The original E2 preregistered hypothesis is unchanged.

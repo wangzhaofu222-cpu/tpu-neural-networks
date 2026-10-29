@@ -1,0 +1,19 @@
+# Lab5 E2 — prospective paired edge-structure hypothesis
+
+This file must be committed to Git before any E2 training RUN starts. E1/E3 exploratory hypotheses are separately preregistered in exploratory_hypotheses.md. This hypothesis will not be edited after E2 starts.
+
+## Fixed comparison and protocol
+
+GCN on original Cora G versus the corresponding degree-preserving Gnull(seed), with Q=10*E attempted double-edge swaps, random orientation of the second edge. The only intervention inside each GCN pair is edge_index. All X, y, node identities, public train/val/test masks, feature row-L1 normalization, width64, depth2, dropout.5, Adam lr=.01, weight_decay=.0005, 200 full-batch epochs, constant schedule, CPU threads2, deterministic setting and seed are fixed. Each of seeds1,2,3 controls initialization/dropout; an independent local graph RNG uses the same integer seed for the null. GCN hyperparameters were locked from the declared E1 grid using val only (E1_selection_lock.json). No normalization or residual. All 200 epochs are executed; best checkpoint by maximum val, earliest tie.
+
+Train targets only enter optimization; val selects the checkpoint; test is evaluated after each model's configuration/selection is fixed. cal is empty. Descriptive all-label graph homophily is never a selection criterion. The teacher course split was not supplied; user explicitly authorized PyG public masks and the independent course-split check remains UNVERIFIED. No claim of teacher-verified masks is made.
+
+Train a feature-only MLP at all three matching seeds, using its separately E1-selected lr=.01, wd=.005, depth2,width64,dropout.5,200epochs. Its role is contextual; it is not part of the controlled original-versus-null GCN intervention. E2 uses fresh formal training RUNs after this preregistration, including seed1. Seed1 originalGCN and MLP were already explored in E1 with identical conditions; this fact is disclosed and seed1 is not described as previously unseen evidence.
+
+## Prediction, derivation and falsification
+
+Predict Delta_s=M_test(GCN,G,s)-M_test(GCN,Gnull(s),s)>0 for all three seeds, with mean approximately +25 percentage points and a prospective plausible magnitude band +15 to +35 pp. Equation(5.4) averages node and neighbor representations; original hE≈.81 greatly exceeds degree-conditioned chance hdeg≈.17 (5.7–5.8), whereas the null preserves every node's degree but destroys class-specific adjacency. We therefore expect original aggregation to retain more class-relevant information than random-neighbor aggregation. This is a prediction, not a guaranteed outcome or a threshold used to tune the null.
+
+The directional hypothesis is contradicted by a nonpositive mean or inconsistent signs. The PDF teacher rule (5.13) establishes a specific edge-structure difference only if all three nonzero Delta_s share one sign AND abs(mean Delta)>=2*sampleSD(Delta), ddof=1. Otherwise report 'difference not established'. A positive established mean outside the predicted band supports the direction but contradicts the quantitative magnitude prediction; report both. No re-seeding, graph selection, additional tuning, or threshold changes in response to outcomes. Preserve any null acceptance failure (exact degree, >=.5 successful-attempt fraction, hE relative gap to hdeg <=20%) rather than hiding it.
+
+Auxiliary seed1 ER graph has the same N and E, with independent uniform simple pairs, but different degrees. It bounds what the degree-preserving null can establish; a single ER comparison does not isolate a causal contribution of degrees. Additional assigned GAT on seed1 null addresses CF1. Added-edge CF2 prediction is independently recorded in CF2_prediction.json before that graph is generated. E3 val variability threshold comes from the three E2 original-GCN val accuracies, never test.

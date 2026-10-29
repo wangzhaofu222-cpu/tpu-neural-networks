@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "review_method": "Codex visual inspection of all four PNG previews, final E1 plot re-inspected after x-axis fix",
+  "reviewed_at": "2026-10-29T03:46:26.821849+00:00",
+  "figures": [
+    {
+      "file": "E1_deletion.png",
+      "sha256": "46703039b548f9a571396fb8343fb99c57e61ad1db51033f35cbd47b806ce2e2",
+      "status": "PASS"
+    },
+    {
+      "file": "E2_paired.png",
+      "sha256": "89d51fd6fc2095f4a9524722f31e360654a600ab32eb3f28fa11833a26284a5b",
+      "status": "PASS"
+    },
+    {
+      "file": "E3_layers.png",
+      "sha256": "997c6ed57971e4c39d2a5966763a616be0e0d55082755e19564feefb93437e12",
+      "status": "PASS"
+    },
+    {
+      "file": "E3_residual.png",
+      "sha256": "d301f8c2ab3ffbfc0422401bfc467ccea7594ceb3504ef0880909cf4ea64a1c9",
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    "all panels and captions readable",
+    "no overlaps or clipped labels",
+    "accuracy axes 0 to100 percent",
+    "log scale explicitly used for energy",
+    "p1 undefined homophily stated without fabricated point",
+    "paired SD is sample SD ddof1 with all seeds shown",
+    "transductive public-mask substitution disclosed in every title",
+    "colors supplemented by line/marker/hatch encoding",
+    "plots generated from saved results with provenance hashes"
+  ]
+}

@@ -36,6 +36,7 @@ class ExperimentRunner:
     def run(self,resume=None,stop_after_epoch=None,weights_only_epoch=None,initialize_only=False):
         cfg = self.config
         ssl_mode=cfg['model']['name']=='simclr' and cfg['model']['mode']=='contrastive'
+        generative_mode=cfg['experiment']['lab']==6
         device = torch.device(cfg['runtime']['device'])
         if device.type == 'cuda' and not torch.cuda.is_available():
             raise RuntimeError('CUDA requested but unavailable; no silent CPU fallback')
@@ -47,6 +48,10 @@ class ExperimentRunner:
         g = torch.Generator().manual_seed(cfg['experiment']['seed'])
         dl = loaders(cfg,ds,g)
         model = build_model(cfg['model']).to(device)
+        generative_state=None
+        if generative_mode:
+            from src.engine.generative import GenerativeState
+            generative_state=GenerativeState(cfg)
         opt_cfg = cfg['optimizer']
         options = {'lr':opt_cfg['lr'],'weight_decay':opt_cfg['weight_decay']}
         optimizer = (torch.optim.AdamW(model.parameters(),**options) if opt_cfg['name']=='adamw' else
@@ -91,6 +96,7 @@ class ExperimentRunner:
             else:
                 state = load_checkpoint(resume,model,optimizer,scheduler,scaler,g)
         if state is not None:
+            if generative_state:generative_state.load_state_dict(state['generative_state'])
             if state.get('partial_epoch'):
                 raise ValueError('Final partial data-epoch checkpoint is for inference; resume requires a complete data-epoch boundary')
             config_match=state['config_hash']==digest(cfg)
@@ -164,7 +170,7 @@ class ExperimentRunner:
                     if budget and time.perf_counter()-wall_start > budget:
                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
                     if first_checksum is None:
-                        if cfg['experiment']['lab'] in {4,5}:
+                        if cfg['experiment']['lab'] in {4,5,6}:
                             import hashlib
                             first_checksum=hashlib.sha256(x.detach().cpu().contiguous().numpy().tobytes()+y.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
                         else:first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
@@ -176,8 +182,12 @@ class ExperimentRunner:
                     if diagnostics:
                         diagnostics.begin(batch_index, len(dl['train']))
                     with torch.autocast(device_type=device.type,enabled=cfg['train']['amp']):
-                        logits = model(x)
-                        if ssl_mode:
+                        if generative_state:
+                            loss,generative_stats=generative_state.objective(model,x)
+                            logits=None
+                        else:logits = model(x)
+                        if generative_state:pass
+                        elif ssl_mode:
                             from src.ssl.losses import nt_xent
                             loss,contrast_stats=nt_xent(*logits,cfg['contrastive']['tau'])
                         else:loss = objective(logits,y)
@@ -190,6 +200,8 @@ class ExperimentRunner:
                                          for j in range(group_start,group_start+group_length))
                     scaled_loss = loss if accumulation == 1 else loss*len(y)/group_examples
                     scaler.scale(scaled_loss).backward()
+                    if generative_state:
+                        generative_stats['gradient_norm']=math.sqrt(sum(p.grad.detach().double().square().sum().item() for p in model.parameters() if p.grad is not None))
                     if cfg['experiment']['lab']==5 and cfg['model']['name']=='graph_network':
                         from src.diagnostics.oversmoothing import gradient_record
                         self._append(path/'gradients.jsonl',{'epoch':epoch+1,**gradient_record(model)})
@@ -206,7 +218,7 @@ class ExperimentRunner:
                         if not optimizer_step_skipped:
                             global_step += 1
                             if step_schedule:scheduler.step()
-                    hits,targets=(0,len(y)) if ssl_mode else correct_count(logits,y)
+                    hits,targets=(0,len(y)) if ssl_mode or generative_mode else correct_count(logits,y)
                     if ssl_mode:
                         for key in similarity_sums:similarity_sums[key]+=contrast_stats[key]*len(y)
                     loss_sum += loss.item()*targets
@@ -214,12 +226,15 @@ class ExperimentRunner:
                     count += targets
                     samples_processed += len(y)
                     self._append(path/'steps.jsonl',{'epoch':epoch+1,'batch':batch_index,'global_step':global_step,'train_loss':loss.item(),'learning_rate':lr_used,'optimizer_step_skipped':optimizer_step_skipped,
-                        **(contrast_stats if ssl_mode else {})})
+                        **(contrast_stats if ssl_mode else generative_stats if generative_mode else {})})
                     if step_limit and global_step>=step_limit:break
                 finished_steps=bool(step_limit and global_step>=step_limit)
                 partial_epoch=batch_index+1<len(dl['train'])
                 evaluate_at_end=finished_steps or (not step_limit and epoch+1==total_epochs)
-                val = (evaluate_loader(model,dl['val'],device) if not ssl_mode and (not cfg['train'].get('validation_at_end_only') or evaluate_at_end) else {'loss':None,'accuracy':None})
+                if generative_mode:
+                    from src.engine.generative import evaluate as evaluate_generative
+                    val=evaluate_generative(model,dl['val'],device)
+                else:val = (evaluate_loader(model,dl['val'],device) if not ssl_mode and (not cfg['train'].get('validation_at_end_only') or evaluate_at_end) else {'loss':None,'accuracy':None})
                 if diagnostics and not math.isfinite(val['loss']):
                     raise FloatingPointError('Non-finite validation loss')
                 if global_step > epoch_initial_step and not step_schedule:
@@ -233,6 +248,8 @@ class ExperimentRunner:
                     record.update({k:v/count for k,v in similarity_sums.items()})
                     record['train_metric']=None
                     record['train_metric_name']='not_applicable_SSL_uses_loss_and_similarities'
+                if generative_mode:
+                    record.update(train_metric=None,validation_metric_name=val['metric_name'],**generative_stats)
                 if representation_monitor and (completed_epoch%cfg['representation']['interval']==0 or completed_epoch==total_epochs):
                     record['representation']=representation_monitor.observe(completed_epoch)['representation']
                     record['epoch_time']=time.perf_counter()-epoch_start
@@ -240,7 +257,7 @@ class ExperimentRunner:
                     record.update(data_epochs=samples_processed/len(ds['train']),samples_processed=samples_processed,
                                   partial_epoch=partial_epoch,target_optimizer_steps=step_limit)
                 self._append(path/'metrics.jsonl',record)
-                improved = val['accuracy'] is not None and val['accuracy'] > best
+                improved = finished_steps if generative_mode else val['accuracy'] is not None and val['accuracy'] > best
                 if improved:
                     best,best_epoch = val['accuracy'],completed_epoch
                 extra = {'best_accuracy':best,'best_epoch':best_epoch,'run_id':manifest['RUN_ID'],
@@ -248,10 +265,13 @@ class ExperimentRunner:
                          'split_fingerprint':data_info['split_fingerprint'],'source_hash':code['source_hash'],
                          'first_batch_checksum':first_checksum}
                 if step_limit:extra.update(partial_epoch=partial_epoch,samples_processed=samples_processed)
+                if generative_state:extra['generative_state']=generative_state.state_dict()
                 save_due=(global_step-checkpoint_step>=cfg['logging'].get('save_every_steps',1000)) if step_limit else completed_epoch%cfg['logging']['save_every']==0
                 if save_due or finished_steps or completed_epoch==total_epochs or completed_epoch==stop_after_epoch:
                     save_checkpoint(path/'checkpoints/last.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
                     checkpoint_step=global_step
+                    if generative_state and generative_state.last_trajectory is not None:
+                        torch.save(generative_state.last_trajectory,path/'last_training_trajectory.pt')
                 if improved:
                     save_checkpoint(path/'checkpoints/best.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
                 if completed_epoch in cfg['logging'].get('keep_epochs',[]):
@@ -267,6 +287,7 @@ class ExperimentRunner:
                            'checkpoint_for_final_metric':'checkpoints/last.pt','purpose':cfg['experiment']['purpose']})
                 console_due=(not step_limit or finished_steps or global_step-console_step>=cfg['logging'].get('console_every_steps',500))
                 if cfg['experiment']['lab']==5:console_due=(epoch+1==total_epochs or (epoch+1)%50==0)
+                if generative_mode:console_due=finished_steps or global_step-console_step>=500
                 if cfg['model']['name']=='linear_probe':console_due=(epoch+1==total_epochs)
                 if console_due:
                     console_record={**record}
@@ -313,7 +334,7 @@ class ExperimentRunner:
             if (path/'summary.json').exists():
                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
                 summary['status']=status
-                if step_limit or cfg['experiment']['lab'] in {4,5}:summary['training_seconds']=training_seconds
+                if step_limit or cfg['experiment']['lab'] in {4,5,6}:summary['training_seconds']=training_seconds
                 write_json(path/'summary.json',summary)
         return path
 

@@ -1,0 +1,227 @@
+{
+  "two_blobs": {
+    "centers": [
+      [
+        -2.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0
+      ]
+    ],
+    "sigma": 0.3,
+    "role_counts": {
+      "train": 20000,
+      "val": 5000,
+      "test": 5000
+    },
+    "role_seeds": {
+      "train": 601,
+      "val": 602,
+      "test": 603
+    },
+    "cal_created": false,
+    "standardization": false,
+    "domain": [
+      [
+        -15.0,
+        15.0
+      ],
+      [
+        -15.0,
+        15.0
+      ]
+    ],
+    "role_tensor_sha256": {
+      "train": "ebbedae5826ce4009622f932bcc4938a068adfbd1341534f2740ce57304fe95f",
+      "val": "de2913a3d6f6ecbe2fe720cad61a2c5ae112a42b2ed7f3d0e69a1ce48a41db70",
+      "test": "92d624e072e1f700acc255c662294b0503a95edcf7862910047baf30139d4a66"
+    },
+    "exact_mode_probabilities_outlier_first": [
+      0.011108996538242266,
+      0.49444550173087887,
+      0.49444550173087887
+    ]
+  },
+  "eight_gaussians": {
+    "centers": [
+      [
+        3.0,
+        0.0
+      ],
+      [
+        2.121320343559643,
+        2.121320343559643
+      ],
+      [
+        1.8369701987210297e-16,
+        3.0
+      ],
+      [
+        -2.1213203435596424,
+        2.121320343559643
+      ],
+      [
+        -3.0,
+        3.6739403974420594e-16
+      ],
+      [
+        -2.121320343559643,
+        -2.1213203435596424
+      ],
+      [
+        -5.51091059616309e-16,
+        -3.0
+      ],
+      [
+        2.121320343559642,
+        -2.121320343559643
+      ]
+    ],
+    "sigma": 0.2,
+    "role_counts": {
+      "train": 20000,
+      "val": 5000,
+      "test": 5000
+    },
+    "role_seeds": {
+      "train": 601,
+      "val": 602,
+      "test": 603
+    },
+    "cal_created": false,
+    "standardization": false,
+    "domain": [
+      [
+        -15.0,
+        15.0
+      ],
+      [
+        -15.0,
+        15.0
+      ]
+    ],
+    "role_tensor_sha256": {
+      "train": "d85d05da3c7e30154172b83911d1daf52a3d136dd9843883e72db2e4ea65bf70",
+      "val": "9a95fb75dba6430423490dd4608dd828ef7c39643ee5f2063116b796482ab7ff",
+      "test": "acf84be32e8869c50b13f092900896734fe4a2542a01957301db42360e370b99"
+    },
+    "exact_mode_probabilities_outlier_first": [
+      0.011108996538242266,
+      0.12361137543271972,
+      0.12361137543271972,
+      0.12361137543271972,
+      0.12361137543271972,
+      0.12361137543271972,
+      0.12361137543271972,
+      0.12361137543271972,
+      0.12361137543271972
+    ]
+  },
+  "four_corners": {
+    "centers": [
+      [
+        -2.5,
+        -2.5
+      ],
+      [
+        -2.5,
+        2.5
+      ],
+      [
+        2.5,
+        -2.5
+      ],
+      [
+        2.5,
+        2.5
+      ]
+    ],
+    "sigma": 0.3,
+    "role_counts": {
+      "train": 20000,
+      "val": 5000,
+      "test": 5000
+    },
+    "role_seeds": {
+      "train": 601,
+      "val": 602,
+      "test": 603
+    },
+    "cal_created": false,
+    "standardization": false,
+    "domain": [
+      [
+        -15.0,
+        15.0
+      ],
+      [
+        -15.0,
+        15.0
+      ]
+    ],
+    "role_tensor_sha256": {
+      "train": "eaefa4bdf58433898a1298a13c126859dcc925d6f16acc4428604e22d2259bc2",
+      "val": "414a0f28bab4c2ecb13f19ec6098018947e048114b537b8b9195f71d324f9b01",
+      "test": "9c794035f73d9903e08c309d15059b2dae4e17e28a8d47697226159cc47c09e2"
+    },
+    "exact_mode_probabilities_outlier_first": [
+      0.011108996538242266,
+      0.24722275086543943,
+      0.24722275086543943,
+      0.24722275086543943,
+      0.24722275086543943
+    ]
+  },
+  "three_blobs": {
+    "centers": [
+      [
+        0.0,
+        2.5
+      ],
+      [
+        -2.2,
+        -1.3
+      ],
+      [
+        2.2,
+        -1.3
+      ]
+    ],
+    "sigma": 0.25,
+    "role_counts": {
+      "train": 20000,
+      "val": 5000,
+      "test": 5000
+    },
+    "role_seeds": {
+      "train": 601,
+      "val": 602,
+      "test": 603
+    },
+    "cal_created": false,
+    "standardization": false,
+    "domain": [
+      [
+        -15.0,
+        15.0
+      ],
+      [
+        -15.0,
+        15.0
+      ]
+    ],
+    "role_tensor_sha256": {
+      "train": "1e436e993d8d1babcd0cbb2487d0ae677d0f29e838b364dcaf7856e0dee79fb4",
+      "val": "118a9877ae86bf1ee0063fbd3bb3a1555684ed468e00935ffafb7217beeb1d4f",
+      "test": "095853e6ff0f184c3e242a01ac917c3a21f55838a962f8c580839f0b1dc53c8d"
+    },
+    "exact_mode_probabilities_outlier_first": [
+      0.011108996538242266,
+      0.3296303344872526,
+      0.3296303344872526,
+      0.3296303344872526
+    ]
+  }
+}

@@ -22,6 +22,12 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='energy_model':
+        from src.generative.ebm import EnergyModel
+        return EnergyModel(cfg)
+    if cfg['name']=='normalizing_flow':
+        from src.generative.flows import NormalizingFlow
+        return NormalizingFlow(cfg)
     if cfg['name']=='graph_network':
         from src.models.graph import GraphNetwork
         return GraphNetwork(cfg)

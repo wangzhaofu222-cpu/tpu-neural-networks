@@ -25,6 +25,9 @@ class ArrayImages(Dataset):
 
 def datasets(config):
     data = config['data']
+    if data['name']=='gaussian_mixture_2d':
+        from src.data.generative import datasets as generative_datasets
+        return generative_datasets(config)
     if data['name'] in {'planetoid_graph','graph_features'}:
         from src.graph.datasets import datasets as graph_datasets
         return graph_datasets(config)
@@ -107,6 +110,9 @@ def datasets(config):
 
 
 def loaders(config, ds, generator):
+    if config['data']['name']=='gaussian_mixture_2d':
+        from src.data.generative import loaders as generative_loaders
+        return generative_loaders(config,ds,generator)
     if config['data']['name'] in {'planetoid_graph','graph_features'}:
         from src.graph.datasets import loaders as graph_loaders
         return graph_loaders(config,ds,generator)
