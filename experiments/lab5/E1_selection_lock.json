@@ -1,0 +1,135 @@
+{
+  "locked_at": "2026-10-29T03:30:58.271069+00:00",
+  "criterion": "max val, earliest epoch; ties grid order",
+  "test_read_for_selection": false,
+  "candidates": {
+    "mlp": [
+      {
+        "kind": "mlp",
+        "lr": 0.01,
+        "wd": 0.0005,
+        "source": "runs/lab5/b021c54240b4bb693493-70abe849978f485f99d7aec615041b9b",
+        "best_val": 0.63,
+        "best_epoch": 79
+      },
+      {
+        "kind": "mlp",
+        "lr": 0.01,
+        "wd": 0.005,
+        "source": "runs/lab5/ef88f43564bc7c6f9e32-e327fa6b4a46488aad6799a26b0d5ad4",
+        "best_val": 0.632,
+        "best_epoch": 168
+      },
+      {
+        "kind": "mlp",
+        "lr": 0.005,
+        "wd": 0.0005,
+        "source": "runs/lab5/61e779497c4b0be66363-19946fe3e9704b5186f47587c755ba71",
+        "best_val": 0.628,
+        "best_epoch": 88
+      },
+      {
+        "kind": "mlp",
+        "lr": 0.005,
+        "wd": 0.005,
+        "source": "runs/lab5/619dff02993073b0988b-63a317d81b804ddb805c4be6d0ca99ea",
+        "best_val": 0.628,
+        "best_epoch": 172
+      }
+    ],
+    "gcn": [
+      {
+        "kind": "gcn",
+        "lr": 0.01,
+        "wd": 0.0005,
+        "source": "runs/lab5/21932c77ff0db0817932-ba13af141571435ea1bed3b25d687724",
+        "best_val": 0.816,
+        "best_epoch": 48
+      },
+      {
+        "kind": "gcn",
+        "lr": 0.01,
+        "wd": 0.005,
+        "source": "runs/lab5/3e532587bb019d0e69df-c66c2f4696c34b68a736ed51f12c1285",
+        "best_val": 0.68,
+        "best_epoch": 190
+      },
+      {
+        "kind": "gcn",
+        "lr": 0.005,
+        "wd": 0.0005,
+        "source": "runs/lab5/cf9de2bec679ba9cee8e-a5930a2ac0b04ee796cae6c90473df6f",
+        "best_val": 0.81,
+        "best_epoch": 119
+      },
+      {
+        "kind": "gcn",
+        "lr": 0.005,
+        "wd": 0.005,
+        "source": "runs/lab5/67698dc448b795fddd35-a492b06eaee14f2d9df8143cf0bd4188",
+        "best_val": 0.624,
+        "best_epoch": 196
+      }
+    ],
+    "gat": [
+      {
+        "kind": "gat",
+        "lr": 0.01,
+        "wd": 0.0005,
+        "source": "runs/lab5/555559686ba49f071d9f-8521bd26bd8748c3b20663d13ce1ad0d",
+        "best_val": 0.812,
+        "best_epoch": 48
+      },
+      {
+        "kind": "gat",
+        "lr": 0.01,
+        "wd": 0.005,
+        "source": "runs/lab5/f05f8a7f313cefdb3eb3-a593b76c42e04418980d2526bbe7d58f",
+        "best_val": 0.722,
+        "best_epoch": 186
+      },
+      {
+        "kind": "gat",
+        "lr": 0.005,
+        "wd": 0.0005,
+        "source": "runs/lab5/f9fd76bf094441761c3a-1710b57e8eb2411096561efaea64dab3",
+        "best_val": 0.812,
+        "best_epoch": 181
+      },
+      {
+        "kind": "gat",
+        "lr": 0.005,
+        "wd": 0.005,
+        "source": "runs/lab5/48b8fc8f7aa734182adc-6163115fb42345238c2a09d43620da7f",
+        "best_val": 0.74,
+        "best_epoch": 18
+      }
+    ]
+  },
+  "selected": {
+    "mlp": {
+      "kind": "mlp",
+      "lr": 0.01,
+      "wd": 0.005,
+      "source": "runs/lab5/ef88f43564bc7c6f9e32-e327fa6b4a46488aad6799a26b0d5ad4",
+      "best_val": 0.632,
+      "best_epoch": 168
+    },
+    "gcn": {
+      "kind": "gcn",
+      "lr": 0.01,
+      "wd": 0.0005,
+      "source": "runs/lab5/21932c77ff0db0817932-ba13af141571435ea1bed3b25d687724",
+      "best_val": 0.816,
+      "best_epoch": 48
+    },
+    "gat": {
+      "kind": "gat",
+      "lr": 0.01,
+      "wd": 0.0005,
+      "source": "runs/lab5/555559686ba49f071d9f-8521bd26bd8748c3b20663d13ce1ad0d",
+      "best_val": 0.812,
+      "best_epoch": 48
+    }
+  }
+}
