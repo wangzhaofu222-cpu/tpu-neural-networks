@@ -1,0 +1,45 @@
+{
+  "RUN_ID": "66c8b48041c5283a85d1-efd774427a9944d7891b459215d5091b",
+  "source_RUN_ID": "14955e25e337bf6ddba3-82af941555d947d2bf1c02947758acaf",
+  "source_checkpoint_sha256": "b6d848fa81c3524fadfba1f9b03a5e9c76a660788ee09a8c7414c273f3df7b9a",
+  "predictor": "network",
+  "sampler": "ddim",
+  "K": 1,
+  "eta": 0.0,
+  "tau": [
+    1000
+  ],
+  "initial_seed": 7401,
+  "noise_seed": 7501,
+  "samples": 5000,
+  "timing_repeats": 1,
+  "warmup": false,
+  "terminal_protocol_valid": true,
+  "alpha_bar_T": 4.0358297653756754e-05,
+  "variance": "posterior",
+  "clipping": false,
+  "Cov": 0.0,
+  "mode_frequencies": [
+    0.001,
+    0.0038,
+    0.0,
+    0.0,
+    0.0,
+    0.0036,
+    0.9916
+  ],
+  "rare_frequency": 0.001,
+  "rare_covered_pdf": false,
+  "rare_covered_pi0": false,
+  "Dmode": 0.98063,
+  "MMD2": 0.5733036226521839,
+  "seconds_repetitions": [
+    0.002577200000814628
+  ],
+  "seconds_median": 0.002577200000814628,
+  "NFE": 1,
+  "total_predictor_calls_per_pass": 1,
+  "repeat_max_difference": 0.0,
+  "device": "cuda",
+  "sampling_dtype": "torch.float32"
+}

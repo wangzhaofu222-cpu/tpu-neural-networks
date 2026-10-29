@@ -1,0 +1,124 @@
+diff --git a/src/config.py b/src/config.py
+index 12b0e47..d223713 100644
+--- a/src/config.py
++++ b/src/config.py
+@@ -131,6 +131,18 @@ def validate(cfg):
+             if (cfg['train']['max_steps'],cfg['train']['batch_size'],cfg['optimizer']['name'],cfg['optimizer']['lr'])!=(5000,256,'adam',.001):raise ValueError('Lab6 fixed training budget mismatch')
+             if cfg['sampling']['steps']!=50 or cfg['sampling']['temperature']!=1:raise ValueError('Lab6 fixed Langevin K/T mismatch')
+             if cfg['generative']['energy_regularization']!=0:raise ValueError('Unregistered regularization change')
++    if cfg['experiment']['lab']==7:
++        from src.diffusion.schedules import make_schedule
++        make_schedule(cfg['diffusion'])
++        if cfg['data']['name']!='rare_gmm2d' or cfg['model']['name']!='diffusion_mlp':raise ValueError('Lab7 requires registered GMM/epsilon model')
++        p=cfg['profile'];d=cfg['data'];m=cfg['model']
++        if [d['M'],d['rho']]!=p['lab7_modes']:raise ValueError('Assigned modes changed')
++        if cfg['experiment']['purpose']=='formal':
++            expected_weight=p['lab7_rare_weight']*d.get('rare_weight_multiplier',1.)
++            if d['pi0']!=expected_weight or d.get('rare_weight_multiplier',1.) not in [1.,.5,.25]:raise ValueError('Unregistered rare weight')
++            if (cfg['train']['max_steps'],cfg['train']['batch_size'],cfg['optimizer']['lr'])!=(20000,512,.001):raise ValueError('Lab7 formal budget changed')
++            if m['width'] not in [128,256] or m['depth']!=6 or m['time_dim']!=128:raise ValueError('Unregistered architecture')
++            if cfg['diffusion']['T'] not in [p['lab7_T_beta'][0],10*p['lab7_T_beta'][0]]:raise ValueError('Unregistered training T')
+     if cfg['experiment']['lab'] == 9 and cfg.get('lab9_encoder_resolution') not in {'teacher_confirmed','user_authorized_visual_encoder_precedence'}:
+         raise ValueError('Lab 9 encoder conflict requires teacher clarification')
+     if not cfg['profile'].get('student_id_hash') or not cfg['profile'].get('id'):
+diff --git a/src/data/vision.py b/src/data/vision.py
+index dbddf61..ef5f673 100644
+--- a/src/data/vision.py
++++ b/src/data/vision.py
+@@ -24,6 +24,9 @@ class ArrayImages(Dataset):
+ 
+ 
+ def datasets(config):
++    if config['data']['name']=='rare_gmm2d':
++        from src.data.gmm2d import datasets as diffusion_datasets
++        return diffusion_datasets(config)
+     data = config['data']
+     if data['name']=='gaussian_mixture_2d':
+         from src.data.generative import datasets as generative_datasets
+@@ -110,6 +113,9 @@ def datasets(config):
+ 
+ 
+ def loaders(config, ds, generator):
++    if config['data']['name']=='rare_gmm2d':
++        from src.data.gmm2d import loaders as diffusion_loaders
++        return diffusion_loaders(config,ds,generator)
+     if config['data']['name']=='gaussian_mixture_2d':
+         from src.data.generative import loaders as generative_loaders
+         return generative_loaders(config,ds,generator)
+diff --git a/src/engine/runner.py b/src/engine/runner.py
+index 2e7bcaf..a3c93ca 100644
+--- a/src/engine/runner.py
++++ b/src/engine/runner.py
+@@ -36,7 +36,7 @@ class ExperimentRunner:
+     def run(self,resume=None,stop_after_epoch=None,weights_only_epoch=None,initialize_only=False):
+         cfg = self.config
+         ssl_mode=cfg['model']['name']=='simclr' and cfg['model']['mode']=='contrastive'
+-        generative_mode=cfg['experiment']['lab']==6
++        generative_mode=cfg['experiment']['lab'] in {6,7}
+         device = torch.device(cfg['runtime']['device'])
+         if device.type == 'cuda' and not torch.cuda.is_available():
+             raise RuntimeError('CUDA requested but unavailable; no silent CPU fallback')
+@@ -50,8 +50,12 @@ class ExperimentRunner:
+         model = build_model(cfg['model']).to(device)
+         generative_state=None
+         if generative_mode:
+-            from src.engine.generative import GenerativeState
+-            generative_state=GenerativeState(cfg)
++            if cfg['experiment']['lab']==7:
++                from src.engine.diffusion import DiffusionState
++                generative_state=DiffusionState(cfg)
++            else:
++                from src.engine.generative import GenerativeState
++                generative_state=GenerativeState(cfg)
+         opt_cfg = cfg['optimizer']
+         options = {'lr':opt_cfg['lr'],'weight_decay':opt_cfg['weight_decay']}
+         optimizer = (torch.optim.AdamW(model.parameters(),**options) if opt_cfg['name']=='adamw' else
+@@ -170,7 +174,7 @@ class ExperimentRunner:
+                     if budget and time.perf_counter()-wall_start > budget:
+                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
+                     if first_checksum is None:
+-                        if cfg['experiment']['lab'] in {4,5,6}:
++                        if cfg['experiment']['lab'] in {4,5,6,7}:
+                             import hashlib
+                             first_checksum=hashlib.sha256(x.detach().cpu().contiguous().numpy().tobytes()+y.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
+                         else:first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
+@@ -200,7 +204,9 @@ class ExperimentRunner:
+                                          for j in range(group_start,group_start+group_length))
+                     scaled_loss = loss if accumulation == 1 else loss*len(y)/group_examples
+                     scaler.scale(scaled_loss).backward()
+-                    if generative_state:
++                    if generative_state and cfg['experiment']['lab']==7:
++                        generative_stats['gradient_norm']=float(torch.stack([p.grad.detach().norm() for p in model.parameters() if p.grad is not None]).norm())
++                    elif generative_state:
+                         generative_stats['gradient_norm']=math.sqrt(sum(p.grad.detach().double().square().sum().item() for p in model.parameters() if p.grad is not None))
+                     if cfg['experiment']['lab']==5 and cfg['model']['name']=='graph_network':
+                         from src.diagnostics.oversmoothing import gradient_record
+@@ -232,8 +238,11 @@ class ExperimentRunner:
+                 partial_epoch=batch_index+1<len(dl['train'])
+                 evaluate_at_end=finished_steps or (not step_limit and epoch+1==total_epochs)
+                 if generative_mode:
+-                    from src.engine.generative import evaluate as evaluate_generative
+-                    val=evaluate_generative(model,dl['val'],device)
++                    if cfg['experiment']['lab']==7:
++                        val=generative_state.evaluate(model,dl['val'],device)
++                    else:
++                        from src.engine.generative import evaluate as evaluate_generative
++                        val=evaluate_generative(model,dl['val'],device)
+                 else:val = (evaluate_loader(model,dl['val'],device) if not ssl_mode and (not cfg['train'].get('validation_at_end_only') or evaluate_at_end) else {'loss':None,'accuracy':None})
+                 if diagnostics and not math.isfinite(val['loss']):
+                     raise FloatingPointError('Non-finite validation loss')
+diff --git a/src/models/small_cnn.py b/src/models/small_cnn.py
+index 8fbe1f7..cc6bedc 100644
+--- a/src/models/small_cnn.py
++++ b/src/models/small_cnn.py
+@@ -22,6 +22,9 @@ class SmallCNN(nn.Module):
+ 
+ 
+ def build_model(cfg):
++    if cfg['name']=='diffusion_mlp':
++        from src.models.diffusion.mlp_eps import EpsilonMLP
++        return EpsilonMLP(cfg)
+     if cfg['name']=='energy_model':
+         from src.generative.ebm import EnergyModel
+         return EnergyModel(cfg)
+source_hash: 59fb2ac52c50c9814add61384e2a6052722ef76cbbf69c26921f1bfa4c4aa647

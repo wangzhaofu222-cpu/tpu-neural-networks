@@ -1,0 +1,300 @@
+{
+  "linear": {
+    "alpha_bar_T": 4.0358297653756754e-05,
+    "train_mean_terminal_KL": 4.035911207176364e-05,
+    "SNR_less_point01_fraction": 0.326,
+    "forward_moments": [
+      {
+        "t": 100,
+        "fraction": 0.1,
+        "mean_measured": [
+          1.091132487387196,
+          1.100403916444523
+        ],
+        "mean_expected": [
+          1.0953500269537062,
+          1.100273935103205
+        ],
+        "variance_measured": [
+          0.10298372809692287,
+          0.10186007743734428
+        ],
+        "variance_expected": 0.10298185432504003,
+        "mean_error": [
+          0.0042175395665102755,
+          0.00012998134131803063
+        ],
+        "mean_threshold": 0.012836314382254122,
+        "variance_relative_error": [
+          1.819516549894651e-05,
+          0.010892956774259499
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 250,
+        "fraction": 0.25,
+        "mean_measured": [
+          0.8446811497591858,
+          0.8432019979498484
+        ],
+        "mean_expected": [
+          0.8372464771442587,
+          0.8410101368425333
+        ],
+        "variance_measured": [
+          0.4752769831286052,
+          0.48029024896509526
+        ],
+        "variance_expected": 0.4759146261746394,
+        "mean_error": [
+          0.00743467261492714,
+          0.002191861107315063
+        ],
+        "mean_threshold": 0.02759462632251836,
+        "variance_relative_error": [
+          0.0013398265381324714,
+          0.009194133884110167
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 500,
+        "fraction": 0.5,
+        "mean_measured": [
+          0.3350736412527705,
+          0.3282255590368218
+        ],
+        "mean_expected": [
+          0.3242114401155724,
+          0.3256688622298399
+        ],
+        "variance_measured": [
+          0.915929014372969,
+          0.9290904429141257
+        ],
+        "variance_expected": 0.9214127571182218,
+        "mean_error": [
+          0.010862201137198102,
+          0.0025566968069819507
+        ],
+        "mean_threshold": 0.03839609890847187,
+        "variance_relative_error": [
+          0.0059514508594427085,
+          0.008332515191038059
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 750,
+        "fraction": 0.75,
+        "mean_measured": [
+          0.0742233511393416,
+          0.05930266490070216
+        ],
+        "mean_expected": [
+          0.0669438043329048,
+          0.06724473566590522
+        ],
+        "variance_measured": [
+          0.979454379428098,
+          0.9992696380264946
+        ],
+        "variance_expected": 0.9966494495610633,
+        "mean_error": [
+          0.007279546806436804,
+          0.007942070765203063
+        ],
+        "mean_threshold": 0.03993293276604789,
+        "variance_relative_error": [
+          0.017252876766789216,
+          0.0026289970526600648
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 1000,
+        "fraction": 1.0,
+        "mean_measured": [
+          0.015404291814835634,
+          0.016167567440229333
+        ],
+        "mean_expected": [
+          0.007347146989682575,
+          0.007380174493263941
+        ],
+        "variance_measured": [
+          1.013177236545447,
+          0.9698990159811699
+        ],
+        "variance_expected": 0.9999596417023462,
+        "mean_error": [
+          0.00805714482515306,
+          0.008787392946965393
+        ],
+        "mean_threshold": 0.0399991928259028,
+        "variance_relative_error": [
+          0.013218128304257393,
+          0.030061838965821264
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      }
+    ],
+    "all_forward_moments_PASS": true,
+    "RUN_ID": "000d770a472366d3977b-7a3ea9b86ef64583b908895f787ec050"
+  },
+  "cosine": {
+    "alpha_bar_T": 2.4287669070348567e-09,
+    "train_mean_terminal_KL": 2.4287669099842937e-09,
+    "SNR_less_point01_fraction": 0.064,
+    "forward_moments": [
+      {
+        "t": 100,
+        "fraction": 0.1,
+        "mean_measured": [
+          1.1380704360819183,
+          1.145459438469203
+        ],
+        "mean_expected": [
+          1.1402659562631596,
+          1.145391774217677
+        ],
+        "variance_measured": [
+          0.02790777066329735,
+          0.027603270277724756
+        ],
+        "variance_expected": 0.027907262886030404,
+        "mean_error": [
+          0.0021955201812413616,
+          6.766425152604505e-05
+        ],
+        "mean_threshold": 0.006682186814033909,
+        "variance_relative_error": [
+          1.819516550294331e-05,
+          0.010892956774267493
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 250,
+        "fraction": 0.25,
+        "mean_measured": [
+          1.0685963191783892,
+          1.0704084698140526
+        ],
+        "mean_expected": [
+          1.0643810454892992,
+          1.06916573930871
+        ],
+        "variance_measured": [
+          0.15278286150682943,
+          0.1543944293444955
+        ],
+        "variance_expected": 0.15298783867309496,
+        "mean_error": [
+          0.004215273689089916,
+          0.0012427305053426263
+        ],
+        "mean_threshold": 0.015645463939332447,
+        "variance_relative_error": [
+          0.0013398265381310281,
+          0.009194133884106614
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 500,
+        "fraction": 0.5,
+        "mean_measured": [
+          0.8207820537794822,
+          0.8182797569260762
+        ],
+        "mean_expected": [
+          0.8127313638464172,
+          0.8163848211772452
+        ],
+        "variance_measured": [
+          0.5031440445606803,
+          0.5103739655310582
+        ],
+        "variance_expected": 0.5061564095593618,
+        "mean_error": [
+          0.008050689933065014,
+          0.0018949357488310392
+        ],
+        "mean_threshold": 0.028457868073609782,
+        "variance_relative_error": [
+          0.005951450859436824,
+          0.00833251519104139
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 750,
+        "fraction": 0.75,
+        "mean_measured": [
+          0.4460273776444235,
+          0.43389758324785077
+        ],
+        "mean_expected": [
+          0.43928208226224463,
+          0.4412567794563419
+        ],
+        "variance_measured": [
+          0.8409641296508196,
+          0.8579776037349782
+        ],
+        "variance_expected": 0.855727897614264,
+        "mean_error": [
+          0.006745295382178884,
+          0.0073591962084911255
+        ],
+        "mean_threshold": 0.0370022247463963,
+        "variance_relative_error": [
+          0.017252876766791547,
+          0.0026289970526685025
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      },
+      {
+        "t": 1000,
+        "fraction": 1.0,
+        "mean_measured": [
+          0.00811430351812312,
+          0.008844822588920682
+        ],
+        "mean_expected": [
+          5.6996111508740726e-05,
+          5.725232514916773e-05
+        ],
+        "variance_measured": [
+          1.0132181258433879,
+          0.9699381586784206
+        ],
+        "variance_expected": 0.9999999975712331,
+        "mean_error": [
+          0.00805730740661438,
+          0.008787570263771515
+        ],
+        "mean_threshold": 0.03999999995142466,
+        "variance_relative_error": [
+          0.013218128304258503,
+          0.030061838965825705
+        ],
+        "variance_relative_threshold": 0.0565685424949238,
+        "PASS": true
+      }
+    ],
+    "all_forward_moments_PASS": true,
+    "RUN_ID": "000d770a472366d3977b-7a3ea9b86ef64583b908895f787ec050"
+  }
+}

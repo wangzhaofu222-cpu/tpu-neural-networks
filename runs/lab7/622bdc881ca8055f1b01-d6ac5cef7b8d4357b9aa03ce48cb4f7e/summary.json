@@ -1,0 +1,53 @@
+{
+  "RUN_ID": "622bdc881ca8055f1b01-d6ac5cef7b8d4357b9aa03ce48cb4f7e",
+  "source_RUN_ID": "14955e25e337bf6ddba3-82af941555d947d2bf1c02947758acaf",
+  "source_checkpoint_sha256": "b6d848fa81c3524fadfba1f9b03a5e9c76a660788ee09a8c7414c273f3df7b9a",
+  "predictor": "exact",
+  "sampler": "ddim",
+  "K": 5,
+  "eta": 0.0,
+  "tau": [
+    200,
+    400,
+    600,
+    800,
+    1000
+  ],
+  "initial_seed": 7401,
+  "noise_seed": 7501,
+  "samples": 5000,
+  "timing_repeats": 5,
+  "warmup": true,
+  "terminal_protocol_valid": true,
+  "alpha_bar_T": 4.0358297653756754e-05,
+  "variance": "posterior",
+  "clipping": false,
+  "Cov": 0.5,
+  "mode_frequencies": [
+    0.0016,
+    0.0946,
+    0.1014,
+    0.1062,
+    0.1048,
+    0.0916,
+    0.4998
+  ],
+  "rare_frequency": 0.0016,
+  "rare_covered_pdf": false,
+  "rare_covered_pi0": false,
+  "Dmode": 0.48883,
+  "MMD2": 0.014008456311868978,
+  "seconds_repetitions": [
+    0.011818599999969592,
+    0.017523700000310782,
+    0.011908599997696001,
+    0.011711700000887504,
+    0.01161820000197622
+  ],
+  "seconds_median": 0.011818599999969592,
+  "NFE": 5,
+  "total_predictor_calls_per_pass": 5,
+  "repeat_max_difference": 0.0,
+  "device": "cuda",
+  "sampling_dtype": "torch.float64"
+}
