@@ -1,0 +1,18 @@
+{
+  "RUN_ID": "15843c9104b831bd543c-a88441ffeee3458c8eda580fb582e3d3",
+  "source_key": "cnn_3",
+  "source_RUN_ID": "69ac6bd9ed94ae61d1aa-873bbd5089054e138a586cd2a337e139",
+  "checkpoint_sha256": "d36591571ec786563bef60c85f82251bd815c30fb3f7711be302642d553d2587",
+  "N": 26032,
+  "role": "ood",
+  "metrics": null,
+  "wall_seconds": 6.301463600000716,
+  "constraints": [],
+  "parameters_unchanged": true,
+  "model_eval": true,
+  "optimizer_updates": 0,
+  "corruption": "clean",
+  "level": 0,
+  "attack": null,
+  "object_IDs_hash": "0ef4498910a791566a8c93b7145c7313070248e1e4c3dcaf6ad4ad8b4488dc84"
+}

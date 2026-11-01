@@ -1,0 +1,4192 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "check": "Lab7_180_tests_467_checks_39_checkpoints",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "historical_experiment_data_and_models_immutable",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "historical_source_unmodified",
+      "status": "PASS",
+      "detail": [
+        "A\tconfigs/lab8.yaml",
+        "A\tsrc/analysis/reliability_profile.py",
+        "A\tsrc/attacks/__init__.py",
+        "A\tsrc/attacks/fgsm.py",
+        "A\tsrc/attacks/pgd.py",
+        "A\tsrc/corruptions/__init__.py",
+        "A\tsrc/corruptions/image.py",
+        "A\tsrc/reliability/__init__.py",
+        "A\tsrc/reliability/calibration.py",
+        "A\tsrc/reliability/metrics.py",
+        "A\tsrc/reliability/ood.py",
+        "A\tsrc/reliability/selective.py",
+        "A\tsrc/reliability/uncertainty.py",
+        "A\ttests/test_lab8.py"
+      ]
+    },
+    {
+      "check": "Lab0_7_directories_exist",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "shared_harness_preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "individual_profile_independent_SHA256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_val_cal_disjoint",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "test_separate_official_source",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "course_protocol_UNVERIFIED_preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "cal_not_read",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "controlled_training_protocol_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "controlled_training_protocol_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "controlled_training_protocol_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "controlled_training_protocol_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_vit_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "controlled_training_protocol_vit_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_vit_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "controlled_training_protocol_vit_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "three_distinct_real_CNN_seeds",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_all_training_conditions_fixed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "equal_CNN_train_subsets",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_normalization_and_dataset_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_normalization_and_dataset_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_normalization_and_dataset_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_normalization_and_dataset_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_normalization_and_dataset_vit_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "train_only_normalization_and_dataset_vit_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_real_Git_hypothesis",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_evidence_locked",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_lock_immutable",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_E3_prospective_Git",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_ID_unique",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_smoke_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_smoke_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_smoke_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_smoke_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_smoke_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_smoke_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_smoke_cnn_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_smoke_resume_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_smoke_resume_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_smoke_resume_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_smoke_resume_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_smoke_resume_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_smoke_resume_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_smoke_resume_cnn_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_val_cnn_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_cnn_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_cnn_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_temperature_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_temperature_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_temperature_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_temperature_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_val_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_val_vit_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_vit_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_vit_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_temperature_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_temperature_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_temperature_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_temperature_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_noise_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_noise_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_noise_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_3_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_noise_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_4_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_4_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_noise_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_5_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_noise_5_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_blur_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_blur_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_blur_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_3_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_blur_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_4_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_4_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_gaussian_blur_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_5_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_gaussian_blur_5_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_brightness_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_brightness_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_brightness_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_3_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_brightness_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_4_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_4_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_brightness_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_5_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_brightness_5_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_contrast_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_contrast_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_contrast_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_3_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_contrast_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_4_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_4_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_contrast_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_5_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_contrast_5_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_occlusion_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_occlusion_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_occlusion_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_3_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_occlusion_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_4_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_4_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_1_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_5_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_1_occlusion_5_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_val_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_val_cnn_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_cnn_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_cnn_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_temperature_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_temperature_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_temperature_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_temperature_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_2_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_2_occlusion_5_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_2_occlusion_5_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_val_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_val_cnn_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_clean_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_cnn_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_clean_test_cnn_3_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_temperature_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_temperature_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_temperature_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_temperature_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_corruption_cnn_3_occlusion_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_3_occlusion_5_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_corruption_cnn_3_occlusion_5_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_prereg_before_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_T5_val_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_T5_val_cnn_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_temperature5_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_temperature5_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_temperature5_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_temperature5_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_cnn_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_0_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_0_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_cnn_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_cnn_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_cnn_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_4_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_4_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_cnn_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_8_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_cnn_1_8_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_PGD_cnn_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_cnn_1_10_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_cnn_1_10_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_PGD_cnn_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_cnn_1_20_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_cnn_1_20_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_random_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_random_cnn_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_vit_1_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_0_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_0_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_vit_1_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_vit_1_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_vit_1_4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_4_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_4_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_FGSM_vit_1_8",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_8_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_FGSM_vit_1_8_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_PGD_vit_1_10_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_vit_1_10_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_vit_1_10_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_PGD_vit_1_20_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_vit_1_20_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_PGD_vit_1_20_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_metrics_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_attack_pixels_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "worst_restart_per_object_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "every_attack_step_constraints_random_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_random_vit_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "OOD_metrics_undefined_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_OOD_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_cnn_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_cnn_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_selective_ood_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_selective_ood_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_selective_ood_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_selective_ood_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "OOD_metrics_undefined_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_OOD_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_vit_1_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_vit_1_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_selective_ood_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_selective_ood_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_selective_ood_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_selective_ood_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "OOD_metrics_undefined_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_OOD_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_cnn_2_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_cnn_2_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_selective_ood_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_selective_ood_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_selective_ood_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_selective_ood_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "role_IDs_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_logits_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "OOD_metrics_undefined_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "durable_shards_OOD_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_cnn_3_records_T1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "object_records_OOD_cnn_3_records_Tstar",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "passport_selective_ood_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "explicit_image_data_provenance_selective_ood_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "committed_code_selective_ood_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "prospective_hypothesis_selective_ood_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_only_temperature_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_NLL_nonincrease_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_only_temperature_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_NLL_nonincrease_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_only_temperature_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_NLL_nonincrease_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_only_temperature_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "val_NLL_nonincrease_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_argmax_100percent_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_bin_sensitivity_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "historical_normalization_logits_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_CPU_GPU_model_consistency_cnn",
+      "status": "FAIL",
+      "detail": {
+        "maximum_logit_error": 0.0019550323486328125,
+        "N": 64
+      }
+    },
+    {
+      "check": "historical_Lab2_test_metrics_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_validation_metric_reproduced_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_argmax_100percent_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_bin_sensitivity_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "historical_normalization_logits_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_CPU_GPU_model_consistency_vit",
+      "status": "PASS",
+      "detail": {
+        "maximum_logit_error": 2.6702880859375e-05,
+        "N": 64
+      }
+    },
+    {
+      "check": "historical_Lab2_test_metrics_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_validation_metric_reproduced_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_all_five_types_six_levels",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_gaussian_noise_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_gaussian_noise_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_gaussian_blur_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_gaussian_blur_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_brightness_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_brightness_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_contrast_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_contrast_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_occlusion_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_level0_occlusion_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_paired_mean_sd",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E2_each_seed_own_T",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "T5_fit_val5_only",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_complete_grid_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_identical_full_test_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_PGD_not_weaker_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_epsilon0_identity_accuracy_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_PGD20_R2_real_cnn",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_complete_grid_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_identical_full_test_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_PGD_not_weaker_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_epsilon0_identity_accuracy_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_PGD20_R2_real_vit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "SVHN_full_test_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_1_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_1_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_1_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_1_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_1_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_1_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_1_msp_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_1_msp_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_1_entropy_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_1_entropy_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_1_margin_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_1_margin_2.9563778545817163",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "SVHN_full_test_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_vit_1_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_vit_1_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_vit_1_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_vit_1_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_vit_1_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_vit_1_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_vit_1_msp_4.273312679066656",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_vit_1_msp_4.273312679066656",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_vit_1_entropy_4.273312679066656",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_vit_1_entropy_4.273312679066656",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_vit_1_margin_4.273312679066656",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_vit_1_margin_4.273312679066656",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "SVHN_full_test_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_2_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_2_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_2_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_2_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_2_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_2_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_2_msp_3.1038212974345165",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_2_msp_3.1038212974345165",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_2_entropy_3.1038212974345165",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_2_entropy_3.1038212974345165",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_2_margin_3.1038212974345165",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_2_margin_3.1038212974345165",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "SVHN_full_test_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_3_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_3_msp_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_3_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_3_entropy_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_3_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_3_margin_1.0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_3_msp_3.1149893149635752",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_3_msp_3.1149893149635752",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_3_entropy_3.1149893149635752",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_3_entropy_3.1149893149635752",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "selective_cnn_3_margin_3.1149893149635752",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_OOD_metrics_cnn_3_margin_3.1149893149635752",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reliability_profile_cnn_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reliability_profile_cnn_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reliability_profile_cnn_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reliability_profile_vit_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all_tests_actually_pass",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "smoke_resume_verified",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "five_measured_counterfactuals",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "artifact_regeneration",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "visual_QA",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "figure_hashes_and_review_coverage",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "no_formal_report_modified",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "no_Lab9_execution",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "failed": [
+    {
+      "check": "actual_CPU_GPU_model_consistency_cnn",
+      "status": "FAIL",
+      "detail": {
+        "maximum_logit_error": 0.0019550323486328125,
+        "N": 64
+      }
+    }
+  ],
+  "check_count": 827,
+  "statistics": {
+    "tests_passed": 239,
+    "Lab7_audit_checks": 467,
+    "checks": 827,
+    "formal_evaluation_runs": 65,
+    "smoke_runs": 2,
+    "classifier_training_runs": 0,
+    "new_checkpoints": 0,
+    "source_checkpoints_verified": 6,
+    "formal_run_seconds_sum": 1214.6391196999975,
+    "audit_seconds": 70.17513099999996,
+    "all_run_folders": 67,
+    "figure_groups": 20
+  },
+  "historical_states": {
+    "Lab4Q2": "BLOCKED",
+    "Lab5_course_split": "UNVERIFIED",
+    "Lab5_E2_magnitude": "FAIL",
+    "Lab6_E1_mixing": "FAIL"
+  }
+}

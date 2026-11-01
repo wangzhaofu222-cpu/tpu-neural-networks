@@ -1,0 +1,220 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "file": "E1.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E1_binning.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E2_grid.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E2_pairs.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E2_T5.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "E3.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "selective_ood.csv",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_binning.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_binning.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_cnn.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_cnn.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_vit.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E1_vit.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_brightness.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_brightness.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_contrast.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_contrast.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_blur.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_blur.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_noise.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_noise.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_occlusion.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_occlusion.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_pairs.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E2_pairs.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_attacks.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_attacks.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_examples_cnn.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_examples_cnn.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_examples_vit.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\E3_examples_vit.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_1.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_1.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_2.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_2.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_3.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_3.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_vit_1.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_vit_1.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_1.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_1.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_2.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_2.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_3.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_3.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_vit_1.png",
+      "byte_identical": true
+    },
+    {
+      "file": "figures\\selective_ood_vit_1.svg",
+      "byte_identical": true
+    },
+    {
+      "file": "counterfactual_answers.json",
+      "byte_identical": true
+    },
+    {
+      "file": "counterfactual_answers.md",
+      "byte_identical": true
+    },
+    {
+      "file": "profiles\\cnn_1\\reliability.json",
+      "byte_identical": true
+    },
+    {
+      "file": "profiles\\cnn_2\\reliability.json",
+      "byte_identical": true
+    },
+    {
+      "file": "profiles\\cnn_3\\reliability.json",
+      "byte_identical": true
+    },
+    {
+      "file": "profiles\\vit_1\\reliability.json",
+      "byte_identical": true
+    }
+  ],
+  "count": 53,
+  "classifier_inference_calls": 0,
+  "training_updates": 0
+}

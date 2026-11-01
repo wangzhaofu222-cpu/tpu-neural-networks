@@ -1,0 +1,20 @@
+{
+  "status": "FAIL",
+  "kind": "scientific prediction, not implementation failure",
+  "predicted_sign": "positive",
+  "observed": {
+    "deltas": [
+      -0.15304490235255033,
+      -0.15894211183751564,
+      -0.1741639526806952
+    ],
+    "mean": -0.16205032229025373,
+    "sample_sd": 0.010897215279811707,
+    "all_positive": false,
+    "all_negative": true,
+    "abs_mean_ge_2sd": true,
+    "conclusion": "обратный вывод установлен",
+    "expected_positive_supported": false
+  },
+  "hypothesis_modified": false
+}

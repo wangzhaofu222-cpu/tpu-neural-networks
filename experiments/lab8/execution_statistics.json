@@ -1,0 +1,24 @@
+{
+  "tests_passed": 239,
+  "Lab7_audit_checks": 467,
+  "checks": 827,
+  "formal_evaluation_runs": 65,
+  "smoke_runs": 2,
+  "classifier_training_runs": 0,
+  "new_checkpoints": 0,
+  "source_checkpoints_verified": 6,
+  "formal_run_seconds_sum": 1214.6391196999975,
+  "audit_seconds": 68.92671239999981,
+  "all_run_folders": 67,
+  "figure_groups": 20,
+  "verification_to_summary_wall_seconds": 2445.371047,
+  "finished_at": "2026-11-01T05:47:39.114346+00:00",
+  "teacher_requirement_counts": {
+    "PASS": 45,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "NOT_APPLICABLE": 4
+  },
+  "scientific_hypothesis_status": "FAIL",
+  "reliability_profiles": 4
+}

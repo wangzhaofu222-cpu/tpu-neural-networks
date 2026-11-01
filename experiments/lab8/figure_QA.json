@@ -1,0 +1,307 @@
+{
+  "status": "PASS",
+  "reviewed_at": "2026-11-01T05:43:43.579985+00:00",
+  "method": "All20 groups visually inspected through four contact sheets; E1 and final E3 plots also inspected at full size. Legends adjusted to avoid covering data and preserve architecture colors.",
+  "figures": [
+    {
+      "file": "E1_binning.png",
+      "sha256": "f34b0718199fbc36651f09ae9378ef389200e6fcac116eed13281319439725ee",
+      "size": [
+        1280,
+        640
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E1_cnn.png",
+      "sha256": "5d8b0034eb8624788ac1059f8560833e63ce2222b93afb160d9b6308edd7cf76",
+      "size": [
+        1600,
+        608
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E1_vit.png",
+      "sha256": "93deea4d78e8f60430a1b73645ad63a5d179361d06d3e25a8f587359c7ac9f50",
+      "size": [
+        1600,
+        608
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E2_brightness.png",
+      "sha256": "e3ec2def02c694379093cb2b3303a06e231d3293ddcde3d94464a277095ca411",
+      "size": [
+        1920,
+        1120
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E2_contrast.png",
+      "sha256": "30cf52c6319aeccd185e685c78218128c0bdd1a99941adad35f077988beba2bb",
+      "size": [
+        1920,
+        1120
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E2_gaussian_blur.png",
+      "sha256": "68f4339844bbee93b78b6e9eaf491593c05834f293635709fc2bdca05c098e95",
+      "size": [
+        1920,
+        1120
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E2_gaussian_noise.png",
+      "sha256": "5c1c0e374cb3d0b0a86e6f925a8eff105abc075c29bc166711998b7fed16073c",
+      "size": [
+        1920,
+        1120
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E2_occlusion.png",
+      "sha256": "69b52aebe28877c8c6bff703d1a4d8e5965380679df1eec98dea02fd3c7a5ea0",
+      "size": [
+        1920,
+        1120
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E2_pairs.png",
+      "sha256": "2ab96b34da7d4c7b9da1aa46e48b423d9a3201bc32917c6962f1c7559978f371",
+      "size": [
+        1088,
+        640
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E3_attacks.png",
+      "sha256": "f80b8d20aa5c782c93650ebafd7314446ac9696ea6b8437be60e1272e7631df0",
+      "size": [
+        1760,
+        640
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E3_examples_cnn.png",
+      "sha256": "b053b7b5517ded5b53e850142e8716f2fc76e71c9860d06b7db99f0030d820ea",
+      "size": [
+        1280,
+        1280
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "E3_examples_vit.png",
+      "sha256": "c20b4ca1b328cae2815225a78561de1ec0c340a68deb969e514502e3ffde577b",
+      "size": [
+        1280,
+        1280
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "OOD_measures_cnn_1.png",
+      "sha256": "40a4172eac76444ba602bc4fd79c5743621ddb1479ad4e591aaa0f830281bbd4",
+      "size": [
+        1920,
+        576
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "OOD_measures_cnn_2.png",
+      "sha256": "2eab50bfd1d83071c74a85eefa10fe3eecc7b57b9ac1ece2080bb8f7d213d37c",
+      "size": [
+        1920,
+        576
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "OOD_measures_cnn_3.png",
+      "sha256": "eefaf956d58e58599162fb946ce538fed04d40fd5a35ce7dd2e7069c6df7179d",
+      "size": [
+        1920,
+        576
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "OOD_measures_vit_1.png",
+      "sha256": "99c119206e00fc7bb315cd26981fe3dbb41099289d3781e339bf88aa320309a1",
+      "size": [
+        1920,
+        576
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "selective_ood_cnn_1.png",
+      "sha256": "172e4659c068310e8049e3e40f1f659ea7975e34fc57054b87548aea6e0417f6",
+      "size": [
+        1760,
+        640
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "selective_ood_cnn_2.png",
+      "sha256": "5cd07256e2749751b22ed3998a21d583287639e578996b9b85e2b4a931e91477",
+      "size": [
+        1760,
+        640
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "selective_ood_cnn_3.png",
+      "sha256": "bb4acfb76423af8aea977463e2e707acf0262c625820a95da62e90079ec6d6fe",
+      "size": [
+        1760,
+        640
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    },
+    {
+      "file": "selective_ood_vit_1.png",
+      "sha256": "461528063ff1b10fdcf06c6e9caeb63dc98093e44ff3636e867feb497f3177f7",
+      "size": [
+        1760,
+        640
+      ],
+      "status": "PASS",
+      "checks": [
+        "labels legible",
+        "no clipping",
+        "legends distinguish conditions",
+        "real data source traced"
+      ]
+    }
+  ]
+}

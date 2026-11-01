@@ -1,0 +1,45 @@
+{
+  "RUN_ID": "425f1cf05461dba307f0-5c597dfce5e84daa933c352ae3d3edaa",
+  "manifest_original_sha256": "9d8e81b3368ebdcd62c263ddd4b85e2906f4dfd5072a50b24ec97d14cef59c0a",
+  "checkpoint_sha256": "bfb20d58a879c4546738583ddc64e51dda01749570614c55f329508e20f20911",
+  "source_RUN_ID": "8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326",
+  "original_manifest_input_fingerprint": "bfb20d58a879c4546738583ddc64e51dda01749570614c55f329508e20f20911",
+  "input_fingerprint_kind": "frozen_checkpoint_sha256",
+  "actual_CIFAR10_raw_file_sha256": {
+    "batches.meta": "f962466ef690d46b226450fb9aadc74ba4bc64a76aa526b5827fe4bc5c7125cb",
+    "data_batch_1": "54636561a3ce25bd3e19253c6b0d8538147b0ae398331ac4a2d86c6d987368cd",
+    "data_batch_2": "766b2cef9fbc745cf056b3152224f7cf77163b330ea9a15f9392beb8b89bc5a8",
+    "data_batch_3": "0f00d98ebfb30b3ec0ad19f9756dc2630b89003e10525f5e148445e82aa6a1f9",
+    "data_batch_4": "3f7bb240661948b8f4d53e36ec720d8306f5668bd0071dcb4e6c947f78e9682b",
+    "data_batch_5": "d91802434d8376bbaeeadf58a737e3a1b12ac839077e931237e0dcd43adcb154",
+    "readme.html": "4d1c3fb199d6a183ae03f5162b469d7bc04edf2fad9547bd5f224271d52f98e5",
+    "test_batch": "f53d8d457504f7cff4ea9e021afcf0e0ad8e24a91f3fc42091b8adef61157831"
+  },
+  "actual_SVHN_test_sha256": "cdce80dfb2a2c4c6160906d0bd7c68ec5a99d7ca4831afa54f09182025b6a75b",
+  "split_sha256": "bdb4b2d8d6ec011aaf87ac2300309011a2f535b87591727d6fdc54cb2ab63806",
+  "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+  "evaluation": {
+    "source_key": "cnn_1",
+    "role": "val",
+    "corruption": "occlusion",
+    "level": 5,
+    "attack": null,
+    "object_IDs_hash": "fdfa1b9f2e1d49a2f927b35e3748ed24a2f0752fde740f1e7e8acbef53a1ff52",
+    "N": 5000
+  },
+  "normalization": {
+    "mean": [
+      0.4913593061552382,
+      0.4820096833319084,
+      0.4463430876474862
+    ],
+    "std": [
+      0.2466760290143046,
+      0.24313375859044625,
+      0.26125503162712693
+    ],
+    "source": "full train role only"
+  },
+  "course_protocol_status": "UNVERIFIED",
+  "cal_role_accessed": false
+}

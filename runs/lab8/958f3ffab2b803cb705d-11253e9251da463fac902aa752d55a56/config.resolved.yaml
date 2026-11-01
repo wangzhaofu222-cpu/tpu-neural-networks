@@ -1,0 +1,96 @@
+experiment:
+  lab: 8
+  seed: 1
+  deterministic: true
+  purpose: formal
+  role: corruption_cnn_1_gaussian_blur_3
+profile:
+  id: P3adf02
+  student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+  base_seed: 987693601
+  lab8_arch: cnn
+  lab8_corruption: occlusion
+  lab8_pgd_eps_255: 2
+data:
+  num_workers: 0
+  split_path: splits/cifar10.json
+  course_protocol_status: UNVERIFIED
+  cal_read: false
+train:
+  amp: false
+runtime:
+  device: cuda
+  threads: 2
+  dependency_lock: requirements.lock.txt
+logging:
+  run_root: runs/lab8
+ece:
+  M: 15
+  binning: equal_width
+corruptions:
+  gaussian_noise:
+  - 0
+  - 0.04
+  - 0.06
+  - 0.08
+  - 0.09
+  - 0.1
+  gaussian_blur:
+  - 0
+  - 0.4
+  - 0.7
+  - 1.0
+  - 1.3
+  - 1.6
+  brightness:
+  - 1.0
+  - 1.15
+  - 1.3
+  - 1.45
+  - 1.6
+  - 1.75
+  contrast:
+  - 1.0
+  - 0.8
+  - 0.6
+  - 0.4
+  - 0.2
+  - 0.1
+  occlusion:
+  - 0
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+corruption_protocol: local explicitly parameterized approximations; not certified
+  CIFAR-10-C equivalence
+attacks:
+  FGSM_eps_255:
+  - 0
+  - 1
+  - 2
+  - 4
+  - 8
+  PGD_eps_255: 2
+  K: 10
+  R: 1
+  alpha_rule: 2.5*epsilon/K
+  boundary_K: 20
+  boundary_R: 2
+  test_count: 10000
+  batch_size: 64
+model_selection:
+  fraction: 0.05
+  optimizer_updates: 10000
+  checkpoint: last.pt
+  reason: Only this fraction has three genuine matched seeds. No new classifier training;
+    no test-based checkpoint selection.
+evaluation:
+  source_key: cnn_1
+  role: test
+  corruption: gaussian_blur
+  level: 3
+  attack: null
+  object_IDs_hash: e34b7fa0be7a9c1d4a9ea0b7a8f630c2848d3dbb8c52597bd1ee7d10c5c32a37
+  N: 10000
