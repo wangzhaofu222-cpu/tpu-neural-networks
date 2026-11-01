@@ -1,0 +1,21 @@
+{
+  "h": 1.2379350644818292,
+  "source": "all20000rawtrain distinct pair distances,exact torch.pdist median",
+  "pairs": 199990000,
+  "train_seed": 701,
+  "train_config": {
+    "name": "rare_gmm2d",
+    "M": 6,
+    "rho": 0.1,
+    "pi0": 0.02,
+    "rare_weight_multiplier": 1.0,
+    "seeds": {
+      "train": 701,
+      "val": 702,
+      "test": 703
+    },
+    "train_fraction": 1.0,
+    "num_workers": 0
+  },
+  "MMD_estimator": "V including diagonal"
+}

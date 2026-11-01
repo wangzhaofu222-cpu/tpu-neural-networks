@@ -1,0 +1,848 @@
+{
+  "cnn_1": {
+    "label": "E1_cnn_r0.05_j1",
+    "RUN_ID": "8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326",
+    "path": "runs/lab2/8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326/checkpoints/last.pt",
+    "sha256": "bfb20d58a879c4546738583ddc64e51dda01749570614c55f329508e20f20911",
+    "model": {
+      "name": "cifar_resnet18",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "fraction": 0.05,
+    "seed": 1,
+    "steps": 10000,
+    "inference_api": "build_model(config); load_checkpoint(path,model); model.forward_features(x)",
+    "full_fraction_for_Lab8_9": false,
+    "selected_E1_r1": false,
+    "cfg": {
+      "experiment": {
+        "name": "E1_cnn_r0.05_j1",
+        "lab": 2,
+        "seed": 1,
+        "deterministic": true,
+        "purpose": "formal",
+        "resume_ablation": "none",
+        "role": "primary"
+      },
+      "data": {
+        "name": "cifar10",
+        "root": "data",
+        "split_path": "splits/cifar10.json",
+        "split_seed": 1729,
+        "val_per_class": 500,
+        "cal_per_class": 200,
+        "train_fraction": 0.05,
+        "num_workers": 0,
+        "download": false,
+        "augmentation": "A1"
+      },
+      "model": {
+        "name": "cifar_resnet18",
+        "classes": 10,
+        "image_size": 32,
+        "patch_size": 4,
+        "num_layers": 6,
+        "num_heads": 6,
+        "hidden_dim": 384,
+        "mlp_dim": 1536,
+        "comparison_mode": "param_matched",
+        "pretrained": false
+      },
+      "optimizer": {
+        "name": "adamw",
+        "lr": 0.003,
+        "weight_decay": 0.05,
+        "momentum": 0.9
+      },
+      "scheduler": {
+        "name": "cosine",
+        "unit": "optimizer_step",
+        "warmup_fraction": 0.05,
+        "warmup_epochs": 0,
+        "step_size": 100,
+        "gamma": 1.0
+      },
+      "train": {
+        "epochs": 1000,
+        "batch_size": 128,
+        "amp": false,
+        "accumulation_steps": 1,
+        "max_steps": 10000,
+        "validation_at_end_only": true
+      },
+      "logging": {
+        "backend": "local",
+        "save_every": 1,
+        "run_root": "runs/lab2",
+        "save_every_steps": 1000,
+        "console_every_steps": 500,
+        "profile_on_finish": true
+      },
+      "runtime": {
+        "device": "cuda",
+        "threads": 2,
+        "max_seconds": 7200,
+        "dependency_lock": "requirements.lock.txt"
+      },
+      "profiling": {
+        "warmup": 10,
+        "repeats": 30
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab2_fractions": [
+          0.05,
+          0.15,
+          0.3,
+          0.6,
+          1.0
+        ],
+        "lab2_corruptions": [
+          "blur",
+          "contrast",
+          "patch_shuffle"
+        ],
+        "lab2_strong_aug": "randaugment+cutmix"
+      }
+    },
+    "source_summary": {
+      "epoch": 588,
+      "global_step": 10000,
+      "train_loss": 5.814938822368276e-05,
+      "validation_loss": 1.6026493741989136,
+      "train_metric": 1.0,
+      "validation_metric": 0.713,
+      "learning_rate": 8.201887236047867e-11,
+      "epoch_time": 1.6323226999993494,
+      "peak_gpu_memory_bytes": 1816788992,
+      "data_epochs": 588.2381395348838,
+      "samples_processed": 1264712,
+      "partial_epoch": true,
+      "target_optimizer_steps": 10000,
+      "RUN_ID": "8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326",
+      "EXP_ID": "8705d516f9c58ae4458c",
+      "best_accuracy": 0.713,
+      "best_epoch": 588,
+      "first_batch_checksum": "0f54c76e7c939ab0a2fa68c5c9beb1ada988ee24357373ccda7efeaacc7e4c61",
+      "checkpoint_for_final_metric": "checkpoints/last.pt",
+      "purpose": "formal",
+      "status": "COMPLETED",
+      "training_seconds": 1198.9566964000005
+    }
+  },
+  "cnn_2": {
+    "label": "E3_cnn_j2",
+    "RUN_ID": "f1a84ec3e8723294d4a2-14cad9141a774b6daee3100c969640f6",
+    "path": "runs/lab2/f1a84ec3e8723294d4a2-14cad9141a774b6daee3100c969640f6/checkpoints/last.pt",
+    "sha256": "cee8c67066e761164b018cbab8015f1382c13c18d30afd743cdbdc8929cfd5b1",
+    "model": {
+      "name": "cifar_resnet18",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "fraction": 0.05,
+    "seed": 2,
+    "steps": 10000,
+    "inference_api": "build_model(config); load_checkpoint(path,model); model.forward_features(x)",
+    "full_fraction_for_Lab8_9": false,
+    "selected_E1_r1": false,
+    "cfg": {
+      "experiment": {
+        "name": "E3_cnn_j2",
+        "lab": 2,
+        "seed": 2,
+        "deterministic": true,
+        "purpose": "formal",
+        "resume_ablation": "none",
+        "role": "primary"
+      },
+      "data": {
+        "name": "cifar10",
+        "root": "data",
+        "split_path": "splits/cifar10.json",
+        "split_seed": 1729,
+        "val_per_class": 500,
+        "cal_per_class": 200,
+        "train_fraction": 0.05,
+        "num_workers": 0,
+        "download": false,
+        "augmentation": "A1"
+      },
+      "model": {
+        "name": "cifar_resnet18",
+        "classes": 10,
+        "image_size": 32,
+        "patch_size": 4,
+        "num_layers": 6,
+        "num_heads": 6,
+        "hidden_dim": 384,
+        "mlp_dim": 1536,
+        "comparison_mode": "param_matched",
+        "pretrained": false
+      },
+      "optimizer": {
+        "name": "adamw",
+        "lr": 0.003,
+        "weight_decay": 0.05,
+        "momentum": 0.9
+      },
+      "scheduler": {
+        "name": "cosine",
+        "unit": "optimizer_step",
+        "warmup_fraction": 0.05,
+        "warmup_epochs": 0,
+        "step_size": 100,
+        "gamma": 1.0
+      },
+      "train": {
+        "epochs": 1000,
+        "batch_size": 128,
+        "amp": false,
+        "accumulation_steps": 1,
+        "max_steps": 10000,
+        "validation_at_end_only": true
+      },
+      "logging": {
+        "backend": "local",
+        "save_every": 1,
+        "run_root": "runs/lab2",
+        "save_every_steps": 1000,
+        "console_every_steps": 500,
+        "profile_on_finish": true
+      },
+      "runtime": {
+        "device": "cuda",
+        "threads": 2,
+        "max_seconds": 7200,
+        "dependency_lock": "requirements.lock.txt"
+      },
+      "profiling": {
+        "warmup": 10,
+        "repeats": 30
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab2_fractions": [
+          0.05,
+          0.15,
+          0.3,
+          0.6,
+          1.0
+        ],
+        "lab2_corruptions": [
+          "blur",
+          "contrast",
+          "patch_shuffle"
+        ],
+        "lab2_strong_aug": "randaugment+cutmix"
+      }
+    },
+    "source_summary": {
+      "epoch": 588,
+      "global_step": 10000,
+      "train_loss": 6.746708913851762e-05,
+      "validation_loss": 1.716328240776062,
+      "train_metric": 1.0,
+      "validation_metric": 0.705,
+      "learning_rate": 8.201887236047867e-11,
+      "epoch_time": 1.716249400000379,
+      "peak_gpu_memory_bytes": 1816788992,
+      "data_epochs": 588.2381395348838,
+      "samples_processed": 1264712,
+      "partial_epoch": true,
+      "target_optimizer_steps": 10000,
+      "RUN_ID": "f1a84ec3e8723294d4a2-14cad9141a774b6daee3100c969640f6",
+      "EXP_ID": "f1a84ec3e8723294d4a2",
+      "best_accuracy": 0.705,
+      "best_epoch": 588,
+      "first_batch_checksum": "9c2d10236d6ac7af2b001f4083c724d5bbef69712299c98d234fcc70e088a3f2",
+      "checkpoint_for_final_metric": "checkpoints/last.pt",
+      "purpose": "formal",
+      "status": "COMPLETED",
+      "training_seconds": 1220.3394344999997
+    }
+  },
+  "cnn_3": {
+    "label": "E3_cnn_j3",
+    "RUN_ID": "69ac6bd9ed94ae61d1aa-873bbd5089054e138a586cd2a337e139",
+    "path": "runs/lab2/69ac6bd9ed94ae61d1aa-873bbd5089054e138a586cd2a337e139/checkpoints/last.pt",
+    "sha256": "d36591571ec786563bef60c85f82251bd815c30fb3f7711be302642d553d2587",
+    "model": {
+      "name": "cifar_resnet18",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "fraction": 0.05,
+    "seed": 3,
+    "steps": 10000,
+    "inference_api": "build_model(config); load_checkpoint(path,model); model.forward_features(x)",
+    "full_fraction_for_Lab8_9": false,
+    "selected_E1_r1": false,
+    "cfg": {
+      "experiment": {
+        "name": "E3_cnn_j3",
+        "lab": 2,
+        "seed": 3,
+        "deterministic": true,
+        "purpose": "formal",
+        "resume_ablation": "none",
+        "role": "primary"
+      },
+      "data": {
+        "name": "cifar10",
+        "root": "data",
+        "split_path": "splits/cifar10.json",
+        "split_seed": 1729,
+        "val_per_class": 500,
+        "cal_per_class": 200,
+        "train_fraction": 0.05,
+        "num_workers": 0,
+        "download": false,
+        "augmentation": "A1"
+      },
+      "model": {
+        "name": "cifar_resnet18",
+        "classes": 10,
+        "image_size": 32,
+        "patch_size": 4,
+        "num_layers": 6,
+        "num_heads": 6,
+        "hidden_dim": 384,
+        "mlp_dim": 1536,
+        "comparison_mode": "param_matched",
+        "pretrained": false
+      },
+      "optimizer": {
+        "name": "adamw",
+        "lr": 0.003,
+        "weight_decay": 0.05,
+        "momentum": 0.9
+      },
+      "scheduler": {
+        "name": "cosine",
+        "unit": "optimizer_step",
+        "warmup_fraction": 0.05,
+        "warmup_epochs": 0,
+        "step_size": 100,
+        "gamma": 1.0
+      },
+      "train": {
+        "epochs": 1000,
+        "batch_size": 128,
+        "amp": false,
+        "accumulation_steps": 1,
+        "max_steps": 10000,
+        "validation_at_end_only": true
+      },
+      "logging": {
+        "backend": "local",
+        "save_every": 1,
+        "run_root": "runs/lab2",
+        "save_every_steps": 1000,
+        "console_every_steps": 500,
+        "profile_on_finish": true
+      },
+      "runtime": {
+        "device": "cuda",
+        "threads": 2,
+        "max_seconds": 7200,
+        "dependency_lock": "requirements.lock.txt"
+      },
+      "profiling": {
+        "warmup": 10,
+        "repeats": 30
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab2_fractions": [
+          0.05,
+          0.15,
+          0.3,
+          0.6,
+          1.0
+        ],
+        "lab2_corruptions": [
+          "blur",
+          "contrast",
+          "patch_shuffle"
+        ],
+        "lab2_strong_aug": "randaugment+cutmix"
+      }
+    },
+    "source_summary": {
+      "epoch": 588,
+      "global_step": 10000,
+      "train_loss": 4.091581786269671e-05,
+      "validation_loss": 1.6272532537460327,
+      "train_metric": 1.0,
+      "validation_metric": 0.7154,
+      "learning_rate": 8.201887236047867e-11,
+      "epoch_time": 1.6187989999998535,
+      "peak_gpu_memory_bytes": 1952379392,
+      "data_epochs": 588.2381395348838,
+      "samples_processed": 1264712,
+      "partial_epoch": true,
+      "target_optimizer_steps": 10000,
+      "RUN_ID": "69ac6bd9ed94ae61d1aa-873bbd5089054e138a586cd2a337e139",
+      "EXP_ID": "69ac6bd9ed94ae61d1aa",
+      "best_accuracy": 0.7154,
+      "best_epoch": 588,
+      "first_batch_checksum": "8681d58ca194707c58e5e757fe9531789c171886b75ba44e31e42875305d9c91",
+      "checkpoint_for_final_metric": "checkpoints/last.pt",
+      "purpose": "formal",
+      "status": "COMPLETED",
+      "training_seconds": 1183.0316563000015
+    }
+  },
+  "vit_1": {
+    "label": "E1_vit_r0.05_j1",
+    "RUN_ID": "76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab",
+    "path": "runs/lab2/76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab/checkpoints/last.pt",
+    "sha256": "949b472a639b45afbbfd342ae0a941d57ca541d95b7627ac08cb00b4d5b8c3d8",
+    "model": {
+      "name": "cifar_vit",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "fraction": 0.05,
+    "seed": 1,
+    "steps": 10000,
+    "inference_api": "build_model(config); load_checkpoint(path,model); model.forward_features(x)",
+    "full_fraction_for_Lab8_9": false,
+    "selected_E1_r1": false,
+    "cfg": {
+      "experiment": {
+        "name": "E1_vit_r0.05_j1",
+        "lab": 2,
+        "seed": 1,
+        "deterministic": true,
+        "purpose": "formal",
+        "resume_ablation": "none",
+        "role": "primary"
+      },
+      "data": {
+        "name": "cifar10",
+        "root": "data",
+        "split_path": "splits/cifar10.json",
+        "split_seed": 1729,
+        "val_per_class": 500,
+        "cal_per_class": 200,
+        "train_fraction": 0.05,
+        "num_workers": 0,
+        "download": false,
+        "augmentation": "A1"
+      },
+      "model": {
+        "name": "cifar_vit",
+        "classes": 10,
+        "image_size": 32,
+        "patch_size": 4,
+        "num_layers": 6,
+        "num_heads": 6,
+        "hidden_dim": 384,
+        "mlp_dim": 1536,
+        "comparison_mode": "param_matched",
+        "pretrained": false
+      },
+      "optimizer": {
+        "name": "adamw",
+        "lr": 0.0003,
+        "weight_decay": 0.05,
+        "momentum": 0.9
+      },
+      "scheduler": {
+        "name": "cosine",
+        "unit": "optimizer_step",
+        "warmup_fraction": 0.05,
+        "warmup_epochs": 0,
+        "step_size": 100,
+        "gamma": 1.0
+      },
+      "train": {
+        "epochs": 1000,
+        "batch_size": 128,
+        "amp": false,
+        "accumulation_steps": 1,
+        "max_steps": 10000,
+        "validation_at_end_only": true
+      },
+      "logging": {
+        "backend": "local",
+        "save_every": 1,
+        "run_root": "runs/lab2",
+        "save_every_steps": 1000,
+        "console_every_steps": 500,
+        "profile_on_finish": true
+      },
+      "runtime": {
+        "device": "cuda",
+        "threads": 2,
+        "max_seconds": 7200,
+        "dependency_lock": "requirements.lock.txt"
+      },
+      "profiling": {
+        "warmup": 10,
+        "repeats": 30
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab2_fractions": [
+          0.05,
+          0.15,
+          0.3,
+          0.6,
+          1.0
+        ],
+        "lab2_corruptions": [
+          "blur",
+          "contrast",
+          "patch_shuffle"
+        ],
+        "lab2_strong_aug": "randaugment+cutmix"
+      }
+    },
+    "source_summary": {
+      "epoch": 588,
+      "global_step": 10000,
+      "train_loss": 9.70704040810233e-05,
+      "validation_loss": 3.9598032344818117,
+      "train_metric": 1.0,
+      "validation_metric": 0.4562,
+      "learning_rate": 8.201887236047866e-12,
+      "epoch_time": 2.5922945000002073,
+      "peak_gpu_memory_bytes": 1593773568,
+      "data_epochs": 588.2381395348838,
+      "samples_processed": 1264712,
+      "partial_epoch": true,
+      "target_optimizer_steps": 10000,
+      "RUN_ID": "76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab",
+      "EXP_ID": "76a6bee7ce9731bfa4fa",
+      "best_accuracy": 0.4562,
+      "best_epoch": 588,
+      "first_batch_checksum": "0f54c76e7c939ab0a2fa68c5c9beb1ada988ee24357373ccda7efeaacc7e4c61",
+      "checkpoint_for_final_metric": "checkpoints/last.pt",
+      "purpose": "formal",
+      "status": "COMPLETED",
+      "training_seconds": 1705.4155558000002
+    }
+  },
+  "vit_2": {
+    "label": "E3_vit_j2",
+    "RUN_ID": "1620cd8ad55b41c9e6c2-7e9c1d9d13e44a5bbee06a6bc7693cac",
+    "path": "runs/lab2/1620cd8ad55b41c9e6c2-7e9c1d9d13e44a5bbee06a6bc7693cac/checkpoints/last.pt",
+    "sha256": "d20d71c54d4c3756ce3c736ba5c13adfd114f5ef264afdd5982aa8d3e5ee6051",
+    "model": {
+      "name": "cifar_vit",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "fraction": 0.05,
+    "seed": 2,
+    "steps": 10000,
+    "inference_api": "build_model(config); load_checkpoint(path,model); model.forward_features(x)",
+    "full_fraction_for_Lab8_9": false,
+    "selected_E1_r1": false,
+    "cfg": {
+      "experiment": {
+        "name": "E3_vit_j2",
+        "lab": 2,
+        "seed": 2,
+        "deterministic": true,
+        "purpose": "formal",
+        "resume_ablation": "none",
+        "role": "primary"
+      },
+      "data": {
+        "name": "cifar10",
+        "root": "data",
+        "split_path": "splits/cifar10.json",
+        "split_seed": 1729,
+        "val_per_class": 500,
+        "cal_per_class": 200,
+        "train_fraction": 0.05,
+        "num_workers": 0,
+        "download": false,
+        "augmentation": "A1"
+      },
+      "model": {
+        "name": "cifar_vit",
+        "classes": 10,
+        "image_size": 32,
+        "patch_size": 4,
+        "num_layers": 6,
+        "num_heads": 6,
+        "hidden_dim": 384,
+        "mlp_dim": 1536,
+        "comparison_mode": "param_matched",
+        "pretrained": false
+      },
+      "optimizer": {
+        "name": "adamw",
+        "lr": 0.0003,
+        "weight_decay": 0.05,
+        "momentum": 0.9
+      },
+      "scheduler": {
+        "name": "cosine",
+        "unit": "optimizer_step",
+        "warmup_fraction": 0.05,
+        "warmup_epochs": 0,
+        "step_size": 100,
+        "gamma": 1.0
+      },
+      "train": {
+        "epochs": 1000,
+        "batch_size": 128,
+        "amp": false,
+        "accumulation_steps": 1,
+        "max_steps": 10000,
+        "validation_at_end_only": true
+      },
+      "logging": {
+        "backend": "local",
+        "save_every": 1,
+        "run_root": "runs/lab2",
+        "save_every_steps": 1000,
+        "console_every_steps": 500,
+        "profile_on_finish": true
+      },
+      "runtime": {
+        "device": "cuda",
+        "threads": 2,
+        "max_seconds": 7200,
+        "dependency_lock": "requirements.lock.txt"
+      },
+      "profiling": {
+        "warmup": 10,
+        "repeats": 30
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab2_fractions": [
+          0.05,
+          0.15,
+          0.3,
+          0.6,
+          1.0
+        ],
+        "lab2_corruptions": [
+          "blur",
+          "contrast",
+          "patch_shuffle"
+        ],
+        "lab2_strong_aug": "randaugment+cutmix"
+      }
+    },
+    "source_summary": {
+      "epoch": 588,
+      "global_step": 10000,
+      "train_loss": 0.00010423833555250894,
+      "validation_loss": 3.9414114837646483,
+      "train_metric": 1.0,
+      "validation_metric": 0.4594,
+      "learning_rate": 8.201887236047866e-12,
+      "epoch_time": 2.6207276999994065,
+      "peak_gpu_memory_bytes": 1872163328,
+      "data_epochs": 588.2381395348838,
+      "samples_processed": 1264712,
+      "partial_epoch": true,
+      "target_optimizer_steps": 10000,
+      "RUN_ID": "1620cd8ad55b41c9e6c2-7e9c1d9d13e44a5bbee06a6bc7693cac",
+      "EXP_ID": "1620cd8ad55b41c9e6c2",
+      "best_accuracy": 0.4594,
+      "best_epoch": 588,
+      "first_batch_checksum": "9c2d10236d6ac7af2b001f4083c724d5bbef69712299c98d234fcc70e088a3f2",
+      "checkpoint_for_final_metric": "checkpoints/last.pt",
+      "purpose": "formal",
+      "status": "COMPLETED",
+      "training_seconds": 1716.5495721000007
+    }
+  },
+  "vit_3": {
+    "label": "E3_vit_j3",
+    "RUN_ID": "793fe73a531b8002205c-4bc06191663d459e941756cc0e6a26b1",
+    "path": "runs/lab2/793fe73a531b8002205c-4bc06191663d459e941756cc0e6a26b1/checkpoints/last.pt",
+    "sha256": "62615617bb2819acf796209b9975e7b2a1aba35d4fc8117a843c9b8cad7c3aa8",
+    "model": {
+      "name": "cifar_vit",
+      "classes": 10,
+      "image_size": 32,
+      "patch_size": 4,
+      "num_layers": 6,
+      "num_heads": 6,
+      "hidden_dim": 384,
+      "mlp_dim": 1536,
+      "comparison_mode": "param_matched",
+      "pretrained": false
+    },
+    "fraction": 0.05,
+    "seed": 3,
+    "steps": 10000,
+    "inference_api": "build_model(config); load_checkpoint(path,model); model.forward_features(x)",
+    "full_fraction_for_Lab8_9": false,
+    "selected_E1_r1": false,
+    "cfg": {
+      "experiment": {
+        "name": "E3_vit_j3",
+        "lab": 2,
+        "seed": 3,
+        "deterministic": true,
+        "purpose": "formal",
+        "resume_ablation": "none",
+        "role": "primary"
+      },
+      "data": {
+        "name": "cifar10",
+        "root": "data",
+        "split_path": "splits/cifar10.json",
+        "split_seed": 1729,
+        "val_per_class": 500,
+        "cal_per_class": 200,
+        "train_fraction": 0.05,
+        "num_workers": 0,
+        "download": false,
+        "augmentation": "A1"
+      },
+      "model": {
+        "name": "cifar_vit",
+        "classes": 10,
+        "image_size": 32,
+        "patch_size": 4,
+        "num_layers": 6,
+        "num_heads": 6,
+        "hidden_dim": 384,
+        "mlp_dim": 1536,
+        "comparison_mode": "param_matched",
+        "pretrained": false
+      },
+      "optimizer": {
+        "name": "adamw",
+        "lr": 0.0003,
+        "weight_decay": 0.05,
+        "momentum": 0.9
+      },
+      "scheduler": {
+        "name": "cosine",
+        "unit": "optimizer_step",
+        "warmup_fraction": 0.05,
+        "warmup_epochs": 0,
+        "step_size": 100,
+        "gamma": 1.0
+      },
+      "train": {
+        "epochs": 1000,
+        "batch_size": 128,
+        "amp": false,
+        "accumulation_steps": 1,
+        "max_steps": 10000,
+        "validation_at_end_only": true
+      },
+      "logging": {
+        "backend": "local",
+        "save_every": 1,
+        "run_root": "runs/lab2",
+        "save_every_steps": 1000,
+        "console_every_steps": 500,
+        "profile_on_finish": true
+      },
+      "runtime": {
+        "device": "cuda",
+        "threads": 2,
+        "max_seconds": 7200,
+        "dependency_lock": "requirements.lock.txt"
+      },
+      "profiling": {
+        "warmup": 10,
+        "repeats": 30
+      },
+      "profile": {
+        "id": "P3adf02",
+        "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+        "base_seed": 987693601,
+        "lab2_fractions": [
+          0.05,
+          0.15,
+          0.3,
+          0.6,
+          1.0
+        ],
+        "lab2_corruptions": [
+          "blur",
+          "contrast",
+          "patch_shuffle"
+        ],
+        "lab2_strong_aug": "randaugment+cutmix"
+      }
+    },
+    "source_summary": {
+      "epoch": 588,
+      "global_step": 10000,
+      "train_loss": 0.0001093592363758944,
+      "validation_loss": 3.9147252014160157,
+      "train_metric": 1.0,
+      "validation_metric": 0.453,
+      "learning_rate": 8.201887236047866e-12,
+      "epoch_time": 2.602672699998948,
+      "peak_gpu_memory_bytes": 2003591680,
+      "data_epochs": 588.2381395348838,
+      "samples_processed": 1264712,
+      "partial_epoch": true,
+      "target_optimizer_steps": 10000,
+      "RUN_ID": "793fe73a531b8002205c-4bc06191663d459e941756cc0e6a26b1",
+      "EXP_ID": "793fe73a531b8002205c",
+      "best_accuracy": 0.453,
+      "best_epoch": 588,
+      "first_batch_checksum": "8681d58ca194707c58e5e757fe9531789c171886b75ba44e31e42875305d9c91",
+      "checkpoint_for_final_metric": "checkpoints/last.pt",
+      "purpose": "formal",
+      "status": "COMPLETED",
+      "training_seconds": 1714.9081618
+    }
+  }
+}

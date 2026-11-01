@@ -1,0 +1,16 @@
+{
+  "formal_training_runs": 7,
+  "formal_optimizer_updates": 140000,
+  "formal_training_seconds": 1924.478027299996,
+  "formal_checkpoints": 35,
+  "all_checkpoints": 39,
+  "budget_training_runs": 2,
+  "evaluation_runs": 35,
+  "diagnostic_noise_runs": 18,
+  "all_run_folders": 62,
+  "tests_passed": 180,
+  "figure_groups": 14,
+  "audit_finished_at": "2026-11-01T05:11:33.820065+00:00",
+  "formal_workflow_wall_seconds": 245315.490065,
+  "verification_to_audit_wall_seconds": 245982.875132
+}

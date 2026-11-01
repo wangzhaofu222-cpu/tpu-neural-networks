@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "audit_checks": 467,
+  "failed": [],
+  "checkpoints": 39,
+  "regeneration": [
+    {
+      "file": "E1_forward_moments.csv",
+      "identical": true
+    },
+    {
+      "file": "E1_models.csv",
+      "identical": true
+    },
+    {
+      "file": "E2_sampling.csv",
+      "identical": true
+    },
+    {
+      "file": "E3_models.csv",
+      "identical": true
+    },
+    {
+      "file": "E3_pairs.csv",
+      "identical": true
+    },
+    {
+      "file": "supplement_rare.csv",
+      "identical": true
+    },
+    {
+      "file": "timestep_errors.csv",
+      "identical": true
+    },
+    {
+      "file": "figures\\counterfactual_controls.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\counterfactual_controls.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_cosine.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_cosine.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_linear.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_score_linear.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_timestep.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_timestep.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_trajectories.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\diagnostic_trajectories.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_forward_clouds.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_forward_clouds.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_samples.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_samples.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_schedules.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_schedules.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_training.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_training.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_cost_quality.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_cost_quality.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_extreme_K.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_extreme_K.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_mode_frequencies.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_mode_frequencies.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_paired_difference.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_paired_difference.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\supplement_rare.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\supplement_rare.svg",
+      "identical": true
+    }
+  ],
+  "changed_historical_files": [],
+  "HEAD": "ef1d2fa636afc1f36f3223c6a8d78e1cbe498edf",
+  "optimizer_updates": 0
+}

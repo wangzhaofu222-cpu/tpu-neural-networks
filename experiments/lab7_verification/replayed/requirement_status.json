@@ -1,0 +1,223 @@
+{
+  "counts": {
+    "PASS": 47,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "NOT_APPLICABLE": 4
+  },
+  "requirements": [
+    {
+      "ID": "A01",
+      "status": "PASS"
+    },
+    {
+      "ID": "A02",
+      "status": "PASS"
+    },
+    {
+      "ID": "P01",
+      "status": "PASS"
+    },
+    {
+      "ID": "D01",
+      "status": "PASS"
+    },
+    {
+      "ID": "D02",
+      "status": "PASS"
+    },
+    {
+      "ID": "S01",
+      "status": "PASS"
+    },
+    {
+      "ID": "S02",
+      "status": "PASS"
+    },
+    {
+      "ID": "S03",
+      "status": "PASS"
+    },
+    {
+      "ID": "N01",
+      "status": "PASS"
+    },
+    {
+      "ID": "N02",
+      "status": "PASS"
+    },
+    {
+      "ID": "N03",
+      "status": "PASS"
+    },
+    {
+      "ID": "N04",
+      "status": "PASS"
+    },
+    {
+      "ID": "R01",
+      "status": "PASS"
+    },
+    {
+      "ID": "R02",
+      "status": "PASS"
+    },
+    {
+      "ID": "R03",
+      "status": "PASS"
+    },
+    {
+      "ID": "G01",
+      "status": "PASS"
+    },
+    {
+      "ID": "G02",
+      "status": "PASS"
+    },
+    {
+      "ID": "G03",
+      "status": "PASS"
+    },
+    {
+      "ID": "M01",
+      "status": "PASS"
+    },
+    {
+      "ID": "M02",
+      "status": "PASS"
+    },
+    {
+      "ID": "M03",
+      "status": "PASS"
+    },
+    {
+      "ID": "M04",
+      "status": "PASS"
+    },
+    {
+      "ID": "H01",
+      "status": "PASS"
+    },
+    {
+      "ID": "E101",
+      "status": "PASS"
+    },
+    {
+      "ID": "E102",
+      "status": "PASS"
+    },
+    {
+      "ID": "E103",
+      "status": "PASS"
+    },
+    {
+      "ID": "E104",
+      "status": "PASS"
+    },
+    {
+      "ID": "E201",
+      "status": "PASS"
+    },
+    {
+      "ID": "E202",
+      "status": "PASS"
+    },
+    {
+      "ID": "E203",
+      "status": "PASS"
+    },
+    {
+      "ID": "E204",
+      "status": "PASS"
+    },
+    {
+      "ID": "E205",
+      "status": "PASS"
+    },
+    {
+      "ID": "E206",
+      "status": "PASS"
+    },
+    {
+      "ID": "E301",
+      "status": "PASS"
+    },
+    {
+      "ID": "E302",
+      "status": "PASS"
+    },
+    {
+      "ID": "E303",
+      "status": "PASS"
+    },
+    {
+      "ID": "E304",
+      "status": "PASS"
+    },
+    {
+      "ID": "E305",
+      "status": "PASS"
+    },
+    {
+      "ID": "E306",
+      "status": "PASS"
+    },
+    {
+      "ID": "C01",
+      "status": "PASS"
+    },
+    {
+      "ID": "C02",
+      "status": "PASS"
+    },
+    {
+      "ID": "C03",
+      "status": "PASS"
+    },
+    {
+      "ID": "C04",
+      "status": "PASS"
+    },
+    {
+      "ID": "C05",
+      "status": "PASS"
+    },
+    {
+      "ID": "T01",
+      "status": "PASS"
+    },
+    {
+      "ID": "T02",
+      "status": "PASS"
+    },
+    {
+      "ID": "DEL",
+      "status": "PASS"
+    },
+    {
+      "ID": "RPT",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "ID": "X01",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "ID": "X02",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "ID": "X03",
+      "status": "NOT_APPLICABLE"
+    }
+  ],
+  "numeric_failures": [],
+  "E3_prediction_supported": true,
+  "teacher_conclusion": "различие установлено",
+  "historical_states": {
+    "Lab4Q2": "BLOCKED",
+    "Lab5_course_split": "UNVERIFIED",
+    "Lab5_E2_magnitude": "FAIL",
+    "Lab6_E1_mixing": "FAIL"
+  }
+}

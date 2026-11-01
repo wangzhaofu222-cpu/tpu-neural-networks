@@ -1,0 +1,2461 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Lab0_6_history_immutable",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "Lab6_153_tests_234_audit_63_checkpoints",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "historical_failures_not_rewritten",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "private_profile_hash_slices",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "immutable_real_Git_hypothesis",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "immutable_Git_lock",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_E2_selections_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exploratory_hypothesis_realGit",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full20000_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "formal_budget_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "clean_source_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_config_seed_identity_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_and_train_only_stats_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unit_train_variance_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_terminal_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_schedule_beta_range_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "hypothesis_before_training_E1_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_linear_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_linear_epoch_128",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_linear_epoch_256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_linear_epoch_384",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_linear_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full20000_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "formal_budget_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "clean_source_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_config_seed_identity_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_and_train_only_stats_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unit_train_variance_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_terminal_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_schedule_beta_range_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "hypothesis_before_training_E1_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_cosine_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_cosine_epoch_128",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_cosine_epoch_256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_cosine_epoch_384",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E1_cosine_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full20000_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "formal_budget_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "clean_source_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_config_seed_identity_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_and_train_only_stats_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unit_train_variance_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_terminal_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_schedule_beta_range_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "hypothesis_before_training_E3_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_2_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_2_epoch_128",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_2_epoch_256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_2_epoch_384",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_2_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full20000_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "formal_budget_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "clean_source_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_config_seed_identity_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_and_train_only_stats_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unit_train_variance_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_terminal_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_schedule_beta_range_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "hypothesis_before_training_E3_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_3_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_3_epoch_128",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_3_epoch_256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_3_epoch_384",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_E3_linear_3_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full20000_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "formal_budget_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "clean_source_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_config_seed_identity_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_and_train_only_stats_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unit_train_variance_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_terminal_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_schedule_beta_range_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "hypothesis_before_training_rare_0.5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.5_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.5_epoch_128",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.5_epoch_256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.5_epoch_384",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.5_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full20000_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "formal_budget_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "clean_source_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_config_seed_identity_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_and_train_only_stats_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unit_train_variance_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_terminal_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_schedule_beta_range_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "hypothesis_before_training_rare_0.25",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.25_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.25_epoch_128",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.25_epoch_256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.25_epoch_384",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_rare_0.25_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "full20000_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "formal_budget_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "clean_source_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "RUN_config_seed_identity_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "data_and_train_only_stats_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "unit_train_variance_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "valid_terminal_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "actual_schedule_beta_range_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "hypothesis_before_training_Q1_T_times10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_Q1_T_times10_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_Q1_T_times10_epoch_128",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_Q1_T_times10_epoch_256",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_Q1_T_times10_epoch_384",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "checkpoint_Q1_T_times10_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_paired_training_t_epsilon_stream",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E1_only_schedule_differs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "short_T_diagnostic_actual_terminal",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reference100k_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.005_7601",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.005_7602",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.005_7603",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.005_7604",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.005_7605",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_mean_SD_0.005_MMD2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_mean_SD_0.005_Dmode",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reference100k_0.01",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.01_7601",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.01_7602",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.01_7603",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.01_7604",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.01_7605",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_mean_SD_0.01_MMD2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_mean_SD_0.01_Dmode",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reference100k_0.02",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.02_7601",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.02_7602",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.02_7603",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.02_7604",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_0.02_7605",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_mean_SD_0.02_MMD2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "noise_mean_SD_0.02_Dmode",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E1_linear_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E1_cosine_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E1_short_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E1_full_T_exact_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_exact_ddpm_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_exact_ddim_5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_exact_ddim_10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_exact_ddim_20",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_exact_ddim_50",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_exact_ddim_100",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_exact_ddim_1000",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_DDIM_T_initial_7402",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_network_DDIM_T_initial_7403",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_low_network_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_low_network_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_low_exact_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E2_low_exact_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_diagnostic_trajectory_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_diagnostic_trajectory_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E3_A_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E3_B_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E3_A_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_E3_B_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_rare_0.5_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_rare_0.25_A",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_Q1_T_times10_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_Q2_zero_predictor_DDPM",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metrics_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "original_units_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "fixed_initial_noise_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "NFE_tau_no_clipping_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "timing_repetitions_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "source_checkpoint_hash_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "resolved_reverse_protocol_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sampler_bitwise_replay_Q4_cosine_DDIM5",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_independent_paired_statistics",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_one_factor",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_shared_model_seed_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_shared_model_seed_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_preregistered_evaluation_A2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_preregistered_evaluation_B2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_shared_model_seed_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_preregistered_evaluation_A3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "E3_preregistered_evaluation_B3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "float64_full_DDIMeta1_equals_DDPM_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "diagnostic_time_grid_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "epsilon_x0_identity_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_MC_error_decomposition_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_Enet_zero_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "1000_full_DDPM_trajectories_linear",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_linear_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_linear_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_linear_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_linear_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_linear_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_linear_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "float64_full_DDIMeta1_equals_DDPM_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "diagnostic_time_grid_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "epsilon_x0_identity_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "finite_MC_error_decomposition_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_Enet_zero_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "1000_full_DDPM_trajectories_cosine",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_cosine_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_cosine_0",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_cosine_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_cosine_1",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_cosine_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_cosine_2",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "weighted_field_cosine_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "exact_field_selfcosine_cosine_3",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "rare_target_retrained_0.01",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "rare_raw_role_files_0.01",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "rare_target_retrained_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "rare_raw_role_files_0.005",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "registered_forward_moments_exactly_reconstructed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Q1_real10T_training",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "zero_predictor_variance_formula",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "final_tests",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "five_real_counterfactuals",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_numpy_mode_oracle",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent_artifact_regeneration",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "figures_visually_verified",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "figure_hashes",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_cd3b90096a0cd3d3e55f-160f15bbb11b439f9fd1a9b5fbd0c37a_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_cd3b90096a0cd3d3e55f-160f15bbb11b439f9fd1a9b5fbd0c37a_last",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_64960b31a8b0671fa794-9724310aae5642edaaf291f13c388438_best",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "budget_checkpoint_64960b31a8b0671fa794-9724310aae5642edaaf291f13c388438_last",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "check_count": 467,
+  "failed": [],
+  "teacher_numeric_findings": [
+    {
+      "criterion": "E1_forward_moments_linear",
+      "PASS": true
+    },
+    {
+      "criterion": "E1_forward_moments_cosine",
+      "PASS": true
+    },
+    {
+      "criterion": "E2_exact_full_2fe25d54fee39b604917-ef345080701c4b2895cdc6b24f7c10c7",
+      "PASS": true
+    },
+    {
+      "criterion": "E2_exact_full_44630ed4fab7291adb68-9bbb419ea8b040778ef10fa9e5c40405",
+      "PASS": true
+    },
+    {
+      "criterion": "E2_time_per_NFE_network",
+      "PASS": true,
+      "detail": {
+        "median_seconds_per_NFE": 0.0017491700000391575,
+        "conditions": [
+          {
+            "RUN_ID": "deed2ad27ea6dc9b82a2-9bde9515fc6f4be4b836698669d64ef6",
+            "relative_deviation": 0.07623472849194213,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "9db76aabb6e8383c4b82-084d6fec26054359b64c0b8ddc79a3a4",
+            "relative_deviation": 0.0,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "4f2b4ed83734347bcc82-3bde0c5c0f674beead091bc398cc0951",
+            "relative_deviation": 0.16368048846156458,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "a1bee33a693a2f0588bb-59d9b1c17aab43d9b3a85c3b6e9aa76d",
+            "relative_deviation": 0.014761286828624764,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "29aec0ea2f756acc6639-1de816295c7a472d9cdbd69b2d37f74a",
+            "relative_deviation": 0.02596660129468642,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "0fbd4ffcb74fc35a520b-b72ba38fc00d4ee1991e8673c276ae66",
+            "relative_deviation": 0.04271797478756967,
+            "PASS": true
+          }
+        ]
+      }
+    },
+    {
+      "criterion": "E2_time_per_NFE_exact",
+      "PASS": true,
+      "detail": {
+        "median_seconds_per_NFE": 0.0023496499998145737,
+        "conditions": [
+          {
+            "RUN_ID": "2fe25d54fee39b604917-ef345080701c4b2895cdc6b24f7c10c7",
+            "relative_deviation": 0.12682471850538035,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "5fa6c52f7d8adf496252-e8beab3114bc446b922737116479b82b",
+            "relative_deviation": 0.0,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "a875b6acfd5af99091f2-8bcb24336fa6418c8bbfd1ff3757cf1e",
+            "relative_deviation": 0.005500819353060571,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "0f83221e00b224e1a376-0bba1a3a83584af2b79bd4ecf27b6ef1",
+            "relative_deviation": 0.02077075301434339,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "df097c5a7198a8b3c28a-30d04405ad0e44aeaba848cd03631704",
+            "relative_deviation": 0.030310046261948553,
+            "PASS": true
+          },
+          {
+            "RUN_ID": "44630ed4fab7291adb68-9bbb419ea8b040778ef10fa9e5c40405",
+            "relative_deviation": 0.010542719209036155,
+            "PASS": true
+          }
+        ]
+      }
+    }
+  ],
+  "statistics": {
+    "formal_training_runs": 7,
+    "formal_optimizer_updates": 140000,
+    "formal_training_seconds": 1924.478027299996,
+    "formal_checkpoints": 35,
+    "all_checkpoints": 39,
+    "budget_training_runs": 2,
+    "evaluation_runs": 35,
+    "diagnostic_noise_runs": 18,
+    "all_run_folders": 62,
+    "tests_passed": 180,
+    "figure_groups": 14,
+    "audit_finished_at": "2026-11-01T05:11:33.820065+00:00",
+    "formal_workflow_wall_seconds": 245315.490065,
+    "verification_to_audit_wall_seconds": 245982.875132
+  },
+  "historical_states": {
+    "Lab4Q2": "BLOCKED",
+    "Lab5_course_split": "UNVERIFIED",
+    "Lab5_E2_magnitude": "FAIL",
+    "Lab6_E1_mixing": "FAIL"
+  },
+  "optimizer_updates_executed_by_audit": 0
+}

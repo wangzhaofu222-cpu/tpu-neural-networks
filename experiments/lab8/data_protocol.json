@@ -1,0 +1,25 @@
+{
+  "split_path": "splits/cifar10.json",
+  "split_sha256": "bdb4b2d8d6ec011aaf87ac2300309011a2f535b87591727d6fdc54cb2ab63806",
+  "split_fingerprint": "1fb3cce79756298949821689d00533bb092604dd2d41a3d687de0fd02bf83574",
+  "role_counts": {
+    "train": 43000,
+    "val": 5000,
+    "cal": 2000,
+    "test": 10000
+  },
+  "temperature_fit": "val only, actual ID allowlist",
+  "test": "final metrics only",
+  "cal": "not accessed; optional conformal omitted",
+  "course_protocol_status": "UNVERIFIED",
+  "normalization": "historical Lab2 full train role statistics, applied once as first model layer",
+  "SVHN_test": {
+    "path": "data/svhn/test_32x32.mat",
+    "md5": "eb5a983be6a315427106f1b164d9cef3",
+    "sha256": "cdce80dfb2a2c4c6160906d0bd7c68ec5a99d7ca4831afa54f09182025b6a75b",
+    "mirror": "https://huggingface.co/datasets/darcook/DCPV-Artifacts/resolve/main/data/svhn/test_32x32.mat",
+    "official_server_failure": "HTTPS SSL EOF; HTTP503",
+    "semantic_labels_used": false
+  },
+  "model_comparison": "Lab2 fraction .05, 2150 training objects, 10000 updates; genuine seeds1,2,3"
+}

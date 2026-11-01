@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "key": "E1_linear_DDPM",
+      "RUN_ID": "6166b1c66f39bc269e25-5caf87cfcdea4065acccb5837a8371c4",
+      "PASS": true
+    },
+    {
+      "key": "E1_cosine_DDPM",
+      "RUN_ID": "2db3dda8cd907b076db0-f602c1d1c4e643fdb23d079baf92c928",
+      "PASS": true
+    },
+    {
+      "key": "E1_short_T_exact_DDPM",
+      "RUN_ID": "3500712e1f9546c4fd3a-5b44110051804e37ac2ed9be2c34f09d",
+      "PASS": true
+    },
+    {
+      "key": "E1_full_T_exact_DDPM",
+      "RUN_ID": "92b100bccbdd4978a6f6-f640b867a6a64d1fa90ff3705b7438c1",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_ddpm_1000",
+      "RUN_ID": "deed2ad27ea6dc9b82a2-9bde9515fc6f4be4b836698669d64ef6",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_ddim_5",
+      "RUN_ID": "8bb864eb20b7936a8893-0029cd3498bd4a598bf5fe81e3e428f5",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_ddim_10",
+      "RUN_ID": "9db76aabb6e8383c4b82-084d6fec26054359b64c0b8ddc79a3a4",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_ddim_20",
+      "RUN_ID": "4f2b4ed83734347bcc82-3bde0c5c0f674beead091bc398cc0951",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_ddim_50",
+      "RUN_ID": "a1bee33a693a2f0588bb-59d9b1c17aab43d9b3a85c3b6e9aa76d",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_ddim_100",
+      "RUN_ID": "29aec0ea2f756acc6639-1de816295c7a472d9cdbd69b2d37f74a",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_ddim_1000",
+      "RUN_ID": "0fbd4ffcb74fc35a520b-b72ba38fc00d4ee1991e8673c276ae66",
+      "PASS": true
+    },
+    {
+      "key": "E2_exact_ddpm_1000",
+      "RUN_ID": "2fe25d54fee39b604917-ef345080701c4b2895cdc6b24f7c10c7",
+      "PASS": true
+    },
+    {
+      "key": "E2_exact_ddim_5",
+      "RUN_ID": "622bdc881ca8055f1b01-d6ac5cef7b8d4357b9aa03ce48cb4f7e",
+      "PASS": true
+    },
+    {
+      "key": "E2_exact_ddim_10",
+      "RUN_ID": "5fa6c52f7d8adf496252-e8beab3114bc446b922737116479b82b",
+      "PASS": true
+    },
+    {
+      "key": "E2_exact_ddim_20",
+      "RUN_ID": "a875b6acfd5af99091f2-8bcb24336fa6418c8bbfd1ff3757cf1e",
+      "PASS": true
+    },
+    {
+      "key": "E2_exact_ddim_50",
+      "RUN_ID": "0f83221e00b224e1a376-0bba1a3a83584af2b79bd4ecf27b6ef1",
+      "PASS": true
+    },
+    {
+      "key": "E2_exact_ddim_100",
+      "RUN_ID": "df097c5a7198a8b3c28a-30d04405ad0e44aeaba848cd03631704",
+      "PASS": true
+    },
+    {
+      "key": "E2_exact_ddim_1000",
+      "RUN_ID": "44630ed4fab7291adb68-9bbb419ea8b040778ef10fa9e5c40405",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_DDIM_T_initial_7402",
+      "RUN_ID": "4fbe4af326756058faa7-8752a267a56c4b9db431401a2b750fa2",
+      "PASS": true
+    },
+    {
+      "key": "E2_network_DDIM_T_initial_7403",
+      "RUN_ID": "cd98f5fc4512d42866c4-550ffcf33f4b47948a5809e926472d56",
+      "PASS": true
+    },
+    {
+      "key": "E2_low_network_1",
+      "RUN_ID": "66c8b48041c5283a85d1-efd774427a9944d7891b459215d5091b",
+      "PASS": true
+    },
+    {
+      "key": "E2_low_network_2",
+      "RUN_ID": "251b7fcad9e3cd7d22ed-61674e24f2594f1f804bea5acc1f02df",
+      "PASS": true
+    },
+    {
+      "key": "E2_low_exact_1",
+      "RUN_ID": "fcb808b60bd0ce223fc2-702c82c1f041441782ffdc4f89af2ca8",
+      "PASS": true
+    },
+    {
+      "key": "E2_low_exact_2",
+      "RUN_ID": "e32a84e7e0024abc2a2e-0283fb99577d4db49c7f51f90a73d0ee",
+      "PASS": true
+    },
+    {
+      "key": "diagnostic_trajectory_linear",
+      "RUN_ID": "3c55407c6814cc043462-6ad641b2543442c9a3c1228945d91438",
+      "PASS": true
+    },
+    {
+      "key": "diagnostic_trajectory_cosine",
+      "RUN_ID": "45945a99cc56d483caa0-48f7849726024e5e8efcf613420e64ad",
+      "PASS": true
+    },
+    {
+      "key": "E3_A_2",
+      "RUN_ID": "250c19ef7ca7b9338b63-4f723f99f0904780a4b7afeb083bb9b8",
+      "PASS": true
+    },
+    {
+      "key": "E3_B_2",
+      "RUN_ID": "7312b330f611f76c8e21-a0ad8fecfe1a44d68d0c19e4c31292db",
+      "PASS": true
+    },
+    {
+      "key": "E3_A_3",
+      "RUN_ID": "e9dc77c09db6e8a2e9e9-d3abdfee6d00443d82c09e1339d720ea",
+      "PASS": true
+    },
+    {
+      "key": "E3_B_3",
+      "RUN_ID": "c96d001bc559c4c4d5e3-3577f31765e5485e8f0eb3eae5e874c3",
+      "PASS": true
+    },
+    {
+      "key": "rare_0.5_A",
+      "RUN_ID": "f5f2a7bcf9309844bda6-b981d028081d4e7fa64113cd5f11d596",
+      "PASS": true
+    },
+    {
+      "key": "rare_0.25_A",
+      "RUN_ID": "decd3af863ab72e6f11f-c6044dd606c64bfe84e128a774e2ebf4",
+      "PASS": true
+    },
+    {
+      "key": "Q1_T_times10_DDPM",
+      "RUN_ID": "5ae7726298f578610804-3d602c10e8c34e5a9963b3c1d409b136",
+      "PASS": true
+    },
+    {
+      "key": "Q2_zero_predictor_DDPM",
+      "RUN_ID": "476f26ebdc21b7ee2c74-2d138b6540c54eee9497364bc4c6e39e",
+      "PASS": true
+    },
+    {
+      "key": "Q4_cosine_DDIM5",
+      "RUN_ID": "62c7f506ef8820f3492a-948a92e6a72f4c02bd54d3d5458ab738",
+      "PASS": true
+    }
+  ],
+  "implementation": "independent NumPy distances,argmin,bincount;100kMCreference;outlier included"
+}

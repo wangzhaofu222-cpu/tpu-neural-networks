@@ -1,0 +1,5 @@
+# Shared framework impact
+
+The only existing core files changed forLab7 are src/config.py (Lab7-only validation), src/data/vision.py (new rare_gmm2d registry dispatch), src/models/small_cnn.py (new diffusion_mlp registry dispatch), and src/engine/runner.py (Lab7 objective/evaluator/RNGadapter and generative-mode membership). Previous model/data/objective branches retain their behavior. No old experiment/config/weight/measurement/threshold is edited.
+
+153 oldtests passed before implementation; all oldtests pass again in the final fullsuite with new diffusion tests. Lab6 independently replays234checks and strictlyloads63checkpoints in a fresh namespace;5841 oldexperiment/runfiles are hash-protected. Existing checkpoint provenance guards remain strict: oldcheckpoints resume only with their exact recorded source/config/data, using historicalGit ifnecessary. This restriction is preserved rather than bypassed by feature integration. The same existing ExperimentRunner.run is the only optimization loop. New sampler/score/diagnostic code does not create a second trainer.

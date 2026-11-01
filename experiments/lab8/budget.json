@@ -1,0 +1,81 @@
+{
+  "measurements": [
+    {
+      "model": "cnn",
+      "times": {
+        "forward": {
+          "median_seconds_per64": 0.012664099999710743,
+          "seconds_per10000": 1.9787656249548036,
+          "repeats": [
+            0.012754400000630994,
+            0.012664099999710743,
+            0.012641500000427186
+          ]
+        },
+        "fgsm": {
+          "median_seconds_per64": 0.040100799999891024,
+          "seconds_per10000": 6.265749999982972,
+          "repeats": [
+            0.037854000000152155,
+            0.04038810000020021,
+            0.040100799999891024
+          ]
+        },
+        "pgd10": {
+          "median_seconds_per64": 0.4048573000000033,
+          "seconds_per10000": 63.25895312500052,
+          "repeats": [
+            0.4049286999998003,
+            0.4047285999995438,
+            0.4048573000000033
+          ]
+        }
+      },
+      "peak_gpu_bytes": 1191633408,
+      "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "batch_size": 64
+    },
+    {
+      "model": "vit",
+      "times": {
+        "forward": {
+          "median_seconds_per64": 0.020964000000276428,
+          "seconds_per10000": 3.275625000043192,
+          "repeats": [
+            0.0206385000001319,
+            0.020964000000276428,
+            0.021226500000011583
+          ]
+        },
+        "fgsm": {
+          "median_seconds_per64": 0.0735540999994555,
+          "seconds_per10000": 11.492828124914922,
+          "repeats": [
+            0.07407199999943259,
+            0.07353609999972832,
+            0.0735540999994555
+          ]
+        },
+        "pgd10": {
+          "median_seconds_per64": 0.711639500000274,
+          "seconds_per10000": 111.19367187504281,
+          "repeats": [
+            0.710244099999727,
+            0.711639500000274,
+            0.7129912000000331
+          ]
+        }
+      },
+      "peak_gpu_bytes": 633453568,
+      "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "batch_size": 64
+    }
+  ],
+  "smoke_RUN_ID": "5f3a0842cb0b9ed70e19-b451392e618849de9109b32c22628df6",
+  "completed_run_reuse_verified": true,
+  "interrupted_shard_resume_verified": true,
+  "resume_RUN_ID": "327399da3514d82fa5b6-b529c84d12664d71ac8174aa23f804bd",
+  "new_classifier_training": false,
+  "estimated_inference_attack_seconds": 1144.959687499636,
+  "protocol_decision": "Keep full test 10000 for both architectures, batch64, all mandatory attack strengths; no new model training."
+}

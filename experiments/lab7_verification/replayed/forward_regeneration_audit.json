@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "schedule": "linear",
+      "t": 100,
+      "PASS": true
+    },
+    {
+      "schedule": "linear",
+      "t": 250,
+      "PASS": true
+    },
+    {
+      "schedule": "linear",
+      "t": 500,
+      "PASS": true
+    },
+    {
+      "schedule": "linear",
+      "t": 750,
+      "PASS": true
+    },
+    {
+      "schedule": "linear",
+      "t": 1000,
+      "PASS": true
+    },
+    {
+      "schedule": "cosine",
+      "t": 100,
+      "PASS": true
+    },
+    {
+      "schedule": "cosine",
+      "t": 250,
+      "PASS": true
+    },
+    {
+      "schedule": "cosine",
+      "t": 500,
+      "PASS": true
+    },
+    {
+      "schedule": "cosine",
+      "t": 750,
+      "PASS": true
+    },
+    {
+      "schedule": "cosine",
+      "t": 1000,
+      "PASS": true
+    }
+  ],
+  "raw_reconstructed_path": "experiments\\lab7\\verification\\fixed_x0_samples_reconstructed.pt",
+  "sha256": "ddf145b8c1729d0c7e953cd81a72068458cc8cdcae95d04211b7fb2a0e1523bc",
+  "note": "Registered seed and exact stream usage reconstruct all first-draw aggregate measurements; original E1.json is unchanged."
+}

@@ -1,0 +1,32 @@
+{
+  "measurements": [
+    {
+      "device": "cpu",
+      "width": 256,
+      "RUN_ID": "cd3b90096a0cd3d3e55f-160f15bbb11b439f9fd1a9b5fbd0c37a",
+      "training_steps": 120,
+      "training_seconds": 3.1207955999998376,
+      "projected_20000_seconds": 520.132599999973,
+      "sampling_100steps_1000points_seconds": 0.5345778000009886,
+      "projected_T1000_5000points_seconds": 26.728890000049432
+    },
+    {
+      "device": "cuda",
+      "width": 256,
+      "RUN_ID": "64960b31a8b0671fa794-9724310aae5642edaaf291f13c388438",
+      "training_steps": 120,
+      "training_seconds": 2.1081047000006947,
+      "projected_20000_seconds": 351.35078333344916,
+      "sampling_100steps_1000points_seconds": 0.19388989999788464,
+      "projected_T1000_5000points_seconds": 9.694494999894232
+    }
+  ],
+  "selected_device": "cuda",
+  "selected_width": 256,
+  "full_DDPM_5000_network_seconds": 1.8746783000024152,
+  "full_DDPM_5000_exact_seconds": 2.379963100000168,
+  "reason": "retain default256 width; choose measured faster stable device; no training budget reduction",
+  "estimated_9_trainings_seconds": 3162.1570500010425,
+  "estimated_E2_7conditions_6passes_network_seconds": 25.870560540033328,
+  "estimated_E2_7conditions_6passes_exact_seconds": 32.84349078000232
+}

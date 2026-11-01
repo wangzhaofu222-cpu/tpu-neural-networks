@@ -1,0 +1,118 @@
+{
+  "h": 1.2379350644818292,
+  "pi0": 0.005,
+  "reference_seed": 704,
+  "reference_n": 100000,
+  "reference_frequencies": [
+    0.00489,
+    0.19397,
+    0.19773,
+    0.19651,
+    0.19794,
+    0.19799,
+    0.01097
+  ],
+  "test_self_kernel": 0.5890850332646951,
+  "noise": [
+    {
+      "seed": 7601,
+      "RUN_ID": "eb8a1b67b807df754c8a-0027208451fd4a12bd577a25f7cb3a68",
+      "Cov": 1.0,
+      "mode_frequencies": [
+        0.0058,
+        0.1994,
+        0.1916,
+        0.1972,
+        0.1946,
+        0.2008,
+        0.0106
+      ],
+      "rare_frequency": 0.0058,
+      "rare_covered_pdf": true,
+      "rare_covered_pi0": true,
+      "Dmode": 0.00984,
+      "MMD2": 9.794045015065755e-05
+    },
+    {
+      "seed": 7602,
+      "RUN_ID": "dfb7d15c9856c73ed2fe-99a13f032e534426ae1e3e66872c727c",
+      "Cov": 1.0,
+      "mode_frequencies": [
+        0.0046,
+        0.1912,
+        0.2032,
+        0.1984,
+        0.2002,
+        0.1924,
+        0.01
+      ],
+      "rare_frequency": 0.0046,
+      "rare_covered_pdf": true,
+      "rare_covered_pi0": true,
+      "Dmode": 0.009619999999999998,
+      "MMD2": 0.00011247721457796622
+    },
+    {
+      "seed": 7603,
+      "RUN_ID": "99b231aa24208c687aec-625cc1f3759b446796482b45191173f0",
+      "Cov": 1.0,
+      "mode_frequencies": [
+        0.005,
+        0.1894,
+        0.195,
+        0.1996,
+        0.1976,
+        0.2002,
+        0.0132
+      ],
+      "rare_frequency": 0.005,
+      "rare_covered_pdf": true,
+      "rare_covered_pi0": true,
+      "Dmode": 0.007639999999999989,
+      "MMD2": 0.00016406353772113746
+    },
+    {
+      "seed": 7604,
+      "RUN_ID": "9d80ecbdcd345060c2d3-ab37aead3ae94167ad61bca8d27ca4a1",
+      "Cov": 1.0,
+      "mode_frequencies": [
+        0.0062,
+        0.1988,
+        0.1994,
+        0.1936,
+        0.1898,
+        0.2006,
+        0.0116
+      ],
+      "rare_frequency": 0.0062,
+      "rare_covered_pdf": true,
+      "rare_covered_pi0": true,
+      "Dmode": 0.011050000000000004,
+      "MMD2": 0.00011205013950932319
+    },
+    {
+      "seed": 7605,
+      "RUN_ID": "9ea26353e5e66f88f2e9-a16f59b1457045f9ab8cb265d5f2dbdd",
+      "Cov": 1.0,
+      "mode_frequencies": [
+        0.0066,
+        0.1942,
+        0.2002,
+        0.1972,
+        0.197,
+        0.1936,
+        0.0112
+      ],
+      "rare_frequency": 0.0066,
+      "rare_covered_pdf": true,
+      "rare_covered_pi0": true,
+      "Dmode": 0.005330000000000002,
+      "MMD2": 6.869188182934138e-05
+    }
+  ],
+  "reference_sha256": "207a8aae2691b1e2c0462a0c9b1f5fbb32eb7acd4e552b7d20f8a8639570f296",
+  "MMD2_noise_mean": 0.00011104464475768517,
+  "MMD2_noise_sd": 3.456711851969624e-05,
+  "Dmode_noise_mean": 0.008695999999999999,
+  "Dmode_noise_sd": 0.002244377419241248
+}
