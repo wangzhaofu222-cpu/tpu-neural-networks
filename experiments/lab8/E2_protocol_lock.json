@@ -1,0 +1,33 @@
+{
+  "E1_sha256": "bd58ceef373569434248b0c3c4cb8ba4044ddd07fb756d7878c1a0cf17d8a2bc",
+  "hypothesis_sha256": "6b5e32d249887d8abf89675a3c48a44f3153e778bfb4a854a88e3f9f6d580ab6",
+  "source_checkpoints": {
+    "cnn_1": "bfb20d58a879c4546738583ddc64e51dda01749570614c55f329508e20f20911",
+    "cnn_2": "cee8c67066e761164b018cbab8015f1382c13c18d30afd743cdbdc8929cfd5b1",
+    "cnn_3": "d36591571ec786563bef60c85f82251bd815c30fb3f7711be302642d553d2587"
+  },
+  "condition_A": "clean",
+  "condition_B": "occlusion_5",
+  "delta_direction": "gA-gB",
+  "expected_sign": "positive",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "ECE": {
+    "M": 15,
+    "binning": "equal_width"
+  },
+  "corruption_parameters": [
+    0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "shared_test_count": 10000,
+  "clean_seed1_reuse": "E1 clean_test_cnn_1",
+  "Tstar_fit": "each model clean val only"
+}
