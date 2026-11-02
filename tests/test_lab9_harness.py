@@ -33,3 +33,20 @@ def test_frozen_encoder_no_gradients():
     model=FusionClassifier(cfg);loss=model(torch.cat([torch.randn(2,512),z.mean(1)],1)).square().mean();loss.backward()
     assert all(p.grad is None for p in audio.parameters())
     assert all(p.grad is not None for p in model.parameters())
+
+def test_audio_shared_harness_variable_length_padding(tmp_path):
+    cfg=yaml.safe_load(Path('configs/lab9.yaml').read_text());cfg['experiment'].update(purpose='test',name='lab9_audio_fixture');cfg['logging']['run_root']=str(tmp_path/'runs');cfg['train'].update(epochs=2,batch_size=2,early_stopping_patience=0);cfg['model']={'name':'audio_cnn','classes':8};cfg['data']['name']='ravdess_audio'
+    clips=[]
+    for role in ['train','val']:
+        for i,n in enumerate([31,45]):
+            p=tmp_path/f'{role}_{i}.pt';torch.save(torch.randn(64,n),p);clips.append({'role':role,'log_mel_path':str(p),'emotion':i})
+    manifest=tmp_path/'manifest.json';write_json(manifest,{'status':'PASS','synthetic_fixture':True,'clips':clips,'raw_identity_hash':'fixture','split_fingerprint':'fixture'});stats=tmp_path/'stats.json';write_json(stats,{'mean':[0.]*64,'std':[1.]*64});cfg['data'].update(manifest_path=str(manifest),normalization_path=str(stats))
+    path=ExperimentRunner(cfg).run();s=torch.load(path/'checkpoints/best.pt',weights_only=False)
+    assert s['best_metric_name']=='macro_f1' and s['global_step']>=1
+    assert json.loads((path/'manifest.json').read_text())['synthetic_fixture'] is True
+
+def test_conflict_auroc_orientation_and_ties():
+    from reports.tools.lab9_e3 import auroc
+    assert auroc([0,0,1,1],[.1,.2,.8,.9])==1
+    assert auroc([0,0,1,1],[.9,.8,.2,.1])==0
+    assert auroc([0,0,1,1],[1,1,1,1])==.5
