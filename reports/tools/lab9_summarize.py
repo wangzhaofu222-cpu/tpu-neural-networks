@@ -22,6 +22,7 @@ def main():
     if isinstance(rows,dict):rows=rows['rows']
     for row in rows:
         if row['ID'] not in ['D02','P02','N01','N02']:row['status']='PASS'
+    if isinstance(req,dict):req['state_note']='Final genuine experiments and independent audit completed; unverified split/profile fields and deferred report retained. Scientific hypothesis outcomes are recorded separately without altering original predictions.'
     write_json(R/'requirement_status.json',req)
     counts=Counter(row['status'] for row in rows);lines=['# Lab9 最终需求检查表','','教师原PDF14页完整重读；数据和实验均来自真实归档。报告依用户指令暂不制作。','','| ID | PDF原始要求 | 实施方法 | 验证方法 | 状态 |','|---|---|---|---|---|']
     for row in rows:lines.append('| '+' | '.join(str(row.get(k,'')) for k in ['ID','PDF_requirement','implementation','verification','status'])+' |')

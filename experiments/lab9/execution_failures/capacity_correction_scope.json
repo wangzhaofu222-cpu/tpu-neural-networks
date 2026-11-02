@@ -1,0 +1,14 @@
+{
+  "cause": "Inference-loaded fusion models intentionally have requires_grad=False; architecture capacity was incorrectly counted by current gradient flags, giving zero before first control training.",
+  "scope": "Bookkeeping/analysis only. No model architecture, input feature, optimizer, seed, training budget or checkpoint changed.",
+  "preserved_runs": [
+    "1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54",
+    "34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f",
+    "f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638",
+    "f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87",
+    "3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97"
+  ],
+  "reuse": "Four completed200epoch exploration heads reused after verifying seed/config/data fingerprint/global_step2800. No main comparison or test selection existed at failure.",
+  "regression_test": "test_capacity_survives_inference_freeze",
+  "original_failure": "E1_capacity_initial_failure.log"
+}

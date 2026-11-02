@@ -9,8 +9,8 @@ def explore():
     assert (R/'exploratory_hypotheses.md').exists()
     ds=features();specs={};counts={};val={};tests={};controls={}
     for strategy in ['video','audio','early','gated']:
-        path=train('E1_explore_'+strategy,strategy);spec={'path':path,'strategy':strategy};specs[strategy]=spec
-        model,_,_=load(path);counts[strategy]=model.parameter_breakdown();counts[strategy]['external_frozen_parameters']=read(R/'feature_cache.json')['frozen_parameters']
+        path=exploratory_train('E1_explore_'+strategy,strategy);spec={'path':path,'strategy':strategy};specs[strategy]=spec
+        model,_,_=load(path);counts[strategy]=training_capacity(model);counts[strategy]['external_frozen_parameters']=read(R/'feature_cache.json')['frozen_parameters']
         val[strategy]=classification(predict(spec,ds['val']['x'])[0].numpy(),ds['val']['y'].numpy())['macro_f1']
     pv=predict(specs['video'],ds['val']['x'])[0];pa=predict(specs['audio'],ds['val']['x'])[0]
     grid=[{'weight':k/10,'macro_f1':classification((k/10*pv+(1-k/10)*pa).numpy(),ds['val']['y'].numpy())['macro_f1']} for k in range(11)]
@@ -26,8 +26,8 @@ def explore():
         for strategy in ['video','audio']:
             match=matched_control(target,strategy);name=f'{strategy}_plus_{target}';existing=next((v for k,v in specs.items() if k==name),None)
             if existing is None:
-                path=train('E1_explore_'+name,strategy,width=match['width']);specs[name]={'path':path,'strategy':strategy}
-                m,_,_=load(path);counts[name]=m.parameter_breakdown();assert counts[name]['total_trainable']==match['actual']
+                path=exploratory_train('E1_explore_'+name,strategy,width=match['width']);specs[name]={'path':path,'strategy':strategy}
+                m,_,_=load(path);counts[name]=training_capacity(m);assert counts[name]['total_trainable']==match['actual']
                 val[name]=classification(predict(specs[name],ds['val']['x'])[0].numpy(),ds['val']['y'].numpy())['macro_f1']
             controls[key][strategy]={'name':name,'match':match}
     # Lock before reading any E1 test predictions. Tie-breaking deterministic registry order.

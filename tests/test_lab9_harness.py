@@ -50,3 +50,12 @@ def test_conflict_auroc_orientation_and_ties():
     assert auroc([0,0,1,1],[.1,.2,.8,.9])==1
     assert auroc([0,0,1,1],[.9,.8,.2,.1])==0
     assert auroc([0,0,1,1],[1,1,1,1])==.5
+
+def test_capacity_survives_inference_freeze():
+    from reports.tools.lab9_common import training_capacity,matched_control
+    from src.multimodal.fusion import FusionClassifier,parameter_count
+    cfg=yaml.safe_load(Path('configs/lab9.yaml').read_text())['model'];m=FusionClassifier(cfg);expected=parameter_count(m);m.requires_grad_(False)
+    counts=training_capacity(m);assert counts['total_trainable']==expected>0
+    assert counts['fusion_trainable']+counts['head_trainable']==expected
+    assert all(not p.requires_grad for p in m.parameters())
+    assert matched_control(expected,'video')['relative_difference']<=.01

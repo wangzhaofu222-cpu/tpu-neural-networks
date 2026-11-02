@@ -71,3 +71,19 @@ def evaluate(name,spec,role='test',x=None,seed=1,intervene=True):
 def matched_control(target,strategy):
     from src.multimodal.fusion import matching_width
     return matching_width(512 if strategy=='video' else 128,8,target)
+
+def training_capacity(model):
+    """Count the trained architecture, independently of inference requires_grad flags."""
+    total=sum(p.numel() for p in model.parameters());head=sum(p.numel() for p in model.head.parameters())
+    return {'frozen_encoders':0,'fusion_trainable':total-head,'head_trainable':head,'total_trainable':total,'encoders_external_frozen_cache':True,'count_basis':'architecture trained in source run; inference freeze flags do not erase its capacity'}
+
+def exploratory_train(name,strategy,width=128):
+    # A bookkeeping failure must not force needless retraining of unchanged real runs.
+    for row in reversed(read(R/'run_registry.json') if (R/'run_registry.json').exists() else []):
+        if row['kind']!=name:continue
+        path=Path(row['path']);cfg=yaml.safe_load((path/'config.resolved.yaml').read_text(encoding='utf-8'));passport=read(path/'manifest.json')
+        assert passport['status']=='COMPLETED' and passport['global_step']==2800
+        assert cfg['model']['strategy']==strategy and cfg['model']['hidden_width']==width and cfg['model']['p_drop']==0
+        assert passport['seed']==1 and passport['data_fingerprint']==file_hash(FEATURE)
+        return str(path)
+    return train(name,strategy,width=width)

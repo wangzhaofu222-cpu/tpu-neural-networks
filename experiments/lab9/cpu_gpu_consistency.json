@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "audio_max_absolute_logit_error": 7.152557373046875e-07,
+  "head_max_absolute_logit_error": 9.5367431640625e-07,
+  "atol": 0.0001,
+  "rtol": 0.0001,
+  "audio_RUN_ID": "1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54",
+  "head_RUN_ID": "34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f",
+  "audio_clip_ids": [
+    "01-01-01-01-01-04",
+    "01-01-01-01-02-04",
+    "01-01-01-02-01-04",
+    "01-01-01-02-02-04"
+  ],
+  "role": "val",
+  "no_training": true,
+  "weights_changed": false,
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU"
+}
