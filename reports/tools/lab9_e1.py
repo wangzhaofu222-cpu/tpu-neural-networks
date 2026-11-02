@@ -18,6 +18,8 @@ def explore():
     for key,w in [('late05',.5),('late_val',weight)]:
         specs[key]={'strategy':'late','video_path':specs['video']['path'],'audio_path':specs['audio']['path'],'weight':w}
         counts[key]={'total_trainable':counts['video']['total_trainable']+counts['audio']['total_trainable'],'fusion_trainable':0,'head_trainable':counts['video']['total_trainable']+counts['audio']['total_trainable'],'budget':'two constituent unimodal heads, each200epochs; cached merge has zero updates'}
+        counts[key]['active_nonzero_weight_parameters']=sum(counts[s]['total_trainable'] for s,active in [('video',w>0),('audio',w<1)] if active)
+        counts[key]['capacity_note']='Matched target counts both trained constituent heads. At lambda0/1 one branch has zero functional contribution; effective active capacity is separately recorded.'
         val[key]=classification(predict(specs[key],ds['val']['x'])[0].numpy(),ds['val']['y'].numpy())['macro_f1']
     for key in ['early','gated','late05','late_val']:
         target=counts[key]['total_trainable'];controls[key]={}
