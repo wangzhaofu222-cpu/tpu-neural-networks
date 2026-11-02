@@ -32,7 +32,7 @@ def main():
     del x
     f=torch.load(FEATURE,weights_only=False);check('feature normalization train mean',float(f['train']['x'][:,:640].mean(0).abs().max())<1e-4)
     registry=read(R/'run_registry.json');check('unique RUN IDs',len(registry)==len({r['RUN_ID'] for r in registry}));checkpoint_count=0;updates=0;training_seconds=0.
-    prereg=read(R/'E1_preregistration.json');blob=subprocess.check_output(['git','-c','safe.directory=D:/神经网络','show',prereg['commit']+':experiments/lab9/hypothesis.md']);check('real prereg Git blob unchanged',blob==(R/'hypothesis.md').read_bytes())
+    prereg=read(R/'E1_preregistration.json');blob=subprocess.check_output(['git','-c','safe.directory=D:/神经网络','show',prereg['commit']+':experiments/lab9/hypothesis.md']);check('real prereg Git text unchanged (Windows newline normalization only)',blob.decode('utf-8').replace('\r\n','\n')==(R/'hypothesis.md').read_text(encoding='utf-8'))
     for row in registry:
         path=Path(row['path']);passport=read(path/'manifest.json');check(row['RUN_ID']+':passport',passport['RUN_ID']==row['RUN_ID'] and passport['status'].startswith('COMPLETED') and not passport['git_dirty'])
         check(row['RUN_ID']+':cal never read',passport['cal_read'] is False)

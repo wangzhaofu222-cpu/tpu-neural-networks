@@ -10,7 +10,7 @@ def explore():
     ds=features();specs={};counts={};val={};tests={};controls={}
     for strategy in ['video','audio','early','gated']:
         path=train('E1_explore_'+strategy,strategy);spec={'path':path,'strategy':strategy};specs[strategy]=spec
-        model,_,_=load(path);counts[strategy]=model.parameter_breakdown()
+        model,_,_=load(path);counts[strategy]=model.parameter_breakdown();counts[strategy]['external_frozen_parameters']=read(R/'feature_cache.json')['frozen_parameters']
         val[strategy]=classification(predict(spec,ds['val']['x'])[0].numpy(),ds['val']['y'].numpy())['macro_f1']
     pv=predict(specs['video'],ds['val']['x'])[0];pa=predict(specs['audio'],ds['val']['x'])[0]
     grid=[{'weight':k/10,'macro_f1':classification((k/10*pv+(1-k/10)*pa).numpy(),ds['val']['y'].numpy())['macro_f1']} for k in range(11)]
@@ -38,6 +38,8 @@ def explore():
     gains={}
     for key in ['early','gated','late05','late_val']:
         v=tests[key]['macro_f1'];gains[key]={'G':v-max(tests['video']['macro_f1'],tests['audio']['macro_f1']),'Gint':v-tests['late_val']['macro_f1'],'Gctrl':v-max(tests[controls[key][s]['name']]['macro_f1'] for s in ['video','audio'])}
+        tests[key]['fusion_profile']['gains']=gains[key];tests[key]['fusion_profile']['parameter_breakdown']=counts[key]
+        evaluation=Path('runs/lab9')/tests[key]['RUN_ID'];write_json(evaluation/'summary.json',tests[key]);write_json(evaluation/'results.json',tests[key])
     write_json(R/'E1_exploration.json',{'selection':selection,'test':tests,'gains':gains})
     hypothesis=(f'# E1 主比较事前假设 / Предварительная гипотеза\n\nValidation-selected F={F}, U={U}. Direction Δ=macroF1(F)−macroF1(U). Predict Δ>0: complementary speech/face cues may improve over parameter-matched unimodal capacity. This is a hypothesis, not an established result.\n\nExploration seed1 has already been observed. All main seeds1,2,3 will be retrained after this Git registration; this does not make exploration seed1 unseen. Shared frozen encoders, actor split, train-only normalization, input features SHA256 '+selection['features_sha256']+', batch64, AdamW lr.001/wd.0001, 200epochs per trained head, validation-best macroF1, no head early stop, fixed evaluation masks/labels. Only F versus its capacity-matched unimodal U changes. Late fusion, if selected, requires two unimodal constituents each200epochs; its extra training cost is disclosed, not claimed compute-matched.\n\nFalsification: Δ mean≤0 rejects predicted sign; mixed signs or |mean|<2 sampleSD means различие не установлено even if mean positive. Reverse established effects remain prediction FAIL. Metric noise is not removed through seed filtering. No test selection or seed replacement.\n\nSelection evidence: E1_validation_selection.json. Main results must refer to the Git commit containing this unchanged file.\n')
     (R/'hypothesis.md').write_text(hypothesis,encoding='utf-8');print('EXPLORATION COMPLETE; COMMIT hypothesis BEFORE main',F,U,flush=True)
@@ -46,7 +48,7 @@ def main_experiment():
     import subprocess
     commit=subprocess.check_output(['git','-c','safe.directory=D:/神经网络','rev-parse','HEAD'],text=True).strip()
     blob=subprocess.check_output(['git','-c','safe.directory=D:/神经网络','show',commit+':experiments/lab9/hypothesis.md'])
-    assert blob==(R/'hypothesis.md').read_bytes()
+    assert blob.decode('utf-8').replace('\r\n','\n')==(R/'hypothesis.md').read_text(encoding='utf-8')
     assert not git_state()['dirty'];selection=read(R/'E1_validation_selection.json');F=selection['F'];U=selection['U'];rows=[]
     write_json(R/'E1_preregistration.json',{'commit':commit,'hypothesis_sha256':file_hash(R/'hypothesis.md'),'selection_sha256':file_hash(R/'E1_validation_selection.json'),'before_main_training':True})
     for seed in [1,2,3]:

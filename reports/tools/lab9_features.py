@@ -78,7 +78,9 @@ def finish():
     for r,rows in roles.items():
         x=torch.stack([(z-mean)/std for c,z,v in rows]);available=torch.tensor([[v,1.] for c,z,v in rows]);x[:,:512]*=available[:,:1]
         packed[r]={'x':torch.cat([x,available],1),'y':torch.tensor([c['emotion'] for c,z,v in rows]),'clip_ids':[c['clip_id'] for c,z,v in rows],'actor_ids':[c['actor_id'] for c,z,v in rows]}
-    torch.save(packed,CACHE/'pooled.pt');write_json(R/'feature_cache.json',{'status':'PASS','path':str(CACHE/'pooled.pt'),'sha256':file_hash(CACHE/'pooled.pt'),'raw_identity_hash':manifest['raw_identity_hash'],'audio_encoder_sha256':s['sha256'],'cal_read':False,'pooling':'valid-frame temporal mean; original indices/alignment retained','normalization':'train clip means only'})
+    visual,vs=load_visual(device='cpu')
+    frozen={'visual_loaded':sum(p.numel() for p in visual.parameters()),'visual_preclassifier':sum(p.numel() for n,p in visual.named_parameters() if not n.startswith('fc.')),'audio_loaded':sum(p.numel() for p in m.parameters()),'audio_preclassifier':sum(p.numel() for n,p in m.named_parameters() if not n.startswith('head.'))}
+    torch.save(packed,CACHE/'pooled.pt');write_json(R/'feature_cache.json',{'status':'PASS','path':str(CACHE/'pooled.pt'),'sha256':file_hash(CACHE/'pooled.pt'),'raw_identity_hash':manifest['raw_identity_hash'],'audio_encoder_sha256':s['sha256'],'cal_read':False,'pooling':'valid-frame temporal mean; original indices/alignment retained','normalization':'train clip means only','frozen_parameters':frozen})
     print('FROZEN FEATURE CACHE PASS',flush=True)
 
 if __name__=='__main__':
