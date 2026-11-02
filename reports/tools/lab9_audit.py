@@ -24,6 +24,7 @@ def main():
         v=torch.load(D/'features/visual'/(cid+'.pt'),weights_only=False);a=torch.load(D/'features/audio'/(cid+'.pt'),weights_only=False)
         check(cid+':cache identity',v['clip_id']==a['clip_id']==cid and v['role']==a['role']==c['role'])
         check(cid+':frozen encoder identity',v['encoder_sha256']==read(R/'encoder_sources.json')['visual']['sha256'] and a['encoder_sha256']==read(R/'encoder_sources.json')['audio']['sha256'])
+        check(cid+':normalization/frame cache identity',a['normalization_sha256']==file_hash(R/'mel_normalization.json') and v['input_frames_sha256']==c['video_frames_sha256'] and v['source_sha256']==c['source_sha256'])
         check(cid+':finite cache',torch.isfinite(v['z']).all() and torch.isfinite(a['z']).all())
         check(cid+':face skip/index',len(v['z'])==len(v['indices'])==c['valid5fps_frames'] and len(set(v['indices']))==len(v['indices']))
         alignment=torch.load(D/'features'/(cid+'_alignment.pt'),weights_only=False);assigned=alignment['assigned_indices'];check(cid+':no alignment overlap',len(assigned)==len(torch.unique(assigned)))
@@ -62,6 +63,7 @@ def main():
     for p in (D/'features/corrupt').glob('snr_*.pt'):
         obj=torch.load(p,weights_only=False);check(p.name+':all perclip SNR',len(obj['records'])==300 and max(abs(r['target_snr_db']-r['measured_snr_db']) for r in obj['records'])<=.1)
     check('five measured counterfactuals',len(read(R/'counterfactuals.json')['answers'])==5)
+    check('actual CPU/CUDA inference agreement',read(R/'cpu_gpu_consistency.json')['status']=='PASS')
     expected=read(R/'figures/artifact_hashes.json')
     from reports.tools.lab9_plots import main as plots
     replay=R/'audit_replayed_figures';plots(replay)

@@ -1,0 +1,186 @@
+[
+  {
+    "kind": "AudioCNN_train_val_selected",
+    "RUN_ID": "1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54",
+    "path": "runs\\lab9\\1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54",
+    "strategy": "audio",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_video",
+    "RUN_ID": "34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f",
+    "path": "runs\\lab9\\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f",
+    "strategy": "video",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_audio",
+    "RUN_ID": "f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638",
+    "path": "runs\\lab9\\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638",
+    "strategy": "audio",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_early",
+    "RUN_ID": "f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87",
+    "path": "runs\\lab9\\f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87",
+    "strategy": "early",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_gated",
+    "RUN_ID": "3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97",
+    "path": "runs\\lab9\\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97",
+    "strategy": "gated",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_video_plus_83080",
+    "RUN_ID": "0ee872cda759ed3cef04-1c6bf25f08664c0bab5852110cc272c4",
+    "path": "runs\\lab9\\0ee872cda759ed3cef04-1c6bf25f08664c0bab5852110cc272c4",
+    "strategy": "video",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_audio_plus_83080",
+    "RUN_ID": "05d1f855f79bac6b3ef6-b91f4b0bb9ec43459839ed6166a5665a",
+    "path": "runs\\lab9\\05d1f855f79bac6b3ef6-b91f4b0bb9ec43459839ed6166a5665a",
+    "strategy": "audio",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_video_plus_100105",
+    "RUN_ID": "f158a49abc5797166aeb-e7ead02f62b6484280cc21a92704e619",
+    "path": "runs\\lab9\\f158a49abc5797166aeb-e7ead02f62b6484280cc21a92704e619",
+    "strategy": "video",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_audio_plus_100105",
+    "RUN_ID": "6b7c1413abed6c0bd9c8-29bdbc1c6058464f9868465b7296ab32",
+    "path": "runs\\lab9\\6b7c1413abed6c0bd9c8-29bdbc1c6058464f9868465b7296ab32",
+    "strategy": "audio",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_video_plus_84240",
+    "RUN_ID": "fd3091ab666b15ab86fe-fbe7254a98fb4737abad785ea1cbcf4b",
+    "path": "runs\\lab9\\fd3091ab666b15ab86fe-fbe7254a98fb4737abad785ea1cbcf4b",
+    "strategy": "video",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_audio_plus_84240",
+    "RUN_ID": "c74b8bb03b53c0837e6d-efd643243b534e05a24741711a39e782",
+    "path": "runs\\lab9\\c74b8bb03b53c0837e6d-efd643243b534e05a24741711a39e782",
+    "strategy": "audio",
+    "seed": 1,
+    "purpose": "formal"
+  },
+  {
+    "kind": "E1_explore_test_video",
+    "RUN_ID": "73b7c031da6acfd09b36-3d018c3486d345a5bfbf442430be428e",
+    "path": "runs\\lab9\\73b7c031da6acfd09b36-3d018c3486d345a5bfbf442430be428e",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_audio",
+    "RUN_ID": "872fb29a87d782c21051-cf1b54e8d2144cdda6e02712bcaef9bf",
+    "path": "runs\\lab9\\872fb29a87d782c21051-cf1b54e8d2144cdda6e02712bcaef9bf",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_early",
+    "RUN_ID": "05e36ac62488f7796fd6-370796fdf66a43a0adedf95d30e3e7ec",
+    "path": "runs\\lab9\\05e36ac62488f7796fd6-370796fdf66a43a0adedf95d30e3e7ec",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_gated",
+    "RUN_ID": "347c6157a20f623bbee4-d363e4726c5f48af848904756452a54e",
+    "path": "runs\\lab9\\347c6157a20f623bbee4-d363e4726c5f48af848904756452a54e",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_late05",
+    "RUN_ID": "6bce04d107b27fb66fc8-ba4bd30fd0654388bf9658deb27fd3af",
+    "path": "runs\\lab9\\6bce04d107b27fb66fc8-ba4bd30fd0654388bf9658deb27fd3af",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_late_val",
+    "RUN_ID": "e4f5de4987b4b2abe336-1f93deb10d944a25a354bce75dbbc85c",
+    "path": "runs\\lab9\\e4f5de4987b4b2abe336-1f93deb10d944a25a354bce75dbbc85c",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_video_plus_83080",
+    "RUN_ID": "22f9948b3abb4e7644b2-4373bbba4ee44e4e8a9d1d8257447580",
+    "path": "runs\\lab9\\22f9948b3abb4e7644b2-4373bbba4ee44e4e8a9d1d8257447580",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_audio_plus_83080",
+    "RUN_ID": "747355daa60d2cc08a42-7018b6909b604f41b5dd48f0f459c1ae",
+    "path": "runs\\lab9\\747355daa60d2cc08a42-7018b6909b604f41b5dd48f0f459c1ae",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_video_plus_100105",
+    "RUN_ID": "72d3e5c3ceda440965c2-8330b1637b8e41988ef1ee3046ecd911",
+    "path": "runs\\lab9\\72d3e5c3ceda440965c2-8330b1637b8e41988ef1ee3046ecd911",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_audio_plus_100105",
+    "RUN_ID": "e4b3f5a0c4e93bcc9098-08ab915d587344f9b4b4d15e30657a3e",
+    "path": "runs\\lab9\\e4b3f5a0c4e93bcc9098-08ab915d587344f9b4b4d15e30657a3e",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_video_plus_84240",
+    "RUN_ID": "8eb4311ca1c7650f5e21-3a6cc9195aa04290b33eeaa1488774f4",
+    "path": "runs\\lab9\\8eb4311ca1c7650f5e21-3a6cc9195aa04290b33eeaa1488774f4",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  },
+  {
+    "kind": "E1_explore_test_audio_plus_84240",
+    "RUN_ID": "af77dcffac5fbb7f9ab1-e7e966beb7934d78b0835c8f4079cf83",
+    "path": "runs\\lab9\\af77dcffac5fbb7f9ab1-e7e966beb7934d78b0835c8f4079cf83",
+    "seed": 1,
+    "purpose": "formal",
+    "evaluation": true
+  }
+]

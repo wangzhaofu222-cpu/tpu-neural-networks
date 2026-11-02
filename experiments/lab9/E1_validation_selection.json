@@ -1,0 +1,347 @@
+{
+  "criterion": "validation macro-F1 only",
+  "F": "gated",
+  "U": "audio_plus_100105",
+  "validation": {
+    "video": 0.3675775880018036,
+    "audio": 0.45016684274619645,
+    "early": 0.44199008295405917,
+    "gated": 0.48616389632366175,
+    "late05": 0.45350658543061895,
+    "late_val": 0.47358191953421624,
+    "video_plus_83080": 0.37474815748628704,
+    "audio_plus_83080": 0.45509017671190266,
+    "video_plus_100105": 0.37573078054431,
+    "audio_plus_100105": 0.4512244640579818,
+    "video_plus_84240": 0.379015575181285,
+    "audio_plus_84240": 0.45974466504784794
+  },
+  "late_weight_grid": [
+    {
+      "weight": 0.0,
+      "macro_f1": 0.45016684274619645
+    },
+    {
+      "weight": 0.1,
+      "macro_f1": 0.44648441406376776
+    },
+    {
+      "weight": 0.2,
+      "macro_f1": 0.4532040424745727
+    },
+    {
+      "weight": 0.3,
+      "macro_f1": 0.4683181678348617
+    },
+    {
+      "weight": 0.4,
+      "macro_f1": 0.47358191953421624
+    },
+    {
+      "weight": 0.5,
+      "macro_f1": 0.45350658543061895
+    },
+    {
+      "weight": 0.6,
+      "macro_f1": 0.45103526823069284
+    },
+    {
+      "weight": 0.7,
+      "macro_f1": 0.42222818603795076
+    },
+    {
+      "weight": 0.8,
+      "macro_f1": 0.41796132245354317
+    },
+    {
+      "weight": 0.9,
+      "macro_f1": 0.4293575804060578
+    },
+    {
+      "weight": 1.0,
+      "macro_f1": 0.3675775880018036
+    }
+  ],
+  "late_weight": 0.4,
+  "controls": {
+    "early": {
+      "video": {
+        "name": "video_plus_83080",
+        "match": {
+          "width": 159,
+          "target": 83080,
+          "actual": 82847,
+          "relative_difference": 0.002804525758305248,
+          "integer_parameter_step": 521,
+          "nearest_integer_width": true
+        }
+      },
+      "audio": {
+        "name": "audio_plus_83080",
+        "match": {
+          "width": 606,
+          "target": 83080,
+          "actual": 83030,
+          "relative_difference": 0.000601829561868079,
+          "integer_parameter_step": 137,
+          "nearest_integer_width": true
+        }
+      }
+    },
+    "gated": {
+      "video": {
+        "name": "video_plus_100105",
+        "match": {
+          "width": 192,
+          "target": 100105,
+          "actual": 100040,
+          "relative_difference": 0.000649318215873333,
+          "integer_parameter_step": 521,
+          "nearest_integer_width": true
+        }
+      },
+      "audio": {
+        "name": "audio_plus_100105",
+        "match": {
+          "width": 731,
+          "target": 100105,
+          "actual": 100155,
+          "relative_difference": 0.0004994755506717946,
+          "integer_parameter_step": 137,
+          "nearest_integer_width": true
+        }
+      }
+    },
+    "late05": {
+      "video": {
+        "name": "video_plus_84240",
+        "match": {
+          "width": 162,
+          "target": 84240,
+          "actual": 84410,
+          "relative_difference": 0.0020180436847103515,
+          "integer_parameter_step": 521,
+          "nearest_integer_width": true
+        }
+      },
+      "audio": {
+        "name": "audio_plus_84240",
+        "match": {
+          "width": 615,
+          "target": 84240,
+          "actual": 84263,
+          "relative_difference": 0.00027302943969610634,
+          "integer_parameter_step": 137,
+          "nearest_integer_width": true
+        }
+      }
+    },
+    "late_val": {
+      "video": {
+        "name": "video_plus_84240",
+        "match": {
+          "width": 162,
+          "target": 84240,
+          "actual": 84410,
+          "relative_difference": 0.0020180436847103515,
+          "integer_parameter_step": 521,
+          "nearest_integer_width": true
+        }
+      },
+      "audio": {
+        "name": "audio_plus_84240",
+        "match": {
+          "width": 615,
+          "target": 84240,
+          "actual": 84263,
+          "relative_difference": 0.00027302943969610634,
+          "integer_parameter_step": 137,
+          "nearest_integer_width": true
+        }
+      }
+    }
+  },
+  "parameter_counts": {
+    "video": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 66696,
+      "total_trainable": 66696,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity",
+      "external_frozen_parameters": {
+        "visual_loaded": 11173962,
+        "visual_preclassifier": 11168832,
+        "audio_loaded": 98184,
+        "audio_preclassifier": 97152
+      }
+    },
+    "audio": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 17544,
+      "total_trainable": 17544,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity",
+      "external_frozen_parameters": {
+        "visual_loaded": 11173962,
+        "visual_preclassifier": 11168832,
+        "audio_loaded": 98184,
+        "audio_preclassifier": 97152
+      }
+    },
+    "early": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 83080,
+      "total_trainable": 83080,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity",
+      "external_frozen_parameters": {
+        "visual_loaded": 11173962,
+        "visual_preclassifier": 11168832,
+        "audio_loaded": 98184,
+        "audio_preclassifier": 97152
+      }
+    },
+    "gated": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 82561,
+      "head_trainable": 17544,
+      "total_trainable": 100105,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity",
+      "external_frozen_parameters": {
+        "visual_loaded": 11173962,
+        "visual_preclassifier": 11168832,
+        "audio_loaded": 98184,
+        "audio_preclassifier": 97152
+      }
+    },
+    "late05": {
+      "total_trainable": 84240,
+      "fusion_trainable": 0,
+      "head_trainable": 84240,
+      "budget": "two constituent unimodal heads, each200epochs; cached merge has zero updates",
+      "active_nonzero_weight_parameters": 84240,
+      "capacity_note": "Matched target counts both trained constituent heads. At lambda0/1 one branch has zero functional contribution; effective active capacity is separately recorded."
+    },
+    "late_val": {
+      "total_trainable": 84240,
+      "fusion_trainable": 0,
+      "head_trainable": 84240,
+      "budget": "two constituent unimodal heads, each200epochs; cached merge has zero updates",
+      "active_nonzero_weight_parameters": 84240,
+      "capacity_note": "Matched target counts both trained constituent heads. At lambda0/1 one branch has zero functional contribution; effective active capacity is separately recorded."
+    },
+    "video_plus_83080": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 82847,
+      "total_trainable": 82847,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity"
+    },
+    "audio_plus_83080": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 83030,
+      "total_trainable": 83030,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity"
+    },
+    "video_plus_100105": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 100040,
+      "total_trainable": 100040,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity"
+    },
+    "audio_plus_100105": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 100155,
+      "total_trainable": 100155,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity"
+    },
+    "video_plus_84240": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 84410,
+      "total_trainable": 84410,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity"
+    },
+    "audio_plus_84240": {
+      "frozen_encoders": 0,
+      "fusion_trainable": 0,
+      "head_trainable": 84263,
+      "total_trainable": 84263,
+      "encoders_external_frozen_cache": true,
+      "count_basis": "architecture trained in source run; inference freeze flags do not erase its capacity"
+    }
+  },
+  "specs": {
+    "video": {
+      "path": "runs\\lab9\\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f",
+      "strategy": "video"
+    },
+    "audio": {
+      "path": "runs\\lab9\\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638",
+      "strategy": "audio"
+    },
+    "early": {
+      "path": "runs\\lab9\\f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87",
+      "strategy": "early"
+    },
+    "gated": {
+      "path": "runs\\lab9\\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97",
+      "strategy": "gated"
+    },
+    "late05": {
+      "strategy": "late",
+      "video_path": "runs\\lab9\\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f",
+      "audio_path": "runs\\lab9\\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638",
+      "weight": 0.5
+    },
+    "late_val": {
+      "strategy": "late",
+      "video_path": "runs\\lab9\\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f",
+      "audio_path": "runs\\lab9\\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638",
+      "weight": 0.4
+    },
+    "video_plus_83080": {
+      "path": "runs\\lab9\\0ee872cda759ed3cef04-1c6bf25f08664c0bab5852110cc272c4",
+      "strategy": "video"
+    },
+    "audio_plus_83080": {
+      "path": "runs\\lab9\\05d1f855f79bac6b3ef6-b91f4b0bb9ec43459839ed6166a5665a",
+      "strategy": "audio"
+    },
+    "video_plus_100105": {
+      "path": "runs\\lab9\\f158a49abc5797166aeb-e7ead02f62b6484280cc21a92704e619",
+      "strategy": "video"
+    },
+    "audio_plus_100105": {
+      "path": "runs\\lab9\\6b7c1413abed6c0bd9c8-29bdbc1c6058464f9868465b7296ab32",
+      "strategy": "audio"
+    },
+    "video_plus_84240": {
+      "path": "runs\\lab9\\fd3091ab666b15ab86fe-fbe7254a98fb4737abad785ea1cbcf4b",
+      "strategy": "video"
+    },
+    "audio_plus_84240": {
+      "path": "runs\\lab9\\c74b8bb03b53c0837e6d-efd643243b534e05a24741711a39e782",
+      "strategy": "audio"
+    }
+  },
+  "features_sha256": "dcc28e968f9e846fd3c3fc64bbbf3caf35ec16ceb31d0d16968e212d029c7388",
+  "seeds_main": [
+    1,
+    2,
+    3
+  ],
+  "retrain_seed1_after_prereg": true
+}

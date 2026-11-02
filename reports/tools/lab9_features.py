@@ -34,7 +34,10 @@ def visual_stream():
     while True:
         for p in sorted((D/'preprocessed').glob('*/metadata.json')):
             c=json.loads(p.read_text());target=out/(c['clip_id']+'.pt')
-            if target.exists():continue
+            if target.exists():
+                old=torch.load(target,weights_only=False)
+                if old['encoder_sha256']!=s['sha256'] or old['input_frames_sha256']!=c['video_frames_sha256']:raise ValueError('Stale visual cache: encoder/frame identity changed')
+                continue
             assert c['role']!='cal'
             v=torch.load(c['video_frames_path'],weights_only=True)
             z=visual_features(v['frames'],m,s)
@@ -49,6 +52,7 @@ def load_audio(device='cuda'):
     s=json.loads((R/'encoder_sources.json').read_text())['audio'];assert s['status']=='PASS'
     cfg=yaml.safe_load((Path(s['run_path'])/'config.resolved.yaml').read_text(encoding='utf-8'))
     m=build_model(cfg['model']);m.load_state_dict(torch.load(s['path'],map_location='cpu',weights_only=False)['model']);m.requires_grad_(False).eval().to(device)
+    assert file_hash(R/'mel_normalization.json')==s['normalization_sha256'],'Audio encoder train normalization changed'
     stats=json.loads((R/'mel_normalization.json').read_text());return m,s,stats
 
 @torch.no_grad()
@@ -68,6 +72,9 @@ def finish():
             torch.save({'clip_id':c['clip_id'],'actor_id':c['actor_id'],'role':c['role'],'encoder_sha256':s['sha256'],'dataset_hash':manifest['raw_identity_hash'],'z':z,'normalization_sha256':file_hash(R/'mel_normalization.json')},p)
         a=torch.load(p,weights_only=False);v=torch.load(CACHE/'visual'/(c['clip_id']+'.pt'),weights_only=False)
         assert a['clip_id']==v['clip_id']==c['clip_id'] and a['encoder_sha256']==s['sha256']
+        assert a['normalization_sha256']==file_hash(R/'mel_normalization.json')
+        assert v['input_frames_sha256']==c['video_frames_sha256'] and v['source_sha256']==c['source_sha256']
+        assert v['encoder_sha256']==json.loads((R/'encoder_sources.json').read_text())['visual']['sha256']
         aligned=alignment_windows(v['indices'],len(a['z']),av_offset_ms=c['av_offset_ms'])
         torch.save({'clip_id':c['clip_id'],'visual_original_indices':v['indices'],**aligned},CACHE/(c['clip_id']+'_alignment.pt'))
         # Independent temporal masked means (Eq9.5); alignment remains available for frame-level fusion.

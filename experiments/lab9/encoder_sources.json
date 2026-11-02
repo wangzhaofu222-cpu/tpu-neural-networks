@@ -117,9 +117,14 @@
     "selection": "Existing Lab2 validation-selected full-fraction CNN; no RAVDESS test used"
   },
   "audio": {
-    "status": "BLOCKED",
-    "reason": "Requires genuine train data and val-selected AudioCNN training",
+    "status": "PASS",
+    "run_path": "runs\\lab9\\1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54",
+    "RUN_ID": "1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54",
+    "path": "runs\\lab9\\1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54\\checkpoints\\best.pt",
+    "sha256": "f65f9c01d2d6e4da5f5835b7a766576502dd5531977cda6d3bebf29de0f5e38c",
     "feature_dim": 128,
-    "time_downsample_r": 1
+    "time_downsample_r": 1,
+    "selection": "val macro-F1; max100epochs/patience15; no test/cal access",
+    "normalization_sha256": "d987dccd82a3a67dd8659a905af2c3adfbf0864ae066213c5cb0a5ba033df54f"
   }
 }

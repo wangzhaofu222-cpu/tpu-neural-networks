@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "path": "data\\lab9\\features\\pooled.pt",
+  "sha256": "dcc28e968f9e846fd3c3fc64bbbf3caf35ec16ceb31d0d16968e212d029c7388",
+  "raw_identity_hash": "e25eec009e5e412b70f7012220e1f390b95d31239a5a4382dd417f2c273433ad",
+  "audio_encoder_sha256": "f65f9c01d2d6e4da5f5835b7a766576502dd5531977cda6d3bebf29de0f5e38c",
+  "cal_read": false,
+  "pooling": "valid-frame temporal mean; original indices/alignment retained",
+  "normalization": "train clip means only",
+  "frozen_parameters": {
+    "visual_loaded": 11173962,
+    "visual_preclassifier": 11168832,
+    "audio_loaded": 98184,
+    "audio_preclassifier": 97152
+  }
+}
