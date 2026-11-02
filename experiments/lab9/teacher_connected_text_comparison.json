@@ -1,0 +1,12 @@
+{
+  "comparison": "Alphanumeric text in original order, excluding whitespace/layout/math operators (formulas separately visually checked)",
+  "remote_characters": 23758,
+  "local_characters": 23758,
+  "identical": false,
+  "remote_sha256": "e72f8a79610dfae3c5384e95267f9bbbfe6dd2596ed7a5f2d4954b7f35394b5f",
+  "local_sha256": "3afb89656e40e55e224095d6ddf82eaed9a2225a49eda5ac325688b515f3470d",
+  "byte_identity_claimed": false,
+  "russian_prose_letters_in_order_identical": true,
+  "russian_prose_character_count": 18711,
+  "layout_difference": "PDF extraction reorders equation glyphs, accents, and soft hyphen characters"
+}

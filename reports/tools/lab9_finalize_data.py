@@ -40,6 +40,7 @@ def main():
     write_json(R/'mel_normalization.json',{'mean':mean.tolist(),'std':std.tolist(),'fit_role':'train','frames':n,'clip_ids':[c['clip_id'] for c in clips if c['role']=='train'],'ddof':0})
     manifest={'status':'PASS','clips':clips,'split_sizes':sizes,'cal_read':False,'teacher_split_status':'TEACHER_SPLIT_UNVERIFIED','raw_identity_hash':digest({a['actor_id']:a['sha256'] for a in archives}),'split_fingerprint':file_hash(R/'planned_actor_split.json'),'class_counts':{str(i):sum(c['emotion']==i for c in clips) for i in range(8)},'noncal_face_missing_clips':[c['clip_id'] for c in clips if c['role']!='cal' and c['valid5fps_frames']==0]}
     write_json(R/'data_manifest.json',manifest)
+    (R/'data_audit.md').write_text('# Lab9 数据审计\n\n24个官方 speech归档全部通过官方MD5校验，并保存SHA256和ZIP身份清单；1440个唯一AV片段/24演员/8类别。train840,val180,cal120,test300；演员完全隔离。用户授权1729确定性性别分层后备split，保留TEACHER_SPLIT_UNVERIFIED。cal只枚举ZIP身份元数据，不提取/解码/编码媒体。\n\n非cal共1320个片段，16kHz单声道和64频带logmel；真实720p/29.97FPS视频生成224脸帧10FPS并按原索引5FPS编码。face_found=false跳过并保留身份/时间/有效掩码。每片段记录实际音视频PTS偏移、解码帧数和容器头帧数。一帧差异被完整保留，更大差异拒绝。mel标准化只用train有效时间帧，后续clip特征标准化只用train均值。\n\n教师Drive完整14页文本已通过连接器读取，俄语正文字符顺序完全匹配本地讲义；数学重音/上下标抽取顺序有差异，关键公式已视觉核对。远程原始字节下载403，因此不声称PDF逐字节身份已核对。\n\n检测器、FFmpeg、媒体与缓存哈希和全部计数见相邻JSON。原始下载中断及预处理开发失败记录保留，未将不完整归档误标为哈希通过。\n',encoding='utf-8')
     print('GENUINE DATA AUDIT PASS',sizes,'missing faces',len(manifest['noncal_face_missing_clips']),flush=True)
 
 if __name__=='__main__':main()
