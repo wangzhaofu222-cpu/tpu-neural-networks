@@ -1,0 +1,18 @@
+[
+  {
+    "pid": 28760,
+    "action": "planned restart from durable partials: bounded concurrency3->6",
+    "time": "2026-11-02T13:52:23.258337+00:00"
+  },
+  {
+    "pid": 33176,
+    "action": "resume exact4MiB ranges after observed prematurely closed long responses; official MD5 unchanged",
+    "time": "2026-11-02T15:26:32.915109+00:00"
+  },
+  {
+    "event": "restart exact own downloader",
+    "pid": 15580,
+    "reason": "No prefix growth several minutes; use read1/flush/range wall cap and12workers",
+    "time": "2026-11-02T15:49:34.117583+00:00"
+  }
+]

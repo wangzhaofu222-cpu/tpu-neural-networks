@@ -1,0 +1,20 @@
+[
+  {
+    "request": 1,
+    "error": "OSError('Transport closed before requested range completed')",
+    "partial_bytes": 490340292,
+    "range": [
+      486149956,
+      490344259
+    ]
+  },
+  {
+    "request": 5,
+    "error": "OSError('Transport closed before requested range completed')",
+    "partial_bytes": 502927300,
+    "range": [
+      502923204,
+      507117507
+    ]
+  }
+]

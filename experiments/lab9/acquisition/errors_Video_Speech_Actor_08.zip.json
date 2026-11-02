@@ -1,0 +1,20 @@
+[
+  {
+    "request": 9,
+    "error": "URLError(ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))",
+    "partial_bytes": 224882492,
+    "range": [
+      224882492,
+      229076795
+    ]
+  },
+  {
+    "request": 12,
+    "error": "OSError('Transport closed before requested range completed')",
+    "partial_bytes": 237451832,
+    "range": [
+      233271100,
+      237465403
+    ]
+  }
+]

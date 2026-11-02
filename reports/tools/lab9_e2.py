@@ -9,7 +9,11 @@ from src.multimodal.pairs import derangement
 
 def corrupted_inputs(kind,level):
     cache=D/'features/corrupt';cache.mkdir(parents=True,exist_ok=True);target=cache/f'{kind}_{level}.pt'
-    if target.exists():return torch.load(target,weights_only=False)
+    encoders=read(R/'encoder_sources.json');signature={'audio':encoders['audio']['sha256'],'visual':encoders['visual']['sha256'],'normalization':file_hash(R/'feature_normalization.json'),'clean_features':file_hash(FEATURE),'raw_data':read(R/'data_manifest.json')['raw_identity_hash']}
+    if target.exists():
+        cached=torch.load(target,weights_only=False)
+        if cached.get('cache_signature')!=signature:raise ValueError('Corrupt cache encoder/data/normalization identity changed; do not reuse stale features')
+        return cached
     f=features();x=f['test']['x'].clone();ids=f['test']['clip_ids'];clips={c['clip_id']:c for c in read(R/'data_manifest.json')['clips']};stats=read(R/'feature_normalization.json');mean=torch.tensor(stats['mean']);std=torch.tensor(stats['std']);records=[]
     if kind in ['snr','time_mask']:m,s,melstats=load_audio()
     if kind=='blur':m,s=load_visual()
@@ -27,7 +31,7 @@ def corrupted_inputs(kind,level):
             else:raise ValueError(kind)
             x[i,:512]=(z.mean(0)-mean[:512])/std[:512] if len(z) else 0;x[i,640]=float(len(z)>0)
         records.append(meta)
-    out={'x':x,'clip_ids':ids,'records':records,'kind':kind,'level':level,'feature_normalization_sha256':file_hash(R/'feature_normalization.json'),'input_role':'test','cal_read':False};torch.save(out,target)
+    out={'x':x,'clip_ids':ids,'records':records,'kind':kind,'level':level,'cache_signature':signature,'feature_normalization_sha256':file_hash(R/'feature_normalization.json'),'input_role':'test','cal_read':False};torch.save(out,target)
     return out
 
 def main():

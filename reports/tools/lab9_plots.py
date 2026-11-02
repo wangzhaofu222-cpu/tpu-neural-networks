@@ -27,6 +27,12 @@ def main(destination=None):
     for ax,k in zip(axs.flat,['video','audio','early','gated']):
         im=ax.imshow(e1['test'][k]['confusion_matrix'],cmap='Blues');ax.set(title=k,xlabel='Prediction',ylabel='True emotion');fig.colorbar(im,ax=ax)
     save(fig,'E1_confusion')
+    fig,ax=plt.subplots(figsize=(9,4));xx=np.arange(8)
+    for j,k in enumerate(['video','audio','early','gated']):ax.bar(xx+(j-1.5)*.2,e1['test'][k]['per_class_f1'],width=.2,label=k)
+    ax.set(xticks=xx,xticklabels=['neutral','calm','happy','sad','angry','fearful','disgust','surprised'],ylabel='Per-class F1',ylim=(0,1));ax.tick_params(axis='x',rotation=25);ax.legend();save(fig,'E1_per_class_F1')
+    fig,ax=plt.subplots(figsize=(8,4))
+    for row in rows:ax.scatter(row['parameters'],row['test_macro_f1']);ax.annotate(row['model'],(row['parameters'],row['test_macro_f1']),fontsize=7,xytext=(3,3),textcoords='offset points')
+    ax.set(xlabel='Trainable parameters (frozen encoders excluded)',ylabel='Test macro-F1');save(fig,'E1_capacity')
     fig,ax=plt.subplots(figsize=(6,4))
     for row in main['rows']:ax.plot([0,1],[row['U']['macro_f1'],row['F']['macro_f1']],marker='o',label=f"seed{row['seed']}")
     ax.set(xticks=[0,1],xticklabels=[main['U'],main['F']],ylabel='Test macro-F1');ax.legend();save(fig,'E1_paired')
@@ -65,6 +71,9 @@ def main(destination=None):
     axs[0].set(xlabel='Epoch',ylabel='Train cross-entropy');axs[1].set(xlabel='Epoch',ylabel='Val macro-F1')
     for ax in axs:ax.legend()
     save(fig,'training_curves')
+    source=read(R/'encoder_sources.json')['audio'];records=[json.loads(l) for l in (Path(source['run_path'])/'metrics.jsonl').read_text().splitlines()];fig,axs=plt.subplots(1,2,figsize=(9,4))
+    axs[0].plot([r['epoch'] for r in records],[r['train_loss'] for r in records],label='train');axs[0].plot([r['epoch'] for r in records],[r['validation_loss'] for r in records],label='val');axs[0].set(xlabel='Epoch',ylabel='AudioCNN cross-entropy');axs[0].legend()
+    axs[1].plot([r['epoch'] for r in records],[r['validation_metric'] for r in records]);axs[1].set(xlabel='Epoch',ylabel='AudioCNN val macro-F1');save(fig,'audio_encoder_training')
     write_json(out/'artifact_hashes.json',{p.name:file_hash(p) for p in sorted(out.iterdir()) if p.suffix in ['.csv','.png','.svg']});print('FIGURES',len(made),'TABLES',2,flush=True)
 
 if __name__=='__main__':

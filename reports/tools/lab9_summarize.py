@@ -1,5 +1,6 @@
 """Finalize evidence statuses only after genuine experiments and independent audit."""
 import json,xml.etree.ElementTree as ET
+from datetime import datetime,timezone
 from pathlib import Path
 from collections import Counter
 from reports.tools.lab9_common import R,read
@@ -9,7 +10,7 @@ def main():
     audit=read(R/'audit.json');assert audit['status']=='PASS'
     e1=read(R/'E1_exploration.json');paired=read(R/'E1_main.json');e2=read(R/'E2.json');e3=read(R/'E3.json');cf=read(R/'counterfactuals.json')
     outcomes=[]
-    outcomes.append({'requirement':'E1 predicted positive paired difference','status':paired['prediction'],'mean':paired['mean'],'sample_std':paired['sample_std'],'decision':paired['decision']})
+    outcomes.append({'requirement':'E1 predicted positive paired difference','status':'UNVERIFIED' if paired['prediction']=='NOT_ESTABLISHED' else paired['prediction'],'mean':paired['mean'],'sample_std':paired['sample_std'],'decision':paired['decision']})
     without=e2['models']['gated']['contribution'];drop=e2['models']['gated_dropout']['contribution']
     for modality,key in [('audio','Ra'),('video','Rv')]:
         change=without[key]-drop[key];outcomes.append({'requirement':'E2 dropout reduces removal loss: '+modality,'status':'PASS' if change>0 else 'FAIL','improvement':change,'limitation':'one exploratory seed; not an established population effect'})
@@ -29,6 +30,7 @@ def main():
     test=ET.parse('docs/environment/tests-lab9-final.xml').getroot();suites=list(test.iter('testsuite'));ntests=sum(int(s.attrib['tests']) for s in suites);failures=sum(int(s.attrib.get('failures',0))+int(s.attrib.get('errors',0)) for s in suites);assert failures==0
     registry=read(R/'run_registry.json');training=[r for r in registry if not r.get('evaluation')];wall=sum(read(Path(r['path'])/'manifest.json').get('wall_seconds',0) for r in registry)
     stats={'tests_passed':ntests,'audit_passed':audit['passed'],'requirement_status_counts':dict(counts),'formal_training_runs':len(training),'evaluation_runs':len(registry)-len(training),'optimizer_updates':audit['optimizer_updates'],'checkpoint_count':audit['checkpoint_count'],'training_wall_seconds':audit['training_wall_seconds'],'run_wall_seconds_sum':wall,'figures':len(list((R/'figures').glob('*.png'))),'figure_files':len(list((R/'figures').glob('*.png')))+len(list((R/'figures').glob('*.svg'))),'preregistration_commit':paired['preregistration_commit'],'note':'Download/preprocessing wall times recorded separately; overlapping durations must not be added as elapsed wall time'}
+    initial=next(ET.parse('docs/environment/tests-lab8-verification-before-lab9.xml').iter('testsuite')).attrib['timestamp'];now=datetime.now(timezone.utc);stats.update(measured_session_interval_start=initial,measured_session_interval_end=now.isoformat(),elapsed_seconds_since_first_recorded_verification=(now-datetime.fromisoformat(initial)).total_seconds(),elapsed_interval_scope='First recorded Lab8 verification test start -> summary generation, including download/waits/preprocessing/experiments/audit; earlier initial inspection excluded')
     write_json(R/'execution_statistics.json',stats)
     text='# Lab9 EXPERIMENT SUMMARY\n\n实验及证据已完成；教师要求的正式报告尚未制作。\n\n'
     text+='Lab8:239tests/827auditPASS; original results/checkpoints preserved. Final Lab9 regression '+str(ntests)+' tests; independent '+str(audit['passed'])+' checks PASS.\n\n'

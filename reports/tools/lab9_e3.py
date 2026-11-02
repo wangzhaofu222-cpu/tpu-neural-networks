@@ -18,6 +18,7 @@ def main():
             prob,g=predict(spec,px);noaudio,_=predict(spec,px,(1,0));pred=prob.argmax(1);yv=ds['y'][vi];ya=ds['y'][ai];deltaij=(prob-original[vi]).abs().sum(1);deltaa=(prob-noaudio).abs().sum(1)
             raw[protocol]={'probabilities':prob,'gates':g,'delta_ij':deltaij,'delta_a':deltaa,'video_indices':vi,'audio_indices':ai,'no_audio_probabilities':noaudio,'pair_ids':[r['video_clip_id']+'__'+r['audio_clip_id'] for r in rows]}
             cond={'N':len(rows),'confidence_mean':float(prob.max(1).values.mean()),'gate_mean':float(g.mean()) if g is not None else None,'gate_status':'DEFINED' if g is not None else 'NOT_APPLICABLE','delta_ij_mean':float(deltaij.mean()),'delta_a_mean':float(deltaa.mean())}
+            cond['video_emotion_counts']=torch.bincount(yv,minlength=8).tolist();cond['audio_emotion_counts']=torch.bincount(ya,minlength=8).tolist()
             if protocol=='A':cond.update(classification(prob.numpy(),yv.numpy()))
             else:
                 rv=float((pred==yv).float().mean());ra=float((pred==ya).float().mean());r0=float(((pred!=yv)&(pred!=ya)).float().mean());assert abs(rv+ra+r0-1)<1e-6
@@ -29,7 +30,7 @@ def main():
             conditions[protocol]=cond
         y=np.r_[np.zeros(300),np.ones(300)];confidence=np.r_[raw['A']['probabilities'].max(1).values.numpy(),raw['B']['probabilities'].max(1).values.numpy()];delta=np.r_[raw['A']['delta_a'].numpy(),raw['B']['delta_a'].numpy()]
         path=new_evaluation('E3_pairs_'+name,spec,{'pairs':pairs,'feature_sha256':file_hash(FEATURE)},seed=1);torch.save(raw,path/'predictions.pt')
-        out={'RUN_ID':path.name,'strategy':name,'conditions':conditions,'original':{'confidence_mean':float(original.max(1).values.mean()),'gate_mean':float(originalgate.mean()) if originalgate is not None else None},'AUROC_1_minus_conf':auroc(y,1-confidence),'AUROC_delta_a':auroc(y,delta),'AUROC_random_baseline':.5,'limitations':'Different-actor pairing changes identity and emotion correspondence jointly. Five test actors, one split/seed; detection is not isolated causal evidence of semantic inconsistency. Delta_ij compares original pair; delta_a is the same current pair versus audio removal.'}
+        out={'RUN_ID':path.name,'strategy':name,'conditions':conditions,'original':{'confidence_mean':float(original.max(1).values.mean()),'gate_mean':float(originalgate.mean()) if originalgate is not None else None},'AUROC_1_minus_conf':auroc(y,1-confidence),'AUROC_delta_a':auroc(y,delta),'AUROC_random_baseline':.5,'limitations':'Different-actor pairing changes identity and emotion correspondence jointly. Five test actors, one split/seed; detection is not isolated causal evidence of semantic inconsistency. Source clips may occur in multiple unique pairs, so pairs are not independent. Randomly sampled A/B can have different emotion mixtures (counts saved); AUROC is descriptive without adjustment. Delta_ij compares original pair; delta_a is the same current pair versus audio removal.'}
         out['fusion_profile']={'macro_f1_protocol_A':conditions['A']['macro_f1'],'following_protocol_B':{k:conditions['B'][k] for k in ['rv','ra','r0']},'undefined':conditions['B']['undefined']}
         write_json(path/'results.json',out);write_json(path/'summary.json',out);results[name]=out
     write_json(R/'E3.json',results)

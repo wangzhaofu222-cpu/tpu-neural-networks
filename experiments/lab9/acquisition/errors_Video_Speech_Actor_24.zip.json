@@ -1,0 +1,11 @@
+[
+  {
+    "request": 4,
+    "error": "OSError('Transport closed before requested range completed')",
+    "partial_bytes": 16746928,
+    "range": [
+      12582912,
+      16777215
+    ]
+  }
+]

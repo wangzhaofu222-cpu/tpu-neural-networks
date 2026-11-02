@@ -1,0 +1,17 @@
+{
+  "opencv": "4.10.0",
+  "face_detector_sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0",
+  "ffmpeg_executable": "D:\\神经网络\\.conda-env\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "source": "official full-AV speech only",
+  "face_frames": {
+    "size": [
+      224,
+      224
+    ],
+    "raw_fps": 10,
+    "encoded_fps": 5,
+    "face_found_false": "skip encoding, retain metadata"
+  },
+  "cal": "No extraction/decode/features"
+}

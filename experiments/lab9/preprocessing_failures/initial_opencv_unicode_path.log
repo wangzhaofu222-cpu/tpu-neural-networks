@@ -1,0 +1,14 @@
+[ERROR:0@3.749] global persistence.cpp:531 cv::FileStorage::Impl::open Can't open file: 'D:\神经网络\.conda-env\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml' in read mode
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\神经网络\reports\tools\lab9_preprocess.py", line 60, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\神经网络\reports\tools\lab9_preprocess.py", line 53, in main
+    process(clip,detector,ffmpeg)
+  File "D:\神经网络\reports\tools\lab9_preprocess.py", line 29, in process
+    faces=detector.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=3,minSize=(24,24));found=len(faces)>0;box=None
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.10.0) D:\a\opencv-python\opencv-python\opencv\modules\objdetect\src\cascadedetect.cpp:1689: error: (-215:Assertion failed) !empty() in function 'cv::CascadeClassifier::detectMultiScale'
+

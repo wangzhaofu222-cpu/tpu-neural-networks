@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\神经网络\reports\tools\lab9_preprocess.py", line 66, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\神经网络\reports\tools\lab9_preprocess.py", line 59, in main
+    process(clip,detector,ffmpeg)
+  File "D:\神经网络\reports\tools\lab9_preprocess.py", line 25, in process
+    if not ok:raise RuntimeError('Video ended early '+cid)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Video ended early 01-01-01-01-01-01

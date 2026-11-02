@@ -1,0 +1,38 @@
+[
+  {
+    "request": 2,
+    "error": "OSError('Transport closed before requested range completed')",
+    "partial_bytes": 195407868,
+    "range": [
+      191244492,
+      195438795
+    ]
+  },
+  {
+    "request": 5,
+    "error": "OSError('Transport closed before requested range completed')",
+    "partial_bytes": 207113304,
+    "range": [
+      203796476,
+      207990779
+    ]
+  },
+  {
+    "request": 10,
+    "error": "OSError('Transport closed before requested range completed')",
+    "partial_bytes": 228074964,
+    "range": [
+      223890520,
+      228084823
+    ]
+  },
+  {
+    "request": 40,
+    "error": "URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)'))",
+    "partial_bytes": 349709780,
+    "range": [
+      349709780,
+      353904083
+    ]
+  }
+]

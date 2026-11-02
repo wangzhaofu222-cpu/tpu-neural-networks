@@ -1,0 +1,29 @@
+...........................................F......                       [100%]
+================================== FAILURES ===================================
+________________________ test_different_actor_pairs[A] ________________________
+
+protocol = 'A'
+
+    @pytest.mark.parametrize('protocol',['A','B'])
+    def test_different_actor_pairs(protocol):
+        clips=[{'clip_id':f'{i}_{j}','actor_id':i,'emotion':j} for i in range(5) for j in range(8)]
+>       pairs=make_pairs(clips,protocol,count=200,seed=1);assert len(pairs)==200
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_lab9.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+clips = [{'clip_id': '0_0', 'actor_id': 0, 'emotion': 0}, {'clip_id': '0_1', 'actor_id': 0, 'emotion': 1}, {'clip_id': '0_2', ..., 'emotion': 3}, {'clip_id': '0_4', 'actor_id': 0, 'emotion': 4}, {'clip_id': '0_5', 'actor_id': 0, 'emotion': 5}, ...]
+protocol = 'A', count = 200, seed = 1
+
+    def make_pairs(clips,protocol,count=300,seed=1):
+        if protocol not in ['A','B']:raise ValueError('Unknown pairing protocol')
+        possible=[(i,j) for i,a in enumerate(clips) for j,b in enumerate(clips) if a['actor_id']!=b['actor_id'] and ((a['emotion']==b['emotion'])==(protocol=='A'))]
+>       if len(possible)<count:raise ValueError('Insufficient different-actor pairs; cannot fabricate samples')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: Insufficient different-actor pairs; cannot fabricate samples
+
+src\multimodal\pairs.py:13: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_lab9.py::test_different_actor_pairs[A] - ValueError: Insuff...
+1 failed, 49 passed in 2.51s
