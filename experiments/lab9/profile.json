@@ -1,0 +1,18 @@
+{
+  "profile": {
+    "id": "P3adf02",
+    "student_id_hash": "3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9",
+    "base_seed": 987693601
+  },
+  "lab9_visual_encoder": "cnn_lab2",
+  "lab9_p_drop": 0.5,
+  "lab9_gate": "scalar",
+  "lab9_encoder": "vit_small",
+  "lab9_encoder_resolution": "user_authorized_visual_encoder_precedence",
+  "lab9_effective_visual_encoder": "cnn_lab2",
+  "lab9_resolution_note": "Use explicit upstream checkpoint source; preserve conflicting architecture field; not teacher-confirmed.",
+  "calculation_input": "private existing student_id; public SHA256 only",
+  "lab9_hash": "0fbf8538dcfbab1c309432a79f516845350139d95c26a203535a4abad7a3a5b5",
+  "lab_pick_source_sha256": "6f5fe59d238e31a785af235081d5145cc4f84f1ca0472960876b6c57d99a7b23",
+  "profile_conflict_status": "UNVERIFIED: teacher fields conflict; user previously authorized visual-source precedence"
+}

@@ -24,6 +24,9 @@ class ArrayImages(Dataset):
 
 
 def datasets(config):
+    if config['data']['name'] in {'multimodal_features','ravdess_audio'}:
+        from src.data.multimodal_data import datasets as multimodal_datasets
+        return multimodal_datasets(config)
     if config['data']['name']=='rare_gmm2d':
         from src.data.gmm2d import datasets as diffusion_datasets
         return diffusion_datasets(config)
@@ -113,6 +116,9 @@ def datasets(config):
 
 
 def loaders(config, ds, generator):
+    if config['data']['name'] in {'multimodal_features','ravdess_audio'}:
+        from src.data.multimodal_data import loaders as multimodal_loaders
+        return multimodal_loaders(config,ds,generator)
     if config['data']['name']=='rare_gmm2d':
         from src.data.gmm2d import loaders as diffusion_loaders
         return diffusion_loaders(config,ds,generator)

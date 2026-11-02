@@ -22,6 +22,12 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='audio_cnn':
+        from src.models.audio_cnn import AudioCNN
+        return AudioCNN(cfg)
+    if cfg['name']=='multimodal_fusion':
+        from src.multimodal.fusion import FusionClassifier
+        return FusionClassifier(cfg)
     if cfg['name']=='diffusion_mlp':
         from src.models.diffusion.mlp_eps import EpsilonMLP
         return EpsilonMLP(cfg)

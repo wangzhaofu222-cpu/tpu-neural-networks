@@ -1,0 +1,32 @@
+{
+  "purpose": "budget only; weights discarded; not formal results",
+  "genuine_train_clip_ids": [
+    "01-01-01-01-01-01",
+    "01-01-01-01-01-02",
+    "01-01-01-01-01-03",
+    "01-01-01-01-01-15",
+    "01-01-01-01-01-16",
+    "01-01-01-01-01-17",
+    "01-01-01-01-02-01",
+    "01-01-01-01-02-02",
+    "01-01-01-01-02-03",
+    "01-01-01-01-02-15",
+    "01-01-01-01-02-16",
+    "01-01-01-01-02-17",
+    "01-01-01-02-01-01",
+    "01-01-01-02-01-02",
+    "01-01-01-02-01-03",
+    "01-01-01-02-01-15"
+  ],
+  "audio_batch": 16,
+  "audio_step_seconds_median": 0.04198430000178632,
+  "audio_100_epoch_upper_train_seconds": 222.5167900094675,
+  "audio_peak_allocated_bytes": 385836032,
+  "head_step_seconds": 0.0019853230000444456,
+  "head_200_epoch_train_seconds": 5.558904400124447,
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "threads": 2,
+  "audio_updates_pilot": 25,
+  "head_updates_pilot": 100,
+  "cal_read": false
+}

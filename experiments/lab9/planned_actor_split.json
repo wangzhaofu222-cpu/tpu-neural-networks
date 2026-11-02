@@ -1,0 +1,40 @@
+{
+  "roles": {
+    "train": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      24
+    ],
+    "val": [
+      4,
+      9,
+      11
+    ],
+    "cal": [
+      8,
+      13
+    ],
+    "test": [
+      7,
+      12,
+      14,
+      20,
+      23
+    ]
+  },
+  "seed": 1729,
+  "status": "TEACHER_SPLIT_UNVERIFIED",
+  "rule": "Deterministic gender-stratified actor partition 14/3/2/5; no emotion/test-score selection",
+  "fingerprint": "65ef87dea5df76ce5af0608ac334d14d657d145d7d64fd504e5d0a3ce3b51d5c"
+}

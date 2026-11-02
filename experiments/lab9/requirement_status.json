@@ -1,0 +1,363 @@
+{
+  "rows": [
+    {
+      "ID": "H01",
+      "PDF_requirement": "§1/§13: reuse Lab0 EXP_ID/RUN_ID harness",
+      "implementation": "Shared ExperimentRunner; additive Lab9 macro-F1/early-stop only",
+      "verification": "regression tests and manifest trace",
+      "status": "PASS"
+    },
+    {
+      "ID": "D01",
+      "PDF_requirement": "§6: genuine RAVDESS1440 clips/24actors/8classes",
+      "implementation": "Official24speech archives, officialMD5 and clip IDs",
+      "verification": "complete acquisition manifest",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "D02",
+      "PDF_requirement": "§6: actor-disjoint14/3/2/5 inherited split",
+      "implementation": "Deterministic backup1729; teacher split not found",
+      "verification": "actor lists/hash/counts",
+      "status": "UNVERIFIED"
+    },
+    {
+      "ID": "D03",
+      "PDF_requirement": "§6: cal not read; val selection; test final",
+      "implementation": "No cal media extraction; explicit role guards",
+      "verification": "filesystem and sample IDs",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "D04",
+      "PDF_requirement": "§6: train-only normalization",
+      "implementation": "Audio mel and cached clip features train only; visual upstream train normalization retained",
+      "verification": "recalculate train statistics",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "P01",
+      "PDF_requirement": "§7: four SHA256 lab_pick fields",
+      "implementation": "Private existing ID; preserve contradictory source/architecture fields",
+      "verification": "independent hash slice recomputation",
+      "status": "PASS"
+    },
+    {
+      "ID": "P02",
+      "PDF_requirement": "§7: effective visual encoder identity",
+      "implementation": "User-authorized visual-source precedence, CNN versus generic vit_small conflict retained",
+      "verification": "strict original checkpoint/hash/config",
+      "status": "UNVERIFIED"
+    },
+    {
+      "ID": "T11",
+      "PDF_requirement": "§8.1.1:5FPS frozen preclassifier visual features",
+      "implementation": "224face inputs; skip face_found=false; cache byclip",
+      "verification": "weights/hash/eval/padding checks",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T12",
+      "PDF_requirement": "§8.1.2/(9.3):logmel64,400,160,centerTrue",
+      "implementation": "Explicit HTK power filters and periodic Hann; 56000->64x351",
+      "verification": "actual shape test",
+      "status": "PASS"
+    },
+    {
+      "ID": "T13",
+      "PDF_requirement": "§8.1.2:AudioCNN train/val selection then freeze",
+      "implementation": "Shared runner; val macro-F1 best; fixed budget/early stopping",
+      "verification": "checkpoint curves, no test access",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T14",
+      "PDF_requirement": "§8.1.3/(9.10): unified explicit mask",
+      "implementation": "model(visual,audio,mask,align); zero token inside model",
+      "verification": "invariance/illegal mask tests",
+      "status": "PASS"
+    },
+    {
+      "ID": "T15",
+      "PDF_requirement": "§8.1.4/(9.4): integer half-open synchronization",
+      "implementation": "Integer samples; offsets/shifts/r; explicit valid coverage",
+      "verification": "boundary/no-gap/no-overlap tests",
+      "status": "PASS"
+    },
+    {
+      "ID": "T16",
+      "PDF_requirement": "§8.1.5:passports include time and encoder hashes",
+      "implementation": "Resolved config + feature metadata + cache identity",
+      "verification": "raw cache/checkpoint provenance",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T21",
+      "PDF_requirement": "§8.2.1:video/audio/early/gated/late registry",
+      "implementation": "One hidden nonlinear head; scalar profile gate",
+      "verification": "normalization/limit tests",
+      "status": "PASS"
+    },
+    {
+      "ID": "T22",
+      "PDF_requirement": "§8.2.2:separate fusion/head/frozen parameter counts",
+      "implementation": "Explicit parameter breakdown and external frozen source",
+      "verification": "independent parameter sum",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T23",
+      "PDF_requirement": "§8.2.3:matched controls<=1% or nearest width",
+      "implementation": "Exact integer width optimizer, record step and nearest error",
+      "verification": "enumerate adjacent widths",
+      "status": "PASS"
+    },
+    {
+      "ID": "T24",
+      "PDF_requirement": "§8.2.4:late0.5 and val-selected grid0:.1:1",
+      "implementation": "Use cached unimodal probabilities; val macro-F1 only",
+      "verification": "lambda provenance and limits",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T25",
+      "PDF_requirement": "§8.2.5:per-clip gates and conditional summaries",
+      "implementation": "Mean, sample SD, emotion, correct/error",
+      "verification": "per-clip recomputation",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T31",
+      "PDF_requirement": "§8.3.1/(9.12):input noise, time mask, blur/dropframes",
+      "implementation": "Waveform measured power; reuse Lab8 blur parameters; deterministic",
+      "verification": "SNR<=.1dB,level0 identity",
+      "status": "PASS"
+    },
+    {
+      "ID": "T32",
+      "PDF_requirement": "§8.3.2:reencode corrupt raw signal/frames",
+      "implementation": "Same frozen encoders; separate corrupt cache identities",
+      "verification": "input/cache hashes",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T33",
+      "PDF_requirement": "§8.3.3/(9.9):same-model contribution",
+      "implementation": "Save full/withoutaudio/withoutvideo/shuffle probability vectors",
+      "verification": "independent macro-F1 and L1",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T34",
+      "PDF_requirement": "§8.3.4:distinguish separately-trained unimodal probs",
+      "implementation": "Explicit source RUN_ID per predicted array",
+      "verification": "source registry audit",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "T35",
+      "PDF_requirement": "§8.3.5:ProtocolB undefined metrics reject",
+      "implementation": "ValueError accuracy/macroF1/ECE/Risk, no fabricated label",
+      "verification": "mandatory test6",
+      "status": "PASS"
+    },
+    {
+      "ID": "E11",
+      "PDF_requirement": "§9.1:single-seed exploration all strategies",
+      "implementation": "Controlled budgets, sources, classes, bestval checkpoints",
+      "verification": "val/test metrics and confusion",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E12",
+      "PDF_requirement": "§9.1:best strategy/controls chosen byval",
+      "implementation": "Lock validation ranking before main test comparison",
+      "verification": "selection evidence",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E13",
+      "PDF_requirement": "§9.1/(9.8):G,Gint,Gctrl",
+      "implementation": "Per-strategy test gain with matching-control scope",
+      "verification": "recompute from raw predictions",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E14",
+      "PDF_requirement": "§9.1:hypothesis.md realGit before main",
+      "implementation": "F/U/fixedconditions/direction/falsifier/seeds1,2,3",
+      "verification": "Git blob and timestamp checks",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E15",
+      "PDF_requirement": "§9.1/(9.14):three actual paired seeds",
+      "implementation": "Train F/U after prereg; shared frozen features",
+      "verification": "three differences, mean, ddof1SD",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E16",
+      "PDF_requirement": "§9.1:all same sign and absmean>=2SD",
+      "implementation": "Preserve null/reverse result and prediction FAIL",
+      "verification": "independent teacher-rule calculation",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E17",
+      "PDF_requirement": "§9.1:parameter count and confusion/perclass figures",
+      "implementation": "Automatically plot saved outputs",
+      "verification": "byte regeneration and visual QA",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E21",
+      "PDF_requirement": "§9.2:modality dropout profile probability",
+      "implementation": "pdrop=.5; full=.5/single=.25each; neverbothmissing",
+      "verification": "sampling test and training manifest",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E22",
+      "PDF_requirement": "§9.2:all fusion Full/NoAudio/NoVideo",
+      "implementation": "Same model zero null token; actual majority M0",
+      "verification": "R,Rtilde,delta and undefined reasons",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E23",
+      "PDF_requirement": "§9.2:audio mask versus no-fixed-point shuffle",
+      "implementation": "Fixed derangement; video/labels unchanged",
+      "verification": "L1 and changed prediction counts",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E24",
+      "PDF_requirement": "§9.2:compare Rv-Ra versus MV-MA",
+      "implementation": "Actual independent models versus same-model interventions",
+      "verification": "saved probability and source separation",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E25",
+      "PDF_requirement": "§9.2 boundary:SNR30,20,10,0,-5 both gated models",
+      "implementation": "Same300testclips, waveform corruption then reencoding",
+      "verification": "perclip SNR/F1/gate and no-audio reference",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E26",
+      "PDF_requirement": "§9.2:highest gridSNR worse than noaudio or absence",
+      "implementation": "Do not presuppose gate shift",
+      "verification": "grid scan and explanation",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E31",
+      "PDF_requirement": "§9.3:>=200 sameemotion and>=200 differentemotion pairs",
+      "implementation": "300unique ordered pairs each, differentactors, fixedseed",
+      "verification": "pair identity/label tests",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E32",
+      "PDF_requirement": "§9.3:early/gated/late0.5 evaluate A/B",
+      "implementation": "A F1/accuracy/conf; B rv,ra,r0,deltaij/conf and true gates only",
+      "verification": "raw pair prediction files",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E33",
+      "PDF_requirement": "§9.3:rv+ra+r0=1; B undefined",
+      "implementation": "Raise on invalid metric requests; gates N/A when absent",
+      "verification": "independent counts",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E34",
+      "PDF_requirement": "§9.3:detect inconsistency AUROC1-conf anddeltaa",
+      "implementation": "Anegative/Bpositive; deltaa differs fromdeltaij",
+      "verification": "independent AUROC and baseline.5",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "E35",
+      "PDF_requirement": "§9.3:confidence/gate figures and actor confound",
+      "implementation": "Original/A/B histograms; identity versus emotion limits",
+      "verification": "real histograms and discussion",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "Q1",
+      "PDF_requirement": "§10.1:weak modality use not forced",
+      "implementation": "Own Rtilde and mean delta evidence",
+      "verification": "RUN_ID-backed measured answer",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "Q2",
+      "PDF_requirement": "§10.2:double control hidden width and retrain",
+      "implementation": "New genuine training run and revisedGctrl",
+      "verification": "checkpoint/curve/probabilities",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "Q3",
+      "PDF_requirement": "§10.3:audio shuffle versusmask",
+      "implementation": "Use measured output changes andRa",
+      "verification": "RUN_ID-backed measured answer",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "Q4",
+      "PDF_requirement": "§10.4:Lab8 level1blur real reencoding",
+      "implementation": "MeasureM_AV,gate,same-modelvideo intervention",
+      "verification": "RUN_ID and corrupt input cache",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "Q5",
+      "PDF_requirement": "§10.5:gate versusSNR not guaranteed",
+      "implementation": "Use actual E2 curves; no invented trend",
+      "verification": "RUN_ID-backed measured answer",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "A01",
+      "PDF_requirement": "§11:all six mandatory test groups",
+      "implementation": "Unit tests + genuine data/experiment audit separated",
+      "verification": "JUnit and independent audit",
+      "status": "PASS"
+    },
+    {
+      "ID": "A02",
+      "PDF_requirement": "§12:all results traceable toRUN_ID and automatic plots",
+      "implementation": "Raw probability arrays, tables, deterministic generation",
+      "verification": "independent regeneration",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "A03",
+      "PDF_requirement": "§13:all mandatory experiments and prereg complete",
+      "implementation": "Final checklist distinguishes experiment/prediction/protocol",
+      "verification": "audit and clean Git commit",
+      "status": "BLOCKED"
+    },
+    {
+      "ID": "N01",
+      "PDF_requirement": "§12:formal report",
+      "implementation": "Explicitly deferred by user",
+      "verification": "No LaTeX/PDF changes",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "ID": "N02",
+      "PDF_requirement": "§14:crossattention/calibration/time-shift study/regression",
+      "implementation": "Additional tasks not requested; synchronization shift still unit-tested",
+      "verification": "scope statement",
+      "status": "NOT_APPLICABLE"
+    }
+  ],
+  "PDF_sha256": "5ce81c4b23011e45a3fdb4b99e1db75462d61db112fee7a26f30d842ef1b5c52",
+  "state_note": "BLOCKED rows are not yet executed, awaiting complete authentic acquisition/implementation; no synthetic scientific results."
+}

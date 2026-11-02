@@ -1,0 +1,223 @@
+{
+  "status": "PASS",
+  "audit_checks": 827,
+  "failed": [],
+  "regenerated": [
+    {
+      "file": "E1.csv",
+      "identical": true
+    },
+    {
+      "file": "E1_binning.csv",
+      "identical": true
+    },
+    {
+      "file": "E2_grid.csv",
+      "identical": true
+    },
+    {
+      "file": "E2_pairs.csv",
+      "identical": true
+    },
+    {
+      "file": "E2_T5.csv",
+      "identical": true
+    },
+    {
+      "file": "E3.csv",
+      "identical": true
+    },
+    {
+      "file": "selective_ood.csv",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_binning.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_binning.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_cnn.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_cnn.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_vit.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E1_vit.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_brightness.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_brightness.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_contrast.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_contrast.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_blur.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_blur.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_noise.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_gaussian_noise.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_occlusion.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_occlusion.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_pairs.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E2_pairs.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_attacks.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_attacks.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_examples_cnn.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_examples_cnn.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_examples_vit.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\E3_examples_vit.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_1.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_1.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_2.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_2.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_3.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_cnn_3.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_vit_1.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\OOD_measures_vit_1.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_1.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_1.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_2.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_2.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_3.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_cnn_3.svg",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_vit_1.png",
+      "identical": true
+    },
+    {
+      "file": "figures\\selective_ood_vit_1.svg",
+      "identical": true
+    },
+    {
+      "file": "counterfactual_answers.json",
+      "identical": true
+    },
+    {
+      "file": "counterfactual_answers.md",
+      "identical": true
+    },
+    {
+      "file": "profiles\\cnn_1\\reliability.json",
+      "identical": true
+    },
+    {
+      "file": "profiles\\cnn_2\\reliability.json",
+      "identical": true
+    },
+    {
+      "file": "profiles\\cnn_3\\reliability.json",
+      "identical": true
+    },
+    {
+      "file": "profiles\\vit_1\\reliability.json",
+      "identical": true
+    }
+  ],
+  "changed_historical_files": [],
+  "checkpoint_count": 6,
+  "optimizer_updates": 0,
+  "HEAD": "4a2ce05b4285e2438b78699b2fe71e8a6485763a"
+}

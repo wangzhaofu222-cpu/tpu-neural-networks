@@ -174,7 +174,7 @@ class ExperimentRunner:
                     if budget and time.perf_counter()-wall_start > budget:
                         raise TimeoutError('Configured wall time exceeded; no incomplete-epoch checkpoint claimed')
                     if first_checksum is None:
-                        if cfg['experiment']['lab'] in {4,5,6,7}:
+                        if cfg['experiment']['lab'] in {4,5,6,7,9}:
                             import hashlib
                             first_checksum=hashlib.sha256(x.detach().cpu().contiguous().numpy().tobytes()+y.detach().cpu().contiguous().numpy().tobytes()).hexdigest()
                         else:first_checksum = digest({'images':x.tolist(),'labels':y.tolist()})
@@ -253,6 +253,8 @@ class ExperimentRunner:
                           'validation_loss':val['loss'],'train_metric':correct/count,'validation_metric':val['accuracy'],
                           'learning_rate':lr_used,'epoch_time':time.perf_counter()-epoch_start,
                           'peak_gpu_memory_bytes':torch.cuda.max_memory_allocated(device) if device.type=='cuda' else None}
+                selected_metric=val.get('macro_f1',val['accuracy']) if cfg['experiment']['lab']==9 else val['accuracy']
+                if cfg['experiment']['lab']==9:record.update(validation_metric=selected_metric,validation_metric_name='macro_f1',validation_accuracy=val['accuracy'])
                 if ssl_mode:
                     record.update({k:v/count for k,v in similarity_sums.items()})
                     record['train_metric']=None
@@ -266,13 +268,14 @@ class ExperimentRunner:
                     record.update(data_epochs=samples_processed/len(ds['train']),samples_processed=samples_processed,
                                   partial_epoch=partial_epoch,target_optimizer_steps=step_limit)
                 self._append(path/'metrics.jsonl',record)
-                improved = finished_steps if generative_mode else val['accuracy'] is not None and val['accuracy'] > best
+                improved = finished_steps if generative_mode else selected_metric is not None and selected_metric > best
                 if improved:
-                    best,best_epoch = val['accuracy'],completed_epoch
+                    best,best_epoch = selected_metric,completed_epoch
                 extra = {'best_accuracy':best,'best_epoch':best_epoch,'run_id':manifest['RUN_ID'],
                          'config_hash':digest(cfg),'data_fingerprint':data_info['data_fingerprint'],
                          'split_fingerprint':data_info['split_fingerprint'],'source_hash':code['source_hash'],
                          'first_batch_checksum':first_checksum}
+                if cfg['experiment']['lab']==9:extra['best_metric_name']='macro_f1'
                 if step_limit:extra.update(partial_epoch=partial_epoch,samples_processed=samples_processed)
                 if generative_state:extra['generative_state']=generative_state.state_dict()
                 save_due=(global_step-checkpoint_step>=cfg['logging'].get('save_every_steps',1000)) if step_limit else completed_epoch%cfg['logging']['save_every']==0
@@ -293,7 +296,7 @@ class ExperimentRunner:
                         raise RuntimeError('GPU temperature safety threshold reached; complete epoch checkpoint preserved')
                 write_json(path/'summary.json',{**record,'RUN_ID':manifest['RUN_ID'],'EXP_ID':manifest['EXP_ID'],
                            'best_accuracy':best,'best_epoch':best_epoch,'first_batch_checksum':first_checksum,
-                           'checkpoint_for_final_metric':'checkpoints/last.pt','purpose':cfg['experiment']['purpose']})
+                           'checkpoint_for_final_metric':'checkpoints/best.pt' if cfg['experiment']['lab']==9 else 'checkpoints/last.pt','purpose':cfg['experiment']['purpose']})
                 console_due=(not step_limit or finished_steps or global_step-console_step>=cfg['logging'].get('console_every_steps',500))
                 if cfg['experiment']['lab']==5:console_due=(epoch+1==total_epochs or (epoch+1)%50==0)
                 if generative_mode:console_due=finished_steps or global_step-console_step>=500
@@ -306,6 +309,11 @@ class ExperimentRunner:
                     console_step=global_step
                 if finished_steps:
                     status='COMPLETED'
+                    break
+                if cfg['experiment']['lab']==9 and cfg['train'].get('early_stopping_patience') and completed_epoch-best_epoch>=cfg['train']['early_stopping_patience']:
+                    save_checkpoint(path/'checkpoints/last.pt',model,optimizer,scheduler,scaler,completed_epoch,global_step,g,**extra)
+                    status='COMPLETED'
+                    self._append(path/'early_stopping.jsonl',{'epoch':completed_epoch,'best_epoch':best_epoch,'patience':cfg['train']['early_stopping_patience'],'selection_role':'val','selection_metric':'macro_f1'})
                     break
                 if stop_after_epoch and completed_epoch >= stop_after_epoch and completed_epoch<total_epochs:
                     status = 'INTERRUPTED_AT_EPOCH_BOUNDARY'
@@ -343,7 +351,7 @@ class ExperimentRunner:
             if (path/'summary.json').exists():
                 summary=json.loads((path/'summary.json').read_text(encoding='utf-8'))
                 summary['status']=status
-                if step_limit or cfg['experiment']['lab'] in {4,5,6}:summary['training_seconds']=training_seconds
+                if step_limit or cfg['experiment']['lab'] in {4,5,6,9}:summary['training_seconds']=training_seconds
                 write_json(path/'summary.json',summary)
         return path
 
