@@ -50,7 +50,10 @@ def new_evaluation(name,spec,data,seed=1):
     if code['dirty']:raise RuntimeError('Commit source before formal evaluation')
     model,source_cfg,_=load(spec.get('path',spec.get('video_path')));cfg['model']=source_cfg['model'];cfg['evaluation_spec']=spec
     manifest=read(R/'data_manifest.json');info={'dataset':'RAVDESS official speech; frozen encoders','data_fingerprint':digest(data),'split_fingerprint':manifest['split_fingerprint'],'cal_read':False,'teacher_split_status':'TEACHER_SPLIT_UNVERIFIED'}
-    path,passport=create_run(cfg,code,info,model);passport.update(status='COMPLETED_EVALUATION',global_step=0);write_json(path/'manifest.json',passport);register(name,path,seed=seed,purpose='formal',evaluation=True)
+    path,passport=create_run(cfg,code,info,model);passport.update(status='COMPLETED_EVALUATION',global_step=0)
+    if spec.get('strategy')=='late':
+        passport['parameters']=sum(read(Path(spec[k])/'manifest.json')['trainable_parameters'] for k in ['video_path','audio_path']);passport['evaluation_architecture']='Frozen late probability mixture; evaluation_spec lists both constituents; model config describes representative first constituent'
+    write_json(path/'manifest.json',passport);register(name,path,seed=seed,purpose='formal',evaluation=True)
     return path
 
 def evaluate(name,spec,role='test',x=None,seed=1,intervene=True):
@@ -65,7 +68,8 @@ def evaluate(name,spec,role='test',x=None,seed=1,intervene=True):
             from src.diagnostics.gate_stats import gate_statistics
             out['gate']=gate_statistics(g.numpy(),labels.numpy(),(p.argmax(1)==labels).numpy())
     raw_path=path/'predictions.pt';torch.save(raw,raw_path);out['predictions_sha256']=file_hash(raw_path)
-    out['fusion_profile']={'parameters':read(Path(spec.get('path',spec.get('video_path')))/'manifest.json')['trainable_parameters'],'macro_f1':out['macro_f1'],'contribution':out.get('contribution'),'undefined':out.get('contribution',{}).get('undefined',[]),'pair_following':'NOT_APPLICABLE: original labelled clips'}
+    capacity=sum(read(Path(spec[k])/'manifest.json')['trainable_parameters'] for k in ['video_path','audio_path']) if spec.get('strategy')=='late' else read(Path(spec['path'])/'manifest.json')['trainable_parameters']
+    out['fusion_profile']={'parameters':capacity,'macro_f1':out['macro_f1'],'contribution':out.get('contribution'),'undefined':out.get('contribution',{}).get('undefined',[]),'pair_following':'NOT_APPLICABLE: original labelled clips'}
     write_json(path/'results.json',out);write_json(path/'summary.json',out);return out
 
 def matched_control(target,strategy):

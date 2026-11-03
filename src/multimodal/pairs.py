@@ -17,5 +17,6 @@ def make_pairs(clips,protocol,count=300,seed=1):
 
 
 def require_defined_metric(protocol,metric):
-    if protocol=='B' and metric.lower() in ['accuracy','macro_f1','f1','ece','risk','selective_risk']:
+    key=metric.strip().lower().replace('-','_').replace(' ','_')
+    if protocol=='B' and key in ['accuracy','macro_f1','f1','ece','risk','selective_risk']:
         raise ValueError(f'{metric} undefined for conflicting Protocol B: no unique true emotion label')

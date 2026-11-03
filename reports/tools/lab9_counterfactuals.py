@@ -1,9 +1,12 @@
 import numpy as np
 from reports.tools.lab9_common import *
 
-def main():
+def main(reuse_double=False,destination=None):
     e1=read(R/'E1_exploration.json');e2=read(R/'E2.json');main=read(R/'E1_main.json');selection=e1['selection'];U=selection['U'];F=selection['F'];strategy=selection['specs'][U]['strategy'];width=selection['controls'][F][strategy]['match']['width']
-    spec={'path':train('Q2_double_unimodal_control',strategy,width=width*2),'strategy':strategy};double=evaluate('Q2_double_control_test',spec)
+    if reuse_double:double=read(R/'counterfactuals.json')['double_control']
+    else:
+        if (R/'counterfactuals.json').exists():raise RuntimeError('Archived counterfactual training exists; replay answers without retraining instead')
+        spec={'path':train('Q2_double_unimodal_control',strategy,width=width*2),'strategy':strategy};double=evaluate('Q2_double_control_test',spec)
     old=e1['test'][U];f=e1['test'][F];gated=e2['models']['gated'];c=gated['contribution'];blur=e2['supplementary']['blur'];s=e2['shuffle'];noise=e2['noise'];rows=[]
     rows.append({'question':1,'RUN_ID':[gated['RUN_ID'],e1['test']['video']['RUN_ID'],e1['test']['audio']['RUN_ID']],'values':{'M_video':e1['test']['video']['macro_f1'],'M_audio':e1['test']['audio']['macro_f1'],'Rtilde_a':c['Rtilde_a'],'Rtilde_v':c['Rtilde_v'],'mean_delta_a':float(np.mean(c['delta_a'])),'mean_delta_v':float(np.mean(c['delta_v']))},'answer':'Слабая модальность не обязана использоваться. Ее вклад определяется вмешательством в ту же модель; качество отдельного классификатора этого не доказывает. Ненулевые L1-изменения показывают зависимость вероятностей, но не гарантируют полезный прирост F1. Вывод ограничен заменителем zero и данным разбиением.'})
     # Main control is validation-selected U; max over both exploratory matched controls is kept separately.
@@ -20,9 +23,10 @@ def main():
     rows[3]['answer']+=f" Здесь F1 изменился на {blur['macro_f1']-gated['macro_f1']:+.6f}; Rv после blur={bc['Rv']:.6f}, mean delta_v={np.mean(bc['delta_v']):.6f}. Это непосредственно отделяет зависимость выхода от стабильности итоговой F1."
     for key,rs in noise.items():
         gates=np.array([r['gate']['mean'] for r in rs]);rows[4]['answer']+=f' {key}: g(-5)−g(30)={gates[-1]-gates[0]:+.6f}; рост веса видео на всех соседних шагах сетки '+('наблюдается' if np.all(np.diff(gates)>=0) else 'не наблюдается')+'.'
-    write_json(R/'counterfactuals.json',{'answers':rows,'double_control':double,'main_difference':main['decision']})
+    out=Path(destination) if destination else R;out.mkdir(parents=True,exist_ok=True)
+    write_json(out/'counterfactuals.json',{'answers':rows,'double_control':double,'main_difference':main['decision']})
     text='# Ответы на пять контрфактических вопросов\n\n'
     for row in rows:text+=f"## Q{row['question']}\n\nRUN_ID: "+', '.join(row['RUN_ID'])+'\n\n```json\n'+json.dumps(row['values'],ensure_ascii=False,indent=2)+'\n```\n\n'+row['answer']+'\n\n'
-    (R/'counterfactuals.md').write_text(text,encoding='utf-8')
+    (out/'counterfactuals.md').write_text(text,encoding='utf-8')
 
 if __name__=='__main__':main()

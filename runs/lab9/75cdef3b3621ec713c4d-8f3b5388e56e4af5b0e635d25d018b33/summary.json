@@ -1,0 +1,213 @@
+{
+  "RUN_ID": "75cdef3b3621ec713c4d-8f3b5388e56e4af5b0e635d25d018b33",
+  "strategy": "early",
+  "conditions": {
+    "A": {
+      "N": 300,
+      "confidence_mean": 0.6129177808761597,
+      "gate_mean": null,
+      "gate_status": "NOT_APPLICABLE",
+      "delta_ij_mean": 0.718411922454834,
+      "delta_a_mean": 0.777046799659729,
+      "video_emotion_counts": [
+        9,
+        39,
+        43,
+        48,
+        42,
+        34,
+        50,
+        35
+      ],
+      "audio_emotion_counts": [
+        9,
+        39,
+        43,
+        48,
+        42,
+        34,
+        50,
+        35
+      ],
+      "macro_f1": 0.4347590060470583,
+      "accuracy": 0.45666666666666667,
+      "confusion_matrix": [
+        [
+          4,
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          7,
+          22,
+          0,
+          4,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          22,
+          0,
+          0,
+          9,
+          1,
+          6
+        ],
+        [
+          3,
+          2,
+          5,
+          9,
+          0,
+          15,
+          11,
+          3
+        ],
+        [
+          1,
+          1,
+          6,
+          0,
+          17,
+          6,
+          2,
+          9
+        ],
+        [
+          2,
+          3,
+          5,
+          1,
+          4,
+          10,
+          1,
+          8
+        ],
+        [
+          1,
+          1,
+          2,
+          1,
+          5,
+          3,
+          30,
+          7
+        ],
+        [
+          2,
+          1,
+          5,
+          0,
+          2,
+          2,
+          0,
+          23
+        ]
+      ],
+      "per_class_f1": [
+        0.25806451612903225,
+        0.5789473684210527,
+        0.5,
+        0.2857142857142857,
+        0.4857142857142857,
+        0.23255813953488372,
+        0.631578947368421,
+        0.5054945054945055
+      ],
+      "mean_confidence": 0.6129178404808044
+    },
+    "B": {
+      "N": 300,
+      "confidence_mean": 0.6119362711906433,
+      "gate_mean": null,
+      "gate_status": "NOT_APPLICABLE",
+      "delta_ij_mean": 1.0379937887191772,
+      "delta_a_mean": 0.786819577217102,
+      "video_emotion_counts": [
+        16,
+        37,
+        41,
+        51,
+        42,
+        32,
+        48,
+        33
+      ],
+      "audio_emotion_counts": [
+        23,
+        45,
+        24,
+        37,
+        44,
+        45,
+        46,
+        36
+      ],
+      "rv": 0.1733333319425583,
+      "ra": 0.2966666519641876,
+      "r0": 0.5299999713897705,
+      "undefined": [
+        {
+          "metric": "accuracy",
+          "reason": "Conflicting labels; no unique true emotion"
+        },
+        {
+          "metric": "macro_f1",
+          "reason": "Conflicting labels; no unique true emotion"
+        },
+        {
+          "metric": "ECE",
+          "reason": "Conflicting labels; no unique true emotion"
+        },
+        {
+          "metric": "selective_risk",
+          "reason": "Conflicting labels; no unique true emotion"
+        }
+      ]
+    }
+  },
+  "original": {
+    "confidence_mean": 0.6079121828079224,
+    "gate_mean": null
+  },
+  "AUROC_1_minus_conf": 0.5016111111111111,
+  "AUROC_delta_a": 0.5045,
+  "AUROC_random_baseline": 0.5,
+  "limitations": "Different-actor pairing changes identity and emotion correspondence jointly. Five test actors, one split/seed; detection is not isolated causal evidence of semantic inconsistency. Source clips may occur in multiple unique pairs, so pairs are not independent. Randomly sampled A/B can have different emotion mixtures (counts saved); AUROC is descriptive without adjustment. Delta_ij compares original pair; delta_a is the same current pair versus audio removal.",
+  "fusion_profile": {
+    "macro_f1_protocol_A": 0.4347590060470583,
+    "following_protocol_B": {
+      "rv": 0.1733333319425583,
+      "ra": 0.2966666519641876,
+      "r0": 0.5299999713897705
+    },
+    "undefined": [
+      {
+        "metric": "accuracy",
+        "reason": "Conflicting labels; no unique true emotion"
+      },
+      {
+        "metric": "macro_f1",
+        "reason": "Conflicting labels; no unique true emotion"
+      },
+      {
+        "metric": "ECE",
+        "reason": "Conflicting labels; no unique true emotion"
+      },
+      {
+        "metric": "selective_risk",
+        "reason": "Conflicting labels; no unique true emotion"
+      }
+    ],
+    "parameters": 83080
+  }
+}

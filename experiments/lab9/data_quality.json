@@ -1,0 +1,164 @@
+{
+  "noncal_clips": 1320,
+  "actors": 22,
+  "raw10fps_frames": 49566,
+  "face_not_found_raw10fps": 7,
+  "selected5fps_slots": 25125,
+  "face_not_found_5fps": 3,
+  "clips_entirely_missing_video": 0,
+  "audio_samples_minmax": [
+    47787,
+    84651
+  ],
+  "mel_time_steps_minmax": [
+    299,
+    530
+  ],
+  "offset_ms_counts": {
+    "0.0": 1320
+  },
+  "header_decoder_difference_counts": {
+    "1": 480,
+    "0": 840
+  },
+  "face_grid_samples": [
+    {
+      "actor_id": 1,
+      "clip_id": "01-01-01-01-01-01",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-01\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 2,
+      "clip_id": "01-01-01-01-01-02",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-02\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 3,
+      "clip_id": "01-01-01-01-01-03",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-03\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 4,
+      "clip_id": "01-01-01-01-01-04",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-04\\frame_000.jpg",
+      "role": "val"
+    },
+    {
+      "actor_id": 5,
+      "clip_id": "01-01-01-01-01-05",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-05\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 6,
+      "clip_id": "01-01-01-01-01-06",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-06\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 7,
+      "clip_id": "01-01-01-01-01-07",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-07\\frame_000.jpg",
+      "role": "test"
+    },
+    {
+      "actor_id": 9,
+      "clip_id": "01-01-01-01-01-09",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-09\\frame_000.jpg",
+      "role": "val"
+    },
+    {
+      "actor_id": 10,
+      "clip_id": "01-01-01-01-01-10",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-10\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 11,
+      "clip_id": "01-01-01-01-01-11",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-11\\frame_000.jpg",
+      "role": "val"
+    },
+    {
+      "actor_id": 12,
+      "clip_id": "01-01-01-01-01-12",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-12\\frame_000.jpg",
+      "role": "test"
+    },
+    {
+      "actor_id": 14,
+      "clip_id": "01-01-01-01-01-14",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-14\\frame_000.jpg",
+      "role": "test"
+    },
+    {
+      "actor_id": 15,
+      "clip_id": "01-01-01-01-01-15",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-15\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 16,
+      "clip_id": "01-01-01-01-01-16",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-16\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 17,
+      "clip_id": "01-01-01-01-01-17",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-17\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 18,
+      "clip_id": "01-01-01-01-01-18",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-18\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 19,
+      "clip_id": "01-01-01-01-01-19",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-19\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 20,
+      "clip_id": "01-01-01-01-01-20",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-20\\frame_000.jpg",
+      "role": "test"
+    },
+    {
+      "actor_id": 21,
+      "clip_id": "01-01-01-01-01-21",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-21\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 22,
+      "clip_id": "01-01-01-01-01-22",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-22\\frame_000.jpg",
+      "role": "train"
+    },
+    {
+      "actor_id": 23,
+      "clip_id": "01-01-01-01-01-23",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-23\\frame_000.jpg",
+      "role": "test"
+    },
+    {
+      "actor_id": 24,
+      "clip_id": "01-01-01-01-01-24",
+      "path": "data\\lab9\\preprocessed\\01-01-01-01-01-24\\frame_000.jpg",
+      "role": "train"
+    }
+  ],
+  "cal_media_read": false,
+  "QA_status": "PASS: one actual face crop from each of22 noncal actors visually inspected; face-centered, eyes/nose/mouth present, IDs/roles readable. This does not claim visual inspection of every frame.",
+  "canonical_5fps_missing_slots": {
+    "no_decoded_frame_at_canonical_slot": 69,
+    "face_detector_missing": 3
+  }
+}

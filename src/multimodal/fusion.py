@@ -48,6 +48,10 @@ class FusionClassifier(nn.Module):
                 m=torch.where((m.sum(1)==0)[:,None],available,m)
             return self.logits(v,a,m)
         if visual is None or audio is None:raise ValueError('Provide both modality tensors and mask missing modalities inside model')
+        if visual.ndim==2 and align is not None and torch.as_tensor(align['visual_valid']).ndim==1:
+            # Teacher's single-clip [T,D] interface; pooled [B,D] without align is unchanged.
+            visual=visual.unsqueeze(0);audio=audio.unsqueeze(0)
+            align={**align,'visual_valid':torch.as_tensor(align['visual_valid']).unsqueeze(0),'audio_valid':torch.as_tensor(align['audio_valid']).unsqueeze(0)}
         presence=validate_mask(mask,len(visual),visual.device)
         def pool(values,valid,present):
             valid=torch.as_tensor(valid,device=values.device,dtype=torch.bool);n=valid.sum(1,keepdim=True)
@@ -67,3 +71,21 @@ def late_probabilities(p_video,p_audio,weight=.5,mask=(1,1)):
     m=validate_mask(mask,len(p_video),p_video.device);w=torch.full((len(p_video),1),weight,device=p_video.device,dtype=p_video.dtype)
     w=torch.where(~m[:,:1],torch.zeros_like(w),w);w=torch.where(~m[:,1:],torch.ones_like(w),w)
     return w*p_video+(1-w)*p_audio
+
+
+class LateFusion(nn.Module):
+    """Frozen late mixture with the same public modality interface as trained heads."""
+    validation_macro_f1=True
+    def __init__(self,video_model,audio_model,weight=.5):
+        super().__init__()
+        if not 0<=weight<=1:raise ValueError('Invalid late weight')
+        self.video=video_model.requires_grad_(False).eval();self.audio=audio_model.requires_grad_(False).eval();self.weight=weight;self.last_gate=None
+    def forward(self,x=None,*,visual=None,audio=None,mask=(1,1),align=None):
+        if x is not None:
+            visual=x[:,:self.video.dv];audio=x[:,self.video.dv:self.video.dv+self.video.da]
+            if x.shape[1]==self.video.dv+self.video.da+2:mask=validate_mask(mask,len(x),x.device)&x[:,-2:].bool()
+        pv=self.video(visual=visual,audio=audio,mask=mask,align=align);pa=self.audio(visual=visual,audio=audio,mask=mask,align=align);p=late_probabilities(pv,pa,self.weight,mask)
+        return p.clamp_min(1e-30).log() if x is not None else p
+    def parameter_breakdown(self):
+        total=sum(p.numel() for p in self.parameters())
+        return {'source_trained_head_parameters':total,'currently_trainable':0,'fusion_trainable':0,'merge_parameters':0,'validation_selected_lambda':self.weight,'active_source_parameters':sum(p.numel() for p in self.video.parameters())*int(self.weight>0)+sum(p.numel() for p in self.audio.parameters())*int(self.weight<1)}

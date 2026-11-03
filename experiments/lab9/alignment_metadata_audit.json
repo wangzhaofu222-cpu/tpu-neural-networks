@@ -1,0 +1,939 @@
+{
+  "status": "PASS",
+  "clips": 1320,
+  "affected_clips": [
+    {
+      "clip_id": "01-03-02-01-02-01",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-03-02-01-02-01_alignment.pt",
+      "old_sha256": "5b437d478b77f7980fcd625e218eb43805425abaf8b28af2f7e40e3fa721ec5a"
+    },
+    {
+      "clip_id": "01-04-01-01-01-01",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-01-01-01-01_alignment.pt",
+      "old_sha256": "190699663e108a4964f44c53c1ebb73c5dfa5c2ca0d951bfc49d35f1bad1469a"
+    },
+    {
+      "clip_id": "01-05-02-02-02-01",
+      "missing_canonical_indices": [
+        22
+      ],
+      "missing_reasons": {
+        "22": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 430,
+      "new_assigned_audio_count": 446,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-05-02-02-02-01_alignment.pt",
+      "old_sha256": "be36141586510c72bbfc72964a5a7bc6c77619cd568e34d4939a39cf1f9efd69"
+    },
+    {
+      "clip_id": "01-06-01-01-02-01",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-01-01-02-01_alignment.pt",
+      "old_sha256": "ab3010f110e02f2e7eea7517d104e87fd0e1b14ca9f376c903b928093d15b388"
+    },
+    {
+      "clip_id": "01-06-01-02-01-01",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-01-02-01-01_alignment.pt",
+      "old_sha256": "275ddffd105c733e0e4af3d248e30fd57b6f45f946bc786f5ae271825c6fbb1e"
+    },
+    {
+      "clip_id": "01-06-02-01-02-01",
+      "missing_canonical_indices": [
+        21
+      ],
+      "missing_reasons": {
+        "21": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 410,
+      "new_assigned_audio_count": 425,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-01-02-01_alignment.pt",
+      "old_sha256": "9be736e6693f4a44fe2ca4a2215eee065c38e8d5ad373f771ff1e38e8f664f89"
+    },
+    {
+      "clip_id": "01-07-01-02-02-01",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-01-02-02-01_alignment.pt",
+      "old_sha256": "487002a960ab9fba2fe312b41b9762db20aeb08752e3508773933b94106d9846"
+    },
+    {
+      "clip_id": "01-07-02-02-01-01",
+      "missing_canonical_indices": [
+        20
+      ],
+      "missing_reasons": {
+        "20": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 390,
+      "new_assigned_audio_count": 406,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-02-02-01-01_alignment.pt",
+      "old_sha256": "25fa0bb41eb23643fb7c85bf372413b3434ea9a23d912120e7f1a7435d24bb3b"
+    },
+    {
+      "clip_id": "01-08-02-01-01-01",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-02-01-01-01_alignment.pt",
+      "old_sha256": "8f470c04fe3d62035e5c1ed7fc0893593ec738a11c92fce93222767c20372f25"
+    },
+    {
+      "clip_id": "01-01-01-02-02-06",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-02-02-06_alignment.pt",
+      "old_sha256": "9b0bd06b85bfc148f203497627e258ad01e708e40445d064b1538e769a64f6a5"
+    },
+    {
+      "clip_id": "01-02-01-01-01-06",
+      "missing_canonical_indices": [
+        20
+      ],
+      "missing_reasons": {
+        "20": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 390,
+      "new_assigned_audio_count": 406,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-02-01-01-01-06_alignment.pt",
+      "old_sha256": "cf31ce449c315b47a6087a5398860cfd85c5b287a8d056f276c342fff88035a4"
+    },
+    {
+      "clip_id": "01-02-02-01-02-06",
+      "missing_canonical_indices": [
+        23
+      ],
+      "missing_reasons": {
+        "23": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 450,
+      "new_assigned_audio_count": 466,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-02-02-01-02-06_alignment.pt",
+      "old_sha256": "d8d326d3c9d54833d37ef424851b12d3e38c6682f86a1d4a94f96d98520d9f21"
+    },
+    {
+      "clip_id": "01-03-01-02-02-06",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-03-01-02-02-06_alignment.pt",
+      "old_sha256": "a9f7e590ef8761011603c29e271222e4740ccb3165eb84c5b696c90496693955"
+    },
+    {
+      "clip_id": "01-04-01-02-02-06",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-01-02-02-06_alignment.pt",
+      "old_sha256": "32b899f0087cf535a18c7d1183017d6b5f89b29eae9a5ed44a28bb7edbb4a1ba"
+    },
+    {
+      "clip_id": "01-04-02-02-02-06",
+      "missing_canonical_indices": [
+        20
+      ],
+      "missing_reasons": {
+        "20": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 390,
+      "new_assigned_audio_count": 406,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-02-02-02-06_alignment.pt",
+      "old_sha256": "e2d981e24d1f9e9fa93f53452acde20d17296ed164dd5d44ce4dc3bfaabeeedc"
+    },
+    {
+      "clip_id": "01-05-02-02-01-06",
+      "missing_canonical_indices": [
+        22
+      ],
+      "missing_reasons": {
+        "22": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 430,
+      "new_assigned_audio_count": 446,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-05-02-02-01-06_alignment.pt",
+      "old_sha256": "26a90f292e9d9e9de8b125a48e91a352aa49242976ebf85e3d177074fefd610c"
+    },
+    {
+      "clip_id": "01-06-01-01-01-06",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-01-01-01-06_alignment.pt",
+      "old_sha256": "c6a7ad943eea0317ab7244abb43b2dc9a941e99f7520c284357484e0fdc3a5a6"
+    },
+    {
+      "clip_id": "01-06-01-01-02-06",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-01-01-02-06_alignment.pt",
+      "old_sha256": "cd6c47009695f2e50bc5518885243138e252c9ad66d4edbf5f6e2134236b0c31"
+    },
+    {
+      "clip_id": "01-06-02-01-01-06",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-01-01-06_alignment.pt",
+      "old_sha256": "8ce4d1107e22a55ffc51dd5574dd9c8457d5f0fbd29feac9f9f37dd201299160"
+    },
+    {
+      "clip_id": "01-07-02-02-01-06",
+      "missing_canonical_indices": [
+        20
+      ],
+      "missing_reasons": {
+        "20": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 390,
+      "new_assigned_audio_count": 406,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-02-02-01-06_alignment.pt",
+      "old_sha256": "7e586be0a9e7b590add1b096bff01750ece88006e931cef7db624c262978ca66"
+    },
+    {
+      "clip_id": "01-08-01-01-01-06",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-01-01-06_alignment.pt",
+      "old_sha256": "d2bf885c2b5ccc8c81bb8b6070e3915c69009e680de567b254b68d006cb1f92c"
+    },
+    {
+      "clip_id": "01-08-01-01-02-06",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-01-02-06_alignment.pt",
+      "old_sha256": "d9ec8a2aac348fba6cb55b6699ec788e74d2688e76cce3c6b5a6d705740abfc2"
+    },
+    {
+      "clip_id": "01-08-02-01-01-06",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-02-01-01-06_alignment.pt",
+      "old_sha256": "bb546aec45e8d796b51d5c85cf210e84eec1240212a84fb3f7ac4589859f0ce4"
+    },
+    {
+      "clip_id": "01-01-01-02-02-09",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-02-02-09_alignment.pt",
+      "old_sha256": "b341afdabe3b3ec96ee2d9b98f1565e071d93d8fc883281137c0e8c8000883d4"
+    },
+    {
+      "clip_id": "01-02-02-01-02-09",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-02-02-01-02-09_alignment.pt",
+      "old_sha256": "d1cc55b96e14d8a02d01d0aa49e469492a3b7dcd07b8efa05a35a40d3ec5e17f"
+    },
+    {
+      "clip_id": "01-02-02-02-02-09",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-02-02-02-02-09_alignment.pt",
+      "old_sha256": "b502e5eb93d8f1c7d8f5f698a21b6ca81e5754524316baf22cd7368aec1c75e6"
+    },
+    {
+      "clip_id": "01-04-01-01-02-09",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-01-01-02-09_alignment.pt",
+      "old_sha256": "99c10c3781a009a78a8cd6d4f7a1c8ebb6a43d1a767ab80cedccc9baf365c296"
+    },
+    {
+      "clip_id": "01-04-02-02-01-09",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-02-02-01-09_alignment.pt",
+      "old_sha256": "c9bace9ec91fef0f3ad95976681ac31d9f6cb3ffab2a97e4bc0ea28fc9a3f346"
+    },
+    {
+      "clip_id": "01-06-02-01-01-09",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-01-01-09_alignment.pt",
+      "old_sha256": "8d2f8f796af87ca5950613f19a6ef77c1c668b67b4bdd32708b3ff6201be3c85"
+    },
+    {
+      "clip_id": "01-06-02-02-01-09",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-02-01-09_alignment.pt",
+      "old_sha256": "19ab097564fd0fb17fbf9cd97957b3c02815014ade60aaf2d989fafa38706773"
+    },
+    {
+      "clip_id": "01-06-02-02-02-09",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-02-02-09_alignment.pt",
+      "old_sha256": "e7dd92e156d755ae02a0225fb885e736e9bb71b7bafb2ef5fcfcc7ae8d76e804"
+    },
+    {
+      "clip_id": "01-07-02-01-01-09",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-02-01-01-09_alignment.pt",
+      "old_sha256": "4fac8c5294310ea478a7c7550c642a9017dbba6b75a7c6393d53114e01fd1b39"
+    },
+    {
+      "clip_id": "01-08-01-02-01-09",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-02-01-09_alignment.pt",
+      "old_sha256": "b28365519cd1783e3e962d003e1a3d8be5946fb42955abc50e07ab6327fc838c"
+    },
+    {
+      "clip_id": "01-08-01-02-02-09",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-02-02-09_alignment.pt",
+      "old_sha256": "823840f1ece648f1c31fdf5cfb1720a8c5e7d83ee94893a96bb38a1ee797b90d"
+    },
+    {
+      "clip_id": "01-08-02-02-02-09",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-02-02-02-09_alignment.pt",
+      "old_sha256": "ba6d82a5a159dca155ab6d430e1a9cfe94c072a71992aad4cc018cf83733fd02"
+    },
+    {
+      "clip_id": "01-01-01-01-01-12",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-01-01-12_alignment.pt",
+      "old_sha256": "8d5c619d985cb682149a7c599184c9dffb8444c8126a45492eccc7391c28e270"
+    },
+    {
+      "clip_id": "01-01-01-02-02-12",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-02-02-12_alignment.pt",
+      "old_sha256": "68d54011766abbcc7363ad5d0b9d2d3ab966296e40fafb76e4baf811dc626015"
+    },
+    {
+      "clip_id": "01-05-02-01-01-12",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-05-02-01-01-12_alignment.pt",
+      "old_sha256": "06eb3a812cd84180a3f0014e57a9d9f4fb33cd654781a8d3bf38720c573aeb29"
+    },
+    {
+      "clip_id": "01-05-02-02-02-12",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-05-02-02-02-12_alignment.pt",
+      "old_sha256": "df8acd2c8c4b1a621e03b31e515007def62c922e6b791196c14383332ee121ed"
+    },
+    {
+      "clip_id": "01-08-01-01-02-12",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-01-02-12_alignment.pt",
+      "old_sha256": "8d96b781dfefb915fa9b4d429a6efcc848e9556ebac8ccd0e3d37d755ca39bf6"
+    },
+    {
+      "clip_id": "01-03-02-02-01-14",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-03-02-02-01-14_alignment.pt",
+      "old_sha256": "124bf61a90358fece305f484521eefc8045cbe0a70d3cc5d476621c96be300ca"
+    },
+    {
+      "clip_id": "01-07-01-01-02-14",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-01-01-02-14_alignment.pt",
+      "old_sha256": "65709c3441285e5e1f550287197375fcd24a162133b1b7974d3f55d21f2ca72f"
+    },
+    {
+      "clip_id": "01-08-01-01-01-14",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-01-01-14_alignment.pt",
+      "old_sha256": "d2bdb603082ec40898019f2ba9a877ae80558a7ff68923d3bce12ec3d1eeec41"
+    },
+    {
+      "clip_id": "01-01-01-01-02-15",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-01-02-15_alignment.pt",
+      "old_sha256": "227f5d84509c6f8fca880f7ac0ede7630aa00ba27e5eb0448971e360b17edcc3"
+    },
+    {
+      "clip_id": "01-01-01-02-01-15",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-02-01-15_alignment.pt",
+      "old_sha256": "e46d5f35fe54008aebb2810c3cbfe0647d234d85b95e9cd542b67261b9686087"
+    },
+    {
+      "clip_id": "01-03-01-02-02-15",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-03-01-02-02-15_alignment.pt",
+      "old_sha256": "f890b3f3601a024c43534177f6fb277c183c85130be9de15636b62ae475ce682"
+    },
+    {
+      "clip_id": "01-04-02-01-01-15",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "face_detector_missing"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 329,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-02-01-01-15_alignment.pt",
+      "old_sha256": "62cfa759f468675a6d443283e9281230fe83e9621d4e0b26571090b76dc41c29"
+    },
+    {
+      "clip_id": "01-04-02-02-02-15",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-02-02-02-15_alignment.pt",
+      "old_sha256": "63997dcda797c58fb16ef6daa1e28099ab8f66c6718db182f7a9c26279a4d110"
+    },
+    {
+      "clip_id": "01-05-01-01-01-15",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-05-01-01-01-15_alignment.pt",
+      "old_sha256": "72b77c6378d3444030c78619555eef0df4499f8d08bb5533c30a2d36d6716e69"
+    },
+    {
+      "clip_id": "01-07-01-01-02-15",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-01-01-02-15_alignment.pt",
+      "old_sha256": "701ea63a6284bda402ad481d32e9e88424d2112d9eff35a1c81a9803cb3a948c"
+    },
+    {
+      "clip_id": "01-07-02-01-02-15",
+      "missing_canonical_indices": [
+        15,
+        16
+      ],
+      "missing_reasons": {
+        "15": "face_detector_missing",
+        "16": "face_detector_missing"
+      },
+      "old_assigned_audio_count": 290,
+      "new_assigned_audio_count": 330,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-02-01-02-15_alignment.pt",
+      "old_sha256": "bac7d89a1ec2cb03a87bcb1db42451629a3412e348823f497a9ef82471e5cdda"
+    },
+    {
+      "clip_id": "01-08-01-01-01-15",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-01-01-15_alignment.pt",
+      "old_sha256": "bc5d6f80cbc58e2b1acdb6e73e9c793de8b389f68e7899ad15928b4b20e8dd0a"
+    },
+    {
+      "clip_id": "01-08-01-01-02-15",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-01-02-15_alignment.pt",
+      "old_sha256": "5e498adf9449ce41a4c4a89dd755cecbdec0c448d42820fb76660c6094be0da9"
+    },
+    {
+      "clip_id": "01-01-01-01-01-17",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-01-01-17_alignment.pt",
+      "old_sha256": "431be2290c494048c58b7593c59013ac76ab58070a5797fa1791d83feb7bb8b7"
+    },
+    {
+      "clip_id": "01-02-02-02-01-17",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-02-02-02-01-17_alignment.pt",
+      "old_sha256": "def88b6ccf5a2e281ce4eeb388e962c738d06da27d18336a9488fe806ac989d2"
+    },
+    {
+      "clip_id": "01-05-02-02-01-17",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-05-02-02-01-17_alignment.pt",
+      "old_sha256": "99551c484486a87c9972bcad1dd262b02a4f168468e2860c10e222a6f4c1946d"
+    },
+    {
+      "clip_id": "01-06-01-02-02-17",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-01-02-02-17_alignment.pt",
+      "old_sha256": "669937691beac6a6a35b0ba872552cdf2a7e0ab711d23ca1c0d9d986fdea3234"
+    },
+    {
+      "clip_id": "01-06-02-02-02-17",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-02-02-17_alignment.pt",
+      "old_sha256": "4e0bc0099ae3c8f0e192ed86916e3ed43b61bd0fe69503d05b6bac751b2b3228"
+    },
+    {
+      "clip_id": "01-07-01-01-01-17",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-01-01-01-17_alignment.pt",
+      "old_sha256": "eb978a402a0bcf14c6d761aca450e324001f6d0e25118699c6f47b08d41d27e2"
+    },
+    {
+      "clip_id": "01-08-01-01-02-17",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-01-02-17_alignment.pt",
+      "old_sha256": "e9fc4727e6574a0d4ad2c0f04add3464c274a945aa347ae0a53cda06aaa6f653"
+    },
+    {
+      "clip_id": "01-08-01-02-02-17",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-01-02-02-17_alignment.pt",
+      "old_sha256": "3fe884c8b736b29e0b5c18c762ede271d21a555e53bd3357e996e951547c721c"
+    },
+    {
+      "clip_id": "01-08-02-02-01-17",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-02-02-01-17_alignment.pt",
+      "old_sha256": "a805c9be51b4599971133af81b1e6f169f8d1b88b9efee46034e4909b8552b25"
+    },
+    {
+      "clip_id": "01-01-01-01-02-19",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-01-01-01-02-19_alignment.pt",
+      "old_sha256": "fc4db99eed2e8630e7f74c8bab499f8a949069eb0105b695970187728dfd47fa"
+    },
+    {
+      "clip_id": "01-02-02-01-02-19",
+      "missing_canonical_indices": [
+        20
+      ],
+      "missing_reasons": {
+        "20": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 390,
+      "new_assigned_audio_count": 406,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-02-02-01-02-19_alignment.pt",
+      "old_sha256": "dc65138c2c8bfc8e957c0b8f71e2b0239efa2707cc8d57ebd037d23592ff4dc0"
+    },
+    {
+      "clip_id": "01-03-01-01-01-19",
+      "missing_canonical_indices": [
+        18
+      ],
+      "missing_reasons": {
+        "18": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 350,
+      "new_assigned_audio_count": 365,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-03-01-01-01-19_alignment.pt",
+      "old_sha256": "4c77f2a38c74201b32c918ef73f8a3ada9aba732f21817706f98a4ea44e50ad1"
+    },
+    {
+      "clip_id": "01-04-01-01-01-19",
+      "missing_canonical_indices": [
+        17
+      ],
+      "missing_reasons": {
+        "17": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 330,
+      "new_assigned_audio_count": 346,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-04-01-01-01-19_alignment.pt",
+      "old_sha256": "b06259598b4d9b2084c5e181927ee222ab71095062ba30711b4901ce960f4cea"
+    },
+    {
+      "clip_id": "01-06-02-01-01-19",
+      "missing_canonical_indices": [
+        19
+      ],
+      "missing_reasons": {
+        "19": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 370,
+      "new_assigned_audio_count": 385,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-01-01-19_alignment.pt",
+      "old_sha256": "a27959cece9d163a7e1b4e33650692c203b9a7575f745a1b3f41a331e1a6db55"
+    },
+    {
+      "clip_id": "01-06-02-02-02-19",
+      "missing_canonical_indices": [
+        20
+      ],
+      "missing_reasons": {
+        "20": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 390,
+      "new_assigned_audio_count": 406,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-06-02-02-02-19_alignment.pt",
+      "old_sha256": "5c94c6735235759602e37538741e7010c91844edc4b6f96a400f351f92be3648"
+    },
+    {
+      "clip_id": "01-07-01-01-02-19",
+      "missing_canonical_indices": [
+        24
+      ],
+      "missing_reasons": {
+        "24": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 470,
+      "new_assigned_audio_count": 485,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-07-01-01-02-19_alignment.pt",
+      "old_sha256": "d6f57e0f16951df13270f195e6a7216c3062b1468339935217de47927295426c"
+    },
+    {
+      "clip_id": "01-08-02-01-02-19",
+      "missing_canonical_indices": [
+        23
+      ],
+      "missing_reasons": {
+        "23": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 450,
+      "new_assigned_audio_count": 466,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-02-01-02-19_alignment.pt",
+      "old_sha256": "92120d55f8d40edaab6c0dc2a817dccdb8d81a88d430fd6fc2951622085fd08c"
+    },
+    {
+      "clip_id": "01-08-02-02-01-19",
+      "missing_canonical_indices": [
+        16
+      ],
+      "missing_reasons": {
+        "16": "no_decoded_frame_at_canonical_slot"
+      },
+      "old_assigned_audio_count": 310,
+      "new_assigned_audio_count": 325,
+      "old_copy": "experiments\\lab9\\execution_failures\\alignment_before_canonical_windows\\01-08-02-02-01-19_alignment.pt",
+      "old_sha256": "7bc2a1139ea2c25a73c61ed8d986a668e2190526d42795cbb5dcb108b5718654"
+    }
+  ],
+  "missing_slot_reasons": {
+    "no_decoded_frame_at_canonical_slot": 69,
+    "face_detector_missing": 3
+  },
+  "pooled_features_sha256_before": "dcc28e968f9e846fd3c3fc64bbbf3caf35ec16ceb31d0d16968e212d029c7388",
+  "pooled_features_sha256_after": "dcc28e968f9e846fd3c3fc64bbbf3caf35ec16ceb31d0d16968e212d029c7388",
+  "scope": "Canonical windows include all original slots, with explicit false visual validity. Three face-detection failures and terminal canonical slots without a decoded frame are distinguished; no synthetic/repeated frame was inserted. Previously only encoded face slots were exported. Pooled means, learned weights, predictions and experiment conditions are unchanged. Outside finite video support is outside coverage, not an internal missing window.",
+  "cal_read": false
+}

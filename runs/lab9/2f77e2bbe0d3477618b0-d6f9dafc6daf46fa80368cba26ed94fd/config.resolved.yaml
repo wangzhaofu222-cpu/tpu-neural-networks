@@ -1,0 +1,102 @@
+experiment:
+  name: E1_main_U_seed2
+  lab: 9
+  seed: 2
+  deterministic: true
+  purpose: formal
+  role: primary
+profile:
+  id: P3adf02
+  student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+  base_seed: 987693601
+  lab9_visual_encoder: cnn_lab2
+  lab9_p_drop: 0.5
+  lab9_gate: scalar
+  lab9_encoder: vit_small
+  lab9_encoder_resolution: user_authorized_visual_encoder_precedence
+  lab9_effective_visual_encoder: cnn_lab2
+  lab9_resolution_note: Use explicit upstream checkpoint source; preserve conflicting
+    architecture field; not teacher-confirmed.
+  lab9_hash: 0fbf8538dcfbab1c309432a79f516845350139d95c26a203535a4abad7a3a5b5
+data:
+  name: multimodal_features
+  root: data/lab9
+  manifest_path: experiments/lab9/data_manifest.json
+  split_path: experiments/lab9/planned_actor_split.json
+  train_fraction: 1.0
+  num_workers: 0
+  cal_read: false
+  normalization_path: experiments\lab9\mel_normalization.json
+  feature_path: data\lab9\features\pooled.pt
+model:
+  name: multimodal_fusion
+  strategy: audio
+  classes: 8
+  visual_dim: 512
+  audio_dim: 128
+  hidden_width: 731
+  fusion_dim: 128
+  gate: scalar
+  p_drop: 0.0
+optimizer:
+  name: adamw
+  lr: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+scheduler:
+  name: constant
+  unit: epoch
+  warmup_epochs: 0
+  step_size: 100
+  gamma: 1.0
+train:
+  epochs: 200
+  batch_size: 64
+  amp: false
+  accumulation_steps: 1
+  early_stopping_patience: 0
+  selection_metric: macro_f1
+logging:
+  backend: local
+  run_root: runs/lab9
+  save_every: 1
+  console_every_steps: 1000
+runtime:
+  device: cpu
+  threads: 2
+  max_seconds: 1800
+  dependency_lock: requirements-lab9.lock.txt
+audio:
+  sample_rate: 16000
+  n_mel: 64
+  n_fft: 400
+  hop_length: 160
+  center: true
+  epsilon: 1.0e-10
+  mel_scale: HTK
+  r: 1
+  max_seconds: 8.0
+  channels:
+  - 16
+  - 32
+  - 64
+  - 128
+  train_epochs: 100
+  patience: 15
+  batch_size: 16
+alignment:
+  video_fps_raw: 10
+  video_fps: 5
+  window_samples: 3200
+  integer_samples: true
+  av_offset_ms: measured per clip
+  audio_shift_ms: 0
+null_token: zero
+snr_grid:
+- 30
+- 20
+- 10
+- 0
+- -5
+pair_count_per_protocol: 300
+data_split_status: TEACHER_SPLIT_UNVERIFIED

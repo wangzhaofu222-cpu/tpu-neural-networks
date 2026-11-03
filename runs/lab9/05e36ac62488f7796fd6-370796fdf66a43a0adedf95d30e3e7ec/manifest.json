@@ -103,5 +103,28 @@
   "parent_run_id": null,
   "purpose": "formal",
   "status": "COMPLETED_EVALUATION",
-  "global_step": 0
+  "global_step": 0,
+  "multimodal_protocol": {
+    "eta_v_fps": 5,
+    "raw_face_fps": 10,
+    "fs": 16000,
+    "n_hop": 160,
+    "r": 1,
+    "tau_w_seconds": 0.2,
+    "window_samples": 3200,
+    "av_offset_ms": 0.0,
+    "offset_source": "per-clip measured PTS in data_manifest.json; all1320 are0ms",
+    "window_boundary": "left-inclusive/right-exclusive, integer samples",
+    "cal_media_read": false,
+    "mel_normalization_sha256": "d987dccd82a3a67dd8659a905af2c3adfbf0864ae066213c5cb0a5ba033df54f",
+    "data_manifest_sha256": "6434f48518ee50f46e6c5d05050e22145725041892fb77136b036a6d20e88f6e",
+    "preprocessing_protocol_sha256": "ffb0afbaecb0512dc98fcce90ace4f4b54aea92cc355f55a35c9bc1f268acc57",
+    "annotation_timing": "Mirrored after execution from immutable source/cache protocol; not represented as newly preregistered information",
+    "annotation_utc": "2026-11-02T16:58:08.937389+00:00",
+    "phase": "frozen_feature_head_or_evaluation",
+    "frozen_visual_checkpoint_sha256": "c3df4eb404bc862d23e5850e9f3638b72b531df452a386a747d29b8f284f41d8",
+    "frozen_audio_checkpoint_sha256": "f65f9c01d2d6e4da5f5835b7a766576502dd5531977cda6d3bebf29de0f5e38c",
+    "clip_feature_normalization_sha256": "6803eaaca2c6e7423ba99c948afe3463cc97951c5addf9f2723e78c75a98dae2",
+    "immutable_pooled_feature_sha256": "dcc28e968f9e846fd3c3fc64bbbf3caf35ec16ceb31d0d16968e212d029c7388"
+  }
 }

@@ -1,0 +1,72 @@
+{
+  "requirements": {
+    "PASS": 47,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "UNVERIFIED": 2,
+    "NOT_APPLICABLE": 2
+  },
+  "engineering_audit": "PASS",
+  "prediction_outcomes": [
+    {
+      "requirement": "E1 predicted positive paired difference",
+      "status": "UNVERIFIED",
+      "mean": 0.06898297529200559,
+      "sample_std": 0.035857223785062814,
+      "decision": "различие не установлено"
+    },
+    {
+      "requirement": "E2 dropout reduces removal loss: audio",
+      "status": "PASS",
+      "improvement": 0.1378490930516172,
+      "limitation": "one exploratory seed; not an established population effect"
+    },
+    {
+      "requirement": "E2 dropout reduces removal loss: video",
+      "status": "PASS",
+      "improvement": 0.1003125023552553,
+      "limitation": "one exploratory seed; not an established population effect"
+    },
+    {
+      "requirement": "E3 confidence detects conflict: early",
+      "status": "PASS",
+      "AUROC": 0.5016111111111111,
+      "confidence_A": 0.6129177808761597,
+      "confidence_B": 0.6119362711906433,
+      "limitation": "directional exploratory prediction only; one seed; identity/emotion-mixture confounded; near.5 AUROC is not evidence of a reliable detector"
+    },
+    {
+      "requirement": "E3 confidence detects conflict: gated",
+      "status": "PASS",
+      "AUROC": 0.5643,
+      "confidence_A": 0.8916211128234863,
+      "confidence_B": 0.8580425977706909,
+      "limitation": "directional exploratory prediction only; one seed; identity/emotion-mixture confounded; near.5 AUROC is not evidence of a reliable detector"
+    },
+    {
+      "requirement": "E3 confidence detects conflict: late05",
+      "status": "PASS",
+      "AUROC": 0.5392722222222223,
+      "confidence_A": 0.5015104413032532,
+      "confidence_B": 0.4745902419090271,
+      "limitation": "directional exploratory prediction only; one seed; identity/emotion-mixture confounded; near.5 AUROC is not evidence of a reliable detector"
+    }
+  ],
+  "historical_states": {
+    "Lab1_E2_growth_bound": "FAIL_RETAINED",
+    "Lab3_E2_raw_memory_intervals": "FAIL_RETAINED",
+    "Lab4_Q2": "BLOCKED",
+    "Lab5_course_split": "UNVERIFIED",
+    "Lab5_E2_magnitude": "FAIL",
+    "Lab6_E1_mixing": "FAIL",
+    "Lab8_E2_positive_prediction": "FAIL; reverse difference established",
+    "Lab8_initial_CPU_GPU_audit": "FAIL_RETAINED; deterministic audit settings corrected, final827PASS"
+  },
+  "unverified": [
+    "Teacher actor split unavailable; authorized deterministic fallback",
+    "Conflicting generic vit_small and explicit cnn_lab2 profile fields; authorized source precedence",
+    "Remote/local PDF byte identity unavailable (403), matching metadata checked"
+  ],
+  "report": "NOT_APPLICABLE this task; teacher formal report deferred",
+  "completion": "Experiments/evidence complete only; teacher submission report outstanding"
+}

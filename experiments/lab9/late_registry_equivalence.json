@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "strategy": "late05",
+      "mask": [
+        1,
+        1
+      ],
+      "maximum_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "strategy": "late05",
+      "mask": [
+        1,
+        0
+      ],
+      "maximum_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "strategy": "late05",
+      "mask": [
+        0,
+        1
+      ],
+      "maximum_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "strategy": "late_val",
+      "mask": [
+        1,
+        1
+      ],
+      "maximum_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "strategy": "late_val",
+      "mask": [
+        1,
+        0
+      ],
+      "maximum_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "strategy": "late_val",
+      "mask": [
+        0,
+        1
+      ],
+      "maximum_error": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "scope": "Public class/factory adapter verified after experiments against original saved functional late predictions; bitwise equality for both lambda settings and all three masks. No weights/outputs retrained or changed."
+}

@@ -75,8 +75,8 @@ def finish():
         assert a['normalization_sha256']==file_hash(R/'mel_normalization.json')
         assert v['input_frames_sha256']==c['video_frames_sha256'] and v['source_sha256']==c['source_sha256']
         assert v['encoder_sha256']==json.loads((R/'encoder_sources.json').read_text())['visual']['sha256']
-        aligned=alignment_windows(v['indices'],len(a['z']),av_offset_ms=c['av_offset_ms'])
-        torch.save({'clip_id':c['clip_id'],'visual_original_indices':v['indices'],**aligned},CACHE/(c['clip_id']+'_alignment.pt'))
+        from reports.tools.lab9_alignment_metadata import complete_alignment
+        torch.save(complete_alignment(c,v,a),CACHE/(c['clip_id']+'_alignment.pt'))
         # Independent temporal masked means (Eq9.5); alignment remains available for frame-level fusion.
         roles[c['role']].append((c,torch.cat([v['z'].mean(0) if len(v['z']) else torch.zeros(512),a['z'].mean(0)]),float(v['available'])))
     train=torch.stack([x for c,x,v in roles['train']]);mean=train.mean(0);std=train.std(0,unbiased=False).clamp_min(1e-6)

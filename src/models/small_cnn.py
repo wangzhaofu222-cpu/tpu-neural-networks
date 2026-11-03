@@ -22,6 +22,13 @@ class SmallCNN(nn.Module):
 
 
 def build_model(cfg):
+    if cfg['name']=='multimodal_late':
+        import torch
+        from src.multimodal.fusion import LateFusion
+        video=build_model(cfg['video_model']);audio=build_model(cfg['audio_model'])
+        for model,key in [(video,'video_checkpoint'),(audio,'audio_checkpoint')]:
+            if cfg.get(key):model.load_state_dict(torch.load(cfg[key],map_location='cpu',weights_only=False)['model'])
+        return LateFusion(video,audio,cfg.get('weight',.5))
     if cfg['name']=='audio_cnn':
         from src.models.audio_cnn import AudioCNN
         return AudioCNN(cfg)

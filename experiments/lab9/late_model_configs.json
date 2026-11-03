@@ -1,0 +1,58 @@
+{
+  "late05": {
+    "name": "multimodal_late",
+    "video_model": {
+      "name": "multimodal_fusion",
+      "strategy": "video",
+      "classes": 8,
+      "visual_dim": 512,
+      "audio_dim": 128,
+      "hidden_width": 128,
+      "fusion_dim": 128,
+      "gate": "scalar",
+      "p_drop": 0.0
+    },
+    "audio_model": {
+      "name": "multimodal_fusion",
+      "strategy": "audio",
+      "classes": 8,
+      "visual_dim": 512,
+      "audio_dim": 128,
+      "hidden_width": 128,
+      "fusion_dim": 128,
+      "gate": "scalar",
+      "p_drop": 0.0
+    },
+    "video_checkpoint": "runs\\lab9\\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f\\checkpoints\\best.pt",
+    "audio_checkpoint": "runs\\lab9\\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638\\checkpoints\\best.pt",
+    "weight": 0.5
+  },
+  "late_val": {
+    "name": "multimodal_late",
+    "video_model": {
+      "name": "multimodal_fusion",
+      "strategy": "video",
+      "classes": 8,
+      "visual_dim": 512,
+      "audio_dim": 128,
+      "hidden_width": 128,
+      "fusion_dim": 128,
+      "gate": "scalar",
+      "p_drop": 0.0
+    },
+    "audio_model": {
+      "name": "multimodal_fusion",
+      "strategy": "audio",
+      "classes": 8,
+      "visual_dim": 512,
+      "audio_dim": 128,
+      "hidden_width": 128,
+      "fusion_dim": 128,
+      "gate": "scalar",
+      "p_drop": 0.0
+    },
+    "video_checkpoint": "runs\\lab9\\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f\\checkpoints\\best.pt",
+    "audio_checkpoint": "runs\\lab9\\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638\\checkpoints\\best.pt",
+    "weight": 0.4
+  }
+}

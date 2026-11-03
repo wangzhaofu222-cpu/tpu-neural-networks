@@ -1,0 +1,1288 @@
+captured_after_experiments: true
+authoritative_preregistration:
+  commit: 23f41527e22bd35ed26fa3aa728a99b233fa7878
+  hypothesis_sha256: 92360205df2cd83dc5444b963fcdfd8bb73698f213dea49bad9f61b967a5d544
+  selection_sha256: 4c2b6d0578b6617ae0b74fc54831bc733dead8c6895e4c6541b6680fd697c060
+  before_main_training: true
+profile:
+  profile:
+    id: P3adf02
+    student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+    base_seed: 987693601
+  lab9_visual_encoder: cnn_lab2
+  lab9_p_drop: 0.5
+  lab9_gate: scalar
+  lab9_encoder: vit_small
+  lab9_encoder_resolution: user_authorized_visual_encoder_precedence
+  lab9_effective_visual_encoder: cnn_lab2
+  lab9_resolution_note: Use explicit upstream checkpoint source; preserve conflicting
+    architecture field; not teacher-confirmed.
+  calculation_input: private existing student_id; public SHA256 only
+  lab9_hash: 0fbf8538dcfbab1c309432a79f516845350139d95c26a203535a4abad7a3a5b5
+  lab_pick_source_sha256: 6f5fe59d238e31a785af235081d5145cc4f84f1ca0472960876b6c57d99a7b23
+  profile_conflict_status: 'UNVERIFIED: teacher fields conflict; user previously authorized
+    visual-source precedence'
+data:
+  manifest: experiments/lab9/data_manifest.json
+  sha256: 6434f48518ee50f46e6c5d05050e22145725041892fb77136b036a6d20e88f6e
+  actor_split: experiments/lab9/planned_actor_split.json
+  split_status: TEACHER_SPLIT_UNVERIFIED
+  cal_media_read: false
+  mel_normalization: experiments/lab9/mel_normalization.json
+  clip_normalization: experiments/lab9/feature_normalization.json
+encoder_sources:
+  visual:
+    RUN_ID: cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc
+    path: runs\lab2\cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc\checkpoints\last.pt
+    sha256: c3df4eb404bc862d23e5850e9f3638b72b531df452a386a747d29b8f284f41d8
+    config:
+      experiment:
+        name: LR_cnn_0.003_j1
+        lab: 2
+        seed: 1
+        deterministic: true
+        purpose: formal
+        resume_ablation: none
+        role: primary
+      data:
+        name: cifar10
+        root: data
+        split_path: splits/cifar10.json
+        split_seed: 1729
+        val_per_class: 500
+        cal_per_class: 200
+        train_fraction: 1.0
+        num_workers: 0
+        download: false
+        augmentation: A1
+      model:
+        name: cifar_resnet18
+        classes: 10
+        image_size: 32
+        patch_size: 4
+        num_layers: 6
+        num_heads: 6
+        hidden_dim: 384
+        mlp_dim: 1536
+        comparison_mode: param_matched
+        pretrained: false
+      optimizer:
+        name: adamw
+        lr: 0.003
+        weight_decay: 0.05
+        momentum: 0.9
+      scheduler:
+        name: cosine
+        unit: optimizer_step
+        warmup_fraction: 0.05
+        warmup_epochs: 0
+        step_size: 100
+        gamma: 1.0
+      train:
+        epochs: 1000
+        batch_size: 128
+        amp: false
+        accumulation_steps: 1
+        max_steps: 10000
+        validation_at_end_only: true
+      logging:
+        backend: local
+        save_every: 1
+        run_root: runs/lab2
+        save_every_steps: 1000
+        console_every_steps: 500
+        profile_on_finish: true
+      runtime:
+        device: cuda
+        threads: 2
+        max_seconds: 7200
+        dependency_lock: requirements.lock.txt
+      profiling:
+        warmup: 10
+        repeats: 30
+      profile:
+        id: P3adf02
+        student_id_hash: 3adf0221499eacfc4e28050e33c8f0c4118d71ff1f3b161c5c9524754e2a36f9
+        base_seed: 987693601
+        lab2_fractions:
+        - 0.05
+        - 0.15
+        - 0.3
+        - 0.6
+        - 1.0
+        lab2_corruptions:
+        - blur
+        - contrast
+        - patch_shuffle
+        lab2_strong_aug: randaugment+cutmix
+    normalization:
+      mean:
+      - 0.4913593061552382
+      - 0.4820096833319084
+      - 0.4463430876474862
+      std:
+      - 0.2466760290143046
+      - 0.24313375859044625
+      - 0.26125503162712693
+      source: full train role only
+    effective_architecture: cifar_resnet18
+    feature_dim: 512
+    input_size: 224
+    checkpoint_original_input_size: 32
+    domain_limitation: CIFAR10 -> RAVDESS faces; adaptive spatial pooling permits224
+      but distribution/scale mismatch retained
+    selection: Existing Lab2 validation-selected full-fraction CNN; no RAVDESS test
+      used
+  audio:
+    status: PASS
+    run_path: runs\lab9\1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54
+    RUN_ID: 1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54
+    path: runs\lab9\1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54\checkpoints\best.pt
+    sha256: f65f9c01d2d6e4da5f5835b7a766576502dd5531977cda6d3bebf29de0f5e38c
+    feature_dim: 128
+    time_downsample_r: 1
+    selection: val macro-F1; max100epochs/patience15; no test/cal access
+    normalization_sha256: d987dccd82a3a67dd8659a905af2c3adfbf0864ae066213c5cb0a5ba033df54f
+feature_cache:
+  status: PASS
+  path: data\lab9\features\pooled.pt
+  sha256: dcc28e968f9e846fd3c3fc64bbbf3caf35ec16ceb31d0d16968e212d029c7388
+  raw_identity_hash: e25eec009e5e412b70f7012220e1f390b95d31239a5a4382dd417f2c273433ad
+  audio_encoder_sha256: f65f9c01d2d6e4da5f5835b7a766576502dd5531977cda6d3bebf29de0f5e38c
+  cal_read: false
+  pooling: valid-frame temporal mean; original indices/alignment retained
+  normalization: train clip means only
+  frozen_parameters:
+    visual_loaded: 11173962
+    visual_preclassifier: 11168832
+    audio_loaded: 98184
+    audio_preclassifier: 97152
+head_budget:
+  epochs: 200
+  batch_size: 64
+  optimizer: AdamW
+  lr: 0.001
+  weight_decay: 0.0001
+  selection: val macro-F1 best checkpoint
+  early_stopping: false
+  device: CPU2threads
+audio_budget:
+  max_epochs: 100
+  patience: 15
+  selection: val macro-F1
+  device: CUDA RTX3060Laptop
+main_selection:
+  F: gated
+  U: audio_plus_100105
+  seeds:
+  - 1
+  - 2
+  - 3
+  paired_direction: F-U
+late_registry_configs: experiments/lab9/late_model_configs.json
+runs:
+- kind: AudioCNN_train_val_selected
+  RUN_ID: 1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54
+  seed: 1
+  config_path: runs\lab9\1475403250d4ae591ddd-186c0d2ef7314984861ec3bcb01e4c54\config.resolved.yaml
+  model:
+    name: audio_cnn
+    classes: 8
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2862
+- kind: E1_explore_video
+  RUN_ID: 34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f
+  seed: 1
+  config_path: runs\lab9\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_audio
+  RUN_ID: f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638
+  seed: 1
+  config_path: runs\lab9\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_early
+  RUN_ID: f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87
+  seed: 1
+  config_path: runs\lab9\f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: early
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_gated
+  RUN_ID: 3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+  seed: 1
+  config_path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_video_plus_83080
+  RUN_ID: 0ee872cda759ed3cef04-1c6bf25f08664c0bab5852110cc272c4
+  seed: 1
+  config_path: runs\lab9\0ee872cda759ed3cef04-1c6bf25f08664c0bab5852110cc272c4\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 159
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_audio_plus_83080
+  RUN_ID: 05d1f855f79bac6b3ef6-b91f4b0bb9ec43459839ed6166a5665a
+  seed: 1
+  config_path: runs\lab9\05d1f855f79bac6b3ef6-b91f4b0bb9ec43459839ed6166a5665a\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 606
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_video_plus_100105
+  RUN_ID: f158a49abc5797166aeb-e7ead02f62b6484280cc21a92704e619
+  seed: 1
+  config_path: runs\lab9\f158a49abc5797166aeb-e7ead02f62b6484280cc21a92704e619\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 192
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_audio_plus_100105
+  RUN_ID: 6b7c1413abed6c0bd9c8-29bdbc1c6058464f9868465b7296ab32
+  seed: 1
+  config_path: runs\lab9\6b7c1413abed6c0bd9c8-29bdbc1c6058464f9868465b7296ab32\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_video_plus_84240
+  RUN_ID: fd3091ab666b15ab86fe-fbe7254a98fb4737abad785ea1cbcf4b
+  seed: 1
+  config_path: runs\lab9\fd3091ab666b15ab86fe-fbe7254a98fb4737abad785ea1cbcf4b\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 162
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_audio_plus_84240
+  RUN_ID: c74b8bb03b53c0837e6d-efd643243b534e05a24741711a39e782
+  seed: 1
+  config_path: runs\lab9\c74b8bb03b53c0837e6d-efd643243b534e05a24741711a39e782\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 615
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_explore_test_video
+  RUN_ID: 73b7c031da6acfd09b36-3d018c3486d345a5bfbf442430be428e
+  seed: 1
+  config_path: runs\lab9\73b7c031da6acfd09b36-3d018c3486d345a5bfbf442430be428e\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f
+    strategy: video
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_audio
+  RUN_ID: 872fb29a87d782c21051-cf1b54e8d2144cdda6e02712bcaef9bf
+  seed: 1
+  config_path: runs\lab9\872fb29a87d782c21051-cf1b54e8d2144cdda6e02712bcaef9bf\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_early
+  RUN_ID: 05e36ac62488f7796fd6-370796fdf66a43a0adedf95d30e3e7ec
+  seed: 1
+  config_path: runs\lab9\05e36ac62488f7796fd6-370796fdf66a43a0adedf95d30e3e7ec\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: early
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87
+    strategy: early
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_gated
+  RUN_ID: 347c6157a20f623bbee4-d363e4726c5f48af848904756452a54e
+  seed: 1
+  config_path: runs\lab9\347c6157a20f623bbee4-d363e4726c5f48af848904756452a54e\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_late05
+  RUN_ID: 6bce04d107b27fb66fc8-ba4bd30fd0654388bf9658deb27fd3af
+  seed: 1
+  config_path: runs\lab9\6bce04d107b27fb66fc8-ba4bd30fd0654388bf9658deb27fd3af\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    strategy: late
+    video_path: runs\lab9\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f
+    audio_path: runs\lab9\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638
+    weight: 0.5
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_late_val
+  RUN_ID: e4f5de4987b4b2abe336-1f93deb10d944a25a354bce75dbbc85c
+  seed: 1
+  config_path: runs\lab9\e4f5de4987b4b2abe336-1f93deb10d944a25a354bce75dbbc85c\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    strategy: late
+    video_path: runs\lab9\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f
+    audio_path: runs\lab9\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638
+    weight: 0.4
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_video_plus_83080
+  RUN_ID: 22f9948b3abb4e7644b2-4373bbba4ee44e4e8a9d1d8257447580
+  seed: 1
+  config_path: runs\lab9\22f9948b3abb4e7644b2-4373bbba4ee44e4e8a9d1d8257447580\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 159
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\0ee872cda759ed3cef04-1c6bf25f08664c0bab5852110cc272c4
+    strategy: video
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_audio_plus_83080
+  RUN_ID: 747355daa60d2cc08a42-7018b6909b604f41b5dd48f0f459c1ae
+  seed: 1
+  config_path: runs\lab9\747355daa60d2cc08a42-7018b6909b604f41b5dd48f0f459c1ae\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 606
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\05d1f855f79bac6b3ef6-b91f4b0bb9ec43459839ed6166a5665a
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_video_plus_100105
+  RUN_ID: 72d3e5c3ceda440965c2-8330b1637b8e41988ef1ee3046ecd911
+  seed: 1
+  config_path: runs\lab9\72d3e5c3ceda440965c2-8330b1637b8e41988ef1ee3046ecd911\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 192
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\f158a49abc5797166aeb-e7ead02f62b6484280cc21a92704e619
+    strategy: video
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_audio_plus_100105
+  RUN_ID: e4b3f5a0c4e93bcc9098-08ab915d587344f9b4b4d15e30657a3e
+  seed: 1
+  config_path: runs\lab9\e4b3f5a0c4e93bcc9098-08ab915d587344f9b4b4d15e30657a3e\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\6b7c1413abed6c0bd9c8-29bdbc1c6058464f9868465b7296ab32
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_video_plus_84240
+  RUN_ID: 8eb4311ca1c7650f5e21-3a6cc9195aa04290b33eeaa1488774f4
+  seed: 1
+  config_path: runs\lab9\8eb4311ca1c7650f5e21-3a6cc9195aa04290b33eeaa1488774f4\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 162
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\fd3091ab666b15ab86fe-fbe7254a98fb4737abad785ea1cbcf4b
+    strategy: video
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_explore_test_audio_plus_84240
+  RUN_ID: af77dcffac5fbb7f9ab1-e7e966beb7934d78b0835c8f4079cf83
+  seed: 1
+  config_path: runs\lab9\af77dcffac5fbb7f9ab1-e7e966beb7934d78b0835c8f4079cf83\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 615
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\c74b8bb03b53c0837e6d-efd643243b534e05a24741711a39e782
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_main_F_seed1
+  RUN_ID: 117c866470bbc5a592f0-28d462bd4bcb45f880aa7e62888c7707
+  seed: 1
+  config_path: runs\lab9\117c866470bbc5a592f0-28d462bd4bcb45f880aa7e62888c7707\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_main_U_seed1
+  RUN_ID: a78a0323bd3d325d5909-f87cebf2ae59446da7052f616402d117
+  seed: 1
+  config_path: runs\lab9\a78a0323bd3d325d5909-f87cebf2ae59446da7052f616402d117\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_main_F_test_seed1
+  RUN_ID: 5eaab7ee33e888c71fa7-fceda1ca709347878fe9090a1126afd6
+  seed: 1
+  config_path: runs\lab9\5eaab7ee33e888c71fa7-fceda1ca709347878fe9090a1126afd6\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\117c866470bbc5a592f0-28d462bd4bcb45f880aa7e62888c7707
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_main_U_test_seed1
+  RUN_ID: 6d0bc1656002341df4e9-4eda2af5d1be4aeab430cced95c91b87
+  seed: 1
+  config_path: runs\lab9\6d0bc1656002341df4e9-4eda2af5d1be4aeab430cced95c91b87\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\a78a0323bd3d325d5909-f87cebf2ae59446da7052f616402d117
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_main_F_seed2
+  RUN_ID: 0fbd03623003f5b4d1d3-9c40f38f29394304a3f602abc5352a07
+  seed: 2
+  config_path: runs\lab9\0fbd03623003f5b4d1d3-9c40f38f29394304a3f602abc5352a07\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_main_U_seed2
+  RUN_ID: 2f77e2bbe0d3477618b0-d6f9dafc6daf46fa80368cba26ed94fd
+  seed: 2
+  config_path: runs\lab9\2f77e2bbe0d3477618b0-d6f9dafc6daf46fa80368cba26ed94fd\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_main_F_test_seed2
+  RUN_ID: 071c6c3a878330b2e586-ef72728ed1404818bfb6d9dda97e29db
+  seed: 2
+  config_path: runs\lab9\071c6c3a878330b2e586-ef72728ed1404818bfb6d9dda97e29db\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\0fbd03623003f5b4d1d3-9c40f38f29394304a3f602abc5352a07
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_main_U_test_seed2
+  RUN_ID: e680333297ee1350883d-f8690e49d712401fb142404bab7178fa
+  seed: 2
+  config_path: runs\lab9\e680333297ee1350883d-f8690e49d712401fb142404bab7178fa\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\2f77e2bbe0d3477618b0-d6f9dafc6daf46fa80368cba26ed94fd
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_main_F_seed3
+  RUN_ID: 87e6fd2a2729934cbda7-073fbbefd00145a992c6e88597999c46
+  seed: 3
+  config_path: runs\lab9\87e6fd2a2729934cbda7-073fbbefd00145a992c6e88597999c46\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_main_U_seed3
+  RUN_ID: e3570bf19c386017aca6-c96af94316964dc38721dbb9d82ca495
+  seed: 3
+  config_path: runs\lab9\e3570bf19c386017aca6-c96af94316964dc38721dbb9d82ca495\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E1_main_F_test_seed3
+  RUN_ID: a29d0207d0691539b9fb-052d3bc061f04cbca48da4fb1d243237
+  seed: 3
+  config_path: runs\lab9\a29d0207d0691539b9fb-052d3bc061f04cbca48da4fb1d243237\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\87e6fd2a2729934cbda7-073fbbefd00145a992c6e88597999c46
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E1_main_U_test_seed3
+  RUN_ID: 78d4d7224dc94ed76d19-fe318f92354b4fa9aab2d71e9007a865
+  seed: 3
+  config_path: runs\lab9\78d4d7224dc94ed76d19-fe318f92354b4fa9aab2d71e9007a865\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 731
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\e3570bf19c386017aca6-c96af94316964dc38721dbb9d82ca495
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_gated_modality_dropout
+  RUN_ID: 73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad
+  seed: 1
+  config_path: runs\lab9\73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.5
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: E2_modes_early
+  RUN_ID: da815801667760cba3f0-f653366b50c04783bc48d69e65dc5308
+  seed: 1
+  config_path: runs\lab9\da815801667760cba3f0-f653366b50c04783bc48d69e65dc5308\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: early
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87
+    strategy: early
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_modes_gated
+  RUN_ID: 5c2e15819ab203e984c5-dae3fc0aaf3b4cb69f28de679c8d7226
+  seed: 1
+  config_path: runs\lab9\5c2e15819ab203e984c5-dae3fc0aaf3b4cb69f28de679c8d7226\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_modes_late05
+  RUN_ID: 1b42bfe68b7ff9394755-75d0ae54282d486d96b30b596c0bd289
+  seed: 1
+  config_path: runs\lab9\1b42bfe68b7ff9394755-75d0ae54282d486d96b30b596c0bd289\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    strategy: late
+    video_path: runs\lab9\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f
+    audio_path: runs\lab9\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638
+    weight: 0.5
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_modes_late_val
+  RUN_ID: f72622bc263024125579-3642aca850794e0aae3c4a14fb0a585d
+  seed: 1
+  config_path: runs\lab9\f72622bc263024125579-3642aca850794e0aae3c4a14fb0a585d\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    strategy: late
+    video_path: runs\lab9\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f
+    audio_path: runs\lab9\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638
+    weight: 0.4
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_modes_gated_dropout
+  RUN_ID: 57166cbd0c7ff3e2e33f-64da840110db4d13a3e90f81c190fba6
+  seed: 1
+  config_path: runs\lab9\57166cbd0c7ff3e2e33f-64da840110db4d13a3e90f81c190fba6\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.5
+  evaluation_spec:
+    path: runs\lab9\73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_audio_shuffle
+  RUN_ID: 60613c91030bc0779023-78b0b950695a4d7cb5c3948cd630b08a
+  seed: 1
+  config_path: runs\lab9\60613c91030bc0779023-78b0b950695a4d7cb5c3948cd630b08a\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR30_gated
+  RUN_ID: 62cb2d053fcae434ac45-591717f25cfd44e9bdd2c69fd030d21c
+  seed: 1
+  config_path: runs\lab9\62cb2d053fcae434ac45-591717f25cfd44e9bdd2c69fd030d21c\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR30_gated_dropout
+  RUN_ID: 2094a246f6f3d4d1edc4-71d86323611f402a8148d498254c1e80
+  seed: 1
+  config_path: runs\lab9\2094a246f6f3d4d1edc4-71d86323611f402a8148d498254c1e80\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.5
+  evaluation_spec:
+    path: runs\lab9\73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR20_gated
+  RUN_ID: 83846d29c387fa1a0063-63cf5cfa0fca4acfacd3f08846be165a
+  seed: 1
+  config_path: runs\lab9\83846d29c387fa1a0063-63cf5cfa0fca4acfacd3f08846be165a\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR20_gated_dropout
+  RUN_ID: 875463cbaa18bc930376-86f19dad7ac546e98298a5dfcf34c0cb
+  seed: 1
+  config_path: runs\lab9\875463cbaa18bc930376-86f19dad7ac546e98298a5dfcf34c0cb\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.5
+  evaluation_spec:
+    path: runs\lab9\73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR10_gated
+  RUN_ID: e3556bc1cc4fa5706bd0-c427c6b42ea846378b4d650ef85fb8d9
+  seed: 1
+  config_path: runs\lab9\e3556bc1cc4fa5706bd0-c427c6b42ea846378b4d650ef85fb8d9\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR10_gated_dropout
+  RUN_ID: 15134648de73dc39a432-33b697df06dd412d9c69e9f88970e9d6
+  seed: 1
+  config_path: runs\lab9\15134648de73dc39a432-33b697df06dd412d9c69e9f88970e9d6\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.5
+  evaluation_spec:
+    path: runs\lab9\73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR0_gated
+  RUN_ID: 7cc5656e3d5ec6af2e70-d0bda4345e4e4d268d99ebef9c4adb43
+  seed: 1
+  config_path: runs\lab9\7cc5656e3d5ec6af2e70-d0bda4345e4e4d268d99ebef9c4adb43\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR0_gated_dropout
+  RUN_ID: 596dfe58808803fba854-3ed93fee76314ff48f654a8bcb3a83b6
+  seed: 1
+  config_path: runs\lab9\596dfe58808803fba854-3ed93fee76314ff48f654a8bcb3a83b6\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.5
+  evaluation_spec:
+    path: runs\lab9\73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR-5_gated
+  RUN_ID: a219b55b3e82174a9b09-e8d748b383514f7f8e9f043155332f19
+  seed: 1
+  config_path: runs\lab9\a219b55b3e82174a9b09-e8d748b383514f7f8e9f043155332f19\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_SNR-5_gated_dropout
+  RUN_ID: a87dd8f47a24de9d1dbd-84988a0f9d2c4590a8dc369c3765f4e3
+  seed: 1
+  config_path: runs\lab9\a87dd8f47a24de9d1dbd-84988a0f9d2c4590a8dc369c3765f4e3\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.5
+  evaluation_spec:
+    path: runs\lab9\73f29da3578c843394c8-e0818c98f9cf4abf88f1211a4101b0ad
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_time_mask
+  RUN_ID: 5f7f3b2916648c3854ee-8af0f2de87f24cf781e87376712cb12c
+  seed: 1
+  config_path: runs\lab9\5f7f3b2916648c3854ee-8af0f2de87f24cf781e87376712cb12c\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_frame_dropout
+  RUN_ID: 6122110b9289f1c4929a-80b9d4ea82474fe8a003bcd028bf855d
+  seed: 1
+  config_path: runs\lab9\6122110b9289f1c4929a-80b9d4ea82474fe8a003bcd028bf855d\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E2_blur
+  RUN_ID: 975c246e6d8598e85966-8bca42f74e7d440388ce89eef547a0e0
+  seed: 1
+  config_path: runs\lab9\975c246e6d8598e85966-8bca42f74e7d440388ce89eef547a0e0\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E3_pairs_early
+  RUN_ID: 75cdef3b3621ec713c4d-8f3b5388e56e4af5b0e635d25d018b33
+  seed: 1
+  config_path: runs\lab9\75cdef3b3621ec713c4d-8f3b5388e56e4af5b0e635d25d018b33\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: early
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\f9b803b1c8252f214076-92ec7c354b964d7fa52df074fc522c87
+    strategy: early
+  purpose: formal
+  optimizer_steps: 0
+- kind: E3_pairs_gated
+  RUN_ID: bfaf1a95582bbc738bad-8f91e3804e2741cfb08e2df37488ac16
+  seed: 1
+  config_path: runs\lab9\bfaf1a95582bbc738bad-8f91e3804e2741cfb08e2df37488ac16\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: gated
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\3fab257565a432c8956a-acaea9c1e4a94768aa3cd8630d70aa97
+    strategy: gated
+  purpose: formal
+  optimizer_steps: 0
+- kind: E3_pairs_late05
+  RUN_ID: 281261d23ef5b6ce2337-311678e304db457f8417e218a87b070e
+  seed: 1
+  config_path: runs\lab9\281261d23ef5b6ce2337-311678e304db457f8417e218a87b070e\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: video
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 128
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    strategy: late
+    video_path: runs\lab9\34bed8c9c79b40331777-93b4bcc4b42a4fff8d1edd8144c23e7f
+    audio_path: runs\lab9\f47e33116b383bb5b567-a968b781d0624afdb9e919fe29525638
+    weight: 0.5
+  purpose: formal
+  optimizer_steps: 0
+- kind: Q2_double_unimodal_control
+  RUN_ID: 7c9c41221c6b7274af5a-df6f3b130ad24ad9a94c4715ef4876d8
+  seed: 1
+  config_path: runs\lab9\7c9c41221c6b7274af5a-df6f3b130ad24ad9a94c4715ef4876d8\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 1462
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec: null
+  purpose: formal
+  optimizer_steps: 2800
+- kind: Q2_double_control_test
+  RUN_ID: 5d7b42d2fbe578cc1409-e0ce7e930e514b6a999d49c6b612446a
+  seed: 1
+  config_path: runs\lab9\5d7b42d2fbe578cc1409-e0ce7e930e514b6a999d49c6b612446a\config.resolved.yaml
+  model:
+    name: multimodal_fusion
+    strategy: audio
+    classes: 8
+    visual_dim: 512
+    audio_dim: 128
+    hidden_width: 1462
+    fusion_dim: 128
+    gate: scalar
+    p_drop: 0.0
+  evaluation_spec:
+    path: runs\lab9\7c9c41221c6b7274af5a-df6f3b130ad24ad9a94c4715ef4876d8
+    strategy: audio
+  purpose: formal
+  optimizer_steps: 0

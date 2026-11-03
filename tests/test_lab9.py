@@ -94,7 +94,7 @@ def test_silence_and_level0():
     v=torch.tensor([True,True,False]);assert torch.equal(frame_dropout(v,0),v)
 
 
-@pytest.mark.parametrize('metric',['accuracy','macro_f1','ece','risk','selective_risk'])
+@pytest.mark.parametrize('metric',['accuracy','macro_f1','ece','risk','selective_risk','Macro-F1','selective-risk','F1'])
 def test_protocol_b_undefined(metric):
     with pytest.raises(ValueError,match='no unique true emotion'):require_defined_metric('B',metric)
 

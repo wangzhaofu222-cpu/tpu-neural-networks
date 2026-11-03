@@ -2,6 +2,7 @@
 import copy,json
 from pathlib import Path
 import torch,yaml
+import pytest
 from src.engine.runner import ExperimentRunner
 from src.utils.io import write_json
 
@@ -59,3 +60,36 @@ def test_capacity_survives_inference_freeze():
     assert counts['fusion_trainable']+counts['head_trainable']==expected
     assert all(not p.requires_grad for p in m.parameters())
     assert matched_control(expected,'video')['relative_difference']<=.01
+
+@pytest.mark.parametrize('indices',[[0,2],[0,1]])
+def test_canonical_windows_preserve_missing_visual_slots(tmp_path,indices):
+    from reports.tools.lab9_alignment_metadata import complete_alignment
+    p=tmp_path/'video.pt';torch.save({'canonical_video_count':3},p);c={'clip_id':'fixture','video_frames_path':str(p),'av_offset_ms':0,'frames':[{'raw10fps_index':2,'face_found':False}]}
+    result=complete_alignment(c,{'indices':indices},{'z':torch.zeros(60,128)})
+    assert len(result['windows'])==3 and result['visual_valid'].sum()==2
+    assert set(result['assigned_indices'].tolist())==set(range(50))
+    assert len(result['assigned_indices'])==len(torch.unique(result['assigned_indices']))
+    assert len(result['encoded_visual_windows'])==2 and result['visual_original_indices']==indices
+
+def test_single_clip_api_scattered_slots_match_pooled_features():
+    from src.multimodal.cache import pack_clip_features
+    from src.multimodal.fusion import FusionClassifier
+    cfg=yaml.safe_load(Path('configs/lab9.yaml').read_text())['model'];m=FusionClassifier(cfg).eval();v={'z':torch.randn(2,512),'indices':[0,2]};a={'z':torch.randn(5,128)};alignment={'visual_valid':torch.tensor([1,0,1],dtype=torch.bool),'audio_valid':torch.ones(5,dtype=torch.bool),'visual_original_indices':[0,2]};mean=torch.randn(640);std=torch.rand(640)+.5;stats={'mean':mean.tolist(),'std':std.tolist()}
+    inp=pack_clip_features(v,a,alignment,stats);actual=m(**inp);z=(torch.cat([v['z'].mean(0),a['z'].mean(0)])-mean)/std
+    expected=m(visual=z[:512][None],audio=z[512:][None]);assert actual.shape==(1,8) and torch.allclose(actual,expected,atol=1e-6)
+    inp['visual'][1]=1e6;assert torch.allclose(m(**inp),actual,atol=1e-6)
+
+def test_clip_api_rejects_cal_before_any_feature_file(tmp_path):
+    from src.data.multimodal_data import clip_features
+    p=tmp_path/'manifest.json';write_json(p,{'status':'PASS','clips':[{'clip_id':'cal_example','role':'cal','actor_id':8}]})
+    with pytest.raises(ValueError,match='does not read cal'):clip_features('cal_example',root=str(tmp_path/'does_not_exist'),manifest_path=p)
+
+@pytest.mark.parametrize('weight',[0.,.5,1.])
+def test_registered_late_uses_same_public_interface(weight):
+    from src.models.small_cnn import build_model
+    from src.multimodal.fusion import late_probabilities
+    cfg=yaml.safe_load(Path('configs/lab9.yaml').read_text())['model'];v={**cfg,'strategy':'video'};a={**cfg,'strategy':'audio'};m=build_model({'name':'multimodal_late','video_model':v,'audio_model':a,'weight':weight}).eval();x=torch.randn(4,640)
+    for mask in [(1,1),(1,0),(0,1)]:
+        args={'visual':x[:,:512],'audio':x[:,512:],'mask':mask};p=m(**args);expected=late_probabilities(m.video(**args),m.audio(**args),weight,mask)
+        assert torch.equal(p,expected) and torch.allclose(p.sum(1),torch.ones(4))
+    assert all(not p.requires_grad for p in m.parameters())

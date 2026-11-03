@@ -3,6 +3,26 @@ from pathlib import Path
 import torch
 from torch.utils.data import Dataset,TensorDataset,DataLoader
 from src.utils.io import digest,file_hash
+from functools import lru_cache
+
+@lru_cache(maxsize=2)
+def _clip_identity_index(path,mtime_ns):
+    manifest=json.loads(Path(path).read_text(encoding='utf-8'))
+    if manifest['status']!='PASS':raise RuntimeError('Complete genuine data audit required')
+    return {c['clip_id']:{k:c[k] for k in ['clip_id','actor_id','role','source_sha256','video_frames_sha256'] if k in c} for c in manifest['clips']}
+
+def clip_features(clip_id,root='data/lab9',manifest_path='experiments/lab9/data_manifest.json',normalization_path='experiments/lab9/feature_normalization.json',encoder_path='experiments/lab9/encoder_sources.json'):
+    """One identity-checked clip call; cal is rejected before opening feature/media files."""
+    from src.multimodal.cache import pack_clip_features
+    mp=Path(manifest_path);c=_clip_identity_index(str(mp.resolve()),mp.stat().st_mtime_ns)[clip_id]
+    if c['role']=='cal':raise ValueError('Lab9 does not read cal features/media')
+    base=Path(root)/'features';v=torch.load(base/'visual'/(clip_id+'.pt'),weights_only=False);a=torch.load(base/'audio'/(clip_id+'.pt'),weights_only=False);alignment=torch.load(base/(clip_id+'_alignment.pt'),weights_only=False)
+    encoders=json.loads(Path(encoder_path).read_text());stats=json.loads(Path(normalization_path).read_text());assert stats['fit_role']=='train'
+    assert v['clip_id']==a['clip_id']==alignment['clip_id']==clip_id
+    assert v['actor_id']==a['actor_id']==c['actor_id'] and v['role']==a['role']==c['role']
+    assert v['encoder_sha256']==encoders['visual']['sha256'] and a['encoder_sha256']==encoders['audio']['sha256']
+    assert v['source_sha256']==c['source_sha256'] and v['input_frames_sha256']==c['video_frames_sha256']
+    result=pack_clip_features(v,a,alignment,stats);result['align'].update(actor_id=c['actor_id'],role=c['role']);return result
 
 
 class MelDataset(Dataset):

@@ -1,0 +1,78 @@
+{
+  "changes": [
+    {
+      "RUN_ID": "6bce04d107b27fb66fc8-ba4bd30fd0654388bf9658deb27fd3af",
+      "field": "manifest.parameters",
+      "original_first_constituent_only": 66696,
+      "correct_composite_total": 84240
+    },
+    {
+      "RUN_ID": "6bce04d107b27fb66fc8-ba4bd30fd0654388bf9658deb27fd3af",
+      "field": "fusion_profile.parameters",
+      "original": 66696,
+      "correct_trained_head_capacity": 84240
+    },
+    {
+      "RUN_ID": "e4f5de4987b4b2abe336-1f93deb10d944a25a354bce75dbbc85c",
+      "field": "manifest.parameters",
+      "original_first_constituent_only": 66696,
+      "correct_composite_total": 84240
+    },
+    {
+      "RUN_ID": "e4f5de4987b4b2abe336-1f93deb10d944a25a354bce75dbbc85c",
+      "field": "fusion_profile.parameters",
+      "original": 66696,
+      "correct_trained_head_capacity": 84240
+    },
+    {
+      "RUN_ID": "1b42bfe68b7ff9394755-75d0ae54282d486d96b30b596c0bd289",
+      "field": "manifest.parameters",
+      "original_first_constituent_only": 66696,
+      "correct_composite_total": 84240
+    },
+    {
+      "RUN_ID": "1b42bfe68b7ff9394755-75d0ae54282d486d96b30b596c0bd289",
+      "field": "fusion_profile.parameters",
+      "original": 66696,
+      "correct_trained_head_capacity": 84240
+    },
+    {
+      "RUN_ID": "f72622bc263024125579-3642aca850794e0aae3c4a14fb0a585d",
+      "field": "manifest.parameters",
+      "original_first_constituent_only": 66696,
+      "correct_composite_total": 84240
+    },
+    {
+      "RUN_ID": "f72622bc263024125579-3642aca850794e0aae3c4a14fb0a585d",
+      "field": "fusion_profile.parameters",
+      "original": 66696,
+      "correct_trained_head_capacity": 84240
+    },
+    {
+      "RUN_ID": "75cdef3b3621ec713c4d-8f3b5388e56e4af5b0e635d25d018b33",
+      "field": "fusion_profile.parameters",
+      "original": null,
+      "correct_trained_head_capacity": 83080
+    },
+    {
+      "RUN_ID": "bfaf1a95582bbc738bad-8f91e3804e2741cfb08e2df37488ac16",
+      "field": "fusion_profile.parameters",
+      "original": null,
+      "correct_trained_head_capacity": 100105
+    },
+    {
+      "RUN_ID": "281261d23ef5b6ce2337-311678e304db457f8417e218a87b070e",
+      "field": "manifest.parameters",
+      "original_first_constituent_only": 66696,
+      "correct_composite_total": 84240
+    },
+    {
+      "RUN_ID": "281261d23ef5b6ce2337-311678e304db457f8417e218a87b070e",
+      "field": "fusion_profile.parameters",
+      "original": null,
+      "correct_trained_head_capacity": 84240
+    }
+  ],
+  "scope": "Descriptive model capacity only: late evaluation passport initially counted representative video constituent instead of both frozen heads. E1 selection/control widths already used correct composite totals before preregistration. No probabilities, metrics, trained weights, model selection, hypotheses or paired statistics changed. Original recorded fields remain in preregistration Git history.",
+  "late_public_class_adapter": "Added equivalent public modality-interface adapter after experiments; original functional late outputs retained and unit-checked against the adapter."
+}

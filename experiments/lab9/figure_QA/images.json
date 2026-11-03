@@ -1,0 +1,123 @@
+{
+  "figures": [
+    {
+      "file": "experiments\\lab9\\figures\\audio_encoder_training.png",
+      "size": [
+        1080,
+        480
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E1_capacity.png",
+      "size": [
+        1200,
+        540
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E1_confusion.png",
+      "size": [
+        1200,
+        960
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E1_models.png",
+      "size": [
+        1320,
+        660
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E1_paired.png",
+      "size": [
+        720,
+        480
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E1_per_class_F1.png",
+      "size": [
+        1080,
+        480
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E2_missing.png",
+      "size": [
+        1080,
+        480
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E2_SNR.png",
+      "size": [
+        1200,
+        480
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E3_confidence.png",
+      "size": [
+        1440,
+        444
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E3_following_AUROC.png",
+      "size": [
+        1200,
+        480
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\E3_gates.png",
+      "size": [
+        720,
+        480
+      ]
+    },
+    {
+      "file": "experiments\\lab9\\figures\\training_curves.png",
+      "size": [
+        1200,
+        480
+      ]
+    }
+  ],
+  "contact_sheets": [
+    "experiments\\lab9\\figure_QA\\grid_1.png",
+    "experiments\\lab9\\figure_QA\\grid_2.png",
+    "experiments\\lab9\\figure_QA\\grid_3.png"
+  ],
+  "status": "PASS",
+  "inspection": "All12 figure families visually checked via three contact sheets; capacity/model/AUROC/SNR plots additionally inspected at native size. Overlapping capacity labels and long model labels corrected; no data edited.",
+  "source_hashes": {
+    "audio_encoder_training.png": "20aabd5c3e491b4fadc6c9211fc771357ba9665b7ef26189538df19c0e490f1a",
+    "audio_encoder_training.svg": "90ee968df05731b1bec102870da4870f0d7592be5bd7627ad96a970a8df0999c",
+    "E1.csv": "6ffcb7e70685ef9927ac2fb869803bcf070bbd5db3c69e500790abbfd7d8902f",
+    "E1_capacity.png": "bced76b71104b43c429355be91f34a9a9900e768bbe2bac4d1f187d8aecbf9e5",
+    "E1_capacity.svg": "fb1956a754b93504e459983eeb638bddf42269f99d377f478065fedaafe19d12",
+    "E1_confusion.png": "d1282d464759fbf54beae377eab1c09a9e3320a0aeaacdf4d24ee9279cf951b3",
+    "E1_confusion.svg": "4ab4b5aaae06e3db6e834833354174eaed9c939a6df77eb73bd0e5483adcc859",
+    "E1_models.png": "f338c6ff653b1bc4bc4f2566545396ae67fdbb4da0b912aca2e2a633ba4dc818",
+    "E1_models.svg": "35348e33041ff490528bf364234cb54f6001a81d289c8d0a41742d231afdc7b0",
+    "E1_paired.png": "10ce36545e871664e4f416e9d5918d130bf042a81893cda10241fb498da702bf",
+    "E1_paired.svg": "9dea72a0dfcf73d546c26b717ccc26f8c84325c62efc16b8cb55e61155abb0d4",
+    "E1_per_class_F1.png": "6119b5d77d4aa67cddc127d4f089662037f8498d227c4ec11c3b5262426c37ad",
+    "E1_per_class_F1.svg": "bdd77c5f50176c304e87e2e3db16dc71399a25525303c581a208b35599155782",
+    "E2_missing.png": "a11d849ee14082e620e8ae5bf47e75c1d669b6f913406de6783765a6958ccf74",
+    "E2_missing.svg": "0b5a99243a896bbb1a31f0b101375ac5d073f24799389b7dd2908f4499964da3",
+    "E2_SNR.csv": "c744e750ab594c85af9b3fd32748c0d4acb0f7944fcb27dcbd28591a037477ee",
+    "E2_SNR.png": "5604b556af8960094e555cc8a6aa5ea230280ab95cbfdc32a468927b347e082c",
+    "E2_SNR.svg": "35abb5595b49cdbb4f207a3c51da95a8ac67e93b4d1ce305b19df96b0627ecbe",
+    "E3_confidence.png": "bc0388291eccc91a81fca6c559b9a8ea7e1dc9e6878e5e76b7f0269e27b38482",
+    "E3_confidence.svg": "fa84f881cc9fe8484ef0f5fe6e977f3777405870d1add9d66ec4efcf9ea1c56a",
+    "E3_following_AUROC.png": "73a829184f8095c77e3e7835173de22dc48fbf2b4c63315c20ac77845b434b85",
+    "E3_following_AUROC.svg": "8f2dde10d2ef3d4aceaa77c2f6a675d107e4344e71533ec4522c1f11adcc57d0",
+    "E3_gates.png": "ba6e32f79a6d57a1aefef6a76c5fc7451a1f7fafeaee8d1b50ce9077950a990e",
+    "E3_gates.svg": "dec90f8c469951eb3d609daddb6c378fe2a19afb7d444afa96037a90e440b998",
+    "training_curves.png": "ddf3b5807ea05b80be4cd48d4450e6ad87e014da13e75c0fe185c0c1fddfdc10",
+    "training_curves.svg": "63bd90ce7c10cab79ca950f93bb369dfe8bd078f0e4e85d17fda080234de547c"
+  }
+}

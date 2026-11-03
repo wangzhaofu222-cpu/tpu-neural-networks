@@ -1,0 +1,25 @@
+{
+  "tests_passed": 304,
+  "audit_passed": 33305,
+  "requirement_status_counts": {
+    "PASS": 47,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "UNVERIFIED": 2,
+    "NOT_APPLICABLE": 2
+  },
+  "formal_training_runs": 19,
+  "evaluation_runs": 41,
+  "optimizer_updates": 53262,
+  "checkpoint_count": 38,
+  "training_wall_seconds": 299.0827747999938,
+  "run_wall_seconds_sum": 299.0827747999938,
+  "figures": 12,
+  "figure_files": 24,
+  "preregistration_commit": "23f41527e22bd35ed26fa3aa728a99b233fa7878",
+  "note": "Download/preprocessing wall times recorded separately; overlapping durations must not be added as elapsed wall time",
+  "measured_session_interval_start": "2026-11-02T20:19:47.943259+07:00",
+  "measured_session_interval_end": "2026-11-02T17:03:46.629386+00:00",
+  "elapsed_seconds_since_first_recorded_verification": 13438.686127,
+  "elapsed_interval_scope": "First recorded Lab8 verification test start -> summary generation, including download/waits/preprocessing/experiments/audit; earlier initial inspection excluded"
+}
