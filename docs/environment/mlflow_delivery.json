@@ -1,0 +1,22 @@
+{
+  "mlflow_version": "3.18.0",
+  "original_run_summaries": 973,
+  "lab_aggregates": 10,
+  "metric_records": 980771,
+  "aggregate_artifact_files": 398,
+  "regression_tests_passed": 309,
+  "independent_checks_passed": 26985,
+  "idempotence": "same real run reimported: unchanged; no additional run",
+  "browser_checks": [
+    "10 Lab experiments visible",
+    "real training parameters and metrics visible",
+    "training charts visually checked",
+    "original summary.json preview verified",
+    "aggregate analysis/figures/report folders visible"
+  ],
+  "server": "http://127.0.0.1:5000",
+  "training_environment": "unchanged; separate .mlflow-env",
+  "history_policy": "original commits and preregistrations preserved",
+  "git_repository": "https://github.com/wangzhaofu222-cpu/tpu-neural-networks",
+  "visibility": "private"
+}
