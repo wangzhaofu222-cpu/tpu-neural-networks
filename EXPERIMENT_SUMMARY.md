@@ -1,5 +1,7 @@
 # 实验项目阶段汇总
 
+> **历史阶段记录 / Историческая запись.** 以下内容保留原阶段状态，不代表当前交付情况。Lab 0–9 的当前项目入口、正式报告和 MLflow 说明见 [README.md](README.md)；后续实验核查见 [current_acceptance.json](experiments/current_acceptance.json)。
+
 Phase A/B已完成；Lab0阶段验收：**PASS**。整个Lab0–Lab9课程项目尚未完成，不能作为全课程完成提交。
 
 ## 已完成

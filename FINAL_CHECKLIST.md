@@ -1,5 +1,7 @@
 # 阶段验收清单
 
+> **历史阶段清单 / Исторический контрольный список.** 下文的“尚未完成”和阻塞描述属于当时的阶段快照。当前报告与实验展示入口见 [README.md](README.md)，后续核查状态见 [current_acceptance.json](experiments/current_acceptance.json)。原始条目保留用于追溯。
+
 全课程状态：尚未完成（Lab4 CF2 尚缺资料、Lab5–Lab9未运行；Lab2/3新报告按要求暂缓）。Lab0：PASS。
 
 | 要求 | 状态 | 证据 |
