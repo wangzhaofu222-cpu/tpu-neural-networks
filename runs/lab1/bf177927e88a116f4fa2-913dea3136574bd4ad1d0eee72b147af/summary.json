@@ -1,0 +1,35 @@
+{
+  "RUN_ID": "bf177927e88a116f4fa2-913dea3136574bd4ad1d0eee72b147af",
+  "EXP_ID": "bf177927e88a116f4fa2",
+  "purpose": "formal",
+  "trainability": {
+    "rho_T": null,
+    "GI": 1.2534579983306968,
+    "median_g_by_layer": {
+      "input.linear": 0.7041703162755671,
+      "blocks.0.branch.0.linear": 0.7906799603188193,
+      "blocks.0.branch.1": 1.0124263485575336,
+      "blocks.1.branch.0.linear": 1.0048007790429054,
+      "blocks.1.branch.1": 1.2247321204347077,
+      "blocks.2.branch.0.linear": 1.0889974695510247,
+      "blocks.2.branch.1": 1.4408670520619438,
+      "blocks.3.branch.0.linear": 1.3848514265677085,
+      "blocks.3.branch.1": 1.6876193723282793,
+      "blocks.4.branch.0.linear": 1.591158553138616,
+      "blocks.4.branch.1": 1.7982814072137743,
+      "blocks.5.branch.0.linear": 1.3961013913972145,
+      "blocks.5.branch.1": 1.6524578834752015,
+      "blocks.6.branch.0.linear": 1.6105555101179736,
+      "blocks.6.branch.1": 1.9748672756385661,
+      "blocks.7.branch.0.linear": 1.8331794028045374,
+      "blocks.7.branch.1": 2.12919704252594,
+      "head": 12.622219030632186
+    },
+    "AVD": null,
+    "max_zero_fraction": 0.5179443359375,
+    "max_saturated_fraction": 0,
+    "numerical_failure": true,
+    "diagnostic_state": "initial; training failed"
+  },
+  "status": "FAILED"
+}

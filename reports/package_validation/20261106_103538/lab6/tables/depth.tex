@@ -1,0 +1,14 @@
+\begin{table}[H]\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{E2: все глубины потока и медианная ошибка обратимости в float64.}\label{tab:depth}
+\begin{tabular}{rrrrrrrrl}
+\toprule
+$K_f$ & Val NLL & SEM & MMD$^2$ & Cov & Параметры & $\varepsilon_{test}$ & $\varepsilon_{20}$ & Ист. \\
+\midrule
+2 & 2.34482 & 0.01056 & 0.0129 & 0.0 & 17412 & 1.38e-17 & 4.44e-17 & R10 \\
+4 & 1.17997 & 0.01532 & 0.000226 & 1.0 & 34824 & 1.16e-16 & 1.36e-13 & R11 \\
+8 & 1.13468 & 0.01465 & 9.68e-05 & 1.0 & 69648 & 1.27e-16 & 3.69e-13 & R12 \\
+16 & 1.13971 & 0.01386 & 7.43e-05 & 1.0 & 139296 & 1.59e-16 & 3.03e-07 & R13 \\
+\bottomrule
+\end{tabular}
+\end{table}

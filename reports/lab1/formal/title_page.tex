@@ -1,0 +1,27 @@
+% !TeX program = xelatex
+% Original cover typography, logo, signatures and coordinates are retained.
+% Reuse: change the following three commands for another laboratory work.
+\documentclass{article}
+\usepackage[paperwidth=595.3bp,paperheight=841.9bp,margin=0pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{graphicx,eso-pic,tikz}
+\newcommand{\LabNumber}{1}
+\newcommand{\LabTitleFirst}{Почему глубокая сеть обучается или не обучается}
+\newcommand{\LabTitleSecond}{Инициализация, нормализация и остаточные связи}
+\newcommand{\CoverText}[4]{%
+  \node[anchor=base,inner sep=0pt,font=\fontsize{#3bp}{17bp}\selectfont]
+    at ([xshift=#1bp,yshift=-#2bp]current page.north west) {#4};}
+\pagestyle{empty}
+\begin{document}
+\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=595.3bp,height=841.9bp]{assets/title_base.pdf}}}
+\AddToShipoutPictureFG*{%
+\begin{tikzpicture}[remember picture,overlay]
+\CoverText{319.5}{362.33}{14.05}{Лабораторная работа № 1}
+\CoverText{319.5}{383}{13.5}{«Почему глубокая сеть обучается или не обучается}
+\CoverText{319.5}{400}{13.5}{Инициализация, нормализация и остаточные связи»}
+\CoverText{319.5}{440}{14.05}{по дисциплине «Нейронные сети»}
+\CoverText{477.0}{606.29}{14.05}{Григорьев Д. С.}
+\end{tikzpicture}}
+\null
+\end{document}

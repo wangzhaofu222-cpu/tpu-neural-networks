@@ -1,0 +1,160 @@
+{
+  "RUN_ID": "cc5f31097bceab4ade88-40699df5deee4f98962030c20eca96b7",
+  "path": "runs/revision_20261106/lab4/cc5f31097bceab4ade88-40699df5deee4f98962030c20eca96b7",
+  "status": "COMPLETED_PROBE_EVALUATION",
+  "condition": "with_jitter",
+  "feature_RUN_ID": "e8bf9cc6129400af0668-ba66c384b01c485e94c7524fd1244724",
+  "encoder_RUN_ID": "cf2097134c33eef5506c-be1a9df9a9714bfe9b95948d626f55c9",
+  "chosen_probe_RUN_ID": "bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a",
+  "validation_accuracy": 0.9918,
+  "test_accuracy": 0.994,
+  "selected_regularization": 0.001,
+  "candidates": [
+    {
+      "regularization": 0.0,
+      "validation_accuracy": 0.9914,
+      "RUN_ID": "b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46",
+      "path": "runs/revision_20261106/lab4/b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46"
+    },
+    {
+      "regularization": 0.001,
+      "validation_accuracy": 0.9918,
+      "RUN_ID": "bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a",
+      "path": "runs/revision_20261106/lab4/bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a"
+    },
+    {
+      "regularization": 0.01,
+      "validation_accuracy": 0.991,
+      "RUN_ID": "c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7",
+      "path": "runs/revision_20261106/lab4/c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7"
+    }
+  ],
+  "confusion": [
+    [
+      988,
+      11,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      11,
+      989,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      999,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      997,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      997,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      992,
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      9,
+      990,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      998,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      999,
+      1
+    ],
+    [
+      9,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      991
+    ]
+  ],
+  "test_N": 10000,
+  "epochs_per_candidate": 200,
+  "cal_access": false,
+  "seconds": 12.94518939999989,
+  "controller_sha256": "507365c9057cbc8e2e18aff4a0caa28f11ea16f9fd4762e21ed92cc8861dd8b1",
+  "protocol_sha256": "ccc9b0accfe7e9aee2c1a7321beb850dec930c100e927bcc90601a90c6c8aa8a"
+}

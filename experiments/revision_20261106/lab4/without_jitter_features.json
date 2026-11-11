@@ -1,0 +1,28 @@
+{
+  "RUN_ID": "b52f97284c83be718825-f3a67b7fd70f42a781615efba122f578",
+  "path": "runs/revision_20261106/lab4/b52f97284c83be718825-f3a67b7fd70f42a781615efba122f578",
+  "status": "COMPLETED_FEATURE_EXTRACTION",
+  "encoder_RUN_ID": "9bcb3e57a83e8f0b7c03-eba9695f16f344f7a05c93b54baaf23f",
+  "encoder_checkpoint_sha256": "4bde59be8df19434e1fea345d6151ce67df6a5680db171d7b781710bc32fc6eb",
+  "encoder_state_sha256": "a092b03c452048e16c3f8ec3fabf77d38b9767bf5dc6c6302e812ed478d1faf8",
+  "feature_cache_sha256": "a281e1213f911cfbbf7dce2976014724775abacdc32ea28052e328a46538cf66",
+  "input_hashes": {
+    "train": "3602dffd3fdeca327374554652184ed447f7f54fb835dd93942ac219c402a998",
+    "val": "2bd2a5f3e427cecca9696efed8854867a55192b6a4f8014a5caf79c908f5ed56",
+    "test": "e6cb4c59cb2dfce295d166992371ec5edf5cdf47ac815bc4c3d94850f530f7e3"
+  },
+  "cal_access": false,
+  "role_sizes": {
+    "train": 43000,
+    "val": 5000,
+    "test": 10000
+  },
+  "seconds": 17.648009999999886,
+  "role_seconds": {
+    "train": 10.383677099999886,
+    "val": 1.1761897999999746,
+    "test": 2.347082300000011
+  },
+  "controller_sha256": "507365c9057cbc8e2e18aff4a0caa28f11ea16f9fd4762e21ed92cc8861dd8b1",
+  "protocol_sha256": "ccc9b0accfe7e9aee2c1a7321beb850dec930c100e927bcc90601a90c6c8aa8a"
+}

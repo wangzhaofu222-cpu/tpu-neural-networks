@@ -1,0 +1,16 @@
+\begin{table}[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Масштаб и ранг признаков на 5000 фиксированных train-изображений.}\label{tab:diagnostics}
+\begin{tabular}{llrrrr}
+\toprule
+Модель & Признак & $d$ & $\overline{\|h\|}$ & $\operatorname{tr}C$ & $r_{eff}$ \\
+\midrule
+B0 & $h$ & 512 & 35.5166 & 95.46421 & 3.156 \\
+B0 & $\hat z$ & 128 & 1.0000 & 0.01348 & 28.474 \\
+B1 & $h$ & 512 & 7.6857 & 34.55226 & 16.492 \\
+B1 & $\hat z$ & 128 & 1.0000 & 0.41126 & 19.099 \\
+SimCLR & $h$ & 512 & 3.5061 & 8.28280 & 75.610 \\
+SimCLR & $\hat z$ & 128 & 1.0000 & 0.99862 & 59.873 \\
+\bottomrule
+\end{tabular}
+\end{table}

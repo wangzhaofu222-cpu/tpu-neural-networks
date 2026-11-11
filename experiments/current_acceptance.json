@@ -1,0 +1,14 @@
+{
+  "as_of": "2026-11-06",
+  "source": "experiments/revision_20261106/audit.json",
+  "Lab4_Q2": "COMPLETE: hue control with two fixed E2 encoders and six 200-epoch probes",
+  "Lab5_protocol": "ADOPTED: PyG Cora public masks",
+  "Lab9_protocol": "ADOPTED: actor seed1729; explicit Lab2 CNN source",
+  "Lab1": "E2 repeated; code checks pass; scaled96 numerical threshold failure reproduced and retained",
+  "unchanged_valid_negative_results": [
+    "Lab3 alternative decomposition",
+    "Lab6 fallback eta",
+    "Lab8 reversed prediction",
+    "Lab9 difference not established"
+  ]
+}

@@ -1,0 +1,13 @@
+FEATURES with_jitter train 43000 10.34
+FEATURES with_jitter val 5000 1.19
+FEATURES with_jitter test 10000 2.42
+{"RUN_ID": "b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46", "epoch": 200, "global_step": 200, "train_loss": 0.030155634507536888, "validation_loss": 0.037012893676757815, "train_metric": 0.9944418604651163, "validation_metric": 0.9914, "learning_rate": 6.168375916970615e-06, "epoch_time": 0.005143699999962337, "peak_gpu_memory_bytes": 172721664}
+{"RUN_ID": "bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a", "epoch": 200, "global_step": 200, "train_loss": 0.03282807767391205, "validation_loss": 0.03962886962890625, "train_metric": 0.9944651162790697, "validation_metric": 0.9918, "learning_rate": 6.168375916970615e-06, "epoch_time": 0.006341500000189626, "peak_gpu_memory_bytes": 172721664}
+{"RUN_ID": "c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7", "epoch": 200, "global_step": 200, "train_loss": 0.06880559027194977, "validation_loss": 0.07649493408203124, "train_metric": 0.9937209302325581, "validation_metric": 0.991, "learning_rate": 6.168375916970615e-06, "epoch_time": 0.005412699999851611, "peak_gpu_memory_bytes": 172721664}
+FEATURES without_jitter train 43000 10.38
+FEATURES without_jitter val 5000 1.18
+FEATURES without_jitter test 10000 2.35
+{"RUN_ID": "7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095", "epoch": 200, "global_step": 200, "train_loss": 0.008410226553678513, "validation_loss": 0.008240008544921875, "train_metric": 0.9997906976744186, "validation_metric": 0.9998, "learning_rate": 6.168375916970615e-06, "epoch_time": 0.004964800000152536, "peak_gpu_memory_bytes": 172721664}
+{"RUN_ID": "7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509", "epoch": 200, "global_step": 200, "train_loss": 0.00967272836714983, "validation_loss": 0.009421643829345704, "train_metric": 0.9997906976744186, "validation_metric": 0.9998, "learning_rate": 6.168375916970615e-06, "epoch_time": 0.005699499999991531, "peak_gpu_memory_bytes": 172721664}
+{"RUN_ID": "98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7", "epoch": 200, "global_step": 200, "train_loss": 0.027237489819526672, "validation_loss": 0.025951589965820313, "train_metric": 0.9995813953488372, "validation_metric": 0.9996, "learning_rate": 6.168375916970615e-06, "epoch_time": 0.005749500000092667, "peak_gpu_memory_bytes": 172721664}
+Q2 COMPLETE 0.005700000000000038

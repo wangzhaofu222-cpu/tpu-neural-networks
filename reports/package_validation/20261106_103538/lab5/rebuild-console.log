@@ -1,0 +1,925 @@
+Initial Win CP for (console input, console output, system): (CP936, CP936, CP936)
+I changed them all to CP936
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: making output directory 'build'
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'xelatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -recorder -output-directory="build"  "title_page.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./title_page.tex
+LaTeX2e <2026-11-01>
+L3 programming layer <2026-09-09>
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2026-06-04 v1.4n Standard LaTeX document class
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/size10.clo))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-com
+mon.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-lat
+ex.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code
+.tex (d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex
+)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibr
+aryfiltered.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xe
+tex.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dv
+ipdfmx.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-co
+mmon-pdf.def))))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssof
+tpath.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyspro
+tocol.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.co
+de.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.basic.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.trigonometric.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.random.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.comparison.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.base.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.round.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.misc.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.integerarithmetics.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoi
+nts.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hconstruct.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+husage.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresco
+pes.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregra
+phicstate.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsformations.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequi
+ck.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobj
+ects.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hprocessing.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearr
+ows.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresha
+de.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreima
+ge.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreext
+ernal.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelay
+ers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsparency.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+terns.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf
+.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshap
+es.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-0-65.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-1-18.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code
+.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/ti
+kz.code.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryp
+lothandlers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematr
+ix.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarytopaths.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-xetex.de
+f) (build/title_page.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+[1] (build/title_page.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+Output written on build/title_page.xdv (1 page, 4344 bytes).
+Transcript written on build/title_page.log.
+Latexmk: Getting log file 'build/title_page.log'
+Latexmk: Examining 'build/title_page.fls'
+Latexmk: Examining 'build/title_page.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'build/title_page.xdv'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  build/title_page.aux
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -recorder -output-directory="build"  "title_page.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./title_page.tex
+LaTeX2e <2026-11-01>
+L3 programming layer <2026-09-09>
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2026-06-04 v1.4n Standard LaTeX document class
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/size10.clo))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-com
+mon.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-lat
+ex.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code
+.tex (d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex
+)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibr
+aryfiltered.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xe
+tex.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dv
+ipdfmx.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-co
+mmon-pdf.def))))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssof
+tpath.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyspro
+tocol.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.co
+de.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.basic.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.trigonometric.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.random.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.comparison.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.base.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.round.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.misc.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.integerarithmetics.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoi
+nts.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hconstruct.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+husage.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresco
+pes.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregra
+phicstate.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsformations.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequi
+ck.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobj
+ects.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hprocessing.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearr
+ows.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresha
+de.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreima
+ge.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreext
+ernal.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelay
+ers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsparency.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+terns.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf
+.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshap
+es.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-0-65.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-1-18.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code
+.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/ti
+kz.code.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryp
+lothandlers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematr
+ix.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarytopaths.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-xetex.de
+f) (build/title_page.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+[1] (build/title_page.aux) )
+Output written on build/title_page.xdv (1 page, 4344 bytes).
+Transcript written on build/title_page.log.
+Latexmk: Getting log file 'build/title_page.log'
+Latexmk: Examining 'build/title_page.fls'
+Latexmk: Examining 'build/title_page.log'
+Latexmk: Log file says output to 'build/title_page.xdv'
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  build/title_page.xdv
+Category 'changed_source_rules':
+  xelatex
+Category 'no_dest':
+  xdvipdfmx
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "build/title_page.pdf"  "build/title_page.xdv"'
+------------
+build/title_page.xdv -> build/title_page.pdf
+[1]
+97198 bytes written
+Latexmk: All targets (build/title_page.xdv build/title_page.pdf) are up-to-date
+
+Initial Win CP for (console input, console output, system): (CP936, CP936, CP936)
+I changed them all to CP936
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'xelatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -recorder -output-directory="build"  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2026-11-01>
+L3 programming layer <2026-09-09>
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2026-06-04 v1.4n Standard LaTeX document class
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-xetex.de
+f)) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/ctex/ctexpatch.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtempl
+ate.sty) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg)
+)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
+))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-russian.l
+df
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/xpg-cyrillicnum
+bers.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/babel/cyrl2uni.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/babelsh.def))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-english.l
+df) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/fix-cm.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/ts1enc.def))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/tools/calc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdfpages/ppxetex.def))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-com
+mon.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-lat
+ex.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code
+.tex (d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex
+)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibr
+aryfiltered.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xe
+tex.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dv
+ipdfmx.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-co
+mmon-pdf.def))))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssof
+tpath.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyspro
+tocol.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.co
+de.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.basic.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.trigonometric.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.random.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.comparison.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.base.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.round.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.misc.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.integerarithmetics.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoi
+nts.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hconstruct.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+husage.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresco
+pes.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregra
+phicstate.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsformations.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequi
+ck.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobj
+ects.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hprocessing.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearr
+ows.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresha
+de.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreima
+ge.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreext
+ernal.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelay
+ers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsparency.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+terns.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf
+.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshap
+es.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-0-65.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-1-18.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code
+.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/ti
+kz.code.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryp
+lothandlers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematr
+ix.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarytopaths.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarypositioning.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/url/url.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys
+.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlest
+ring.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+))) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfileche
+ck.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecount
+er.sty))) (build/main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometad
+ata.sty (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+)))
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+[1]
+No file main.toc.
+[2] (./report_body.tex
+
+LaTeX Warning: Citation `teacher' on page 3 undefined on input line 3.
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [3]
+(./tables/models.tex) (./tables/deletion.tex) [4] (./tables/paired.tex)
+(./tables/depths.tex [5]) [6] (./tables/map.tex) [7] [8] [9]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6 on input line 125.
+
+)
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[10] (build/main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+Output written on build/main.xdv (10 pages, 139424 bytes).
+Transcript written on build/main.log.
+Latexmk: Getting log file 'build/main.log'
+Latexmk: Examining 'build/main.fls'
+Latexmk: Examining 'build/main.log'
+Latexmk: References changed.
+Latexmk: Missing input file 'main.toc' message in .log file:
+  No file main.toc.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'build/main.xdv'
+Latexmk: applying rule 'xelatex'...
+Rule 'xelatex':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.aux
+  build/main.out
+  build/main.toc
+
+------------
+Run number 2 of rule 'xelatex'
+------------
+------------
+Running 'xelatex -no-pdf -interaction=nonstopmode -halt-on-error -recorder -output-directory="build"  "main.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2026-11-01>
+L3 programming layer <2026-09-09>
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2026-06-04 v1.4n Standard LaTeX document class
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-xetex.de
+f)) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/ctex/ctexpatch.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtempl
+ate.sty) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg)
+)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
+))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-russian.l
+df
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/xpg-cyrillicnum
+bers.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/babel/cyrl2uni.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/babelsh.def))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/polyglossia/gloss-english.l
+df) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/fix-cm.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/ts1enc.def))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/tools/calc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdfpages/ppxetex.def))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-com
+mon.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-lat
+ex.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code
+.tex (d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex
+)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibr
+aryfiltered.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xe
+tex.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dv
+ipdfmx.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-co
+mmon-pdf.def))))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssof
+tpath.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyspro
+tocol.code.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.co
+de.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.co
+de.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.basic.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.trigonometric.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.random.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.comparison.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.base.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.round.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.misc.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions
+.integerarithmetics.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code
+.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoi
+nts.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hconstruct.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+husage.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresco
+pes.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregra
+phicstate.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsformations.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequi
+ck.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobj
+ects.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+hprocessing.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearr
+ows.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoresha
+de.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreima
+ge.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreext
+ernal.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelay
+ers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretra
+nsparency.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepat
+terns.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf
+.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshap
+es.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot
+.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-0-65.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-v
+ersion-1-18.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.cod
+e.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code
+.tex))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/ti
+kz.code.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryp
+lothandlers.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematr
+ix.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarytopaths.code.tex)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarypositioning.code.tex)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/url/url.sty))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys
+.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlest
+ring.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+))) (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfileche
+ck.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecount
+er.sty))) (build/main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometad
+ata.sty (d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+))) (build/main.out) (build/main.out) [1] (build/main.toc) [2]
+(./report_body.tex
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(d:/Tex Live/data/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [3]
+(./tables/models.tex) (./tables/deletion.tex) [4] (./tables/paired.tex)
+(./tables/depths.tex [5]) [6] (./tables/map.tex) [7] [8] [9]) [10]
+(build/main.aux) )
+Output written on build/main.xdv (10 pages, 145540 bytes).
+Transcript written on build/main.log.
+Latexmk: Getting log file 'build/main.log'
+Latexmk: Examining 'build/main.fls'
+Latexmk: Examining 'build/main.log'
+Latexmk: Log file says output to 'build/main.xdv'
+Latexmk: applying rule 'xdvipdfmx'...
+Rule 'xdvipdfmx':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.xdv
+Category 'changed_source_rules':
+  xelatex
+Category 'no_dest':
+  xdvipdfmx
+
+------------
+Run number 1 of rule 'xdvipdfmx'
+------------
+------------
+Running 'xdvipdfmx -E -o "build/main.pdf"  "build/main.xdv"'
+------------
+build/main.xdv -> build/main.pdf
+[1][2][3][4][5][6][7][8][9][10]
+783727 bytes written
+Latexmk: All targets (build/main.xdv build/main.pdf) are up-to-date
+

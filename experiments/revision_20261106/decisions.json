@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-11-06T10:27:53.093745+07:00",
+  "protocol_sha256": "ccc9b0accfe7e9aee2c1a7321beb850dec930c100e927bcc90601a90c6c8aa8a",
+  "user_decisions": {
+    "Lab4_Q2": "HueCIFAR-10 v1 independently designed and fixed",
+    "Lab5_split": "PyG Cora public masks adopted",
+    "Lab9_split": "actor disjoint seed1729 14/3/2/5 adopted",
+    "Lab9_encoder": "explicit CNN source precedence adopted"
+  },
+  "historical_evidence": "kept intact; new evidence has new RUN_IDs"
+}

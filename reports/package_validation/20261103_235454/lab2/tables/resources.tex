@@ -1,0 +1,12 @@
+\begin{table}[H]\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Ресурсы моделей: FP32, CUDA; время обучения при $r=1$.}\label{tab:resources}
+\begin{tabular}{lrrrrrr}
+\toprule
+Модель & Параметры & MAC, млн & Latency, мс & Объект/с & Train MiB & Train, с \\
+\midrule
+CNN & 11173962 & 555.42 & 6.399 & 5987.6 & 1993.4 & 1187.95 \\
+VIT & 10695562 & 710.75 & 4.644 & 3052.0 & 1912.8 & 1830.35 \\
+\bottomrule
+\end{tabular}
+\end{table}

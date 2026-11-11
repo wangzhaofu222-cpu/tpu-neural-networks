@@ -1,0 +1,404 @@
+{
+  "created": "2026-11-06T10:35:36.924932",
+  "scope": "Reports only; no model execution",
+  "reports": {
+    "1": {
+      "lab": 1,
+      "pages": 17,
+      "figures": 4,
+      "tables": 14,
+      "warnings": [],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab1\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab1\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab1\\formal\\build\\qa\\contact-03.png",
+        "D:\\神经网络\\reports\\lab1\\formal\\build\\qa\\contact-04.png",
+        "D:\\神经网络\\reports\\lab1\\formal\\build\\qa\\contact-05.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "780683b4ee446d03abe0fa1ae3f1c3d00cf92e4eef539709745aa319981282ac",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMMI8": true,
+        "/REENYM+CMR12": true,
+        "/GSXJFF+CMSY8": true,
+        "/IHDCWL+CMR8": true,
+        "/YBQRHU+MSBM10": true,
+        "/VEQQKW+CMSY10": true,
+        "/RQXYOW+CMMI6": true,
+        "/GTVRJV+CMEX10": true,
+        "/HKPYOM+CMMI10": true,
+        "/EJIASI+CMR10": true,
+        "/CMCZSU+CMMI7": true,
+        "/PYLHPM+CMSY7": true,
+        "/CDVTTC+CMR7": true,
+        "/QWQMXK+CMR6": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "2": {
+      "lab": 2,
+      "pages": 11,
+      "figures": 6,
+      "tables": 7,
+      "warnings": [],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab2\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab2\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab2\\formal\\build\\qa\\contact-03.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "38c2aecb83edf612ccc0f2c1ce78c28b26bb2e266c4d5b26951a5410719d814e",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMSY8": true,
+        "/REENYM+CMSY10": true,
+        "/GSXJFF+CMR8": true,
+        "/IHDCWL+CMR12": true,
+        "/YBQRHU+CMEX10": true,
+        "/VEQQKW+CMMI8": true,
+        "/RQXYOW+CMMI10": true,
+        "/GTVRJV+CMR10": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "3": {
+      "lab": 3,
+      "pages": 12,
+      "figures": 6,
+      "tables": 6,
+      "warnings": [],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab3\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab3\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab3\\formal\\build\\qa\\contact-03.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "16efa309e5e95549526af452135d6df756d3f614c31327422584e26e4c774260",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMR12": true,
+        "/REENYM+CMMI8": true,
+        "/GSXJFF+CMSY8": true,
+        "/IHDCWL+CMEX10": true,
+        "/YBQRHU+CMR8": true,
+        "/VEQQKW+CMMI6": true,
+        "/RQXYOW+CMSY10": true,
+        "/GTVRJV+CMMI10": true,
+        "/HKPYOM+CMR10": true,
+        "/EJIASI+CMMI7": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "4": {
+      "lab": 4,
+      "pages": 14,
+      "figures": 9,
+      "tables": 8,
+      "warnings": [
+        "Underfull \\hbox (badness 1221) in paragraph at lines 12--13",
+        "Underfull \\hbox (badness 3281) in paragraph at lines 65--66",
+        "Underfull \\hbox (badness 2790) in paragraph at lines 93--95",
+        "Underfull \\hbox (badness 1210) in paragraph at lines 93--95"
+      ],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab4\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab4\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab4\\formal\\build\\qa\\contact-03.png",
+        "D:\\神经网络\\reports\\lab4\\formal\\build\\qa\\contact-04.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "35756e4802d4e8feba000f9f8993d3589b41b05f7b7e49adf36d41ca96273f07",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMR8": true,
+        "/REENYM+CMSY10": true,
+        "/GSXJFF+CMR12": true,
+        "/IHDCWL+MSBM10": true,
+        "/YBQRHU+CMMI8": true,
+        "/VEQQKW+CMSY8": true,
+        "/RQXYOW+CMEX10": true,
+        "/GTVRJV+CMMI10": true,
+        "/HKPYOM+CMMI7": true,
+        "/EJIASI+CMR10": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "5": {
+      "lab": 5,
+      "pages": 10,
+      "figures": 4,
+      "tables": 6,
+      "warnings": [],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab5\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab5\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab5\\formal\\build\\qa\\contact-03.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "ba04d7e0e9e467d23269d73d004bd5b4ef9e8c5e79946f3bb4ee7412ca27315d",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMR12": true,
+        "/REENYM+CMMI8": true,
+        "/GSXJFF+CMSY8": true,
+        "/IHDCWL+CMR8": true,
+        "/YBQRHU+CMSY10": true,
+        "/VEQQKW+CMEX10": true,
+        "/RQXYOW+CMMI6": true,
+        "/GTVRJV+CMMI10": true,
+        "/HKPYOM+CMMI7": true,
+        "/EJIASI+MSBM10": true,
+        "/CMCZSU+CMR10": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "6": {
+      "lab": 6,
+      "pages": 12,
+      "figures": 8,
+      "tables": 8,
+      "warnings": [
+        "Underfull \\hbox (badness 1968) in paragraph at lines 23--26"
+      ],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab6\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab6\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab6\\formal\\build\\qa\\contact-03.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "d8abed28041e879efac486385832b6ff1ccc8ac0caf2e1787710ec158a7b6637",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMMI8": true,
+        "/REENYM+CMR12": true,
+        "/GSXJFF+CMSY8": true,
+        "/IHDCWL+CMMI6": true,
+        "/YBQRHU+CMR8": true,
+        "/VEQQKW+CMSY10": true,
+        "/RQXYOW+CMEX10": true,
+        "/GTVRJV+CMMI10": true,
+        "/HKPYOM+CMR10": true,
+        "/EJIASI+CMR6": true,
+        "/CMCZSU+CMMI7": true,
+        "/PYLHPM+CMR7": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "7": {
+      "lab": 7,
+      "pages": 16,
+      "figures": 14,
+      "tables": 9,
+      "warnings": [
+        "Underfull \\hbox (badness 1082) in paragraph at lines 50--51",
+        "Underfull \\hbox (badness 1430) in paragraph at lines 99--100"
+      ],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab7\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab7\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab7\\formal\\build\\qa\\contact-03.png",
+        "D:\\神经网络\\reports\\lab7\\formal\\build\\qa\\contact-04.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "e0cb001c7d5bc4393004fe0b333e520ed0cba31f7abe2a24164a9adba05f6ff2",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMMI8": true,
+        "/REENYM+CMR12": true,
+        "/GSXJFF+CMSY10": true,
+        "/IHDCWL+CMEX10": true,
+        "/YBQRHU+CMR8": true,
+        "/VEQQKW+CMSY8": true,
+        "/RQXYOW+CMMI6": true,
+        "/GTVRJV+CMSY6": true,
+        "/HKPYOM+CMR6": true,
+        "/EJIASI+CMMI10": true,
+        "/CMCZSU+CMR10": true,
+        "/PYLHPM+CMR7": true,
+        "/CDVTTC+CMMI7": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "8": {
+      "lab": 8,
+      "pages": 16,
+      "figures": 16,
+      "tables": 9,
+      "warnings": [
+        "Underfull \\hbox (badness 7326) in paragraph at lines 16--17",
+        "Underfull \\hbox (badness 1127) in paragraph at lines 16--17",
+        "Underfull \\hbox (badness 1199) in paragraph at lines 118--119",
+        "Underfull \\hbox (badness 2050) in paragraph at lines 126--127"
+      ],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab8\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab8\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab8\\formal\\build\\qa\\contact-03.png",
+        "D:\\神经网络\\reports\\lab8\\formal\\build\\qa\\contact-04.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "322c5ba9fe2b0ca4b1a6bb72e28263861dd736c951a437964df9ddf0384aee97",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMR12": true,
+        "/REENYM+CMMI8": true,
+        "/GSXJFF+CMSY10": true,
+        "/IHDCWL+CMEX10": true,
+        "/YBQRHU+CMMI6": true,
+        "/VEQQKW+CMR8": true,
+        "/RQXYOW+CMMI10": true,
+        "/GTVRJV+CMSY8": true,
+        "/HKPYOM+CMR6": true,
+        "/EJIASI+CMSY6": true,
+        "/CMCZSU+CMSY7": true,
+        "/PYLHPM+CMMI7": true,
+        "/CDVTTC+CMR10": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    },
+    "9": {
+      "lab": 9,
+      "pages": 15,
+      "figures": 12,
+      "tables": 9,
+      "warnings": [
+        "Underfull \\hbox (badness 1320) in paragraph at lines 65--15",
+        "Underfull \\hbox (badness 1939) in paragraph at lines 113--114",
+        "Underfull \\hbox (badness 1968) in paragraph at lines 113--114",
+        "Underfull \\hbox (badness 1102) in paragraph at lines 131--132"
+      ],
+      "contacts": [
+        "D:\\神经网络\\reports\\lab9\\formal\\build\\qa\\contact-01.png",
+        "D:\\神经网络\\reports\\lab9\\formal\\build\\qa\\contact-02.png",
+        "D:\\神经网络\\reports\\lab9\\formal\\build\\qa\\contact-03.png",
+        "D:\\神经网络\\reports\\lab9\\formal\\build\\qa\\contact-04.png"
+      ],
+      "cover_fields_correct": true,
+      "sha256": "0855cb73e49f1cc747110c5f4d16ce698260d3ebc949ae5308b1e86fb5008c6c",
+      "fonts_embedded": {
+        "/GASNTQ+TimesNewRomanPSMT": true,
+        "/AUWCNV+TimesNewRomanPSMT": true,
+        "/JRYMRO+TimesNewRomanPS-BoldMT": true,
+        "/JGUKHG+TimesNewRomanPSMT": true,
+        "/JHLEDX+CMMI12": true,
+        "/SHLWCH+CMR12": true,
+        "/REENYM+CMR8": true,
+        "/GSXJFF+CMEX10": true,
+        "/IHDCWL+CMMI8": true,
+        "/YBQRHU+CMSY10": true,
+        "/VEQQKW+CMSY8": true,
+        "/RQXYOW+CMMI10": true,
+        "/GTVRJV+CMMI7": true,
+        "/HKPYOM+CMR6": true,
+        "/EJIASI+CMR10": true,
+        "/CMCZSU+CMMI6": true,
+        "/PYLHPM+CMSY6": true,
+        "/NGTUOI+Consolas": true
+      },
+      "all_pages_visually_reviewed": true,
+      "counterfactuals": "5/5",
+      "independent_clean_build": "PASS"
+    }
+  },
+  "original_input_hashes": {
+    "checked": 331,
+    "changed": []
+  },
+  "git_HEAD_unchanged": "ec08a6164d76f66f0a342b26a1dc3996ae23ec17",
+  "tracked_diff": [
+    "README.md",
+    "reports/lab0/main.tex"
+  ],
+  "recalculated_statistics": {
+    "6": {
+      "paired_differences": [
+        0.012743958167126479,
+        0.01216650422014176,
+        0.014591532854842049
+      ],
+      "mean": 0.013167331747370095,
+      "sample_sd": 0.0012667378817716433,
+      "difference_established": true
+    },
+    "9": {
+      "paired_differences": [
+        0.09355983803423723,
+        0.0855514990770424,
+        0.02783758876473713
+      ],
+      "mean": 0.06898297529200559,
+      "sample_sd": 0.035857223785062814,
+      "difference_established": false
+    }
+  },
+  "archive": {
+    "path": "D:\\神经网络\\reports\\Lab1-9_Reports_20261106.zip",
+    "sha256": "2d51b77249ef7867805785d549e40bf36c054c978d73d500028e7a7492fed872",
+    "bytes": 20970057,
+    "files": 210,
+    "CRC": "PASS"
+  },
+  "package_validation_directory": "D:\\神经网络\\reports\\package_validation\\20261106_103538",
+  "totals": {
+    "pages": 123,
+    "figures": 79,
+    "tables": 76
+  }
+}

@@ -1,0 +1,12 @@
+\begin{table}[H]\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{E1: единственное различие обучения --- расписание шума; DDPM, 5000 точек.}\label{tab:e1}
+\begin{tabular}{lrrrrrrl}
+\toprule
+Расписание & $\bar\alpha_T$ & KL & Train loss & Val loss & MMD$^2$ & $D_{mode}$ & Ист. \\
+\midrule
+linear & 4.036e-05 & 4.036e-05 & 0.40611 & 0.40820 & 0.0021705 & 0.05625 & R01 \\
+cosine & 2.429e-09 & 2.429e-09 & 0.69308 & 0.68686 & 0.0021917 & 0.05185 & R02 \\
+\bottomrule
+\end{tabular}
+\end{table}

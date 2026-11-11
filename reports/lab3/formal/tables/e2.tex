@@ -1,0 +1,20 @@
+\begin{table}[H]\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{E2: средние времена после прогрева и измеренный пик CUDA, batch 4, FP16.}\label{tab:e2}
+\begin{tabular}{llrrrrl}
+\toprule
+Backend & $L$ & Forward, мс & Шаг, мс & Пик, MiB & Токен/с & Ист. \\
+\midrule
+explicit & 64 & 2.252 & 8.739 & 68.549 & 113659 & R17 \\
+explicit & 128 & 2.461 & 9.264 & 71.023 & 208019 & R18 \\
+explicit & 256 & 2.283 & 9.670 & 80.345 & 448472 & R19 \\
+explicit & 512 & 3.198 & 9.318 & 114.884 & 640374 & R20 \\
+explicit & 1024 & 2.975 & 9.176 & 243.962 & 1376727 & R21 \\
+efficient & 64 & 1.840 & 8.365 & 68.307 & 139102 & R22 \\
+efficient & 128 & 1.757 & 7.599 & 69.984 & 291369 & R23 \\
+efficient & 256 & 1.798 & 7.929 & 73.852 & 569427 & R24 \\
+efficient & 512 & 1.686 & 7.405 & 81.930 & 1214745 & R25 \\
+efficient & 1024 & 2.835 & 9.243 & 98.086 & 1445015 & R26 \\
+\bottomrule
+\end{tabular}
+\end{table}

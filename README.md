@@ -1,5 +1,20 @@
 # Нейронные сети — единый экспериментальный проект
 
+## Git и MLflow / Git 与实验展示
+
+Репозиторий: https://github.com/wangzhaofu222-cpu/tpu-neural-networks
+
+双击根目录 `Open_MLflow.cmd` 展示 Lab 0–9 的真实实验记录。
+说明与重建：[MLflow 指南](docs/MLFLOW_GUIDE.md)；
+教师阅读入口：[Git 交付说明](docs/GIT_DELIVERY.md)。
+历史记录导入保留原始 RUN_ID、源码版本与失败状态，不代表重新训练。
+
+Для просмотра результатов Lab 0–9 запустите `Open_MLflow.cmd`.
+Исторические записи импортированы с исходными RUN_ID и версиями кода.
+Параметры, метрики, кривые обучения и артефакты доступны в MLflow.
+
+2026-11-06 当前验收状态：[current_acceptance.json](experiments/current_acceptance.json)；本轮补充实验与协议：[记录](experiments/revision_20261106/protocol.md)。较早的阶段清单保留为历史快照。
+
 项目按教师 10 份 PDF 建立。当前阶段、已测结果和阻塞见 `EXPERIMENT_SUMMARY.md`；需求矩阵见 `docs/requirements/requirements_matrix.md`。**单元测试、合成 fixture、预算测试均不代表正式实验完成。**
 
 ## 环境

@@ -1,0 +1,49 @@
+% !TeX program = xelatex
+\documentclass[12pt,a4paper]{article}
+\usepackage[left=30mm,right=20mm,top=20mm,bottom=20mm,footskip=10mm]{geometry}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\newfontfamily\russianfont{Times New Roman}
+\newfontfamily\russianfontsf{Arial}
+\newfontfamily\russianfonttt{Consolas}
+\usepackage{amsmath,amssymb,fix-cm}
+\usepackage{graphicx,booktabs,longtable,array,float,pdfpages}
+\usepackage{setspace,caption,enumitem,needspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{xurl}
+\urlstyle{same}
+\usepackage[unicode,hidelinks,bookmarksnumbered]{hyperref}
+\hypersetup{pdftitle={Лабораторная работа 1},pdfauthor={Ван Чжаофу},pdfsubject={Нейронные сети}}
+\setstretch{1.18}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\captionsetup{font=small,labelfont=normalfont,labelsep=endash}
+\captionsetup[table]{position=top,skip=7pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{11pt plus 2pt minus 2pt}
+\setcounter{tocdepth}{1}
+\DeclareRobustCommand{\run}[1]{\hyperlink{#1}{\textnormal{#1}}}
+\AtBeginEnvironment{table}{\setstretch{1.06}}
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+\newcommand{\FitTable}[1]{\sbox0{#1}\ifdim\wd0>\linewidth\resizebox{\linewidth}{!}{\usebox0}\else\usebox0\fi}
+\begin{document}
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}}]{title_page.pdf}
+\setcounter{page}{2}
+\tableofcontents
+\clearpage
+\input{report_body.tex}
+\end{document}

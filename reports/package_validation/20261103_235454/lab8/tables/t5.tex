@@ -1,0 +1,16 @@
+\begin{table}[H]\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Температура, подобранная на corrupted val, и её перенос на два test-условия.}\label{tab:t5}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Test & $T$ & Accuracy & Conf. & ECE & NLL & Brier & Пусто \\
+\midrule
+clean & 1.00000 & 0.70740 & 0.92225 & 0.21485 & 1.64031 & 0.49371 & 3 \\
+clean & 2.95638 & 0.70740 & 0.72477 & 0.02842 & 0.90976 & 0.40894 & 2 \\
+clean & 6.10873 & 0.70740 & 0.44196 & 0.26552 & 1.16225 & 0.49697 & 1 \\
+shift5 & 1.00000 & 0.24470 & 0.75277 & 0.50807 & 4.31040 & 1.19033 & 2 \\
+shift5 & 2.95638 & 0.24470 & 0.41329 & 0.16860 & 2.30249 & 0.90077 & 2 \\
+shift5 & 6.10873 & 0.24470 & 0.23413 & 0.02918 & 2.14317 & 0.85721 & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}

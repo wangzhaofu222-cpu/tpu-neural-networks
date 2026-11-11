@@ -1,0 +1,1898 @@
+{
+  "status": "PASS",
+  "checks_passed": 468,
+  "checks": [
+    {
+      "check": "original unchanged: reports/lab0/main.tex",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab0/title_page.tex",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab0/Lab0_Report.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: Тулист.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab0/assets/title_base.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab1_trainability_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab1/main.tex",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab1/results.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/05291fa1ad79d71877e5-79cfd9734ffe41819aec85522eea880d/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/05291fa1ad79d71877e5-79cfd9734ffe41819aec85522eea880d/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/05291fa1ad79d71877e5-79cfd9734ffe41819aec85522eea880d/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/a304a1bbfe5d39b7070c-3d261aa8af1e4d21972d6b2cde7efe9d/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/a304a1bbfe5d39b7070c-3d261aa8af1e4d21972d6b2cde7efe9d/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/a304a1bbfe5d39b7070c-3d261aa8af1e4d21972d6b2cde7efe9d/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f35bc17d724ab6701081-82b8437770094d618463160db216475b/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f35bc17d724ab6701081-82b8437770094d618463160db216475b/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f35bc17d724ab6701081-82b8437770094d618463160db216475b/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/7985b20739cc3e05fbf7-3ee53f04473f463e91f20cf0a9489de8/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/7985b20739cc3e05fbf7-3ee53f04473f463e91f20cf0a9489de8/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/7985b20739cc3e05fbf7-3ee53f04473f463e91f20cf0a9489de8/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/835b5aa0a6f48bd5d01a-f54918af472940a8bda1544bbb329a16/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/835b5aa0a6f48bd5d01a-f54918af472940a8bda1544bbb329a16/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/835b5aa0a6f48bd5d01a-f54918af472940a8bda1544bbb329a16/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/daa1a446d8bceaabc44b-0020695fecef4a11b1175d6777f6a866/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/daa1a446d8bceaabc44b-0020695fecef4a11b1175d6777f6a866/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/daa1a446d8bceaabc44b-0020695fecef4a11b1175d6777f6a866/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/534625583d5990da50fd-6b7164b3c8a84bf484d39fb270e6e418/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/534625583d5990da50fd-6b7164b3c8a84bf484d39fb270e6e418/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/534625583d5990da50fd-6b7164b3c8a84bf484d39fb270e6e418/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/42b49b40517988afe273-40a880f74e9442d594137504c5cea87a/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/42b49b40517988afe273-40a880f74e9442d594137504c5cea87a/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/42b49b40517988afe273-40a880f74e9442d594137504c5cea87a/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/49b8b7c74a10aa5a1a64-72e0590df7f948ef842011c216d05444/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/49b8b7c74a10aa5a1a64-72e0590df7f948ef842011c216d05444/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/49b8b7c74a10aa5a1a64-72e0590df7f948ef842011c216d05444/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6144c2152d8b81e8e800-e50fafcc7ae24bbc85d0ee8a28e452df/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6144c2152d8b81e8e800-e50fafcc7ae24bbc85d0ee8a28e452df/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6144c2152d8b81e8e800-e50fafcc7ae24bbc85d0ee8a28e452df/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/67cc401b4bb5ac8738d7-601c39a72896441bb8dc2572ef47ddb1/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/67cc401b4bb5ac8738d7-601c39a72896441bb8dc2572ef47ddb1/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/67cc401b4bb5ac8738d7-601c39a72896441bb8dc2572ef47ddb1/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e6a6b92aec9f1b597e47-59437c84059143c0a7a006c5e2cc9afa/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e6a6b92aec9f1b597e47-59437c84059143c0a7a006c5e2cc9afa/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e6a6b92aec9f1b597e47-59437c84059143c0a7a006c5e2cc9afa/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/d268af8bc42f48f6aedb-28e24e9853d241b4964e0fcc831a33d0/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/d268af8bc42f48f6aedb-28e24e9853d241b4964e0fcc831a33d0/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/d268af8bc42f48f6aedb-28e24e9853d241b4964e0fcc831a33d0/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/4e0cd7079a80871a0fd2-0bd00f5a2a5c4d44b609ad1887b3c9ae/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/4e0cd7079a80871a0fd2-0bd00f5a2a5c4d44b609ad1887b3c9ae/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/4e0cd7079a80871a0fd2-0bd00f5a2a5c4d44b609ad1887b3c9ae/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1b3500a435561a91443f-289aa271826f4edeab053939b401b384/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1b3500a435561a91443f-289aa271826f4edeab053939b401b384/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1b3500a435561a91443f-289aa271826f4edeab053939b401b384/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/25e23c0eead538f90a0d-589b8c19d95b4d7d99ce737c9178879a/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/25e23c0eead538f90a0d-589b8c19d95b4d7d99ce737c9178879a/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/25e23c0eead538f90a0d-589b8c19d95b4d7d99ce737c9178879a/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/a33e03472d5d93fa15fc-c04ce6a1e9de4cbc9a55963b7c6efe8f/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/a33e03472d5d93fa15fc-c04ce6a1e9de4cbc9a55963b7c6efe8f/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/a33e03472d5d93fa15fc-c04ce6a1e9de4cbc9a55963b7c6efe8f/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/2a04c5f5545b92efa370-90029285e78c4036b5045079e0040cb3/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/2a04c5f5545b92efa370-90029285e78c4036b5045079e0040cb3/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/2a04c5f5545b92efa370-90029285e78c4036b5045079e0040cb3/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/400ffa75051d3a2de91e-33949168d69e4583b9df2dcaec27996f/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/400ffa75051d3a2de91e-33949168d69e4583b9df2dcaec27996f/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/400ffa75051d3a2de91e-33949168d69e4583b9df2dcaec27996f/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1d8d7a73e2b3bb3c5592-5d490d650a6b489f9f3cd00163c0e9e8/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1d8d7a73e2b3bb3c5592-5d490d650a6b489f9f3cd00163c0e9e8/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1d8d7a73e2b3bb3c5592-5d490d650a6b489f9f3cd00163c0e9e8/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/8f701c927e6893a8a94d-d190e54bf6b140c1b06756b2fe7e9f69/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/8f701c927e6893a8a94d-d190e54bf6b140c1b06756b2fe7e9f69/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/8f701c927e6893a8a94d-d190e54bf6b140c1b06756b2fe7e9f69/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/072042389309a9d0e7ed-1f2cf56abb4346aaaf4c984d8453e7cb/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/072042389309a9d0e7ed-1f2cf56abb4346aaaf4c984d8453e7cb/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/072042389309a9d0e7ed-1f2cf56abb4346aaaf4c984d8453e7cb/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/58dafff69939ce9dbcb6-e66dade201944d788880ac3ce569c948/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/58dafff69939ce9dbcb6-e66dade201944d788880ac3ce569c948/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/58dafff69939ce9dbcb6-e66dade201944d788880ac3ce569c948/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6ed9fd9deccbf25d4dbe-cc78467e46a3445c94defd782f4fc343/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6ed9fd9deccbf25d4dbe-cc78467e46a3445c94defd782f4fc343/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6ed9fd9deccbf25d4dbe-cc78467e46a3445c94defd782f4fc343/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f02840c34662292f2550-7cdcbabd38c5472aa0d47e49f5bb04a5/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f02840c34662292f2550-7cdcbabd38c5472aa0d47e49f5bb04a5/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f02840c34662292f2550-7cdcbabd38c5472aa0d47e49f5bb04a5/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f6f40777a94fe870b3f5-7aca80a890724e3f9bda60579352ab21/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f6f40777a94fe870b3f5-7aca80a890724e3f9bda60579352ab21/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f6f40777a94fe870b3f5-7aca80a890724e3f9bda60579352ab21/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/760974ee261830470993-0f7a8c6bd49543a3841314e919684f77/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/760974ee261830470993-0f7a8c6bd49543a3841314e919684f77/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/760974ee261830470993-0f7a8c6bd49543a3841314e919684f77/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3dbe3c0827c108c86e2a-e047f8229707429c93184bc75d3c244e/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3dbe3c0827c108c86e2a-e047f8229707429c93184bc75d3c244e/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3dbe3c0827c108c86e2a-e047f8229707429c93184bc75d3c244e/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/bc1cfc0f52214e75038c-38c277eeab774b1194dd1844f372dc67/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/bc1cfc0f52214e75038c-38c277eeab774b1194dd1844f372dc67/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/bc1cfc0f52214e75038c-38c277eeab774b1194dd1844f372dc67/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/43ffb961514ceb1ea9d8-f27c2da7032640ada2cfd54df8a038c8/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/43ffb961514ceb1ea9d8-f27c2da7032640ada2cfd54df8a038c8/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/43ffb961514ceb1ea9d8-f27c2da7032640ada2cfd54df8a038c8/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/b48bb6d07e183f729073-5be4e5eaf78049d6964cdcc1cb02e95c/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/b48bb6d07e183f729073-5be4e5eaf78049d6964cdcc1cb02e95c/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/b48bb6d07e183f729073-5be4e5eaf78049d6964cdcc1cb02e95c/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1ef26c51c6f46c53cce1-8d3592e5eea64c9eaf0fe094da598ca9/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1ef26c51c6f46c53cce1-8d3592e5eea64c9eaf0fe094da598ca9/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/1ef26c51c6f46c53cce1-8d3592e5eea64c9eaf0fe094da598ca9/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/0f7c5a6ad6fc18622306-27adbadc93c941d1af43fd88e9bac108/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/0f7c5a6ad6fc18622306-27adbadc93c941d1af43fd88e9bac108/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/0f7c5a6ad6fc18622306-27adbadc93c941d1af43fd88e9bac108/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f65cc36c6722183555aa-55a880a1f0d6428a854d9626cdcb4442/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f65cc36c6722183555aa-55a880a1f0d6428a854d9626cdcb4442/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/f65cc36c6722183555aa-55a880a1f0d6428a854d9626cdcb4442/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6a2dbdc4016e278bf3ac-57c9588a9af74ea1b49fabff4156f78a/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6a2dbdc4016e278bf3ac-57c9588a9af74ea1b49fabff4156f78a/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/6a2dbdc4016e278bf3ac-57c9588a9af74ea1b49fabff4156f78a/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/46cc2d0333f98ec911be-63cd8333272b4ec09520e3337f7b87cf/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/46cc2d0333f98ec911be-63cd8333272b4ec09520e3337f7b87cf/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/46cc2d0333f98ec911be-63cd8333272b4ec09520e3337f7b87cf/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/670167bc6a9b50380a01-fe8eb710b34741b4a0978cfb2c3294a7/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/670167bc6a9b50380a01-fe8eb710b34741b4a0978cfb2c3294a7/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/670167bc6a9b50380a01-fe8eb710b34741b4a0978cfb2c3294a7/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e5d33ffe2c320c0cf4ed-90f1f3c566024a2684f150ddc75997b6/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e5d33ffe2c320c0cf4ed-90f1f3c566024a2684f150ddc75997b6/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e5d33ffe2c320c0cf4ed-90f1f3c566024a2684f150ddc75997b6/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/7cef8aaa61602a4f04d9-91b54d0671914614a3854f8c4544cee4/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/7cef8aaa61602a4f04d9-91b54d0671914614a3854f8c4544cee4/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/7cef8aaa61602a4f04d9-91b54d0671914614a3854f8c4544cee4/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3d2329355cfed30d7490-9c4f04a2bdf744f3a1b3c4df418355b6/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3d2329355cfed30d7490-9c4f04a2bdf744f3a1b3c4df418355b6/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3d2329355cfed30d7490-9c4f04a2bdf744f3a1b3c4df418355b6/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e8c645d9482cd256deae-3f76ac4a3a8949d1af2fd196756c229b/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e8c645d9482cd256deae-3f76ac4a3a8949d1af2fd196756c229b/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/e8c645d9482cd256deae-3f76ac4a3a8949d1af2fd196756c229b/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3306f27ee19bbcebd235-ffc3d19080444f2e86a38406c6784fb8/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3306f27ee19bbcebd235-ffc3d19080444f2e86a38406c6784fb8/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3306f27ee19bbcebd235-ffc3d19080444f2e86a38406c6784fb8/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3a67488efc107b654691-80b220070f3146d985a3ab8ca3068b80/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3a67488efc107b654691-80b220070f3146d985a3ab8ca3068b80/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/3a67488efc107b654691-80b220070f3146d985a3ab8ca3068b80/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/779d5c921f74c67065a7-644d33a4885e46dc89cb2d71aa80648d/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/779d5c921f74c67065a7-644d33a4885e46dc89cb2d71aa80648d/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/779d5c921f74c67065a7-644d33a4885e46dc89cb2d71aa80648d/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/0433af61b3f2e9d2763d-399fdc59a4944ec58dcf970657b2a013/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/0433af61b3f2e9d2763d-399fdc59a4944ec58dcf970657b2a013/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/0433af61b3f2e9d2763d-399fdc59a4944ec58dcf970657b2a013/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/dc6ad98cb134159efb9f-a47999757e4141b29594336febc1a142/manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/dc6ad98cb134159efb9f-a47999757e4141b29594336febc1a142/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab1/dc6ad98cb134159efb9f-a47999757e4141b29594336febc1a142/config.resolved.yaml",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab1/images/e1.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab1/images/e2.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab1/images/map.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: reports/lab1/images/cf3.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/results.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/counterfactuals.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/E1.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/E2.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/E3.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/selected_lr.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/selection.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/corruption_protocol.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab2_cnn_vs_vit_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/8705d516f9c58ae4458c-2297f86c299c4b998e5a33258a6b8326/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/76a6bee7ce9731bfa4fa-8edbe989a96e427c82f75e87ddd2c0ab/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/b50b6ea8552d63768374-4d1f73742ac24869a8d8cee0b7cfcc77/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/495f34d7f6c639e46a93-9104dc9ff56f47f5aab182fd287ed1a8/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/5b5befc1e4def983b9ee-22c1988662a44a8c9b33328924f411ab/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/29176cb8f39f6f4d8171-6885d00915674ed3ade5cd94f2531767/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/1127217ff6ad88909e85-a8b568720c0c4b4ea2f2098459e6ec33/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/f154afa0aa4ee77b3250-ea30b6ab3cf942eab4e96026e089f583/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/cfd869bd9ae49d9e218c-674bd37aac074d9393378ce924e7c6dc/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/766dbdc705ebc387709a-0ecabc3039f24a5f872dd82e7d55734b/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/f1a84ec3e8723294d4a2-14cad9141a774b6daee3100c969640f6/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/1620cd8ad55b41c9e6c2-7e9c1d9d13e44a5bbee06a6bc7693cac/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/69ac6bd9ed94ae61d1aa-873bbd5089054e138a586cd2a337e139/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: runs/lab2/793fe73a531b8002205c-4bc06191663d459e941756cc0e6a26b1/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/figures/E1_learning_curves.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/figures/training_loss.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/figures/time_accuracy.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/figures/E2_corruptions.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/figures/E3_paired_seeds.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab2/figures/trainability_map.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/results.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/counterfactuals.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/attention_analysis.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/E2_analysis.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/E1.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/E2.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/E3.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/hypothesis.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/profile.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab3_long_context_attention_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/figures/E1_extrapolation.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/figures/P1_P2.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/figures/E2_scaling.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/figures/attention_heads.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/figures/E3_paired_seeds.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab3/figures/training_loss.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/results.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/counterfactuals.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/E1.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/E2.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/E3.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/E3_gain.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/hypothesis.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/profile.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab4_self_supervised_learning_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/encoders/B0/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/encoders/B1/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/encoders/SimCLR/summary.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/augmentation_views.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/E1_loss_probe.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/E1_similarities.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/E1_rank_trace.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/E1_spectra.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/E2_ablation.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/E2_all_variants.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab4/figures/E3_label_efficiency.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E1.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E2.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E3.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E1_models.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E1_deletion.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E2_pairs.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E3_depths.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/E3_all_layers.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/structure_map.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/counterfactual_answers.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/profile.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/hypothesis.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab5_graph_representation_learning_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/figures/E1_deletion.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/figures/E2_paired.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/figures/E3_layers.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab5/figures/E3_residual.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E1.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E2.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E3.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/counterfactual_answers.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E1_eta.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E1_quadratic.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E2_depths.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E3_models.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/E3_pairs.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/hypothesis.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/profile.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/data_protocol.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab6_ebm_normalizing_flows_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E1_density.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E1_eta.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E1_quadratic.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E1_trajectories.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E2_depth.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E3_samples.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E3_density.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab6/figures/E3_bridge_pairs.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/E1.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/E2.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/E3.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/diagnostics.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/counterfactual_answers.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/data_protocol.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/hypothesis.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/E1_models.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/E2_sampling.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/E3_models.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/supplement_rare.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/metrics/0.02.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab7_diffusion_score_models_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E1_schedules.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E1_forward_clouds.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E1_training.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E1_samples.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E2_cost_quality.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E2_extreme_K.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/diagnostic_timestep.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/diagnostic_score_linear.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/diagnostic_score_cosine.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/diagnostic_trajectories.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E3_mode_frequencies.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/E3_paired_difference.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/supplement_rare.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab7/figures/counterfactual_controls.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/counterfactual_answers.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/E1.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/E1_binning.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/E2_grid.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/E2_pairs.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/E2_T5.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/E3.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/selective_ood.csv",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/model_sources.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/hypothesis.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/profile.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab8_robustness_calibration_uncertainty_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E1_cnn.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E1_vit.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E1_binning.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E2_gaussian_noise.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E2_gaussian_blur.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E2_brightness.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E2_contrast.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E2_occlusion.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E2_pairs.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E3_attacks.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E3_examples_cnn.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/E3_examples_vit.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/selective_ood_cnn_1.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/selective_ood_vit_1.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/OOD_measures_cnn_1.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab8/figures/OOD_measures_vit_1.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/E1_exploration.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/E1_main.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/E2.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/E3.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/counterfactuals.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/hypothesis.md",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/profile.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/encoder_sources.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/data_manifest.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/media_preprocessing_protocol.json",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: drive-download-20261026T053112Z-1-001/lab9_multimodal_representation_learning_1010.pdf",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/audio_encoder_training.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/training_curves.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E1_models.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E1_capacity.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E1_confusion.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E1_per_class_F1.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E1_paired.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E2_missing.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E2_SNR.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E3_following_AUROC.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E3_confidence.png",
+      "pass": true
+    },
+    {
+      "check": "original unchanged: experiments/lab9/figures/E3_gates.png",
+      "pass": true
+    },
+    {
+      "check": "43 selected automated tests passed",
+      "pass": true
+    },
+    {
+      "check": "all 12 original E2 conditions repeated",
+      "pass": true
+    },
+    {
+      "check": "initial moments reproducible",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_8 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_8 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_8 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_24 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_24 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_24 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_48 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_48 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_48 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_96 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_96 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_plain_96 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_8 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_8 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_24 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_24 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_48 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_48 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_96 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_unit_96 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_8 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_8 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_8 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_8 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_24 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_24 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_24 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_24 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_48 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_48 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_48 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_48 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_96 exact cross-moment identity",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_96 status reproduced",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_96 full 3-epoch budget",
+      "pass": true
+    },
+    {
+      "check": "E2_residual_scaled_96 validation result reproduced",
+      "pass": true
+    },
+    {
+      "check": "with_jitter original encoder unchanged",
+      "pass": true
+    },
+    {
+      "check": "with_jitter feature hash",
+      "pass": true
+    },
+    {
+      "check": "with_jitter no cal",
+      "pass": true
+    },
+    {
+      "check": "with_jitter train exact balance",
+      "pass": true
+    },
+    {
+      "check": "with_jitter train hue class rule",
+      "pass": true
+    },
+    {
+      "check": "with_jitter train cache labels match assignments",
+      "pass": true
+    },
+    {
+      "check": "with_jitter val exact balance",
+      "pass": true
+    },
+    {
+      "check": "with_jitter val hue class rule",
+      "pass": true
+    },
+    {
+      "check": "with_jitter val cache labels match assignments",
+      "pass": true
+    },
+    {
+      "check": "with_jitter test exact balance",
+      "pass": true
+    },
+    {
+      "check": "with_jitter test hue class rule",
+      "pass": true
+    },
+    {
+      "check": "with_jitter test cache labels match assignments",
+      "pass": true
+    },
+    {
+      "check": "with_jitter validation-only selection",
+      "pass": true
+    },
+    {
+      "check": "with_jitter all 3 regularization candidates",
+      "pass": true
+    },
+    {
+      "check": "with_jitter accuracy recomputation",
+      "pass": true
+    },
+    {
+      "check": "with_jitter probability normalization",
+      "pass": true
+    },
+    {
+      "check": "with_jitter confusion recomputation",
+      "pass": true
+    },
+    {
+      "check": "b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46200 full epochs",
+      "pass": true
+    },
+    {
+      "check": "bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a200 full epochs",
+      "pass": true
+    },
+    {
+      "check": "c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7200 full epochs",
+      "pass": true
+    },
+    {
+      "check": "without_jitter original encoder unchanged",
+      "pass": true
+    },
+    {
+      "check": "without_jitter feature hash",
+      "pass": true
+    },
+    {
+      "check": "without_jitter no cal",
+      "pass": true
+    },
+    {
+      "check": "without_jitter train exact balance",
+      "pass": true
+    },
+    {
+      "check": "without_jitter train hue class rule",
+      "pass": true
+    },
+    {
+      "check": "without_jitter train cache labels match assignments",
+      "pass": true
+    },
+    {
+      "check": "without_jitter val exact balance",
+      "pass": true
+    },
+    {
+      "check": "without_jitter val hue class rule",
+      "pass": true
+    },
+    {
+      "check": "without_jitter val cache labels match assignments",
+      "pass": true
+    },
+    {
+      "check": "without_jitter test exact balance",
+      "pass": true
+    },
+    {
+      "check": "without_jitter test hue class rule",
+      "pass": true
+    },
+    {
+      "check": "without_jitter test cache labels match assignments",
+      "pass": true
+    },
+    {
+      "check": "without_jitter validation-only selection",
+      "pass": true
+    },
+    {
+      "check": "without_jitter all 3 regularization candidates",
+      "pass": true
+    },
+    {
+      "check": "without_jitter accuracy recomputation",
+      "pass": true
+    },
+    {
+      "check": "without_jitter probability normalization",
+      "pass": true
+    },
+    {
+      "check": "without_jitter confusion recomputation",
+      "pass": true
+    },
+    {
+      "check": "7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095200 full epochs",
+      "pass": true
+    },
+    {
+      "check": "7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509200 full epochs",
+      "pass": true
+    },
+    {
+      "check": "98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7200 full epochs",
+      "pass": true
+    },
+    {
+      "check": "identical coloured images for both encoders",
+      "pass": true
+    },
+    {
+      "check": "reported accuracy difference",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\65e1a337699f7d318a80-201fe612c4a84a42a19926ea3d7782a4\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\65e1a337699f7d318a80-201fe612c4a84a42a19926ea3d7782a4\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\65e1a337699f7d318a80-201fe612c4a84a42a19926ea3d7782a4\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\65e1a337699f7d318a80-201fe612c4a84a42a19926ea3d7782a4\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\58c4a5b0fbd2cb61eeb0-f738cdd7db9d4b92bf70db8ac8ea249a\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\58c4a5b0fbd2cb61eeb0-f738cdd7db9d4b92bf70db8ac8ea249a\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\58c4a5b0fbd2cb61eeb0-f738cdd7db9d4b92bf70db8ac8ea249a\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\58c4a5b0fbd2cb61eeb0-f738cdd7db9d4b92bf70db8ac8ea249a\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\6518619604d0be0f725c-83be1e71337d4dacb3df334b53e45a8a\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\6518619604d0be0f725c-83be1e71337d4dacb3df334b53e45a8a\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\6518619604d0be0f725c-83be1e71337d4dacb3df334b53e45a8a\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\6518619604d0be0f725c-83be1e71337d4dacb3df334b53e45a8a\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\0ad4db95ba5351f181f1-d74e3e294ac343639ded726f44455466\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\0ad4db95ba5351f181f1-d74e3e294ac343639ded726f44455466\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\0ad4db95ba5351f181f1-d74e3e294ac343639ded726f44455466\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\0ad4db95ba5351f181f1-d74e3e294ac343639ded726f44455466\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\e61bf57c3fd3816e03cb-3e7d0d38cd52461b9ab73bbd1d7b096e\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\e61bf57c3fd3816e03cb-3e7d0d38cd52461b9ab73bbd1d7b096e\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\e61bf57c3fd3816e03cb-3e7d0d38cd52461b9ab73bbd1d7b096e\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\e61bf57c3fd3816e03cb-3e7d0d38cd52461b9ab73bbd1d7b096e\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\29b49364d2ebfef77faf-c435d806fe6a4b46930dd15e53540c4a\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\29b49364d2ebfef77faf-c435d806fe6a4b46930dd15e53540c4a\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\29b49364d2ebfef77faf-c435d806fe6a4b46930dd15e53540c4a\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\29b49364d2ebfef77faf-c435d806fe6a4b46930dd15e53540c4a\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ce434c0816f5ed4ab494-77a0d1b4f5004ef9813d4bde491bed61\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ce434c0816f5ed4ab494-77a0d1b4f5004ef9813d4bde491bed61\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ce434c0816f5ed4ab494-77a0d1b4f5004ef9813d4bde491bed61\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ce434c0816f5ed4ab494-77a0d1b4f5004ef9813d4bde491bed61\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ac53b3d6d7866c853cfc-b8b2a6ca288146a48a2576b0c4611b19\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ac53b3d6d7866c853cfc-b8b2a6ca288146a48a2576b0c4611b19\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ac53b3d6d7866c853cfc-b8b2a6ca288146a48a2576b0c4611b19\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\lab1\\ac53b3d6d7866c853cfc-b8b2a6ca288146a48a2576b0c4611b19\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\b7d8db2afac4978ab77d-3cf77019856b49b4b446dcbbb16bfd46\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\bf08dd28f7d8ac8e5dc4-757a98f79b4a4761a8a33691a8cb4a6a\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\c106362b5cc19ae1ba91-fb1f42cfdb4f43f6bf0db42140367ac7\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7\\checkpoints\\best.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7\\checkpoints\\best.pt optimizer/RNG states",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7\\checkpoints\\last.pt config/identity",
+      "pass": true
+    },
+    {
+      "check": "runs\\revision_20261106\\lab4\\98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7\\checkpoints\\last.pt optimizer/RNG states",
+      "pass": true
+    }
+  ],
+  "automated_tests_passed": 43,
+  "checkpoint_count": 28,
+  "original_input_files_preserved": 331,
+  "Lab1_scaled_failures_retained": [
+    "E2_residual_scaled_96"
+  ],
+  "Lab4_Q2": "COMPLETE",
+  "protocol": {
+    "recorded_at": "2026-11-06T10:27:53.093745+07:00",
+    "protocol_sha256": "ccc9b0accfe7e9aee2c1a7321beb850dec930c100e927bcc90601a90c6c8aa8a",
+    "user_decisions": {
+      "Lab4_Q2": "HueCIFAR-10 v1 independently designed and fixed",
+      "Lab5_split": "PyG Cora public masks adopted",
+      "Lab9_split": "actor disjoint seed1729 14/3/2/5 adopted",
+      "Lab9_encoder": "explicit CNN source precedence adopted"
+    },
+    "historical_evidence": "kept intact; new evidence has new RUN_IDs"
+  },
+  "no_seed_search": true,
+  "no_original_hypothesis_changes": true
+}

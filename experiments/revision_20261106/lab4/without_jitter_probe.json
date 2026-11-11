@@ -1,0 +1,160 @@
+{
+  "RUN_ID": "51dfa741f7f8d4653b8b-bfec8b15a7674c88bc6e6be4e03d0aed",
+  "path": "runs/revision_20261106/lab4/51dfa741f7f8d4653b8b-bfec8b15a7674c88bc6e6be4e03d0aed",
+  "status": "COMPLETED_PROBE_EVALUATION",
+  "condition": "without_jitter",
+  "feature_RUN_ID": "b52f97284c83be718825-f3a67b7fd70f42a781615efba122f578",
+  "encoder_RUN_ID": "9bcb3e57a83e8f0b7c03-eba9695f16f344f7a05c93b54baaf23f",
+  "chosen_probe_RUN_ID": "7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095",
+  "validation_accuracy": 0.9998,
+  "test_accuracy": 0.9997,
+  "selected_regularization": 0.0,
+  "candidates": [
+    {
+      "regularization": 0.0,
+      "validation_accuracy": 0.9998,
+      "RUN_ID": "7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095",
+      "path": "runs/revision_20261106/lab4/7d360d4e26ac56b37c3f-ac6e1b7d96de4fc5bcb879d814b98095"
+    },
+    {
+      "regularization": 0.001,
+      "validation_accuracy": 0.9998,
+      "RUN_ID": "7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509",
+      "path": "runs/revision_20261106/lab4/7e9f3cc985bb7965d05a-5febac7b3aae4340bc1ef77de6ef9509"
+    },
+    {
+      "regularization": 0.01,
+      "validation_accuracy": 0.9996,
+      "RUN_ID": "98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7",
+      "path": "runs/revision_20261106/lab4/98041b13667aaf90a862-a2da744337e34bfea192dffcd20a30e7"
+    }
+  ],
+  "confusion": [
+    [
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1000,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1000,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1000,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      999,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      999,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      999
+    ]
+  ],
+  "test_N": 10000,
+  "epochs_per_candidate": 200,
+  "cal_access": false,
+  "seconds": 12.785087199999907,
+  "controller_sha256": "507365c9057cbc8e2e18aff4a0caa28f11ea16f9fd4762e21ed92cc8861dd8b1",
+  "protocol_sha256": "ccc9b0accfe7e9aee2c1a7321beb850dec930c100e927bcc90601a90c6c8aa8a"
+}

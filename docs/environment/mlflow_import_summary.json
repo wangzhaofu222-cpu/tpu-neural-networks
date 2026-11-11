@@ -1,0 +1,21 @@
+{
+  "finished_at_utc": "2026-11-11T11:44:27.421838+00:00",
+  "seconds": 473.1409999999996,
+  "requested_runs": 973,
+  "successful_by_lab": {
+    "0": 37,
+    "1": 60,
+    "2": 162,
+    "3": 54,
+    "4": 233,
+    "5": 192,
+    "6": 46,
+    "7": 62,
+    "8": 67,
+    "9": 60
+  },
+  "failures": [],
+  "tracking_uri": "sqlite:///D:/神经网络/mlflow_store/mlflow.db",
+  "max_curve_points_per_stream": 1000,
+  "policy": "Original records preserved; historical import, no retraining; original statuses retained."
+}

@@ -1,0 +1,16 @@
+\begin{table}[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Наклоны log--log регрессии по пяти длинам и по двум наибольшим.}\label{tab:slopes}
+\begin{tabular}{llrr}
+\toprule
+Backend & Величина & $\alpha_{all}$ & $\alpha_{512,1024}$ \\
+\midrule
+explicit & Время forward & 0.118089 & -0.104255 \\
+explicit & Время шага & 0.014908 & -0.022257 \\
+explicit & Пик памяти & 0.435671 & 1.086481 \\
+efficient & Время forward & 0.118652 & 0.749570 \\
+efficient & Время шага & 0.025052 & 0.319792 \\
+efficient & Пик памяти & 0.127139 & 0.259660 \\
+\bottomrule
+\end{tabular}
+\end{table}

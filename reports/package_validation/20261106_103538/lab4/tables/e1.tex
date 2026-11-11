@@ -1,0 +1,13 @@
+\begin{table}[H]\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Три фиксированных кодировщика E1: качество на test и диагностика на train.}\label{tab:e1}
+\begin{tabular}{lrrrrrrl}
+\toprule
+Модель & Probe & kNN & $\operatorname{tr}C_h$ & $r_{eff,h}$ & $r_{eff,h}/512$ & $\|\bar{\hat z}\|$ & Ист. \\
+\midrule
+B0 & 0.4357 & 0.3822 & 95.464 & 3.156 & 0.0062 & 0.9932 & R01 \\
+B1 & 0.8988 & 0.8959 & 34.552 & 16.492 & 0.0322 & 0.7673 & R02 \\
+SimCLR & 0.7662 & 0.7053 & 8.283 & 75.610 & 0.1477 & 0.0398 & R03 \\
+\bottomrule
+\end{tabular}
+\end{table}

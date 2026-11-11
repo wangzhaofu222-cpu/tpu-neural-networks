@@ -1,0 +1,14 @@
+\begin{table}[H]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Крайне малое число шагов DDIM; отдельная оценка, без заявления о пяти повторах времени.}\label{tab:low}
+\begin{tabular}{llrrrl}
+\toprule
+Предиктор & K & MMD$^2$ & $D_{mode}$ & Cov & Ист. \\
+\midrule
+network & 1 & 0.573304 & 0.98063 & 0.000 & R17 \\
+network & 2 & 0.128446 & 0.98563 & 0.000 & R18 \\
+exact & 1 & 0.130350 & 0.98903 & 0.000 & R19 \\
+exact & 2 & 0.107975 & 0.98863 & 0.000 & R20 \\
+\bottomrule
+\end{tabular}
+\end{table}
